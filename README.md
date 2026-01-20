@@ -46,3 +46,18 @@ Lista de archivos principales modificados:
 
 ## Verificación Final
 Se realizaron pruebas automatizadas de navegación y comportamiento de scroll (sticky header) con éxito en todas las secciones del sitio.
+
+## Registro de Cambios - 20 de Enero 2026
+
+### Archivos Modificados
+- `home.html`
+- `about_us/about_us.html`
+- `services_overview/services.html`
+- `project_portfolio_gallery/portfolio.html`
+- `experience_timeline/our_experience.html`
+- `faq/contact_faq.html`
+
+### Detalles Técnicos
+1.  **Sticky Header**: Se añadió `sticky top-0 z-50` a la etiqueta `<header>` y se eliminó `overflow-x-hidden` de los contenedores principales para permitir el funcionamiento correcto de `position: sticky`.
+2.  **Metaetiquetas**: Inclusión de `og:title`, `og:description`, `og:image` y tarjetas de Twitter.
+3.  **Performance**: Adición de `font-display: swap` y metaetiqueta `Cache-Control`.
