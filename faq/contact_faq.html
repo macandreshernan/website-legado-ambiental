@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contacto y FAQ | Legado Ambiental</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Public Sans', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-white transition-colors duration-200">
+<div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<!-- Navigation Bar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#f0f2f4] dark:border-[#2a3038] px-10 py-4 bg-white dark:bg-[#111418] sticky top-0 z-50">
+<div class="flex items-center gap-4 text-[#111418] dark:text-white">
+<div class="size-6 text-primary">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M6 6H42L36 24L42 42H6L12 24L6 6Z"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em] font-display">Legado Ambiental</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8 items-center">
+<nav class="hidden md:flex items-center gap-9">
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Inicio</a>
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Servicios</a>
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Proyectos</a>
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Nosotros</a>
+<a class="text-sm font-medium leading-normal text-primary" href="#">Contacto</a>
+</nav>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-all">
+<span>Cotizar</span>
+</button>
+</div>
+</header>
+<main class="flex-1 max-w-7xl mx-auto w-full px-4 md:px-10 py-12">
+<!-- Hero Heading Section -->
+<div class="mb-12">
+<div class="flex flex-col gap-3">
+<h1 class="text-[#111418] dark:text-white text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em] font-display">
+                        Contacto y Preguntas Frecuentes
+                    </h1>
+<p class="text-[#617589] dark:text-gray-400 text-lg max-w-2xl font-normal leading-normal">
+                        Estamos aquí para resolver sus dudas sobre proyectos de ingeniería civil, construcción y consultoría ambiental.
+                    </p>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+<!-- Left Side: Contact Form -->
+<section class="bg-white dark:bg-[#1a232e] p-8 rounded-xl shadow-sm border border-[#e5e7eb] dark:border-[#2a3038]">
+<h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">mail</span>
+                        Envíenos un mensaje
+                    </h3>
+<form class="space-y-6">
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-[#111418] dark:text-gray-300">Nombre Completo</label>
+<input class="w-full rounded-lg border border-[#dbe0e6] dark:border-[#3a4451] bg-white dark:bg-[#111418] h-14 px-4 text-base focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all placeholder:text-[#617589]" placeholder="Ej. Juan Pérez" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-[#111418] dark:text-gray-300">Correo Electrónico</label>
+<input class="w-full rounded-lg border border-[#dbe0e6] dark:border-[#3a4451] bg-white dark:bg-[#111418] h-14 px-4 text-base focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all placeholder:text-[#617589]" placeholder="ejemplo@correo.com" type="email"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-[#111418] dark:text-gray-300">Asunto</label>
+<input class="w-full rounded-lg border border-[#dbe0e6] dark:border-[#3a4451] bg-white dark:bg-[#111418] h-14 px-4 text-base focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all placeholder:text-[#617589]" placeholder="Tipo de proyecto o consulta" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-[#111418] dark:text-gray-300">Mensaje</label>
+<textarea class="w-full rounded-lg border border-[#dbe0e6] dark:border-[#3a4451] bg-white dark:bg-[#111418] p-4 text-base focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all placeholder:text-[#617589] resize-none" placeholder="Cuéntenos sobre su proyecto..." rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-white font-bold py-4 rounded-lg shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all flex justify-center items-center gap-2" type="submit">
+<span>Enviar Mensaje</span>
+<span class="material-symbols-outlined">send</span>
+</button>
+</form>
+</section>
+<!-- Right Side: FAQ Accordion -->
+<section>
+<h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">help</span>
+                        Dudas Frecuentes
+                    </h3>
+<div class="space-y-4">
+<!-- FAQ Item 1 -->
+<div class="group border border-[#e5e7eb] dark:border-[#2a3038] rounded-xl bg-white dark:bg-[#1a232e] overflow-hidden">
+<button class="w-full flex items-center justify-between p-5 text-left font-semibold text-[#111418] dark:text-white hover:bg-primary/5 transition-colors">
+<span>¿Qué tipos de proyectos de ingeniería civil realizan?</span>
+<span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+</button>
+<div class="px-5 pb-5 text-[#617589] dark:text-gray-400 text-sm leading-relaxed">
+                                Nos especializamos en infraestructura urbana, pavimentación, sistemas de drenaje y construcción industrial tanto para el sector privado como gubernamental.
+                            </div>
+</div>
+<!-- FAQ Item 2 -->
+<div class="group border border-[#e5e7eb] dark:border-[#2a3038] rounded-xl bg-white dark:bg-[#1a232e] overflow-hidden">
+<button class="w-full flex items-center justify-between p-5 text-left font-semibold text-[#111418] dark:text-white hover:bg-primary/5 transition-colors">
+<span>¿Trabajan con licitaciones gubernamentales?</span>
+<span class="material-symbols-outlined text-primary transition-transform">expand_more</span>
+</button>
+<div class="px-5 pb-5 text-[#617589] dark:text-gray-400 text-sm leading-relaxed">
+                                Sí, Legado Ambiental cuenta con todos los registros y certificaciones necesarios para participar en licitaciones públicas estatales y federales.
+                            </div>
+</div>
+<!-- FAQ Item 3 -->
+<div class="group border border-[#e5e7eb] dark:border-[#2a3038] rounded-xl bg-white dark:bg-[#1a232e] overflow-hidden">
+<button class="w-full flex items-center justify-between p-5 text-left font-semibold text-[#111418] dark:text-white hover:bg-primary/5 transition-colors">
+<span>¿Cuál es el tiempo de respuesta para una cotización?</span>
+<span class="material-symbols-outlined text-primary transition-transform">expand_more</span>
+</button>
+<div class="px-5 pb-5 text-[#617589] dark:text-gray-400 text-sm leading-relaxed">
+                                Típicamente entregamos un presupuesto preliminar en un plazo de 3 a 5 días hábiles después de recibir los planos y especificaciones técnicas del proyecto.
+                            </div>
+</div>
+<!-- FAQ Item 4 -->
+<div class="group border border-[#e5e7eb] dark:border-[#2a3038] rounded-xl bg-white dark:bg-[#1a232e] overflow-hidden">
+<button class="w-full flex items-center justify-between p-5 text-left font-semibold text-[#111418] dark:text-white hover:bg-primary/5 transition-colors">
+<span>¿Cuentan con certificaciones ambientales?</span>
+<span class="material-symbols-outlined text-primary transition-transform">expand_more</span>
+</button>
+<div class="px-5 pb-5 text-[#617589] dark:text-gray-400 text-sm leading-relaxed">
+                                Como parte de nuestro compromiso con el "Legado Ambiental", operamos bajo estrictos estándares de sustentabilidad y gestión de residuos de construcción.
+                            </div>
+</div>
+</div>
+<!-- Additional Contact Quick Info -->
+<div class="mt-12 p-6 rounded-xl bg-primary/10 border border-primary/20">
+<h4 class="font-bold text-primary mb-4">¿Necesita atención inmediata?</h4>
+<div class="space-y-3">
+<div class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-primary">call</span>
+<span class="font-medium">+52 (555) 123-4567</span>
+</div>
+<div class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-primary">schedule</span>
+<span>Lunes a Viernes: 9:00 AM - 6:00 PM</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer Section -->
+<footer class="bg-white dark:bg-[#111418] border-t border-[#f0f2f4] dark:border-[#2a3038] pt-16 pb-8">
+<div class="max-w-7xl mx-auto px-10">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+<div class="space-y-4">
+<div class="flex items-center gap-3 text-primary">
+<svg class="size-6" fill="currentColor" viewbox="0 0 48 48">
+<path d="M6 6H42L36 24L42 42H6L12 24L6 6Z"></path>
+</svg>
+<span class="text-xl font-bold text-[#111418] dark:text-white">Legado Ambiental</span>
+</div>
+<p class="text-[#617589] dark:text-gray-400 text-sm">
+                            Comprometidos con la excelencia en ingeniería y el respeto al entorno ambiental. Construyendo el futuro, respetando el presente.
+                        </p>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold text-[#111418] dark:text-white">Oficina Central</h4>
+<div class="flex items-start gap-3 text-sm text-[#617589] dark:text-gray-400">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<span>Av. de la Reforma 245, Piso 12<br/>Col. Cuauhtémoc, CDMX, 06500</span>
+</div>
+<div class="flex items-center gap-3 text-sm text-[#617589] dark:text-gray-400">
+<span class="material-symbols-outlined text-primary">mail</span>
+<span>proyectos@legadoambiental.com</span>
+</div>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold text-[#111418] dark:text-white">Ubicación</h4>
+<div class="w-full h-32 rounded-lg bg-gray-200 dark:bg-gray-800 relative overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Mapa de ubicación en Ciudad de México" data-location="Mexico City" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAsORV5tWTG5v9E0KJzLlERL8-7OSIBN9nuoxON0BAR2dM0UlnH-R3ftb9PHEGVnk6S_rUlfT90vH1wjnJsJviP99bD70wY2QlDdBO54gdf4VdE0iqecE7ONncE62JdUw7yyV3vfXo3HC2TqVQvaUdLtMW-WruAJeC6B4uQtTUIaGMMkExlQ21foTck3IG_LDOSWiWyBHr3C8gwgtlfDRfv0RBGLPzBEDRu4Gj4UB97Kb1iwafuwaLItGr7Lra1mNdPvskz1z5dJO2y')"></div>
+<div class="absolute inset-0 bg-black/10 hover:bg-black/0 transition-colors cursor-pointer flex items-center justify-center">
+<a class="bg-white/90 dark:bg-black/90 px-3 py-1 rounded text-xs font-bold text-primary shadow-sm" href="#">Ver en Maps</a>
+</div>
+</div>
+</div>
+</div>
+<div class="border-t border-[#f0f2f4] dark:border-[#2a3038] pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-[#617589] dark:text-gray-500 uppercase tracking-widest font-semibold">
+<p>© 2024 Legado Ambiental. Todos los derechos reservados.</p>
+<div class="flex gap-6">
+<a class="hover:text-primary transition-colors" href="#">Privacidad</a>
+<a class="hover:text-primary transition-colors" href="#">Términos</a>
+<a class="hover:text-primary transition-colors" href="#">LinkedIn</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</body></html>
