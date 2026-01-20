@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Legado Ambiental | Home Screen</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "navy": "#101922",
+                        "charcoal": "#333333",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: "Public Sans", sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-charcoal dark:text-gray-200 antialiased transition-colors duration-300">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 w-full bg-white/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-20">
+<div class="flex items-center gap-3">
+<div class="text-primary">
+<svg class="size-8" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M6 6H42L36 24L42 42H6L12 24L6 6Z" fill="currentColor"></path>
+</svg>
+</div>
+<span class="text-navy dark:text-white text-xl font-black tracking-tight uppercase">Legado Ambiental</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-navy dark:text-gray-300 text-sm font-semibold hover:text-primary transition-colors" href="#">Who We Are</a>
+<a class="text-navy dark:text-gray-300 text-sm font-semibold hover:text-primary transition-colors" href="#">Services</a>
+<a class="text-navy dark:text-gray-300 text-sm font-semibold hover:text-primary transition-colors" href="#">Portfolio</a>
+<a class="text-navy dark:text-gray-300 text-sm font-semibold hover:text-primary transition-colors" href="#">Experience</a>
+<a class="text-navy dark:text-gray-300 text-sm font-semibold hover:text-primary transition-colors" href="#">Contact</a>
+<a class="text-navy dark:text-gray-300 text-sm font-semibold hover:text-primary transition-colors" href="#">FAQ</a>
+</nav>
+<div>
+<button class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-lg text-sm font-bold tracking-wide transition-all">
+                        Get a Quote
+                    </button>
+</div>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative w-full">
+<div class="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
+<div class="relative overflow-hidden rounded-xl bg-navy h-[600px] flex items-end">
+<!-- Background Image with Overlay -->
+<div class="absolute inset-0 z-0 bg-cover bg-center" data-alt="Modern high-rise construction site during sunrise with cranes" style="background-image: linear-gradient(rgba(16, 25, 34, 0.2) 0%, rgba(16, 25, 34, 0.8) 100%), url('https://lh3.googleusercontent.com/aida-public/AB6AXuAqmscbVHlzhMSGufVJIPHAbeXNuKcXemhcqZAvGrMwdJbxYRqn8NujTgRc0TtDDWCuBk8klfSuiOBlRyB4I9I7qcGRXnv5N8WjDK5YrY93NXDou-byxlzvuw8aaJulXpLVyQAU_fBNxyohbjY_ieOzlFk87mlJlDEHw2W041oK-_KKMEns8lE5Kf1T9iHTdHkI4R8eYS49VBlR8-IoaMb1lMOX0srUz1qjb_b6UJLlF177tEDwunIL0Z1qBT1HP06f181aJYMrSlXd');">
+</div>
+<div class="relative z-10 p-8 md:p-16 max-w-3xl">
+<h1 class="text-white text-5xl md:text-7xl font-black leading-[1.1] tracking-tight mb-6">
+                            Building Infrastructure, Sustaining the Future.
+                        </h1>
+<p class="text-gray-300 text-lg md:text-xl font-light leading-relaxed mb-8 max-w-xl">
+                            Professional excellence in civil construction and environmental legacy for private and government projects across the globe.
+                        </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-lg text-base font-bold transition-all flex items-center gap-2">
+<span>View Portfolio</span>
+<span class="material-symbols-outlined">trending_flat</span>
+</button>
+<button class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-lg text-base font-bold transition-all">
+                                Contact Us
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Section -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-12 relative z-20">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 rounded-xl p-8 shadow-xl flex items-center gap-6">
+<div class="bg-primary/10 p-4 rounded-lg text-primary">
+<span class="material-symbols-outlined text-4xl">calendar_month</span>
+</div>
+<div>
+<p class="text-charcoal dark:text-gray-400 text-sm font-semibold uppercase tracking-widest">Years Experience</p>
+<p class="text-navy dark:text-white text-4xl font-black">20+</p>
+</div>
+</div>
+<div class="bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 rounded-xl p-8 shadow-xl flex items-center gap-6">
+<div class="bg-primary/10 p-4 rounded-lg text-primary">
+<span class="material-symbols-outlined text-4xl">domain</span>
+</div>
+<div>
+<p class="text-charcoal dark:text-gray-400 text-sm font-semibold uppercase tracking-widest">Projects Completed</p>
+<p class="text-navy dark:text-white text-4xl font-black">150+</p>
+</div>
+</div>
+<div class="bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 rounded-xl p-8 shadow-xl flex items-center gap-6">
+<div class="bg-primary/10 p-4 rounded-lg text-primary">
+<span class="material-symbols-outlined text-4xl">verified</span>
+</div>
+<div>
+<p class="text-charcoal dark:text-gray-400 text-sm font-semibold uppercase tracking-widest">ISO Certifications</p>
+<p class="text-navy dark:text-white text-4xl font-black">3</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Value Proposition Section -->
+<section class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<div class="max-w-3xl mx-auto">
+<h2 class="text-navy dark:text-white text-3xl md:text-5xl font-black tracking-tight mb-8">
+                    Excellence in Civil Construction and Environmental Legacy
+                </h2>
+<p class="text-charcoal dark:text-gray-400 text-lg leading-relaxed mb-12">
+                    We deliver high-impact engineering solutions with an unwavering commitment to quality, safety, and sustainable development. Our legacy is built on the strength of our structures and the health of our environment.
+                </p>
+<div class="flex justify-center">
+<button class="bg-primary hover:bg-primary/90 text-white px-10 py-4 rounded-lg text-base font-bold transition-all shadow-lg shadow-primary/20">
+                        Learn More About Our Mission
+                    </button>
+</div>
+</div>
+</section>
+<!-- Specialized Services Header -->
+<section class="bg-gray-50 dark:bg-navy/50 py-24">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div>
+<span class="text-primary font-bold tracking-[0.2em] uppercase text-sm mb-4 block">What we do</span>
+<h2 class="text-navy dark:text-white text-4xl font-black tracking-tight">Our Specialized Services</h2>
+</div>
+<p class="text-charcoal dark:text-gray-400 max-w-md text-lg">
+                        We provide comprehensive engineering and environmental consulting for diverse sectors.
+                    </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Service 1 -->
+<div class="group bg-white dark:bg-gray-900 p-8 rounded-xl border border-gray-100 dark:border-gray-800 hover:border-primary/50 transition-all shadow-sm">
+<div class="mb-6 text-primary group-hover:scale-110 transition-transform origin-left">
+<span class="material-symbols-outlined text-5xl">engineering</span>
+</div>
+<h3 class="text-navy dark:text-white text-xl font-bold mb-4">Civil Engineering</h3>
+<p class="text-charcoal dark:text-gray-400 text-sm leading-relaxed mb-6">Structural design and heavy civil works for industrial and public infrastructure.</p>
+<a class="text-primary text-sm font-bold flex items-center gap-1 group-hover:gap-2 transition-all" href="#">
+                            Details <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Service 2 -->
+<div class="group bg-white dark:bg-gray-900 p-8 rounded-xl border border-gray-100 dark:border-gray-800 hover:border-primary/50 transition-all shadow-sm">
+<div class="mb-6 text-primary group-hover:scale-110 transition-transform origin-left">
+<span class="material-symbols-outlined text-5xl">eco</span>
+</div>
+<h3 class="text-navy dark:text-white text-xl font-bold mb-4">Environmental Legacy</h3>
+<p class="text-charcoal dark:text-gray-400 text-sm leading-relaxed mb-6">Sustainable construction practices and environmental impact mitigation.</p>
+<a class="text-primary text-sm font-bold flex items-center gap-1 group-hover:gap-2 transition-all" href="#">
+                            Details <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Service 3 -->
+<div class="group bg-white dark:bg-gray-900 p-8 rounded-xl border border-gray-100 dark:border-gray-800 hover:border-primary/50 transition-all shadow-sm">
+<div class="mb-6 text-primary group-hover:scale-110 transition-transform origin-left">
+<span class="material-symbols-outlined text-5xl">architecture</span>
+</div>
+<h3 class="text-navy dark:text-white text-xl font-bold mb-4">Project Management</h3>
+<p class="text-charcoal dark:text-gray-400 text-sm leading-relaxed mb-6">End-to-end management ensuring timelines, budget, and safety standards.</p>
+<a class="text-primary text-sm font-bold flex items-center gap-1 group-hover:gap-2 transition-all" href="#">
+                            Details <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Service 4 -->
+<div class="group bg-white dark:bg-gray-900 p-8 rounded-xl border border-gray-100 dark:border-gray-800 hover:border-primary/50 transition-all shadow-sm">
+<div class="mb-6 text-primary group-hover:scale-110 transition-transform origin-left">
+<span class="material-symbols-outlined text-5xl">account_balance</span>
+</div>
+<h3 class="text-navy dark:text-white text-xl font-bold mb-4">Gov. Projects</h3>
+<p class="text-charcoal dark:text-gray-400 text-sm leading-relaxed mb-6">Specialized solutions for municipal and federal public works tenders.</p>
+<a class="text-primary text-sm font-bold flex items-center gap-1 group-hover:gap-2 transition-all" href="#">
+                            Details <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Portfolio Preview Section -->
+<section class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-navy dark:text-white text-4xl font-black tracking-tight mb-4">Recent Projects</h2>
+<div class="w-20 h-1.5 bg-primary mx-auto rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="group relative overflow-hidden rounded-xl h-96 shadow-lg">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Modern concrete bridge engineering project over water" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCPNWRcg-KJd1molLOJZumClgkbuTTPT53rnlWSiDfQ6adSWff4PVBBrxyn5esrlJ9pcXPHpnLW_s7xMvxBCYg7i6m5dnpzJo1vqndnFwig-M4PysVqxepNfWccxD5S88SGEMe5q-LLo7tmEfPS9MNO_UMB85ma9ydtzbU_t4-jZ8J2BgW3msYeY1I1yFg1-jke2RiSHhLeEn1iqfH3qnv8TuAdltcCg6sKhMxOXtW6qGUJ3WPKasrxw7BgQrv2NV-0LhT8hsluvuXp');"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-transparent to-transparent opacity-90 group-hover:opacity-100 transition-opacity"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<p class="text-primary font-bold text-xs uppercase tracking-widest mb-2">Government / Infrastructure</p>
+<h4 class="text-white text-2xl font-bold mb-2">Metropolitan Viaduct System</h4>
+<p class="text-gray-300 text-sm font-medium">Urban connection project spanning 1.5km.</p>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-xl h-96 shadow-lg">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Modern glass skyscraper architecture with reflective facade" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCcDp_WIg4NkPDk-htLS9hWQBqYkFmPXiGCOmMUGyDg7h1D0WFvNipwiL_JO0fvjvefiAobw0Wu2kQMAKpaAbfN3YCTTFTtwR_UhIw-gmrOSrxISPTpGd0Go3PSOQO5HRxCVPZ9GzmWCpCxyKeL8IN2xkruUEpG71_wiV3_-DYcDeSZwBaDL4xt1ZwxceJyOfCVq1QeQRVCEsABhP4EHViLMwrijWttxCiDG9aQzVNb0MvPWykQPl0qWAxnojdijO5NiVbakzuhS7Nm');"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-transparent to-transparent opacity-90 group-hover:opacity-100 transition-opacity"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<p class="text-primary font-bold text-xs uppercase tracking-widest mb-2">Private / Commercial</p>
+<h4 class="text-white text-2xl font-bold mb-2">Solaris Business Hub</h4>
+<p class="text-gray-300 text-sm font-medium">Eco-certified commercial headquarters.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA / Contact Prompt -->
+<section class="bg-navy py-20 px-4">
+<div class="max-w-4xl mx-auto text-center">
+<h2 class="text-white text-3xl md:text-5xl font-black tracking-tight mb-8">Ready to Build Your Legacy?</h2>
+<p class="text-gray-400 text-lg mb-10 leading-relaxed">
+                    Contact our engineering team today for a comprehensive consultation on your next private or government project.
+                </p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<button class="bg-primary hover:bg-primary/90 text-white px-10 py-4 rounded-lg font-bold transition-all">Start a Project</button>
+<button class="bg-white/5 hover:bg-white/10 text-white border border-white/20 px-10 py-4 rounded-lg font-bold transition-all">Download Portfolio</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-white dark:bg-background-dark border-t border-gray-200 dark:border-gray-800 pt-16 pb-8">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-3 mb-6">
+<div class="text-primary">
+<svg class="size-6" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M6 6H42L36 24L42 42H6L12 24L6 6Z" fill="currentColor"></path>
+</svg>
+</div>
+<span class="text-navy dark:text-white text-lg font-black uppercase tracking-tight">Legado Ambiental</span>
+</div>
+<p class="text-charcoal dark:text-gray-400 text-sm leading-relaxed mb-6">
+                        Defining excellence in the built environment while preserving the natural legacy of our planet.
+                    </p>
+<div class="flex gap-4">
+<a class="text-charcoal dark:text-gray-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">public</span>
+</a>
+<a class="text-charcoal dark:text-gray-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">alternate_email</span>
+</a>
+</div>
+</div>
+<div>
+<h5 class="text-navy dark:text-white font-bold mb-6">Services</h5>
+<ul class="space-y-4 text-sm text-charcoal dark:text-gray-400">
+<li><a class="hover:text-primary transition-colors" href="#">Civil Engineering</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Environmental Impact</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Infrastructure Design</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Urban Development</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-navy dark:text-white font-bold mb-6">Company</h5>
+<ul class="space-y-4 text-sm text-charcoal dark:text-gray-400">
+<li><a class="hover:text-primary transition-colors" href="#">About Our Firm</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Project Portfolio</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Certifications</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Career Opportunities</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-navy dark:text-white font-bold mb-6">Contact</h5>
+<ul class="space-y-4 text-sm text-charcoal dark:text-gray-400">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-sm text-primary">location_on</span>
+<span>Engineering Plaza, Suite 400<br/>International Business District</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-primary">call</span>
+<span>+1 (555) 123-4567</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-primary">mail</span>
+<span>contact@legadoambiental.com</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-gray-100 dark:border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-charcoal dark:text-gray-500 font-medium">
+<p>© 2024 Legado Ambiental. All rights reserved.</p>
+<div class="flex gap-8">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-primary transition-colors" href="#">Sitemap</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
