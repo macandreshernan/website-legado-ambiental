@@ -5,6 +5,24 @@
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <title>Quiénes Somos | Legado Ambiental</title>
+
+  <!-- SEO & Social Media Meta Tags -->
+  <meta name="description"
+    content="Conozca a Legado Ambiental, líderes en ingeniería civil sostenible e infraestructura resiliente.">
+  <meta property="og:title" content="Quiénes Somos | Legado Ambiental">
+  <meta property="og:description" content="Integridad, precisión y compromiso con la infraestructura sostenible.">
+  <meta property="og:image"
+    content="https://lh3.googleusercontent.com/aida-public/AB6AXuCjghLGFHCQMPtpaUgz6EZKIbpu1sxzbwDLBXD_Je4qw5ST6VKeA46Q5YNZtTS_-9hcYkvQh0IEPDK3bdcCTHH5qN7PBTZW3MDczz5YpqsuEoXrxM5DIN_BsSm56GrHtizOYUYscfbXVo_WbqaUJViZSSkJNl1OYtxVSGtaBtS6vOMN3KbwI86GcyvIBheadsD8-oGzyNzuhBcXB7zlGdpczxAIIIYVPF6o9OJmh23cOYt7xGXtjhX9Ot9-rK9cvrkbuQMIjxFQgvFW">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Quiénes Somos | Legado Ambiental">
+  <meta name="twitter:description" content="Integridad, precisión y compromiso con la infraestructura sostenible.">
+  <meta name="twitter:image"
+    content="https://lh3.googleusercontent.com/aida-public/AB6AXuCjghLGFHCQMPtpaUgz6EZKIbpu1sxzbwDLBXD_Je4qw5ST6VKeA46Q5YNZtTS_-9hcYkvQh0IEPDK3bdcCTHH5qN7PBTZW3MDczz5YpqsuEoXrxM5DIN_BsSm56GrHtizOYUYscfbXVo_WbqaUJViZSSkJNl1OYtxVSGtaBtS6vOMN3KbwI86GcyvIBheadsD8-oGzyNzuhBcXB7zlGdpczxAIIIYVPF6o9OJmh23cOYt7xGXtjhX9Ot9-rK9cvrkbuQMIjxFQgvFW">
+
+  <!-- Browser Cache Hint -->
+  <meta http-equiv="Cache-Control" content="max-age=31536000">
+
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800&amp;display=swap"
     rel="stylesheet" />
@@ -37,20 +55,17 @@
   </script>
   <style type="text/tailwindcss">
     @layer base {
-            body {
-                font-family: "Public Sans", sans-serif;
-            }
-            .material-symbols-outlined {
-                font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-            }
+            body { font-family: "Public Sans", sans-serif; }
+            .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
         }
     </style>
 </head>
 
 <body class="bg-white dark:bg-background-dark text-[#111318] dark:text-white transition-colors duration-300">
-  <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+  <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root">
+    <!-- Sticky Header with Backdrop Blur -->
     <header
-      class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-solid border-[#f0f2f4] dark:border-slate-800 px-4 md:px-10 py-3">
+      class="sticky top-0 z-50 bg-white/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-solid border-[#f0f2f4] dark:border-slate-800 px-4 md:px-10 py-3 transition-all duration-300 shadow-sm">
       <div class="max-w-[1200px] mx-auto flex items-center justify-between whitespace-nowrap">
         <div class="flex items-center gap-4 text-primary dark:text-blue-400">
           <div class="size-6">
@@ -67,14 +82,16 @@
               href="../home.html">Inicio</a>
             <a class="text-primary dark:text-blue-400 text-sm font-bold" href="#">Quiénes Somos</a>
             <a class="text-[#111318] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
-              href="../experience_timeline/our_experience.html">Experiencia</a>
-            <a class="text-[#111318] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
               href="../services_overview/services.html">Servicios</a>
+            <a class="text-[#111318] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
+              href="../project_portfolio_gallery/portfolio.html">Portafolio</a>
+            <a class="text-[#111318] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
+              href="../experience_timeline/our_experience.html">Experiencia</a>
             <a class="text-[#111318] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
               href="../faq/contact_faq.html">Contacto</a>
           </nav>
           <button
-            class="flex min-w-[84px] cursor-pointer items-center justify-center rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold hover:bg-primary/90 transition-all shadow-md">
+            class="flex min-w-[84px] cursor-pointer items-center justify-center rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold hover:bg-primary/90 transition-all shadow-md focus:ring-2 focus:ring-primary focus:ring-offset-2">
             Cotizar
           </button>
         </div>
@@ -108,10 +125,11 @@
           </div>
         </div>
         <div class="grid grid-cols-2 gap-4">
-          <div class="h-64 rounded-xl bg-cover bg-center shadow-md"
+          <div class="h-64 rounded-xl bg-cover bg-center shadow-md transform hover:scale-[1.02] transition-transform"
             style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC1yF5GDjdmX28zliKUDr0L7S0XMVYix4pQDH723uLzI8z2D6gdnxGCcz8Py-M9QH7sOcXiAx_MSm8JWRqjhEpVh54yopkgR-FBn832slkcff1aqR2cccnQJwIMo49O7t8aFVw73wALYZ2LDQ9BfzYe3iLcZYjsf-vE0u7aNieuseSyTkzUotSDqAQoN9jvX0Hfv0hWUPtJRkaSIqdJeyWOAZq7ry67Wt0doXMMkRzb7WT4FHPrh7K9CuNJYjoa1MMuFetSkjlZ7HhQ");'>
           </div>
-          <div class="h-64 rounded-xl bg-cover bg-center shadow-md mt-8"
+          <div
+            class="h-64 rounded-xl bg-cover bg-center shadow-md mt-8 transform hover:scale-[1.02] transition-transform"
             style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDB6bITIuvETb4piWpttCwM0nZs3XdULQi-fvHedgSWjsH9MAEObqjSvU1EjIOcGaZXRmbqc9DmjNah6KoMTHVLitFOehXTyW8W6XqE_4yKk6Kek5yptLnjdZgOypjycy8RG2m4Pos22uBp__OjOyhqqiMHbEv2f5hfaOXr-gyvNxj40sT3f6aZAeFCXgRncUwRul601LAz9snkNaWA_UjCTisMRTTdQ1lwa5G1zWgs_IT2gk249AYoc4Qnla2wygNZOLU4_tuuNAHd");'>
           </div>
         </div>
@@ -200,10 +218,10 @@
             Legado Ambiental puede hacer realidad su próxima visión con precisión y cuidado.</p>
           <div class="flex flex-wrap justify-center gap-4">
             <button
-              class="px-10 py-4 bg-white text-primary font-bold rounded-lg hover:bg-blue-50 transition-colors shadow-xl">Iniciar
+              class="px-10 py-4 bg-white text-primary font-bold rounded-lg hover:bg-blue-50 transition-colors shadow-xl focus:ring-2 focus:ring-white">Iniciar
               Consulta</button>
             <button
-              class="px-10 py-4 border border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors">Ver
+              class="px-10 py-4 border border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors focus:ring-2 focus:ring-white">Ver
               Portafolio</button>
           </div>
         </div>

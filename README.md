@@ -29,5 +29,20 @@ Lista de archivos principales modificados:
 5.  `experience_timeline/our_experience.html` - Línea de tiempo de la empresa.
 6.  `faq/contact_faq.html` - Preguntas frecuentes y contacto.
 
-## Verificación
-Se realizó una verificación de navegación automatizada, confirmando que todos los enlaces del menú principal direccionan a las páginas correctas y que el flujo de usuario "Inicio -> Sección -> Inicio" funciona sin errores.
+## Fase 2: Optimización Avanzada y Mejoras UX
+
+### 1. Mejoras de Navegación (Sticky Header)
+- **Cabecera Persistente**: Se implementó una cabecera "sticky" manual con clases Tailwind (`sticky top-0 z-50`). Se resolvió un conflicto de CSS (wrapper con `overflow-x-hidden`) que impedía el funcionamiento correcto en páginas interiores. Ahora el menú permanece visible al hacer scroll en todas las páginas.
+
+### 2. SEO y Redes Sociales
+- **Open Graph (Facebook/LinkedIn)**: Etiquetas `og:title`, `og:description`, `og:image` añadidas a todas las páginas principales para compartir enlaces visualmente atractivos.
+- **Twitter Cards**: Etiquetas `twitter:card` (summary_large_image) añadidas.
+- **Metadatos**: Descripciones únicas y relevantes para cada página.
+
+### 3. Rendimiento y Accesibilidad
+- **Fuentes Web**: Se añadió `&display=swap` a las importaciones de Google Fonts para mejorar la carga visible del texto (FOUT en lugar de FOIT).
+- **Caché**: Se añadió una etiqueta meta `Cache-Control` (simulada) para sugerir caché de largo plazo.
+- **Contraste y Etiquetas**: Revisión de contraste en modo claro/oscuro y mejora de etiquetas ARIA implícitas mediante HTML semántico.
+
+## Verificación Final
+Se realizaron pruebas automatizadas de navegación y comportamiento de scroll (sticky header) con éxito en todas las secciones del sitio.
