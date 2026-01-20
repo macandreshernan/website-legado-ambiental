@@ -1,14 +1,19 @@
 <!DOCTYPE html>
+<html class="light" lang="es">
 
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Services Overview | Legado Ambiental</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Servicios | Legado Ambiental</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
@@ -31,193 +36,246 @@
             },
         }
     </script>
-<style>
+    <style>
         body {
             font-family: "Public Sans", sans-serif;
         }
+
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
     </style>
 </head>
+
 <body class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-white transition-colors duration-200">
-<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
-<!-- Header / Navigation -->
-<header class="flex items-center justify-center border-b border-solid border-[#f0f2f4] dark:border-gray-800 bg-white dark:bg-background-dark px-4 py-3 sticky top-0 z-50">
-<div class="flex w-full max-w-[1200px] items-center justify-between">
-<div class="flex items-center gap-3 text-primary">
-<div class="size-6">
-<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-<path d="M6 6H42L36 24L42 42H6L12 24L6 6Z"></path>
-</svg>
-</div>
-<h2 class="text-[#111418] dark:text-white text-xl font-bold leading-tight tracking-tight">Legado Ambiental</h2>
-</div>
-<div class="hidden md:flex flex-1 justify-end gap-8 items-center">
-<nav class="flex items-center gap-8">
-<a class="text-[#111418] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors" href="#">Home</a>
-<a class="text-primary text-sm font-bold border-b-2 border-primary pb-1" href="#">Services</a>
-<a class="text-[#111418] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors" href="#">Projects</a>
-<a class="text-[#111418] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors" href="#">About Us</a>
-<a class="text-[#111418] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors" href="#">Contact</a>
-</nav>
-<button class="flex min-w-[120px] cursor-pointer items-center justify-center rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold shadow-sm hover:bg-primary/90 transition-all">
-                        Request Quote
-                    </button>
-</div>
-</div>
-</header>
-<main class="flex-1 flex flex-col items-center">
-<!-- Hero Header Section -->
-<div class="w-full max-w-[1200px] px-4 md:px-10 py-12 md:py-20">
-<div class="@container">
-<div class="flex flex-col gap-6 text-center max-w-3xl mx-auto">
-<h1 class="text-[#111418] dark:text-white text-4xl font-black leading-tight tracking-tight md:text-5xl">
-                            Our Specialized Engineering &amp; Construction Services
-                        </h1>
-<p class="text-[#617589] dark:text-gray-400 text-base md:text-lg leading-relaxed">
-                            We deliver sustainable infrastructure and construction solutions tailored for both the private sector and government initiatives across the region.
-                        </p>
-</div>
-</div>
-</div>
-<!-- Tabs Section -->
-<div class="w-full max-w-[1200px] px-4 md:px-10">
-<div class="flex border-b border-[#dbe0e6] dark:border-gray-800 gap-8">
-<a class="flex flex-col items-center justify-center border-b-[3px] border-primary text-primary pb-3 pt-4" href="#">
-<p class="text-sm font-bold tracking-wide">All Services</p>
-</a>
-<a class="flex flex-col items-center justify-center border-b-[3px] border-transparent text-[#617589] dark:text-gray-400 pb-3 pt-4 hover:text-primary transition-colors" href="#">
-<p class="text-sm font-bold tracking-wide">Private Sector</p>
-</a>
-<a class="flex flex-col items-center justify-center border-b-[3px] border-transparent text-[#617589] dark:text-gray-400 pb-3 pt-4 hover:text-primary transition-colors" href="#">
-<p class="text-sm font-bold tracking-wide">Public Works</p>
-</a>
-</div>
-</div>
-<!-- Service Grid Section -->
-<div class="w-full max-w-[1200px] px-4 md:px-10 py-10">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-<!-- Private Construction Card -->
-<div class="group flex flex-col bg-white dark:bg-[#1a2530] rounded-xl overflow-hidden shadow-sm border border-[#e5e7eb] dark:border-gray-800 hover:shadow-md transition-all duration-300">
-<div class="relative h-64 w-full overflow-hidden">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Modern architectural glass building under construction" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCfQ4Bf07QZUJIdtS13y_NKnwzu-xhHDZ5Zpz1lLhngEwo3eeL9IvcFJhrGycofbB15pNd1c9rHnjb1WRg4OnMOIvLcGKBbT5L6mpAAET_B5o_J9cULmKHfLkltohG5rPfRs0kVSGSsTkW8sfdfoydNPuUTVvxbVUaPWD8XPoHGxARIp63qln7L7iUiWspZ-xLGU9N3u1a8_yCpbYiDNjyi-3UVPwUFe7_nWldV32CnC9WR7NDnqeDDDvf_EidrJrH80q_PBiIRIMvi");'>
-</div>
-<div class="absolute top-4 left-4 bg-primary text-white p-2 rounded-lg shadow-lg">
-<span class="material-symbols-outlined">apartment</span>
-</div>
-</div>
-<div class="p-8 flex flex-col flex-1">
-<h3 class="text-xl font-bold text-[#111418] dark:text-white mb-3">Private Construction</h3>
-<p class="text-[#617589] dark:text-gray-400 text-sm leading-relaxed mb-6 flex-1">
-                                Comprehensive engineering for high-end residential complexes, corporate headquarters, and strategic industrial warehouses. We focus on structural excellence and environmental efficiency.
-                            </p>
-<ul class="mb-8 space-y-2">
-<li class="flex items-center gap-2 text-xs font-medium text-[#111418] dark:text-gray-300">
-<span class="material-symbols-outlined text-primary text-sm">check_circle</span> Residential Real Estate
-                                </li>
-<li class="flex items-center gap-2 text-xs font-medium text-[#111418] dark:text-gray-300">
-<span class="material-symbols-outlined text-primary text-sm">check_circle</span> Commercial &amp; Retail Hubs
-                                </li>
-<li class="flex items-center gap-2 text-xs font-medium text-[#111418] dark:text-gray-300">
-<span class="material-symbols-outlined text-primary text-sm">check_circle</span> Industrial Logistics Centers
-                                </li>
-</ul>
-<button class="flex items-center justify-center gap-2 w-full py-3 bg-primary/10 dark:bg-primary/20 text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-all">
-                                Learn More <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
-</button>
-</div>
-</div>
-<!-- Government Civil Works Card -->
-<div class="group flex flex-col bg-white dark:bg-[#1a2530] rounded-xl overflow-hidden shadow-sm border border-[#e5e7eb] dark:border-gray-800 hover:shadow-md transition-all duration-300">
-<div class="relative h-64 w-full overflow-hidden">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Large scale public highway and bridge infrastructure" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAr-5NMcAx7_GPpu7BP28wOpyEqQ5OZaHj3FCjwb1sUWkDWht6lNwdoW_2tgiTdB_-zMRwyJvtpw0kvKM3TSiP98mIloC6yJOvl2kgECDWVeI4W5U4QGvSixpCPuPAoO5zrgCBTj8ZJ1x3qPnfHXMqJvrbXF4NTUJkJ_7Jqv2fLz6i3tV1V5vdrlzIYaCcz6qNtnQzFNaRcbAnk1oI5Is7hwLknYseHQpRXrqEVIxhj4iZqPSHL-7dIVjQQxxe_io9XCE8A62wb3Bza");'>
-</div>
-<div class="absolute top-4 left-4 bg-primary text-white p-2 rounded-lg shadow-lg">
-<span class="material-symbols-outlined">account_balance</span>
-</div>
-</div>
-<div class="p-8 flex flex-col flex-1">
-<h3 class="text-xl font-bold text-[#111418] dark:text-white mb-3">Government Civil Works</h3>
-<p class="text-[#617589] dark:text-gray-400 text-sm leading-relaxed mb-6 flex-1">
-                                Large-scale public infrastructure projects including urban development, highway systems, and essential public facilities. We adhere to the highest standards of safety and regulatory compliance.
-                            </p>
-<ul class="mb-8 space-y-2">
-<li class="flex items-center gap-2 text-xs font-medium text-[#111418] dark:text-gray-300">
-<span class="material-symbols-outlined text-primary text-sm">check_circle</span> Urban Infrastructure &amp; Roads
-                                </li>
-<li class="flex items-center gap-2 text-xs font-medium text-[#111418] dark:text-gray-300">
-<span class="material-symbols-outlined text-primary text-sm">check_circle</span> Public Schools &amp; Hospitals
-                                </li>
-<li class="flex items-center gap-2 text-xs font-medium text-[#111418] dark:text-gray-300">
-<span class="material-symbols-outlined text-primary text-sm">check_circle</span> Environmental Remediation
-                                </li>
-</ul>
-<button class="flex items-center justify-center gap-2 w-full py-3 bg-primary/10 dark:bg-primary/20 text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-all">
-                                View Projects <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
-</button>
-</div>
-</div>
-</div>
-</div>
-<!-- Secondary Services / Small Cards Section -->
-<div class="w-full max-w-[1200px] px-4 md:px-10 py-12">
-<h2 class="text-[#111418] dark:text-white text-2xl font-bold mb-8">Additional Capabilities</h2>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-<div class="p-6 bg-white dark:bg-[#1a2530] rounded-lg border border-[#f0f2f4] dark:border-gray-800 text-center">
-<span class="material-symbols-outlined text-primary mb-3 text-3xl">architecture</span>
-<h4 class="font-bold text-sm mb-1">Project Design</h4>
-<p class="text-xs text-[#617589] dark:text-gray-400">Concept to blueprint phase.</p>
-</div>
-<div class="p-6 bg-white dark:bg-[#1a2530] rounded-lg border border-[#f0f2f4] dark:border-gray-800 text-center">
-<span class="material-symbols-outlined text-primary mb-3 text-3xl">handyman</span>
-<h4 class="font-bold text-sm mb-1">Maintenance</h4>
-<p class="text-xs text-[#617589] dark:text-gray-400">Post-construction facility care.</p>
-</div>
-<div class="p-6 bg-white dark:bg-[#1a2530] rounded-lg border border-[#f0f2f4] dark:border-gray-800 text-center">
-<span class="material-symbols-outlined text-primary mb-3 text-3xl">eco</span>
-<h4 class="font-bold text-sm mb-1">Eco Consultation</h4>
-<p class="text-xs text-[#617589] dark:text-gray-400">Green building certification.</p>
-</div>
-<div class="p-6 bg-white dark:bg-[#1a2530] rounded-lg border border-[#f0f2f4] dark:border-gray-800 text-center">
-<span class="material-symbols-outlined text-primary mb-3 text-3xl">verified</span>
-<h4 class="font-bold text-sm mb-1">Quality Audit</h4>
-<p class="text-xs text-[#617589] dark:text-gray-400">Structural integrity reports.</p>
-</div>
-</div>
-</div>
-<!-- Call to Action Section -->
-<div class="w-full bg-[#111418] py-16 px-4">
-<div class="max-w-[800px] mx-auto text-center flex flex-col items-center gap-6">
-<h2 class="text-white text-3xl font-bold">Ready to start your next project?</h2>
-<p class="text-gray-400">Legado Ambiental brings decades of collective experience to every site. Let's discuss your requirements today.</p>
-<div class="flex gap-4">
-<button class="bg-primary text-white font-bold px-8 py-3 rounded-lg hover:bg-primary/90 transition-all">Get a Quote</button>
-<button class="border border-white/20 text-white font-bold px-8 py-3 rounded-lg hover:bg-white/10 transition-all">Our Process</button>
-</div>
-</div>
-</div>
-</main>
-<!-- Footer -->
-<footer class="w-full bg-white dark:bg-background-dark border-t border-[#f0f2f4] dark:border-gray-800 py-10">
-<div class="max-w-[1200px] mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
-<div class="flex items-center gap-3">
-<div class="size-5 text-primary">
-<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-<path d="M6 6H42L36 24L42 42H6L12 24L6 6Z"></path>
-</svg>
-</div>
-<span class="font-bold dark:text-white">Legado Ambiental</span>
-</div>
-<div class="text-sm text-[#617589] dark:text-gray-400">
-                    © 2024 Legado Ambiental. All rights reserved.
+    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+        <!-- Header / Navigation -->
+        <header
+            class="flex items-center justify-center border-b border-solid border-[#f0f2f4] dark:border-gray-800 bg-white dark:bg-background-dark px-4 py-3 sticky top-0 z-50">
+            <div class="flex w-full max-w-[1200px] items-center justify-between">
+                <div class="flex items-center gap-3 text-primary">
+                    <div class="size-6">
+                        <svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 6H42L36 24L42 42H6L12 24L6 6Z"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-[#111418] dark:text-white text-xl font-bold leading-tight tracking-tight">Legado
+                        Ambiental</h2>
                 </div>
-<div class="flex gap-6">
-<a class="text-[#617589] hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
-<a class="text-[#617589] hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">mail</span></a>
-<a class="text-[#617589] hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">location_on</span></a>
-</div>
-</div>
-</footer>
-</div>
-</body></html>
+                <div class="hidden md:flex flex-1 justify-end gap-8 items-center">
+                    <nav class="flex items-center gap-8">
+                        <a class="text-[#111418] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
+                            href="../home.html">Inicio</a>
+                        <a class="text-primary text-sm font-bold border-b-2 border-primary pb-1" href="#">Servicios</a>
+                        <a class="text-[#111418] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
+                            href="../project_portfolio_gallery/portfolio.html">Proyectos</a>
+                        <a class="text-[#111418] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
+                            href="../about_us/about_us.html">Nosotros</a>
+                        <a class="text-[#111418] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
+                            href="../faq/contact_faq.html">Contacto</a>
+                    </nav>
+                    <button
+                        class="flex min-w-[120px] cursor-pointer items-center justify-center rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold shadow-sm hover:bg-primary/90 transition-all">
+                        Cotizar
+                    </button>
+                </div>
+            </div>
+        </header>
+        <main class="flex-1 flex flex-col items-center">
+            <!-- Hero Header Section -->
+            <div class="w-full max-w-[1200px] px-4 md:px-10 py-12 md:py-20">
+                <div class="@container">
+                    <div class="flex flex-col gap-6 text-center max-w-3xl mx-auto">
+                        <h1
+                            class="text-[#111418] dark:text-white text-4xl font-black leading-tight tracking-tight md:text-5xl">
+                            Nuestros Servicios Especializados de Ingeniería y Construcción
+                        </h1>
+                        <p class="text-[#617589] dark:text-gray-400 text-base md:text-lg leading-relaxed">
+                            Ofrecemos soluciones de infraestructura y construcción sostenible adaptadas tanto para la
+                            iniciativa privada como para iniciativas gubernamentales en la región.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Tabs Section -->
+            <div class="w-full max-w-[1200px] px-4 md:px-10">
+                <div class="flex border-b border-[#dbe0e6] dark:border-gray-800 gap-8">
+                    <a class="flex flex-col items-center justify-center border-b-[3px] border-primary text-primary pb-3 pt-4"
+                        href="#">
+                        <p class="text-sm font-bold tracking-wide">Todos los Servicios</p>
+                    </a>
+                    <a class="flex flex-col items-center justify-center border-b-[3px] border-transparent text-[#617589] dark:text-gray-400 pb-3 pt-4 hover:text-primary transition-colors"
+                        href="#">
+                        <p class="text-sm font-bold tracking-wide">Sector Privado</p>
+                    </a>
+                    <a class="flex flex-col items-center justify-center border-b-[3px] border-transparent text-[#617589] dark:text-gray-400 pb-3 pt-4 hover:text-primary transition-colors"
+                        href="#">
+                        <p class="text-sm font-bold tracking-wide">Obras Públicas</p>
+                    </a>
+                </div>
+            </div>
+            <!-- Service Grid Section -->
+            <div class="w-full max-w-[1200px] px-4 md:px-10 py-10">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Private Construction Card -->
+                    <div
+                        class="group flex flex-col bg-white dark:bg-[#1a2530] rounded-xl overflow-hidden shadow-sm border border-[#e5e7eb] dark:border-gray-800 hover:shadow-md transition-all duration-300">
+                        <div class="relative h-64 w-full overflow-hidden">
+                            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+                                data-alt="Modern architectural glass building under construction"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCfQ4Bf07QZUJIdtS13y_NKnwzu-xhHDZ5Zpz1lLhngEwo3eeL9IvcFJhrGycofbB15pNd1c9rHnjb1WRg4OnMOIvLcGKBbT5L6mpAAET_B5o_J9cULmKHfLkltohG5rPfRs0kVSGSsTkW8sfdfoydNPuUTVvxbVUaPWD8XPoHGxARIp63qln7L7iUiWspZ-xLGU9N3u1a8_yCpbYiDNjyi-3UVPwUFe7_nWldV32CnC9WR7NDnqeDDDvf_EidrJrH80q_PBiIRIMvi");'>
+                            </div>
+                            <div class="absolute top-4 left-4 bg-primary text-white p-2 rounded-lg shadow-lg">
+                                <span class="material-symbols-outlined">apartment</span>
+                            </div>
+                        </div>
+                        <div class="p-8 flex flex-col flex-1">
+                            <h3 class="text-xl font-bold text-[#111418] dark:text-white mb-3">Construcción Privada</h3>
+                            <p class="text-[#617589] dark:text-gray-400 text-sm leading-relaxed mb-6 flex-1">
+                                Ingeniería integral para complejos residenciales de alta gama, sedes corporativas y
+                                naves industriales estratégicas. Nos centramos en la excelencia estructural y la
+                                eficiencia ambiental.
+                            </p>
+                            <ul class="mb-8 space-y-2">
+                                <li
+                                    class="flex items-center gap-2 text-xs font-medium text-[#111418] dark:text-gray-300">
+                                    <span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                                    Desarrollos Residenciales
+                                </li>
+                                <li
+                                    class="flex items-center gap-2 text-xs font-medium text-[#111418] dark:text-gray-300">
+                                    <span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                                    Centros Comerciales y Corporativos
+                                </li>
+                                <li
+                                    class="flex items-center gap-2 text-xs font-medium text-[#111418] dark:text-gray-300">
+                                    <span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                                    Centros Logísticos e Industriales
+                                </li>
+                            </ul>
+                            <button
+                                class="flex items-center justify-center gap-2 w-full py-3 bg-primary/10 dark:bg-primary/20 text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-all">
+                                Conocer Más <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Government Civil Works Card -->
+                    <div
+                        class="group flex flex-col bg-white dark:bg-[#1a2530] rounded-xl overflow-hidden shadow-sm border border-[#e5e7eb] dark:border-gray-800 hover:shadow-md transition-all duration-300">
+                        <div class="relative h-64 w-full overflow-hidden">
+                            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+                                data-alt="Large scale public highway and bridge infrastructure"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAr-5NMcAx7_GPpu7BP28wOpyEqQ5OZaHj3FCjwb1sUWkDWht6lNwdoW_2tgiTdB_-zMRwyJvtpw0kvKM3TSiP98mIloC6yJOvl2kgECDWVeI4W5U4QGvSixpCPuPAoO5zrgCBTj8ZJ1x3qPnfHXMqJvrbXF4NTUJkJ_7Jqv2fLz6i3tV1V5vdrlzIYaCcz6qNtnQzFNaRcbAnk1oI5Is7hwLknYseHQpRXrqEVIxhj4iZqPSHL-7dIVjQQxxe_io9XCE8A62wb3Bza");'>
+                            </div>
+                            <div class="absolute top-4 left-4 bg-primary text-white p-2 rounded-lg shadow-lg">
+                                <span class="material-symbols-outlined">account_balance</span>
+                            </div>
+                        </div>
+                        <div class="p-8 flex flex-col flex-1">
+                            <h3 class="text-xl font-bold text-[#111418] dark:text-white mb-3">Obras Civiles
+                                Gubernamentales</h3>
+                            <p class="text-[#617589] dark:text-gray-400 text-sm leading-relaxed mb-6 flex-1">
+                                Proyectos de infraestructura pública a gran escala, incluyendo desarrollo urbano,
+                                sistemas de carreteras e instalaciones públicas esenciales. Cumplimos con los más altos
+                                estándares de seguridad y normativa.
+                            </p>
+                            <ul class="mb-8 space-y-2">
+                                <li
+                                    class="flex items-center gap-2 text-xs font-medium text-[#111418] dark:text-gray-300">
+                                    <span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                                    Infraestructura Urbana y Vialidades
+                                </li>
+                                <li
+                                    class="flex items-center gap-2 text-xs font-medium text-[#111418] dark:text-gray-300">
+                                    <span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                                    Escuelas y Hospitales Públicos
+                                </li>
+                                <li
+                                    class="flex items-center gap-2 text-xs font-medium text-[#111418] dark:text-gray-300">
+                                    <span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                                    Saneamiento Ambiental
+                                </li>
+                            </ul>
+                            <button
+                                class="flex items-center justify-center gap-2 w-full py-3 bg-primary/10 dark:bg-primary/20 text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-all">
+                                Ver Proyectos <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Secondary Services / Small Cards Section -->
+            <div class="w-full max-w-[1200px] px-4 md:px-10 py-12">
+                <h2 class="text-[#111418] dark:text-white text-2xl font-bold mb-8">Capacidades Adicionales</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div
+                        class="p-6 bg-white dark:bg-[#1a2530] rounded-lg border border-[#f0f2f4] dark:border-gray-800 text-center">
+                        <span class="material-symbols-outlined text-primary mb-3 text-3xl">architecture</span>
+                        <h4 class="font-bold text-sm mb-1">Diseño de Proyectos</h4>
+                        <p class="text-xs text-[#617589] dark:text-gray-400">Desde el concepto hasta los planos.</p>
+                    </div>
+                    <div
+                        class="p-6 bg-white dark:bg-[#1a2530] rounded-lg border border-[#f0f2f4] dark:border-gray-800 text-center">
+                        <span class="material-symbols-outlined text-primary mb-3 text-3xl">handyman</span>
+                        <h4 class="font-bold text-sm mb-1">Mantenimiento</h4>
+                        <p class="text-xs text-[#617589] dark:text-gray-400">Cuidado posterior a la construcción.</p>
+                    </div>
+                    <div
+                        class="p-6 bg-white dark:bg-[#1a2530] rounded-lg border border-[#f0f2f4] dark:border-gray-800 text-center">
+                        <span class="material-symbols-outlined text-primary mb-3 text-3xl">eco</span>
+                        <h4 class="font-bold text-sm mb-1">Consultoría Ecológica</h4>
+                        <p class="text-xs text-[#617589] dark:text-gray-400">Certificación de edificios verdes.</p>
+                    </div>
+                    <div
+                        class="p-6 bg-white dark:bg-[#1a2530] rounded-lg border border-[#f0f2f4] dark:border-gray-800 text-center">
+                        <span class="material-symbols-outlined text-primary mb-3 text-3xl">verified</span>
+                        <h4 class="font-bold text-sm mb-1">Auditoría de Calidad</h4>
+                        <p class="text-xs text-[#617589] dark:text-gray-400">Informes de integridad estructural.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Call to Action Section -->
+            <div class="w-full bg-[#111418] py-16 px-4">
+                <div class="max-w-[800px] mx-auto text-center flex flex-col items-center gap-6">
+                    <h2 class="text-white text-3xl font-bold">¿Listo para comenzar tu próximo proyecto?</h2>
+                    <p class="text-gray-400">Legado Ambiental aporta décadas de experiencia colectiva a cada obra.
+                        Hablemos de tus requerimientos hoy mismo.</p>
+                    <div class="flex gap-4">
+                        <button
+                            class="bg-primary text-white font-bold px-8 py-3 rounded-lg hover:bg-primary/90 transition-all">Obtener
+                            Cotización</button>
+                        <button
+                            class="border border-white/20 text-white font-bold px-8 py-3 rounded-lg hover:bg-white/10 transition-all">Nuestro
+                            Proceso</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- Footer -->
+        <footer class="w-full bg-white dark:bg-background-dark border-t border-[#f0f2f4] dark:border-gray-800 py-10">
+            <div class="max-w-[1200px] mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center gap-3">
+                    <div class="size-5 text-primary">
+                        <svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 6H42L36 24L42 42H6L12 24L6 6Z"></path>
+                        </svg>
+                    </div>
+                    <span class="font-bold dark:text-white">Legado Ambiental</span>
+                </div>
+                <div class="text-sm text-[#617589] dark:text-gray-400">
+                    © 2024 Legado Ambiental. Todos los derechos reservados.
+                </div>
+                <div class="flex gap-6">
+                    <a class="text-[#617589] hover:text-primary transition-colors" href="#"><span
+                            class="material-symbols-outlined">share</span></a>
+                    <a class="text-[#617589] hover:text-primary transition-colors" href="#"><span
+                            class="material-symbols-outlined">mail</span></a>
+                    <a class="text-[#617589] hover:text-primary transition-colors" href="#"><span
+                            class="material-symbols-outlined">location_on</span></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
