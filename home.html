@@ -90,12 +90,40 @@
                     <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:text-primary transition-colors"
                         href="faq/contact_faq.html">FAQ</a>
                 </nav>
-                <div>
+                <!-- Desktop Button -->
+                <div class="hidden md:block">
                     <button
                         class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-lg text-sm font-bold tracking-wide transition-all shadow-md focus:ring-2 focus:ring-primary focus:ring-offset-2">
                         Cotizar
                     </button>
                 </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn"
+                    class="md:hidden text-navy dark:text-white p-2 hover:text-primary transition-colors">
+                    <span class="material-symbols-outlined text-3xl">menu</span>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu"
+                class="hidden md:hidden absolute top-20 left-0 w-full bg-white dark:bg-background-dark border-b border-gray-200 dark:border-gray-800 shadow-xl py-4 px-4 flex-col gap-4">
+                <a class="text-navy dark:text-gray-300 text-base font-semibold hover:text-primary transition-colors py-2 border-b border-gray-100 dark:border-gray-800"
+                    href="about_us/about_us.html">Quiénes Somos</a>
+                <a class="text-navy dark:text-gray-300 text-base font-semibold hover:text-primary transition-colors py-2 border-b border-gray-100 dark:border-gray-800"
+                    href="services_overview/services.html">Servicios</a>
+                <a class="text-navy dark:text-gray-300 text-base font-semibold hover:text-primary transition-colors py-2 border-b border-gray-100 dark:border-gray-800"
+                    href="project_portfolio_gallery/portfolio.html">Portafolio</a>
+                <a class="text-navy dark:text-gray-300 text-base font-semibold hover:text-primary transition-colors py-2 border-b border-gray-100 dark:border-gray-800"
+                    href="experience_timeline/our_experience.html">Experiencia</a>
+                <a class="text-navy dark:text-gray-300 text-base font-semibold hover:text-primary transition-colors py-2 border-b border-gray-100 dark:border-gray-800"
+                    href="faq/contact_faq.html">Contacto</a>
+                <a class="text-navy dark:text-gray-300 text-base font-semibold hover:text-primary transition-colors py-2 mb-2"
+                    href="faq/contact_faq.html">FAQ</a>
+                <button
+                    class="w-full bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg text-sm font-bold tracking-wide transition-all">
+                    Cotizar
+                </button>
             </div>
         </div>
     </header>
@@ -397,6 +425,38 @@
             </div>
         </div>
     </footer>
+    <script>
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = mobileMenu.querySelectorAll('a, button');
+
+        function toggleMenu() {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex'); // Only if needed based on previous steps, usually 'block' or just removing hidden is enough depending on CSS, but keeping consistency.
+        }
+
+        function closeMenu() {
+            mobileMenu.classList.add('hidden');
+            // Check if we need to remove 'flex' if it was added. 
+            // Previous implementation toggled 'flex'. So we should remove 'flex'.
+            mobileMenu.classList.remove('flex');
+        }
+
+        menuBtn.addEventListener('click', () => {
+            // We can reuse the toggle logic or just keep it simple inline if we want, 
+            // but let's be safe and consistent.
+            if (mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.remove('hidden');
+                mobileMenu.classList.add('flex'); // Assuming flex was desired for layout
+            } else {
+                closeMenu();
+            }
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+    </script>
 </body>
 
 </html>
