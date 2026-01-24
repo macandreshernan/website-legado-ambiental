@@ -1,17 +1,34 @@
 <!DOCTYPE html>
+<html class="light" lang="es">
 
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Project Portfolio Gallery | Legado Ambiental</title>
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;900&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
-<!-- Material Symbols -->
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<!-- Tailwind CSS -->
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Portafolio de Proyectos | Legado Ambiental</title>
+
+    <!-- SEO & Social Media Meta Tags -->
+    <meta name="description"
+        content="Explore el portafolio de proyectos de ingeniería civil y sostenible de Legado Ambiental.">
+    <meta property="og:title" content="Portafolio de Proyectos | Legado Ambiental">
+    <meta property="og:description" content="Nuestro legado en infraestructura y desarrollo sostenible.">
+    <meta property="og:image"
+        content="https://lh3.googleusercontent.com/aida-public/AB6AXuCcDp_WIg4NkPDk-htLS9hWQBqYkFmPXiGCOmMUGyDg7h1D0WFvNipwiL_JO0fvjvefiAobw0Wu2kQMAKpaAbfN3YCTTFTtwR_UhIw-gmrOSrxISPTpGd0Go3PSOQO5HRxCVPZ9GzmWCpCxyKeL8IN2xkruUEpG71_wiV3_-DYcDeSZwBaDL4xt1ZwxceJyOfCVq1QeQRVCEsABhP4EHViLMwrijWttxCiDG9aQzVNb0MvPWykQPl0qWAxnojdijO5NiVbakzuhS7Nm">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Portafolio de Proyectos | Legado Ambiental">
+    <meta name="twitter:description" content="Nuestro legado en infraestructura y desarrollo sostenible.">
+    <meta name="twitter:image"
+        content="https://lh3.googleusercontent.com/aida-public/AB6AXuCcDp_WIg4NkPDk-htLS9hWQBqYkFmPXiGCOmMUGyDg7h1D0WFvNipwiL_JO0fvjvefiAobw0Wu2kQMAKpaAbfN3YCTTFTtwR_UhIw-gmrOSrxISPTpGd0Go3PSOQO5HRxCVPZ9GzmWCpCxyKeL8IN2xkruUEpG71_wiV3_-DYcDeSZwBaDL4xt1ZwxceJyOfCVq1QeQRVCEsABhP4EHViLMwrijWttxCiDG9aQzVNb0MvPWykQPl0qWAxnojdijO5NiVbakzuhS7Nm">
+
+    <!-- Browser Cache Hint -->
+    <meta http-equiv="Cache-Control" content="max-age=31536000">
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
@@ -24,215 +41,196 @@
                     fontFamily: {
                         "display": ["Public Sans", "sans-serif"]
                     },
-                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
                 },
             },
         }
     </script>
-<style>
-        .masonry-item:hover .overlay {
-            opacity: 1;
-        }
-        .masonry-item:hover img {
-            transform: scale(1.05);
+    <style>
+        body {
+            font-family: "Public Sans", sans-serif;
         }
     </style>
 </head>
-<body class="bg-background-light dark:bg-background-dark font-display text-[#111418] dark:text-white transition-colors duration-300">
-<div class="relative flex min-h-screen flex-col">
-<!-- TopNavBar -->
-<header class="sticky top-0 z-50 w-full border-b border-[#f0f2f4] dark:border-gray-800 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md">
-<div class="mx-auto max-w-[1280px] px-6 lg:px-10 flex h-16 items-center justify-between">
-<div class="flex items-center gap-3">
-<div class="text-primary">
-<svg class="size-8" fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-<path d="M6 6H42L36 24L42 42H6L12 24L6 6Z"></path>
-</svg>
-</div>
-<h1 class="text-xl font-black tracking-tight">Legado Ambiental</h1>
-</div>
-<nav class="hidden md:flex items-center gap-8">
-<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Home</a>
-<a class="text-sm font-medium hover:text-primary transition-colors" href="#">About Us</a>
-<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Services</a>
-<a class="text-primary text-sm font-bold border-b-2 border-primary py-1" href="#">Portfolio</a>
-<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Contact</a>
-</nav>
-<div class="flex items-center gap-4">
-<button class="flex h-10 items-center justify-center rounded-lg bg-primary px-5 text-sm font-bold text-white transition-transform hover:scale-105 active:scale-95">
-                        Get a Quote
+
+<body class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-white transition-colors duration-200">
+    <div class="relative flex min-h-screen w-full flex-col">
+        <!-- Sticky Header with Backdrop Blur -->
+        <header
+            class="flex items-center justify-center border-b border-solid border-[#f0f2f4] dark:border-gray-800 bg-white/95 dark:bg-background-dark/95 backdrop-blur-sm px-4 py-3 sticky top-0 z-50 transition-all shadow-sm">
+            <div class="flex w-full max-w-[1200px] items-center justify-between">
+                <div class="flex items-center gap-3 text-primary">
+                    <div class="size-6">
+                        <svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 6H42L36 24L42 42H6L12 24L6 6Z"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-[#111418] dark:text-white text-xl font-bold leading-tight tracking-tight">Legado
+                        Ambiental</h2>
+                </div>
+                <div class="hidden md:flex flex-1 justify-end gap-8 items-center">
+                    <nav class="flex items-center gap-8">
+                        <a class="text-[#111418] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
+                            href="../home.html">Inicio</a>
+                        <a class="text-primary text-sm font-bold border-b-2 border-primary pb-1" href="#">Portafolio</a>
+                        <a class="text-[#111418] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
+                            href="../services_overview/services.html">Servicios</a>
+                        <a class="text-[#111418] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
+                            href="../experience_timeline/our_experience.html">Experiencia</a>
+                        <a class="text-[#111418] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
+                            href="../faq/contact_faq.html">Contacto</a>
+                    </nav>
+                    <button
+                        class="flex min-w-[120px] cursor-pointer items-center justify-center rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold shadow-sm hover:bg-primary/90 transition-all focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                        Iniciar Proyecto
                     </button>
-</div>
-</div>
-</header>
-<main class="flex-1">
-<!-- Breadcrumbs -->
-<div class="mx-auto max-w-[1280px] px-6 lg:px-10 py-6">
-<nav class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
-<a class="hover:text-primary transition-colors" href="#">Home</a>
-<span class="material-symbols-outlined text-xs">chevron_right</span>
-<span class="text-[#111418] dark:text-white font-medium">Portfolio</span>
-</nav>
-</div>
-<!-- Page Heading -->
-<section class="mx-auto max-w-[1280px] px-6 lg:px-10 pb-10">
-<div class="flex flex-col gap-3">
-<h2 class="text-4xl font-black leading-tight tracking-[-0.033em] lg:text-5xl">Our Legacy in Infrastructure</h2>
-<p class="max-w-2xl text-lg text-gray-600 dark:text-gray-400">
-                        A track record of excellence in private and government civil engineering projects, delivering sustainable solutions for tomorrow's challenges.
-                    </p>
-</div>
-</section>
-<!-- Tabs / Filters -->
-<section class="mx-auto max-w-[1280px] px-6 lg:px-10 mb-8">
-<div class="flex border-b border-gray-200 dark:border-gray-800 gap-8">
-<button class="flex flex-col items-center justify-center border-b-[3px] border-primary text-primary pb-3 transition-colors">
-<span class="text-sm font-bold tracking-wide">All Projects</span>
-</button>
-<button class="flex flex-col items-center justify-center border-b-[3px] border-transparent text-gray-500 hover:text-primary pb-3 transition-colors">
-<span class="text-sm font-bold tracking-wide">Private Sector</span>
-</button>
-<button class="flex flex-col items-center justify-center border-b-[3px] border-transparent text-gray-500 hover:text-primary pb-3 transition-colors">
-<span class="text-sm font-bold tracking-wide">Government &amp; Public Works</span>
-</button>
-</div>
-</section>
-<!-- Image Gallery (Masonry-style Grid) -->
-<section class="mx-auto max-w-[1280px] px-6 lg:px-10 pb-20">
-<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-<!-- Project Item 1 -->
-<div class="masonry-item relative group cursor-pointer overflow-hidden rounded-xl bg-gray-200 dark:bg-gray-800">
-<div class="aspect-[4/5] w-full transition-transform duration-500" data-alt="Modern high-rise building construction site during sunset" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA_YXnpCZr6YJ5hzh51Was2-qW571G5QT_kg3jloDaJyuQYCrb0wSvbHDFIaszEfbHyBIjFRPyvre5lDXdyD-skcXGiKCs2h5RBeMZEjm4idZuKPdHeoKp6Hi1MMZpy3SRtqw0TPuJhnGv_uHaGZLYckkTTV6IvkZGRcmP4mmdxocZyEGUjkOd1meAHdadjTcSYMFr7w9iq04XKBowU3Jn576T4f_EcF8yG0kOiJl0ZkxI2RwLZoCp7isfs_BI3Uh7pv1UmG52GRCkp"); background-size: cover; background-position: center;'></div>
-<div class="overlay absolute inset-0 bg-primary/80 opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6 text-white">
-<span class="text-xs font-bold uppercase tracking-widest text-white/80 mb-1">Public Works</span>
-<h3 class="text-xl font-bold">Metropolitan Bridge Retrofit</h3>
-<div class="flex items-center gap-1 mt-2 text-sm text-white/90">
-<span class="material-symbols-outlined text-sm">location_on</span>
-<span>Mexico City, MX</span>
-</div>
-</div>
-</div>
-<!-- Project Item 2 -->
-<div class="masonry-item relative group cursor-pointer overflow-hidden rounded-xl bg-gray-200 dark:bg-gray-800">
-<div class="aspect-[1/1] w-full transition-transform duration-500" data-alt="Aerial view of a sprawling industrial park development" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDodoEUeJ6KMXZbqPzXvXVEsWQg5erJ06EkiGoTZhsN8yyjNqDdOeKkdRVXSxlIEuEbjCRZa2OukO4RX2fpcoJ2L16ng1IFsm0j-K5_6xgLAeNuRuo7lFfpwE0pPzav83XYqgHouvVeZaaPMDHFxq-4sqY6ZLU83xAbT6GbjcRnWx6ZaysjsH-hRaTMtoSMt-Sux3tGflKczm4-3gHoqjYL9jckLrbJ8gSyqza8_RAzMBXwJrkacT8oX4tjj6upHNXRTjrhakk5-yV-"); background-size: cover; background-position: center;'></div>
-<div class="overlay absolute inset-0 bg-primary/80 opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6 text-white">
-<span class="text-xs font-bold uppercase tracking-widest text-white/80 mb-1">Private Sector</span>
-<h3 class="text-xl font-bold">Industrial Park Development</h3>
-<div class="flex items-center gap-1 mt-2 text-sm text-white/90">
-<span class="material-symbols-outlined text-sm">location_on</span>
-<span>Querétaro, MX</span>
-</div>
-</div>
-</div>
-<!-- Project Item 3 -->
-<div class="masonry-item relative group cursor-pointer overflow-hidden rounded-xl bg-gray-200 dark:bg-gray-800 lg:row-span-2">
-<div class="h-full min-h-[500px] w-full transition-transform duration-500" data-alt="Steel framework of a large corporate plaza foundation" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBsV9ozzuLxpx8X-X_b28QtqqoWCwQEMfw-BdohRlNeOr9yDUlmlz8CoLQ2VS-o8X6vkQlyO2hlop4yD0bjMJsetlmRWwDYKkvM5YPF-QBliBDUUaA5ycvsDlSM2z9-qqMVybc85MdCtun3SQpSRrwoaOho_b0HdyhZd87Acvc08g_jlS-zSH1kyXJazxQ7VBEATZJtSjZaF34XHBEOy5pm4-l9TwoDxto98VElFNzDxpIObbVHGv_mA3WY_XQOLUxsPJ4IZ7-WMCRZ"); background-size: cover; background-position: center;'></div>
-<div class="overlay absolute inset-0 bg-primary/80 opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6 text-white">
-<span class="text-xs font-bold uppercase tracking-widest text-white/80 mb-1">Private Sector</span>
-<h3 class="text-xl font-bold">Corporate Plaza Foundation</h3>
-<div class="flex items-center gap-1 mt-2 text-sm text-white/90">
-<span class="material-symbols-outlined text-sm">location_on</span>
-<span>Monterrey, MX</span>
-</div>
-</div>
-</div>
-<!-- Project Item 4 -->
-<div class="masonry-item relative group cursor-pointer overflow-hidden rounded-xl bg-gray-200 dark:bg-gray-800 lg:col-span-2">
-<div class="aspect-[21/9] w-full transition-transform duration-500" data-alt="Aerial shot of a highway expansion project in open fields" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCdC3rcHKW9HAs0MYY2gxYh6g0q--rivL9ZxJ5sRKfRFxyILG0Tb6DVVEF8ApjbbA2EWxQKWHI9VTqvuM_fn75VIXKspss8LnypE0UoKexDnVmCHXBFGkJWHPSVzLttD6YONIFHrQMFBUPPSXQvBpbZUsP3aEElAJ_60IZq4Yt-_WioiWAUc6bHdqMYl8f1LrStm4nQIa7tWkz1AP1pAjJU9z9-F9RQYFhDEl_LDq3MxdtX3dtkZAwiNNFa3dfD8Z6bLnflNFu5L71x"); background-size: cover; background-position: center;'></div>
-<div class="overlay absolute inset-0 bg-primary/80 opacity-0 transition-opacity duration-300 flex flex-col justify-end p-8 text-white">
-<span class="text-xs font-bold uppercase tracking-widest text-white/80 mb-1">Public Works</span>
-<h3 class="text-2xl font-bold">Highway Expansion Phase I</h3>
-<div class="flex items-center gap-1 mt-2 text-sm text-white/90">
-<span class="material-symbols-outlined text-sm">location_on</span>
-<span>Guadalajara, MX</span>
-</div>
-</div>
-</div>
-<!-- Project Item 5 -->
-<div class="masonry-item relative group cursor-pointer overflow-hidden rounded-xl bg-gray-200 dark:bg-gray-800">
-<div class="aspect-[1/1] w-full transition-transform duration-500" data-alt="Technical view of a modern water treatment plant facility" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAejHmXeCi8i4AQaioF_7EgszUeZHVmoGRM2lcbUBB27eqvhLkih3O_b2NXYD-LeyOdmoPMFHMGXsECXmO3iWzTRO4g0Tf2XEVN7HDoOHu8v4ngHDXCJidVbR1tqqf7ufEVHNukD-c5TufsBM_wa8vnZOt82fCBgvb_UnXoVnA8e9xq9o4iWjo9uZPFRbFKaJKDlc63Cv1G6arG905oq3cZysnhkF8IaEIkkxht_4b36y3jA4xZDCXwm_bCira_eBWqKamUiVxZoDES"); background-size: cover; background-position: center;'></div>
-<div class="overlay absolute inset-0 bg-primary/80 opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6 text-white">
-<span class="text-xs font-bold uppercase tracking-widest text-white/80 mb-1">Public Works</span>
-<h3 class="text-xl font-bold">Water Treatment Plant</h3>
-<div class="flex items-center gap-1 mt-2 text-sm text-white/90">
-<span class="material-symbols-outlined text-sm">location_on</span>
-<span>Puebla, MX</span>
-</div>
-</div>
-</div>
-<!-- Project Item 6 -->
-<div class="masonry-item relative group cursor-pointer overflow-hidden rounded-xl bg-gray-200 dark:bg-gray-800">
-<div class="aspect-[4/3] w-full transition-transform duration-500" data-alt="Urban drainage system construction in a city street" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCOUBknMIIhawKYgnOt5atvRDurIePTo4FdmHBQFnmuRCTMnJ-n7jPF-7TiJbZX0Nk8egCPcDw2OJtgEd0l1SsO-fWw5SktToZe7jkXghU1HBbOgJHN1143iY24Pgh3yzbS-gojkM6yM0o7VPbCtmVE3Lq3ZIBKj0I2vQIdXeShl86OjqGG7Dnupe-D8b3jiPkw7tkfH8atplKwlgQcqLUlvjyOobIv2L-SglbHqHEEF79Nh1INTAJxJl0egt5j8O5iTRQrkyy-YL1-"); background-size: cover; background-position: center;'></div>
-<div class="overlay absolute inset-0 bg-primary/80 opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6 text-white">
-<span class="text-xs font-bold uppercase tracking-widest text-white/80 mb-1">Public Works</span>
-<h3 class="text-xl font-bold">Urban Drainage System</h3>
-<div class="flex items-center gap-1 mt-2 text-sm text-white/90">
-<span class="material-symbols-outlined text-sm">location_on</span>
-<span>Cancún, MX</span>
-</div>
-</div>
-</div>
-</div>
-<!-- Load More Button -->
-<div class="mt-16 flex justify-center">
-<button class="flex items-center gap-2 rounded-lg border-2 border-primary bg-transparent px-8 py-3 text-sm font-bold text-primary transition-all hover:bg-primary hover:text-white">
-<span>Load More Projects</span>
-<span class="material-symbols-outlined text-lg">expand_more</span>
-</button>
-</div>
-</section>
-</main>
-<!-- Footer -->
-<footer class="bg-white dark:bg-background-dark border-t border-gray-100 dark:border-gray-800 py-12">
-<div class="mx-auto max-w-[1280px] px-6 lg:px-10">
-<div class="flex flex-col md:flex-row justify-between gap-10">
-<div class="max-w-sm">
-<div class="flex items-center gap-3 mb-6">
-<div class="text-primary">
-<svg class="size-6" fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-<path d="M6 6H42L36 24L42 42H6L12 24L6 6Z"></path>
-</svg>
-</div>
-<h2 class="text-lg font-bold">Legado Ambiental</h2>
-</div>
-<p class="text-sm text-gray-500 dark:text-gray-400">
-                            Pioneering sustainable civil engineering solutions since 1998. Building the infrastructure for a greener future.
-                        </p>
-</div>
-<div class="grid grid-cols-2 sm:grid-cols-3 gap-8">
-<div>
-<h4 class="text-sm font-bold uppercase tracking-wider mb-4">Firm</h4>
-<ul class="space-y-2 text-sm text-gray-500 dark:text-gray-400">
-<li><a class="hover:text-primary transition-colors" href="#">About Us</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Team</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Certifications</a></li>
-</ul>
-</div>
-<div>
-<h4 class="text-sm font-bold uppercase tracking-wider mb-4">Work</h4>
-<ul class="space-y-2 text-sm text-gray-500 dark:text-gray-400">
-<li><a class="hover:text-primary transition-colors" href="#">Portfolio</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Services</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Case Studies</a></li>
-</ul>
-</div>
-<div>
-<h4 class="text-sm font-bold uppercase tracking-wider mb-4">Contact</h4>
-<ul class="space-y-2 text-sm text-gray-500 dark:text-gray-400">
-<li>info@legadoambiental.com</li>
-<li>+52 (55) 1234 5678</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="mt-12 pt-8 border-t border-gray-100 dark:border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400">
-<p>© 2024 Legado Ambiental. All rights reserved.</p>
-<div class="flex gap-6">
-<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
-<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
-</div>
-</div>
-</div>
-</footer>
-</div>
-</body></html>
+                </div>
+            </div>
+        </header>
+        <main class="flex-1 flex flex-col items-center">
+            <!-- Breadcrumbs / Page Header -->
+            <div class="w-full max-w-[1200px] px-4 md:px-10 py-6">
+                <div class="flex items-center gap-2 text-sm text-[#617589] dark:text-gray-400 mb-6">
+                    <a class="hover:text-primary transition-colors" href="../home.html">Inicio</a>
+                    <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+                    <span class="text-[#111418] dark:text-white font-medium">Portafolio</span>
+                </div>
+                <h1 class="text-[#111418] dark:text-white text-4xl font-black leading-tight tracking-tight mb-4">Nuestro
+                    Legado en Infraestructura</h1>
+                <p class="text-[#617589] dark:text-gray-400 text-lg max-w-2xl">
+                    Explora una selección de nuestros proyectos más impactantes que definen paisajes urbanos y conectan
+                    comunidades.
+                </p>
+            </div>
+            <!-- Filter Tabs -->
+            <div class="w-full max-w-[1200px] px-4 md:px-10 mb-8">
+                <div class="flex gap-4 overflow-x-auto pb-2 scrollbar-hide">
+                    <button
+                        class="px-6 py-2 bg-[#111418] dark:bg-white text-white dark:text-[#111418] text-sm font-bold rounded-full whitespace-nowrap shadow-sm">
+                        Todos los Proyectos
+                    </button>
+                    <button
+                        class="px-6 py-2 bg-[#f0f2f4] dark:bg-gray-800 text-[#111418] dark:text-gray-300 text-sm font-bold rounded-full hover:bg-[#dbe0e6] dark:hover:bg-gray-700 transition-colors whitespace-nowrap">
+                        Comercial
+                    </button>
+                    <button
+                        class="px-6 py-2 bg-[#f0f2f4] dark:bg-gray-800 text-[#111418] dark:text-gray-300 text-sm font-bold rounded-full hover:bg-[#dbe0e6] dark:hover:bg-gray-700 transition-colors whitespace-nowrap">
+                        Infraestructura
+                    </button>
+                    <button
+                        class="px-6 py-2 bg-[#f0f2f4] dark:bg-gray-800 text-[#111418] dark:text-gray-300 text-sm font-bold rounded-full hover:bg-[#dbe0e6] dark:hover:bg-gray-700 transition-colors whitespace-nowrap">
+                        Ecológicos
+                    </button>
+                </div>
+            </div>
+            <!-- Gallery Grid -->
+            <div class="w-full max-w-[1200px] px-4 md:px-10 pb-20">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[300px]">
+                    <!-- Item 1 (Large) -->
+                    <div
+                        class="group relative md:col-span-2 md:row-span-2 rounded-xl overflow-hidden cursor-pointer shadow-md">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                            data-alt="Futuristic eco-friendly skyscraper with vertical gardens"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCcDp_WIg4NkPDk-htLS9hWQBqYkFmPXiGCOmMUGyDg7h1D0WFvNipwiL_JO0fvjvefiAobw0Wu2kQMAKpaAbfN3YCTTFTtwR_UhIw-gmrOSrxISPTpGd0Go3PSOQO5HRxCVPZ9GzmWCpCxyKeL8IN2xkruUEpG71_wiV3_-DYcDeSZwBaDL4xt1ZwxceJyOfCVq1QeQRVCEsABhP4EHViLMwrijWttxCiDG9aQzVNb0MvPWykQPl0qWAxnojdijO5NiVbakzuhS7Nm");'>
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90">
+                        </div>
+                        <div class="absolute bottom-6 left-6 right-6">
+                            <p class="text-primary text-xs font-bold tracking-wider uppercase mb-2">Ecológico / Oficina
+                            </p>
+                            <h3 class="text-white text-3xl font-bold mb-2">Torre Vértice Verde</h3>
+                            <p class="text-gray-300 text-sm line-clamp-2">Un edificio de uso mixto de 45 pisos con
+                                certificación LEED Platino, integrando jardines verticales y sistemas de recolección de
+                                agua pluvial.</p>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="group relative rounded-xl overflow-hidden cursor-pointer shadow-md">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            data-alt="Modern concrete highway bridge spanning a river valley"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCPNWRcg-KJd1molLOJZumClgkbuTTPT53rnlWSiDfQ6adSWff4PVBBrxyn5esrlJ9pcXPHpnLW_s7xMvxBCYg7i6m5dnpzJo1vqndnFwig-M4PysVqxepNfWccxD5S88SGEMe5q-LLo7tmEfPS9MNO_UMB85ma9ydtzbU_t4-jZ8J2BgW3msYeY1I1yFg1-jke2RiSHhLeEn1iqfH3qnv8TuAdltcCg6sKhMxOXtW6qGUJ3WPKasrxw7BgQrv2NV-0LhT8hsluvuXp");'>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <p class="text-primary text-xs font-bold tracking-wider uppercase mb-1">Infraestructura</p>
+                            <h3 class="text-white text-xl font-bold">Puente del Río Azul</h3>
+                        </div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="group relative rounded-xl overflow-hidden cursor-pointer shadow-md">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            data-alt="Spacious modern airport terminal interior with natural light"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuADvVUEk70iI7hT-5S7jLDr2_u-iF5H6gH_6G9l2vW7BfkcE19tF6J_r5fGq4oD95j4qG9I01eP6g5a4h3k2j1mN0pQ8o7l6I5k4J3h2G1F0o9p8q7r6s5t4u3v2w1x0y9z8A7b6C5d4e3F2G1H9I8j7k6L5m4n3o2p1q0r9s8t7u6v5w4x3y2z1A0B9C8D7E6F5G4H3I2J1K0L9M8N7O6P5Q4R3S2T1U0V9W8X7Y6Z5a4b3c2d1e0f");'>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <p class="text-primary text-xs font-bold tracking-wider uppercase mb-1">Público / Transporte
+                            </p>
+                            <h3 class="text-white text-xl font-bold">Expansión Terminal 3</h3>
+                        </div>
+                    </div>
+                    <!-- Item 4 (Wide) -->
+                    <div class="group relative md:col-span-2 rounded-xl overflow-hidden cursor-pointer shadow-md">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+                            data-alt="Minimalist modern art museum exterior at dusk"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD3k4l5m6n7o8p9q0r1s2t3u4v5w6x7y8z9A0B1C2D3E4F5G6H7I8J9K0L1M2N3O4P5Q6R7S8T9U0V1W2X3Y4Z5a6b7c8d9e0f1g2h3i4j5k6l7m8n9o0p1q2r3s4t5u6v7w8x9y0z1A2B3C4D5E6F7G8H9I0J1K2L3M4N5O6P7Q8R9S0T1U2V3W4X5Y6Z7a8b9c0d1e2f3g4h5i6j7k8l9m0n1o2p3q4r5s6t7u8v9w0x1y2z3A4B5");'>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent">
+                        </div>
+                        <div class="absolute bottom-6 left-6 right-6">
+                            <p class="text-primary text-xs font-bold tracking-wider uppercase mb-2">Cultural</p>
+                            <h3 class="text-white text-2xl font-bold mb-1">Museo de Arte Moderno del Norte</h3>
+                            <p class="text-gray-300 text-sm">Un hito cultural con una fachada geométrica única.</p>
+                        </div>
+                    </div>
+                    <!-- Item 5 -->
+                    <div class="group relative rounded-xl overflow-hidden cursor-pointer shadow-md">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            data-alt="Industrial solar power plant stretching to horizon"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0u1v2w3x4y5z6A7B8C9D0E1F2G3H4I5J6K7L8M9N0O1P2Q3R4S5T6U7V8W9X0Y1Z2a3b4c5d6e7f8g9h0i1j2k3l4m5n6o7p8q9r0s1t2u3v4w5x6y7z8A9B0C1D2E3F4G5H6I7J8K9L0M1N2O3P4Q5R6S7T8U9V0W1X2Y3Z4a5b6c7d8e9f0g1h2i3j4k5l6m7n8o9p0q1r2s3t4u5v6w7x8y9z0");'>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <p class="text-primary text-xs font-bold tracking-wider uppercase mb-1">Energía</p>
+                            <h3 class="text-white text-xl font-bold">Parque Solar Helios</h3>
+                        </div>
+                    </div>
+                </div>
+                <!-- Load More -->
+                <div class="flex justify-center mt-8">
+                    <button
+                        class="flex items-center gap-2 px-8 py-3 border border-gray-300 dark:border-gray-700 rounded-lg text-sm font-bold text-[#111418] dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors focus:ring-2 focus:ring-gray-200">
+                        Cargar Más Proyectos <span class="material-symbols-outlined text-[18px]">expand_more</span>
+                    </button>
+                </div>
+            </div>
+        </main>
+        <!-- Footer -->
+        <footer class="w-full bg-white dark:bg-background-dark border-t border-[#f0f2f4] dark:border-gray-800 py-10">
+            <div class="max-w-[1200px] mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center gap-3">
+                    <div class="size-5 text-primary">
+                        <svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 6H42L36 24L42 42H6L12 24L6 6Z"></path>
+                        </svg>
+                    </div>
+                    <span class="font-bold dark:text-white">Legado Ambiental</span>
+                </div>
+                <div class="text-sm text-[#617589] dark:text-gray-400">
+                    © 2024 Legado Ambiental. Todos los derechos reservados.
+                </div>
+                <div class="flex gap-6">
+                    <a class="text-[#617589] hover:text-primary transition-colors" href="#"><span
+                            class="material-symbols-outlined">share</span></a>
+                    <a class="text-[#617589] hover:text-primary transition-colors" href="#"><span
+                            class="material-symbols-outlined">mail</span></a>
+                    <a class="text-[#617589] hover:text-primary transition-colors" href="#"><span
+                            class="material-symbols-outlined">location_on</span></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
