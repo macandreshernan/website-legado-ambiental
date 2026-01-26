@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>Nuestra Experiencia | Legado Ambiental</title>
+  <title data-i18n="experience_page.title">Nuestra Experiencia | Legado Ambiental</title>
 
   <!-- SEO & Social Media Meta Tags -->
   <meta name="description"
@@ -23,34 +23,47 @@
   <!-- Browser Cache Hint -->
   <meta http-equiv="Cache-Control" content="max-age=31536000">
 
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;900&amp;display=swap"
-    rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
-    rel="stylesheet" />
-  <script id="tailwind-config">
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          colors: {
-            "primary": "#137fec",
-            "background-light": "#f6f7f8",
-            "background-dark": "#101922",
-          },
-          fontFamily: {
-            "display": ["Public Sans", "sans-serif"]
-          },
-          borderRadius: {
-            "DEFAULT": "0.25rem",
-            "lg": "0.5rem",
-            "xl": "0.75rem",
-            "full": "9999px"
-          },
-        },
-      },
+  <!-- SEO Canonical & Hreflang -->
+  <link rel="canonical" href="https://www.legadoambiental.com/experience_timeline/our_experience.html" />
+  <link rel="alternate" hreflang="es-MX"
+    href="https://www.legadoambiental.com/experience_timeline/our_experience.html?lang=es-MX" />
+  <link rel="alternate" hreflang="en-US"
+    href="https://www.legadoambiental.com/experience_timeline/our_experience.html?lang=en-US" />
+  <link rel="alternate" hreflang="x-default"
+    href="https://www.legadoambiental.com/experience_timeline/our_experience.html" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ConstructionBusiness",
+    "name": "Legado Ambiental",
+    "url": "https://www.legadoambiental.com",
+    "image": "https://www.legadoambiental.com/assets/logo.png",
+    "description": "Excelencia en construcción civil y desarrollo sostenible.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Plaza de Ingeniería, Suite 400",
+      "addressLocality": "Ciudad de México",
+      "addressRegion": "CDMX",
+      "postalCode": "12345",
+      "addressCountry": "MX"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-555-123-4567",
+      "contactType": "customer service"
     }
+  }
   </script>
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Merriweather:wght@300;400;700;900&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet" />
+  <script src="../assets/js/theme-config.js"></script>
   <style>
     body {
       font-family: "Public Sans", sans-serif;
@@ -80,144 +93,186 @@
         <div class="hidden md:flex flex-1 justify-end gap-8 items-center">
           <nav class="flex items-center gap-8">
             <a class="text-[#111418] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
-              href="../home.html">Inicio</a>
+              href="../home.html" data-i18n="nav.home">Inicio</a>
             <a class="text-[#111418] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
-              href="../about_us/about_us.html">Nosotros</a>
+              href="../about_us/about_us.html" data-i18n="nav.about">Nosotros</a>
             <a class="text-[#111418] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
-              href="../services_overview/services.html">Servicios</a>
-            <a class="text-primary text-sm font-bold border-b-2 border-primary pb-1" href="#">Experiencia</a>
+              href="../services_overview/services.html" data-i18n="nav.services">Servicios</a>
+            <a class="text-primary text-sm font-bold border-b-2 border-primary pb-1" href="#"
+              data-i18n="nav.experience">Experiencia</a>
             <a class="text-[#111418] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
-              href="../faq/contact_faq.html">Contacto</a>
+              href="../faq/contact_faq.html" data-i18n="nav.contact">Contacto</a>
           </nav>
-          <button
-            class="flex min-w-[120px] cursor-pointer items-center justify-center rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold shadow-sm hover:bg-primary/90 transition-all focus:ring-2 focus:ring-primary focus:ring-offset-2">
-            Iniciar Proyecto
-          </button>
+          <div class="hidden md:flex items-center gap-4">
+            <div class="flex items-center gap-2 mr-4">
+              <button class="text-sm font-semibold hover:text-primary transition-colors text-primary"
+                data-switch-lang="es-MX">ES</button>
+              <span class="text-gray-300">|</span>
+              <button class="text-sm font-semibold hover:text-primary transition-colors"
+                data-switch-lang="en-US">EN</button>
+            </div>
+            <button
+              class="flex min-w-[120px] cursor-pointer items-center justify-center rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold shadow-sm hover:bg-primary/90 transition-all focus:ring-2 focus:ring-primary focus:ring-offset-2"
+              data-i18n="cta.start_btn">
+              Iniciar Proyecto
+            </button>
+          </div>
         </div>
       </div>
     </header>
     <main class="flex-1 flex flex-col items-center">
       <!-- Breadcrumbs / Page Header -->
       <div class="w-full max-w-[1200px] px-4 md:px-10 py-6">
-        <div class="flex items-center gap-2 text-sm text-[#617589] dark:text-gray-400 mb-6">
-          <a class="hover:text-primary transition-colors" href="../home.html">Inicio</a>
-          <span class="material-symbols-outlined text-[16px]">chevron_right</span>
-          <span class="text-[#111418] dark:text-white font-medium">Experiencia</span>
-        </div>
-        <h1 class="text-[#111418] dark:text-white text-4xl font-black leading-tight tracking-tight mb-4">Un Legado de
+        <nav class="flex" aria-label="Breadcrumb">
+          <ol class="inline-flex items-center space-x-1 md:space-x-3">
+            <li class="inline-flex items-center">
+              <a href="../home.html"
+                class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-primary dark:text-gray-400 dark:hover:text-white">
+                <span class="material-symbols-outlined text-lg mr-2">home</span>
+                Inicio
+              </a>
+            </li>
+            <li aria-current="page">
+              <div class="flex items-center">
+                <span class="material-symbols-outlined text-gray-400 mx-1">chevron_right</span>
+                <span class="ml-1 text-sm font-medium text-gray-500 md:ml-2 dark:text-gray-400">Experiencia</span>
+              </div>
+            </li>
+          </ol>
+        </nav>
+        <h1 class="text-[#111418] dark:text-white text-4xl font-black leading-tight tracking-tight mb-4"
+          data-i18n="experience_page.hero.title">Un Legado de
           Excelencia en Ingeniería</h1>
-        <p class="text-[#617589] dark:text-gray-400 text-lg max-w-2xl">
+        <p class="text-[#617589] dark:text-gray-400 text-lg max-w-2xl" data-i18n="experience_page.hero.desc">
           Explora los hitos que han definido nuestro crecimiento e impacto en la industria de la construcción durante la
           última década.
         </p>
       </div>
       <!-- Timeline Section -->
       <div class="w-full max-w-[1000px] px-4 md:px-10 py-10">
-        <div class="relative border-l-2 border-gray-200 dark:border-gray-800 ml-4 md:ml-0 md:pl-0 space-y-16">
+        <div class="relative border-l-2 border-gray-200 dark:border-gray-800 ml-4 md:ml-[160px] md:pl-0 space-y-16">
           <!-- Timeline Item 1 -->
           <div class="relative flex flex-col md:flex-row md:items-center gap-8 group">
-            <div class="absolute -left-[9px] top-6 md:top-auto md:left-auto md:relative md:w-32 text-right">
+            <div class="absolute -left-[9px] top-6 md:top-6 md:right-[100%] md:mr-8 md:left-auto md:w-32 text-right">
               <span class="text-primary font-black text-2xl tracking-tight">2024</span>
             </div>
             <div
-              class="hidden md:block absolute left-[125px] w-4 h-4 rounded-full bg-primary ring-4 ring-white dark:ring-background-dark">
+              class="hidden md:block absolute -left-[9px] top-6 w-4 h-4 rounded-full bg-primary ring-4 ring-white dark:ring-background-dark">
             </div>
             <div
               class="absolute -left-[9px] top-8 md:hidden w-4 h-4 rounded-full bg-primary ring-4 ring-white dark:ring-background-dark">
             </div>
             <div
               class="flex-1 ml-6 md:ml-12 bg-white dark:bg-[#1a2530] p-6 rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm transition-all hover:shadow-md">
-              <h3 class="text-xl font-bold text-[#111418] dark:text-white mb-2">Expansión Global</h3>
-              <p class="text-[#617589] dark:text-gray-400 text-sm leading-relaxed mb-4">
+              <h3 class="text-xl font-bold text-[#111418] dark:text-white mb-2"
+                data-i18n="experience_page.timeline.2024.title">Expansión Global</h3>
+              <p class="text-[#617589] dark:text-gray-400 text-sm leading-relaxed mb-4"
+                data-i18n="experience_page.timeline.2024.desc">
                 Legado Ambiental abrió su primera sede internacional, marcando un nuevo capítulo en nuestra misión de
                 brindar soluciones sostenibles a escala global.
               </p>
               <div class="h-48 rounded-lg bg-cover bg-center"
-                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDB8GfOVe5vH3U-qD0sK5aL1M2N3O4P5Q6R7S8T9U0V1W2X3Y4Z5a6b7c8d9e0f1g2h3i4j5k6l7m8n9o0p1q2r3s4t5u6v7w8x9y0z1A2B3C4D5E6F7G8H9I0J1K2L3M4N5O6P7Q8R9S0T1U2V3W4X5Y6Z7a8b9c0d1e2f3g4h5i6j7k8l9m0n1o2p3q4r5s6t7u8v9w0x1y2z3A4B5");'>
+                style='background-image: url("../assets/images/experience/milestone-2024.webp");'>
               </div>
             </div>
           </div>
           <!-- Timeline Item 2 -->
           <div class="relative flex flex-col md:flex-row md:items-center gap-8 group">
-            <div class="absolute -left-[9px] top-6 md:top-auto md:left-auto md:relative md:w-32 text-right">
+            <div class="absolute -left-[9px] top-6 md:top-6 md:right-[100%] md:mr-8 md:left-auto md:w-32 text-right">
               <span class="text-primary font-black text-2xl tracking-tight">2020</span>
             </div>
             <div
-              class="hidden md:block absolute left-[125px] w-4 h-4 rounded-full bg-primary ring-4 ring-white dark:ring-background-dark">
+              class="hidden md:block absolute -left-[9px] top-6 w-4 h-4 rounded-full bg-primary ring-4 ring-white dark:ring-background-dark">
             </div>
             <div
               class="absolute -left-[9px] top-8 md:hidden w-4 h-4 rounded-full bg-primary ring-4 ring-white dark:ring-background-dark">
             </div>
             <div
               class="flex-1 ml-6 md:ml-12 bg-white dark:bg-[#1a2530] p-6 rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm transition-all hover:shadow-md">
-              <h3 class="text-xl font-bold text-[#111418] dark:text-white mb-2">La Iniciativa Sostenible</h3>
-              <p class="text-[#617589] dark:text-gray-400 text-sm leading-relaxed mb-4">
+              <h3 class="text-xl font-bold text-[#111418] dark:text-white mb-2"
+                data-i18n="experience_page.timeline.2020.title">La Iniciativa Sostenible</h3>
+              <p class="text-[#617589] dark:text-gray-400 text-sm leading-relaxed mb-4"
+                data-i18n="experience_page.timeline.2020.desc">
                 Lanzamos nuestro departamento de Consultoría Ecológica, integrando materiales verdes y prácticas de
                 eficiencia energética en todos nuestros proyectos de construcción.
               </p>
               <div class="h-48 rounded-lg bg-cover bg-center"
-                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0u1v2w3x4y5z6A7B8C9D0E1F2G3H4I5J6K7L8M9N0O1P2Q3R4S5T6U7V8W9X0Y1Z2a3b4c5d6e7f8g9h0i1j2k3l4m5n6o7p8q9r0s1t2u3v4w5x6y7z8A9B0C1D2E3F4G5H6I7J8K9L0M1N2O3P4Q5R6S7T8U9V0W1X2Y3Z4a5b6c7d8e9f0g1h2i3j4k5l6m7n8o9p0q1r2s3t4u5v6w7x8y9z0");'>
+                style='background-image: url("../assets/images/experience/milestone-2020.webp");'>
               </div>
             </div>
           </div>
           <!-- Timeline Item 3 -->
           <div class="relative flex flex-col md:flex-row md:items-center gap-8 group">
-            <div class="absolute -left-[9px] top-6 md:top-auto md:left-auto md:relative md:w-32 text-right">
+            <div class="absolute -left-[9px] top-6 md:top-6 md:right-[100%] md:mr-8 md:left-auto md:w-32 text-right">
               <span class="text-primary font-black text-2xl tracking-tight">2015</span>
             </div>
             <div
-              class="hidden md:block absolute left-[125px] w-4 h-4 rounded-full bg-primary ring-4 ring-white dark:ring-background-dark">
+              class="hidden md:block absolute -left-[9px] top-6 w-4 h-4 rounded-full bg-primary ring-4 ring-white dark:ring-background-dark">
             </div>
             <div
               class="absolute -left-[9px] top-8 md:hidden w-4 h-4 rounded-full bg-primary ring-4 ring-white dark:ring-background-dark">
             </div>
             <div
               class="flex-1 ml-6 md:ml-12 bg-white dark:bg-[#1a2530] p-6 rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm transition-all hover:shadow-md">
-              <h3 class="text-xl font-bold text-[#111418] dark:text-white mb-2">Primer Contrato Gubernamental</h3>
-              <p class="text-[#617589] dark:text-gray-400 text-sm leading-relaxed mb-4">
+              <h3 class="text-xl font-bold text-[#111418] dark:text-white mb-2"
+                data-i18n="experience_page.timeline.2015.title">Primer Contrato Gubernamental</h3>
+              <p class="text-[#617589] dark:text-gray-400 text-sm leading-relaxed mb-4"
+                data-i18n="experience_page.timeline.2015.desc">
                 Adjudicación de nuestro primer gran proyecto de infraestructura pública: la revitalización del sistema
                 de carreteras del centro de la ciudad.
               </p>
               <div class="h-48 rounded-lg bg-cover bg-center"
-                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAr-5NMcAx7_GPpu7BP28wOpyEqQ5OZaHj3FCjwb1sUWkDWht6lNwdoW_2tgiTdB_-zMRwyJvtpw0kvKM3TSiP98mIloC6yJOvl2kgECDWVeI4W5U4QGvSixpCPuPAoO5zrgCBTj8ZJ1x3qPnfHXMqJvrbXF4NTUJkJ_7Jqv2fLz6i3tV1V5vdrlzIYaCcz6qNtnQzFNaRcbAnk1oI5Is7hwLknYseHQpRXrqEVIxhj4iZqPSHL-7dIVjQQxxe_io9XCE8A62wb3Bza");'>
+                style='background-image: url("../assets/images/experience/milestone-2015.webp");'>
               </div>
             </div>
           </div>
           <!-- Timeline Item 4 -->
           <div class="relative flex flex-col md:flex-row md:items-center gap-8 group">
-            <div class="absolute -left-[9px] top-6 md:top-auto md:left-auto md:relative md:w-32 text-right">
+            <div class="absolute -left-[9px] top-6 md:top-6 md:right-[100%] md:mr-8 md:left-auto md:w-32 text-right">
               <span class="text-primary font-black text-2xl tracking-tight">2010</span>
             </div>
             <div
-              class="hidden md:block absolute left-[125px] w-4 h-4 rounded-full bg-primary ring-4 ring-white dark:ring-background-dark">
+              class="hidden md:block absolute -left-[9px] top-6 w-4 h-4 rounded-full bg-primary ring-4 ring-white dark:ring-background-dark">
             </div>
             <div
               class="absolute -left-[9px] top-8 md:hidden w-4 h-4 rounded-full bg-primary ring-4 ring-white dark:ring-background-dark">
             </div>
             <div
               class="flex-1 ml-6 md:ml-12 bg-white dark:bg-[#1a2530] p-6 rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm transition-all hover:shadow-md">
-              <h3 class="text-xl font-bold text-[#111418] dark:text-white mb-2">Fundación</h3>
-              <p class="text-[#617589] dark:text-gray-400 text-sm leading-relaxed mb-4">
+              <h3 class="text-xl font-bold text-[#111418] dark:text-white mb-2"
+                data-i18n="experience_page.timeline.2010.title">Fundación</h3>
+              <p class="text-[#617589] dark:text-gray-400 text-sm leading-relaxed mb-4"
+                data-i18n="experience_page.timeline.2010.desc">
                 Legado Ambiental fue fundada por un equipo de cuatro ingenieros civiles apasionados por combinar la
                 integridad estructural con la administración ambiental.
               </p>
               <div class="h-48 rounded-lg bg-cover bg-center"
-                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCjghLGFHCQMPtpaUgz6EZKIbpu1sxzbwDLBXD_Je4qw5ST6VKeA46Q5YNZtTS_-9hcYkvQh0IEPDK3bdcCTHH5qN7PBTZW3MDczz5YpqsuEoXrxM5DIN_BsSm56GrHtizOYUYscfbXVo_WbqaUJViZSSkJNl1OYtxVSGtaBtS6vOMN3KbwI86GcyvIBheadsD8-oGzyNzuhBcXB7zlGdpczxAIIIYVPF6o9OJmh23cOYt7xGXtjhX9Ot9-rK9cvrkbuQMIjxFQgvFW");'>
+                style='background-image: url("../assets/images/experience/milestone-2010.webp");'>
               </div>
             </div>
           </div>
         </div>
       </div>
       <!-- Detailed CTA -->
-      <div class="w-full bg-[#111418] py-20 px-4 mt-12">
-        <div class="max-w-[800px] mx-auto text-center flex flex-col items-center gap-6">
-          <h2 class="text-white text-3xl font-bold">¿Listo para ser parte de nuestro próximo capítulo?</h2>
-          <p class="text-gray-400 text-lg">Nos asociamos con visionarios que buscan construir algo duradero. Comencemos
+      <div class="w-full bg-primary-dark py-20 px-4 mt-12">
+        <div class="max-w-[800px] mx-auto text-center">
+          <h2 class="text-white text-3xl font-bold mb-6" data-i18n="portfolio_page.cta.title">¿Listo para ser parte de
+            nuestro próximo capítulo?</h2>
+          <p class="text-gray-100 text-lg mb-10" data-i18n="portfolio_page.cta.desc">Nos asociamos con
+            visionarios que buscan
+            construir algo duradero. Comencemos
             a planificar tu proyecto.</p>
-          <button
-            class="bg-primary text-white font-bold px-10 py-4 rounded-lg hover:bg-primary/90 transition-all text-lg shadow-lg shadow-primary/20 focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-gray-900">
-            Contactar Ahora
-          </button>
+          <div class="flex flex-wrap justify-center gap-4">
+            <button
+              class="px-10 py-4 bg-white text-primary font-bold rounded-lg hover:bg-blue-50 transition-colors shadow-xl focus:ring-2 focus:ring-white"
+              data-i18n="portfolio_page.cta.btn">
+              Contactar Ahora
+            </button>
+            <button
+              class="px-10 py-4 border border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors focus:ring-2 focus:ring-white"
+              data-i18n="about.cta.btn_portfolio">Ver
+              Portafolio</button>
+          </div>
         </div>
       </div>
     </main>
@@ -232,7 +287,7 @@
           </div>
           <span class="font-bold dark:text-white">Legado Ambiental</span>
         </div>
-        <div class="text-sm text-[#617589] dark:text-gray-400">
+        <div class="text-sm text-[#617589] dark:text-gray-400" data-i18n="footer.rights">
           © 2024 Legado Ambiental. Todos los derechos reservados.
         </div>
         <div class="flex gap-6">
@@ -246,6 +301,8 @@
       </div>
     </footer>
   </div>
+  </div>
+  <script src="../assets/js/i18n.js" data-base-path="../"></script>
 </body>
 
 </html>

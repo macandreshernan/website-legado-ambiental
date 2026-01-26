@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Portafolio de Proyectos | Legado Ambiental</title>
+    <title data-i18n="portfolio_page.title">Portafolio de Proyectos | Legado Ambiental</title>
 
     <!-- SEO & Social Media Meta Tags -->
     <meta name="description"
@@ -23,29 +23,47 @@
     <!-- Browser Cache Hint -->
     <meta http-equiv="Cache-Control" content="max-age=31536000">
 
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;900&amp;display=swap"
-        rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
-    <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#137fec",
-                        "background-light": "#f6f7f8",
-                        "background-dark": "#101922",
-                    },
-                    fontFamily: {
-                        "display": ["Public Sans", "sans-serif"]
-                    },
-                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
-                },
-            },
-        }
+    <!-- SEO Canonical & Hreflang -->
+    <link rel="canonical" href="https://www.legadoambiental.com/project_portfolio_gallery/portfolio.html" />
+    <link rel="alternate" hreflang="es-MX"
+        href="https://www.legadoambiental.com/project_portfolio_gallery/portfolio.html?lang=es-MX" />
+    <link rel="alternate" hreflang="en-US"
+        href="https://www.legadoambiental.com/project_portfolio_gallery/portfolio.html?lang=en-US" />
+    <link rel="alternate" hreflang="x-default"
+        href="https://www.legadoambiental.com/project_portfolio_gallery/portfolio.html" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ConstructionBusiness",
+      "name": "Legado Ambiental",
+      "url": "https://www.legadoambiental.com",
+      "image": "https://www.legadoambiental.com/assets/logo.png",
+      "description": "Excelencia en construcción civil y desarrollo sostenible.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Plaza de Ingeniería, Suite 400",
+        "addressLocality": "Ciudad de México",
+        "addressRegion": "CDMX",
+        "postalCode": "12345",
+        "addressCountry": "MX"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-555-123-4567",
+        "contactType": "customer service"
+      }
+    }
     </script>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Merriweather:wght@300;400;700;900&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script src="../assets/js/theme-config.js"></script>
     <style>
         body {
             font-family: "Public Sans", sans-serif;
@@ -71,33 +89,58 @@
                 <div class="hidden md:flex flex-1 justify-end gap-8 items-center">
                     <nav class="flex items-center gap-8">
                         <a class="text-[#111418] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
-                            href="../home.html">Inicio</a>
-                        <a class="text-primary text-sm font-bold border-b-2 border-primary pb-1" href="#">Portafolio</a>
+                            href="../home.html" data-i18n="nav.home">Inicio</a>
+                        <a class="text-primary text-sm font-bold border-b-2 border-primary pb-1" href="#"
+                            data-i18n="nav.portfolio">Portafolio</a>
                         <a class="text-[#111418] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
-                            href="../services_overview/services.html">Servicios</a>
+                            href="../services_overview/services.html" data-i18n="nav.services">Servicios</a>
                         <a class="text-[#111418] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
-                            href="../experience_timeline/our_experience.html">Experiencia</a>
+                            href="../experience_timeline/our_experience.html" data-i18n="nav.experience">Experiencia</a>
                         <a class="text-[#111418] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
-                            href="../faq/contact_faq.html">Contacto</a>
+                            href="../faq/contact_faq.html" data-i18n="nav.contact">Contacto</a>
                     </nav>
-                    <button
-                        class="flex min-w-[120px] cursor-pointer items-center justify-center rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold shadow-sm hover:bg-primary/90 transition-all focus:ring-2 focus:ring-primary focus:ring-offset-2">
-                        Iniciar Proyecto
-                    </button>
+                    <div class="hidden md:flex items-center gap-4">
+                        <div class="flex items-center gap-2 mr-4">
+                            <button class="text-sm font-semibold hover:text-primary transition-colors text-primary"
+                                data-switch-lang="es-MX">ES</button>
+                            <span class="text-gray-300">|</span>
+                            <button class="text-sm font-semibold hover:text-primary transition-colors"
+                                data-switch-lang="en-US">EN</button>
+                        </div>
+                        <button
+                            class="flex min-w-[120px] cursor-pointer items-center justify-center rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold shadow-sm hover:bg-primary/90 transition-all focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                            data-i18n="cta.start_btn">
+                            Iniciar Proyecto
+                        </button>
+                    </div>
                 </div>
             </div>
         </header>
         <main class="flex-1 flex flex-col items-center">
             <!-- Breadcrumbs / Page Header -->
             <div class="w-full max-w-[1200px] px-4 md:px-10 py-6">
-                <div class="flex items-center gap-2 text-sm text-[#617589] dark:text-gray-400 mb-6">
-                    <a class="hover:text-primary transition-colors" href="../home.html">Inicio</a>
-                    <span class="material-symbols-outlined text-[16px]">chevron_right</span>
-                    <span class="text-[#111418] dark:text-white font-medium">Portafolio</span>
-                </div>
-                <h1 class="text-[#111418] dark:text-white text-4xl font-black leading-tight tracking-tight mb-4">Nuestro
+                <nav class="flex" aria-label="Breadcrumb">
+                    <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                        <li class="inline-flex items-center">
+                            <a href="../home.html"
+                                class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-primary dark:text-gray-400 dark:hover:text-white">
+                                <span class="material-symbols-outlined text-lg mr-2">home</span>
+                                Inicio
+                            </a>
+                        </li>
+                        <li aria-current="page">
+                            <div class="flex items-center">
+                                <span class="material-symbols-outlined text-gray-400 mx-1">chevron_right</span>
+                                <span
+                                    class="ml-1 text-sm font-medium text-gray-500 md:ml-2 dark:text-gray-400">Portafolio</span>
+                            </div>
+                        </li>
+                    </ol>
+                </nav>
+                <h1 class="text-[#111418] dark:text-white text-4xl font-black leading-tight tracking-tight mb-4"
+                    data-i18n="portfolio_page.hero.title">Nuestro
                     Legado en Infraestructura</h1>
-                <p class="text-[#617589] dark:text-gray-400 text-lg max-w-2xl">
+                <p class="text-[#617589] dark:text-gray-400 text-lg max-w-2xl" data-i18n="portfolio_page.hero.desc">
                     Explora una selección de nuestros proyectos más impactantes que definen paisajes urbanos y conectan
                     comunidades.
                 </p>
@@ -106,19 +149,23 @@
             <div class="w-full max-w-[1200px] px-4 md:px-10 mb-8">
                 <div class="flex gap-4 overflow-x-auto pb-2 scrollbar-hide">
                     <button
-                        class="px-6 py-2 bg-[#111418] dark:bg-white text-white dark:text-[#111418] text-sm font-bold rounded-full whitespace-nowrap shadow-sm">
+                        class="px-6 py-2 bg-[#111418] dark:bg-white text-white dark:text-[#111418] text-sm font-bold rounded-full whitespace-nowrap shadow-sm"
+                        data-i18n="portfolio_page.tabs.all">
                         Todos los Proyectos
                     </button>
                     <button
-                        class="px-6 py-2 bg-[#f0f2f4] dark:bg-gray-800 text-[#111418] dark:text-gray-300 text-sm font-bold rounded-full hover:bg-[#dbe0e6] dark:hover:bg-gray-700 transition-colors whitespace-nowrap">
+                        class="px-6 py-2 bg-[#f0f2f4] dark:bg-gray-800 text-[#111418] dark:text-gray-300 text-sm font-bold rounded-full hover:bg-[#dbe0e6] dark:hover:bg-gray-700 transition-colors whitespace-nowrap"
+                        data-i18n="portfolio_page.tabs.commercial">
                         Comercial
                     </button>
                     <button
-                        class="px-6 py-2 bg-[#f0f2f4] dark:bg-gray-800 text-[#111418] dark:text-gray-300 text-sm font-bold rounded-full hover:bg-[#dbe0e6] dark:hover:bg-gray-700 transition-colors whitespace-nowrap">
+                        class="px-6 py-2 bg-[#f0f2f4] dark:bg-gray-800 text-[#111418] dark:text-gray-300 text-sm font-bold rounded-full hover:bg-[#dbe0e6] dark:hover:bg-gray-700 transition-colors whitespace-nowrap"
+                        data-i18n="portfolio_page.tabs.infrastructure">
                         Infraestructura
                     </button>
                     <button
-                        class="px-6 py-2 bg-[#f0f2f4] dark:bg-gray-800 text-[#111418] dark:text-gray-300 text-sm font-bold rounded-full hover:bg-[#dbe0e6] dark:hover:bg-gray-700 transition-colors whitespace-nowrap">
+                        class="px-6 py-2 bg-[#f0f2f4] dark:bg-gray-800 text-[#111418] dark:text-gray-300 text-sm font-bold rounded-full hover:bg-[#dbe0e6] dark:hover:bg-gray-700 transition-colors whitespace-nowrap"
+                        data-i18n="portfolio_page.tabs.eco">
                         Ecológicos
                     </button>
                 </div>
@@ -129,71 +176,83 @@
                     <!-- Item 1 (Large) -->
                     <div
                         class="group relative md:col-span-2 md:row-span-2 rounded-xl overflow-hidden cursor-pointer shadow-md">
-                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-                            data-alt="Futuristic eco-friendly skyscraper with vertical gardens"
-                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCcDp_WIg4NkPDk-htLS9hWQBqYkFmPXiGCOmMUGyDg7h1D0WFvNipwiL_JO0fvjvefiAobw0Wu2kQMAKpaAbfN3YCTTFTtwR_UhIw-gmrOSrxISPTpGd0Go3PSOQO5HRxCVPZ9GzmWCpCxyKeL8IN2xkruUEpG71_wiV3_-DYcDeSZwBaDL4xt1ZwxceJyOfCVq1QeQRVCEsABhP4EHViLMwrijWttxCiDG9aQzVNb0MvPWykQPl0qWAxnojdijO5NiVbakzuhS7Nm");'>
-                        </div>
+                        <img src="../assets/images/portfolio/project-solaris.webp"
+                            alt="Futuristic eco-friendly skyscraper with vertical gardens"
+                            class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            loading="lazy">
                         <div
                             class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90">
                         </div>
                         <div class="absolute bottom-6 left-6 right-6">
-                            <p class="text-primary text-xs font-bold tracking-wider uppercase mb-2">Ecológico / Oficina
+                            <p class="text-primary text-xs font-bold tracking-wider uppercase mb-2"
+                                data-i18n="portfolio_page.items.p1.cat">Ecológico / Oficina
                             </p>
-                            <h3 class="text-white text-3xl font-bold mb-2">Torre Vértice Verde</h3>
-                            <p class="text-gray-300 text-sm line-clamp-2">Un edificio de uso mixto de 45 pisos con
+                            <h3 class="text-white text-3xl font-bold mb-2" data-i18n="portfolio_page.items.p1.title">
+                                Torre Vértice Verde</h3>
+                            <p class="text-gray-300 text-sm line-clamp-2" data-i18n="portfolio_page.items.p1.desc">Un
+                                edificio de uso mixto de 45 pisos con
                                 certificación LEED Platino, integrando jardines verticales y sistemas de recolección de
                                 agua pluvial.</p>
                         </div>
                     </div>
                     <!-- Item 2 -->
                     <div class="group relative rounded-xl overflow-hidden cursor-pointer shadow-md">
-                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
-                            data-alt="Modern concrete highway bridge spanning a river valley"
-                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCPNWRcg-KJd1molLOJZumClgkbuTTPT53rnlWSiDfQ6adSWff4PVBBrxyn5esrlJ9pcXPHpnLW_s7xMvxBCYg7i6m5dnpzJo1vqndnFwig-M4PysVqxepNfWccxD5S88SGEMe5q-LLo7tmEfPS9MNO_UMB85ma9ydtzbU_t4-jZ8J2BgW3msYeY1I1yFg1-jke2RiSHhLeEn1iqfH3qnv8TuAdltcCg6sKhMxOXtW6qGUJ3WPKasrxw7BgQrv2NV-0LhT8hsluvuXp");'>
-                        </div>
+                        <img src="../assets/images/portfolio/project-bridge.webp"
+                            alt="Modern concrete highway bridge spanning a river valley"
+                            class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            loading="lazy">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                         <div class="absolute bottom-4 left-4 right-4">
-                            <p class="text-primary text-xs font-bold tracking-wider uppercase mb-1">Infraestructura</p>
-                            <h3 class="text-white text-xl font-bold">Puente del Río Azul</h3>
+                            <p class="text-primary text-xs font-bold tracking-wider uppercase mb-1"
+                                data-i18n="portfolio_page.items.p2.cat">Infraestructura</p>
+                            <h3 class="text-white text-xl font-bold" data-i18n="portfolio_page.items.p2.title">Puente
+                                del Río Azul</h3>
                         </div>
                     </div>
                     <!-- Item 3 -->
                     <div class="group relative rounded-xl overflow-hidden cursor-pointer shadow-md">
-                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
-                            data-alt="Spacious modern airport terminal interior with natural light"
-                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuADvVUEk70iI7hT-5S7jLDr2_u-iF5H6gH_6G9l2vW7BfkcE19tF6J_r5fGq4oD95j4qG9I01eP6g5a4h3k2j1mN0pQ8o7l6I5k4J3h2G1F0o9p8q7r6s5t4u3v2w1x0y9z8A7b6C5d4e3F2G1H9I8j7k6L5m4n3o2p1q0r9s8t7u6v5w4x3y2z1A0B9C8D7E6F5G4H3I2J1K0L9M8N7O6P5Q4R3S2T1U0V9W8X7Y6Z5a4b3c2d1e0f");'>
-                        </div>
+                        <img src="../assets/images/portfolio/project-terminal.webp"
+                            alt="Spacious modern airport terminal interior with natural light"
+                            class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            loading="lazy">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                         <div class="absolute bottom-4 left-4 right-4">
-                            <p class="text-primary text-xs font-bold tracking-wider uppercase mb-1">Público / Transporte
+                            <p class="text-primary text-xs font-bold tracking-wider uppercase mb-1"
+                                data-i18n="portfolio_page.items.p3.cat">Público / Transporte
                             </p>
-                            <h3 class="text-white text-xl font-bold">Expansión Terminal 3</h3>
+                            <h3 class="text-white text-xl font-bold" data-i18n="portfolio_page.items.p3.title">Expansión
+                                Terminal 3</h3>
                         </div>
                     </div>
                     <!-- Item 4 (Wide) -->
                     <div class="group relative md:col-span-2 rounded-xl overflow-hidden cursor-pointer shadow-md">
-                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
-                            data-alt="Minimalist modern art museum exterior at dusk"
-                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD3k4l5m6n7o8p9q0r1s2t3u4v5w6x7y8z9A0B1C2D3E4F5G6H7I8J9K0L1M2N3O4P5Q6R7S8T9U0V1W2X3Y4Z5a6b7c8d9e0f1g2h3i4j5k6l7m8n9o0p1q2r3s4t5u6v7w8x9y0z1A2B3C4D5E6F7G8H9I0J1K2L3M4N5O6P7Q8R9S0T1U2V3W4X5Y6Z7a8b9c0d1e2f3g4h5i6j7k8l9m0n1o2p3q4r5s6t7u8v9w0x1y2z3A4B5");'>
-                        </div>
+                        <img src="../assets/images/portfolio/project-museum.webp"
+                            alt="Minimalist modern art museum exterior at dusk"
+                            class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            loading="lazy">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent">
                         </div>
                         <div class="absolute bottom-6 left-6 right-6">
-                            <p class="text-primary text-xs font-bold tracking-wider uppercase mb-2">Cultural</p>
-                            <h3 class="text-white text-2xl font-bold mb-1">Museo de Arte Moderno del Norte</h3>
-                            <p class="text-gray-300 text-sm">Un hito cultural con una fachada geométrica única.</p>
+                            <p class="text-primary text-xs font-bold tracking-wider uppercase mb-2"
+                                data-i18n="portfolio_page.items.p4.cat">Cultural</p>
+                            <h3 class="text-white text-2xl font-bold mb-1" data-i18n="portfolio_page.items.p4.title">
+                                Museo de Arte Moderno del Norte</h3>
+                            <p class="text-gray-300 text-sm" data-i18n="portfolio_page.items.p4.desc">Un hito cultural
+                                con una fachada geométrica única.</p>
                         </div>
                     </div>
                     <!-- Item 5 -->
                     <div class="group relative rounded-xl overflow-hidden cursor-pointer shadow-md">
-                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
-                            data-alt="Industrial solar power plant stretching to horizon"
-                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0u1v2w3x4y5z6A7B8C9D0E1F2G3H4I5J6K7L8M9N0O1P2Q3R4S5T6U7V8W9X0Y1Z2a3b4c5d6e7f8g9h0i1j2k3l4m5n6o7p8q9r0s1t2u3v4w5x6y7z8A9B0C1D2E3F4G5H6I7J8K9L0M1N2O3P4Q5R6S7T8U9V0W1X2Y3Z4a5b6c7d8e9f0g1h2i3j4k5l6m7n8o9p0q1r2s3t4u5v6w7x8y9z0");'>
-                        </div>
+                        <img src="../assets/images/portfolio/project-solar.webp"
+                            alt="Industrial solar power plant stretching to horizon"
+                            class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            loading="lazy">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                         <div class="absolute bottom-4 left-4 right-4">
-                            <p class="text-primary text-xs font-bold tracking-wider uppercase mb-1">Energía</p>
-                            <h3 class="text-white text-xl font-bold">Parque Solar Helios</h3>
+                            <p class="text-primary text-xs font-bold tracking-wider uppercase mb-1"
+                                data-i18n="portfolio_page.items.p5.cat">Energía</p>
+                            <h3 class="text-white text-xl font-bold" data-i18n="portfolio_page.items.p5.title">Parque
+                                Solar Helios</h3>
                         </div>
                     </div>
                 </div>
@@ -201,7 +260,8 @@
                 <div class="flex justify-center mt-8">
                     <button
                         class="flex items-center gap-2 px-8 py-3 border border-gray-300 dark:border-gray-700 rounded-lg text-sm font-bold text-[#111418] dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors focus:ring-2 focus:ring-gray-200">
-                        Cargar Más Proyectos <span class="material-symbols-outlined text-[18px]">expand_more</span>
+                        <span data-i18n="portfolio_page.load_more">Cargar Más Proyectos</span> <span
+                            class="material-symbols-outlined text-[18px]">expand_more</span>
                     </button>
                 </div>
             </div>
@@ -217,7 +277,7 @@
                     </div>
                     <span class="font-bold dark:text-white">Legado Ambiental</span>
                 </div>
-                <div class="text-sm text-[#617589] dark:text-gray-400">
+                <div class="text-sm text-[#617589] dark:text-gray-400" data-i18n="footer.rights">
                     © 2024 Legado Ambiental. Todos los derechos reservados.
                 </div>
                 <div class="flex gap-6">
@@ -231,6 +291,7 @@
             </div>
         </footer>
     </div>
+    <script src="../assets/js/i18n.js" data-base-path="../"></script>
 </body>
 
 </html>

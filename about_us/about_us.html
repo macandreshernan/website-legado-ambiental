@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>Quiénes Somos | Legado Ambiental</title>
+  <title data-i18n="about.title">Quiénes Somos | Legado Ambiental</title>
 
   <!-- SEO & Social Media Meta Tags -->
   <meta name="description"
@@ -23,36 +23,45 @@
   <!-- Browser Cache Hint -->
   <meta http-equiv="Cache-Control" content="max-age=31536000">
 
+  <!-- SEO Canonical & Hreflang -->
+  <link rel="canonical" href="https://www.legadoambiental.com/about_us/about_us.html" />
+  <link rel="alternate" hreflang="es-MX" href="https://www.legadoambiental.com/about_us/about_us.html?lang=es-MX" />
+  <link rel="alternate" hreflang="en-US" href="https://www.legadoambiental.com/about_us/about_us.html?lang=en-US" />
+  <link rel="alternate" hreflang="x-default" href="https://www.legadoambiental.com/about_us/about_us.html" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ConstructionBusiness",
+    "name": "Legado Ambiental",
+    "url": "https://www.legadoambiental.com",
+    "image": "https://www.legadoambiental.com/assets/logo.png",
+    "description": "Excelencia en construcción civil y desarrollo sostenible.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Plaza de Ingeniería, Suite 400",
+      "addressLocality": "Ciudad de México",
+      "addressRegion": "CDMX",
+      "postalCode": "12345",
+      "addressCountry": "MX"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-555-123-4567",
+      "contactType": "customer service"
+    }
+  }
+  </script>
+
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800&amp;display=swap"
-    rel="stylesheet" />
   <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap"
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Merriweather:wght@300;400;700;900&display=swap"
     rel="stylesheet" />
   <link
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
     rel="stylesheet" />
-  <script id="tailwind-config">
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          colors: {
-            "primary": "#0f49bd",
-            "navy-dark": "#0a2e7a",
-            "slate-gray": "#475569",
-            "background-light": "#f6f6f8",
-            "background-dark": "#101622",
-          },
-          fontFamily: {
-            "display": ["Public Sans", "sans-serif"],
-            "serif-quote": ["Playfair Display", "serif"]
-          },
-          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
-        },
-      },
-    }
-  </script>
+  <script src="../assets/js/theme-config.js"></script>
   <style type="text/tailwindcss">
     @layer base {
             body { font-family: "Public Sans", sans-serif; }
@@ -79,34 +88,66 @@
         <div class="flex flex-1 justify-end gap-8">
           <nav class="hidden md:flex items-center gap-9">
             <a class="text-[#111318] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
-              href="../home.html">Inicio</a>
-            <a class="text-primary dark:text-blue-400 text-sm font-bold" href="#">Quiénes Somos</a>
+              href="../home.html" data-i18n="nav.home">Inicio</a>
             <a class="text-[#111318] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
-              href="../services_overview/services.html">Servicios</a>
+              href="../about_us/about_us.html" data-i18n="nav.about">Quiénes Somos</a>
             <a class="text-[#111318] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
-              href="../project_portfolio_gallery/portfolio.html">Portafolio</a>
+              href="../services_overview/services.html" data-i18n="nav.services">Servicios</a>
             <a class="text-[#111318] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
-              href="../experience_timeline/our_experience.html">Experiencia</a>
+              href="../project_portfolio_gallery/portfolio.html" data-i18n="nav.portfolio">Portafolio</a>
             <a class="text-[#111318] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
-              href="../faq/contact_faq.html">Contacto</a>
+              href="../experience_timeline/our_experience.html" data-i18n="nav.experience">Experiencia</a>
+            <a class="text-[#111318] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
+              href="../faq/contact_faq.html" data-i18n="nav.contact">Contacto</a>
           </nav>
-          <button
-            class="flex min-w-[84px] cursor-pointer items-center justify-center rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold hover:bg-primary/90 transition-all shadow-md focus:ring-2 focus:ring-primary focus:ring-offset-2">
-            Cotizar
-          </button>
+          <div class="hidden md:flex items-center gap-4">
+            <div class="flex items-center gap-2 mr-4">
+              <button class="text-sm font-semibold hover:text-primary transition-colors text-primary"
+                data-switch-lang="es-MX">ES</button>
+              <span class="text-gray-300">|</span>
+              <button class="text-sm font-semibold hover:text-primary transition-colors"
+                data-switch-lang="en-US">EN</button>
+            </div>
+            <button
+              class="flex min-w-[84px] cursor-pointer items-center justify-center rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold hover:bg-primary/90 transition-all shadow-md focus:ring-2 focus:ring-primary focus:ring-offset-2"
+              data-i18n="nav.quote">
+              Cotizar
+            </button>
+          </div>
         </div>
       </div>
     </header>
     <main class="flex-1">
-      <section class="max-w-[1200px] mx-auto pt-12 pb-6 px-4">
+      <div class="max-w-[1200px] mx-auto pt-6 px-4">
+        <nav class="flex" aria-label="Breadcrumb">
+          <ol class="inline-flex items-center space-x-1 md:space-x-3">
+            <li class="inline-flex items-center">
+              <a href="../home.html"
+                class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-primary dark:text-gray-400 dark:hover:text-white">
+                <span class="material-symbols-outlined text-lg mr-2">home</span>
+                Inicio
+              </a>
+            </li>
+            <li aria-current="page">
+              <div class="flex items-center">
+                <span class="material-symbols-outlined text-gray-400 mx-1">chevron_right</span>
+                <span class="ml-1 text-sm font-medium text-gray-500 md:ml-2 dark:text-gray-400">Quiénes Somos</span>
+              </div>
+            </li>
+          </ol>
+        </nav>
+      </div>
+      <section class="max-w-[1200px] mx-auto pt-6 pb-6 px-4">
         <div class="@container">
           <div
             class="bg-cover bg-center flex flex-col justify-end overflow-hidden rounded-xl min-h-[400px] shadow-lg relative"
-            style='background-image: linear-gradient(0deg, rgba(15, 73, 189, 0.8) 0%, rgba(15, 73, 189, 0.2) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCjghLGFHCQMPtpaUgz6EZKIbpu1sxzbwDLBXD_Je4qw5ST6VKeA46Q5YNZtTS_-9hcYkvQh0IEPDK3bdcCTHH5qN7PBTZW3MDczz5YpqsuEoXrxM5DIN_BsSm56GrHtizOYUYscfbXVo_WbqaUJViZSSkJNl1OYtxVSGtaBtS6vOMN3KbwI86GcyvIBheadsD8-oGzyNzuhBcXB7zlGdpczxAIIIYVPF6o9OJmh23cOYt7xGXtjhX9Ot9-rK9cvrkbuQMIjxFQgvFW");'>
+            style='background-image: linear-gradient(0deg, rgba(15, 73, 189, 0.8) 0%, rgba(15, 73, 189, 0.2) 100%), url("../assets/images/about/hero-about.webp");'>
             <div class="flex flex-col p-8 md:p-16 max-w-3xl">
-              <h1 class="text-white tracking-tight text-4xl md:text-6xl font-extrabold leading-tight mb-4">Quiénes Somos
+              <h1 class="text-white tracking-tight text-4xl md:text-6xl font-extrabold leading-tight mb-4"
+                data-i18n="about.hero.title">Quiénes Somos
               </h1>
-              <p class="text-blue-50 text-xl font-light leading-relaxed">Definiendo el paisaje de la ingeniería civil a
+              <p class="text-blue-50 text-xl font-light leading-relaxed" data-i18n="about.hero.subtitle">Definiendo el
+                paisaje de la ingeniería civil a
                 través de la integridad, precisión y un compromiso con la infraestructura sostenible.</p>
             </div>
           </div>
@@ -115,22 +156,25 @@
       <section
         class="max-w-[1200px] mx-auto px-4 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center border-b border-slate-100 dark:border-slate-800">
         <div>
-          <h2 class="text-3xl font-bold text-navy-dark dark:text-white mb-6">Construyendo un Legado Sostenible</h2>
+          <h2 class="text-3xl font-bold text-navy-dark dark:text-white mb-6" data-i18n="about.sustainable.title">
+            Construyendo un Legado Sostenible</h2>
           <div class="space-y-4 text-slate-gray dark:text-slate-400 text-lg leading-relaxed">
-            <p>Fundada en 2010, Legado Ambiental se ha establecido como una piedra angular de la excelencia en
+            <p data-i18n="about.sustainable.p1">Fundada en 2010, Legado Ambiental se ha establecido como una piedra
+              angular de la excelencia en
               ingeniería tanto en el sector público como en el privado. Nos especializamos en proyectos de
               infraestructura complejos que exigen alta competencia técnica y sensibilidad ambiental.</p>
-            <p>Nuestro enfoque combina la maestría en ingeniería tradicional con tecnologías sostenibles modernas,
+            <p data-i18n="about.sustainable.p2">Nuestro enfoque combina la maestría en ingeniería tradicional con
+              tecnologías sostenibles modernas,
               asegurando que cada proyecto que emprendemos sirva a la comunidad para las generaciones venideras.</p>
           </div>
         </div>
         <div class="grid grid-cols-2 gap-4">
           <div class="h-64 rounded-xl bg-cover bg-center shadow-md transform hover:scale-[1.02] transition-transform"
-            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC1yF5GDjdmX28zliKUDr0L7S0XMVYix4pQDH723uLzI8z2D6gdnxGCcz8Py-M9QH7sOcXiAx_MSm8JWRqjhEpVh54yopkgR-FBn832slkcff1aqR2cccnQJwIMo49O7t8aFVw73wALYZ2LDQ9BfzYe3iLcZYjsf-vE0u7aNieuseSyTkzUotSDqAQoN9jvX0Hfv0hWUPtJRkaSIqdJeyWOAZq7ry67Wt0doXMMkRzb7WT4FHPrh7K9CuNJYjoa1MMuFetSkjlZ7HhQ");'>
+            style='background-image: url("../assets/images/about/office-team-1.webp");'>
           </div>
           <div
             class="h-64 rounded-xl bg-cover bg-center shadow-md mt-8 transform hover:scale-[1.02] transition-transform"
-            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDB6bITIuvETb4piWpttCwM0nZs3XdULQi-fvHedgSWjsH9MAEObqjSvU1EjIOcGaZXRmbqc9DmjNah6KoMTHVLitFOehXTyW8W6XqE_4yKk6Kek5yptLnjdZgOypjycy8RG2m4Pos22uBp__OjOyhqqiMHbEv2f5hfaOXr-gyvNxj40sT3f6aZAeFCXgRncUwRul601LAz9snkNaWA_UjCTisMRTTdQ1lwa5G1zWgs_IT2gk249AYoc4Qnla2wygNZOLU4_tuuNAHd");'>
+            style='background-image: url("../assets/images/about/office-team-2.webp");'>
           </div>
         </div>
       </section>
@@ -138,15 +182,15 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div class="relative group overflow-hidden rounded-2xl h-[400px] shadow-xl">
             <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD5RtxMgOW4DMRXHm7lSGkBPZGau0o8Yu4qekFx-Prk3Uj9rrhCseZzxCqPqiSrBJx0yKaIqSoWwPEmBSY4S_WaT2woyP_yi0NoDO_suuQFPv9nGQ5tXvuODKg7iQtWaLTwCwiUMw1T0Ei-S1UWrd61RemM3N0JjQWMX4sKZsvtOjj2yqohbL0XCG25cWG3cqxflMIhu0nmyNvFCqqotGCq9zPb0wyoXGCamoMTqeFz7PufRI6I18UA0Iw-w8k6D-VXEmM1_aCfrMYV");'>
+              style='background-image: url("../assets/images/about/mission-bg.webp");'>
             </div>
             <div
               class="absolute inset-0 bg-gradient-to-t from-primary via-primary/80 to-primary/40 p-10 flex flex-col justify-end">
               <h3 class="text-white text-3xl font-bold mb-4 flex items-center gap-3">
                 <span class="material-symbols-outlined text-4xl">flag</span>
-                Misión
+                <span data-i18n="about.mission.title">Misión</span>
               </h3>
-              <p class="text-blue-50 text-lg font-light leading-relaxed">
+              <p class="text-blue-50 text-lg font-light leading-relaxed" data-i18n="about.mission.desc">
                 Proveer soluciones de ingeniería civil de vanguardia que integren la sostenibilidad ambiental con la
                 eficiencia técnica, superando las expectativas de nuestros clientes en el sector público y privado
                 mediante un compromiso inquebrantable con la calidad y la seguridad.
@@ -155,15 +199,15 @@
           </div>
           <div class="relative group overflow-hidden rounded-2xl h-[400px] shadow-xl">
             <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC1yF5GDjdmX28zliKUDr0L7S0XMVYix4pQDH723uLzI8z2D6gdnxGCcz8Py-M9QH7sOcXiAx_MSm8JWRqjhEpVh54yopkgR-FBn832slkcff1aqR2cccnQJwIMo49O7t8aFVw73wALYZ2LDQ9BfzYe3iLcZYjsf-vE0u7aNieuseSyTkzUotSDqAQoN9jvX0Hfv0hWUPtJRkaSIqdJeyWOAZq7ry67Wt0doXMMkRzb7WT4FHPrh7K9CuNJYjoa1MMuFetSkjlZ7HhQ");'>
+              style='background-image: url("../assets/images/about/vision-bg.webp");'>
             </div>
             <div
               class="absolute inset-0 bg-gradient-to-t from-navy-dark via-navy-dark/80 to-navy-dark/40 p-10 flex flex-col justify-end">
               <h3 class="text-white text-3xl font-bold mb-4 flex items-center gap-3">
                 <span class="material-symbols-outlined text-4xl">visibility</span>
-                Visión
+                <span data-i18n="about.vision.title">Visión</span>
               </h3>
-              <p class="text-blue-50 text-lg font-light leading-relaxed">
+              <p class="text-blue-50 text-lg font-light leading-relaxed" data-i18n="about.vision.desc">
                 Consolidarnos como la firma líder en infraestructura civil y ambiental en la región, siendo reconocidos
                 por nuestra capacidad de innovación, resiliencia técnica y por dejar un legado positivo en cada
                 comunidad donde desarrollamos nuestros proyectos.
@@ -175,9 +219,11 @@
       <section class="bg-background-light dark:bg-slate-900/40 py-24 px-4">
         <div class="max-w-[1200px] mx-auto">
           <div class="text-center mb-16">
-            <h2 class="text-primary dark:text-blue-400 text-sm font-bold uppercase tracking-widest mb-3">Nuestros
+            <h2 class="text-primary dark:text-blue-400 text-sm font-bold uppercase tracking-widest mb-3"
+              data-i18n="about.values.title">Nuestros
               Valores</h2>
-            <h3 class="text-3xl md:text-4xl font-extrabold text-[#111318] dark:text-white">Los Pilares de Nuestro Éxito
+            <h3 class="text-3xl md:text-4xl font-extrabold text-[#111318] dark:text-white"
+              data-i18n="about.values.subtitle">Los Pilares de Nuestro Éxito
             </h3>
           </div>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -186,8 +232,10 @@
               <div class="w-16 h-16 bg-blue-50 dark:bg-blue-900/20 rounded-lg flex items-center justify-center mb-6">
                 <span class="material-symbols-outlined text-primary text-4xl">verified</span>
               </div>
-              <h4 class="text-xl font-bold text-navy-dark dark:text-white mb-4">Integridad</h4>
-              <p class="text-slate-gray dark:text-slate-400">Actuamos con transparencia absoluta en cada licitación y
+              <h4 class="text-xl font-bold text-navy-dark dark:text-white mb-4" data-i18n="about.values.integrity">
+                Integridad</h4>
+              <p class="text-slate-gray dark:text-slate-400" data-i18n="about.values.integrity_desc">Actuamos con
+                transparencia absoluta en cada licitación y
                 ejecución de obra, garantizando la confianza de nuestros socios gubernamentales y privados.</p>
             </div>
             <div
@@ -195,8 +243,10 @@
               <div class="w-16 h-16 bg-blue-50 dark:bg-blue-900/20 rounded-lg flex items-center justify-center mb-6">
                 <span class="material-symbols-outlined text-primary text-4xl">eco</span>
               </div>
-              <h4 class="text-xl font-bold text-navy-dark dark:text-white mb-4">Sostenibilidad</h4>
-              <p class="text-slate-gray dark:text-slate-400">Diseñamos pensando en el mañana. Priorizamos materiales y
+              <h4 class="text-xl font-bold text-navy-dark dark:text-white mb-4" data-i18n="about.values.sustainability">
+                Sostenibilidad</h4>
+              <p class="text-slate-gray dark:text-slate-400" data-i18n="about.values.sustainability_desc">Diseñamos
+                pensando en el mañana. Priorizamos materiales y
                 procesos que minimicen el impacto ambiental y maximicen la vida útil de la infraestructura.</p>
             </div>
             <div
@@ -204,24 +254,29 @@
               <div class="w-16 h-16 bg-blue-50 dark:bg-blue-900/20 rounded-lg flex items-center justify-center mb-6">
                 <span class="material-symbols-outlined text-primary text-4xl">diamond</span>
               </div>
-              <h4 class="text-xl font-bold text-navy-dark dark:text-white mb-4">Excelencia</h4>
-              <p class="text-slate-gray dark:text-slate-400">Desde la planeación hasta el último detalle de acabado,
+              <h4 class="text-xl font-bold text-navy-dark dark:text-white mb-4" data-i18n="about.values.excellence">
+                Excelencia</h4>
+              <p class="text-slate-gray dark:text-slate-400" data-i18n="about.values.excellence_desc">Desde la
+                planeación hasta el último detalle de acabado,
                 buscamos la perfección técnica y funcional en todos nuestros desafíos de ingeniería.</p>
             </div>
           </div>
         </div>
       </section>
-      <section class="bg-primary py-20 px-4">
+      <section class="bg-primary-dark py-20 px-4">
         <div class="max-w-[800px] mx-auto text-center">
-          <h2 class="text-white text-3xl font-bold mb-6">Construyamos el futuro juntos</h2>
-          <p class="text-blue-100 text-lg mb-10 font-light">Contacte a nuestro equipo de expertos para discutir cómo
+          <h2 class="text-white text-3xl font-bold mb-6" data-i18n="about.cta.title">Construyamos el futuro juntos</h2>
+          <p class="text-gray-100 text-lg mb-10" data-i18n="about.cta.desc">Contacte a nuestro equipo de
+            expertos para discutir cómo
             Legado Ambiental puede hacer realidad su próxima visión con precisión y cuidado.</p>
           <div class="flex flex-wrap justify-center gap-4">
             <button
-              class="px-10 py-4 bg-white text-primary font-bold rounded-lg hover:bg-blue-50 transition-colors shadow-xl focus:ring-2 focus:ring-white">Iniciar
+              class="px-10 py-4 bg-white text-primary font-bold rounded-lg hover:bg-blue-50 transition-colors shadow-xl focus:ring-2 focus:ring-white"
+              data-i18n="about.cta.btn_consult">Iniciar
               Consulta</button>
             <button
-              class="px-10 py-4 border border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors focus:ring-2 focus:ring-white">Ver
+              class="px-10 py-4 border border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors focus:ring-2 focus:ring-white"
+              data-i18n="about.cta.btn_portfolio">Ver
               Portafolio</button>
           </div>
         </div>
@@ -244,16 +299,17 @@
         <div>
           <h4 class="font-bold mb-4 dark:text-white text-navy-dark">Enlaces Rápidos</h4>
           <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
-            <li><a class="hover:text-primary transition-colors" href="../home.html">Inicio</a></li>
-            <li><a class="hover:text-primary transition-colors" href="#">Quiénes Somos</a></li>
-            <li><a class="hover:text-primary transition-colors"
-                href="../experience_timeline/our_experience.html">Experiencia</a></li>
-            <li><a class="hover:text-primary transition-colors" href="../services_overview/services.html">Servicios</a>
+            <li><a class="hover:text-primary transition-colors" href="../home.html" data-i18n="nav.home">Inicio</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#" data-i18n="nav.about">Quiénes Somos</a></li>
+            <li><a class="hover:text-primary transition-colors" href="../experience_timeline/our_experience.html"
+                data-i18n="nav.experience">Experiencia</a></li>
+            <li><a class="hover:text-primary transition-colors" href="../services_overview/services.html"
+                data-i18n="nav.services">Servicios</a>
             </li>
           </ul>
         </div>
         <div>
-          <h4 class="font-bold mb-4 dark:text-white text-navy-dark">Contacto</h4>
+          <h4 class="font-bold mb-4 dark:text-white text-navy-dark" data-i18n="footer.contact.title">Contacto</h4>
           <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
             <li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs">mail</span>
               info@legadoambiental.com</li>
@@ -278,7 +334,8 @@
       </div>
       <div
         class="max-w-[1200px] mx-auto mt-12 pt-8 border-t border-slate-200 dark:border-slate-900 flex flex-col md:flex-row justify-between items-center gap-4">
-        <p class="text-xs text-slate-400">© 2024 Legado Ambiental. Todos los derechos reservados.</p>
+        <p class="text-xs text-slate-400" data-i18n="footer.rights">© 2024 Legado Ambiental. Todos los derechos
+          reservados.</p>
         <div class="flex gap-4">
           <a class="text-slate-400 hover:text-primary transition-colors" href="#"><span
               class="material-symbols-outlined">public</span></a>
@@ -290,6 +347,8 @@
       </div>
     </footer>
   </div>
+  </div>
+  <script src="../assets/js/i18n.js" data-base-path="../"></script>
 </body>
 
 </html>

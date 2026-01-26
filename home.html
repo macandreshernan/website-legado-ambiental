@@ -23,32 +23,45 @@
     <!-- Browser Cache Hint (Simulation) -->
     <meta http-equiv="Cache-Control" content="max-age=31536000">
 
+    <!-- SEO Canonical & Hreflang -->
+    <link rel="canonical" href="https://www.legadoambiental.com/home.html" />
+    <link rel="alternate" hreflang="es-MX" href="https://www.legadoambiental.com/home.html?lang=es-MX" />
+    <link rel="alternate" hreflang="en-US" href="https://www.legadoambiental.com/home.html?lang=en-US" />
+    <link rel="alternate" hreflang="x-default" href="https://www.legadoambiental.com/home.html" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ConstructionBusiness",
+      "name": "Legado Ambiental",
+      "url": "https://www.legadoambiental.com",
+      "image": "https://www.legadoambiental.com/assets/logo.png",
+      "description": "Excelencia en construcción civil y desarrollo sostenible.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Plaza de Ingeniería, Suite 400",
+        "addressLocality": "Ciudad de México",
+        "addressRegion": "CDMX",
+        "postalCode": "12345",
+        "addressCountry": "MX"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-555-123-4567",
+        "contactType": "customer service"
+      }
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;900&amp;display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Merriweather:wght@300;400;700;900&display=swap"
         rel="stylesheet" />
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
-    <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#137fec",
-                        "navy": "#101922",
-                        "charcoal": "#333333",
-                        "background-light": "#f6f7f8",
-                        "background-dark": "#101922",
-                    },
-                    fontFamily: {
-                        "display": ["Public Sans", "sans-serif"]
-                    },
-                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
-                },
-            },
-        }
-    </script>
+    <script src="assets/js/theme-config.js"></script>
     <style>
         body {
             font-family: "Public Sans", sans-serif;
@@ -78,22 +91,29 @@
                 </div>
                 <nav class="hidden md:flex items-center gap-8">
                     <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:text-primary transition-colors"
-                        href="about_us/about_us.html">Quiénes Somos</a>
+                        href="about_us/about_us.html" data-i18n="nav.about">Quiénes Somos</a>
                     <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:text-primary transition-colors"
-                        href="services_overview/services.html">Servicios</a>
+                        href="services_overview/services.html" data-i18n="nav.services">Servicios</a>
                     <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:text-primary transition-colors"
-                        href="project_portfolio_gallery/portfolio.html">Portafolio</a>
+                        href="project_portfolio_gallery/portfolio.html" data-i18n="nav.portfolio">Portafolio</a>
                     <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:text-primary transition-colors"
-                        href="experience_timeline/our_experience.html">Experiencia</a>
+                        href="experience_timeline/our_experience.html" data-i18n="nav.experience">Experiencia</a>
                     <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:text-primary transition-colors"
-                        href="faq/contact_faq.html">Contacto</a>
+                        href="faq/contact_faq.html" data-i18n="nav.contact">Contacto</a>
                     <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:text-primary transition-colors"
-                        href="faq/contact_faq.html">FAQ</a>
+                        href="faq/contact_faq.html" data-i18n="nav.faq">FAQ</a>
                 </nav>
-                <!-- Desktop Button -->
-                <div class="hidden md:block">
+                <div class="hidden md:flex items-center gap-4">
+                    <div class="flex items-center gap-2 mr-4">
+                        <button class="text-sm font-semibold hover:text-primary transition-colors"
+                            data-switch-lang="es-MX">ES</button>
+                        <span class="text-gray-300">|</span>
+                        <button class="text-sm font-semibold hover:text-primary transition-colors"
+                            data-switch-lang="en-US">EN</button>
+                    </div>
                     <button
-                        class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-lg text-sm font-bold tracking-wide transition-all shadow-md focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                        class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-lg text-sm font-bold tracking-wide transition-all shadow-md focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                        data-i18n="nav.quote">
                         Cotizar
                     </button>
                 </div>
@@ -135,24 +155,27 @@
                     <!-- Background Image with Overlay -->
                     <div class="absolute inset-0 z-0 bg-cover bg-center"
                         data-alt="Sitio de construcción moderno al amanecer"
-                        style="background-image: linear-gradient(rgba(16, 25, 34, 0.2) 0%, rgba(16, 25, 34, 0.8) 100%), url('https://lh3.googleusercontent.com/aida-public/AB6AXuAqmscbVHlzhMSGufVJIPHAbeXNuKcXemhcqZAvGrMwdJbxYRqn8NujTgRc0TtDDWCuBk8klfSuiOBlRyB4I9I7qcGRXnv5N8WjDK5YrY93NXDou-byxlzvuw8aaJulXpLVyQAU_fBNxyohbjY_ieOzlFk87mlJlDEHw2W041oK-_KKMEns8lE5Kf1T9iHTdHkI4R8eYS49VBlR8-IoaMb1lMOX0srUz1qjb_b6UJLlF177tEDwunIL0Z1qBT1HP06f181aJYMrSlXd');">
+                        style="background-image: linear-gradient(rgba(16, 25, 34, 0.2) 0%, rgba(16, 25, 34, 0.8) 100%), url('assets/images/home/hero-main.webp');">
                     </div>
                     <div class="relative z-10 p-8 md:p-16 max-w-3xl">
-                        <h1 class="text-white text-5xl md:text-7xl font-black leading-[1.1] tracking-tight mb-6">
+                        <h1 class="text-white text-5xl md:text-7xl font-black leading-[1.1] tracking-tight mb-6"
+                            data-i18n="hero.title">
                             Construyendo Infraestructura, Sosteniendo el Futuro.
                         </h1>
-                        <p class="text-gray-300 text-lg md:text-xl font-light leading-relaxed mb-8 max-w-xl">
+                        <p class="text-gray-300 text-lg md:text-xl font-light leading-relaxed mb-8 max-w-xl"
+                            data-i18n="hero.subtitle">
                             Excelencia profesional en construcción civil y legado ambiental para proyectos privados y
                             gubernamentales en todo el mundo.
                         </p>
                         <div class="flex flex-wrap gap-4">
                             <button
                                 class="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-lg text-base font-bold transition-all flex items-center gap-2 shadow-lg focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-navy">
-                                <span>Ver Portafolio</span>
+                                <span data-i18n="hero.portfolio_btn">Ver Portafolio</span>
                                 <span class="material-symbols-outlined">trending_flat</span>
                             </button>
                             <button
-                                class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-lg text-base font-bold transition-all focus:ring-2 focus:ring-white">
+                                class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-lg text-base font-bold transition-all focus:ring-2 focus:ring-white"
+                                data-i18n="hero.contact_btn">
                                 Contáctanos
                             </button>
                         </div>
@@ -169,7 +192,8 @@
                         <span class="material-symbols-outlined text-4xl">calendar_month</span>
                     </div>
                     <div>
-                        <p class="text-charcoal dark:text-gray-400 text-sm font-semibold uppercase tracking-widest">Años
+                        <p class="text-charcoal dark:text-gray-400 text-sm font-semibold uppercase tracking-widest"
+                            data-i18n="stats.years">Años
                             de Experiencia</p>
                         <p class="text-navy dark:text-white text-4xl font-black">20+</p>
                     </div>
@@ -180,7 +204,8 @@
                         <span class="material-symbols-outlined text-4xl">domain</span>
                     </div>
                     <div>
-                        <p class="text-charcoal dark:text-gray-400 text-sm font-semibold uppercase tracking-widest">
+                        <p class="text-charcoal dark:text-gray-400 text-sm font-semibold uppercase tracking-widest"
+                            data-i18n="stats.projects">
                             Proyectos Completados</p>
                         <p class="text-navy dark:text-white text-4xl font-black">150+</p>
                     </div>
@@ -191,7 +216,8 @@
                         <span class="material-symbols-outlined text-4xl">verified</span>
                     </div>
                     <div>
-                        <p class="text-charcoal dark:text-gray-400 text-sm font-semibold uppercase tracking-widest">
+                        <p class="text-charcoal dark:text-gray-400 text-sm font-semibold uppercase tracking-widest"
+                            data-i18n="stats.certifications">
                             Certificaciones ISO</p>
                         <p class="text-navy dark:text-white text-4xl font-black">3</p>
                     </div>
@@ -199,19 +225,21 @@
             </div>
         </section>
         <!-- Value Proposition Section -->
-        <section class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <section class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div class="max-w-3xl mx-auto">
-                <h2 class="text-navy dark:text-white text-3xl md:text-5xl font-black tracking-tight mb-8">
+                <h2 class="text-navy dark:text-white text-3xl md:text-5xl font-black tracking-tight mb-8"
+                    data-i18n="value.title">
                     Excelencia en Construcción Civil y Legado Ambiental
                 </h2>
-                <p class="text-charcoal dark:text-gray-400 text-lg leading-relaxed mb-12">
+                <p class="text-charcoal dark:text-gray-400 text-lg leading-relaxed mb-12" data-i18n="value.desc">
                     Entregamos soluciones de ingeniería de alto impacto con un compromiso inquebrantable con la calidad,
                     la seguridad y el desarrollo sostenible. Nuestro legado se construye sobre la fortaleza de nuestras
                     estructuras y la salud de nuestro medio ambiente.
                 </p>
                 <div class="flex justify-center">
                     <button
-                        class="bg-primary hover:bg-primary/90 text-white px-10 py-4 rounded-lg text-base font-bold transition-all shadow-lg shadow-primary/20 focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                        class="bg-primary hover:bg-primary/90 text-white px-10 py-4 rounded-lg text-base font-bold transition-all shadow-lg shadow-primary/20 focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                        data-i18n="value.mission_btn">
                         Conoce Más Sobre Nuestra Misión
                     </button>
                 </div>
@@ -222,12 +250,14 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
                     <div>
-                        <span class="text-primary font-bold tracking-[0.2em] uppercase text-sm mb-4 block">Lo que
+                        <span class="text-primary font-bold tracking-[0.2em] uppercase text-sm mb-4 block"
+                            data-i18n="services.label">Lo que
                             hacemos</span>
-                        <h2 class="text-navy dark:text-white text-4xl font-black tracking-tight">Nuestros Servicios
+                        <h2 class="text-navy dark:text-white text-4xl font-black tracking-tight"
+                            data-i18n="services.title">Nuestros Servicios
                             Especializados</h2>
                     </div>
-                    <p class="text-charcoal dark:text-gray-400 max-w-md text-lg">
+                    <p class="text-charcoal dark:text-gray-400 max-w-md text-lg" data-i18n="services.desc">
                         Ofrecemos consultoría integral en ingeniería y medio ambiente para diversos sectores.
                     </p>
                 </div>
@@ -238,12 +268,15 @@
                         <div class="mb-6 text-primary group-hover:scale-110 transition-transform origin-left">
                             <span class="material-symbols-outlined text-5xl">engineering</span>
                         </div>
-                        <h3 class="text-navy dark:text-white text-xl font-bold mb-4">Ingeniería Civil</h3>
-                        <p class="text-charcoal dark:text-gray-400 text-sm leading-relaxed mb-6">Diseño estructural y
+                        <h3 class="text-navy dark:text-white text-xl font-bold mb-4" data-i18n="services.civil.title">
+                            Ingeniería Civil</h3>
+                        <p class="text-charcoal dark:text-gray-400 text-sm leading-relaxed mb-6"
+                            data-i18n="services.civil.desc">Diseño estructural y
                             obras civiles pesadas para infraestructura industrial y pública.</p>
                         <a class="text-primary text-sm font-bold flex items-center gap-1 group-hover:gap-2 transition-all"
                             href="services_overview/services.html">
-                            Detalles <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                            <span data-i18n="services.details">Detalles</span> <span
+                                class="material-symbols-outlined text-sm">arrow_forward</span>
                         </a>
                     </div>
                     <!-- Service 2 -->
@@ -252,12 +285,15 @@
                         <div class="mb-6 text-primary group-hover:scale-110 transition-transform origin-left">
                             <span class="material-symbols-outlined text-5xl">eco</span>
                         </div>
-                        <h3 class="text-navy dark:text-white text-xl font-bold mb-4">Legado Ambiental</h3>
-                        <p class="text-charcoal dark:text-gray-400 text-sm leading-relaxed mb-6">Prácticas de
+                        <h3 class="text-navy dark:text-white text-xl font-bold mb-4" data-i18n="services.env.title">
+                            Legado Ambiental</h3>
+                        <p class="text-charcoal dark:text-gray-400 text-sm leading-relaxed mb-6"
+                            data-i18n="services.env.desc">Prácticas de
                             construcción sostenible y mitigación del impacto ambiental.</p>
                         <a class="text-primary text-sm font-bold flex items-center gap-1 group-hover:gap-2 transition-all"
                             href="services_overview/services.html">
-                            Detalles <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                            <span data-i18n="services.details">Detalles</span> <span
+                                class="material-symbols-outlined text-sm">arrow_forward</span>
                         </a>
                     </div>
                     <!-- Service 3 -->
@@ -266,12 +302,15 @@
                         <div class="mb-6 text-primary group-hover:scale-110 transition-transform origin-left">
                             <span class="material-symbols-outlined text-5xl">architecture</span>
                         </div>
-                        <h3 class="text-navy dark:text-white text-xl font-bold mb-4">Gestión de Proyectos</h3>
-                        <p class="text-charcoal dark:text-gray-400 text-sm leading-relaxed mb-6">Gestión integral
+                        <h3 class="text-navy dark:text-white text-xl font-bold mb-4" data-i18n="services.mgmt.title">
+                            Gestión de Proyectos</h3>
+                        <p class="text-charcoal dark:text-gray-400 text-sm leading-relaxed mb-6"
+                            data-i18n="services.mgmt.desc">Gestión integral
                             asegurando cronogramas, presupuesto y estándares de seguridad.</p>
                         <a class="text-primary text-sm font-bold flex items-center gap-1 group-hover:gap-2 transition-all"
                             href="services_overview/services.html">
-                            Detalles <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                            <span data-i18n="services.details">Detalles</span> <span
+                                class="material-symbols-outlined text-sm">arrow_forward</span>
                         </a>
                     </div>
                     <!-- Service 4 -->
@@ -280,70 +319,83 @@
                         <div class="mb-6 text-primary group-hover:scale-110 transition-transform origin-left">
                             <span class="material-symbols-outlined text-5xl">account_balance</span>
                         </div>
-                        <h3 class="text-navy dark:text-white text-xl font-bold mb-4">Proyectos Gubernamentales</h3>
-                        <p class="text-charcoal dark:text-gray-400 text-sm leading-relaxed mb-6">Soluciones
+                        <h3 class="text-navy dark:text-white text-xl font-bold mb-4" data-i18n="services.gov.title">
+                            Proyectos Gubernamentales</h3>
+                        <p class="text-charcoal dark:text-gray-400 text-sm leading-relaxed mb-6"
+                            data-i18n="services.gov.desc">Soluciones
                             especializadas para licitaciones de obras públicas municipales y federales.</p>
                         <a class="text-primary text-sm font-bold flex items-center gap-1 group-hover:gap-2 transition-all"
                             href="services_overview/services.html">
-                            Detalles <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                            <span data-i18n="services.details">Detalles</span> <span
+                                class="material-symbols-outlined text-sm">arrow_forward</span>
                         </a>
                     </div>
                 </div>
             </div>
         </section>
         <!-- Portfolio Preview Section -->
-        <section class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-navy dark:text-white text-4xl font-black tracking-tight mb-4">Proyectos Recientes</h2>
+                <h2 class="text-navy dark:text-white text-4xl font-black tracking-tight mb-4"
+                    data-i18n="portfolio.title">Proyectos Recientes</h2>
                 <div class="w-20 h-1.5 bg-primary mx-auto rounded-full"></div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="group relative overflow-hidden rounded-xl h-96 shadow-lg">
                     <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
                         data-alt="Puente moderno sobre el agua"
-                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCPNWRcg-KJd1molLOJZumClgkbuTTPT53rnlWSiDfQ6adSWff4PVBBrxyn5esrlJ9pcXPHpnLW_s7xMvxBCYg7i6m5dnpzJo1vqndnFwig-M4PysVqxepNfWccxD5S88SGEMe5q-LLo7tmEfPS9MNO_UMB85ma9ydtzbU_t4-jZ8J2BgW3msYeY1I1yFg1-jke2RiSHhLeEn1iqfH3qnv8TuAdltcCg6sKhMxOXtW6qGUJ3WPKasrxw7BgQrv2NV-0LhT8hsluvuXp');">
+                        style="background-image: url('assets/images/home/project-viaduct.webp');">
                     </div>
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-navy/90 via-transparent to-transparent opacity-90 group-hover:opacity-100 transition-opacity">
                     </div>
                     <div class="absolute bottom-0 left-0 p-8">
-                        <p class="text-primary font-bold text-xs uppercase tracking-widest mb-2">Gobierno /
+                        <p class="text-primary font-bold text-xs uppercase tracking-widest mb-2"
+                            data-i18n="portfolio.p1.cat">Gobierno /
                             Infraestructura</p>
-                        <h4 class="text-white text-2xl font-bold mb-2">Sistema de Viaducto Metropolitano</h4>
-                        <p class="text-gray-300 text-sm font-medium">Proyecto de conexión urbana de 1.5km.</p>
+                        <h4 class="text-white text-2xl font-bold mb-2" data-i18n="portfolio.p1.title">Sistema de
+                            Viaducto Metropolitano</h4>
+                        <p class="text-gray-300 text-sm font-medium" data-i18n="portfolio.p1.desc">Proyecto de conexión
+                            urbana de 1.5km.</p>
                     </div>
                 </div>
                 <div class="group relative overflow-hidden rounded-xl h-96 shadow-lg">
                     <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
                         data-alt="Rascacielos de vidrio con fachada reflectante"
-                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCcDp_WIg4NkPDk-htLS9hWQBqYkFmPXiGCOmMUGyDg7h1D0WFvNipwiL_JO0fvjvefiAobw0Wu2kQMAKpaAbfN3YCTTFTtwR_UhIw-gmrOSrxISPTpGd0Go3PSOQO5HRxCVPZ9GzmWCpCxyKeL8IN2xkruUEpG71_wiV3_-DYcDeSZwBaDL4xt1ZwxceJyOfCVq1QeQRVCEsABhP4EHViLMwrijWttxCiDG9aQzVNb0MvPWykQPl0qWAxnojdijO5NiVbakzuhS7Nm');">
+                        style="background-image: url('assets/images/home/project-solaris.webp');">
                     </div>
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-navy/90 via-transparent to-transparent opacity-90 group-hover:opacity-100 transition-opacity">
                     </div>
                     <div class="absolute bottom-0 left-0 p-8">
-                        <p class="text-primary font-bold text-xs uppercase tracking-widest mb-2">Privado / Comercial</p>
-                        <h4 class="text-white text-2xl font-bold mb-2">Centro Empresarial Solaris</h4>
-                        <p class="text-gray-300 text-sm font-medium">Sede comercial con certificación ecológica.</p>
+                        <p class="text-primary font-bold text-xs uppercase tracking-widest mb-2"
+                            data-i18n="portfolio.p2.cat">Privado / Comercial</p>
+                        <h4 class="text-white text-2xl font-bold mb-2" data-i18n="portfolio.p2.title">Centro Empresarial
+                            Solaris</h4>
+                        <p class="text-gray-300 text-sm font-medium" data-i18n="portfolio.p2.desc">Sede comercial con
+                            certificación ecológica.</p>
                     </div>
                 </div>
             </div>
         </section>
         <!-- CTA / Contact Prompt -->
-        <section class="bg-navy py-20 px-4">
-            <div class="max-w-4xl mx-auto text-center">
-                <h2 class="text-white text-3xl md:text-5xl font-black tracking-tight mb-8">¿Listo para Construir tu
+        <section class="bg-primary-dark py-20 px-4">
+            <div class="max-w-[800px] mx-auto text-center">
+                <h2 class="text-white text-3xl font-bold mb-6" data-i18n="cta.title">¿Listo
+                    para Construir tu
                     Legado?</h2>
-                <p class="text-gray-400 text-lg mb-10 leading-relaxed">
+                <p class="text-gray-100 text-lg mb-10" data-i18n="cta.desc">
                     Contacta a nuestro equipo de ingeniería hoy para una consulta integral sobre tu próximo proyecto
                     privado o gubernamental.
                 </p>
-                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <div class="flex flex-wrap justify-center gap-4">
                     <button
-                        class="bg-primary hover:bg-primary/90 text-white px-10 py-4 rounded-lg font-bold transition-all shadow-lg focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-navy">Iniciar
+                        class="px-10 py-4 bg-white text-primary font-bold rounded-lg hover:bg-blue-50 transition-colors shadow-xl focus:ring-2 focus:ring-white"
+                        data-i18n="cta.start_btn">Iniciar
                         un Proyecto</button>
                     <button
-                        class="bg-white/5 hover:bg-white/10 text-white border border-white/20 px-10 py-4 rounded-lg font-bold transition-all focus:ring-2 focus:ring-white">Descargar
+                        class="px-10 py-4 border border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors focus:ring-2 focus:ring-white"
+                        data-i18n="cta.download_btn">Descargar
                         Portafolio</button>
                 </div>
             </div>
@@ -363,7 +415,7 @@
                         <span class="text-navy dark:text-white text-lg font-black uppercase tracking-tight">Legado
                             Ambiental</span>
                     </div>
-                    <p class="text-charcoal dark:text-gray-400 text-sm leading-relaxed mb-6">
+                    <p class="text-charcoal dark:text-gray-400 text-sm leading-relaxed mb-6" data-i18n="footer.desc">
                         Definiendo la excelencia en el entorno construido mientras preservamos el legado natural de
                         nuestro planeta.
                     </p>
@@ -379,25 +431,34 @@
                     </div>
                 </div>
                 <div>
-                    <h5 class="text-navy dark:text-white font-bold mb-6">Servicios</h5>
+                    <h5 class="text-navy dark:text-white font-bold mb-6" data-i18n="footer.services.title">Servicios
+                    </h5>
                     <ul class="space-y-4 text-sm text-charcoal dark:text-gray-400">
-                        <li><a class="hover:text-primary transition-colors" href="#">Ingeniería Civil</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="#">Impacto Ambiental</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="#">Diseño de Infraestructura</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="#">Desarrollo Urbano</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#"
+                                data-i18n="footer.services.1">Ingeniería Civil</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#"
+                                data-i18n="footer.services.2">Impacto Ambiental</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#"
+                                data-i18n="footer.services.3">Diseño de Infraestructura</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#"
+                                data-i18n="footer.services.4">Desarrollo Urbano</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h5 class="text-navy dark:text-white font-bold mb-6">Compañía</h5>
+                    <h5 class="text-navy dark:text-white font-bold mb-6" data-i18n="footer.company.title">Compañía</h5>
                     <ul class="space-y-4 text-sm text-charcoal dark:text-gray-400">
-                        <li><a class="hover:text-primary transition-colors" href="#">Sobre Nuestra Firma</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="#">Portafolio de Proyectos</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="#">Certificaciones</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="#">Oportunidades Laborales</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#" data-i18n="footer.company.1">Sobre
+                                Nuestra Firma</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#"
+                                data-i18n="footer.company.2">Portafolio de Proyectos</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#"
+                                data-i18n="footer.company.3">Certificaciones</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#"
+                                data-i18n="footer.company.4">Oportunidades Laborales</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h5 class="text-navy dark:text-white font-bold mb-6">Contacto</h5>
+                    <h5 class="text-navy dark:text-white font-bold mb-6" data-i18n="footer.contact.title">Contacto</h5>
                     <ul class="space-y-4 text-sm text-charcoal dark:text-gray-400">
                         <li class="flex items-start gap-2">
                             <span class="material-symbols-outlined text-sm text-primary">location_on</span>
@@ -416,11 +477,14 @@
             </div>
             <div
                 class="pt-8 border-t border-gray-100 dark:border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-charcoal dark:text-gray-500 font-medium">
-                <p>© 2024 Legado Ambiental. Todos los derechos reservados.</p>
+                <p data-i18n="footer.rights">© 2024 Legado Ambiental. Todos los derechos reservados.</p>
                 <div class="flex gap-8">
-                    <a class="hover:text-primary transition-colors" href="#">Política de Privacidad</a>
-                    <a class="hover:text-primary transition-colors" href="#">Términos de Servicio</a>
-                    <a class="hover:text-primary transition-colors" href="#">Mapa del Sitio</a>
+                    <a class="hover:text-primary transition-colors" href="#" data-i18n="footer.privacy">Política de
+                        Privacidad</a>
+                    <a class="hover:text-primary transition-colors" href="#" data-i18n="footer.terms">Términos de
+                        Servicio</a>
+                    <a class="hover:text-primary transition-colors" href="#" data-i18n="footer.sitemap">Mapa del
+                        Sitio</a>
                 </div>
             </div>
         </div>
@@ -457,6 +521,7 @@
             link.addEventListener('click', closeMenu);
         });
     </script>
+    <script src="assets/js/i18n.js"></script>
 </body>
 
 </html>
