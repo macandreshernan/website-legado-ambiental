@@ -264,6 +264,7 @@ const translations = {
                 "name": "Nombre",
                 "name_ph": "Tu Nombre Completo",
                 "email": "Correo Electrónico",
+                "email_ph": "nombre@ejemplo.com",
                 "subject": "Asunto",
                 "options": {
                     "general": "Consulta General",
@@ -549,6 +550,7 @@ const translations = {
                 "name": "Name",
                 "name_ph": "Your Full Name",
                 "email": "Email",
+                "email_ph": "name@example.com",
                 "subject": "Subject",
                 "options": {
                     "general": "General Inquiry",
