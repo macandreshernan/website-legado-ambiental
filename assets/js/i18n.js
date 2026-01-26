@@ -272,6 +272,13 @@ const translations = {
                     "proposal": "Propuesta de Proyecto",
                     "jobs": "Oportunidades de Empleo"
                 },
+                "lastname": "Apellidos",
+                "lastname_ph": "Tus Apellidos",
+                "phone": "Teléfono",
+                "phone_ph": "(55) 1234 5678",
+                "method_label": "Medio de Contacto Preferido",
+                "method_email": "Correo Electrónico",
+                "method_phone": "Llamada Telefónica",
                 "message": "Mensaje",
                 "message_ph": "¿Cómo podemos ayudarte?",
                 "btn": "Enviar Mensaje"
@@ -558,6 +565,13 @@ const translations = {
                     "proposal": "Project Proposal",
                     "jobs": "Job Opportunities"
                 },
+                "lastname": "Last Name",
+                "lastname_ph": "Your Last Name",
+                "phone": "Phone Number",
+                "phone_ph": "(555) 123-4567",
+                "method_label": "Preferred Contact Method",
+                "method_email": "Email",
+                "method_phone": "Phone Call",
                 "message": "Message",
                 "message_ph": "How can we help you?",
                 "btn": "Send Message"

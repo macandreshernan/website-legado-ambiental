@@ -120,21 +120,21 @@ Siguiendo las mejores prácticas modernas para velocidad y accesibilidad, se reo
 *   `WALKTHROUGH.md`
 *   `SEO_RECOMMENDATIONS.md`
 *   `SEO_WALKTHROUGH.md`
-*   `MEDIA_ANALYSIS.md` (Nuevo)
+*   `MEDIA_ANALYSIS.md`
 
 **Configuración SEO (Raíz)**
 *   `sitemap.xml`
 *   `robots.txt`
 
 **Activos Multimedia (Nuevos)**
-*   `assets/images/home/*` (Imágenes WebP localizadas)
+*   `assets/images/home/*`
 *   `assets/images/about/*`
 *   `assets/images/services/*`
 *   `assets/images/portfolio/*`
 *   `assets/images/experience/*`
 
 **Código Fuente (Lógica y Datos)**
-*   `assets/js/i18n.js` (Actualizado para params URL)
+*   `assets/js/i18n.js` (Actualizado con llaves para formulario extendido)
 *   `assets/i18n/es-MX.json`
 *   `assets/i18n/en-US.json`
 
@@ -145,4 +145,20 @@ Siguiendo las mejores prácticas modernas para velocidad y accesibilidad, se reo
 *   `services_overview/services.html` (Imágenes locales)
 *   `project_portfolio_gallery/portfolio.html` (Refactor a `<img>` tags)
 *   `experience_timeline/our_experience.html` (Imágenes locales)
-*   `faq/contact_faq.html`
+*   `faq/contact_faq.html` (Formulario extendido y optimizado)
+
+## Fase 6: Optimización del Formulario de Contacto
+
+Para mejorar la captación de información y la usabilidad, se rediseñó el formulario de contacto.
+
+### 1. Nuevos Campos de Datos
+Se agregaron campos adicionales para obtener información más precisa del cliente potencial:
+- **Apellidos (Last Name)**: Separado del nombre para mejor gestión de datos CRM.
+- **Teléfono (Phone)**: Campo dedicado para contacto directo.
+- **Preferencia de Contacto**: Selector (Radio Button) para elegir entre Email o Llamada.
+
+### 2. Redistribución de Diseño (UX)
+Se optimizó el layout para priorizar el espacio de escritura ("Capture Space"):
+- **Grid de Nombres**: Nombre y Apellidos comparten fila (50%/50%) para mantener lógica visual.
+- **Campos Full-Width**: El **Correo Electrónico** y **Teléfono** ahora ocupan el 100% del ancho del contenedor en filas separadas. Esto facilita la escritura de correos largos y números sin sentirse apretados, mejorando la experiencia tanto en escritorio como en móvil.
+- **Internacionalización Total**: Todos los nuevos campos y placeholders fueron integrados al sistema `i18n.js`.

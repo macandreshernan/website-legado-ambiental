@@ -155,23 +155,63 @@
                     <h2 class="text-2xl font-bold text-[#111418] dark:text-white mb-6"
                         data-i18n="contact_page.form.title">Envíanos un Mensaje</h2>
                     <form class="space-y-6">
+                        <!-- Name and Lastname Grid -->
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div class="space-y-2">
                                 <label class="text-sm font-medium text-[#111418] dark:text-gray-300" for="name"
                                     data-i18n="contact_page.form.name">Nombre</label>
                                 <input
-                                    class="w-full rounded-lg border-gray-300 dark:border-gray-700 dark:bg-gray-900 px-4 py-2 text-sm focus:border-primary focus:ring-primary"
+                                    class="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
                                     id="name" placeholder="Tu Nombre Completo" type="text"
                                     data-i18n-placeholder="contact_page.form.name_ph" />
                             </div>
                             <div class="space-y-2">
-                                <label class="text-sm font-medium text-[#111418] dark:text-gray-300" for="email"
-                                    data-i18n="contact_page.form.email">Correo
-                                    Electrónico</label>
+                                <label class="text-sm font-medium text-[#111418] dark:text-gray-300" for="lastname"
+                                    data-i18n="contact_page.form.lastname">Apellidos</label>
                                 <input
                                     class="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
-                                    id="email" placeholder="nombre@ejemplo.com" type="email"
-                                    data-i18n-placeholder="contact_page.form.email_ph" />
+                                    id="lastname" placeholder="Tus Apellidos" type="text"
+                                    data-i18n-placeholder="contact_page.form.lastname_ph" />
+                            </div>
+                        </div>
+
+                        <!-- Email Field (Full Width) -->
+                        <div class="space-y-2">
+                            <label class="text-sm font-medium text-[#111418] dark:text-gray-300" for="email"
+                                data-i18n="contact_page.form.email">Correo Electrónico</label>
+                            <input
+                                class="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
+                                id="email" placeholder="nombre@ejemplo.com" type="email"
+                                data-i18n-placeholder="contact_page.form.email_ph" />
+                        </div>
+
+                        <!-- Phone Field (Full Width) -->
+                        <div class="space-y-2">
+                            <label class="text-sm font-medium text-[#111418] dark:text-gray-300" for="phone"
+                                data-i18n="contact_page.form.phone">Teléfono</label>
+                            <input
+                                class="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
+                                id="phone" placeholder="(55) 1234 5678" type="tel"
+                                data-i18n-placeholder="contact_page.form.phone_ph" />
+                        </div>
+
+                        <!-- Preferred Contact Method -->
+                        <div class="space-y-3">
+                            <label class="text-sm font-medium text-[#111418] dark:text-gray-300"
+                                data-i18n="contact_page.form.method_label">Medio de Contacto Preferido</label>
+                            <div class="flex gap-6">
+                                <label class="inline-flex items-center">
+                                    <input type="radio" class="form-radio text-primary focus:ring-primary"
+                                        name="contact_method" value="email" checked>
+                                    <span class="ml-2 text-sm text-[#617589] dark:text-gray-400"
+                                        data-i18n="contact_page.form.method_email">Correo Electrónico</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="radio" class="form-radio text-primary focus:ring-primary"
+                                        name="contact_method" value="phone">
+                                    <span class="ml-2 text-sm text-[#617589] dark:text-gray-400"
+                                        data-i18n="contact_page.form.method_phone">Llamada Telefónica</span>
+                                </label>
                             </div>
                         </div>
                         <div class="space-y-2">
