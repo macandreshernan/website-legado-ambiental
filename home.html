@@ -55,31 +55,13 @@
     </script>
 
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;900&amp;display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Merriweather:wght@300;400;700;900&display=swap"
         rel="stylesheet" />
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
-    <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#137fec",
-                        "navy": "#101922",
-                        "charcoal": "#333333",
-                        "background-light": "#f6f7f8",
-                        "background-dark": "#101922",
-                    },
-                    fontFamily: {
-                        "display": ["Public Sans", "sans-serif"]
-                    },
-                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
-                },
-            },
-        }
-    </script>
+    <script src="assets/js/theme-config.js"></script>
     <style>
         body {
             font-family: "Public Sans", sans-serif;
@@ -243,7 +225,7 @@
             </div>
         </section>
         <!-- Value Proposition Section -->
-        <section class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <section class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div class="max-w-3xl mx-auto">
                 <h2 class="text-navy dark:text-white text-3xl md:text-5xl font-black tracking-tight mb-8"
                     data-i18n="value.title">
@@ -352,7 +334,7 @@
             </div>
         </section>
         <!-- Portfolio Preview Section -->
-        <section class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-navy dark:text-white text-4xl font-black tracking-tight mb-4"
                     data-i18n="portfolio.title">Proyectos Recientes</h2>
@@ -397,22 +379,22 @@
             </div>
         </section>
         <!-- CTA / Contact Prompt -->
-        <section class="bg-navy py-20 px-4">
-            <div class="max-w-4xl mx-auto text-center">
-                <h2 class="text-white text-3xl md:text-5xl font-black tracking-tight mb-8" data-i18n="cta.title">¿Listo
+        <section class="bg-primary-dark py-20 px-4">
+            <div class="max-w-[800px] mx-auto text-center">
+                <h2 class="text-white text-3xl font-bold mb-6" data-i18n="cta.title">¿Listo
                     para Construir tu
                     Legado?</h2>
-                <p class="text-gray-400 text-lg mb-10 leading-relaxed" data-i18n="cta.desc">
+                <p class="text-gray-100 text-lg mb-10" data-i18n="cta.desc">
                     Contacta a nuestro equipo de ingeniería hoy para una consulta integral sobre tu próximo proyecto
                     privado o gubernamental.
                 </p>
-                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <div class="flex flex-wrap justify-center gap-4">
                     <button
-                        class="bg-primary hover:bg-primary/90 text-white px-10 py-4 rounded-lg font-bold transition-all shadow-lg focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-navy"
+                        class="px-10 py-4 bg-white text-primary font-bold rounded-lg hover:bg-blue-50 transition-colors shadow-xl focus:ring-2 focus:ring-white"
                         data-i18n="cta.start_btn">Iniciar
                         un Proyecto</button>
                     <button
-                        class="bg-white/5 hover:bg-white/10 text-white border border-white/20 px-10 py-4 rounded-lg font-bold transition-all focus:ring-2 focus:ring-white"
+                        class="px-10 py-4 border border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors focus:ring-2 focus:ring-white"
                         data-i18n="cta.download_btn">Descargar
                         Portafolio</button>
                 </div>

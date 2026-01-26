@@ -181,3 +181,36 @@ Se creó el archivo `assets/js/contact_form.js` para manejar la lógica de negoc
 - `assets/js/contact_form.js` - Lógica de validación y Captcha.
 - `assets/js/i18n.js` - Nuevas claves de traducción para errores y etiquetas de Captcha.
 - `faq/contact_faq.html` - Implementación de UI de Captcha y atributos de seguridad.
+
+## Fase 8: Refinamiento UI/UX y Estandarización Visual
+
+Se realizó una revisión integral de la interfaz de usuario bajo la identidad de marca "Eco-Ingeniería", enfocada en la consistencia visual y la legibilidad.
+
+### 1. Sistema de Diseño Global
+- **Centralización (Config)**: Se creó `assets/js/theme-config.js` para estandarizar los valores de Tailwind globalmente, facilitando el mantenimiento.
+- **Identidad Cromática**: Se reemplazó el color azul eléctrico por **Verde Bosque (`#2E7D32`)** como primario y **Verde Profundo (`#1B5E20`)** para secciones de énfasis (CTAs), alineándose con el logo y la temática sostenible.
+- **Tipografía**: Migración completa a **Manrope** (cuerpo técnico) y **Merriweather** (títulos elegantes/serif) a través de Google Fonts.
+
+### 2. Mejoras de Navegación e Iconografía
+- **breadcrumbs (Migas de Pan)**: Implementación de navegación semántica (`Inicio > Sección`) en todas las páginas internas para mejorar la orientación del usuario.
+- **Corrección de Iconos**: Se reparó la carga de fuentes "Material Symbols" (eje `FILL` faltante), restaurando la visibilidad de iconos críticos como flechas y checks.
+
+### 3. Rediseño de Secciones CTA (Llamada a la Acción)
+- **Estandarización**: Se replicó el diseño de "Alto Impacto" de la página `Nosotros` en `Inicio`, `Servicios` y `Experiencia`.
+  - **Fondo**: `bg-primary-dark` (Verde Profundo).
+  - **Botones**: Sistema de jerarquía claro: Botón Principal (Blanco/Texto Verde) y Secundario (Outline Blanco).
+  - **Legibilidad**: Mejora de contraste en textos descriptivos (`text-gray-100` y peso normal), eliminando problemas de lectura del diseño anterior (azul pálido fino).
+
+### 4. Correcciones de Layout (Línea de Tiempo)
+- **Refactorización de Timeline**: En `our_experience.html`, se solucionó un error de superposición (encimado) entre los años y los gráficos en versión escritorio.
+  - Se migró de un posicionamiento absoluto conflictivo a un layout **Flex/Columnar** robusto.
+  - Ahora las fechas se alinean limpiamente a la izquierda y el contenido a la derecha del eje central.
+
+### Archivos Afectados
+- `assets/js/theme-config.js` (Nuevo)
+- `home.html`
+- `about_us/about_us.html`
+- `services_overview/services.html`
+- `experience_timeline/our_experience.html`
+- `project_portfolio_gallery/portfolio.html`
+- `faq/contact_faq.html`

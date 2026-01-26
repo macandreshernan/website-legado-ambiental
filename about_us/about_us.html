@@ -55,35 +55,13 @@
   </script>
 
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800&amp;display=swap"
-    rel="stylesheet" />
   <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap"
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Merriweather:wght@300;400;700;900&display=swap"
     rel="stylesheet" />
   <link
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
     rel="stylesheet" />
-  <script id="tailwind-config">
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          colors: {
-            "primary": "#0f49bd",
-            "navy-dark": "#0a2e7a",
-            "slate-gray": "#475569",
-            "background-light": "#f6f6f8",
-            "background-dark": "#101622",
-          },
-          fontFamily: {
-            "display": ["Public Sans", "sans-serif"],
-            "serif-quote": ["Playfair Display", "serif"]
-          },
-          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
-        },
-      },
-    }
-  </script>
+  <script src="../assets/js/theme-config.js"></script>
   <style type="text/tailwindcss">
     @layer base {
             body { font-family: "Public Sans", sans-serif; }
@@ -140,7 +118,26 @@
       </div>
     </header>
     <main class="flex-1">
-      <section class="max-w-[1200px] mx-auto pt-12 pb-6 px-4">
+      <div class="max-w-[1200px] mx-auto pt-6 px-4">
+        <nav class="flex" aria-label="Breadcrumb">
+          <ol class="inline-flex items-center space-x-1 md:space-x-3">
+            <li class="inline-flex items-center">
+              <a href="../home.html"
+                class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-primary dark:text-gray-400 dark:hover:text-white">
+                <span class="material-symbols-outlined text-lg mr-2">home</span>
+                Inicio
+              </a>
+            </li>
+            <li aria-current="page">
+              <div class="flex items-center">
+                <span class="material-symbols-outlined text-gray-400 mx-1">chevron_right</span>
+                <span class="ml-1 text-sm font-medium text-gray-500 md:ml-2 dark:text-gray-400">Quiénes Somos</span>
+              </div>
+            </li>
+          </ol>
+        </nav>
+      </div>
+      <section class="max-w-[1200px] mx-auto pt-6 pb-6 px-4">
         <div class="@container">
           <div
             class="bg-cover bg-center flex flex-col justify-end overflow-hidden rounded-xl min-h-[400px] shadow-lg relative"
@@ -266,10 +263,10 @@
           </div>
         </div>
       </section>
-      <section class="bg-primary py-20 px-4">
+      <section class="bg-primary-dark py-20 px-4">
         <div class="max-w-[800px] mx-auto text-center">
           <h2 class="text-white text-3xl font-bold mb-6" data-i18n="about.cta.title">Construyamos el futuro juntos</h2>
-          <p class="text-blue-100 text-lg mb-10 font-light" data-i18n="about.cta.desc">Contacte a nuestro equipo de
+          <p class="text-gray-100 text-lg mb-10" data-i18n="about.cta.desc">Contacte a nuestro equipo de
             expertos para discutir cómo
             Legado Ambiental puede hacer realidad su próxima visión con precisión y cuidado.</p>
           <div class="flex flex-wrap justify-center gap-4">
