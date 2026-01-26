@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>Nuestra Experiencia | Legado Ambiental</title>
+  <title data-i18n="experience_page.title">Nuestra Experiencia | Legado Ambiental</title>
 
   <!-- SEO & Social Media Meta Tags -->
   <meta name="description"
@@ -22,6 +22,40 @@
 
   <!-- Browser Cache Hint -->
   <meta http-equiv="Cache-Control" content="max-age=31536000">
+
+  <!-- SEO Canonical & Hreflang -->
+  <link rel="canonical" href="https://www.legadoambiental.com/experience_timeline/our_experience.html" />
+  <link rel="alternate" hreflang="es-MX"
+    href="https://www.legadoambiental.com/experience_timeline/our_experience.html?lang=es-MX" />
+  <link rel="alternate" hreflang="en-US"
+    href="https://www.legadoambiental.com/experience_timeline/our_experience.html?lang=en-US" />
+  <link rel="alternate" hreflang="x-default"
+    href="https://www.legadoambiental.com/experience_timeline/our_experience.html" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ConstructionBusiness",
+    "name": "Legado Ambiental",
+    "url": "https://www.legadoambiental.com",
+    "image": "https://www.legadoambiental.com/assets/logo.png",
+    "description": "Excelencia en construcción civil y desarrollo sostenible.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Plaza de Ingeniería, Suite 400",
+      "addressLocality": "Ciudad de México",
+      "addressRegion": "CDMX",
+      "postalCode": "12345",
+      "addressCountry": "MX"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-555-123-4567",
+      "contactType": "customer service"
+    }
+  }
+  </script>
 
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;900&amp;display=swap"
@@ -80,19 +114,30 @@
         <div class="hidden md:flex flex-1 justify-end gap-8 items-center">
           <nav class="flex items-center gap-8">
             <a class="text-[#111418] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
-              href="../home.html">Inicio</a>
+              href="../home.html" data-i18n="nav.home">Inicio</a>
             <a class="text-[#111418] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
-              href="../about_us/about_us.html">Nosotros</a>
+              href="../about_us/about_us.html" data-i18n="nav.about">Nosotros</a>
             <a class="text-[#111418] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
-              href="../services_overview/services.html">Servicios</a>
-            <a class="text-primary text-sm font-bold border-b-2 border-primary pb-1" href="#">Experiencia</a>
+              href="../services_overview/services.html" data-i18n="nav.services">Servicios</a>
+            <a class="text-primary text-sm font-bold border-b-2 border-primary pb-1" href="#"
+              data-i18n="nav.experience">Experiencia</a>
             <a class="text-[#111418] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
-              href="../faq/contact_faq.html">Contacto</a>
+              href="../faq/contact_faq.html" data-i18n="nav.contact">Contacto</a>
           </nav>
-          <button
-            class="flex min-w-[120px] cursor-pointer items-center justify-center rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold shadow-sm hover:bg-primary/90 transition-all focus:ring-2 focus:ring-primary focus:ring-offset-2">
-            Iniciar Proyecto
-          </button>
+          <div class="hidden md:flex items-center gap-4">
+            <div class="flex items-center gap-2 mr-4">
+              <button class="text-sm font-semibold hover:text-primary transition-colors text-primary"
+                data-switch-lang="es-MX">ES</button>
+              <span class="text-gray-300">|</span>
+              <button class="text-sm font-semibold hover:text-primary transition-colors"
+                data-switch-lang="en-US">EN</button>
+            </div>
+            <button
+              class="flex min-w-[120px] cursor-pointer items-center justify-center rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold shadow-sm hover:bg-primary/90 transition-all focus:ring-2 focus:ring-primary focus:ring-offset-2"
+              data-i18n="cta.start_btn">
+              Iniciar Proyecto
+            </button>
+          </div>
         </div>
       </div>
     </header>
@@ -104,9 +149,10 @@
           <span class="material-symbols-outlined text-[16px]">chevron_right</span>
           <span class="text-[#111418] dark:text-white font-medium">Experiencia</span>
         </div>
-        <h1 class="text-[#111418] dark:text-white text-4xl font-black leading-tight tracking-tight mb-4">Un Legado de
+        <h1 class="text-[#111418] dark:text-white text-4xl font-black leading-tight tracking-tight mb-4"
+          data-i18n="experience_page.hero.title">Un Legado de
           Excelencia en Ingeniería</h1>
-        <p class="text-[#617589] dark:text-gray-400 text-lg max-w-2xl">
+        <p class="text-[#617589] dark:text-gray-400 text-lg max-w-2xl" data-i18n="experience_page.hero.desc">
           Explora los hitos que han definido nuestro crecimiento e impacto en la industria de la construcción durante la
           última década.
         </p>
@@ -127,8 +173,10 @@
             </div>
             <div
               class="flex-1 ml-6 md:ml-12 bg-white dark:bg-[#1a2530] p-6 rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm transition-all hover:shadow-md">
-              <h3 class="text-xl font-bold text-[#111418] dark:text-white mb-2">Expansión Global</h3>
-              <p class="text-[#617589] dark:text-gray-400 text-sm leading-relaxed mb-4">
+              <h3 class="text-xl font-bold text-[#111418] dark:text-white mb-2"
+                data-i18n="experience_page.timeline.2024.title">Expansión Global</h3>
+              <p class="text-[#617589] dark:text-gray-400 text-sm leading-relaxed mb-4"
+                data-i18n="experience_page.timeline.2024.desc">
                 Legado Ambiental abrió su primera sede internacional, marcando un nuevo capítulo en nuestra misión de
                 brindar soluciones sostenibles a escala global.
               </p>
@@ -150,8 +198,10 @@
             </div>
             <div
               class="flex-1 ml-6 md:ml-12 bg-white dark:bg-[#1a2530] p-6 rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm transition-all hover:shadow-md">
-              <h3 class="text-xl font-bold text-[#111418] dark:text-white mb-2">La Iniciativa Sostenible</h3>
-              <p class="text-[#617589] dark:text-gray-400 text-sm leading-relaxed mb-4">
+              <h3 class="text-xl font-bold text-[#111418] dark:text-white mb-2"
+                data-i18n="experience_page.timeline.2020.title">La Iniciativa Sostenible</h3>
+              <p class="text-[#617589] dark:text-gray-400 text-sm leading-relaxed mb-4"
+                data-i18n="experience_page.timeline.2020.desc">
                 Lanzamos nuestro departamento de Consultoría Ecológica, integrando materiales verdes y prácticas de
                 eficiencia energética en todos nuestros proyectos de construcción.
               </p>
@@ -173,8 +223,10 @@
             </div>
             <div
               class="flex-1 ml-6 md:ml-12 bg-white dark:bg-[#1a2530] p-6 rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm transition-all hover:shadow-md">
-              <h3 class="text-xl font-bold text-[#111418] dark:text-white mb-2">Primer Contrato Gubernamental</h3>
-              <p class="text-[#617589] dark:text-gray-400 text-sm leading-relaxed mb-4">
+              <h3 class="text-xl font-bold text-[#111418] dark:text-white mb-2"
+                data-i18n="experience_page.timeline.2015.title">Primer Contrato Gubernamental</h3>
+              <p class="text-[#617589] dark:text-gray-400 text-sm leading-relaxed mb-4"
+                data-i18n="experience_page.timeline.2015.desc">
                 Adjudicación de nuestro primer gran proyecto de infraestructura pública: la revitalización del sistema
                 de carreteras del centro de la ciudad.
               </p>
@@ -196,8 +248,10 @@
             </div>
             <div
               class="flex-1 ml-6 md:ml-12 bg-white dark:bg-[#1a2530] p-6 rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm transition-all hover:shadow-md">
-              <h3 class="text-xl font-bold text-[#111418] dark:text-white mb-2">Fundación</h3>
-              <p class="text-[#617589] dark:text-gray-400 text-sm leading-relaxed mb-4">
+              <h3 class="text-xl font-bold text-[#111418] dark:text-white mb-2"
+                data-i18n="experience_page.timeline.2010.title">Fundación</h3>
+              <p class="text-[#617589] dark:text-gray-400 text-sm leading-relaxed mb-4"
+                data-i18n="experience_page.timeline.2010.desc">
                 Legado Ambiental fue fundada por un equipo de cuatro ingenieros civiles apasionados por combinar la
                 integridad estructural con la administración ambiental.
               </p>
@@ -211,11 +265,14 @@
       <!-- Detailed CTA -->
       <div class="w-full bg-[#111418] py-20 px-4 mt-12">
         <div class="max-w-[800px] mx-auto text-center flex flex-col items-center gap-6">
-          <h2 class="text-white text-3xl font-bold">¿Listo para ser parte de nuestro próximo capítulo?</h2>
-          <p class="text-gray-400 text-lg">Nos asociamos con visionarios que buscan construir algo duradero. Comencemos
+          <h2 class="text-white text-3xl font-bold" data-i18n="portfolio_page.cta.title">¿Listo para ser parte de
+            nuestro próximo capítulo?</h2>
+          <p class="text-gray-400 text-lg" data-i18n="portfolio_page.cta.desc">Nos asociamos con visionarios que buscan
+            construir algo duradero. Comencemos
             a planificar tu proyecto.</p>
           <button
-            class="bg-primary text-white font-bold px-10 py-4 rounded-lg hover:bg-primary/90 transition-all text-lg shadow-lg shadow-primary/20 focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-gray-900">
+            class="bg-primary text-white font-bold px-10 py-4 rounded-lg hover:bg-primary/90 transition-all text-lg shadow-lg shadow-primary/20 focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-gray-900"
+            data-i18n="portfolio_page.cta.btn">
             Contactar Ahora
           </button>
         </div>
@@ -232,7 +289,7 @@
           </div>
           <span class="font-bold dark:text-white">Legado Ambiental</span>
         </div>
-        <div class="text-sm text-[#617589] dark:text-gray-400">
+        <div class="text-sm text-[#617589] dark:text-gray-400" data-i18n="footer.rights">
           © 2024 Legado Ambiental. Todos los derechos reservados.
         </div>
         <div class="flex gap-6">
@@ -246,6 +303,8 @@
       </div>
     </footer>
   </div>
+  </div>
+  <script src="../assets/js/i18n.js" data-base-path="../"></script>
 </body>
 
 </html>

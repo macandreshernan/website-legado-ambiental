@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Contacto y FAQ | Legado Ambiental</title>
+    <title data-i18n="contact_page.title">Contacto y FAQ | Legado Ambiental</title>
 
     <!-- SEO & Social Media Meta Tags -->
     <meta name="description"
@@ -24,6 +24,37 @@
 
     <!-- Browser Cache Hint -->
     <meta http-equiv="Cache-Control" content="max-age=31536000">
+
+    <!-- SEO Canonical & Hreflang -->
+    <link rel="canonical" href="https://www.legadoambiental.com/faq/contact_faq.html" />
+    <link rel="alternate" hreflang="es-MX" href="https://www.legadoambiental.com/faq/contact_faq.html?lang=es-MX" />
+    <link rel="alternate" hreflang="en-US" href="https://www.legadoambiental.com/faq/contact_faq.html?lang=en-US" />
+    <link rel="alternate" hreflang="x-default" href="https://www.legadoambiental.com/faq/contact_faq.html" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ConstructionBusiness",
+    "name": "Legado Ambiental",
+    "url": "https://www.legadoambiental.com",
+    "image": "https://www.legadoambiental.com/assets/logo.png",
+    "description": "Excelencia en construcción civil y desarrollo sostenible.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Plaza de Ingeniería, Suite 400",
+      "addressLocality": "Ciudad de México",
+      "addressRegion": "CDMX",
+      "postalCode": "12345",
+      "addressCountry": "MX"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-555-123-4567",
+      "contactType": "customer service"
+    }
+  }
+  </script>
 
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;900&amp;display=swap"
@@ -77,30 +108,42 @@
                 <div class="hidden md:flex flex-1 justify-end gap-8 items-center">
                     <nav class="flex items-center gap-8">
                         <a class="text-[#111418] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
-                            href="../home.html">Inicio</a>
+                            href="../home.html" data-i18n="nav.home">Inicio</a>
                         <a class="text-[#111418] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
-                            href="../about_us/about_us.html">Nosotros</a>
+                            href="../about_us/about_us.html" data-i18n="nav.about">Nosotros</a>
                         <a class="text-[#111418] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
-                            href="../services_overview/services.html">Servicios</a>
+                            href="../services_overview/services.html" data-i18n="nav.services">Servicios</a>
                         <a class="text-[#111418] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
-                            href="../project_portfolio_gallery/portfolio.html">Portafolio</a>
-                        <a class="text-primary text-sm font-bold border-b-2 border-primary pb-1" href="#">Contacto</a>
+                            href="../project_portfolio_gallery/portfolio.html" data-i18n="nav.portfolio">Portafolio</a>
+                        <a class="text-primary text-sm font-bold border-b-2 border-primary pb-1" href="#"
+                            data-i18n="nav.contact">Contacto</a>
                     </nav>
-                    <button
-                        class="flex min-w-[120px] cursor-pointer items-center justify-center rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold shadow-sm hover:bg-primary/90 transition-all focus:ring-2 focus:ring-primary focus:ring-offset-2">
-                        Cotizar
-                    </button>
+                    <div class="hidden md:flex items-center gap-4">
+                        <div class="flex items-center gap-2 mr-4">
+                            <button class="text-sm font-semibold hover:text-primary transition-colors text-primary"
+                                data-switch-lang="es-MX">ES</button>
+                            <span class="text-gray-300">|</span>
+                            <button class="text-sm font-semibold hover:text-primary transition-colors"
+                                data-switch-lang="en-US">EN</button>
+                        </div>
+                        <button
+                            class="flex min-w-[120px] cursor-pointer items-center justify-center rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold shadow-sm hover:bg-primary/90 transition-all focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                            data-i18n="nav.quote">
+                            Cotizar
+                        </button>
+                    </div>
                 </div>
             </div>
         </header>
         <main class="flex-1 flex flex-col items-center">
             <!-- Hero / Contact Intro -->
             <div class="w-full max-w-[1200px] px-4 md:px-10 py-12 md:py-20 text-center">
-                <h1
-                    class="text-[#111418] dark:text-white text-4xl font-black leading-tight tracking-tight md:text-5xl mb-6">
+                <h1 class="text-[#111418] dark:text-white text-4xl font-black leading-tight tracking-tight md:text-5xl mb-6"
+                    data-i18n="contact_page.hero.title">
                     Ponte en Contacto
                 </h1>
-                <p class="text-[#617589] dark:text-gray-400 text-base md:text-lg max-w-2xl mx-auto">
+                <p class="text-[#617589] dark:text-gray-400 text-base md:text-lg max-w-2xl mx-auto"
+                    data-i18n="contact_page.hero.desc">
                     Estamos aquí para ayudar con cualquier pregunta sobre nuestros servicios o proyectos. Completa el
                     formulario a continuación o explora nuestras preguntas frecuentes.
                 </p>
@@ -109,18 +152,21 @@
                 <!-- Contact Form Section -->
                 <div
                     class="bg-white dark:bg-[#1a2530] p-8 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800">
-                    <h2 class="text-2xl font-bold text-[#111418] dark:text-white mb-6">Envíanos un Mensaje</h2>
+                    <h2 class="text-2xl font-bold text-[#111418] dark:text-white mb-6"
+                        data-i18n="contact_page.form.title">Envíanos un Mensaje</h2>
                     <form class="space-y-6">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div class="space-y-2">
-                                <label class="text-sm font-medium text-[#111418] dark:text-gray-300"
-                                    for="name">Nombre</label>
+                                <label class="text-sm font-medium text-[#111418] dark:text-gray-300" for="name"
+                                    data-i18n="contact_page.form.name">Nombre</label>
                                 <input
                                     class="w-full rounded-lg border-gray-300 dark:border-gray-700 dark:bg-gray-900 px-4 py-2 text-sm focus:border-primary focus:ring-primary"
-                                    id="name" placeholder="Tu Nombre Completo" type="text" />
+                                    id="name" placeholder="Tu Nombre Completo" type="text"
+                                    data-i18n-placeholder="contact_page.form.name_ph" />
                             </div>
                             <div class="space-y-2">
-                                <label class="text-sm font-medium text-[#111418] dark:text-gray-300" for="email">Correo
+                                <label class="text-sm font-medium text-[#111418] dark:text-gray-300" for="email"
+                                    data-i18n="contact_page.form.email">Correo
                                     Electrónico</label>
                                 <input
                                     class="w-full rounded-lg border-gray-300 dark:border-gray-700 dark:bg-gray-900 px-4 py-2 text-sm focus:border-primary focus:ring-primary"
@@ -128,26 +174,28 @@
                             </div>
                         </div>
                         <div class="space-y-2">
-                            <label class="text-sm font-medium text-[#111418] dark:text-gray-300"
-                                for="subject">Asunto</label>
+                            <label class="text-sm font-medium text-[#111418] dark:text-gray-300" for="subject"
+                                data-i18n="contact_page.form.subject">Asunto</label>
                             <select
                                 class="w-full rounded-lg border-gray-300 dark:border-gray-700 dark:bg-gray-900 px-4 py-2 text-sm focus:border-primary focus:ring-primary"
                                 id="subject">
-                                <option>Consulta General</option>
-                                <option>Solicitud de Presupuesto</option>
-                                <option>Propuesta de Proyecto</option>
-                                <option>Oportunidades de Empleo</option>
+                                <option data-i18n="contact_page.form.options.general">Consulta General</option>
+                                <option data-i18n="contact_page.form.options.quote">Solicitud de Presupuesto</option>
+                                <option data-i18n="contact_page.form.options.proposal">Propuesta de Proyecto</option>
+                                <option data-i18n="contact_page.form.options.jobs">Oportunidades de Empleo</option>
                             </select>
                         </div>
                         <div class="space-y-2">
-                            <label class="text-sm font-medium text-[#111418] dark:text-gray-300"
-                                for="message">Mensaje</label>
+                            <label class="text-sm font-medium text-[#111418] dark:text-gray-300" for="message"
+                                data-i18n="contact_page.form.message">Mensaje</label>
                             <textarea
                                 class="w-full rounded-lg border-gray-300 dark:border-gray-700 dark:bg-gray-900 px-4 py-2 text-sm focus:border-primary focus:ring-primary h-32 resize-none"
-                                id="message" placeholder="¿Cómo podemos ayudarte?"></textarea>
+                                id="message" placeholder="¿Cómo podemos ayudarte?"
+                                data-i18n-placeholder="contact_page.form.message_ph"></textarea>
                         </div>
                         <button
-                            class="w-full bg-primary text-white font-bold py-3 rounded-lg hover:bg-primary/90 transition-all shadow-md focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                            class="w-full bg-primary text-white font-bold py-3 rounded-lg hover:bg-primary/90 transition-all shadow-md focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                            data-i18n="contact_page.form.btn">
                             Enviar Mensaje
                         </button>
                     </form>
@@ -155,16 +203,19 @@
                 <!-- FAQ Section -->
                 <div class="space-y-8">
                     <div>
-                        <h2 class="text-2xl font-bold text-[#111418] dark:text-white mb-6">Preguntas Frecuentes</h2>
+                        <h2 class="text-2xl font-bold text-[#111418] dark:text-white mb-6"
+                            data-i18n="contact_page.faq.title">Preguntas Frecuentes</h2>
                         <div class="space-y-4">
                             <!-- Question 1 -->
                             <div
                                 class="border border-gray-200 dark:border-gray-800 rounded-lg p-5 bg-white dark:bg-[#1a2530]">
                                 <h3 class="font-bold text-[#111418] dark:text-white mb-2 flex items-center gap-2">
                                     <span class="material-symbols-outlined text-primary">help</span>
-                                    ¿Qué tipos de certificación ambiental manejan?
+                                    <span data-i18n="contact_page.faq.q1">¿Qué tipos de certificación ambiental
+                                        manejan?</span>
                                 </h3>
-                                <p class="text-sm text-[#617589] dark:text-gray-400 leading-relaxed">
+                                <p class="text-sm text-[#617589] dark:text-gray-400 leading-relaxed"
+                                    data-i18n="contact_page.faq.a1">
                                     Trabajamos con estándares LEED, BREEAM y normativas locales de impacto ambiental.
                                     Nuestro equipo puede guiar todo el proceso de certificación para su proyecto.
                                 </p>
@@ -174,9 +225,10 @@
                                 class="border border-gray-200 dark:border-gray-800 rounded-lg p-5 bg-white dark:bg-[#1a2530]">
                                 <h3 class="font-bold text-[#111418] dark:text-white mb-2 flex items-center gap-2">
                                     <span class="material-symbols-outlined text-primary">public</span>
-                                    ¿Realizan proyectos fuera de la región?
+                                    <span data-i18n="contact_page.faq.q2">¿Realizan proyectos fuera de la región?</span>
                                 </h3>
-                                <p class="text-sm text-[#617589] dark:text-gray-400 leading-relaxed">
+                                <p class="text-sm text-[#617589] dark:text-gray-400 leading-relaxed"
+                                    data-i18n="contact_page.faq.a2">
                                     Sí, nuestra división de Expansión Global gestiona proyectos internacionales.
                                     Contáctenos para discutir la logística y viabilidad de su ubicación.
                                 </p>
@@ -186,9 +238,10 @@
                                 class="border border-gray-200 dark:border-gray-800 rounded-lg p-5 bg-white dark:bg-[#1a2530]">
                                 <h3 class="font-bold text-[#111418] dark:text-white mb-2 flex items-center gap-2">
                                     <span class="material-symbols-outlined text-primary">engineering</span>
-                                    ¿Ofrecen servicios de solo diseño?
+                                    <span data-i18n="contact_page.faq.q3">¿Ofrecen servicios de solo diseño?</span>
                                 </h3>
-                                <p class="text-sm text-[#617589] dark:text-gray-400 leading-relaxed">
+                                <p class="text-sm text-[#617589] dark:text-gray-400 leading-relaxed"
+                                    data-i18n="contact_page.faq.a3">
                                     Absolutamente. Ofrecemos servicios modulares que van desde el diseño conceptual y
                                     planos estructurales hasta la gestión completa de la construcción llave en mano.
                                 </p>
@@ -197,7 +250,8 @@
                     </div>
                     <!-- Quick Contact Info -->
                     <div class="bg-gray-50 dark:bg-gray-900 rounded-xl p-6 border border-gray-100 dark:border-gray-800">
-                        <h3 class="font-bold text-[#111418] dark:text-white mb-4">Información Directa</h3>
+                        <h3 class="font-bold text-[#111418] dark:text-white mb-4" data-i18n="contact_page.info.title">
+                            Información Directa</h3>
                         <ul class="space-y-4">
                             <li class="flex items-center gap-3 text-sm text-[#617589] dark:text-gray-400">
                                 <span class="material-symbols-outlined text-primary">call</span>
@@ -209,7 +263,8 @@
                             </li>
                             <li class="flex items-center gap-3 text-sm text-[#617589] dark:text-gray-400">
                                 <span class="material-symbols-outlined text-primary">location_on</span>
-                                <span>Plaza de Ingeniería, Suite 400<br />Distrito de Negocios Internacional</span>
+                                <span data-i18n="contact_page.info.addr">Plaza de Ingeniería, Suite 400<br />Distrito de
+                                    Negocios Internacional</span>
                             </li>
                         </ul>
                     </div>
@@ -227,7 +282,7 @@
                     </div>
                     <span class="font-bold dark:text-white">Legado Ambiental</span>
                 </div>
-                <div class="text-sm text-[#617589] dark:text-gray-400">
+                <div class="text-sm text-[#617589] dark:text-gray-400" data-i18n="footer.rights">
                     © 2024 Legado Ambiental. Todos los derechos reservados.
                 </div>
                 <div class="flex gap-6">
@@ -241,6 +296,8 @@
             </div>
         </footer>
     </div>
+    </div>
+    <script src="../assets/js/i18n.js" data-base-path="../"></script>
 </body>
 
 </html>

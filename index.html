@@ -32,11 +32,30 @@
             color: #4b5563;
         }
     </style>
+    <!-- SEO Canonical & Hreflang -->
+    <link rel="canonical" href="https://www.legadoambiental.com/index.html" />
+    <link rel="alternate" hreflang="es-MX" href="https://www.legadoambiental.com/index.html?lang=es-MX" />
+    <link rel="alternate" hreflang="en-US" href="https://www.legadoambiental.com/index.html?lang=en-US" />
+    <link rel="alternate" hreflang="x-default" href="https://www.legadoambiental.com/index.html" />
 </head>
 
 <body>
-    <h1>Legado Ambiental</h1>
-    <p>Bienvenido al proyecto de preservación ambiental.</p>
+    <div style="position: absolute; top: 1rem; right: 1rem;">
+        <button onclick="changeLanguage('es-MX')" style="cursor: pointer; padding: 5px;">ES</button>
+        <button onclick="changeLanguage('en-US')" style="cursor: pointer; padding: 5px;">EN</button>
+    </div>
+    <h1 data-i18n="index_landing.title">Legado Ambiental</h1>
+    <p data-i18n="index_landing.welcome">Bienvenido al proyecto de preservación ambiental.</p>
+    <script src="assets/js/i18n.js"></script>
+    <script>
+        document.querySelectorAll('button[onclick]').forEach(btn => {
+            btn.onclick = (e) => {
+                const lang = e.target.textContent === 'ES' ? 'es-MX' : 'en-US';
+                localStorage.setItem('preferredLanguage', lang);
+                loadLanguage(lang);
+            };
+        });
+    </script>
 </body>
 
 </html>

@@ -47,6 +47,7 @@ Lista de archivos principales modificados:
 ## Verificación Final
 Se realizaron pruebas automatizadas de navegación y comportamiento de scroll (sticky header) con éxito en todas las secciones del sitio.
 
+
 ## Registro de Cambios - 20 de Enero 2026
 
 ### Archivos Modificados
@@ -61,3 +62,62 @@ Se realizaron pruebas automatizadas de navegación y comportamiento de scroll (s
 1.  **Sticky Header**: Se añadió `sticky top-0 z-50` a la etiqueta `<header>` y se eliminó `overflow-x-hidden` de los contenedores principales para permitir el funcionamiento correcto de `position: sticky`.
 2.  **Metaetiquetas**: Inclusión de `og:title`, `og:description`, `og:image` y tarjetas de Twitter.
 3.  **Performance**: Adición de `font-display: swap` y metaetiqueta `Cache-Control`.
+
+## Fase 3: Internacionalización (i18n)
+
+Se implementó un sistema de internacionalización robusto para soportar Español (México) e Inglés (EE. UU.).
+
+### 1. Sistema de Traducción
+- **Archivos JSON**: Se crearon archivos de traducción en `assets/i18n/` (`es-MX.json` y `en-US.json`).
+- **Carga Dinámica**: Script `assets/js/i18n.js` que gestiona las traducciones mediante un objeto integrado para asegurar compatibilidad offline y local.
+- **Persistencia**: La preferencia de idioma del usuario se guarda en `localStorage` para mantenerse entre sesiones y navegación.
+
+> **Nota Técnica (Fix de CORS)**: 
+> Originalmente el sistema usaba `fetch` para cargar archivos JSON. Para permitir el funcionamiento local sin un servidor web (protocolo `file://`), se optimizó `i18n.js` para incluir las traducciones directamente en el script, eliminando bloqueos de seguridad por CORS.
+
+### 2. Interfaz de Usuario
+- **Selector de Idioma**: Se añadieron botones (ES | EN) en la barra de navegación de todas las páginas.
+- **Atributos de Datos**: El contenido HTML ahora usa `data-i18n="clave"` en lugar de texto estático, permitiendo cambios instantáneos sin recargar la página.
+- **Soporte de Rutas**: El sistema maneja correctamente la carga de archivos JSON desde subdirectorios (ej. `about_us/`) mediante el atributo `data-base-path`.
+
+## Fase 4: Optimización SEO Técnica
+
+Se implementaron las recomendaciones de la auditoría SEO para mejorar la indexación y visibilidad.
+
+### 1. Archivos de Indexación
+- **Sitemap.xml**: Mapa del sitio completo generado para facilitar el rastreo de todas las secciones.
+- **Robots.txt**: Archivo de configuración para permitir el acceso a los bots de búsqueda.
+
+### 2. Metadatos y Estructura
+- **Etiquetas Hreflang**: Implementadas en todas las páginas para distinguir entre `es-MX` y `en-US`.
+- **URLs Canónicas**: Añadidas para prevenir contenido duplicado.
+- **Datos Estructurados (JSON-LD)**: Schema.org tipo `ConstructionBusiness` inyectado en todas las páginas para mejorar la presentación en resultados de búsqueda (Rich Snippets).
+
+### 3. Actualización de Enrutamiento
+- Ajuste en `i18n.js` para soportar parámetros de consulta (ej. `?lang=en-US`), permitiendo que existan URLs únicas para cada idioma, requisito indispensable para un SEO correcto en sitios estáticos.
+
+### 3. Lista de Archivos Modificados
+
+**Documentación**
+*   `README.md`
+*   `WALKTHROUGH.md`
+*   `SEO_RECOMMENDATIONS.md` (Nuevo)
+*   `SEO_WALKTHROUGH.md` (Nuevo)
+
+**Configuración SEO (Raíz)**
+*   `sitemap.xml` (Nuevo)
+*   `robots.txt` (Nuevo)
+
+**Código Fuente (Lógica y Datos)**
+*   `assets/js/i18n.js` (Actualizado para params URL)
+*   `assets/i18n/es-MX.json`
+*   `assets/i18n/en-US.json`
+
+**Páginas Web (HTML) - Etiquetas SEO Añadidas**
+*   `home.html`
+*   `index.html`
+*   `about_us/about_us.html`
+*   `services_overview/services.html`
+*   `project_portfolio_gallery/portfolio.html`
+*   `experience_timeline/our_experience.html`
+*   `faq/contact_faq.html`
