@@ -95,29 +95,54 @@ Se implementaron las recomendaciones de la auditoría SEO para mejorar la indexa
 
 ### 3. Actualización de Enrutamiento
 - Ajuste en `i18n.js` para soportar parámetros de consulta (ej. `?lang=en-US`), permitiendo que existan URLs únicas para cada idioma, requisito indispensable para un SEO correcto en sitios estáticos.
+- Ajuste en `i18n.js` para soportar parámetros de consulta (ej. `?lang=en-US`), permitiendo que existan URLs únicas para cada idioma, requisito indispensable para un SEO correcto en sitios estáticos.
+
+## Fase 5: Optimización Multimedia
+
+Siguiendo las mejores prácticas modernas para velocidad y accesibilidad, se reorganizaron los activos visuales.
+
+### 1. Localización y Formato
+- **Centralización**: Se eliminaron las dependencias de URLs externas de Google Photos. Todas las imágenes ahora residen localmente en `assets/images/`.
+- **Formato WebP**: Todas las imágenes fueron convertidas a formato **WebP** para reducir drásticamente el peso del archivo sin perder calidad visual.
+- **Estructura Semántica**: Las imágenes se organizaron en carpetas por contexto (`home`, `about`, `portfolio`, etc.) en lugar de una sola carpeta masiva.
+
+### 2. Accesibilidad y SEO Visual
+- **Refactorización de Portafolio**: En `portfolio.html`, se reemplazaron los `<div>` con `background-image` por etiquetas `<img>` semánticas.
+    - Esto permite el uso de atributos `alt` reales (crucial para lectores de pantalla y SEO).
+    - Permite la carga diferida nativa del navegador (`loading="lazy"`).
+- **Carga Diferida**: Se aplicó `loading="lazy"` a las nuevas etiquetas de imagen para mejorar la métrica de Largest Contentful Paint (LCP).
+### 3. Lista de Archivos Modificados
 
 ### 3. Lista de Archivos Modificados
 
 **Documentación**
 *   `README.md`
 *   `WALKTHROUGH.md`
-*   `SEO_RECOMMENDATIONS.md` (Nuevo)
-*   `SEO_WALKTHROUGH.md` (Nuevo)
+*   `SEO_RECOMMENDATIONS.md`
+*   `SEO_WALKTHROUGH.md`
+*   `MEDIA_ANALYSIS.md` (Nuevo)
 
 **Configuración SEO (Raíz)**
-*   `sitemap.xml` (Nuevo)
-*   `robots.txt` (Nuevo)
+*   `sitemap.xml`
+*   `robots.txt`
+
+**Activos Multimedia (Nuevos)**
+*   `assets/images/home/*` (Imágenes WebP localizadas)
+*   `assets/images/about/*`
+*   `assets/images/services/*`
+*   `assets/images/portfolio/*`
+*   `assets/images/experience/*`
 
 **Código Fuente (Lógica y Datos)**
 *   `assets/js/i18n.js` (Actualizado para params URL)
 *   `assets/i18n/es-MX.json`
 *   `assets/i18n/en-US.json`
 
-**Páginas Web (HTML) - Etiquetas SEO Añadidas**
-*   `home.html`
+**Páginas Web (HTML) - Actualizadas con rutas locales e <img>**
+*   `home.html` (Imágenes locales)
 *   `index.html`
-*   `about_us/about_us.html`
-*   `services_overview/services.html`
-*   `project_portfolio_gallery/portfolio.html`
-*   `experience_timeline/our_experience.html`
+*   `about_us/about_us.html` (Imágenes locales)
+*   `services_overview/services.html` (Imágenes locales)
+*   `project_portfolio_gallery/portfolio.html` (Refactor a `<img>` tags)
+*   `experience_timeline/our_experience.html` (Imágenes locales)
 *   `faq/contact_faq.html`
