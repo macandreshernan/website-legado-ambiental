@@ -111,7 +111,6 @@ Siguiendo las mejores prácticas modernas para velocidad y accesibilidad, se reo
     - Esto permite el uso de atributos `alt` reales (crucial para lectores de pantalla y SEO).
     - Permite la carga diferida nativa del navegador (`loading="lazy"`).
 - **Carga Diferida**: Se aplicó `loading="lazy"` a las nuevas etiquetas de imagen para mejorar la métrica de Largest Contentful Paint (LCP).
-### 3. Lista de Archivos Modificados
 
 ### 3. Lista de Archivos Modificados
 
@@ -162,3 +161,23 @@ Se optimizó el layout para priorizar el espacio de escritura ("Capture Space"):
 - **Grid de Nombres**: Nombre y Apellidos comparten fila (50%/50%) para mantener lógica visual.
 - **Campos Full-Width**: El **Correo Electrónico** y **Teléfono** ahora ocupan el 100% del ancho del contenedor en filas separadas. Esto facilita la escritura de correos largos y números sin sentirse apretados, mejorando la experiencia tanto en escritorio como en móvil.
 - **Internacionalización Total**: Todos los nuevos campos y placeholders fueron integrados al sistema `i18n.js`.
+
+## Fase 7: Seguridad y Validación del Formulario
+
+Se implementó una capa de seguridad y validación robusta para el formulario de contacto, enfocada en la protección contra spam y la integridad de datos del lado del cliente.
+
+### 1. Hardening de Seguridad
+- **Cabeceras HTTP**: Se añadieron metaetiquetas para `Content-Security-Policy` (CSP) y `X-Content-Type-Options`, restringiendo la carga de recursos solo a orígenes confiables (Tailwind CDN, Google Fonts/Images).
+- **Control de Entrada**: Se aplicaron atributos HTML5 (`required`, `maxlength`) a todos los campos para prevenir envío de datos excesivos o vacíos.
+
+### 2. Validaciones Lógicas (Nuevo Script)
+Se creó el archivo `assets/js/contact_form.js` para manejar la lógica de negocio en el cliente:
+- **Máscara Telefónica**: Formato automático `(XX) XXXX XXXX` mientras se escribe. Restricción estricta de la regla LADA (no puede iniciar con 0 ni 1).
+- **Validación de Correo**: Verificación visual de regex estricto (usuario@dominio) al salir del campo.
+- **Math Captcha**: Desafío numérico aleatorio (ej. "3 + 5 = ?") generado dinámicamente que bloquea el envío del formulario si la respuesta es incorrecta.
+
+### 3. Archivos Nuevos y Modificados
+- `SECURITY_RECOMMENDATIONS.md` - Análisis inicial de riesgos.
+- `assets/js/contact_form.js` - Lógica de validación y Captcha.
+- `assets/js/i18n.js` - Nuevas claves de traducción para errores y etiquetas de Captcha.
+- `faq/contact_faq.html` - Implementación de UI de Captcha y atributos de seguridad.
