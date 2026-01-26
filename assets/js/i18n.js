@@ -279,6 +279,10 @@ const translations = {
                 "method_label": "Medio de Contacto Preferido",
                 "method_email": "Correo Electrónico",
                 "method_phone": "Llamada Telefónica",
+                "captcha_label": "Resuelve:",
+                "captcha_error": "Resultado incorrecto",
+                "phone_error": "Formato inválido. (55) 1234 5678",
+                "email_error": "Correo inválido",
                 "message": "Mensaje",
                 "message_ph": "¿Cómo podemos ayudarte?",
                 "btn": "Enviar Mensaje"
@@ -572,6 +576,10 @@ const translations = {
                 "method_label": "Preferred Contact Method",
                 "method_email": "Email",
                 "method_phone": "Phone Call",
+                "captcha_label": "Solve:",
+                "captcha_error": "Incorrect result",
+                "phone_error": "Invalid format. (555) 123-4567",
+                "email_error": "Invalid email",
                 "message": "Message",
                 "message_ph": "How can we help you?",
                 "btn": "Send Message"
