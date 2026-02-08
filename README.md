@@ -243,3 +243,30 @@ Se implementó la nueva imagen de marca (`logo_gral4_v1.1.png`) sustituyendo los
 6.  **faq/contact_faq.html**:
     - Header: Logo actualizado.
     - Footer: Logo actualizado con ruta relativa `../assets`.
+
+## Fase 9: Modernización del Diseño y Servicios
+
+Se implementó una actualización integral del diseño para alinear el sitio con una estética "Eco-Industrial Moderna", priorizando la jerarquía visual y la claridad de la oferta de servicios.
+
+### 1. Tipografía Unificada
+- **Estandarización**: Se eliminaron las definiciones hardcoded de `Public Sans` en los archivos HTML individualmente.
+- **Jerarquía**: Se estableció un sistema tipográfico consistente gestionado globalmente:
+    - **Manrope (`font-sans`)**: Para cuerpo de texto y elementos de UI, aportando modernidad y legibilidad técnica.
+    - **Merriweather (`font-serif`)**: Para títulos y encabezados, evocando autoridad y tradición profesional.
+
+### 2. Restructuración de Servicios
+Se actualizó la sección de servicios en `home.html` y `services_overview/services.html` para reflejar con precisión las áreas de especialización solicitadas:
+
+- **Nueva Oferta**:
+    1.  **Gestión de Residuos** (Icono: `delete_sweep`)
+    2.  **Tratamiento de Agua** (Icono: `water_drop`)
+    3.  **Consultoría Técnica** (Icono: `engineering`)
+
+- **Rediseño de Tarjetas (UI)**:
+    - Implementación de estilo **minimalista/glassmorphism**.
+    - Fondos limpios con bordes sutiles que reaccionan al **hover** (cambio a verde primario).
+    - Contenedores de iconos flotantes y sombras dinámicas para mayor interactividad.
+
+### 3. Accesibilidad y Contraste
+- **Mejora de Legibilidad**: Se oscurecieron los tonos de gris en textos secundarios (`text-gray-600` en lugar de `text-gray-400`/`slate`) para garantizar un radio de contraste adecuado sobre fondos claros.
+- **Etiquetas Semánticas**: Se añadieron atributos `aria-label` faltantes en elementos de navegación para mejorar la compatibilidad con lectores de pantalla.

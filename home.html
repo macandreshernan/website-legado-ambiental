@@ -63,10 +63,6 @@
         rel="stylesheet" />
     <script src="assets/js/theme-config.js"></script>
     <style>
-        body {
-            font-family: "Public Sans", sans-serif;
-        }
-
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
@@ -74,7 +70,7 @@
 </head>
 
 <body
-    class="bg-background-light dark:bg-background-dark text-charcoal dark:text-gray-200 antialiased transition-colors duration-300">
+    class="font-sans bg-background-light dark:bg-background-dark text-charcoal dark:text-gray-200 antialiased transition-colors duration-300">
     <!-- Top Navigation Bar (Sticky Optimized) -->
     <header
         class="sticky top-0 z-50 w-full bg-white/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800 shadow-sm transition-all duration-300">
@@ -244,7 +240,6 @@
                 </div>
             </div>
         </section>
-        <!-- Specialized Services Header -->
         <section class="bg-gray-50 dark:bg-navy/50 py-24">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
@@ -252,81 +247,103 @@
                         <span class="text-primary font-bold tracking-[0.2em] uppercase text-sm mb-4 block"
                             data-i18n="services.label">Lo que
                             hacemos</span>
-                        <h2 class="text-navy dark:text-white text-4xl font-black tracking-tight"
+                        <h2 class="text-navy dark:text-white text-4xl font-black tracking-tight font-serif"
                             data-i18n="services.title">Nuestros Servicios
                             Especializados</h2>
                     </div>
-                    <p class="text-charcoal dark:text-gray-400 max-w-md text-lg" data-i18n="services.desc">
+                    <p class="text-charcoal dark:text-gray-600 max-w-md text-lg" data-i18n="services.desc">
                         Ofrecemos consultoría integral en ingeniería y medio ambiente para diversos sectores.
                     </p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <!-- Service 1 -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Service 1: Gestión de Residuos -->
                     <div
-                        class="group bg-white dark:bg-gray-900 p-8 rounded-xl border border-gray-100 dark:border-gray-800 hover:border-primary/50 transition-all shadow-sm hover:shadow-md">
-                        <div class="mb-6 text-primary group-hover:scale-110 transition-transform origin-left">
-                            <span class="material-symbols-outlined text-5xl">engineering</span>
+                        class="group relative bg-white dark:bg-gray-900 rounded-2xl p-8 border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+                        <!-- Decorative Background Element -->
+                        <div
+                            class="absolute top-0 right-0 w-32 h-32 bg-gray-50 dark:bg-gray-800 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150 group-hover:bg-primary/10">
                         </div>
-                        <h3 class="text-navy dark:text-white text-xl font-bold mb-4" data-i18n="services.civil.title">
-                            Ingeniería Civil</h3>
-                        <p class="text-charcoal dark:text-gray-400 text-sm leading-relaxed mb-6"
-                            data-i18n="services.civil.desc">Diseño estructural y
-                            obras civiles pesadas para infraestructura industrial y pública.</p>
-                        <a class="text-primary text-sm font-bold flex items-center gap-1 group-hover:gap-2 transition-all"
-                            href="services_overview/services.html">
-                            <span data-i18n="services.details">Detalles</span> <span
-                                class="material-symbols-outlined text-sm">arrow_forward</span>
+
+                        <!-- Icon Container -->
+                        <div
+                            class="relative mb-6 inline-flex items-center justify-center w-16 h-16 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                            <span class="material-symbols-outlined text-3xl">delete_sweep</span>
+                        </div>
+
+                        <!-- Content -->
+                        <h3
+                            class="relative text-xl font-bold text-navy dark:text-white mb-3 font-serif group-hover:text-primary transition-colors">
+                            Gestión de Residuos
+                        </h3>
+                        <p class="relative text-charcoal dark:text-gray-400 text-sm leading-relaxed mb-6 font-sans">
+                            Soluciones integrales para la recolección, transporte y disposición final de residuos
+                            industriales y urbanos.
+                        </p>
+
+                        <!-- Action Link -->
+                        <a href="services_overview/services.html"
+                            class="relative inline-flex items-center text-sm font-bold text-primary group-hover:text-primary-dark transition-colors">
+                            <span data-i18n="services.details">Conocer más</span>
+                            <span
+                                class="material-symbols-outlined text-sm ml-2 transform group-hover:translate-x-1 transition-transform">
+                                arrow_forward
+                            </span>
                         </a>
                     </div>
-                    <!-- Service 2 -->
+
+                    <!-- Service 2: Tratamiento de Agua -->
                     <div
-                        class="group bg-white dark:bg-gray-900 p-8 rounded-xl border border-gray-100 dark:border-gray-800 hover:border-primary/50 transition-all shadow-sm hover:shadow-md">
-                        <div class="mb-6 text-primary group-hover:scale-110 transition-transform origin-left">
-                            <span class="material-symbols-outlined text-5xl">eco</span>
+                        class="group relative bg-white dark:bg-gray-900 rounded-2xl p-8 border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+                        <div
+                            class="absolute top-0 right-0 w-32 h-32 bg-gray-50 dark:bg-gray-800 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150 group-hover:bg-primary/10">
                         </div>
-                        <h3 class="text-navy dark:text-white text-xl font-bold mb-4" data-i18n="services.env.title">
-                            Legado Ambiental</h3>
-                        <p class="text-charcoal dark:text-gray-400 text-sm leading-relaxed mb-6"
-                            data-i18n="services.env.desc">Prácticas de
-                            construcción sostenible y mitigación del impacto ambiental.</p>
-                        <a class="text-primary text-sm font-bold flex items-center gap-1 group-hover:gap-2 transition-all"
-                            href="services_overview/services.html">
-                            <span data-i18n="services.details">Detalles</span> <span
-                                class="material-symbols-outlined text-sm">arrow_forward</span>
+                        <div
+                            class="relative mb-6 inline-flex items-center justify-center w-16 h-16 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                            <span class="material-symbols-outlined text-3xl">water_drop</span>
+                        </div>
+                        <h3
+                            class="relative text-xl font-bold text-navy dark:text-white mb-3 font-serif group-hover:text-primary transition-colors">
+                            Tratamiento de Agua
+                        </h3>
+                        <p class="relative text-charcoal dark:text-gray-400 text-sm leading-relaxed mb-6 font-sans">
+                            Diseño e implementación de plantas de tratamiento y sistemas de purificación para
+                            recuperación de recursos hídricos.
+                        </p>
+                        <a href="services_overview/services.html"
+                            class="relative inline-flex items-center text-sm font-bold text-primary group-hover:text-primary-dark transition-colors">
+                            <span data-i18n="services.details">Conocer más</span>
+                            <span
+                                class="material-symbols-outlined text-sm ml-2 transform group-hover:translate-x-1 transition-transform">
+                                arrow_forward
+                            </span>
                         </a>
                     </div>
-                    <!-- Service 3 -->
+
+                    <!-- Service 3: Consultoría Técnica -->
                     <div
-                        class="group bg-white dark:bg-gray-900 p-8 rounded-xl border border-gray-100 dark:border-gray-800 hover:border-primary/50 transition-all shadow-sm hover:shadow-md">
-                        <div class="mb-6 text-primary group-hover:scale-110 transition-transform origin-left">
-                            <span class="material-symbols-outlined text-5xl">architecture</span>
+                        class="group relative bg-white dark:bg-gray-900 rounded-2xl p-8 border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+                        <div
+                            class="absolute top-0 right-0 w-32 h-32 bg-gray-50 dark:bg-gray-800 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150 group-hover:bg-primary/10">
                         </div>
-                        <h3 class="text-navy dark:text-white text-xl font-bold mb-4" data-i18n="services.mgmt.title">
-                            Gestión de Proyectos</h3>
-                        <p class="text-charcoal dark:text-gray-400 text-sm leading-relaxed mb-6"
-                            data-i18n="services.mgmt.desc">Gestión integral
-                            asegurando cronogramas, presupuesto y estándares de seguridad.</p>
-                        <a class="text-primary text-sm font-bold flex items-center gap-1 group-hover:gap-2 transition-all"
-                            href="services_overview/services.html">
-                            <span data-i18n="services.details">Detalles</span> <span
-                                class="material-symbols-outlined text-sm">arrow_forward</span>
-                        </a>
-                    </div>
-                    <!-- Service 4 -->
-                    <div
-                        class="group bg-white dark:bg-gray-900 p-8 rounded-xl border border-gray-100 dark:border-gray-800 hover:border-primary/50 transition-all shadow-sm hover:shadow-md">
-                        <div class="mb-6 text-primary group-hover:scale-110 transition-transform origin-left">
-                            <span class="material-symbols-outlined text-5xl">account_balance</span>
+                        <div
+                            class="relative mb-6 inline-flex items-center justify-center w-16 h-16 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                            <span class="material-symbols-outlined text-3xl">engineering</span>
                         </div>
-                        <h3 class="text-navy dark:text-white text-xl font-bold mb-4" data-i18n="services.gov.title">
-                            Proyectos Gubernamentales</h3>
-                        <p class="text-charcoal dark:text-gray-400 text-sm leading-relaxed mb-6"
-                            data-i18n="services.gov.desc">Soluciones
-                            especializadas para licitaciones de obras públicas municipales y federales.</p>
-                        <a class="text-primary text-sm font-bold flex items-center gap-1 group-hover:gap-2 transition-all"
-                            href="services_overview/services.html">
-                            <span data-i18n="services.details">Detalles</span> <span
-                                class="material-symbols-outlined text-sm">arrow_forward</span>
+                        <h3
+                            class="relative text-xl font-bold text-navy dark:text-white mb-3 font-serif group-hover:text-primary transition-colors">
+                            Consultoría Técnica
+                        </h3>
+                        <p class="relative text-charcoal dark:text-gray-400 text-sm leading-relaxed mb-6 font-sans">
+                            Asesoría especializada en normativa ambiental, estudios de impacto y optimización de
+                            procesos sostenibles.
+                        </p>
+                        <a href="services_overview/services.html"
+                            class="relative inline-flex items-center text-sm font-bold text-primary group-hover:text-primary-dark transition-colors">
+                            <span data-i18n="services.details">Conocer más</span>
+                            <span
+                                class="material-symbols-outlined text-sm ml-2 transform group-hover:translate-x-1 transition-transform">
+                                arrow_forward
+                            </span>
                         </a>
                     </div>
                 </div>
