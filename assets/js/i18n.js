@@ -21,19 +21,19 @@ const translations = {
             "home": "Inicio"
         },
         "hero": {
-            "title": "Construyendo Infraestructura, Sosteniendo el Futuro.",
-            "subtitle": "Excelencia profesional en construcción civil y legado ambiental para proyectos privados y gubernamentales en todo el mundo.",
+            "title": "Protegiendo hoy, el legado del mañana.",
+            "subtitle": "Ingeniería para una productividad amigable con el medio ambiente.",
             "portfolio_btn": "Ver Portafolio",
             "contact_btn": "Contáctanos"
         },
         "stats": {
             "years": "Años de Experiencia",
             "projects": "Proyectos Completados",
-            "certifications": "Certificaciones ISO"
+            "certifications": "Cualquier otra cosa aqui!!"
         },
         "value": {
-            "title": "Excelencia en Construcción Civil y Legado Ambiental",
-            "desc": "Entregamos soluciones de ingeniería de alto impacto con un compromiso inquebrantable con la calidad, la seguridad y el desarrollo sostenible. Nuestro legado se construye sobre la fortaleza de nuestras estructuras y la salud de nuestro medio ambiente.",
+            "title": "Soluciones Inteligentes y Proyectos Integrales para el Desarrollo Sostenible.",
+            "desc": "Excelencia en Construcción Civil y Legado Ambiental.",
             "mission_btn": "Conoce Más Sobre Nuestra Misión"
         },
         "services": {
@@ -42,19 +42,19 @@ const translations = {
             "desc": "Ofrecemos consultoría integral en ingeniería y medio ambiente para diversos sectores.",
             "civil": {
                 "title": "Ingeniería Civil",
-                "desc": "Diseño estructural y obras civiles pesadas para infraestructura industrial y pública."
+                "desc": "Diagnóstico, diseño, planeación, ejecución, supervisión y auditorías de obras."
             },
             "env": {
-                "title": "Legado Ambiental",
+                "title": "Ingeniería Ambiental",
                 "desc": "Prácticas de construcción sostenible y mitigación del impacto ambiental."
             },
             "mgmt": {
-                "title": "Gestión de Proyectos",
-                "desc": "Gestión integral asegurando cronogramas, presupuesto y estándares de seguridad."
+                "title": "Servicios de Topografía",
+                "desc": "Servicios de alta precisión para infraestructura y edificación, apoyados en tecnología moderna y metodologías estandarizadas."
             },
             "gov": {
-                "title": "Proyectos Gubernamentales",
-                "desc": "Soluciones especializadas para licitaciones de obras públicas municipales y federales."
+                "title": "Servicios de Seguridad e Higiene",
+                "desc": "Transformamos la operatividad de sus proyectos integrando seguridad, eficiencia administrativa y cumplimiento legal."
             },
             "details": "Detalles"
         },
@@ -62,8 +62,8 @@ const translations = {
             "title": "Proyectos Recientes",
             "p1": {
                 "cat": "Gobierno / Infraestructura",
-                "title": "Sistema de Viaducto Metropolitano",
-                "desc": "Proyecto de conexión urbana de 1.5km."
+                "title": "Prevención de inundaciones",
+                "desc": "Se realizan estudios hidro-meteorológicos solicitados específicamente por Protección Civil del Estado de México."
             },
             "p2": {
                 "cat": "Privado / Comercial",

@@ -198,6 +198,8 @@ Se realizó una revisión integral de la interfaz de usuario bajo la identidad d
 ### 3. Rediseño de Secciones CTA (Llamada a la Acción)
 - **Estandarización**: Se replicó el diseño de "Alto Impacto" de la página `Nosotros` en `Inicio`, `Servicios` y `Experiencia`.
   - **Fondo**: `bg-primary-dark` (Verde Profundo).
+
+
   - **Botones**: Sistema de jerarquía claro: Botón Principal (Blanco/Texto Verde) y Secundario (Outline Blanco).
   - **Legibilidad**: Mejora de contraste en textos descriptivos (`text-gray-100` y peso normal), eliminando problemas de lectura del diseño anterior (azul pálido fino).
 
@@ -214,3 +216,30 @@ Se realizó una revisión integral de la interfaz de usuario bajo la identidad d
 - `experience_timeline/our_experience.html`
 - `project_portfolio_gallery/portfolio.html`
 - `faq/contact_faq.html`
+
+## Ajustes Visuales del Logo (Detalle por Archivo)
+Se implementó la nueva imagen de marca (`logo_gral4_v1.1.png`) sustituyendo los logotipos SVG genéricos en todas las páginas.
+
+### Cambios Generales
+- **Header**: Se reemplazó el contenedor SVG por una etiqueta `<img>` con altura ajustada (`h-10` o `h-12`) para mantener la proporción visual.
+- **Footer**: Se actualizó el icono del pie de página con una versión más pequeña (`h-8` o `h-10`) del mismo logotipo.
+
+### Lista de Archivos Modificados
+1.  **home.html**:
+    - Header: Reemplazo de SVG `size-8` por imagen logo.
+    - Footer: Reemplazo de SVG `size-6` por imagen logo.
+2.  **about_us/about_us.html**:
+    - Header: Logo actualizado.
+    - Footer: Logo actualizado con ruta relativa `../assets`.
+3.  **services_overview/services.html**:
+    - Header: Logo actualizado.
+    - Footer: Logo actualizado con ruta relativa `../assets`.
+4.  **project_portfolio_gallery/portfolio.html**:
+    - Header: Logo actualizado.
+    - Footer: Logo actualizado con ruta relativa `../assets`.
+5.  **experience_timeline/our_experience.html**:
+    - Header: Logo actualizado.
+    - Footer: Logo actualizado con ruta relativa `../assets`.
+6.  **faq/contact_faq.html**:
+    - Header: Logo actualizado.
+    - Footer: Logo actualizado con ruta relativa `../assets`.
