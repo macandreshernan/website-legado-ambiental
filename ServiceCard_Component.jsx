@@ -1,20 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 // Design System / Token Simulation based on requirements
-const theme = {
-    colors: {
-        primary: '#2E7D32', // Forest Green
-        primaryDark: '#1B5E20',
-        secondary: '#D7CCC8',
-        navy: '#101922',
-        text: '#333333',
-        background: '#F6F7F8',
-    },
-    fonts: {
-        heading: 'Merriweather, serif',
-        body: 'Manrope, sans-serif',
-    }
-};
+// theme object removed as it was unused
 
 const services = [
     {
@@ -57,7 +45,7 @@ const ServiceCard = ({ title, description, icon }) => {
             </p>
 
             {/* Action Link */}
-            <a href="#" className="relative inline-flex items-center text-sm font-bold text-primary group-hover:text-primaryDark transition-colors">
+            <a href="javascript:void(0)" rel="noopener noreferrer" className="relative inline-flex items-center text-sm font-bold text-primary group-hover:text-primaryDark transition-colors">
                 <span>Conocer más</span>
                 <span className="material-symbols-outlined text-sm ml-2 transform group-hover:translate-x-1 transition-transform">
                     arrow_forward
@@ -65,6 +53,12 @@ const ServiceCard = ({ title, description, icon }) => {
             </a>
         </div>
     );
+};
+
+ServiceCard.propTypes = {
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    icon: PropTypes.string.isRequired,
 };
 
 const ServicesSection = () => {
