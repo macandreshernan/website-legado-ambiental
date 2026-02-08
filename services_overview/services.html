@@ -69,17 +69,14 @@
         rel="stylesheet" />
     <script src="../assets/js/theme-config.js"></script>
     <style>
-        body {
-            font-family: "Public Sans", sans-serif;
-        }
-
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
     </style>
 </head>
 
-<body class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-white transition-colors duration-200">
+<body
+    class="font-sans bg-background-light dark:bg-background-dark text-[#111418] dark:text-white transition-colors duration-200">
     <div class="relative flex min-h-screen w-full flex-col">
         <!-- Sticky Header with Backdrop Blur -->
         <header
@@ -92,7 +89,7 @@
                         Ambiental</h2>
                 </div>
                 <div class="hidden md:flex flex-1 justify-end gap-8 items-center">
-                    <nav class="flex items-center gap-8">
+                    <nav class="flex items-center gap-8" aria-label="Navegación principal">
                         <a class="text-[#111418] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
                             href="../home.html" data-i18n="nav.home">Inicio</a>
                         <a class="text-primary text-sm font-bold border-b-2 border-primary pb-1" href="#"
@@ -150,7 +147,7 @@
                             data-i18n="services_page.title">
                             Nuestros Servicios Especializados de Ingeniería y Construcción
                         </h1>
-                        <p class="text-[#617589] dark:text-gray-400 text-base md:text-lg leading-relaxed"
+                        <p class="text-gray-600 dark:text-gray-400 text-base md:text-lg leading-relaxed"
                             data-i18n="services_page.hero_desc">
                             Ofrecemos soluciones de infraestructura y construcción sostenible adaptadas tanto para la
                             iniciativa privada como para iniciativas gubernamentales en la región.
@@ -180,97 +177,86 @@
             </div>
             <!-- Service Grid Section -->
             <div class="w-full max-w-[1200px] px-4 md:px-10 py-10">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <!-- Private Construction Card -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Service 1: Gestión de Residuos -->
                     <div
-                        class="group flex flex-col bg-white dark:bg-[#1a2530] rounded-xl overflow-hidden shadow-sm border border-[#e5e7eb] dark:border-gray-800 hover:shadow-md transition-all duration-300">
-                        <div class="relative h-64 w-full overflow-hidden">
-                            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
-                                data-alt="Edificio moderno de vidrio en construcción"
-                                style='background-image: url("../assets/images/services/hero-services.webp");'>
-                            </div>
-                            <div class="absolute top-4 left-4 bg-primary text-white p-2 rounded-lg shadow-lg">
-                                <span class="material-symbols-outlined">apartment</span>
-                            </div>
+                        class="group relative bg-white dark:bg-[#1a2530] rounded-xl overflow-hidden shadow-sm border border-[#e5e7eb] dark:border-gray-800 hover:shadow-xl transition-all duration-300">
+                        <div
+                            class="absolute top-0 right-0 w-32 h-32 bg-gray-50 dark:bg-gray-800 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150 group-hover:bg-primary/10">
                         </div>
-                        <div class="p-8 flex flex-col flex-1">
-                            <h3 class="text-xl font-bold text-[#111418] dark:text-white mb-3"
-                                data-i18n="services_page.private.title">Construcción Privada</h3>
-                            <p class="text-[#617589] dark:text-gray-400 text-sm leading-relaxed mb-6 flex-1"
-                                data-i18n="services_page.private.desc">
-                                Ingeniería integral para complejos residenciales de alta gama, sedes corporativas y
-                                naves industriales estratégicas. Nos centramos en la excelencia estructural y la
-                                eficiencia ambiental.
+
+                        <div class="p-8 flex flex-col h-full relative z-10">
+                            <div
+                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                <span class="material-symbols-outlined text-3xl">delete_sweep</span>
+                            </div>
+                            <h3
+                                class="text-xl font-bold text-[#111418] dark:text-white mb-3 font-serif group-hover:text-primary transition-colors">
+                                Gestión de Residuos
+                            </h3>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6 flex-1 font-sans">
+                                Soluciones integrales para la recolección, transporte y disposición final de residuos
+                                industriales y urbanos.
                             </p>
-                            <ul class="mb-8 space-y-2">
-                                <li
-                                    class="flex items-center gap-2 text-xs font-medium text-[#111418] dark:text-gray-300">
-                                    <span class="material-symbols-outlined text-primary text-sm">check_circle</span>
-                                    <span data-i18n="services_page.private.list.1">Desarrollos Residenciales</span>
-                                </li>
-                                <li
-                                    class="flex items-center gap-2 text-xs font-medium text-[#111418] dark:text-gray-300">
-                                    <span class="material-symbols-outlined text-primary text-sm">check_circle</span>
-                                    <span data-i18n="services_page.private.list.2">Centros Comerciales y
-                                        Corporativos</span>
-                                </li>
-                                <li
-                                    class="flex items-center gap-2 text-xs font-medium text-[#111418] dark:text-gray-300">
-                                    <span class="material-symbols-outlined text-primary text-sm">check_circle</span>
-                                    <span data-i18n="services_page.private.list.3">Centros Logísticos e
-                                        Industriales</span>
-                                </li>
-                            </ul>
                             <button
                                 class="flex items-center justify-center gap-2 w-full py-3 bg-primary/10 dark:bg-primary/20 text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-all focus:ring-2 focus:ring-primary focus:ring-offset-2">
-                                <span data-i18n="services_page.private.btn">Conocer Más</span> <span
+                                <span>Conocer Más</span> <span
                                     class="material-symbols-outlined text-[18px]">arrow_forward</span>
                             </button>
                         </div>
                     </div>
-                    <!-- Government Civil Works Card -->
+
+                    <!-- Service 2: Tratamiento de Agua -->
                     <div
-                        class="group flex flex-col bg-white dark:bg-[#1a2530] rounded-xl overflow-hidden shadow-sm border border-[#e5e7eb] dark:border-gray-800 hover:shadow-md transition-all duration-300">
-                        <div class="relative h-64 w-full overflow-hidden">
-                            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
-                                data-alt="Infraestructura de autopista pública"
-                                style='background-image: url("../assets/images/services/cta-bg.webp");'>
-                            </div>
-                            <div class="absolute top-4 left-4 bg-primary text-white p-2 rounded-lg shadow-lg">
-                                <span class="material-symbols-outlined">account_balance</span>
-                            </div>
+                        class="group relative bg-white dark:bg-[#1a2530] rounded-xl overflow-hidden shadow-sm border border-[#e5e7eb] dark:border-gray-800 hover:shadow-xl transition-all duration-300">
+                        <div
+                            class="absolute top-0 right-0 w-32 h-32 bg-gray-50 dark:bg-gray-800 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150 group-hover:bg-primary/10">
                         </div>
-                        <div class="p-8 flex flex-col flex-1">
-                            <h3 class="text-xl font-bold text-[#111418] dark:text-white mb-3"
-                                data-i18n="services_page.public.title">Obras Civiles
-                                Gubernamentales</h3>
-                            <p class="text-[#617589] dark:text-gray-400 text-sm leading-relaxed mb-6 flex-1"
-                                data-i18n="services_page.public.desc">
-                                Proyectos de infraestructura pública a gran escala, incluyendo desarrollo urbano,
-                                sistemas de carreteras e instalaciones públicas esenciales. Cumplimos con los más altos
-                                estándares de seguridad y normativa.
+
+                        <div class="p-8 flex flex-col h-full relative z-10">
+                            <div
+                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                <span class="material-symbols-outlined text-3xl">water_drop</span>
+                            </div>
+                            <h3
+                                class="text-xl font-bold text-[#111418] dark:text-white mb-3 font-serif group-hover:text-primary transition-colors">
+                                Tratamiento de Agua
+                            </h3>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6 flex-1 font-sans">
+                                Diseño e implementación de plantas de tratamiento y sistemas de purificación para
+                                recuperación de recursos hídricos.
                             </p>
-                            <ul class="mb-8 space-y-2">
-                                <li
-                                    class="flex items-center gap-2 text-xs font-medium text-[#111418] dark:text-gray-300">
-                                    <span class="material-symbols-outlined text-primary text-sm">check_circle</span>
-                                    <span data-i18n="services_page.public.list.1">Infraestructura Urbana y
-                                        Vialidades</span>
-                                </li>
-                                <li
-                                    class="flex items-center gap-2 text-xs font-medium text-[#111418] dark:text-gray-300">
-                                    <span class="material-symbols-outlined text-primary text-sm">check_circle</span>
-                                    <span data-i18n="services_page.public.list.2">Escuelas y Hospitales Públicos</span>
-                                </li>
-                                <li
-                                    class="flex items-center gap-2 text-xs font-medium text-[#111418] dark:text-gray-300">
-                                    <span class="material-symbols-outlined text-primary text-sm">check_circle</span>
-                                    <span data-i18n="services_page.public.list.3">Saneamiento Ambiental</span>
-                                </li>
-                            </ul>
                             <button
                                 class="flex items-center justify-center gap-2 w-full py-3 bg-primary/10 dark:bg-primary/20 text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-all focus:ring-2 focus:ring-primary focus:ring-offset-2">
-                                <span data-i18n="services_page.public.btn">Ver Proyectos</span> <span
+                                <span>Conocer Más</span> <span
+                                    class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Service 3: Consultoría Técnica -->
+                    <div
+                        class="group relative bg-white dark:bg-[#1a2530] rounded-xl overflow-hidden shadow-sm border border-[#e5e7eb] dark:border-gray-800 hover:shadow-xl transition-all duration-300">
+                        <div
+                            class="absolute top-0 right-0 w-32 h-32 bg-gray-50 dark:bg-gray-800 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150 group-hover:bg-primary/10">
+                        </div>
+
+                        <div class="p-8 flex flex-col h-full relative z-10">
+                            <div
+                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                <span class="material-symbols-outlined text-3xl">engineering</span>
+                            </div>
+                            <h3
+                                class="text-xl font-bold text-[#111418] dark:text-white mb-3 font-serif group-hover:text-primary transition-colors">
+                                Consultoría Técnica
+                            </h3>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6 flex-1 font-sans">
+                                Asesoría especializada en normativa ambiental, estudios de impacto y optimización de
+                                procesos sostenibles.
+                            </p>
+                            <button
+                                class="flex items-center justify-center gap-2 w-full py-3 bg-primary/10 dark:bg-primary/20 text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-all focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                                <span>Conocer Más</span> <span
                                     class="material-symbols-outlined text-[18px]">arrow_forward</span>
                             </button>
                         </div>
