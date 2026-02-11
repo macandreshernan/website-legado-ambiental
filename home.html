@@ -6,6 +6,11 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Legado Ambiental | Inicio</title>
 
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://fonts.googleapis.com; img-src 'self' data: https://lh3.googleusercontent.com; connect-src 'self';">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+
     <!-- SEO & Social Media Meta Tags -->
     <meta name="description"
         content="Legado Ambiental ofrece excelencia en ingeniería civil y prácticas sostenibles. Construimos infraestructura que respeta el medio ambiente.">
@@ -83,6 +88,8 @@
                         Ambiental</span>
                 </div>
                 <nav class="hidden md:flex items-center gap-8">
+                    <a class="text-primary text-sm font-bold border-b-2 border-primary pb-1" href="#"
+                        data-i18n="nav.home">Inicio</a>
                     <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:text-primary transition-colors"
                         href="about_us/about_us.html" data-i18n="nav.about">Quiénes Somos</a>
                     <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:text-primary transition-colors"
@@ -93,8 +100,6 @@
                         href="experience_timeline/our_experience.html" data-i18n="nav.experience">Experiencia</a>
                     <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:text-primary transition-colors"
                         href="faq/contact_faq.html" data-i18n="nav.contact">Contacto</a>
-                    <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:text-primary transition-colors"
-                        href="faq/contact_faq.html" data-i18n="nav.faq">FAQ</a>
                 </nav>
                 <div class="hidden md:flex items-center gap-4">
                     <div class="flex items-center gap-2 mr-4">
@@ -203,20 +208,7 @@
                         <p class="text-navy dark:text-white text-4xl font-black">15+</p>
                     </div>
                 </div>
-                <!--
-                <div
-                    class="bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 rounded-xl p-8 shadow-xl flex items-center gap-6 transform hover:-translate-y-1 transition-transform">
-                    <div class="bg-primary/10 p-4 rounded-lg text-primary">
-                        <span class="material-symbols-outlined text-4xl">verified</span>
-                    </div>
-                    <div>
-                        <p class="text-charcoal dark:text-gray-400 text-sm font-semibold uppercase tracking-widest"
-                            data-i18n="stats.certifications">
-                            Certificaciones ISO</p>
-                        <p class="text-navy dark:text-white text-4xl font-black">3</p>
-                    </div>
-                </div>
-                -->
+
             </div>
         </section>
         <!-- Value Proposition Section -->
@@ -433,12 +425,12 @@
                         nuestro planeta.
                     </p>
                     <div class="flex gap-4">
-                        <a class="text-charcoal dark:text-gray-400 hover:text-primary transition-colors" href="javascript:void(0)"
-                            aria-label="Sitio Web">
+                        <a class="text-charcoal dark:text-gray-400 hover:text-primary transition-colors"
+                            href="javascript:void(0)" aria-label="Sitio Web">
                             <span class="material-symbols-outlined">public</span>
                         </a>
-                        <a class="text-charcoal dark:text-gray-400 hover:text-primary transition-colors" href="javascript:void(0)"
-                            aria-label="Correo Electrónico">
+                        <a class="text-charcoal dark:text-gray-400 hover:text-primary transition-colors"
+                            href="javascript:void(0)" aria-label="Correo Electrónico">
                             <span class="material-symbols-outlined">alternate_email</span>
                         </a>
                     </div>
@@ -460,7 +452,8 @@
                 <div>
                     <h5 class="text-navy dark:text-white font-bold mb-6" data-i18n="footer.company.title">Compañía</h5>
                     <ul class="space-y-4 text-sm text-charcoal dark:text-gray-400">
-                        <li><a class="hover:text-primary transition-colors" href="javascript:void(0)" data-i18n="footer.company.1">Sobre
+                        <li><a class="hover:text-primary transition-colors" href="javascript:void(0)"
+                                data-i18n="footer.company.1">Sobre
                                 Nuestra Firma</a></li>
                         <li><a class="hover:text-primary transition-colors" href="javascript:void(0)"
                                 data-i18n="footer.company.2">Portafolio de Proyectos</a></li>
@@ -492,11 +485,14 @@
                 class="pt-8 border-t border-gray-100 dark:border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-charcoal dark:text-gray-500 font-medium">
                 <p data-i18n="footer.rights">© 2024 Legado Ambiental. Todos los derechos reservados.</p>
                 <div class="flex gap-8">
-                    <a class="hover:text-primary transition-colors" href="javascript:void(0)" data-i18n="footer.privacy">Política de
+                    <a class="hover:text-primary transition-colors" href="javascript:void(0)"
+                        data-i18n="footer.privacy">Política de
                         Privacidad</a>
-                    <a class="hover:text-primary transition-colors" href="javascript:void(0)" data-i18n="footer.terms">Términos de
+                    <a class="hover:text-primary transition-colors" href="javascript:void(0)"
+                        data-i18n="footer.terms">Términos de
                         Servicio</a>
-                    <a class="hover:text-primary transition-colors" href="javascript:void(0)" data-i18n="footer.sitemap">Mapa del
+                    <a class="hover:text-primary transition-colors" href="javascript:void(0)"
+                        data-i18n="footer.sitemap">Mapa del
                         Sitio</a>
                 </div>
             </div>
