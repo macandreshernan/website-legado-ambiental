@@ -182,30 +182,43 @@
             </div>
         </section>
         <!-- Stats Section -->
-        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-12 relative z-20">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 -mt-12 relative z-20">
+            <!-- Grid: 1 column on mobile (auto-stack), 2 columns on desktop (centered) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+
+                <!-- Card 1: Experience -->
                 <div
-                    class="bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 rounded-xl p-8 shadow-xl flex items-center gap-6 transform hover:-translate-y-1 transition-transform">
-                    <div class="bg-primary/10 p-4 rounded-lg text-primary">
+                    class="group bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 rounded-2xl p-6 md:p-8 shadow-xl flex items-center justify-start gap-6 transform hover:-translate-y-2 transition-all duration-300">
+                    <!-- Icon Container: Circular with hover effect -->
+                    <div
+                        class="bg-primary/10 p-4 md:p-5 rounded-full text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300 flex-shrink-0">
                         <span class="material-symbols-outlined text-4xl">calendar_month</span>
                     </div>
-                    <div>
-                        <p class="text-charcoal dark:text-gray-400 text-sm font-semibold uppercase tracking-widest"
-                            data-i18n="stats.years">Años
-                            de Experiencia</p>
-                        <p class="text-navy dark:text-white text-4xl font-black">26+</p>
+                    <!-- Text Content -->
+                    <div class="text-left">
+                        <!-- Number: Large, bold, responsive size -->
+                        <p class="text-navy dark:text-white text-4xl md:text-5xl font-black mb-1">26+</p>
+                        <!-- Label: Secondary text, legible -->
+                        <p class="text-charcoal dark:text-gray-400 text-xs md:text-sm font-bold uppercase tracking-widest text-primary/80 leading-tight"
+                            data-i18n="stats.years">
+                            Años de Experiencia
+                        </p>
                     </div>
                 </div>
+
+                <!-- Card 2: Projects -->
                 <div
-                    class="bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 rounded-xl p-8 shadow-xl flex items-center gap-6 transform hover:-translate-y-1 transition-transform">
-                    <div class="bg-primary/10 p-4 rounded-lg text-primary">
+                    class="group bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 rounded-2xl p-6 md:p-8 shadow-xl flex items-center justify-start gap-6 transform hover:-translate-y-2 transition-all duration-300">
+                    <div
+                        class="bg-primary/10 p-4 md:p-5 rounded-full text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300 flex-shrink-0">
                         <span class="material-symbols-outlined text-4xl">domain</span>
                     </div>
-                    <div>
-                        <p class="text-charcoal dark:text-gray-400 text-sm font-semibold uppercase tracking-widest"
+                    <div class="text-left">
+                        <p class="text-navy dark:text-white text-4xl md:text-5xl font-black mb-1">15+</p>
+                        <p class="text-charcoal dark:text-gray-400 text-xs md:text-sm font-bold uppercase tracking-widest text-primary/80 leading-tight"
                             data-i18n="stats.projects">
-                            Proyectos Completados</p>
-                        <p class="text-navy dark:text-white text-4xl font-black">15+</p>
+                            Proyectos Completados
+                        </p>
                     </div>
                 </div>
 

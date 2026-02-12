@@ -290,3 +290,23 @@ Se unificó el diseño y funcionalidad del menú de navegación en todas las sub
 - `faq/contact_faq.html`
 - `project_portfolio_gallery/portfolio.html`
 - `services_overview/services.html`
+
+## Fase 11: Optimización de la Sección de Estadísticas
+
+Se rediseñó la sección de transparencia (Años de experiencia y Proyectos) en la página de inicio para corregir desbalances visuales y mejorar la experiencia en móviles.
+
+### 1. Reestructuración del Layout
+- **Grid Balanceado**: Se migró de un sistema de 3 columnas (con espacios vacíos) a un **Grid de 2 Columnas** centrado, proporcionando simetría perfecta en pantallas grandes.
+- **Restricción de Ancho**: Se aplicó `max-w-5xl` para evitar que las tarjetas se estiren excesivamente en monitores anchos.
+
+### 2. Optimización Móvil (Mobile-First)
+- **Apilamiento Vertical**: En dispositivos móviles, las tarjetas ahora ocupan el ancho completo y se apilan verticalmente para máxima legibilidad.
+- **Escalado Tipográfico**: Ajuste dinámico del tamaño de los números (`text-4xl` en móvil vs `text-5xl` en desktop) para evitar roturas de línea.
+- **Áreas Táctiles**: Aumento de padding y márgenes para facilitar la interacción táctil.
+
+### 3. Mejoras Visuales (UI)
+- **Glassmorphism Refinado**: Bordes más redondeados (`rounded-2xl`) y sombras profundas con efecto de elevación al pasar el cursor (Hover).
+- **Feedback Interactivo**: Los iconos cambian de color (relleno sólido) al interactuar con la tarjeta.
+
+### Archivos Modificados
+- `home.html`
