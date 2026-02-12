@@ -6,6 +6,11 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title data-i18n="portfolio_page.title">Portafolio de Proyectos | Legado Ambiental</title>
 
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://fonts.googleapis.com; img-src 'self' data: https://lh3.googleusercontent.com; connect-src 'self';">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+
     <!-- SEO & Social Media Meta Tags -->
     <meta name="description"
         content="Explore el portafolio de proyectos de ingeniería civil y sostenible de Legado Ambiental.">
@@ -73,43 +78,72 @@
 
 <body class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-white transition-colors duration-200">
     <div class="relative flex min-h-screen w-full flex-col">
-        <!-- Sticky Header with Backdrop Blur -->
+        <!-- Top Navigation Bar (Sticky Optimized) -->
         <header
-            class="flex items-center justify-center border-b border-solid border-[#f0f2f4] dark:border-gray-800 bg-white/95 dark:bg-background-dark/95 backdrop-blur-sm px-4 py-3 sticky top-0 z-50 transition-all shadow-sm">
-            <div class="flex w-full max-w-[1200px] items-center justify-between">
-                <div class="flex items-center gap-3 text-primary">
-                    <img src="../assets/images/logo_gral4_v1.1.png" alt="Legado Ambiental"
-                        class="h-16 w-auto object-contain">
-                    <h2 class="text-[#111418] dark:text-white text-xl font-bold leading-tight tracking-tight">Legado
-                        Ambiental</h2>
-                </div>
-                <div class="hidden md:flex flex-1 justify-end gap-8 items-center">
-                    <nav class="flex items-center gap-8">
-                        <a class="text-[#111418] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
+            class="sticky top-0 z-50 w-full bg-white/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800 shadow-sm transition-all duration-300">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-20">
+                    <div class="flex items-center gap-3">
+                        <img src="../assets/images/logo_gral4_v1.1.png" alt="Legado Ambiental"
+                            class="h-16 w-auto object-contain">
+                        <span class="text-navy dark:text-white text-xl font-black tracking-tight uppercase">Legado
+                            Ambiental</span>
+                    </div>
+                    <nav class="hidden md:flex items-center gap-8" aria-label="Main navigation">
+                        <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:text-primary transition-colors"
                             href="../home.html" data-i18n="nav.home">Inicio</a>
+                        <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:text-primary transition-colors"
+                            href="../about_us/about_us.html" data-i18n="nav.about">Quiénes Somos</a>
+                        <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:text-primary transition-colors"
+                            href="../services_overview/services.html" data-i18n="nav.services">Servicios</a>
                         <a class="text-primary text-sm font-bold border-b-2 border-primary pb-1" href="#"
                             data-i18n="nav.portfolio">Portafolio</a>
-                        <a class="text-[#111418] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
-                            href="../services_overview/services.html" data-i18n="nav.services">Servicios</a>
-                        <a class="text-[#111418] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
+                        <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:text-primary transition-colors"
                             href="../experience_timeline/our_experience.html" data-i18n="nav.experience">Experiencia</a>
-                        <a class="text-[#111418] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
+                        <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:text-primary transition-colors"
                             href="../faq/contact_faq.html" data-i18n="nav.contact">Contacto</a>
                     </nav>
                     <div class="hidden md:flex items-center gap-4">
                         <div class="flex items-center gap-2 mr-4">
-                            <button class="text-sm font-semibold hover:text-primary transition-colors text-primary"
+                            <button class="text-sm font-semibold hover:text-primary transition-colors"
                                 data-switch-lang="es-MX">ES</button>
                             <span class="text-gray-300">|</span>
                             <button class="text-sm font-semibold hover:text-primary transition-colors"
                                 data-switch-lang="en-US">EN</button>
                         </div>
                         <button
-                            class="flex min-w-[120px] cursor-pointer items-center justify-center rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold shadow-sm hover:bg-primary/90 transition-all focus:ring-2 focus:ring-primary focus:ring-offset-2"
-                            data-i18n="cta.start_btn">
-                            Iniciar Proyecto
+                            class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-lg text-sm font-bold tracking-wide transition-all shadow-md focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                            data-i18n="nav.quote">
+                            Cotizar
                         </button>
                     </div>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn"
+                        class="md:hidden text-navy dark:text-white p-2 hover:text-primary transition-colors">
+                        <span class="material-symbols-outlined text-3xl">menu</span>
+                    </button>
+                </div>
+
+                <!-- Mobile Navigation Menu -->
+                <div id="mobile-menu"
+                    class="hidden md:hidden absolute top-20 left-0 w-full bg-white dark:bg-background-dark border-b border-gray-200 dark:border-gray-800 shadow-xl py-4 px-4 flex-col gap-4">
+                    <a class="text-navy dark:text-gray-300 text-base font-semibold hover:text-primary transition-colors py-2 border-b border-gray-100 dark:border-gray-800"
+                        href="../home.html">Inicio</a>
+                    <a class="text-navy dark:text-gray-300 text-base font-semibold hover:text-primary transition-colors py-2 border-b border-gray-100 dark:border-gray-800"
+                        href="../about_us/about_us.html">Quiénes Somos</a>
+                    <a class="text-navy dark:text-gray-300 text-base font-semibold hover:text-primary transition-colors py-2 border-b border-gray-100 dark:border-gray-800"
+                        href="../services_overview/services.html">Servicios</a>
+                    <a class="text-navy dark:text-gray-300 text-base font-semibold hover:text-primary transition-colors py-2 border-b border-gray-100 dark:border-gray-800"
+                        href="../project_portfolio_gallery/portfolio.html">Portafolio</a>
+                    <a class="text-navy dark:text-gray-300 text-base font-semibold hover:text-primary transition-colors py-2 border-b border-gray-100 dark:border-gray-800"
+                        href="../experience_timeline/our_experience.html">Experiencia</a>
+                    <a class="text-navy dark:text-gray-300 text-base font-semibold hover:text-primary transition-colors py-2 mb-2"
+                        href="../faq/contact_faq.html">Contacto</a>
+                    <button
+                        class="w-full bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg text-sm font-bold tracking-wide transition-all">
+                        Cotizar
+                    </button>
                 </div>
             </div>
         </header>
@@ -285,6 +319,34 @@
             </div>
         </footer>
     </div>
+    <script>
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = mobileMenu.querySelectorAll('a, button');
+
+        function toggleMenu() {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+        }
+
+        function closeMenu() {
+            mobileMenu.classList.add('hidden');
+            mobileMenu.classList.remove('flex');
+        }
+
+        menuBtn.addEventListener('click', () => {
+            if (mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.remove('hidden');
+                mobileMenu.classList.add('flex');
+            } else {
+                closeMenu();
+            }
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+    </script>
     <script src="../assets/js/i18n.js" data-base-path="../"></script>
 </body>
 
