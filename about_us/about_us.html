@@ -63,10 +63,13 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Merriweather:wght@300;400;700;900&display=swap"
     rel="stylesheet" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-    rel="stylesheet" />
-  <script src="../assets/js/theme-config.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Theme Persistance (Load early to prevent FOUC) -->
+    <script src="../assets/js/theme-toggle.js"></script>
+
+    <script src="../assets/js/theme-config.js"></script>
   <style type="text/tailwindcss">
     @layer base {
             .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
@@ -101,6 +104,11 @@
               href="../faq/contact_faq.html" data-i18n="nav.contact">Contacto</a>
           </nav>
           <div class="hidden md:flex items-center gap-4">
+            <!-- Theme Toggle -->
+            <button onclick="window.toggleDarkMode()" aria-label="Toggle Dark Mode"
+                class="theme-toggle-btn text-navy dark:text-gray-300 hover:text-primary transition-colors flex items-center justify-center p-1 rounded-full bg-gray-100 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary">
+                <span class="material-symbols-outlined text-[1.2rem]">dark_mode</span>
+            </button>
             <div class="flex items-center gap-2 mr-4">
               <button class="text-sm font-semibold hover:text-primary transition-colors"
                 data-switch-lang="es-MX">ES</button>
@@ -124,21 +132,29 @@
 
         <!-- Mobile Navigation Menu -->
         <div id="mobile-menu"
-          class="hidden md:hidden absolute top-20 left-0 w-full bg-white dark:bg-background-dark border-b border-gray-200 dark:border-gray-800 shadow-xl py-4 px-4 flex-col gap-4">
+          class="md:hidden absolute top-20 left-0 w-full bg-white dark:bg-background-dark border-b border-gray-200 dark:border-gray-800 shadow-xl py-4 px-4 flex-col gap-4 transform transition-all duration-300 origin-top opacity-0 scale-y-0 pointer-events-none flex">
           <a class="text-navy dark:text-gray-300 text-base font-semibold hover:text-primary transition-colors py-2 border-b border-gray-100 dark:border-gray-800"
-            href="../home.html">Inicio</a>
+            href="../home.html" data-i18n="nav.home">Inicio</a>
+          <a class="text-primary text-base font-bold bg-primary/10 rounded-md px-2 py-2 border-b border-gray-100 dark:border-gray-800"
+            href="../about_us/about_us.html" data-i18n="nav.about">Quiénes Somos</a>
           <a class="text-navy dark:text-gray-300 text-base font-semibold hover:text-primary transition-colors py-2 border-b border-gray-100 dark:border-gray-800"
-            href="../about_us/about_us.html">Quiénes Somos</a>
+            href="../services_overview/services.html" data-i18n="nav.services">Servicios</a>
           <a class="text-navy dark:text-gray-300 text-base font-semibold hover:text-primary transition-colors py-2 border-b border-gray-100 dark:border-gray-800"
-            href="../services_overview/services.html">Servicios</a>
+            href="../project_portfolio_gallery/portfolio.html" data-i18n="nav.portfolio">Portafolio</a>
           <a class="text-navy dark:text-gray-300 text-base font-semibold hover:text-primary transition-colors py-2 border-b border-gray-100 dark:border-gray-800"
-            href="../project_portfolio_gallery/portfolio.html">Portafolio</a>
-          <a class="text-navy dark:text-gray-300 text-base font-semibold hover:text-primary transition-colors py-2 border-b border-gray-100 dark:border-gray-800"
-            href="../experience_timeline/our_experience.html">Experiencia</a>
+            href="../experience_timeline/our_experience.html" data-i18n="nav.experience">Experiencia</a>
           <a class="text-navy dark:text-gray-300 text-base font-semibold hover:text-primary transition-colors py-2 mb-2"
-            href="../faq/contact_faq.html">Contacto</a>
+            href="../faq/contact_faq.html" data-i18n="nav.contact">Contacto</a>
+
+          <!-- Mobile Theme Toggle -->
+          <button onclick="window.toggleDarkMode()"
+            class="theme-toggle-btn flex items-center gap-2 text-left text-navy dark:text-gray-300 py-2 border-b border-gray-100 dark:border-gray-800">
+            <span class="material-symbols-outlined text-lg">dark_mode</span>
+            <span data-i18n="nav.theme" class="text-base font-semibold">Cambiar Tema</span>
+          </button>
+
           <button
-            class="w-full bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg text-sm font-bold tracking-wide transition-all">
+            class="w-full bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg text-sm font-bold tracking-wide transition-all" data-i18n="nav.quote">
             Cotizar
           </button>
         </div>
@@ -372,34 +388,40 @@
   </div>
   </div>
   <script>
+    // --- Mobile Menu Logic with Animation ---
     const menuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     const mobileLinks = mobileMenu.querySelectorAll('a, button');
+    let isMenuOpen = false;
 
     function toggleMenu() {
-      mobileMenu.classList.toggle('hidden');
-      mobileMenu.classList.toggle('flex');
+      isMenuOpen = !isMenuOpen;
+      if (isMenuOpen) {
+        mobileMenu.classList.remove('opacity-0', 'scale-y-0', 'pointer-events-none');
+        mobileMenu.classList.add('opacity-100', 'scale-y-100');
+      } else {
+        mobileMenu.classList.remove('opacity-100', 'scale-y-100');
+        mobileMenu.classList.add('opacity-0', 'scale-y-0', 'pointer-events-none');
+      }
     }
 
     function closeMenu() {
-      mobileMenu.classList.add('hidden');
-      mobileMenu.classList.remove('flex');
+      if (isMenuOpen) {
+        isMenuOpen = false;
+        mobileMenu.classList.remove('opacity-100', 'scale-y-100');
+        mobileMenu.classList.add('opacity-0', 'scale-y-0', 'pointer-events-none');
+      }
     }
 
-    menuBtn.addEventListener('click', () => {
-      if (mobileMenu.classList.contains('hidden')) {
-        mobileMenu.classList.remove('hidden');
-        mobileMenu.classList.add('flex');
-      } else {
-        closeMenu();
-      }
-    });
-
-    mobileLinks.forEach(link => {
-      link.addEventListener('click', closeMenu);
-    });
+    menuBtn.addEventListener('click', toggleMenu);
+    mobileLinks.forEach(link => link.addEventListener('click', closeMenu));
   </script>
   <script src="../assets/js/i18n.js" data-base-path="../"></script>
+
+  <!-- Animaciones AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="../assets/js/scroll-animate.js"></script>
+  <script src="../assets/js/reading-progress.js"></script>
 </body>
 
 </html>

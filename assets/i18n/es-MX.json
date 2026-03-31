@@ -6,7 +6,8 @@
         "experience": "Experiencia",
         "contact": "Contacto",
         "faq": "FAQ",
-        "quote": "Cotizar"
+        "quote": "Cotizar",
+        "theme": "Cambiar Tema"
     },
     "hero": {
         "title": "Ingeniería Ambiental y Desarrollo Sostenible.",
@@ -280,5 +281,10 @@
     "index_landing": {
         "title": "Legado Ambiental",
         "welcome": "Bienvenido al proyecto de preservación ambiental."
+    },
+    "error_404": {
+        "title": "404 - Página no encontrada",
+        "desc": "Lo sentimos, la página que buscas no existe o ha sido movida.",
+        "btn": "Volver al Inicio"
     }
 }

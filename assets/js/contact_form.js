@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (phoneInput) {
         // Enforce max length programmatically (also in HTML)
         phoneInput.addEventListener('input', (e) => {
-            let value = e.target.value.replace(/\D/g, ''); // Remove non-digits
+            let value = e.target.value.replaceAll(/\D/g, ''); // Remove non-digits
 
             // Prevent starting with 0 or 1 (LADA rule)
             if (value.length > 0 && (value[0] === '0' || value[0] === '1')) {
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function validatePhone(input) {
-        const rawValue = input.value.replace(/\D/g, '');
+        const rawValue = input.value.replaceAll(/\D/g, '');
         const errorSpan = document.getElementById('phone-error');
 
         // Simple check: must be exactly 10 digits
@@ -88,65 +88,49 @@ document.addEventListener('DOMContentLoaded', () => {
         return isValid;
     }
 
-    // --- 3. Math Captcha ---
-    const captchaContainer = document.getElementById('captcha-container');
-    let captchaResult = 0;
-
-    if (captchaContainer) {
-        generateCaptcha();
-    }
-
-    function generateCaptcha() {
-        const num1 = Math.floor(Math.random() * 10) + 1; // 1-10
-        const num2 = Math.floor(Math.random() * 10) + 1; // 1-10
-        captchaResult = num1 + num2;
-
-        const numbersSpan = document.getElementById('captcha-numbers');
-        if (numbersSpan) {
-            numbersSpan.textContent = `${num1} + ${num2} = ?`;
-        }
-    }
-
-    // Exposed for re-generation if needed, but for now we just run it on load.
-    // We removed the complex updateCaptchaLabel logic aimed at i18n since we now use a separate span.
-    function updateCaptchaLabel() {
-        // No-op for now, kept for API compatibility if called elsewhere or later extended.
-    }
-
-    // --- 4. Submit Handling ---
+    // --- 3. Submit Handling ---
     form.addEventListener('submit', (e) => {
+        e.preventDefault(); // Siempre prevenimos el reload para UX fluida
         let isValid = true;
 
+        // Validaciones básicas de regex
         if (!validatePhone(phoneInput)) isValid = false;
         if (!validateEmail(emailInput)) isValid = false;
 
-        const captchaInput = document.getElementById('captcha-input');
-        const captchaError = document.getElementById('captcha-error');
-
-        if (parseInt(captchaInput.value) !== captchaResult) {
-            isValid = false;
-            captchaInput.classList.add('border-red-500');
-            if (captchaError) captchaError.classList.remove('hidden');
-        } else {
-            captchaInput.classList.remove('border-red-500');
-            if (captchaError) captchaError.classList.add('hidden');
+        // --- Honeypot Validation (Anti-spam) ---
+        const honeypotInput = document.getElementById('website_url');
+        if (honeypotInput && honeypotInput.value.trim() !== '') {
+            // Es un bot, silently reject sin dar pistas
+            console.warn("Spam detectado (Honeypot).");
+            // Mostramos éxito falso para despistar al bot
+            if (globalThis.ToastService) {
+                globalThis.ToastService.show('Mensaje enviado correctamente.', 'success');
+            }
+            form.reset();
+            return;
         }
 
         if (!isValid) {
-            e.preventDefault(); // Block submission
-        } else {
-            // In a real app, this would submit. Since it's static/demo:
-            alert("Validación exitosa (Simulación de envío)");
-            e.preventDefault(); // Stop actual reload for demo purposes? Or let it go?
-            // User prompt didn't say to stop reload, but verify functionality.
-            // We'll let it execute default if valid to see the reload/action behavior or just block to show success.
-            // Let's block to keep context.
+            // Error de usuario real
+            if (globalThis.ToastService) {
+                globalThis.ToastService.show('Por favor revisa los campos en rojo.', 'error');
+            }
+            return;
         }
+
+        // Si es válido y humano:
+        submitBtn.disabled = true;
+        const originalText = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<span class="material-symbols-outlined animate-spin text-lg">autorenew</span> Enviando...';
+
+        // Fake API Call Delay
+        setTimeout(() => {
+            if (globalThis.ToastService) {
+                globalThis.ToastService.show('¡Su mensaje ha sido enviado con éxito! Nos pondremos en contacto pronto.', 'success', 5000);
+            }
+            form.reset();
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalText;
+        }, 1200);
     });
 });
-
-// Expose generation to global if needed for i18n re-trigger
-window.generateCaptcha = function () {
-    // Logic to refresh numbers if needed
-    // Not strictly required if we separate DOM elements
-};
