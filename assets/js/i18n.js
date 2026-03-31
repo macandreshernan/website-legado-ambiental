@@ -143,9 +143,10 @@ const translations = {
             "title": "Nuestros Servicios Especializados de Ingeniería y Construcción",
             "hero_desc": "Ofrecemos soluciones de infraestructura y construcción sostenible adaptadas tanto para la iniciativa privada como para iniciativas gubernamentales en la región.",
             "tabs": {
-                "all": "Todos los Servicios",
-                "private": "Sector Privado",
-                "public": "Obras Públicas"
+                "engeneering": "Ingeniería Ambiental",
+                "building": "Construcción",
+                "topography": "Topografía",
+                "safety": "Seguridad e Higiene"
             },
             "private": {
                 "title": "Construcción Privada",
@@ -720,11 +721,11 @@ function updateActiveLanguageUI(lang) {
     // Update style of active button
     document.querySelectorAll('[data-switch-lang]').forEach(btn => {
         if (btn.getAttribute('data-switch-lang') === lang) {
-            btn.classList.add('text-primary'); // Active style from Tailwind
-            btn.classList.remove('text-gray-500'); // Assuming inactive style
+            btn.classList.add('text-primary', 'font-bold');
+            btn.classList.remove('text-gray-500', 'dark:text-gray-400', 'font-normal');
         } else {
-            btn.classList.remove('text-primary');
-            btn.classList.add('text-gray-500'); // Assuming inactive style if we had one
+            btn.classList.remove('text-primary', 'font-bold');
+            btn.classList.add('text-gray-500', 'dark:text-gray-400', 'font-normal');
         }
     });
 }

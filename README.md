@@ -310,3 +310,87 @@ Se rediseñó la sección de transparencia (Años de experiencia y Proyectos) en
 
 ### Archivos Modificados
 - `home.html`
+
+## Fase 12: Pestañas Interactivas y Categorización de Servicios
+
+Se implementó un sistema de navegación por pestañas (Tabs) en la página principal de servicios, dotando a la interfaz de mayor dinamismo y permitiendo agrupar la oferta de valor de la compañía en categorías claras sin saturar la pantalla.
+
+### 1. Sistema de Pestañas (Tabs)
+- **Navegación Dinámica**: Se transformaron los enlaces estáticos en botones interactivos controlados por JavaScript (`switchTab`).
+- **Transiciones Suaves**: Se incorporaron clases de *Tailwind CSS* (`transition-opacity`, `duration-300`, `opacity-0` a `opacity-100`) para lograr un recambio de contenido fluido y estilizado al alternar entre secciones.
+
+### 2. Categorización de Contenido
+- **Expansión de Servicios**: Se definieron 4 grandes divisiones estratégicas:
+    1. **Ingeniería Ambiental** (Activo por defecto)
+    2. **Construcción**
+    3. **Topografía**
+    4. **Seguridad e Higiene**
+- **Nuevas Tarjetas (Cards)**: Se generaron 12 nuevas tarjetas de servicios (3 categorías adicionales) conservando estrictamente el lenguaje de diseño UI original (*Glassmorphism*, *hover effects*, escalas y bordes redondeados).
+- **Iconografía Consistente**: Se asignaron íconos específicos de *Material Symbols* para cada nuevo servicio (ej. `house`, `satellite_alt`, `health_and_safety`), garantizando coherencia visual en todo el documento.
+
+### Archivos Modificados
+- `services_overview/services.html`
+
+## Fase 13: Auditoría UI/UX y Estandarización de Interfaz
+
+Se enfocó en unificar comportamientos interactivos, mejorar la experiencia de usuario general (navegación y accesibilidad) y avanzar significativamente en el mapeo de internacionalización del sitio.
+
+### 1. Sistema de Filtrado de Portafolio
+- **Lógica Refactorizada**: Se actualizó el motor de filtrado en `portfolio.html` empleando atributos nativos (`dataset`) en lugar de funciones anidadas redundantes, reduciendo la complejidad cognitiva y resolviendo alertas de calidad de código (*SonarQube/Clean Code*).
+- **UX Consistente**: Transiciones suaves al filtrar las categorías de los proyectos (Infraestructura, Comercial, etc.).
+
+### 2. Navegación Móvil (Animaciones Fluidas)
+- **Nuevas Animaciones**: Se rediseñó el menú en dispositivos móviles para abandonar los cambios bruscos de estado (`display: hidden/flex`). Ahora utiliza transformaciones CSS (`opacity-0 scale-y-0` a `opacity-100 scale-y-100`) para lograr un cierre y apertura gradual y elegante.
+- **Implementación Global**: Aplicado a todas las páginas clave (`home.html`, `about_us.html`, `services.html`, `portfolio.html`, `our_experience.html`, `contact_faq.html`).
+- **Estado Activo (Active State)**: El menú móvil ahora marca visualmente (color verde primario, fondo destacado) sobre qué página se encuentra posicionado el usuario actualmente, mejorando notablemente la orientación espacial.
+
+### 3. Acordeones Modernos (FAQ)
+- **Semántica HTML5**: Transformación de divs estáticos y pesados en `contact_faq.html` a etiquetas nativas estructuradas (`<details>` y `<summary>`).
+- **Comportamiento Nativo**: Resolución de problemas de espacio vertical, permitiendo al usuario comprimir o expandir preguntas de forma accesible, estándar y controlada por el propio navegador.
+
+### 4. Accesibilidad e Internacionalización Global
+- **Lints de Accesibilidad**: Integración de `<fieldset>` y `<legend>` alrededor de grupos de opciones (radio buttons) de contacto. Asociación directa de `<label>` con inputs para asistencia por lectores de pantalla.
+- **Estandarización i18n (Textos)**:
+  - Adición minuciosa de los atributos `data-i18n` faltantes dentro de los enlaces de menú móviles para todas las secciones.
+  - El script administrador de internacionalización (`assets/js/i18n.js`) fue actualizado para resaltar nítidamente la selección de idioma (ES/EN) activo usando `font-bold` y color primario (Verde), mejorando la retroalimentación de estado.
+
+### Archivos Modificados
+- `assets/js/i18n.js`
+- `home.html`
+- `about_us/about_us.html`
+- `services_overview/services.html`
+- `project_portfolio_gallery/portfolio.html`
+- `experience_timeline/our_experience.html`
+- `faq/contact_faq.html`
+
+## Fase 14: Optimización Empresarial y Reducción de Fricción UX
+
+Se implementó una serie de características avanzadas enfocadas en posicionar el sitio a nivel corporativo, mejorando la seguridad, interactividad y optimización de carga sin comprometer el framerate.
+
+### 1. Sistema Dinámico de Tema (Dark/Light Mode)
+- **Persistencia Inteligente**: Se implementó `theme-toggle.js` con soporte para detectar preferencias del sistema operativo (`prefers-color-scheme`) y guardar la elección manual en `localStorage`.
+- **UI Consistente**: Botón de acción con iconos interactivos integrados en Desktop y Mobile, previniendo el Flash of Unstyled Content (FOUC) al ubicarse críticamente en el atributo `<head>`.
+
+### 2. Micro-Interacciones de Scroll (AOS)
+- **Animaciones Secuenciales**: Integración fluida de la librería AOS (*Animate On Scroll*) vía CDN.
+- **Instrumentación Automatizada**: El script `scroll-animate.js` se encarga de aplicar los atributos `data-aos` a grid containers e identificadores clave sin saturar u obstaculizar la semántica en el HTML estático.
+
+### 3. Fricción Cero en Contacto (Honeypot + Toasts)
+- **Reemplazo de Math Captcha**: El antiguo método numérico agresivo se sustituyó por una técnica de **Honeypot**. Un campo oculto invisible al ojo humano engaña a los bots, validando transparentemente a favor de los usuarios reales.
+- **Notificaciones Asíncronas**: Eliminación de las alertas arcaicas del navegador (`alert`) reemplazándolas por notificaciones emergentes Toast construidas totalmente sobre el motor de Tailwind en `toast-service.js`.
+
+### 4. Optimizadores de Interfaz y Carga
+- **Indicador de Lectura**: Desarrollo e integración de `reading-progress.js`, una fina barra en la parte superior que monitorea dinámicamente el scroll de la página para acompañar lecturas largas (ej. Quiénes Somos y Servicios).
+- **Skeleton Loaders Inteligentes**: Las fotografías de alto peso en `portfolio.html` (.webp) ahora muestran contenedores pulsantes al cargar (`animate-pulse`). Las utilidades de `image-loader.js` extraen y finalizan la animación sólo cuando la textura está 100% lista en DOM.
+- **Página 404 Responsiva**: Diseño completo de `404.html` para un manejo de errores robusto y coherente con el mapa de i18n y la capa de estilos principal.
+
+### Archivos Nuevos y Modificados
+- `assets/js/theme-toggle.js`
+- `assets/js/scroll-animate.js`
+- `assets/js/toast-service.js`
+- `assets/js/reading-progress.js`
+- `assets/js/image-loader.js`
+- `assets/js/contact_form.js`
+- `404.html`
+- `assets/i18n/es-MX.json` y `en-US.json`
+- Todas las páginas maestras HTML.
