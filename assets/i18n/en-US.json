@@ -6,7 +6,8 @@
         "experience": "Experience",
         "contact": "Contact",
         "faq": "FAQ",
-        "quote": "Get a Quote"
+        "quote": "Get a Quote",
+        "theme": "Toggle Theme"
     },
     "hero": {
         "title": "Building Infrastructure, Sustaining the Future.",
@@ -278,7 +279,12 @@
         }
     },
     "index_landing": {
-        "title": "Legado Ambiental",
+        "title": "Environmental Legacy",
         "welcome": "Welcome to the environmental preservation project."
+    },
+    "error_404": {
+        "title": "404 - Page Not Found",
+        "desc": "Sorry, the page you are looking for does not exist or has been moved.",
+        "btn": "Return to Home"
     }
 }
