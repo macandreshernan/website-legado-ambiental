@@ -354,7 +354,8 @@ Se enfocó en unificar comportamientos interactivos, mejorar la experiencia de u
   - Adición minuciosa de los atributos `data-i18n` faltantes dentro de los enlaces de menú móviles para todas las secciones.
   - El script administrador de internacionalización (`assets/js/i18n.js`) fue actualizado para resaltar nítidamente la selección de idioma (ES/EN) activo usando `font-bold` y color primario (Verde), mejorando la retroalimentación de estado.
 
-### Archivos Modificados
+### Archivos Afectados
+
 - `assets/js/i18n.js`
 - `home.html`
 - `about_us/about_us.html`
@@ -385,6 +386,7 @@ Se implementó una serie de características avanzadas enfocadas en posicionar e
 - **Página 404 Responsiva**: Diseño completo de `404.html` para un manejo de errores robusto y coherente con el mapa de i18n y la capa de estilos principal.
 
 ### Archivos Nuevos y Modificados
+
 - `assets/js/theme-toggle.js`
 - `assets/js/scroll-animate.js`
 - `assets/js/toast-service.js`
@@ -394,3 +396,16 @@ Se implementó una serie de características avanzadas enfocadas en posicionar e
 - `404.html`
 - `assets/i18n/es-MX.json` y `en-US.json`
 - Todas las páginas maestras HTML.
+
+## Fase 15: Integración de Deep Linking para Navegación de Pestañas
+
+Se implementó un sistema de ruteo nativo con anclaje (Hash) para conectar las tarjetas visuales de la "Página de Inicio" con el módulo de "Servicios y Pestañas", reduciendo la fricción de búsqueda (Clicks-To-Value).
+
+### 1. Intercepción de Hash en DOMContentLoaded
+- **Lectura Automática**: El script principal de `services.html` ahora intercepta la carga de la página, leyendo la métrica `window.location.hash`. Extrae dinámicamente el índice numérico destino usando Regex (`/#tab-(\d+)/`).
+- **Scroll Inteligente**: Adicionalmente a desplegar visualmente la pestaña correcta según el ancla, un micro-retraso (`setTimeout`) autodesplaza al usuario suavemente (Smooth Scroll) hacia las tarjetas informativas esquivando el Header fijo.
+
+### Listado de Archivos Modificados
+
+- `home.html`
+- `services_overview/services.html`
