@@ -63,7 +63,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Merriweather:wght@300;400;700;900&display=swap"
         rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <!-- Theme Persistance (Load early to prevent FOUC) -->
@@ -149,7 +151,7 @@
                     href="faq/contact_faq.html" data-i18n="nav.contact">Contacto</a>
                 <a class="text-navy dark:text-gray-300 text-base font-semibold hover:text-primary transition-colors py-2 mb-2"
                     href="faq/contact_faq.html" data-i18n="nav.faq">FAQ</a>
-                
+
                 <!-- Mobile Theme Toggle -->
                 <button onclick="window.toggleDarkMode()"
                     class="theme-toggle-btn flex items-center gap-2 text-left text-navy dark:text-gray-300 py-2 border-b border-gray-100 dark:border-gray-800">
@@ -158,7 +160,8 @@
                 </button>
 
                 <button
-                    class="w-full bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg text-sm font-bold tracking-wide transition-all" data-i18n="nav.quote">
+                    class="w-full bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg text-sm font-bold tracking-wide transition-all"
+                    data-i18n="nav.quote">
                     Cotizar
                 </button>
             </div>
@@ -279,9 +282,9 @@
                         Ofrecemos consultoría integral en ingeniería y medio ambiente para diversos sectores.
                     </p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Service 1: Gestión de Residuos -->
-                    <div
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Service 1: Ingeniería Ambiental -->
+                    <div id="service-section-1"
                         class="group relative bg-white dark:bg-gray-900 rounded-2xl p-8 border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">
                         <!-- Decorative Background Element -->
                         <div
@@ -291,21 +294,22 @@
                         <!-- Icon Container -->
                         <div
                             class="relative mb-6 inline-flex items-center justify-center w-16 h-16 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-                            <span class="material-symbols-outlined text-3xl">delete_sweep</span>
+                            <span class="material-symbols-outlined text-3xl">engineering</span>
                         </div>
 
                         <!-- Content -->
                         <h3
                             class="relative text-xl font-bold text-navy dark:text-white mb-3 font-serif group-hover:text-primary transition-colors">
-                            Gestión de Residuos
+                            Ingeniería Ambiental
                         </h3>
                         <p class="relative text-charcoal dark:text-gray-400 text-sm leading-relaxed mb-6 font-sans">
-                            Soluciones integrales para la recolección, transporte y disposición final de residuos
-                            industriales y urbanos.
+                            Somos una firma de ingeniería especializada en medio ambiente, integrada por un equipo
+                            interdisciplinario de profesionales con amplia experiencia en estudios, proyectos,
+                            construcción y consultoría ambiental.
                         </p>
 
                         <!-- Action Link -->
-                        <a href="services_overview/services.html"
+                        <a href="services_overview/services.html#tab-1"
                             class="relative inline-flex items-center text-sm font-bold text-primary group-hover:text-primary-dark transition-colors">
                             <span data-i18n="services.details">Conocer más</span>
                             <span
@@ -315,25 +319,26 @@
                         </a>
                     </div>
 
-                    <!-- Service 2: Tratamiento de Agua -->
-                    <div
+                    <!-- Service 2: Construcción -->
+                    <div id="service-section-2"
                         class="group relative bg-white dark:bg-gray-900 rounded-2xl p-8 border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">
                         <div
                             class="absolute top-0 right-0 w-32 h-32 bg-gray-50 dark:bg-gray-800 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150 group-hover:bg-primary/10">
                         </div>
                         <div
                             class="relative mb-6 inline-flex items-center justify-center w-16 h-16 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-                            <span class="material-symbols-outlined text-3xl">water_drop</span>
+                            <span class="material-symbols-outlined text-3xl">construction</span>
                         </div>
                         <h3
                             class="relative text-xl font-bold text-navy dark:text-white mb-3 font-serif group-hover:text-primary transition-colors">
-                            Tratamiento de Agua
+                            Construcción
                         </h3>
                         <p class="relative text-charcoal dark:text-gray-400 text-sm leading-relaxed mb-6 font-sans">
-                            Diseño e implementación de plantas de tratamiento y sistemas de purificación para
-                            recuperación de recursos hídricos.
+                            infraestructura, desarrollo urbano, vivienda, obra pública y privada, así como consultorías
+                            técnicas especializadas, participando en todas las etapas del proyecto: planeación,
+                            ejecución, supervisión y cierre técnico–administrativo.
                         </p>
-                        <a href="services_overview/services.html"
+                        <a href="services_overview/services.html#tab-2"
                             class="relative inline-flex items-center text-sm font-bold text-primary group-hover:text-primary-dark transition-colors">
                             <span data-i18n="services.details">Conocer más</span>
                             <span
@@ -343,25 +348,26 @@
                         </a>
                     </div>
 
-                    <!-- Service 3: Consultoría Técnica -->
-                    <div
+                    <!-- Service 3: Topografía -->
+                    <div id="service-section-3"
                         class="group relative bg-white dark:bg-gray-900 rounded-2xl p-8 border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">
                         <div
                             class="absolute top-0 right-0 w-32 h-32 bg-gray-50 dark:bg-gray-800 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150 group-hover:bg-primary/10">
                         </div>
                         <div
                             class="relative mb-6 inline-flex items-center justify-center w-16 h-16 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-                            <span class="material-symbols-outlined text-3xl">engineering</span>
+                            <span class="material-symbols-outlined text-3xl">map</span>
                         </div>
                         <h3
                             class="relative text-xl font-bold text-navy dark:text-white mb-3 font-serif group-hover:text-primary transition-colors">
-                            Consultoría Técnica
+                            Topografía
                         </h3>
                         <p class="relative text-charcoal dark:text-gray-400 text-sm leading-relaxed mb-6 font-sans">
-                            Asesoría especializada en normativa ambiental, estudios de impacto y optimización de
-                            procesos sostenibles.
+                            Brindamos servicios topográficos de alta precisión para proyectos de infraestructura, obra
+                            civil, urbanización, transporte y edificación, apoyados en tecnología moderna y metodologías
+                            estandarizadas.
                         </p>
-                        <a href="services_overview/services.html"
+                        <a href="services_overview/services.html#tab-3"
                             class="relative inline-flex items-center text-sm font-bold text-primary group-hover:text-primary-dark transition-colors">
                             <span data-i18n="services.details">Conocer más</span>
                             <span
@@ -370,6 +376,36 @@
                             </span>
                         </a>
                     </div>
+                    <!-- Service 4: Seguridad y Salud en el Trabajo (SST) -->
+                    <div id="service-section-4"
+                        class="group relative bg-white dark:bg-gray-900 rounded-2xl p-8 border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+                        <div
+                            class="absolute top-0 right-0 w-32 h-32 bg-gray-50 dark:bg-gray-800 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150 group-hover:bg-primary/10">
+                        </div>
+                        <div
+                            class="relative mb-6 inline-flex items-center justify-center w-16 h-16 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                            <span class="material-symbols-outlined text-3xl">safety_check</span>
+                        </div>
+                        <h3
+                            class="relative text-xl font-bold text-navy dark:text-white mb-3 font-serif group-hover:text-primary transition-colors">
+                            Seguridad y Salud en el Trabajo (SST)
+                        </h3>
+                        <p class="relative text-charcoal dark:text-gray-400 text-sm leading-relaxed mb-6 font-sans">
+                            En Legado Ambiental, transformamos la operatividad de sus proyectos integrando seguridad,
+                            eficiencia administrativa y cumplimiento legal. Bajo la Dirección de Operaciones y
+                            Cumplimiento Integral, ofrecemos soluciones robustas para los sectores de la construcción y
+                            el medio ambiente.
+                        </p>
+                        <a href="services_overview/services.html#tab-4"
+                            class="relative inline-flex items-center text-sm font-bold text-primary group-hover:text-primary-dark transition-colors">
+                            <span data-i18n="services.details">Conocer más</span>
+                            <span
+                                class="material-symbols-outlined text-sm ml-2 transform group-hover:translate-x-1 transition-transform">
+                                arrow_forward
+                            </span>
+                        </a>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -560,7 +596,7 @@
         mobileLinks.forEach(link => link.addEventListener('click', closeMenu));
     </script>
     <script src="assets/js/i18n.js"></script>
-    
+
     <!-- Animaciones AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="assets/js/scroll-animate.js"></script>
