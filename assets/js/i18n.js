@@ -40,21 +40,21 @@ const translations = {
             "label": "Lo que hacemos",
             "title": "Nuestros Servicios Especializados",
             "desc": "Ofrecemos consultoría integral en ingeniería y medio ambiente para diversos sectores.",
-            "civil": {
-                "title": "Ingeniería Civil",
-                "desc": "Diagnóstico, diseño, planeación, ejecución, supervisión y auditorías de obras."
-            },
-            "env": {
+            "s1": {
                 "title": "Ingeniería Ambiental",
-                "desc": "Prácticas de construcción sostenible y mitigación del impacto ambiental."
+                "desc": "Somos una firma de ingeniería especializada en medio ambiente, integrada por un equipo interdisciplinario de profesionales con amplia experiencia en estudios, proyectos, construcción y consultoría ambiental."
             },
-            "mgmt": {
-                "title": "Servicios de Topografía",
-                "desc": "Servicios de alta precisión para infraestructura y edificación, apoyados en tecnología moderna y metodologías estandarizadas."
+            "s2": {
+                "title": "Construcción",
+                "desc": "Infraestructura, desarrollo urbano, vivienda, obra pública y privada, así como consultorías técnicas especializadas, participando en todas las etapas del proyecto: planeación, ejecución, supervisión y cierre técnico–administrativo."
             },
-            "gov": {
-                "title": "Servicios de Seguridad e Higiene",
-                "desc": "Transformamos la operatividad de sus proyectos integrando seguridad, eficiencia administrativa y cumplimiento legal."
+            "s3": {
+                "title": "Topografía",
+                "desc": "Brindamos servicios topográficos de alta precisión para proyectos de infraestructura, obra civil, urbanización, transporte y edificación, apoyados en tecnología moderna y metodologías estandarizadas."
+            },
+            "s4": {
+                "title": "Seguridad e Higiene",
+                "desc": "En Legado Ambiental, transformamos la operatividad de sus proyectos integrando seguridad, eficiencia administrativa y cumplimiento legal. Bajo la Dirección de Operaciones y Cumplimiento Integral, ofrecemos soluciones robustas para los sectores de la construcción y el medio ambiente."
             },
             "details": "Detalles"
         },
@@ -78,27 +78,31 @@ const translations = {
             "download_btn": "Descargar Portafolio"
         },
         "footer": {
-            "desc": "Definiendo la excelencia en el entorno construido mientras preservamos el legado natural de nuestro planeta.",
+            "title": "Legado Ambiental <br>S.A. de C.V.",
+            "desc": "Soluciones holísticas para el desarrollo de infraestructura y cumplimiento normativo.",
             "services": {
                 "title": "Servicios",
-                "1": "Ingeniería Civil",
-                "2": "Impacto Ambiental",
-                "3": "Diseño de Infraestructura",
-                "4": "Desarrollo Urbano"
+                "1": "Ingeniería Ambiental",
+                "2": "Construcción",
+                "3": "Topografía",
+                "4": "Seguridad e Higiene"
             },
             "company": {
                 "title": "Compañía",
-                "1": "Sobre Nuestra Firma",
-                "2": "Portafolio de Proyectos",
-                "3": "Certificaciones",
-                "4": "Oportunidades Laborales"
+                "1": "Quiénes somos",
+                "2": "Servicios",
+                "3": "Portafolio",
+                "4": "Contacto"
             },
             "contact": {
                 "title": "Contacto",
-                "addr_1": "Engineering Plaza, Suite 400",
-                "addr_2": "International Business District"
+                "addr_1": "U.H. Valle de Ecatepec, C.P. 55119",
+                "addr_2": "Ecatepec, Estado de México",
+                "phone_1": "72 8282 1439",
+                "phone_2": "72 2672 7212",
+                "email": "<strong>legado.ambiental.mx@gmail.com</strong>"
             },
-            "rights": "© 2024 Legado Ambiental. Todos los derechos reservados.",
+            "rights": "<strong>© 2026 Legado Ambiental S.A. de C.V. <br>Todos los derechos reservados.</strong>",
             "privacy": "Política de Privacidad",
             "terms": "Términos de Servicio",
             "sitemap": "Mapa del Sitio"
@@ -107,12 +111,12 @@ const translations = {
             "title": "Quiénes Somos",
             "hero": {
                 "title": "Quiénes Somos",
-                "subtitle": "Definiendo el paisaje de la ingeniería civil a través de la integridad, precisión y un compromiso con la infraestructura sostenible."
+                "subtitle": "Somos una firma de ingeniería especializada en medio ambiente, integrada por un equipo interdisciplinario"
             },
             "sustainable": {
                 "title": "Construyendo un Legado Sostenible",
-                "p1": "Fundada en 2010, Legado Ambiental se ha establecido como una piedra angular de la excelencia en ingeniería tanto en el sector público como en el privado. Nos especializamos en proyectos de infraestructura complejos que exigen alta competencia técnica y sensibilidad ambiental.",
-                "p2": "Nuestro enfoque combina la maestría en ingeniería tradicional con tecnologías sostenibles modernas, asegurando que cada proyecto que emprendemos sirva a la comunidad para las generaciones venideras."
+                "p1": "Legado Ambiental, S.A. de C.V. es una empresa mexicana fundada en 1999 con sede en la Ciudad de México, especializada en prestación de servicios profesionales en los ámbitos de la ingeniería ambiental, construcción, topografía y seguridad e higiene en obra, como una respuesta a la creciente necesidad de lograr una alta compatibilidad entre las actividades productivas, la prevención, control de la contaminación ambiental y la preservación de los recursos naturales, orientado al desarrollo sostenible.",
+                "p2": "Somos una firma de ingeniería especializada en medio ambiente, integrada por un equipo interdisciplinario de profesionales con amplia experiencia en estudios, proyectos, construcción y consultoría ambiental. Por más de dos décadas hemos colaborado con los sectores industrial, gubernamental y de servicios en el diseño y aplicación de soluciones de ingeniería ambiental técnica, económica y ambientalmente factibles."
             },
             "mission": {
                 "title": "Misión",
@@ -338,21 +342,21 @@ const translations = {
             "label": "What We Do",
             "title": "Our Specialized Services",
             "desc": "We offer comprehensive options in engineering and environment for various sectors.",
-            "civil": {
-                "title": "Civil Engineering",
-                "desc": "Structural design and heavy civil works for industrial and public infrastructure."
+            "s1": {
+                "title": "Environmental Engineering",
+                "desc": "We are an engineering firm specialized in the environment, integrated by an interdisciplinary team of professionals with extensive experience in environmental studies, projects, construction, and consulting."
             },
-            "env": {
-                "title": "Environmental Legacy",
-                "desc": "Sustainable construction practices and environmental impact mitigation."
+            "s2": {
+                "title": "Construction",
+                "desc": "Infrastructure, urban development, housing, public and private works, as well as specialized technical consulting, participating in all stages of the project: planning, execution, supervision, and technical-administrative closure."
             },
-            "mgmt": {
-                "title": "Project Management",
-                "desc": "Integral management ensuring schedules, budgets, and safety standards."
+            "s3": {
+                "title": "Topography",
+                "desc": "We provide high-precision topographic services for infrastructure, civil works, urbanization, transport, and building projects, supported by modern technology and standardized methodologies."
             },
-            "gov": {
-                "title": "Government Projects",
-                "desc": "Specialized solutions for municipal and federal public works tenders."
+            "s4": {
+                "title": "Health & Safety",
+                "desc": "At Legado Ambiental, we transform the operability of your projects by integrating safety, administrative efficiency, and legal compliance. Under the Direction of Operations and Comprehensive Compliance, we offer robust solutions for the construction and environmental sectors."
             },
             "details": "Details"
         },
