@@ -90,7 +90,7 @@
     <div class="relative flex min-h-screen w-full flex-col">
         <!-- Top Navigation Bar (Sticky Optimized) -->
         <header
-            class="sticky top-0 z-50 w-full bg-white/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800 shadow-sm transition-all duration-300">
+            class="sticky top-4 z-50 w-[calc(100%-2rem)] max-w-[1200px] mx-auto bg-white/85 dark:bg-[#121c27]/80 backdrop-blur-xl border border-gray-100 dark:border-white/10 rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-all duration-300">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex justify-between items-center h-20">
                     <div class="flex items-center gap-3">
@@ -100,17 +100,17 @@
                             Ambiental</span>
                     </div>
                     <nav class="hidden md:flex items-center gap-8" aria-label="Main navigation">
-                        <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:text-primary transition-colors"
+                        <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors"
                             href="../home.html" data-i18n="nav.home">Inicio</a>
-                        <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:text-primary transition-colors"
+                        <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors"
                             href="../about_us/about_us.html" data-i18n="nav.about">Quiénes Somos</a>
-                        <a class="text-primary text-sm font-bold border-b-2 border-primary pb-1" href="#"
-                            data-i18n="nav.services">Servicios</a>
-                        <!-- <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:text-primary transition-colors"
+                        <a class="bg-primary/10 text-primary text-sm font-bold rounded-xl px-4 py-2 transition-all"
+                            href="#" data-i18n="nav.services">Servicios</a>
+                        <!-- <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors"
                             href="../project_portfolio_gallery/portfolio.html" data-i18n="nav.portfolio">Portafolio</a> -->
-                        <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:text-primary transition-colors"
+                        <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors"
                             href="../experience_timeline/our_experience.html" data-i18n="nav.experience">Experiencia</a>
-                        <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:text-primary transition-colors"
+                        <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors"
                             href="../faq/contact_faq.html" data-i18n="nav.contact">Contacto</a>
                     </nav>
                     <div class="hidden md:flex items-center gap-4">
@@ -142,18 +142,18 @@
 
                 <!-- Mobile Navigation Menu -->
                 <div id="mobile-menu"
-                    class="md:hidden absolute top-20 left-0 w-full bg-white dark:bg-background-dark border-b border-gray-200 dark:border-gray-800 shadow-xl py-4 px-4 flex-col gap-4 transform transition-all duration-300 origin-top opacity-0 scale-y-0 pointer-events-none flex">
-                    <a class="text-navy dark:text-gray-300 text-base font-semibold hover:text-primary transition-colors py-2 border-b border-gray-100 dark:border-gray-800"
+                    class="md:hidden absolute top-24 left-0 w-full bg-white/95 dark:bg-[#121c27]/95 backdrop-blur-xl rounded-2xl border border-gray-100 dark:border-white/10 shadow-2xl py-4 px-4 flex-col gap-2 transform transition-all duration-300 origin-top opacity-0 scale-y-0 pointer-events-none flex">
+                    <a class="text-navy dark:text-gray-300 text-base font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-3 transition-colors"
                         href="../home.html" data-i18n="nav.home">Inicio</a>
-                    <a class="text-navy dark:text-gray-300 text-base font-semibold hover:text-primary transition-colors py-2 border-b border-gray-100 dark:border-gray-800"
+                    <a class="text-navy dark:text-gray-300 text-base font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-3 transition-colors"
                         href="../about_us/about_us.html" data-i18n="nav.about">Quiénes Somos</a>
-                    <a class="text-primary text-base font-bold bg-primary/10 rounded-md px-2 py-2 border-b border-gray-100 dark:border-gray-800"
+                    <a class="text-primary text-base font-bold bg-primary/10 rounded-xl px-4 py-3"
                         href="../services_overview/services.html" data-i18n="nav.services">Servicios</a>
-                    <!-- <a class="text-navy dark:text-gray-300 text-base font-semibold hover:text-primary transition-colors py-2 border-b border-gray-100 dark:border-gray-800"
+                    <!-- <a class="text-navy dark:text-gray-300 text-base font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-3 transition-colors"
                         href="../project_portfolio_gallery/portfolio.html" data-i18n="nav.portfolio">Portafolio</a> -->
-                    <a class="text-navy dark:text-gray-300 text-base font-semibold hover:text-primary transition-colors py-2 border-b border-gray-100 dark:border-gray-800"
+                    <a class="text-navy dark:text-gray-300 text-base font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-3 transition-colors"
                         href="../experience_timeline/our_experience.html" data-i18n="nav.experience">Experiencia</a>
-                    <a class="text-navy dark:text-gray-300 text-base font-semibold hover:text-primary transition-colors py-2 mb-2"
+                    <a class="text-navy dark:text-gray-300 text-base font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-3 transition-colors"
                         href="../faq/contact_faq.html" data-i18n="nav.contact">Contacto</a>
 
                     <!-- Mobile Theme Toggle -->
@@ -172,64 +172,116 @@
             </div>
         </header>
         <main class="flex-1 flex flex-col items-center">
-            <div class="w-full max-w-[1200px] px-4 md:px-10 pt-6">
-                <nav class="flex" aria-label="Breadcrumb">
-                    <ol class="inline-flex items-center space-x-1 md:space-x-3">
-                        <li class="inline-flex items-center">
-                            <a href="../home.html"
-                                class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-primary dark:text-gray-400 dark:hover:text-white">
-                                <span class="material-symbols-outlined text-lg mr-2">home</span>
-                                Inicio
-                            </a>
-                        </li>
-                        <li aria-current="page">
-                            <div class="flex items-center">
-                                <span class="material-symbols-outlined text-gray-400 mx-1">chevron_right</span>
-                                <span
-                                    class="ml-1 text-sm font-medium text-gray-500 md:ml-2 dark:text-gray-400">Servicios</span>
-                            </div>
-                        </li>
-                    </ol>
-                </nav>
-            </div>
-            <!-- Hero Header Section -->
-            <div class="w-full max-w-[1200px] px-4 md:px-10 py-12 md:py-20">
+            <!-- Hero Section con Efecto Hover Dinámico y Glassmorphism -->
+            <section class="w-full max-w-[1200px] mx-auto pt-6 px-4">
                 <div class="@container">
-                    <div class="flex flex-col gap-6 text-center max-w-3xl mx-auto">
-                        <h1 class="text-[#111418] dark:text-white text-4xl font-black leading-tight tracking-tight md:text-5xl"
-                            data-i18n="services_page.title">
-                            Nuestros Servicios Especializados de Ingeniería y Construcción
-                        </h1>
-                        <p class="text-gray-600 dark:text-gray-400 text-base md:text-lg leading-relaxed"
-                            data-i18n="services_page.hero_desc">
-                            Ofrecemos soluciones de infraestructura y construcción sostenible adaptadas tanto para la
-                            iniciativa privada como para iniciativas gubernamentales en la región.
-                        </p>
+                    <div class="group relative flex flex-col justify-end overflow-hidden rounded-xl min-h-[450px] shadow-2xl transition-all duration-700 cursor-default"
+                        style="background-color: #101922;">
+                        <!-- Background Image -->
+                        <div class="absolute inset-0 z-0 bg-cover bg-right-top origin-top-right transition-all duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] transform scale-105 opacity-85 group-hover:opacity-100 group-hover:scale-100"
+                            style="background-image: url('../assets/images/services/servicios-legado-ambiental-2026.webp');">
+                        </div>
+
+                        <!-- Gradiente de fondo suavizado -->
+                        <div
+                            class="absolute inset-0 z-0 bg-gradient-to-t from-[#101922]/50 via-[#101922]/10 to-transparent transition-opacity duration-1000 opacity-100 pointer-events-none">
+                        </div>
+
+                        <!-- Glassmorphism Text Container -->
+                        <div
+                            class="relative z-10 p-8 md:p-12 md:pb-16 max-w-4xl self-start md:ml-8 mb-4 bg-[#101922]/40 backdrop-blur-md border border-white/10 rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.5)] transition-all duration-700 ease-in-out group-hover:bg-[#101922]/70 group-hover:border-primary/40 group-hover:backdrop-blur-xl transform translate-y-2 group-hover:translate-y-0">
+
+                            <nav class="flex mb-6" aria-label="Breadcrumb">
+                                <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                                    <li class="inline-flex items-center">
+                                        <a href="../home.html"
+                                            class="inline-flex items-center text-sm font-medium text-gray-300 hover:text-white transition-colors">
+                                            <span class="material-symbols-outlined text-lg mr-2">home</span>
+                                            <span data-i18n="nav.home">Inicio</span>
+                                        </a>
+                                    </li>
+                                    <li aria-current="page">
+                                        <div class="flex items-center">
+                                            <span
+                                                class="material-symbols-outlined text-gray-400 mx-1">chevron_right</span>
+                                            <span class="ml-1 text-sm font-medium text-primary"
+                                                data-i18n="nav.services">Servicios</span>
+                                        </div>
+                                    </li>
+                                </ol>
+                            </nav>
+
+                            <h1 class="text-white text-4xl md:text-5xl lg:text-5xl font-black leading-tight tracking-tight mb-4 drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]"
+                                data-i18n="services_page.title">
+                                Nuestros Servicios Especializados<br />de Ingeniería y Construcción
+                            </h1>
+                            <div
+                                class="w-16 h-1 bg-primary mb-4 transition-all duration-700 group-hover:w-32 group-hover:bg-blue-400 rounded-full">
+                            </div>
+                            <p class="text-blue-50 text-lg max-w-2xl font-medium drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]"
+                                data-i18n="services_page.hero_desc">
+                                Ofrecemos soluciones de infraestructura y construcción sostenible adaptadas tanto para
+                                la
+                                iniciativa privada como para iniciativas gubernamentales en la región.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Methodology Showcase Section -->
+            <div class="w-full max-w-[1200px] mx-auto px-4 md:px-10 mt-12 md:mt-16 relative z-20">
+                <div
+                    class="bg-white dark:bg-[#121c27] rounded-3xl p-6 md:p-10 shadow-[0_10px_40px_rgba(0,0,0,0.06)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.3)] border border-slate-100 dark:border-white/5 overflow-hidden relative group">
+                    <div
+                        class="absolute -top-20 -right-20 w-64 h-64 bg-primary/10 dark:bg-primary/20 rounded-full blur-[60px] pointer-events-none z-0 transition-transform duration-700 group-hover:scale-125">
+                    </div>
+                    <div
+                        class="absolute -bottom-20 -left-20 w-64 h-64 bg-emerald-500/5 dark:bg-emerald-500/10 rounded-full blur-[60px] pointer-events-none z-0 transition-transform duration-700 group-hover:scale-125">
+                    </div>
+
+                    <div class="relative z-10 flex flex-col items-center mb-8">
+                        <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2"
+                            data-i18n="services_page.methodology.subtitle">Proceso Ejecutivo</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-[#111418] dark:text-white text-center"
+                            data-i18n="services_page.methodology.title">Nuestra Metodología Estratégica</h2>
+                        <div
+                            class="w-20 h-1 bg-primary mt-4 rounded-full transition-all duration-500 group-hover:w-32 group-hover:bg-blue-400">
+                        </div>
+                    </div>
+
+                    <div
+                        class="relative z-10 w-full flex justify-center bg-slate-50 dark:bg-[#1a2530] rounded-2xl p-4 md:p-10 border border-slate-200 dark:border-gray-800 shadow-inner">
+                        <img src="../assets/images/services/metodologia-estructurada-legado-2026.webp"
+                            alt="Metodología Estratégica de Legado Ambiental"
+                            class="w-full max-w-5xl h-auto object-contain drop-shadow-xl rounded-xl transition-transform duration-700 hover:scale-[1.02]">
                     </div>
                 </div>
             </div>
+
             <!-- Tabs Section -->
-            <div class="w-full max-w-[1200px] px-4 md:px-10">
-                <div class="flex border-b border-[#dbe0e6] dark:border-gray-800 gap-8 overflow-x-auto no-scrollbar">
+            <div class="w-full max-w-[1200px] mx-auto px-4 md:px-10 mt-12 md:mt-16 mb-8 relative z-20">
+                <div
+                    class="bg-gray-50/80 dark:bg-[#1a2530]/80 backdrop-blur-md rounded-2xl p-2 border border-gray-100 dark:border-gray-800 shadow-sm flex gap-2 overflow-x-auto no-scrollbar">
                     <button id="tab-btn-1" data-tab="1"
-                        class="tab-btn flex flex-col items-center justify-center border-b-[3px] border-primary text-primary pb-3 pt-4 transition-colors whitespace-nowrap focus:outline-none">
+                        class="tab-btn flex flex-col items-center justify-center rounded-xl px-6 py-3 bg-primary text-white shadow-[0_4px_16px_rgba(16,185,129,0.30)] transition-all duration-300 whitespace-nowrap focus:outline-none">
                         <p class="text-sm font-bold tracking-wide" data-i18n="services_page.tabs.engeneering">Ingeniería
                             Ambiental</p>
                     </button>
                     <button id="tab-btn-2" data-tab="2"
-                        class="tab-btn flex flex-col items-center justify-center border-b-[3px] border-transparent text-[#617589] dark:text-gray-400 hover:text-primary pb-3 pt-4 transition-colors whitespace-nowrap focus:outline-none">
+                        class="tab-btn flex flex-col items-center justify-center rounded-xl px-6 py-3 text-[#617589] dark:text-gray-400 hover:text-[#111418] dark:hover:text-white hover:bg-gray-200 dark:hover:bg-[#253240] transition-all duration-300 whitespace-nowrap focus:outline-none">
                         <p class="text-sm font-bold tracking-wide" data-i18n="services_page.tabs.private.building">
                             Construcción
                         </p>
                     </button>
                     <button id="tab-btn-3" data-tab="3"
-                        class="tab-btn flex flex-col items-center justify-center border-b-[3px] border-transparent text-[#617589] dark:text-gray-400 hover:text-primary pb-3 pt-4 transition-colors whitespace-nowrap focus:outline-none">
+                        class="tab-btn flex flex-col items-center justify-center rounded-xl px-6 py-3 text-[#617589] dark:text-gray-400 hover:text-[#111418] dark:hover:text-white hover:bg-gray-200 dark:hover:bg-[#253240] transition-all duration-300 whitespace-nowrap focus:outline-none">
                         <p class="text-sm font-bold tracking-wide" data-i18n="services_page.tabs.public.topography">
                             Topografía
                         </p>
                     </button>
                     <button id="tab-btn-4" data-tab="4"
-                        class="tab-btn flex flex-col items-center justify-center border-b-[3px] border-transparent text-[#617589] dark:text-gray-400 hover:text-primary pb-3 pt-4 transition-colors whitespace-nowrap focus:outline-none">
+                        class="tab-btn flex flex-col items-center justify-center rounded-xl px-6 py-3 text-[#617589] dark:text-gray-400 hover:text-[#111418] dark:hover:text-white hover:bg-gray-200 dark:hover:bg-[#253240] transition-all duration-300 whitespace-nowrap focus:outline-none">
                         <p class="text-sm font-bold tracking-wide" data-i18n="services_page.tabs.safety">Seguridad e
                             Higiene
                         </p>
@@ -244,13 +296,13 @@
                     class="tab-section grid grid-cols-1 md:grid-cols-2 gap-8 transition-opacity duration-300 opacity-100">
                     <!-- Service 1: Gestión Integral de Residuos (Sólidos y Peligrosos) -->
                     <div
-                        class="group relative bg-white dark:bg-[#1a2530] rounded-xl overflow-hidden shadow-sm border border-[#e5e7eb] dark:border-gray-800 hover:shadow-xl transition-all duration-300">
+                        class="group relative bg-white dark:bg-[#121c27] rounded-3xl overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.06)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.3)] border border-slate-100 dark:border-white/5 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] transition-all duration-500">
                         <div
-                            class="absolute top-0 right-0 w-32 h-32 bg-gray-50 dark:bg-gray-800 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150 group-hover:bg-primary/10">
+                            class="absolute -top-20 -right-20 w-48 h-48 bg-primary/10 dark:bg-primary/20 rounded-full blur-[50px] group-hover:scale-150 transition-transform duration-700 pointer-events-none">
                         </div>
                         <div class="p-8 flex flex-col h-full relative z-10">
                             <div
-                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white group-hover:rotate-6 group-hover:scale-110 shadow-sm border border-primary/10 transition-all duration-500">
                                 <span class="material-symbols-outlined text-3xl">delete_sweep</span>
                             </div>
                             <h3
@@ -302,13 +354,13 @@
 
                     <!-- Service 2: Ingeniería Hídrica y Soluciones de Agua -->
                     <div
-                        class="group relative bg-white dark:bg-[#1a2530] rounded-xl overflow-hidden shadow-sm border border-[#e5e7eb] dark:border-gray-800 hover:shadow-xl transition-all duration-300">
+                        class="group relative bg-white dark:bg-[#121c27] rounded-3xl overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.06)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.3)] border border-slate-100 dark:border-white/5 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] transition-all duration-500">
                         <div
-                            class="absolute top-0 right-0 w-32 h-32 bg-gray-50 dark:bg-gray-800 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150 group-hover:bg-primary/10">
+                            class="absolute -top-20 -right-20 w-48 h-48 bg-primary/10 dark:bg-primary/20 rounded-full blur-[50px] group-hover:scale-150 transition-transform duration-700 pointer-events-none">
                         </div>
                         <div class="p-8 flex flex-col h-full relative z-10">
                             <div
-                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white group-hover:rotate-6 group-hover:scale-110 shadow-sm border border-primary/10 transition-all duration-500">
                                 <span class="material-symbols-outlined text-3xl">water_drop</span>
                             </div>
                             <h3
@@ -349,13 +401,13 @@
 
                     <!-- Service 3: Consultoría, Dictámenes y Cumplimiento Legal -->
                     <div
-                        class="group relative bg-white dark:bg-[#1a2530] rounded-xl overflow-hidden shadow-sm border border-[#e5e7eb] dark:border-gray-800 hover:shadow-xl transition-all duration-300">
+                        class="group relative bg-white dark:bg-[#121c27] rounded-3xl overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.06)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.3)] border border-slate-100 dark:border-white/5 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] transition-all duration-500">
                         <div
-                            class="absolute top-0 right-0 w-32 h-32 bg-gray-50 dark:bg-gray-800 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150 group-hover:bg-primary/10">
+                            class="absolute -top-20 -right-20 w-48 h-48 bg-primary/10 dark:bg-primary/20 rounded-full blur-[50px] group-hover:scale-150 transition-transform duration-700 pointer-events-none">
                         </div>
                         <div class="p-8 flex flex-col h-full relative z-10">
                             <div
-                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white group-hover:rotate-6 group-hover:scale-110 shadow-sm border border-primary/10 transition-all duration-500">
                                 <span class="material-symbols-outlined text-3xl">balance</span>
                             </div>
                             <h3
@@ -391,13 +443,13 @@
 
                     <!-- Service 4: Fortalecimiento de Capacidades -->
                     <div
-                        class="group relative bg-white dark:bg-[#1a2530] rounded-xl overflow-hidden shadow-sm border border-[#e5e7eb] dark:border-gray-800 hover:shadow-xl transition-all duration-300">
+                        class="group relative bg-white dark:bg-[#121c27] rounded-3xl overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.06)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.3)] border border-slate-100 dark:border-white/5 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] transition-all duration-500">
                         <div
-                            class="absolute top-0 right-0 w-32 h-32 bg-gray-50 dark:bg-gray-800 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150 group-hover:bg-primary/10">
+                            class="absolute -top-20 -right-20 w-48 h-48 bg-primary/10 dark:bg-primary/20 rounded-full blur-[50px] group-hover:scale-150 transition-transform duration-700 pointer-events-none">
                         </div>
                         <div class="p-8 flex flex-col h-full relative z-10">
                             <div
-                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white group-hover:rotate-6 group-hover:scale-110 shadow-sm border border-primary/10 transition-all duration-500">
                                 <span class="material-symbols-outlined text-3xl">school</span>
                             </div>
                             <h3
@@ -429,13 +481,13 @@
                 <div id="tab-section-2"
                     class="tab-section hidden grid-cols-1 md:grid-cols-2 gap-8 transition-opacity duration-300 opacity-0">
                     <div
-                        class="group relative bg-white dark:bg-[#1a2530] rounded-xl overflow-hidden shadow-sm border border-[#e5e7eb] dark:border-gray-800 hover:shadow-xl transition-all duration-300">
+                        class="group relative bg-white dark:bg-[#121c27] rounded-3xl overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.06)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.3)] border border-slate-100 dark:border-white/5 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] transition-all duration-500">
                         <div
-                            class="absolute top-0 right-0 w-32 h-32 bg-gray-50 dark:bg-gray-800 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150 group-hover:bg-primary/10">
+                            class="absolute -top-20 -right-20 w-48 h-48 bg-primary/10 dark:bg-primary/20 rounded-full blur-[50px] group-hover:scale-150 transition-transform duration-700 pointer-events-none">
                         </div>
                         <div class="p-8 flex flex-col h-full relative z-10">
                             <div
-                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white group-hover:rotate-6 group-hover:scale-110 shadow-sm border border-primary/10 transition-all duration-500">
                                 <span class="material-symbols-outlined text-3xl">house</span>
                             </div>
                             <h3
@@ -474,13 +526,13 @@
                         </div>
                     </div>
                     <div
-                        class="group relative bg-white dark:bg-[#1a2530] rounded-xl overflow-hidden shadow-sm border border-[#e5e7eb] dark:border-gray-800 hover:shadow-xl transition-all duration-300">
+                        class="group relative bg-white dark:bg-[#121c27] rounded-3xl overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.06)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.3)] border border-slate-100 dark:border-white/5 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] transition-all duration-500">
                         <div
-                            class="absolute top-0 right-0 w-32 h-32 bg-gray-50 dark:bg-gray-800 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150 group-hover:bg-primary/10">
+                            class="absolute -top-20 -right-20 w-48 h-48 bg-primary/10 dark:bg-primary/20 rounded-full blur-[50px] group-hover:scale-150 transition-transform duration-700 pointer-events-none">
                         </div>
                         <div class="p-8 flex flex-col h-full relative z-10">
                             <div
-                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white group-hover:rotate-6 group-hover:scale-110 shadow-sm border border-primary/10 transition-all duration-500">
                                 <span class="material-symbols-outlined text-3xl">flood</span>
                             </div>
                             <h3
@@ -514,13 +566,13 @@
                         </div>
                     </div>
                     <div
-                        class="group relative bg-white dark:bg-[#1a2530] rounded-xl overflow-hidden shadow-sm border border-[#e5e7eb] dark:border-gray-800 hover:shadow-xl transition-all duration-300">
+                        class="group relative bg-white dark:bg-[#121c27] rounded-3xl overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.06)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.3)] border border-slate-100 dark:border-white/5 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] transition-all duration-500">
                         <div
-                            class="absolute top-0 right-0 w-32 h-32 bg-gray-50 dark:bg-gray-800 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150 group-hover:bg-primary/10">
+                            class="absolute -top-20 -right-20 w-48 h-48 bg-primary/10 dark:bg-primary/20 rounded-full blur-[50px] group-hover:scale-150 transition-transform duration-700 pointer-events-none">
                         </div>
                         <div class="p-8 flex flex-col h-full relative z-10">
                             <div
-                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white group-hover:rotate-6 group-hover:scale-110 shadow-sm border border-primary/10 transition-all duration-500">
                                 <span class="material-symbols-outlined text-3xl">architecture</span>
                             </div>
                             <h3
@@ -553,13 +605,13 @@
                         </div>
                     </div>
                     <div
-                        class="group relative bg-white dark:bg-[#1a2530] rounded-xl overflow-hidden shadow-sm border border-[#e5e7eb] dark:border-gray-800 hover:shadow-xl transition-all duration-300">
+                        class="group relative bg-white dark:bg-[#121c27] rounded-3xl overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.06)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.3)] border border-slate-100 dark:border-white/5 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] transition-all duration-500">
                         <div
-                            class="absolute top-0 right-0 w-32 h-32 bg-gray-50 dark:bg-gray-800 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150 group-hover:bg-primary/10">
+                            class="absolute -top-20 -right-20 w-48 h-48 bg-primary/10 dark:bg-primary/20 rounded-full blur-[50px] group-hover:scale-150 transition-transform duration-700 pointer-events-none">
                         </div>
                         <div class="p-8 flex flex-col h-full relative z-10">
                             <div
-                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white group-hover:rotate-6 group-hover:scale-110 shadow-sm border border-primary/10 transition-all duration-500">
                                 <span class="material-symbols-outlined text-3xl">engineering</span>
                             </div>
                             <h3
@@ -604,13 +656,13 @@
                 <div id="tab-section-3"
                     class="tab-section hidden grid-cols-1 md:grid-cols-2 gap-8 transition-opacity duration-300 opacity-0">
                     <div
-                        class="group relative bg-white dark:bg-[#1a2530] rounded-xl overflow-hidden shadow-sm border border-[#e5e7eb] dark:border-gray-800 hover:shadow-xl transition-all duration-300">
+                        class="group relative bg-white dark:bg-[#121c27] rounded-3xl overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.06)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.3)] border border-slate-100 dark:border-white/5 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] transition-all duration-500">
                         <div
-                            class="absolute top-0 right-0 w-32 h-32 bg-gray-50 dark:bg-gray-800 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150 group-hover:bg-primary/10">
+                            class="absolute -top-20 -right-20 w-48 h-48 bg-primary/10 dark:bg-primary/20 rounded-full blur-[50px] group-hover:scale-150 transition-transform duration-700 pointer-events-none">
                         </div>
                         <div class="p-8 flex flex-col h-full relative z-10">
                             <div
-                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white group-hover:rotate-6 group-hover:scale-110 shadow-sm border border-primary/10 transition-all duration-500">
                                 <span class="material-symbols-outlined text-3xl">map</span>
                             </div>
                             <h3
@@ -634,13 +686,13 @@
                         </div>
                     </div>
                     <div
-                        class="group relative bg-white dark:bg-[#1a2530] rounded-xl overflow-hidden shadow-sm border border-[#e5e7eb] dark:border-gray-800 hover:shadow-xl transition-all duration-300">
+                        class="group relative bg-white dark:bg-[#121c27] rounded-3xl overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.06)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.3)] border border-slate-100 dark:border-white/5 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] transition-all duration-500">
                         <div
-                            class="absolute top-0 right-0 w-32 h-32 bg-gray-50 dark:bg-gray-800 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150 group-hover:bg-primary/10">
+                            class="absolute -top-20 -right-20 w-48 h-48 bg-primary/10 dark:bg-primary/20 rounded-full blur-[50px] group-hover:scale-150 transition-transform duration-700 pointer-events-none">
                         </div>
                         <div class="p-8 flex flex-col h-full relative z-10">
                             <div
-                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white group-hover:rotate-6 group-hover:scale-110 shadow-sm border border-primary/10 transition-all duration-500">
                                 <span class="material-symbols-outlined text-3xl">satellite_alt</span>
                             </div>
                             <h3
@@ -664,13 +716,13 @@
                         </div>
                     </div>
                     <div
-                        class="group relative bg-white dark:bg-[#1a2530] rounded-xl overflow-hidden shadow-sm border border-[#e5e7eb] dark:border-gray-800 hover:shadow-xl transition-all duration-300">
+                        class="group relative bg-white dark:bg-[#121c27] rounded-3xl overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.06)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.3)] border border-slate-100 dark:border-white/5 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] transition-all duration-500">
                         <div
-                            class="absolute top-0 right-0 w-32 h-32 bg-gray-50 dark:bg-gray-800 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150 group-hover:bg-primary/10">
+                            class="absolute -top-20 -right-20 w-48 h-48 bg-primary/10 dark:bg-primary/20 rounded-full blur-[50px] group-hover:scale-150 transition-transform duration-700 pointer-events-none">
                         </div>
                         <div class="p-8 flex flex-col h-full relative z-10">
                             <div
-                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white group-hover:rotate-6 group-hover:scale-110 shadow-sm border border-primary/10 transition-all duration-500">
                                 <span class="material-symbols-outlined text-3xl">3d_rotation</span>
                             </div>
                             <h3
@@ -694,13 +746,13 @@
                         </div>
                     </div>
                     <div
-                        class="group relative bg-white dark:bg-[#1a2530] rounded-xl overflow-hidden shadow-sm border border-[#e5e7eb] dark:border-gray-800 hover:shadow-xl transition-all duration-300">
+                        class="group relative bg-white dark:bg-[#121c27] rounded-3xl overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.06)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.3)] border border-slate-100 dark:border-white/5 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] transition-all duration-500">
                         <div
-                            class="absolute top-0 right-0 w-32 h-32 bg-gray-50 dark:bg-gray-800 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150 group-hover:bg-primary/10">
+                            class="absolute -top-20 -right-20 w-48 h-48 bg-primary/10 dark:bg-primary/20 rounded-full blur-[50px] group-hover:scale-150 transition-transform duration-700 pointer-events-none">
                         </div>
                         <div class="p-8 flex flex-col h-full relative z-10">
                             <div
-                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white group-hover:rotate-6 group-hover:scale-110 shadow-sm border border-primary/10 transition-all duration-500">
                                 <span class="material-symbols-outlined text-3xl">fact_check</span>
                             </div>
                             <h3
@@ -729,13 +781,13 @@
                 <div id="tab-section-4"
                     class="tab-section hidden grid-cols-1 md:grid-cols-2 gap-8 transition-opacity duration-300 opacity-0">
                     <div
-                        class="group relative bg-white dark:bg-[#1a2530] rounded-xl overflow-hidden shadow-sm border border-[#e5e7eb] dark:border-gray-800 hover:shadow-xl transition-all duration-300">
+                        class="group relative bg-white dark:bg-[#121c27] rounded-3xl overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.06)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.3)] border border-slate-100 dark:border-white/5 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] transition-all duration-500">
                         <div
-                            class="absolute top-0 right-0 w-32 h-32 bg-gray-50 dark:bg-gray-800 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150 group-hover:bg-primary/10">
+                            class="absolute -top-20 -right-20 w-48 h-48 bg-primary/10 dark:bg-primary/20 rounded-full blur-[50px] group-hover:scale-150 transition-transform duration-700 pointer-events-none">
                         </div>
                         <div class="p-8 flex flex-col h-full relative z-10">
                             <div
-                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white group-hover:rotate-6 group-hover:scale-110 shadow-sm border border-primary/10 transition-all duration-500">
                                 <span class="material-symbols-outlined text-3xl">admin_panel_settings</span>
                             </div>
                             <h3
@@ -783,13 +835,13 @@
                         </div>
                     </div>
                     <div
-                        class="group relative bg-white dark:bg-[#1a2530] rounded-xl overflow-hidden shadow-sm border border-[#e5e7eb] dark:border-gray-800 hover:shadow-xl transition-all duration-300">
+                        class="group relative bg-white dark:bg-[#121c27] rounded-3xl overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.06)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.3)] border border-slate-100 dark:border-white/5 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] transition-all duration-500">
                         <div
-                            class="absolute top-0 right-0 w-32 h-32 bg-gray-50 dark:bg-gray-800 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150 group-hover:bg-primary/10">
+                            class="absolute -top-20 -right-20 w-48 h-48 bg-primary/10 dark:bg-primary/20 rounded-full blur-[50px] group-hover:scale-150 transition-transform duration-700 pointer-events-none">
                         </div>
                         <div class="p-8 flex flex-col h-full relative z-10">
                             <div
-                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white group-hover:rotate-6 group-hover:scale-110 shadow-sm border border-primary/10 transition-all duration-500">
                                 <span class="material-symbols-outlined text-3xl">health_and_safety</span>
                             </div>
                             <h3
@@ -824,13 +876,13 @@
                         </div>
                     </div>
                     <div
-                        class="group relative bg-white dark:bg-[#1a2530] rounded-xl overflow-hidden shadow-sm border border-[#e5e7eb] dark:border-gray-800 hover:shadow-xl transition-all duration-300">
+                        class="group relative bg-white dark:bg-[#121c27] rounded-3xl overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.06)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.3)] border border-slate-100 dark:border-white/5 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] transition-all duration-500">
                         <div
-                            class="absolute top-0 right-0 w-32 h-32 bg-gray-50 dark:bg-gray-800 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150 group-hover:bg-primary/10">
+                            class="absolute -top-20 -right-20 w-48 h-48 bg-primary/10 dark:bg-primary/20 rounded-full blur-[50px] group-hover:scale-150 transition-transform duration-700 pointer-events-none">
                         </div>
                         <div class="p-8 flex flex-col h-full relative z-10">
                             <div
-                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white group-hover:rotate-6 group-hover:scale-110 shadow-sm border border-primary/10 transition-all duration-500">
                                 <span class="material-symbols-outlined text-3xl">model_training</span>
                             </div>
                             <h3
@@ -914,8 +966,8 @@
                 <div class="flex gap-6">
                     <a class="text-[#617589] hover:text-primary transition-colors" href="#"><span
                             class="material-symbols-outlined">share</span></a>
-                    <a class="text-[#617589] hover:text-primary transition-colors" href="#"><span
-                            class="material-symbols-outlined">mail</span></a>
+                    <a class="text-[#617589] hover:text-primary transition-colors"
+                        href="../faq/contact_faq.html#tab-1"><span class="material-symbols-outlined">mail</span></a>
                     <a class="text-[#617589] hover:text-primary transition-colors" href="#"><span
                             class="material-symbols-outlined">location_on</span></a>
                 </div>
@@ -957,14 +1009,14 @@
             // Update Tab Buttons Styles
             const allTabs = document.querySelectorAll('.tab-btn');
             allTabs.forEach(tab => {
-                tab.classList.remove('border-primary', 'text-primary');
-                tab.classList.add('border-transparent', 'text-[#617589]', 'dark:text-gray-400', 'hover:text-primary');
+                tab.classList.remove('bg-primary', 'text-white', 'shadow-[0_4px_16px_rgba(16,185,129,0.30)]');
+                tab.classList.add('text-[#617589]', 'dark:text-gray-400', 'hover:text-[#111418]', 'dark:hover:text-white', 'hover:bg-gray-200', 'dark:hover:bg-[#253240]');
             });
 
             const activeTab = document.getElementById(`tab-btn-${tabIndex}`);
             if (activeTab) {
-                activeTab.classList.remove('border-transparent', 'text-[#617589]', 'dark:text-gray-400', 'hover:text-primary');
-                activeTab.classList.add('border-primary', 'text-primary');
+                activeTab.classList.remove('text-[#617589]', 'dark:text-gray-400', 'hover:text-[#111418]', 'dark:hover:text-white', 'hover:bg-gray-200', 'dark:hover:bg-[#253240]');
+                activeTab.classList.add('bg-primary', 'text-white', 'shadow-[0_4px_16px_rgba(16,185,129,0.30)]');
             }
 
             // Update Sections visibility with smooth transitions

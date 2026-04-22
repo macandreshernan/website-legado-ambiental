@@ -224,21 +224,35 @@
             "desc": "Explora los hitos que han definido nuestro crecimiento e impacto en la industria de la construcción durante la última década."
         },
         "timeline": {
-            "2024": {
-                "title": "Expansión Global",
-                "desc": "Legado Ambiental abrió su primera sede internacional, marcando un nuevo capítulo en nuestra misión de brindar soluciones sostenibles a escala global."
+            "item1": {
+                "label": "Industria",
+                "title": "Evaluación Ambiental - <strong>Grupo Serla</strong>",
+                "desc": "Estudio integral corporativo bajo la <strong>NOM-052-SEMARNAT</strong> (RPs), <strong>NOM-085</strong> (Emisiones) y las disposiciones del <strong>RCDF</strong>, asegurando operatividad sin externalidades negativas."
             },
-            "2020": {
-                "title": "La Iniciativa Sostenible",
-                "desc": "Lanzamos nuestro departamento de Consultoría Ecológica, integrando materiales verdes y prácticas de eficiencia energética en todos nuestros proyectos de construcción."
+            "item2": {
+                "label": "Hídrico",
+                "title": "Saneamiento - Río Tiloxtoc",
+                "desc": "Planeación, muestreo y mitigación conjunta con el <strong>CIITEC-IPN</strong> acorde a los lineamientos de la <strong>Ley de Aguas Nacionales</strong> y <strong>SEMARNAT</strong> para el rescate ecológico."
             },
-            "2015": {
-                "title": "Primer Contrato Gubernamental",
-                "desc": "Adjudicación de nuestro primer gran proyecto de infraestructura pública: la revitalización del sistema de carreteras del centro de la ciudad."
+            "item3": {
+                "label": "Academia",
+                "title": "Tecnología Sustentable - <strong>ITESM</strong>",
+                "desc": "Implementación de redes hidrosanitarias cerradas y Plantas de Tratamiento Paquete cumpliendo con las <strong>Normas Técnicas</strong> del <strong>Reglamento de Construcciones</strong> y el <strong>Tecnológico de Monterrey</strong>."
             },
-            "2010": {
-                "title": "Fundación",
-                "desc": "Legado Ambiental fue fundada por un equipo de cuatro ingenieros civiles apasionados por combinar la integridad estructural con la administración ambiental."
+            "item4": {
+                "label": "Especialidad",
+                "title": "Tratamiento Alta Eficiencia - <strong>IMMSA</strong>",
+                "desc": "Diseño estructural avanzado bajo requerimientos sísmicos y la <strong>NOM-001-SEMARNAT-1996</strong> para la máxima remoción fisicoquímica de metales pesados en el sector metalúrgico."
+            },
+            "item5": {
+                "label": "Salud",
+                "title": "Unidades Clínicas y Hospitales",
+                "desc": "Adecuación estructural catalogada como <strong>Grupo A</strong> (U=1.5) integrando alta bioseguridad bajo la <strong>NOM-087-ECOL-SSA1</strong> en materia de <strong>Residuos Peligrosos Biológico Infecciosos</strong>."
+            },
+            "item6": {
+                "label": "<strong>1999</strong>",
+                "title": "Fundación y Obras Civiles",
+                "desc": "Consolidación operacional operando en conjunto con el <strong>Título Sexto del RCDF</strong>, logrando una firme planeación empresarial equilibrada entre construcción y medio ambiente."
             }
         }
     },

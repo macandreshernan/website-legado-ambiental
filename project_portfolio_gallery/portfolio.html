@@ -85,8 +85,7 @@
 <body class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-white transition-colors duration-200">
     <div class="relative flex min-h-screen w-full flex-col">
         <!-- Top Navigation Bar (Sticky Optimized) -->
-        <header
-            class="sticky top-0 z-50 w-full bg-white/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800 shadow-sm transition-all duration-300">
+        <header class="sticky top-4 z-50 w-[calc(100%-2rem)] max-w-[1200px] mx-auto bg-white/85 dark:bg-[#121c27]/80 backdrop-blur-xl border border-gray-100 dark:border-white/10 rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-all duration-300">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex justify-between items-center h-20">
                     <div class="flex items-center gap-3">
@@ -96,17 +95,17 @@
                             Ambiental</span>
                     </div>
                     <nav class="hidden md:flex items-center gap-8" aria-label="Main navigation">
-                        <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:text-primary transition-colors"
+                        <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors"
                             href="../home.html" data-i18n="nav.home">Inicio</a>
-                        <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:text-primary transition-colors"
+                        <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors"
                             href="../about_us/about_us.html" data-i18n="nav.about">Quiénes Somos</a>
-                        <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:text-primary transition-colors"
+                        <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors"
                             href="../services_overview/services.html" data-i18n="nav.services">Servicios</a>
-                        <!--<a class="text-primary text-sm font-bold border-b-2 border-primary pb-1" href="#"
-                            data-i18n="nav.portfolio">Portafolio</a>-->
-                        <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:text-primary transition-colors"
+                        <!-- <a class="bg-primary/10 text-primary text-sm font-bold rounded-xl px-4 py-2 transition-all"
+                            href="#" data-i18n="nav.portfolio">Portafolio</a> -->
+                        <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors"
                             href="../experience_timeline/our_experience.html" data-i18n="nav.experience">Experiencia</a>
-                        <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:text-primary transition-colors"
+                        <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors"
                             href="../faq/contact_faq.html" data-i18n="nav.contact">Contacto</a>
                     </nav>
                     <div class="hidden md:flex items-center gap-4">
@@ -116,10 +115,10 @@
                             <span class="material-symbols-outlined text-[1.2rem]">dark_mode</span>
                         </button>
                         <div class="flex items-center gap-2 mr-4">
-                            <button class="text-sm font-semibold hover:text-primary transition-colors"
+                            <button class="text-sm font-semibold hover:text-primary transition-colors cursor-pointer"
                                 data-switch-lang="es-MX">ES</button>
                             <span class="text-gray-300">|</span>
-                            <button class="text-sm font-semibold hover:text-primary transition-colors"
+                            <button class="text-sm font-semibold hover:text-primary transition-colors cursor-pointer"
                                 data-switch-lang="en-US">EN</button>
                         </div>
                         <button
@@ -138,29 +137,29 @@
 
                 <!-- Mobile Navigation Menu -->
                 <div id="mobile-menu"
-                    class="md:hidden absolute top-20 left-0 w-full bg-white dark:bg-background-dark border-b border-gray-200 dark:border-gray-800 shadow-xl py-4 px-4 flex-col gap-4 transform transition-all duration-300 origin-top opacity-0 scale-y-0 pointer-events-none flex">
-                    <a class="text-navy dark:text-gray-300 text-base font-semibold hover:text-primary transition-colors py-2 border-b border-gray-100 dark:border-gray-800"
+                    class="md:hidden absolute top-24 left-0 w-full bg-white/95 dark:bg-[#121c27]/95 backdrop-blur-xl rounded-2xl border border-gray-100 dark:border-white/10 shadow-2xl py-4 px-4 flex-col gap-2 transform transition-all duration-300 origin-top opacity-0 scale-y-0 pointer-events-none flex">
+                    <a class="text-navy dark:text-gray-300 text-base font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-3 transition-colors"
                         href="../home.html" data-i18n="nav.home">Inicio</a>
-                    <a class="text-navy dark:text-gray-300 text-base font-semibold hover:text-primary transition-colors py-2 border-b border-gray-100 dark:border-gray-800"
+                    <a class="text-navy dark:text-gray-300 text-base font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-3 transition-colors"
                         href="../about_us/about_us.html" data-i18n="nav.about">Quiénes Somos</a>
-                    <a class="text-navy dark:text-gray-300 text-base font-semibold hover:text-primary transition-colors py-2 border-b border-gray-100 dark:border-gray-800"
+                    <a class="text-navy dark:text-gray-300 text-base font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-3 transition-colors"
                         href="../services_overview/services.html" data-i18n="nav.services">Servicios</a>
-                    <!--<a class="text-primary text-base font-bold bg-primary/10 rounded-md px-2 py-2 border-b border-gray-100 dark:border-gray-800"
-                        href="../project_portfolio_gallery/portfolio.html" data-i18n="nav.portfolio">Portafolio</a> -->
-                    <a class="text-navy dark:text-gray-300 text-base font-semibold hover:text-primary transition-colors py-2 border-b border-gray-100 dark:border-gray-800"
+                    <!-- <a class="text-primary text-base font-bold bg-primary/10 rounded-xl px-4 py-3"
+                        href="#" data-i18n="nav.portfolio">Portafolio</a> -->
+                    <a class="text-navy dark:text-gray-300 text-base font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-3 transition-colors"
                         href="../experience_timeline/our_experience.html" data-i18n="nav.experience">Experiencia</a>
-                    <a class="text-navy dark:text-gray-300 text-base font-semibold hover:text-primary transition-colors py-2 mb-2"
+                    <a class="text-navy dark:text-gray-300 text-base font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-3 transition-colors"
                         href="../faq/contact_faq.html" data-i18n="nav.contact">Contacto</a>
 
                     <!-- Mobile Theme Toggle -->
                     <button onclick="window.toggleDarkMode()"
-                        class="theme-toggle-btn flex items-center gap-2 text-left text-navy dark:text-gray-300 py-2 border-b border-gray-100 dark:border-gray-800">
+                        class="theme-toggle-btn flex items-center gap-2 text-left text-navy dark:text-gray-300 py-3 px-4 border-b border-gray-100 dark:border-gray-800 rounded-xl hover:bg-primary/5">
                         <span class="material-symbols-outlined text-lg">dark_mode</span>
                         <span data-i18n="nav.theme" class="text-base font-semibold">Cambiar Tema</span>
                     </button>
 
                     <button
-                        class="w-full bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg text-sm font-bold tracking-wide transition-all"
+                        class="w-full bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg text-base font-bold tracking-wide transition-all mt-2"
                         data-i18n="nav.quote">
                         Cotizar
                     </button>
@@ -176,14 +175,14 @@
                             <a href="../home.html"
                                 class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-primary dark:text-gray-400 dark:hover:text-white">
                                 <span class="material-symbols-outlined text-lg mr-2">home</span>
-                                Inicio
+                                <span data-i18n="nav.home">Inicio</span>
                             </a>
                         </li>
                         <li aria-current="page">
                             <div class="flex items-center">
                                 <span class="material-symbols-outlined text-gray-400 mx-1">chevron_right</span>
                                 <span
-                                    class="ml-1 text-sm font-medium text-gray-500 md:ml-2 dark:text-gray-400">Portafolio</span>
+                                    class="ml-1 text-sm font-medium text-gray-500 md:ml-2 dark:text-gray-400" data-i18n="nav.portfolio">Portafolio</span>
                             </div>
                         </li>
                     </ol>
@@ -196,28 +195,28 @@
                     comunidades.
                 </p>
             </div>
-            <!-- Filter Tabs -->
-            <div class="w-full max-w-[1200px] px-4 md:px-10 mb-8">
-                <div id="filter-buttons" class="flex gap-4 overflow-x-auto pb-2 scrollbar-hide">
+            <!-- Filter Tabs (Pill Segmented Control) -->
+            <div class="w-full max-w-[1200px] px-4 md:px-10 mb-10 flex justify-center lg:justify-start">
+                <div id="filter-buttons" class="bg-gray-50/80 dark:bg-[#1a2530]/80 backdrop-blur-md rounded-2xl p-2 border border-gray-100 dark:border-gray-800 shadow-sm flex gap-2 overflow-x-auto no-scrollbar max-w-[100vw]">
                     <button
-                        class="px-6 py-2 bg-[#111418] dark:bg-white text-white dark:text-[#111418] text-sm font-bold rounded-full whitespace-nowrap shadow-sm filter-btn"
-                        data-filter="all" data-i18n="portfolio_page.tabs.all">
-                        Todos los Proyectos
+                        class="filter-btn flex flex-col items-center justify-center rounded-xl px-6 py-3 bg-primary text-white shadow-[0_4px_16px_rgba(16,185,129,0.30)] transition-all duration-300 whitespace-nowrap focus:outline-none"
+                        data-filter="all">
+                        <p class="text-sm font-bold tracking-wide" data-i18n="portfolio_page.tabs.all">Todos los Proyectos</p>
                     </button>
                     <button
-                        class="px-6 py-2 bg-[#f0f2f4] dark:bg-gray-800 text-[#111418] dark:text-gray-300 text-sm font-bold rounded-full hover:bg-[#dbe0e6] dark:hover:bg-gray-700 transition-colors whitespace-nowrap filter-btn"
-                        data-filter="commercial" data-i18n="portfolio_page.tabs.commercial">
-                        Comercial
+                        class="filter-btn flex flex-col items-center justify-center rounded-xl px-6 py-3 text-[#617589] dark:text-gray-400 hover:text-[#111418] dark:hover:text-white hover:bg-gray-200 dark:hover:bg-[#253240] transition-all duration-300 whitespace-nowrap focus:outline-none"
+                        data-filter="commercial">
+                        <p class="text-sm font-bold tracking-wide" data-i18n="portfolio_page.tabs.commercial">Comercial</p>
                     </button>
                     <button
-                        class="px-6 py-2 bg-[#f0f2f4] dark:bg-gray-800 text-[#111418] dark:text-gray-300 text-sm font-bold rounded-full hover:bg-[#dbe0e6] dark:hover:bg-gray-700 transition-colors whitespace-nowrap filter-btn"
-                        data-filter="infrastructure" data-i18n="portfolio_page.tabs.infrastructure">
-                        Infraestructura
+                        class="filter-btn flex flex-col items-center justify-center rounded-xl px-6 py-3 text-[#617589] dark:text-gray-400 hover:text-[#111418] dark:hover:text-white hover:bg-gray-200 dark:hover:bg-[#253240] transition-all duration-300 whitespace-nowrap focus:outline-none"
+                        data-filter="infrastructure">
+                        <p class="text-sm font-bold tracking-wide" data-i18n="portfolio_page.tabs.infrastructure">Infraestructura</p>
                     </button>
                     <button
-                        class="px-6 py-2 bg-[#f0f2f4] dark:bg-gray-800 text-[#111418] dark:text-gray-300 text-sm font-bold rounded-full hover:bg-[#dbe0e6] dark:hover:bg-gray-700 transition-colors whitespace-nowrap filter-btn"
-                        data-filter="eco" data-i18n="portfolio_page.tabs.eco">
-                        Ecológicos
+                        class="filter-btn flex flex-col items-center justify-center rounded-xl px-6 py-3 text-[#617589] dark:text-gray-400 hover:text-[#111418] dark:hover:text-white hover:bg-gray-200 dark:hover:bg-[#253240] transition-all duration-300 whitespace-nowrap focus:outline-none"
+                        data-filter="eco">
+                        <p class="text-sm font-bold tracking-wide" data-i18n="portfolio_page.tabs.eco">Ecológicos</p>
                     </button>
                 </div>
             </div>
@@ -385,8 +384,8 @@
         }
 
         function handleFilterClick(btn, filterBtns, portfolioItems) {
-            const inactiveClasses = ['bg-[#f0f2f4]', 'dark:bg-gray-800', 'text-[#111418]', 'dark:text-gray-300', 'hover:bg-[#dbe0e6]', 'dark:hover:bg-gray-700', 'transition-colors'];
-            const activeClasses = ['bg-[#111418]', 'dark:bg-white', 'text-white', 'dark:text-[#111418]', 'shadow-sm'];
+            const inactiveClasses = ['text-[#617589]', 'dark:text-gray-400', 'hover:text-[#111418]', 'dark:hover:text-white', 'hover:bg-gray-200', 'dark:hover:bg-[#253240]'];
+            const activeClasses = ['bg-primary', 'text-white', 'shadow-[0_4px_16px_rgba(16,185,129,0.30)]'];
             const filterValue = btn.dataset.filter;
 
             // Reset all buttons to inactive
