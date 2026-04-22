@@ -409,3 +409,44 @@ Se implementó un sistema de ruteo nativo con anclaje (Hash) para conectar las t
 
 - `home.html`
 - `services_overview/services.html`
+
+## Fase 16: Arquitectura y Estandarización de Footers
+
+Se aplicó una reingeniería de interfaz orientada a resolver las inconsistencias visuales del final de página (Footer) implementando una arquitectura dual: Mega Footer para la vista del Home, y Mini Footer para vistas secundarias.
+
+### 1. Estandarización de Diseño Dual
+- **Eliminación de Redundancias**: Se retiró el "Mega Footer" (cúmulo de mapas de sitio y texto descriptivo) de `about_us.html` reemplazándolo por el "Mini Footer" moderno (con logo minimalista y 3 enlaces) estandarizándolo en alineación con `services.html`, `our_experience.html` y `contact_faq.html`.
+- Se preservaron las texturas de origen para que conservara el tema visual acorde al sistema UI de Tailwind.
+
+### 2. Navegación e Intercepción (Deep Linking y Mapeo JavaScript)
+- **Mega Footer de Home**: Los enlaces mudos que apuntaban a `<a href="javascript:void(0)">` en las secciones "Servicios" y "Compañía" se convirtieron en anclas reales. 
+  - Ingeniería Ambiental redirige a: `services_overview/services.html#tab-1`
+  - Quiénes Somos redirige a: `about_us/about_us.html`
+- **Mini Footer (Icono Correo)**: Reconfiguración del ícono "mail" para evitar un cliente de navegador. Pulsarlo re-dirige limpiamente al formulario central: `../faq/contact_faq.html#tab-1`, abriéndolo.
+- **Scroll Inteligente (Contact_FAQ)**: Si el usuario ya está posicionado en la página de Contacto/FAQ e intenta dar click al icono de mail al fondo, se inyectó una función en el DOM `onclick="..."` que neutraliza la recarga, hace "click" virtual al tab n.º 1, y ejecuta un "Smooth scroll" nativo devolviendo al usuario al área de escritura sin demora asíncrona.
+
+### Listado de Archivos Modificados
+
+- `home.html`
+- `about_us/about_us.html`
+- `services_overview/services.html`
+- `faq/contact_faq.html`
+- `experience_timeline/our_experience.html`
+- `traceability_ui_system.md` (Nuevo registro de arquitectura de Footers)
+
+## Fase 17: Rediseño Premium de la Sección "Proyectos Recientes"
+
+Se refactorizó el bloque de portafolio destacado en la página principal para estar en plena sintonía con la nueva identidad de estética de primer nivel, integrando elementos de diseño avanzado.
+
+### 1. Evolución Estética (Glassmorphism)
+- **Paneles Translúcidos**: Se reemplazó el tradicional degradado oscuro de fondo por paneles de cristal con la técnica *Glassmorphism* (`backdrop-blur-md`, `bg-white/10`, `border-white/20`).
+- **Elevación Compartida**: Se estandarizó el radio de los bordes (`rounded-3xl` / `2rem`) y las sombras de levitación para ser idénticos a las secciones de *Estadísticas* y *Servicios*, dando gran consistencia general.
+- **Tipografía Avanzada**: Inclusión inteligente de efectos `drop-shadow-sm` para asegurar absoluta legibilidad del texto en modo claro y oscuro.
+
+### 2. Micro-Interacciones (UX)
+- **Call-to-Action Dinámico**: Para estimular el CTR (Click-Through Rate), se agregó una flecha animada y encapsulada que reacciona con un desplazamiento (`translate-x`) y un brillo en tono verde primaria (`shadow-[0_0_15px_rgba...]`) resaltando la zona de manera elegante e indicando explícitamente al usuario que el elemento es clickeable.
+- **Transiciones y Overlay**: Implementación de una sutil máscara de opacidad inicial que se desvanece suavemente al posicionarse encima y resalta fuertemente la nitidez del proyecto bajo el cristal interactivo.
+
+### Archivos Modificados e Impactados
+- `home.html`
+- `markdown/proyectos_recientes_home.md` (Análisis UX previo)

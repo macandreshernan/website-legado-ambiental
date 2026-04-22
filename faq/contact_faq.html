@@ -65,7 +65,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Merriweather:wght@300;400;700;900&display=swap"
         rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <!-- Theme Persistance (Load early to prevent FOUC) -->
@@ -87,28 +89,28 @@
     <div class="relative flex min-h-screen w-full flex-col">
         <!-- Top Navigation Bar (Sticky Optimized) -->
         <header
-            class="sticky top-0 z-50 w-full bg-white/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800 shadow-sm transition-all duration-300">
+            class="sticky top-4 z-50 w-[calc(100%-2rem)] max-w-[1200px] mx-auto bg-white/85 dark:bg-[#121c27]/80 backdrop-blur-xl border border-gray-100 dark:border-white/10 rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-all duration-300">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex justify-between items-center h-20">
                     <div class="flex items-center gap-3">
-                        <img src="../assets/images/logo_gral4_v1.1.png" alt="Legado Ambiental"
+                        <img src="../assets/images/logo/logo_final_v2.webp" alt="Legado Ambiental"
                             class="h-16 w-auto object-contain">
                         <span class="text-navy dark:text-white text-xl font-black tracking-tight uppercase">Legado
                             Ambiental</span>
                     </div>
                     <nav class="hidden md:flex items-center gap-8" aria-label="Main navigation">
-                        <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:text-primary transition-colors"
+                        <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors"
                             href="../home.html" data-i18n="nav.home">Inicio</a>
-                        <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:text-primary transition-colors"
+                        <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors"
                             href="../about_us/about_us.html" data-i18n="nav.about">Quiénes Somos</a>
-                        <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:text-primary transition-colors"
+                        <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors"
                             href="../services_overview/services.html" data-i18n="nav.services">Servicios</a>
-                        <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:text-primary transition-colors"
-                            href="../project_portfolio_gallery/portfolio.html" data-i18n="nav.portfolio">Portafolio</a>
-                        <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:text-primary transition-colors"
+                        <!--<a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors"
+                            href="../project_portfolio_gallery/portfolio.html" data-i18n="nav.portfolio">Portafolio</a>-->
+                        <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors"
                             href="../experience_timeline/our_experience.html" data-i18n="nav.experience">Experiencia</a>
-                        <a class="text-primary text-sm font-bold border-b-2 border-primary pb-1" href="#"
-                            data-i18n="nav.contact">Contacto</a>
+                        <a class="bg-primary/10 text-primary text-sm font-bold rounded-xl px-4 py-2 transition-all"
+                            href="#" data-i18n="nav.contact">Contacto</a>
                     </nav>
                     <div class="hidden md:flex items-center gap-4">
                         <!-- Theme Toggle -->
@@ -139,18 +141,18 @@
 
                 <!-- Mobile Navigation Menu -->
                 <div id="mobile-menu"
-                    class="md:hidden absolute top-20 left-0 w-full bg-white dark:bg-background-dark border-b border-gray-200 dark:border-gray-800 shadow-xl py-4 px-4 flex-col gap-4 transform transition-all duration-300 origin-top opacity-0 scale-y-0 pointer-events-none flex">
-                    <a class="text-navy dark:text-gray-300 text-base font-semibold hover:text-primary transition-colors py-2 border-b border-gray-100 dark:border-gray-800"
+                    class="md:hidden absolute top-24 left-0 w-full bg-white/95 dark:bg-[#121c27]/95 backdrop-blur-xl rounded-2xl border border-gray-100 dark:border-white/10 shadow-2xl py-4 px-4 flex-col gap-2 transform transition-all duration-300 origin-top opacity-0 scale-y-0 pointer-events-none flex">
+                    <a class="text-navy dark:text-gray-300 text-base font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-3 transition-colors"
                         href="../home.html" data-i18n="nav.home">Inicio</a>
-                    <a class="text-navy dark:text-gray-300 text-base font-semibold hover:text-primary transition-colors py-2 border-b border-gray-100 dark:border-gray-800"
+                    <a class="text-navy dark:text-gray-300 text-base font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-3 transition-colors"
                         href="../about_us/about_us.html" data-i18n="nav.about">Quiénes Somos</a>
-                    <a class="text-navy dark:text-gray-300 text-base font-semibold hover:text-primary transition-colors py-2 border-b border-gray-100 dark:border-gray-800"
+                    <a class="text-navy dark:text-gray-300 text-base font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-3 transition-colors"
                         href="../services_overview/services.html" data-i18n="nav.services">Servicios</a>
-                    <a class="text-navy dark:text-gray-300 text-base font-semibold hover:text-primary transition-colors py-2 border-b border-gray-100 dark:border-gray-800"
-                        href="../project_portfolio_gallery/portfolio.html" data-i18n="nav.portfolio">Portafolio</a>
-                    <a class="text-navy dark:text-gray-300 text-base font-semibold hover:text-primary transition-colors py-2 border-b border-gray-100 dark:border-gray-800"
+                    <!-- <a class="text-navy dark:text-gray-300 text-base font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-3 transition-colors"
+                        href="../project_portfolio_gallery/portfolio.html" data-i18n="nav.portfolio">Portafolio</a> -->
+                    <a class="text-navy dark:text-gray-300 text-base font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-3 transition-colors"
                         href="../experience_timeline/our_experience.html" data-i18n="nav.experience">Experiencia</a>
-                    <a class="text-primary text-base font-bold bg-primary/10 rounded-md px-2 py-2 mb-2"
+                    <a class="text-primary text-base font-bold bg-primary/10 rounded-xl px-4 py-3"
                         href="../faq/contact_faq.html" data-i18n="nav.contact">Contacto</a>
 
                     <!-- Mobile Theme Toggle -->
@@ -161,222 +163,331 @@
                     </button>
 
                     <button
-                        class="w-full bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg text-sm font-bold tracking-wide transition-all" data-i18n="nav.quote">
+                        class="w-full bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg text-sm font-bold tracking-wide transition-all"
+                        data-i18n="nav.quote">
                         Cotizar
                     </button>
                 </div>
             </div>
         </header>
         <main class="flex-1 flex flex-col items-center">
-            <div class="w-full max-w-[1200px] px-4 md:px-10 pt-6">
-                <nav class="flex" aria-label="Breadcrumb">
-                    <ol class="inline-flex items-center space-x-1 md:space-x-3">
-                        <li class="inline-flex items-center">
-                            <a href="../home.html"
-                                class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-primary dark:text-gray-400 dark:hover:text-white">
-                                <span class="material-symbols-outlined text-lg mr-2">home</span>
-                                Inicio
-                            </a>
-                        </li>
-                        <li aria-current="page">
-                            <div class="flex items-center">
-                                <span class="material-symbols-outlined text-gray-400 mx-1">chevron_right</span>
-                                <span
-                                    class="ml-1 text-sm font-medium text-gray-500 md:ml-2 dark:text-gray-400">Contacto</span>
-                            </div>
-                        </li>
-                    </ol>
-                </nav>
-            </div>
-            <!-- Hero / Contact Intro -->
-            <div class="w-full max-w-[1200px] px-4 md:px-10 py-12 md:py-20 text-center">
-                <h1 class="text-[#111418] dark:text-white text-4xl font-black leading-tight tracking-tight md:text-5xl mb-6"
-                    data-i18n="contact_page.hero.title">
-                    Ponte en Contacto
-                </h1>
-                <p class="text-[#617589] dark:text-gray-400 text-base md:text-lg max-w-2xl mx-auto"
-                    data-i18n="contact_page.hero.desc">
-                    Estamos aquí para ayudar con cualquier pregunta sobre nuestros servicios o proyectos. Completa el
-                    formulario a continuación o explora nuestras preguntas frecuentes.
-                </p>
-            </div>
-            <div class="w-full max-w-[1200px] px-4 md:px-10 grid grid-cols-1 lg:grid-cols-2 gap-12 pb-20">
-                <!-- Contact Form Section -->
-                <div
-                    class="bg-white dark:bg-[#1a2530] p-8 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800">
-                    <h2 class="text-2xl font-bold text-[#111418] dark:text-white mb-6"
-                        data-i18n="contact_page.form.title">Envíanos un Mensaje</h2>
-                    <form class="space-y-6">
-                        <!-- Name and Lastname Grid -->
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div class="space-y-2">
-                                <label class="text-sm font-medium text-[#111418] dark:text-gray-300" for="name"
-                                    data-i18n="contact_page.form.name">Nombre</label>
-                                <input
-                                    class="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
-                                    id="name" placeholder="Tu Nombre Completo" type="text"
-                                    data-i18n-placeholder="contact_page.form.name_ph" required maxlength="50" />
-                            </div>
-                            <div class="space-y-2">
-                                <label class="text-sm font-medium text-[#111418] dark:text-gray-300" for="lastname"
-                                    data-i18n="contact_page.form.lastname">Apellidos</label>
-                                <input
-                                    class="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
-                                    id="lastname" placeholder="Tus Apellidos" type="text"
-                                    data-i18n-placeholder="contact_page.form.lastname_ph" required maxlength="50" />
-                            </div>
+            <!-- Hero Section con Efecto Hover Dinámico y Glassmorphism -->
+            <section class="w-full max-w-[1200px] mx-auto pt-6 px-4">
+                <div class="@container">
+                    <div class="group relative flex flex-col justify-end overflow-hidden rounded-xl min-h-[450px] shadow-2xl transition-all duration-700 cursor-default"
+                        style="background-color: #101922;">
+                        <!-- Background Image -->
+                        <div class="absolute inset-0 z-0 bg-cover bg-center origin-center transition-all duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] transform scale-105 opacity-60 group-hover:opacity-80 group-hover:scale-100"
+                            style="background-image: url('../assets/images/home/project-viaduct.webp');">
                         </div>
 
-                        <!-- Email Field (Full Width) -->
-                        <div class="space-y-2">
-                            <label class="text-sm font-medium text-[#111418] dark:text-gray-300" for="email"
-                                data-i18n="contact_page.form.email">Correo Electrónico</label>
-                            <input
-                                class="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
-                                id="email" placeholder="nombre@ejemplo.com" type="email"
-                                data-i18n-placeholder="contact_page.form.email_ph" required maxlength="100" />
-                            <span id="email-error" class="hidden text-xs text-red-500 font-medium"
-                                data-i18n="contact_page.form.email_error">Correo inválido</span>
+                        <!-- Gradiente de fondo suavizado -->
+                        <div
+                            class="absolute inset-0 z-0 bg-gradient-to-t from-[#101922]/90 via-[#101922]/40 to-transparent transition-opacity duration-1000 opacity-100 pointer-events-none">
                         </div>
 
-                        <!-- Phone Field (Full Width) -->
-                        <div class="space-y-2">
-                            <label class="text-sm font-medium text-[#111418] dark:text-gray-300" for="phone"
-                                data-i18n="contact_page.form.phone">Teléfono</label>
-                            <input
-                                class="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
-                                id="phone" placeholder="(55) 1234 5678" type="tel"
-                                data-i18n-placeholder="contact_page.form.phone_ph" required maxlength="15"
-                                pattern="[0-9+ ]*" />
-                            <span id="phone-error" class="hidden text-xs text-red-500 font-medium"
-                                data-i18n="contact_page.form.phone_error">Formato inválido.</span>
-                        </div>
+                        <!-- Glassmorphism Text Container -->
+                        <div
+                            class="relative z-10 p-8 md:p-12 md:pb-16 max-w-4xl self-start md:ml-8 mb-4 bg-[#101922]/40 backdrop-blur-md border border-white/10 rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.5)] transition-all duration-700 ease-in-out group-hover:bg-[#101922]/70 group-hover:border-primary/40 group-hover:backdrop-blur-xl transform translate-y-2 group-hover:translate-y-0">
 
-                        <!-- Preferred Contact Method -->
-                        <fieldset class="space-y-3">
-                            <legend class="block text-sm font-medium text-[#111418] dark:text-gray-300"
-                                data-i18n="contact_page.form.method_label">Medio de Contacto Preferido</legend>
-                            <div class="flex gap-6">
-                                <label class="inline-flex items-center">
-                                    <input type="radio" class="form-radio text-primary focus:ring-primary"
-                                        name="contact_method" value="email" checked>
-                                    <span class="ml-2 text-sm text-[#617589] dark:text-gray-400"
-                                        data-i18n="contact_page.form.method_email">Correo Electrónico</span>
-                                </label>
-                                <label class="inline-flex items-center">
-                                    <input type="radio" class="form-radio text-primary focus:ring-primary"
-                                        name="contact_method" value="phone">
-                                    <span class="ml-2 text-sm text-[#617589] dark:text-gray-400"
-                                        data-i18n="contact_page.form.method_phone">Llamada Telefónica</span>
-                                </label>
+                            <nav class="flex mb-6" aria-label="Breadcrumb">
+                                <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                                    <li class="inline-flex items-center">
+                                        <a href="../home.html"
+                                            class="inline-flex items-center text-sm font-medium text-gray-300 hover:text-white transition-colors">
+                                            <span class="material-symbols-outlined text-lg mr-2">home</span>
+                                            <span data-i18n="nav.home">Inicio</span>
+                                        </a>
+                                    </li>
+                                    <li aria-current="page">
+                                        <div class="flex items-center">
+                                            <span
+                                                class="material-symbols-outlined text-gray-400 mx-1">chevron_right</span>
+                                            <span class="ml-1 text-sm font-medium text-primary" data-i18n="nav.contact">Contacto</span>
+                                        </div>
+                                    </li>
+                                </ol>
+                            </nav>
+
+                            <h1 class="text-white text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight mb-4 drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]"
+                                data-i18n="contact_page.hero.title">
+                                Ponte en Contacto
+                            </h1>
+                            <div
+                                class="w-16 h-1 bg-primary mb-4 transition-all duration-700 group-hover:w-32 group-hover:bg-blue-400 rounded-full">
                             </div>
-                        </fieldset>
-                        <div class="space-y-2">
-                            <label class="text-sm font-medium text-[#111418] dark:text-gray-300" for="subject"
-                                data-i18n="contact_page.form.subject">Asunto</label>
-                            <select
-                                class="w-full rounded-lg border-gray-300 dark:border-gray-700 dark:bg-gray-900 px-4 py-2 text-sm focus:border-primary focus:ring-primary"
-                                id="subject">
-                                <option data-i18n="contact_page.form.options.general">Consulta General</option>
-                                <option data-i18n="contact_page.form.options.quote">Solicitud de Presupuesto</option>
-                                <option data-i18n="contact_page.form.options.proposal">Propuesta de Proyecto</option>
-                                <option data-i18n="contact_page.form.options.jobs">Oportunidades de Empleo</option>
-                            </select>
-                        </div>
-                        <div class="space-y-2">
-                            <label class="text-sm font-medium text-[#111418] dark:text-gray-300" for="message"
-                                data-i18n="contact_page.form.message">Mensaje</label>
-                            <textarea
-                                class="w-full rounded-lg border-gray-300 dark:border-gray-700 dark:bg-gray-900 px-4 py-2 text-sm focus:border-primary focus:ring-primary h-32 resize-none"
-                                id="message" placeholder="¿Cómo podemos ayudarte?"
-                                data-i18n-placeholder="contact_page.form.message_ph" required
-                                maxlength="500"></textarea>
-                        </div>
-
-                        <!-- Honeypot (Anti-spam frictionless) -->
-                        <div class="hidden" aria-hidden="true">
-                            <label for="website_url">Si eres humano, deja este campo en blanco</label>
-                            <input type="text" id="website_url" name="website_url" tabindex="-1" autocomplete="off" />
-                        </div>
-                        <button
-                            class="w-full bg-primary text-white font-bold py-3 rounded-lg hover:bg-primary/90 transition-all shadow-md focus:ring-2 focus:ring-primary focus:ring-offset-2"
-                            data-i18n="contact_page.form.btn">
-                            Enviar Mensaje
-                        </button>
-                    </form>
-                </div>
-                <!-- FAQ Section -->
-                <div class="space-y-8">
-                    <div>
-                        <h2 class="text-2xl font-bold text-[#111418] dark:text-white mb-6"
-                            data-i18n="contact_page.faq.title">Preguntas Frecuentes</h2>
-                        <div class="space-y-4">
-                            <!-- Question 1 -->
-                            <details class="group border border-gray-200 dark:border-gray-800 rounded-lg bg-white dark:bg-[#1a2530] [&_summary::-webkit-details-marker]:hidden">
-                                <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-[#111418] dark:text-white font-bold">
-                                    <div class="flex items-center gap-2">
-                                        <span class="material-symbols-outlined text-primary">help</span>
-                                        <span data-i18n="contact_page.faq.q1">¿Qué tipos de certificación ambiental manejan?</span>
-                                    </div>
-                                    <span class="material-symbols-outlined shrink-0 transition duration-300 group-open:-rotate-180">expand_more</span>
-                                </summary>
-                                <p class="px-5 pb-5 pt-0 text-sm text-[#617589] dark:text-gray-400 leading-relaxed"
-                                    data-i18n="contact_page.faq.a1">
-                                    Trabajamos con estándares LEED, BREEAM y normativas locales de impacto ambiental.
-                                    Nuestro equipo puede guiar todo el proceso de certificación para su proyecto.
-                                </p>
-                            </details>
-                            <!-- Question 2 -->
-                            <details class="group border border-gray-200 dark:border-gray-800 rounded-lg bg-white dark:bg-[#1a2530] [&_summary::-webkit-details-marker]:hidden">
-                                <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-[#111418] dark:text-white font-bold">
-                                    <div class="flex items-center gap-2">
-                                        <span class="material-symbols-outlined text-primary">public</span>
-                                        <span data-i18n="contact_page.faq.q2">¿Realizan proyectos fuera de la región?</span>
-                                    </div>
-                                    <span class="material-symbols-outlined shrink-0 transition duration-300 group-open:-rotate-180">expand_more</span>
-                                </summary>
-                                <p class="px-5 pb-5 pt-0 text-sm text-[#617589] dark:text-gray-400 leading-relaxed"
-                                    data-i18n="contact_page.faq.a2">
-                                    Sí, nuestra división de Expansión Global gestiona proyectos internacionales.
-                                    Contáctenos para discutir la logística y viabilidad de su ubicación.
-                                </p>
-                            </details>
-                            <!-- Question 3 -->
-                            <details class="group border border-gray-200 dark:border-gray-800 rounded-lg bg-white dark:bg-[#1a2530] [&_summary::-webkit-details-marker]:hidden">
-                                <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-5 text-[#111418] dark:text-white font-bold">
-                                    <div class="flex items-center gap-2">
-                                        <span class="material-symbols-outlined text-primary">engineering</span>
-                                        <span data-i18n="contact_page.faq.q3">¿Ofrecen servicios de solo diseño?</span>
-                                    </div>
-                                    <span class="material-symbols-outlined shrink-0 transition duration-300 group-open:-rotate-180">expand_more</span>
-                                </summary>
-                                <p class="px-5 pb-5 pt-0 text-sm text-[#617589] dark:text-gray-400 leading-relaxed"
-                                    data-i18n="contact_page.faq.a3">
-                                    Absolutamente. Ofrecemos servicios modulares que van desde el diseño conceptual y
-                                    planos estructurales hasta la gestión completa de la construcción llave en mano.
-                                </p>
-                            </details>
+                            <p class="text-blue-50 text-lg max-w-2xl font-medium drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]"
+                                data-i18n="contact_page.hero.desc">
+                                Estamos aquí para ayudar con cualquier pregunta sobre nuestros servicios o proyectos.
+                                Completa el
+                                formulario a continuación o explora nuestras preguntas frecuentes.
+                            </p>
                         </div>
                     </div>
-                    <!-- Quick Contact Info -->
-                    <div class="bg-gray-50 dark:bg-gray-900 rounded-xl p-6 border border-gray-100 dark:border-gray-800">
-                        <h3 class="font-bold text-[#111418] dark:text-white mb-4" data-i18n="contact_page.info.title">
-                            Información Directa</h3>
-                        <ul class="space-y-4">
-                            <li class="flex items-center gap-3 text-sm text-[#617589] dark:text-gray-400">
-                                <span class="material-symbols-outlined text-primary">call</span>
-                                <span>+1 (555) 123-4567</span>
-                            </li>
-                            <li class="flex items-center gap-3 text-sm text-[#617589] dark:text-gray-400">
-                                <span class="material-symbols-outlined text-primary">mail</span>
-                                <span>contacto@legadoambiental.com</span>
-                            </li>
-                            <li class="flex items-center gap-3 text-sm text-[#617589] dark:text-gray-400">
-                                <span class="material-symbols-outlined text-primary">location_on</span>
-                                <span data-i18n="contact_page.info.addr">Plaza de Ingeniería, Suite 400<br />Distrito de
-                                    Negocios Internacional</span>
-                            </li>
-                        </ul>
+                </div>
+            </section>
+
+            <!-- Tabs Section (Pill Segmented Control) -->
+            <div
+                class="w-full max-w-[1200px] mx-auto px-4 md:px-10 mt-12 md:mt-16 mb-8 relative z-20 flex justify-center">
+                <div
+                    class="bg-gray-50/80 dark:bg-[#1a2530]/80 backdrop-blur-md rounded-2xl p-2 border border-gray-100 dark:border-gray-800 shadow-sm flex gap-2 overflow-x-auto no-scrollbar max-w-min">
+                    <button id="tab-btn-1" data-tab="1"
+                        class="tab-btn flex flex-col items-center justify-center rounded-xl px-6 py-3 bg-primary text-white shadow-[0_4px_16px_rgba(16,185,129,0.30)] transition-all duration-300 whitespace-nowrap focus:outline-none">
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-xl">mail</span>
+                            <p class="text-sm font-bold tracking-wide" data-i18n="contact_page.form.title">Envíanos un
+                                Mensaje</p>
+                        </div>
+                    </button>
+                    <button id="tab-btn-2" data-tab="2"
+                        class="tab-btn flex flex-col items-center justify-center rounded-xl px-6 py-3 text-[#617589] dark:text-gray-400 hover:text-[#111418] dark:hover:text-white hover:bg-gray-200 dark:hover:bg-[#253240] transition-all duration-300 whitespace-nowrap focus:outline-none">
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-xl">help</span>
+                            <p class="text-sm font-bold tracking-wide" data-i18n="contact_page.faq.title">Preguntas
+                                Frecuentes</p>
+                        </div>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Content Sections -->
+            <div class="w-full max-w-[800px] mx-auto px-4 md:px-10 pb-20 relative">
+                <!-- Contact Form Section -->
+                <div id="tab-section-1"
+                    class="tab-section transition-opacity duration-300 opacity-100 flex flex-col w-full">
+                    <div
+                        class="relative bg-white dark:bg-[#121c27] p-8 md:p-10 rounded-[2rem] shadow-[0_10px_40px_rgba(0,0,0,0.06)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.3)] border border-slate-100 dark:border-white/5 overflow-hidden">
+                        <div
+                            class="absolute -top-20 -left-20 w-64 h-64 bg-primary/10 dark:bg-primary/20 rounded-full blur-[60px] pointer-events-none z-0">
+                        </div>
+                        <div
+                            class="absolute -bottom-20 -right-20 w-64 h-64 bg-emerald-500/5 dark:bg-emerald-500/10 rounded-full blur-[60px] pointer-events-none z-0">
+                        </div>
+
+                        <h2 class="relative z-10 text-3xl font-bold text-[#111418] dark:text-white mb-8 tracking-tight"
+                            data-i18n="contact_page.form.title">Envíanos un Mensaje</h2>
+                        <form class="space-y-6">
+                            <!-- Name and Lastname Grid -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="space-y-2">
+                                    <label class="text-sm font-medium text-[#111418] dark:text-gray-300" for="name"
+                                        data-i18n="contact_page.form.name">Nombre</label>
+                                    <input
+                                        class="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
+                                        id="name" placeholder="Tu Nombre Completo" type="text"
+                                        data-i18n-placeholder="contact_page.form.name_ph" required maxlength="50" />
+                                </div>
+                                <div class="space-y-2">
+                                    <label class="text-sm font-medium text-[#111418] dark:text-gray-300" for="lastname"
+                                        data-i18n="contact_page.form.lastname">Apellidos</label>
+                                    <input
+                                        class="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
+                                        id="lastname" placeholder="Tus Apellidos" type="text"
+                                        data-i18n-placeholder="contact_page.form.lastname_ph" required maxlength="50" />
+                                </div>
+                            </div>
+
+                            <!-- Email Field (Full Width) -->
+                            <div class="space-y-2">
+                                <label class="text-sm font-medium text-[#111418] dark:text-gray-300" for="email"
+                                    data-i18n="contact_page.form.email">Correo Electrónico</label>
+                                <input
+                                    class="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
+                                    id="email" placeholder="nombre@ejemplo.com" type="email"
+                                    data-i18n-placeholder="contact_page.form.email_ph" required maxlength="100" />
+                                <span id="email-error" class="hidden text-xs text-red-500 font-medium"
+                                    data-i18n="contact_page.form.email_error">Correo inválido</span>
+                            </div>
+
+                            <!-- Phone Field (Full Width) -->
+                            <div class="space-y-2">
+                                <label class="text-sm font-medium text-[#111418] dark:text-gray-300" for="phone"
+                                    data-i18n="contact_page.form.phone">Teléfono</label>
+                                <input
+                                    class="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
+                                    id="phone" placeholder="(55) 1234 5678" type="tel"
+                                    data-i18n-placeholder="contact_page.form.phone_ph" required maxlength="15"
+                                    pattern="[0-9+ ]*" />
+                                <span id="phone-error" class="hidden text-xs text-red-500 font-medium"
+                                    data-i18n="contact_page.form.phone_error">Formato inválido.</span>
+                            </div>
+
+                            <!-- Preferred Contact Method -->
+                            <fieldset class="space-y-3">
+                                <legend class="block text-sm font-medium text-[#111418] dark:text-gray-300"
+                                    data-i18n="contact_page.form.method_label">Medio de Contacto Preferido</legend>
+                                <div class="flex gap-6">
+                                    <label class="inline-flex items-center">
+                                        <input type="radio" class="form-radio text-primary focus:ring-primary"
+                                            name="contact_method" value="email" checked>
+                                        <span class="ml-2 text-sm text-[#617589] dark:text-gray-400"
+                                            data-i18n="contact_page.form.method_email">Correo Electrónico</span>
+                                    </label>
+                                    <label class="inline-flex items-center">
+                                        <input type="radio" class="form-radio text-primary focus:ring-primary"
+                                            name="contact_method" value="phone">
+                                        <span class="ml-2 text-sm text-[#617589] dark:text-gray-400"
+                                            data-i18n="contact_page.form.method_phone">Llamada Telefónica</span>
+                                    </label>
+                                </div>
+                            </fieldset>
+                            <div class="space-y-2">
+                                <label class="text-sm font-medium text-[#111418] dark:text-gray-300" for="subject"
+                                    data-i18n="contact_page.form.subject">Asunto</label>
+                                <select
+                                    class="w-full rounded-lg border-gray-300 dark:border-gray-700 dark:bg-gray-900 px-4 py-2 text-sm focus:border-primary focus:ring-primary"
+                                    id="subject">
+                                    <option data-i18n="contact_page.form.options.general">Consulta General</option>
+                                    <option data-i18n="contact_page.form.options.quote">Solicitud de Presupuesto
+                                    </option>
+                                    <option data-i18n="contact_page.form.options.proposal">Propuesta de Proyecto
+                                    </option>
+                                    <option data-i18n="contact_page.form.options.jobs">Oportunidades de Empleo</option>
+                                </select>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-sm font-medium text-[#111418] dark:text-gray-300" for="message"
+                                    data-i18n="contact_page.form.message">Mensaje</label>
+                                <textarea
+                                    class="w-full rounded-lg border-gray-300 dark:border-gray-700 dark:bg-gray-900 px-4 py-2 text-sm focus:border-primary focus:ring-primary h-32 resize-none"
+                                    id="message" placeholder="¿Cómo podemos ayudarte?"
+                                    data-i18n-placeholder="contact_page.form.message_ph" required
+                                    maxlength="500"></textarea>
+                            </div>
+
+                            <!-- Honeypot (Anti-spam frictionless) -->
+                            <div class="hidden" aria-hidden="true">
+                                <label for="website_url" data-i18n="contact_page.form.honeypot">Si eres humano, deja este campo en blanco</label>
+                                <input type="text" id="website_url" name="website_url" tabindex="-1"
+                                    autocomplete="off" />
+                            </div>
+                            <button
+                                class="w-full bg-primary text-white font-bold py-3 rounded-lg hover:bg-primary/90 transition-all shadow-md focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                                data-i18n="contact_page.form.btn">
+                                Enviar Mensaje
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- FAQ Section -->
+                <div id="tab-section-2"
+                    class="tab-section hidden opacity-0 transition-opacity duration-300 flex flex-col w-full">
+                    <div class="space-y-8">
+                        <div>
+                            <h2 class="text-2xl font-bold text-[#111418] dark:text-white mb-6"
+                                data-i18n="contact_page.faq.title">Preguntas Frecuentes</h2>
+                            <div class="space-y-4">
+                                <!-- Question 1 -->
+                                <details
+                                    class="group border border-slate-100 dark:border-white/5 rounded-2xl bg-white dark:bg-[#121c27] shadow-sm hover:shadow-[0_10px_30px_rgba(0,0,0,0.05)] dark:hover:shadow-[0_10px_30px_rgba(0,0,0,0.2)] transition-all [&_summary::-webkit-details-marker]:hidden">
+                                    <summary
+                                        class="flex cursor-pointer items-center justify-between gap-1.5 p-6 text-[#111418] dark:text-white font-bold">
+                                        <div class="flex items-center gap-3">
+                                            <div
+                                                class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                                                <span class="material-symbols-outlined">help</span>
+                                            </div>
+                                            <span data-i18n="contact_page.faq.q1" class="text-[0.95rem]">¿Qué tipos de
+                                                certificación ambiental manejan?</span>
+                                        </div>
+                                        <span
+                                            class="material-symbols-outlined shrink-0 text-primary transition duration-300 group-open:-rotate-180">expand_more</span>
+                                    </summary>
+                                    <p class="px-6 pb-6 pt-0 text-sm text-[#617589] dark:text-gray-400 leading-relaxed font-medium pl-[4.25rem]"
+                                        data-i18n="contact_page.faq.a1">
+                                        Trabajamos con estándares LEED, BREEAM y normativas locales de impacto
+                                        ambiental.
+                                        Nuestro equipo puede guiar todo el proceso de certificación para su proyecto.
+                                    </p>
+                                </details>
+                                <!-- Question 2 -->
+                                <details
+                                    class="group border border-slate-100 dark:border-white/5 rounded-2xl bg-white dark:bg-[#121c27] shadow-sm hover:shadow-[0_10px_30px_rgba(0,0,0,0.05)] dark:hover:shadow-[0_10px_30px_rgba(0,0,0,0.2)] transition-all [&_summary::-webkit-details-marker]:hidden">
+                                    <summary
+                                        class="flex cursor-pointer items-center justify-between gap-1.5 p-6 text-[#111418] dark:text-white font-bold">
+                                        <div class="flex items-center gap-3">
+                                            <div
+                                                class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                                                <span class="material-symbols-outlined">public</span>
+                                            </div>
+                                            <span data-i18n="contact_page.faq.q2" class="text-[0.95rem]">¿Realizan
+                                                proyectos fuera de la región?</span>
+                                        </div>
+                                        <span
+                                            class="material-symbols-outlined shrink-0 text-primary transition duration-300 group-open:-rotate-180">expand_more</span>
+                                    </summary>
+                                    <p class="px-6 pb-6 pt-0 text-sm text-[#617589] dark:text-gray-400 leading-relaxed font-medium pl-[4.25rem]"
+                                        data-i18n="contact_page.faq.a2">
+                                        Sí, nuestra división de Expansión Global gestiona proyectos internacionales.
+                                        Contáctenos para discutir la logística y viabilidad de su ubicación.
+                                    </p>
+                                </details>
+                                <!-- Question 3 -->
+                                <details
+                                    class="group border border-slate-100 dark:border-white/5 rounded-2xl bg-white dark:bg-[#121c27] shadow-sm hover:shadow-[0_10px_30px_rgba(0,0,0,0.05)] dark:hover:shadow-[0_10px_30px_rgba(0,0,0,0.2)] transition-all [&_summary::-webkit-details-marker]:hidden">
+                                    <summary
+                                        class="flex cursor-pointer items-center justify-between gap-1.5 p-6 text-[#111418] dark:text-white font-bold">
+                                        <div class="flex items-center gap-3">
+                                            <div
+                                                class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                                                <span class="material-symbols-outlined">engineering</span>
+                                            </div>
+                                            <span data-i18n="contact_page.faq.q3" class="text-[0.95rem]">¿Ofrecen
+                                                servicios de solo diseño?</span>
+                                        </div>
+                                        <span
+                                            class="material-symbols-outlined shrink-0 text-primary transition duration-300 group-open:-rotate-180">expand_more</span>
+                                    </summary>
+                                    <p class="px-6 pb-6 pt-0 text-sm text-[#617589] dark:text-gray-400 leading-relaxed font-medium pl-[4.25rem]"
+                                        data-i18n="contact_page.faq.a3">
+                                        Absolutamente. Ofrecemos servicios modulares que van desde el diseño conceptual
+                                        y
+                                        planos estructurales hasta la gestión completa de la construcción llave en mano.
+                                    </p>
+                                </details>
+                            </div>
+                        </div>
+                        <!-- Quick Contact Info -->
+                        <div
+                            class="relative bg-white dark:bg-[#121c27] rounded-3xl p-8 border border-slate-100 dark:border-white/5 shadow-[0_10px_40px_rgba(0,0,0,0.06)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.3)] overflow-hidden">
+                            <div
+                                class="absolute -bottom-20 -right-20 w-48 h-48 bg-primary/10 dark:bg-primary/20 rounded-full blur-[50px] pointer-events-none z-0">
+                            </div>
+
+                            <h3 class="relative z-10 text-xl font-bold text-[#111418] dark:text-white mb-6 tracking-tight"
+                                data-i18n="contact_page.info.title">
+                                Información Directa</h3>
+                            <ul class="relative z-10 space-y-6">
+                                <li
+                                    class="flex items-center gap-4 text-sm text-[#617589] dark:text-gray-400 font-medium">
+                                    <span
+                                        class="material-symbols-outlined text-primary w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center">call</span>
+                                    <span data-i18n="contact_page.info.phone1">+1 (555) 123-4567</span>
+                                </li>
+                                <li
+                                    class="flex items-center gap-4 text-sm text-[#617589] dark:text-gray-400 font-medium">
+                                    <span
+                                        class="material-symbols-outlined text-primary w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center">call</span>
+                                    <span data-i18n="contact_page.info.phone2">+1 (555) 123-4567</span>
+                                </li>
+                                <li
+                                    class="flex items-center gap-4 text-sm text-[#617589] dark:text-gray-400 font-medium">
+                                    <span
+                                        class="material-symbols-outlined text-primary w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center">mail</span>
+                                    <span data-i18n="contact_page.info.email">contacto@legadoambiental.com</span>
+                                </li>
+                                <li
+                                    class="flex items-center gap-4 text-sm text-[#617589] dark:text-gray-400 font-medium leading-relaxed">
+                                    <span
+                                        class="material-symbols-outlined text-primary w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center">location_on</span>
+                                    <span data-i18n="contact_page.info.addr">Plaza de Ingeniería, Suite
+                                        400<br />Distrito de
+                                        Negocios Internacional</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -385,7 +496,7 @@
         <footer class="w-full bg-white dark:bg-background-dark border-t border-[#f0f2f4] dark:border-gray-800 py-10">
             <div class="max-w-[1200px] mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
                 <div class="flex items-center gap-3">
-                    <img src="../assets/images/logo_gral4_v1.1.png" alt="Legado Ambiental"
+                    <img src="../assets/images/logo/logo_final_v2.webp" alt="Legado Ambiental"
                         class="h-16 w-auto object-contain">
                     <span class="font-bold dark:text-white">Legado Ambiental</span>
                 </div>
@@ -395,7 +506,7 @@
                 <div class="flex gap-6">
                     <a class="text-[#617589] hover:text-primary transition-colors" href="#"><span
                             class="material-symbols-outlined">share</span></a>
-                    <a class="text-[#617589] hover:text-primary transition-colors" href="#"><span
+                    <a class="text-[#617589] hover:text-primary transition-colors" href="#tab-1" onclick="document.getElementById('tab-btn-1').click(); document.getElementById('tab-section-1').scrollIntoView({behavior: 'smooth'});"><span
                             class="material-symbols-outlined">mail</span></a>
                     <a class="text-[#617589] hover:text-primary transition-colors" href="#"><span
                             class="material-symbols-outlined">location_on</span></a>
@@ -436,10 +547,60 @@
         menuBtn.addEventListener('click', toggleMenu);
         mobileLinks.forEach(link => link.addEventListener('click', closeMenu));
     </script>
-    
+
     <!-- Animaciones AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="../assets/js/scroll-animate.js"></script>
     <script src="../assets/js/reading-progress.js"></script>
+
+    <!-- Tabs Logic Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabButtons = document.querySelectorAll('.tab-btn');
+
+            function switchTab(tabIndex) {
+                // Update Tab Buttons Styles
+                tabButtons.forEach(tab => {
+                    tab.classList.remove('bg-primary', 'text-white', 'shadow-[0_4px_16px_rgba(16,185,129,0.30)]');
+                    tab.classList.add('text-[#617589]', 'dark:text-gray-400', 'hover:text-[#111418]', 'dark:hover:text-white', 'hover:bg-gray-200', 'dark:hover:bg-[#253240]');
+                });
+
+                const activeTab = document.getElementById(`tab-btn-${tabIndex}`);
+                if (activeTab) {
+                    activeTab.classList.remove('text-[#617589]', 'dark:text-gray-400', 'hover:text-[#111418]', 'dark:hover:text-white', 'hover:bg-gray-200', 'dark:hover:bg-[#253240]');
+                    activeTab.classList.add('bg-primary', 'text-white', 'shadow-[0_4px_16px_rgba(16,185,129,0.30)]');
+                }
+
+                // Update Sections visibility with smooth transitions
+                const allSections = document.querySelectorAll('.tab-section');
+                allSections.forEach(section => {
+                    section.classList.remove('flex', 'opacity-100');
+                    section.classList.add('hidden', 'opacity-0');
+                });
+
+                const activeSection = document.getElementById(`tab-section-${tabIndex}`);
+                if (activeSection) {
+                    activeSection.classList.remove('hidden');
+                    activeSection.classList.add('flex');
+
+                    // Slight delay to allow display flex to apply before triggering opacity transition
+                    setTimeout(() => {
+                        activeSection.classList.remove('opacity-0');
+                        activeSection.classList.add('opacity-100');
+                    }, 10);
+                }
+            }
+
+            tabButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const tabIndex = Number.parseInt(btn.dataset.tab, 10);
+                    if (tabIndex) {
+                        switchTab(tabIndex);
+                    }
+                });
+            });
+        });
+    </script>
 </body>
+
 </html>

@@ -40,35 +40,36 @@ const translations = {
             "label": "Lo que hacemos",
             "title": "Nuestros Servicios Especializados",
             "desc": "Ofrecemos consultoría integral en ingeniería y medio ambiente para diversos sectores.",
-            "civil": {
-                "title": "Ingeniería Civil",
-                "desc": "Diagnóstico, diseño, planeación, ejecución, supervisión y auditorías de obras."
-            },
-            "env": {
+            "s1": {
                 "title": "Ingeniería Ambiental",
-                "desc": "Prácticas de construcción sostenible y mitigación del impacto ambiental."
+                "desc": "Somos una firma de ingeniería especializada en medio ambiente, integrada por un equipo interdisciplinario de profesionales con amplia experiencia en estudios, proyectos, construcción y consultoría ambiental."
             },
-            "mgmt": {
-                "title": "Servicios de Topografía",
-                "desc": "Servicios de alta precisión para infraestructura y edificación, apoyados en tecnología moderna y metodologías estandarizadas."
+            "s2": {
+                "title": "Construcción",
+                "desc": "Infraestructura, desarrollo urbano, vivienda, obra pública y privada, así como consultorías técnicas especializadas, participando en todas las etapas del proyecto: planeación, ejecución, supervisión y cierre técnico–administrativo."
             },
-            "gov": {
-                "title": "Servicios de Seguridad e Higiene",
-                "desc": "Transformamos la operatividad de sus proyectos integrando seguridad, eficiencia administrativa y cumplimiento legal."
+            "s3": {
+                "title": "Topografía",
+                "desc": "Brindamos servicios topográficos de alta precisión para proyectos de infraestructura, obra civil, urbanización, transporte y edificación, apoyados en tecnología moderna y metodologías estandarizadas."
+            },
+            "s4": {
+                "title": "Seguridad e Higiene",
+                "desc": "En Legado Ambiental, transformamos la operatividad de sus proyectos integrando seguridad, eficiencia administrativa y cumplimiento legal. Bajo la Dirección de Operaciones y Cumplimiento Integral, ofrecemos soluciones robustas para los sectores de la construcción y el medio ambiente."
             },
             "details": "Detalles"
         },
         "portfolio": {
+            "label": "Nuestro Trabajo",
             "title": "Proyectos Recientes",
             "p1": {
-                "cat": "Gobierno / Infraestructura",
-                "title": "Prevención de inundaciones",
-                "desc": "Se realizan estudios hidro-meteorológicos solicitados específicamente por Protección Civil del Estado de México."
+                "cat": "Grupo Serla",
+                "title": "Estudio de impacto ambiental",
+                "desc": "Estudio integral corporativo bajo la NOM-052-SEMARNAT (Residuos Peligrosos), NOM-085 (Emisiones) y disposiciones del RCDF, asegurando operaciones sin externalidades negativas."
             },
             "p2": {
-                "cat": "Privado / Comercial",
-                "title": "Centro Empresarial Solaris",
-                "desc": "Sede comercial con certificación ecológica."
+                "cat": "Río Tiloxtoc",
+                "title": "Saneamiento",
+                "desc": "Planeación, muestreo y mitigación conjunta con CIITEC-IPN, alineados a la Ley Federal de Aguas y normativas SEMARNAT para el rescate de ecosistemas."
             }
         },
         "cta": {
@@ -78,27 +79,31 @@ const translations = {
             "download_btn": "Descargar Portafolio"
         },
         "footer": {
-            "desc": "Definiendo la excelencia en el entorno construido mientras preservamos el legado natural de nuestro planeta.",
+            "title": "Legado Ambiental <br>S.A. de C.V.",
+            "desc": "Soluciones holísticas para el desarrollo de infraestructura y cumplimiento normativo.",
             "services": {
                 "title": "Servicios",
-                "1": "Ingeniería Civil",
-                "2": "Impacto Ambiental",
-                "3": "Diseño de Infraestructura",
-                "4": "Desarrollo Urbano"
+                "1": "Ingeniería Ambiental",
+                "2": "Construcción",
+                "3": "Topografía",
+                "4": "Seguridad e Higiene"
             },
             "company": {
                 "title": "Compañía",
-                "1": "Sobre Nuestra Firma",
-                "2": "Portafolio de Proyectos",
-                "3": "Certificaciones",
-                "4": "Oportunidades Laborales"
+                "1": "Quiénes somos",
+                "2": "Servicios",
+                "3": "Experiencia",
+                "4": "Contacto"
             },
             "contact": {
                 "title": "Contacto",
-                "addr_1": "Engineering Plaza, Suite 400",
-                "addr_2": "International Business District"
+                "addr_1": "U.H. Valle de Ecatepec, C.P. 55119",
+                "addr_2": "Ecatepec, Estado de México",
+                "phone_1": "72 8282 1439",
+                "phone_2": "72 2672 7212",
+                "email": "<strong>legado.ambiental.mx@gmail.com</strong>"
             },
-            "rights": "© 2024 Legado Ambiental. Todos los derechos reservados.",
+            "rights": "<strong>© 2026 Legado Ambiental S.A. de C.V. <br>Todos los derechos reservados.</strong>",
             "privacy": "Política de Privacidad",
             "terms": "Términos de Servicio",
             "sitemap": "Mapa del Sitio"
@@ -107,12 +112,12 @@ const translations = {
             "title": "Quiénes Somos",
             "hero": {
                 "title": "Quiénes Somos",
-                "subtitle": "Definiendo el paisaje de la ingeniería civil a través de la integridad, precisión y un compromiso con la infraestructura sostenible."
+                "subtitle": "Somos una firma de ingeniería especializada en medio ambiente, integrada por un equipo interdisciplinario"
             },
             "sustainable": {
                 "title": "Construyendo un Legado Sostenible",
-                "p1": "Fundada en 2010, Legado Ambiental se ha establecido como una piedra angular de la excelencia en ingeniería tanto en el sector público como en el privado. Nos especializamos en proyectos de infraestructura complejos que exigen alta competencia técnica y sensibilidad ambiental.",
-                "p2": "Nuestro enfoque combina la maestría en ingeniería tradicional con tecnologías sostenibles modernas, asegurando que cada proyecto que emprendemos sirva a la comunidad para las generaciones venideras."
+                "p1": "Legado Ambiental, S.A. de C.V. es una empresa mexicana fundada en 1999 con sede en la Ciudad de México, especializada en prestación de servicios profesionales en los ámbitos de la ingeniería ambiental, construcción, topografía y seguridad e higiene en obra, como una respuesta a la creciente necesidad de lograr una alta compatibilidad entre las actividades productivas, la prevención, control de la contaminación ambiental y la preservación de los recursos naturales, orientado al desarrollo sostenible.",
+                "p2": "Somos una firma de ingeniería especializada en medio ambiente, integrada por un equipo interdisciplinario de profesionales con amplia experiencia en estudios, proyectos, construcción y consultoría ambiental. Por más de dos décadas hemos colaborado con los sectores industrial, gubernamental y de servicios en el diseño y aplicación de soluciones de ingeniería ambiental técnica, económica y ambientalmente factibles."
             },
             "mission": {
                 "title": "Misión",
@@ -236,21 +241,35 @@ const translations = {
                 "desc": "Explora los hitos que han definido nuestro crecimiento e impacto en la industria de la construcción durante la última década."
             },
             "timeline": {
-                "2024": {
-                    "title": "Expansión Global",
-                    "desc": "Legado Ambiental abrió su primera sede internacional, marcando un nuevo capítulo en nuestra misión de brindar soluciones sostenibles a escala global."
+                "item1": {
+                    "label": "Industria",
+                    "title": "Evaluación Ambiental - <strong>Grupo Serla</strong>",
+                    "desc": "Estudio integral corporativo bajo la <strong>NOM-052-SEMARNAT</strong> (RPs), <strong>NOM-085</strong> (Emisiones) y las disposiciones del <strong>RCDF</strong>, asegurando operatividad sin externalidades negativas."
                 },
-                "2020": {
-                    "title": "La Iniciativa Sostenible",
-                    "desc": "Lanzamos nuestro departamento de Consultoría Ecológica, integrando materiales verdes y prácticas de eficiencia energética en todos nuestros proyectos de construcción."
+                "item2": {
+                    "label": "Hídrico",
+                    "title": "Saneamiento - Río Tiloxtoc",
+                    "desc": "Planeación, muestreo y mitigación conjunta con el <strong>CIITEC-IPN</strong> acorde a los lineamientos de la <strong>Ley de Aguas Nacionales</strong> y <strong>SEMARNAT</strong> para el rescate ecológico."
                 },
-                "2015": {
-                    "title": "Primer Contrato Gubernamental",
-                    "desc": "Adjudicación de nuestro primer gran proyecto de infraestructura pública: la revitalización del sistema de carreteras del centro de la ciudad."
+                "item3": {
+                    "label": "Academia",
+                    "title": "Tecnología Sustentable - <strong>ITESM</strong>",
+                    "desc": "Implementación de redes hidrosanitarias cerradas y Plantas de Tratamiento Paquete cumpliendo con las <strong>Normas Técnicas</strong> del <strong>Reglamento de Construcciones</strong> y el <strong>Tecnológico de Monterrey</strong>."
                 },
-                "2010": {
-                    "title": "Fundación",
-                    "desc": "Legado Ambiental fue fundada por un equipo de cuatro ingenieros civiles apasionados por combinar la integridad estructural con la administración ambiental."
+                "item4": {
+                    "label": "Especialidad",
+                    "title": "Tratamiento Alta Eficiencia - <strong>IMMSA</strong>",
+                    "desc": "Diseño estructural avanzado bajo requerimientos sísmicos y la <strong>NOM-001-SEMARNAT-1996</strong> para la máxima remoción fisicoquímica de metales pesados en el sector metalúrgico."
+                },
+                "item5": {
+                    "label": "Salud",
+                    "title": "Unidades Clínicas y Hospitales",
+                    "desc": "Adecuación estructural catalogada como <strong>Grupo A</strong> (U=1.5) integrando alta bioseguridad bajo la <strong>NOM-087-ECOL-SSA1</strong> en materia de <strong>Residuos Peligrosos Biológico Infecciosos</strong>."
+                },
+                "item6": {
+                    "label": "<strong>1999</strong>",
+                    "title": "Fundación y Obras Civiles",
+                    "desc": "Consolidación operacional operando en conjunto con el <strong>Título Sexto del RCDF</strong>, logrando una firme planeación empresarial equilibrada entre construcción y medio ambiente."
                 }
             }
         },
@@ -280,6 +299,7 @@ const translations = {
                 "method_label": "Medio de Contacto Preferido",
                 "method_email": "Correo Electrónico",
                 "method_phone": "Llamada Telefónica",
+                "honeypot": "Si eres humano, deja este campo en blanco",
                 "captcha_label": "Resuelve:",
                 "captcha_error": "Resultado incorrecto",
                 "phone_error": "Formato inválido. (55) 1234 5678",
@@ -299,11 +319,15 @@ const translations = {
             },
             "info": {
                 "title": "Información Directa",
-                "addr": "Plaza de Ingeniería, Suite 400<br />Distrito de Negocios Internacional"
+                "addr": "U.H. Valle de Ecatepec, <br> C.P. 55119, Ecatepec, Estado de México",
+                "email": "<strong>legado.ambiental.mx@gmail.com</strong>",
+                "phone1": "+52 72 8282 1439",
+                "phone2": "+52 72 2672 7212"
             }
         },
         "index_landing": {
             "title": "Legado Ambiental",
+            "title_full": "Legado Ambiental | Inicio",
             "welcome": "Bienvenido al proyecto de preservación ambiental."
         }
     },
@@ -338,25 +362,26 @@ const translations = {
             "label": "What We Do",
             "title": "Our Specialized Services",
             "desc": "We offer comprehensive options in engineering and environment for various sectors.",
-            "civil": {
-                "title": "Civil Engineering",
-                "desc": "Structural design and heavy civil works for industrial and public infrastructure."
+            "s1": {
+                "title": "Environmental Engineering",
+                "desc": "We are an engineering firm specialized in the environment, integrated by an interdisciplinary team of professionals with extensive experience in environmental studies, projects, construction, and consulting."
             },
-            "env": {
-                "title": "Environmental Legacy",
-                "desc": "Sustainable construction practices and environmental impact mitigation."
+            "s2": {
+                "title": "Construction",
+                "desc": "Infrastructure, urban development, housing, public and private works, as well as specialized technical consulting, participating in all stages of the project: planning, execution, supervision, and technical-administrative closure."
             },
-            "mgmt": {
-                "title": "Project Management",
-                "desc": "Integral management ensuring schedules, budgets, and safety standards."
+            "s3": {
+                "title": "Topography",
+                "desc": "We provide high-precision topographic services for infrastructure, civil works, urbanization, transport, and building projects, supported by modern technology and standardized methodologies."
             },
-            "gov": {
-                "title": "Government Projects",
-                "desc": "Specialized solutions for municipal and federal public works tenders."
+            "s4": {
+                "title": "Health & Safety",
+                "desc": "At Legado Ambiental, we transform the operability of your projects by integrating safety, administrative efficiency, and legal compliance. Under the Direction of Operations and Comprehensive Compliance, we offer robust solutions for the construction and environmental sectors."
             },
             "details": "Details"
         },
         "portfolio": {
+            "label": "Our Work",
             "title": "Recent Projects",
             "p1": {
                 "cat": "Government / Infrastructure",
@@ -533,21 +558,35 @@ const translations = {
                 "desc": "Explore the milestones that have defined our growth and impact in the construction industry over the last decade."
             },
             "timeline": {
-                "2024": {
-                    "title": "Global Expansion",
-                    "desc": "Legado Ambiental opened its first international headquarters, marking a new chapter in our mission to provide sustainable solutions on a global scale."
+                "item1": {
+                    "label": "Industry",
+                    "title": "Environmental Assessment - <strong>Grupo Serla</strong>",
+                    "desc": "Comprehensive corporate study under <strong>NOM-052-SEMARNAT</strong> (Hazardous Waste), <strong>NOM-085</strong> (Emissions), and <strong>RCDF</strong> provisions, ensuring operations with no negative externalities."
                 },
-                "2020": {
-                    "title": "The Sustainable Initiative",
-                    "desc": "We launched our Ecological Consulting department, integrating green materials and energy efficiency practices into all our construction projects."
+                "item2": {
+                    "label": "Water",
+                    "title": "Sanitation - Tiloxtoc River",
+                    "desc": "Planning, sampling, and joint mitigation with <strong>CIITEC-IPN</strong> according to <strong>National Water Law</strong> and <strong>SEMARNAT</strong> guidelines for ecosystem rescue."
                 },
-                "2015": {
-                    "title": "First Government Contract",
-                    "desc": "Award of our first major public infrastructure project: the revitalization of the downtown highway system."
+                "item3": {
+                    "label": "Academia",
+                    "title": "Sustainable Tech - <strong>ITESM</strong>",
+                    "desc": "Implementation of closed plumbing networks and Package Treatment Plants complying with <strong>Technical Standards</strong> of <strong>Building Regulations</strong> and <strong>ITESM</strong> facilities."
                 },
-                "2010": {
-                    "title": "Foundation",
-                    "desc": "Legado Ambiental was founded by a team of four civil engineers passionate about combining structural integrity with environmental stewardship."
+                "item4": {
+                    "label": "Specialty",
+                    "title": "High Efficiency WWTP - <strong>IMMSA</strong>",
+                    "desc": "Advanced structural design under seismic requirements and <strong>NOM-001-SEMARNAT-1996</strong> for maximum physicochemical removal of heavy metals in mining."
+                },
+                "item5": {
+                    "label": "Health",
+                    "title": "Clinical & Hospital Units",
+                    "desc": "Structural adaptation categorized as <strong>Group A</strong> (U=1.5) integrating maximal biosecurity under <strong>NOM-087-ECOL-SSA1</strong> regarding <strong>Hazardous Biological Infectious Wastes</strong>."
+                },
+                "item6": {
+                    "label": "<strong>1999</strong>",
+                    "title": "Foundation & Civil Works",
+                    "desc": "Infrastructure consolidation operating strictly aligned with <strong>Title Six of the RCDF</strong>, achieving a balanced corporate symbiosis between construction and environment."
                 }
             }
         },
@@ -577,6 +616,7 @@ const translations = {
                 "method_label": "Preferred Contact Method",
                 "method_email": "Email",
                 "method_phone": "Phone Call",
+                "honeypot": "If you are human, leave this field blank",
                 "captcha_label": "Solve:",
                 "captcha_error": "Incorrect result",
                 "phone_error": "Invalid format. (555) 123-4567",
@@ -601,6 +641,7 @@ const translations = {
         },
         "index_landing": {
             "title": "Legado Ambiental",
+            "title_full": "Legado Ambiental | Home",
             "welcome": "Welcome to the environmental preservation project."
         }
     }

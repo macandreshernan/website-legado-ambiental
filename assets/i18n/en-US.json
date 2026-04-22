@@ -224,21 +224,35 @@
             "desc": "Explore the milestones that have defined our growth and impact in the construction industry over the last decade."
         },
         "timeline": {
-            "2024": {
-                "title": "Global Expansion",
-                "desc": "Legado Ambiental opened its first international headquarters, marking a new chapter in our mission to provide sustainable solutions on a global scale."
+            "item1": {
+                "label": "Industry",
+                "title": "Environmental Assessment - <strong>Grupo Serla</strong>",
+                "desc": "Comprehensive corporate study under <strong>NOM-052-SEMARNAT</strong> (Hazardous Waste), <strong>NOM-085</strong> (Emissions), and <strong>RCDF</strong> provisions, ensuring operations with no negative externalities."
             },
-            "2020": {
-                "title": "The Sustainable Initiative",
-                "desc": "We launched our Ecological Consulting department, integrating green materials and energy efficiency practices into all our construction projects."
+            "item2": {
+                "label": "Water",
+                "title": "Sanitation - Tiloxtoc River",
+                "desc": "Planning, sampling, and joint mitigation with <strong>CIITEC-IPN</strong> according to <strong>National Water Law</strong> and <strong>SEMARNAT</strong> guidelines for ecosystem rescue."
             },
-            "2015": {
-                "title": "First Government Contract",
-                "desc": "Award of our first major public infrastructure project: the revitalization of the downtown highway system."
+            "item3": {
+                "label": "Academia",
+                "title": "Sustainable Tech - <strong>ITESM</strong>",
+                "desc": "Implementation of closed plumbing networks and Package Treatment Plants complying with <strong>Technical Standards</strong> of <strong>Building Regulations</strong> and <strong>ITESM</strong> facilities."
             },
-            "2010": {
-                "title": "Foundation",
-                "desc": "Legado Ambiental was founded by a team of four civil engineers passionate about combining structural integrity with environmental stewardship."
+            "item4": {
+                "label": "Specialty",
+                "title": "High Efficiency WWTP - <strong>IMMSA</strong>",
+                "desc": "Advanced structural design under seismic requirements and <strong>NOM-001-SEMARNAT-1996</strong> for maximum physicochemical removal of heavy metals in mining."
+            },
+            "item5": {
+                "label": "Health",
+                "title": "Clinical & Hospital Units",
+                "desc": "Structural adaptation categorized as <strong>Group A</strong> (U=1.5) integrating maximal biosecurity under <strong>NOM-087-ECOL-SSA1</strong> regarding <strong>Hazardous Biological Infectious Wastes</strong>."
+            },
+            "item6": {
+                "label": "<strong>1999</strong>",
+                "title": "Foundation & Civil Works",
+                "desc": "Infrastructure consolidation operating strictly aligned with <strong>Title Six of the RCDF</strong>, achieving a balanced corporate symbiosis between construction and environment."
             }
         }
     },
