@@ -12,7 +12,7 @@ const translations = {
     'es-MX': {
         "nav": {
             "about": "Quiénes Somos",
-            "services": "Servicios",
+            "services": "Servicios y Cotización",
             "portfolio": "Portafolio",
             "experience": "Experiencia",
             "contact": "Contacto",
@@ -334,7 +334,7 @@ const translations = {
     'en-US': {
         "nav": {
             "about": "About Us",
-            "services": "Services",
+            "services": "Services & Quote",
             "portfolio": "Portfolio",
             "experience": "Experience",
             "contact": "Contact",
