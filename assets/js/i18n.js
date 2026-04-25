@@ -99,7 +99,7 @@ const translations = {
                 "title": "Contacto",
                 "addr_1": "U.H. Valle de Ecatepec, C.P. 55119",
                 "addr_2": "Ecatepec, Estado de México",
-                "phone_1": "72 8282 1439",
+                "phone_1": "55 7312 6918",
                 "phone_2": "72 2672 7212",
                 "email": "<strong>legado.ambiental.mx@gmail.com</strong>"
             },
@@ -321,7 +321,7 @@ const translations = {
                 "title": "Información Directa",
                 "addr": "U.H. Valle de Ecatepec, <br> C.P. 55119, Ecatepec, Estado de México",
                 "email": "<strong>legado.ambiental.mx@gmail.com</strong>",
-                "phone1": "+52 72 8282 1439",
+                "phone1": "+52 55 7312 6918",
                 "phone2": "+52 72 2672 7212"
             }
         },

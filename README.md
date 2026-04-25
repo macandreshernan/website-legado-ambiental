@@ -450,3 +450,24 @@ Se refactorizó el bloque de portafolio destacado en la página principal para e
 ### Archivos Modificados e Impactados
 - `home.html`
 - `markdown/proyectos_recientes_home.md` (Análisis UX previo)
+
+## Fase 18: Refinamiento Global de Menús y Navegación UX
+
+Se ejecutó una revisión integral de los menús (escritorio y móvil), botones de llamado a la acción (CTAs) y utilidades en el footer para mejorar la conversión y evitar redundancias visuales en todo el sitio.
+
+### 1. Refinamiento de Menú (Global)
+- **Consistencia de Etiquetado**: Se actualizó el texto "Servicios" a **"Servicios y Cotización"** en todas las páginas (menú principal y menú móvil/flotante) para dejar clara la oferta desde la navegación superior.
+- **Limpieza Visual**: Se ocultaron (mediante comentarios) los botones independientes de "Cotizar" tanto en la cabecera como en el menú móvil, previniendo redundancias con la opción anterior.
+
+### 2. Footer y Redirecciones CTA (Global)
+- **Copiado al Portapapeles**: Se implementó una funcionalidad dinámica de JavaScript en todos los iconos de "Compartir" (`share`) del mini-footer que, al hacer clic, copia la URL de la página actual al portapapeles y notifica al usuario.
+- **Limpieza de Footer**: Se removió el icono de ubicación sobrante en los mini-footers de páginas internas para un acabado más limpio.
+- **Optimización de Conversión**: Se recableó el botón central de "Iniciar Consulta" en `about_us.html` hacia `services_overview/services.html` y el CTA de `our_experience.html` directo a `contact_faq.html`, simplificando los flujos del usuario final.
+
+### Archivos Modificados
+- `home.html`
+- `about_us/about_us.html`
+- `services_overview/services.html`
+- `experience_timeline/our_experience.html`
+- `project_portfolio_gallery/portfolio.html`
+- `faq/contact_faq.html`

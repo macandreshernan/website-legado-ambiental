@@ -98,7 +98,7 @@
                     <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors"
                         href="about_us/about_us.html" data-i18n="nav.about">Quiénes Somos</a>
                     <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors"
-                        href="services_overview/services.html" data-i18n="nav.services">Servicios</a>
+                        href="services_overview/services.html" data-i18n="nav.services">Servicios y Cotización</a>
                     <!--<a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors"
                         href="project_portfolio_gallery/portfolio.html" data-i18n="nav.portfolio">Portafolio</a>-->
                     <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors"
@@ -120,11 +120,11 @@
                         <button class="text-sm font-semibold hover:text-primary transition-colors"
                             data-switch-lang="en-US">EN</button>
                     </div>
-                    <button
+                    <!-- <button
                         class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-lg text-sm font-bold tracking-wide transition-all shadow-md focus:ring-2 focus:ring-primary focus:ring-offset-2"
                         data-i18n="nav.quote">
                         Cotizar
-                    </button>
+                    </button> -->
                 </div>
 
                 <!-- Mobile Menu Button -->
@@ -142,7 +142,7 @@
                 <a class="text-navy dark:text-gray-300 text-base font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-3 transition-colors"
                     href="about_us/about_us.html" data-i18n="nav.about">Quiénes Somos</a>
                 <a class="text-navy dark:text-gray-300 text-base font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-3 transition-colors"
-                    href="services_overview/services.html" data-i18n="nav.services">Servicios</a>
+                    href="services_overview/services.html" data-i18n="nav.services">Servicios y Cotización</a>
                 <!-- <a class="text-navy dark:text-gray-300 text-base font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-3 transition-colors"
                     href="project_portfolio_gallery/portfolio.html" data-i18n="nav.portfolio">Portafolio</a> -->
                 <a class="text-navy dark:text-gray-300 text-base font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-3 transition-colors"
@@ -159,11 +159,11 @@
                     <span data-i18n="nav.theme" class="text-base font-semibold">Cambiar Tema</span>
                 </button>
 
-                <button
+                <!-- <button
                     class="w-full bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg text-sm font-bold tracking-wide transition-all"
                     data-i18n="nav.quote">
                     Cotizar
-                </button>
+                </button> -->
             </div>
         </div>
     </header>
@@ -205,7 +205,7 @@
                                 <span data-i18n="hero.portfolio_btn">Ver Portafolio</span>
                                 <span class="material-symbols-outlined">trending_flat</span>
                             </button>
-                            <button
+                            <button onclick="window.location.href='faq/contact_faq.html'"
                                 class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-lg text-base font-bold transition-all shadow-[0_4px_16px_rgba(0,0,0,0.2)] focus:ring-2 focus:ring-white hover:border-white/40"
                                 data-i18n="hero.contact_btn">
                                 Contáctanos
@@ -501,6 +501,7 @@
                     </div>
                 </div>
 
+
                 <div
                     class="group relative overflow-hidden rounded-3xl h-[420px] shadow-[0_10px_40px_rgba(0,0,0,0.08)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.4)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] transform hover:-translate-y-2 transition-all duration-500 cursor-pointer">
                     <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-110"
@@ -550,7 +551,7 @@
                     privado o gubernamental.
                 </p>
                 <div class="flex flex-wrap justify-center gap-4">
-                    <button
+                    <button onclick="window.location.href='services_overview/services.html'"
                         class="px-10 py-4 bg-white text-primary font-bold rounded-lg hover:bg-blue-50 transition-colors shadow-xl focus:ring-2 focus:ring-white"
                         data-i18n="cta.start_btn">Iniciar
                         un Proyecto</button>
@@ -623,7 +624,7 @@
                         </li>
                         <li class="flex items-center gap-2">
                             <span class="material-symbols-outlined text-sm text-primary">call</span>
-                            <span data-i18n="footer.contact.phone_1">72 8282 1439</span>
+                            <span data-i18n="footer.contact.phone_1">55 7312 6918</span>
                         </li>
                         <li class="flex items-center gap-2">
                             <span class="material-symbols-outlined text-sm text-primary">call</span>
@@ -639,17 +640,14 @@
             <div
                 class="pt-8 border-t border-gray-100 dark:border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-charcoal dark:text-gray-500 font-medium">
                 <p data-i18n="footer.rights">© 2026 Legado Ambiental S.A. de C.V. Todos los derechos reservados.</p>
-                <div class="flex gap-8">
+                <!-- <div class="flex gap-8">
                     <a class="hover:text-primary transition-colors" href="javascript:void(0)"
                         data-i18n="footer.privacy">Política de
                         Privacidad</a>
                     <a class="hover:text-primary transition-colors" href="javascript:void(0)"
                         data-i18n="footer.terms">Términos de
                         Servicio</a>
-                    <a class="hover:text-primary transition-colors" href="javascript:void(0)"
-                        data-i18n="footer.sitemap">Mapa del
-                        Sitio</a>
-                </div>
+                </div> -->
             </div>
         </div>
     </footer>
