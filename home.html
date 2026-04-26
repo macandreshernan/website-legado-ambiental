@@ -112,8 +112,6 @@
                         href="about_us/about_us.html" data-i18n="nav.about">Quiénes Somos</a>
                     <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors"
                         href="services_overview/services.html" data-i18n="nav.services">Servicios y Cotización</a>
-                    <!--<a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors"
-                        href="project_portfolio_gallery/portfolio.html" data-i18n="nav.portfolio">Portafolio</a>-->
                     <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors"
                         href="experience_timeline/our_experience.html" data-i18n="nav.experience">Experiencia</a>
                     <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors"
@@ -121,7 +119,7 @@
                 </nav>
                 <div class="hidden md:flex items-center gap-4">
                     <!-- Theme Toggle -->
-                    <button onclick="window.toggleDarkMode()" aria-label="Toggle Dark Mode"
+                    <button data-action="toggle-theme" aria-label="Toggle Dark Mode"
                         class="theme-toggle-btn text-navy dark:text-gray-300 hover:text-primary transition-colors flex items-center justify-center p-1 rounded-full bg-gray-100 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary">
                         <span class="material-symbols-outlined text-[1.2rem]">dark_mode</span>
                     </button>
@@ -133,11 +131,6 @@
                         <button class="text-sm font-semibold hover:text-primary transition-colors"
                             data-switch-lang="en-US">EN</button>
                     </div>
-                    <!-- <button
-                        class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-lg text-sm font-bold tracking-wide transition-all shadow-md focus:ring-2 focus:ring-primary focus:ring-offset-2"
-                        data-i18n="nav.quote">
-                        Cotizar
-                    </button> -->
                 </div>
 
                 <!-- Mobile Menu Button -->
@@ -156,8 +149,6 @@
                     href="about_us/about_us.html" data-i18n="nav.about">Quiénes Somos</a>
                 <a class="text-navy dark:text-gray-300 text-base font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-3 transition-colors"
                     href="services_overview/services.html" data-i18n="nav.services">Servicios y Cotización</a>
-                <!-- <a class="text-navy dark:text-gray-300 text-base font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-3 transition-colors"
-                    href="project_portfolio_gallery/portfolio.html" data-i18n="nav.portfolio">Portafolio</a> -->
                 <a class="text-navy dark:text-gray-300 text-base font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-3 transition-colors"
                     href="experience_timeline/our_experience.html" data-i18n="nav.experience">Experiencia</a>
                 <a class="text-navy dark:text-gray-300 text-base font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-3 transition-colors"
@@ -166,17 +157,12 @@
                     href="faq/contact_faq.html" data-i18n="nav.faq">FAQ</a>
 
                 <!-- Mobile Theme Toggle -->
-                <button onclick="window.toggleDarkMode()" aria-label="Toggle Dark Mode"
+                <button data-action="toggle-theme" aria-label="Toggle Dark Mode"
                     class="theme-toggle-btn flex items-center gap-2 text-left text-navy dark:text-gray-300 py-2 border-b border-gray-100 dark:border-gray-800">
                     <span class="material-symbols-outlined text-lg">dark_mode</span>
                     <span data-i18n="nav.theme" class="text-base font-semibold">Cambiar Tema</span>
                 </button>
 
-                <!-- <button
-                    class="w-full bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg text-sm font-bold tracking-wide transition-all"
-                    data-i18n="nav.quote">
-                    Cotizar
-                </button> -->
             </div>
         </div>
     </header>
@@ -218,7 +204,7 @@
                                 <span data-i18n="hero.portfolio_btn">Ver Portafolio</span>
                                 <span class="material-symbols-outlined">trending_flat</span>
                             </button>
-                            <button onclick="window.location.href='faq/contact_faq.html'"
+                            <button data-action="navigate" data-href="faq/contact_faq.html"
                                 class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-lg text-base font-bold transition-all shadow-[0_4px_16px_rgba(0,0,0,0.2)] focus:ring-2 focus:ring-white hover:border-white/40"
                                 data-i18n="hero.contact_btn">
                                 Contáctanos
@@ -564,7 +550,7 @@
                     privado o gubernamental.
                 </p>
                 <div class="flex flex-wrap justify-center gap-4">
-                    <button onclick="window.location.href='services_overview/services.html'"
+                    <button data-action="navigate" data-href="services_overview/services.html"
                         class="px-10 py-4 bg-white text-primary font-bold rounded-lg hover:bg-blue-50 transition-colors shadow-xl focus:ring-2 focus:ring-white"
                         data-i18n="cta.start_btn">Iniciar
                         un Proyecto</button>

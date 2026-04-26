@@ -785,6 +785,31 @@ document.addEventListener('DOMContentLoaded', () => {
             const lang = switcher.getAttribute('data-switch-lang');
             setLanguage(lang);
         }
+
+        // Global Unobtrusive Event Handlers
+        const actionBtn = e.target.closest('[data-action]');
+        if (actionBtn) {
+            const action = actionBtn.getAttribute('data-action');
+            if (action === 'toggle-theme') {
+                if (typeof window.toggleDarkMode === 'function') {
+                    window.toggleDarkMode();
+                } else if (typeof globalThis.toggleDarkMode === 'function') {
+                    globalThis.toggleDarkMode();
+                }
+            } else if (action === 'copy-url') {
+                navigator.clipboard.writeText(window.location.href); 
+                alert('URL copiada');
+            } else if (action === 'smooth-scroll-contact') {
+                const tabBtn = document.getElementById('tab-btn-1');
+                const tabSec = document.getElementById('tab-section-1');
+                if(tabBtn && tabSec) {
+                    tabBtn.click();
+                    tabSec.scrollIntoView({behavior: 'smooth'});
+                }
+            } else if (action === 'navigate') {
+                window.location.href = actionBtn.getAttribute('data-href');
+            }
+        }
     });
 
 
