@@ -471,3 +471,23 @@ Se ejecutó una revisión integral de los menús (escritorio y móvil), botones 
 - `experience_timeline/our_experience.html`
 - `project_portfolio_gallery/portfolio.html`
 - `faq/contact_faq.html`
+
+## Fase 19: Accesibilidad, Rendimiento, Formulario y SEO Avanzado
+
+Se implementó una serie de optimizaciones técnicas vitales para asegurar el cumplimiento con estándares de producción, mejorando tanto el desempeño para los usuarios finales como para los motores de búsqueda.
+
+### 1. Formulario de Contacto Funcional (FormSubmit)
+- Se actualizó el formulario de `contact_faq.html` para conectarse con `formsubmit.co` hacia la bandeja oficial `legado.ambiental.mx@gmail.com`.
+- Se integró **Validación Avanzada** por JavaScript (Regex para correos y control de longitud mínima).
+- Se implementó un **Loader Interactivo y Bloqueo** sobre el botón al momento del envío para prevenir correos duplicados y mejorar la UX de confirmación.
+
+### 2. Accesibilidad (A11y) y Rendimiento
+- **Aria-Labels**: Se añadieron etiquetas `aria-label` a los elementos interactivos que contenían solo iconos (botón de menú móvil, toggle de modo oscuro) a través de todas las páginas para una accesibilidad óptima con lectores de pantalla.
+- **Micro-Interacción de Carga Global**: Se inyectó un spinner global `<div id="global-loader">` que aparece en lo que procesa el contenido, asegurando que la página se vea pulida sin "parpadeos" del JavaScript.
+
+### 3. SEO Completo (Meta Tags)
+- Se inyectaron metaetiquetas estructuradas de **OpenGraph** y **Twitter Cards** para la página raíz (`index.html`) y página de error (`404.html`), asegurando consistencia en la generación de previsualizaciones.
+
+### Archivos Modificados e Impactados
+- `assets/js/i18n.js` (Lógica Global de Loader)
+- Todos los archivos `.html` (`home.html`, `about_us.html`, `contact_faq.html`, `index.html`, etc.)

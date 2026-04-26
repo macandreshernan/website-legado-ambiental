@@ -786,4 +786,16 @@ document.addEventListener('DOMContentLoaded', () => {
             setLanguage(lang);
         }
     });
+
+
+    // Global Loader logic
+    window.addEventListener('load', () => {
+        const loader = document.getElementById('global-loader');
+        if (loader) {
+            loader.classList.add('opacity-0');
+            setTimeout(() => {
+                loader.style.display = 'none';
+            }, 700);
+        }
+    });
 });

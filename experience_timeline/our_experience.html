@@ -92,6 +92,13 @@
             Para disfrutar de la experiencia completa y todas las funcionalidades de Legado Ambiental, por favor habilite JavaScript en su navegador.
         </div>
     </noscript>
+    <!-- Global Loader -->
+    <div id="global-loader" class="fixed inset-0 z-[99999] flex items-center justify-center bg-white dark:bg-[#121c27] transition-opacity duration-700">
+        <div class="relative flex flex-col items-center">
+            <img src="../assets/images/logo/logo_final_v2.webp" alt="Cargando Legado Ambiental" class="h-20 w-auto mb-4 animate-pulse opacity-80">
+            <div class="w-12 h-12 border-4 border-primary/30 border-t-primary rounded-full animate-spin"></div>
+        </div>
+    </div>
   <div class="relative flex min-h-screen w-full flex-col">
     <!-- Top Navigation Bar (Sticky Optimized) -->
     <header
@@ -139,7 +146,7 @@
           </div>
 
           <!-- Mobile Menu Button -->
-          <button id="mobile-menu-btn"
+          <button id="mobile-menu-btn" aria-label="Abrir menú móvil"
             class="md:hidden text-navy dark:text-white p-2 hover:text-primary transition-colors">
             <span class="material-symbols-outlined text-3xl">menu</span>
           </button>
@@ -162,7 +169,7 @@
             href="../faq/contact_faq.html" data-i18n="nav.contact">Contacto</a>
 
           <!-- Mobile Theme Toggle -->
-          <button onclick="window.toggleDarkMode()"
+          <button onclick="window.toggleDarkMode()" aria-label="Toggle Dark Mode"
             class="theme-toggle-btn flex items-center gap-2 text-left text-navy dark:text-gray-300 py-2 border-b border-gray-100 dark:border-gray-800">
             <span class="material-symbols-outlined text-lg">dark_mode</span>
             <span data-i18n="nav.theme" class="text-base font-semibold">Cambiar Tema</span>
