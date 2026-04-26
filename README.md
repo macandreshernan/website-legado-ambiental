@@ -491,3 +491,19 @@ Se implementó una serie de optimizaciones técnicas vitales para asegurar el cu
 ### Archivos Modificados e Impactados
 - `assets/js/i18n.js` (Lógica Global de Loader)
 - Todos los archivos `.html` (`home.html`, `about_us.html`, `contact_faq.html`, `index.html`, etc.)
+
+## Fase 20: Corrección y Perfeccionamiento de Internacionalización (i18n)
+
+Se solucionaron errores estructurales de sincronización para perfeccionar el cambio instantáneo de idiomas en todo el ecosistema web.
+
+### 1. Refactorización del Generador de Rutas JSON
+- **Resolución de Anidamiento**: El script maestro `i18n.js` (`getValueByPath`) fue reprogramado para resolver un bug estructural originado por llaves anidadas. Ahora es capaz de procesar valores anidados duplicados (ej. buscar `auto_generated.text_057` directamente en la raíz de su categoría).
+- **Traducción Completada en Inglés**: Todos los fragmentos autogenerados en el archivo maestro de configuración fueron auditados y traducidos correctamente de `es-MX` a `en-US`, reteniendo intactos sus contenedores HTML para un rendering seguro.
+
+### 2. Sanitización HTML (Service Grid)
+- Se detectó y eliminó una duplicación de etiquetas `data-i18n` (múltiples llamadas en un solo nodo) en los botones de "Realizar cotización" dentro de `services.html`.
+- Se mapeó el atributo de internacionalización (`data-i18n="auto_generated.text_077"`) de manera uniforme a los 15 botones distribuidos en las diferentes pestañas interactivas, asegurando un switch de idiomas impecable.
+
+### Archivos Modificados
+- `assets/js/i18n.js`
+- `services_overview/services.html`
