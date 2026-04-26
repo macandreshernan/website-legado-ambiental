@@ -142,7 +142,7 @@
 
             <!-- Mobile Navigation Menu -->
             <div id="mobile-menu"
-                class="md:hidden absolute top-24 left-0 w-full bg-white/95 dark:bg-[#121c27]/95 backdrop-blur-xl rounded-2xl border border-gray-100 dark:border-white/10 shadow-2xl py-4 px-4 flex-col gap-2 transform transition-all duration-300 origin-top opacity-0 scale-y-0 pointer-events-none flex">
+                class="max-h-[calc(100vh-6rem)] overflow-y-auto md:hidden absolute top-24 left-0 w-full bg-white/95 dark:bg-[#121c27]/95 backdrop-blur-xl rounded-2xl border border-gray-100 dark:border-white/10 shadow-2xl py-4 px-4 flex-col gap-2 transform transition-all duration-300 origin-top opacity-0 scale-y-0 pointer-events-none flex">
                 <a class="text-primary text-base font-bold bg-primary/10 rounded-xl px-4 py-3" href="#"
                     data-i18n="nav.home">Inicio</a>
                 <a class="text-navy dark:text-gray-300 text-base font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-3 transition-colors"
@@ -170,7 +170,7 @@
         <!-- Hero Section con Efecto Hover Dinámico y Glassmorphism -->
         <section class="max-w-[1200px] mx-auto pt-6 pb-6 px-4">
             <div class="@container">
-                <div class="group relative flex items-center justify-start overflow-hidden rounded-xl min-h-[600px] shadow-2xl transition-all duration-700 cursor-default"
+                <div class="group relative flex items-center justify-start overflow-hidden rounded-xl min-h-[450px] md:min-h-[600px] shadow-2xl transition-all duration-700 cursor-default"
                     style="background-color: #101922;">
                     <!-- Background Image -->
                     <div class="absolute inset-0 z-0 bg-cover bg-center origin-center transition-all duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] transform scale-105 opacity-80 group-hover:opacity-100 group-hover:scale-100"
@@ -186,7 +186,7 @@
                     <div
                         class="relative z-10 p-8 md:p-16 lg:ml-12 max-w-3xl bg-[#101922]/40 backdrop-blur-md border border-white/10 rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.5)] transition-all duration-700 ease-in-out group-hover:bg-[#101922]/80 group-hover:border-primary/40 group-hover:backdrop-blur-xl transform translate-x-0 group-hover:translate-x-2 flex flex-col justify-center">
 
-                        <h1 class="text-white text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1] tracking-tight mb-6 drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]"
+                        <h1 class="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1] tracking-tight mb-6 drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]"
                             data-i18n="hero.title">
                             Ingeniería Ambiental y Desarrollo Sostenible.
                         </h1>
@@ -200,12 +200,12 @@
                         </p>
                         <div class="flex flex-wrap gap-4 mt-auto">
                             <button
-                                class="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-lg text-base font-bold transition-all flex items-center gap-2 shadow-[0_4px_16px_rgba(0,0,0,0.3)] focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-[#101922]">
+                                class="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-lg text-base font-bold transition-all flex items-center gap-2 shadow-[0_4px_16px_rgba(0,0,0,0.3)] focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-[#101922] w-full sm:w-auto justify-center">
                                 <span data-i18n="hero.portfolio_btn">Ver Portafolio</span>
                                 <span class="material-symbols-outlined">trending_flat</span>
                             </button>
                             <button data-action="navigate" data-href="faq/contact_faq.html"
-                                class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-lg text-base font-bold transition-all shadow-[0_4px_16px_rgba(0,0,0,0.2)] focus:ring-2 focus:ring-white hover:border-white/40"
+                                class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-lg text-base font-bold transition-all shadow-[0_4px_16px_rgba(0,0,0,0.2)] focus:ring-2 focus:ring-white hover:border-white/40 w-full sm:w-auto justify-center flex items-center"
                                 data-i18n="hero.contact_btn">
                                 Contáctanos
                             </button>
@@ -281,7 +281,7 @@
                     <div class="flex justify-center">
                         <a id="btn-mision-dwnld" href="assets/docs/Legado_Ambiental_Propuesta_v1.0.pdf"
                             download="Legado_Ambiental_Propuesta_v1.0.pdf"
-                            class="bg-primary hover:bg-primary/90 text-white px-8 py-4 md:px-10 md:py-5 rounded-xl text-sm md:text-base font-bold transition-all shadow-[0_8px_30px_rgba(0,0,0,0.3)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.5)] hover:-translate-y-1 focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-[#0c1622] inline-flex items-center gap-3 cursor-pointer text-center">
+                            class="bg-primary hover:bg-primary/90 text-white px-8 py-4 md:px-10 md:py-5 rounded-xl text-sm md:text-base font-bold transition-all shadow-[0_8px_30px_rgba(0,0,0,0.3)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.5)] hover:-translate-y-1 focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-[#0c1622] inline-flex items-center gap-3 cursor-pointer text-center w-full sm:w-auto justify-center">
                             <span data-i18n="value.mission_btn">Conoce Más Sobre Nuestra Misión</span>
                             <span class="material-symbols-outlined">download</span>
                         </a>

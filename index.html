@@ -39,11 +39,19 @@
             /* Green-800 */
             font-size: 3rem;
             margin-bottom: 1rem;
+            text-align: center;
         }
 
         p {
             font-size: 1.25rem;
             color: #4b5563;
+            text-align: center;
+            padding: 0 1rem;
+        }
+        
+        @media (max-width: 600px) {
+            h1 { font-size: 2.25rem; }
+            p { font-size: 1rem; }
         }
     </style>
     <!-- SEO Canonical & Hreflang -->
@@ -74,15 +82,6 @@
     <h1 data-i18n="index_landing.title">Legado Ambiental</h1>
     <p data-i18n="index_landing.welcome">Bienvenido al proyecto de preservación ambiental.</p>
     <script src="assets/js/i18n.js"></script>
-    <script>
-        document.querySelectorAll('button[onclick]').forEach(btn => {
-            btn.onclick = (e) => {
-                const lang = e.target.textContent === 'ES' ? 'es-MX' : 'en-US';
-                localStorage.setItem('preferredLanguage', lang);
-                loadLanguage(lang);
-            };
-        });
-    </script>
 </body>
 
 </html>
