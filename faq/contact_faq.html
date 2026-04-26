@@ -98,6 +98,11 @@
             <div class="w-12 h-12 border-4 border-primary/30 border-t-primary rounded-full animate-spin"></div>
         </div>
     </div>
+    <!-- Submit Overlay -->
+    <div id="submit-overlay" class="fixed inset-0 z-[99999] hidden flex-col items-center justify-center bg-white/70 dark:bg-black/70 backdrop-blur-sm transition-opacity opacity-0 duration-300">
+        <div class="w-16 h-16 border-4 border-primary/30 border-t-primary rounded-full animate-spin"></div>
+        <p class="text-[#111418] dark:text-white font-bold mt-4 tracking-wide text-lg" data-i18n="contact_page.form.sending">Enviando mensaje...</p>
+    </div>
     <div class="relative flex min-h-screen w-full flex-col">
         <!-- Top Navigation Bar (Sticky Optimized) -->
         <header
@@ -646,7 +651,13 @@
                     return; // Spam detected silently
                 }
 
-                // Show spinner and block form
+                // Show full screen overlay
+                const overlay = document.getElementById('submit-overlay');
+                overlay.classList.remove('hidden');
+                overlay.classList.add('flex');
+                setTimeout(() => overlay.classList.remove('opacity-0'), 10);
+
+                // Disable button
                 const originalBtnText = submitBtn.innerHTML;
                 submitBtn.disabled = true;
                 submitBtn.innerHTML = '<div class="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin mr-2"></div> Enviando...';
@@ -671,6 +682,10 @@
                 })
                 .then(response => response.json())
                 .then(data => {
+                    // Hide overlay
+                    overlay.classList.add('opacity-0');
+                    setTimeout(() => { overlay.classList.remove('flex'); overlay.classList.add('hidden'); }, 300);
+
                     // Success state
                     submitBtn.classList.replace('bg-primary', 'bg-green-600');
                     submitBtn.classList.replace('hover:bg-primary/90', 'hover:bg-green-700');
@@ -687,6 +702,10 @@
                 })
                 .catch(error => {
                     console.error("Error al enviar el formulario", error);
+                    // Hide overlay
+                    overlay.classList.add('opacity-0');
+                    setTimeout(() => { overlay.classList.remove('flex'); overlay.classList.add('hidden'); }, 300);
+
                     submitBtn.classList.replace('bg-primary', 'bg-red-600');
                     submitBtn.innerHTML = 'Error al enviar';
                     setTimeout(() => {
