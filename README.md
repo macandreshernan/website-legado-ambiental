@@ -450,3 +450,76 @@ Se refactorizó el bloque de portafolio destacado en la página principal para e
 ### Archivos Modificados e Impactados
 - `home.html`
 - `markdown/proyectos_recientes_home.md` (Análisis UX previo)
+
+## Fase 18: Refinamiento Global de Menús y Navegación UX
+
+Se ejecutó una revisión integral de los menús (escritorio y móvil), botones de llamado a la acción (CTAs) y utilidades en el footer para mejorar la conversión y evitar redundancias visuales en todo el sitio.
+
+### 1. Refinamiento de Menú (Global)
+- **Consistencia de Etiquetado**: Se actualizó el texto "Servicios" a **"Servicios y Cotización"** en todas las páginas (menú principal y menú móvil/flotante) para dejar clara la oferta desde la navegación superior.
+- **Limpieza Visual**: Se ocultaron (mediante comentarios) los botones independientes de "Cotizar" tanto en la cabecera como en el menú móvil, previniendo redundancias con la opción anterior.
+
+### 2. Footer y Redirecciones CTA (Global)
+- **Copiado al Portapapeles**: Se implementó una funcionalidad dinámica de JavaScript en todos los iconos de "Compartir" (`share`) del mini-footer que, al hacer clic, copia la URL de la página actual al portapapeles y notifica al usuario.
+- **Limpieza de Footer**: Se removió el icono de ubicación sobrante en los mini-footers de páginas internas para un acabado más limpio.
+- **Optimización de Conversión**: Se recableó el botón central de "Iniciar Consulta" en `about_us.html` hacia `services_overview/services.html` y el CTA de `our_experience.html` directo a `contact_faq.html`, simplificando los flujos del usuario final.
+
+### Archivos Modificados
+- `home.html`
+- `about_us/about_us.html`
+- `services_overview/services.html`
+- `experience_timeline/our_experience.html`
+- `project_portfolio_gallery/portfolio.html`
+- `faq/contact_faq.html`
+
+## Fase 19: Accesibilidad, Rendimiento, Formulario y SEO Avanzado
+
+Se implementó una serie de optimizaciones técnicas vitales para asegurar el cumplimiento con estándares de producción, mejorando tanto el desempeño para los usuarios finales como para los motores de búsqueda.
+
+### 1. Formulario de Contacto Funcional (FormSubmit)
+- Se actualizó el formulario de `contact_faq.html` para conectarse con `formsubmit.co` hacia la bandeja oficial `legado.ambiental.mx@gmail.com`.
+- Se integró **Validación Avanzada** por JavaScript (Regex para correos y control de longitud mínima).
+- Se implementó un **Loader Interactivo y Bloqueo** sobre el botón al momento del envío para prevenir correos duplicados y mejorar la UX de confirmación.
+
+### 2. Accesibilidad (A11y) y Rendimiento
+- **Aria-Labels**: Se añadieron etiquetas `aria-label` a los elementos interactivos que contenían solo iconos (botón de menú móvil, toggle de modo oscuro) a través de todas las páginas para una accesibilidad óptima con lectores de pantalla.
+- **Micro-Interacción de Carga Global**: Se inyectó un spinner global `<div id="global-loader">` que aparece en lo que procesa el contenido, asegurando que la página se vea pulida sin "parpadeos" del JavaScript.
+
+### 3. SEO Completo (Meta Tags)
+- Se inyectaron metaetiquetas estructuradas de **OpenGraph** y **Twitter Cards** para la página raíz (`index.html`) y página de error (`404.html`), asegurando consistencia en la generación de previsualizaciones.
+
+### Archivos Modificados e Impactados
+- `assets/js/i18n.js` (Lógica Global de Loader)
+- Todos los archivos `.html` (`home.html`, `about_us.html`, `contact_faq.html`, `index.html`, etc.)
+
+## Fase 20: Corrección y Perfeccionamiento de Internacionalización (i18n)
+
+Se solucionaron errores estructurales de sincronización para perfeccionar el cambio instantáneo de idiomas en todo el ecosistema web.
+
+### 1. Refactorización del Generador de Rutas JSON
+- **Resolución de Anidamiento**: El script maestro `i18n.js` (`getValueByPath`) fue reprogramado para resolver un bug estructural originado por llaves anidadas. Ahora es capaz de procesar valores anidados duplicados (ej. buscar `auto_generated.text_057` directamente en la raíz de su categoría).
+- **Traducción Completada en Inglés**: Todos los fragmentos autogenerados en el archivo maestro de configuración fueron auditados y traducidos correctamente de `es-MX` a `en-US`, reteniendo intactos sus contenedores HTML para un rendering seguro.
+
+### 2. Sanitización HTML (Service Grid)
+- Se detectó y eliminó una duplicación de etiquetas `data-i18n` (múltiples llamadas en un solo nodo) en los botones de "Realizar cotización" dentro de `services.html`.
+- Se mapeó el atributo de internacionalización (`data-i18n="auto_generated.text_077"`) de manera uniforme a los 15 botones distribuidos en las diferentes pestañas interactivas, asegurando un switch de idiomas impecable.
+
+### Archivos Modificados
+- `assets/js/i18n.js`
+- `services_overview/services.html`
+
+## Fase 21: Actualización de Contenido y Estandarización de Formato
+
+Se implementaron mejoras en el formato del código fuente y se actualizaron contenidos institucionales y gráficos.
+
+### 1. Limpieza y Estandarización de Código HTML
+- **Remoción de Saltos de Línea**: Se eliminaron los saltos de línea innecesarios dentro de los nodos de texto en todos los archivos HTML (`home.html`, `portfolio.html`, `our_experience.html`, `services.html`, etc.). Esto previene renderizados extraños en navegadores y mantiene un DOM más limpio y legible para los desarrolladores.
+- **Traducciones UI Móvil**: Se agregaron los atributos faltantes `data-i18n` a los botones del menú móvil (menú hamburguesa) para garantizar su integración completa con el ecosistema de traducción.
+
+### 2. Actualización Institucional y Assets
+- **Copyright 2026**: Se actualizó la leyenda legal en el pie de página (footer) de todas las páginas web, transicionando a **"© 2026 Legado Ambiental S.A. de C.V."**.
+- **Nuevos Activos Gráficos**: Se cargaron e integraron al repositorio las nuevas creatividades visuales para servicios (`servicios-legado-ambiental-2026` en formato WebP, PNG y fuente XCF).
+
+### Archivos Modificados
+- Todas las páginas maestras `.html`.
+- Directorio de imágenes de servicios (`assets/images/services/`).

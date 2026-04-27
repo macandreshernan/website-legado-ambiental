@@ -9,16 +9,17 @@ const defaultLang = 'es-MX';
 const supportedLangs = ['es-MX', 'en-US'];
 
 const translations = {
-    'es-MX': {
+    "es-MX": {
         "nav": {
             "about": "Quiénes Somos",
-            "services": "Servicios",
+            "services": "Servicios y Cotización",
             "portfolio": "Portafolio",
             "experience": "Experiencia",
             "contact": "Contacto",
             "faq": "FAQ",
             "quote": "Cotizar",
-            "home": "Inicio"
+            "home": "Inicio",
+            "theme": "Cambiar Tema"
         },
         "hero": {
             "title": "Protegiendo hoy, el legado del mañana.",
@@ -29,7 +30,7 @@ const translations = {
         "stats": {
             "years": "Años de Experiencia",
             "projects": "Proyectos Completados",
-            "certifications": "Cualquier otra cosa aqui!!"
+            "certifications": "Certificaciones ISO"
         },
         "value": {
             "title": "Soluciones Inteligentes y Proyectos Integrales para el Desarrollo Sostenible.",
@@ -82,24 +83,24 @@ const translations = {
             "title": "Legado Ambiental <br>S.A. de C.V.",
             "desc": "Soluciones holísticas para el desarrollo de infraestructura y cumplimiento normativo.",
             "services": {
-                "title": "Servicios",
                 "1": "Ingeniería Ambiental",
                 "2": "Construcción",
                 "3": "Topografía",
-                "4": "Seguridad e Higiene"
+                "4": "Seguridad e Higiene",
+                "title": "Servicios"
             },
             "company": {
-                "title": "Compañía",
                 "1": "Quiénes somos",
                 "2": "Servicios",
                 "3": "Experiencia",
-                "4": "Contacto"
+                "4": "Contacto",
+                "title": "Compañía"
             },
             "contact": {
                 "title": "Contacto",
                 "addr_1": "U.H. Valle de Ecatepec, C.P. 55119",
                 "addr_2": "Ecatepec, Estado de México",
-                "phone_1": "72 8282 1439",
+                "phone_1": "55 7312 6918",
                 "phone_2": "72 2672 7212",
                 "email": "<strong>legado.ambiental.mx@gmail.com</strong>"
             },
@@ -142,6 +143,10 @@ const translations = {
                 "desc": "Contacte a nuestro equipo de expertos para discutir cómo Legado Ambiental puede hacer realidad su próxima visión con precisión y cuidado.",
                 "btn_consult": "Iniciar Consulta",
                 "btn_portfolio": "Ver Portafolio"
+            },
+            "objective": {
+                "title": "Nuestro Objetivo",
+                "desc": "\"Ser la firma líder en México que revoluciona la ingeniería civil y ambiental, creando proyectos estratégicos que protegen la vida, el entorno y el futuro de las ciudades.\""
             }
         },
         "services_page": {
@@ -151,7 +156,10 @@ const translations = {
                 "engeneering": "Ingeniería Ambiental",
                 "building": "Construcción",
                 "topography": "Topografía",
-                "safety": "Seguridad e Higiene"
+                "safety": "Seguridad e Higiene",
+                "all": "Todos los Servicios",
+                "private": "Sector Privado",
+                "public": "Obras Públicas"
             },
             "private": {
                 "title": "Construcción Privada",
@@ -189,6 +197,10 @@ const translations = {
                 "desc": "Legado Ambiental aporta décadas de experiencia colectiva a cada obra. Hablemos de tus requerimientos hoy mismo.",
                 "btn_quote": "Obtener Cotización",
                 "btn_process": "Nuestro Proceso"
+            },
+            "methodology": {
+                "subtitle": "Proceso Ejecutivo",
+                "title": "Nuestra Metodología Estratégica"
             }
         },
         "portfolio_page": {
@@ -306,7 +318,8 @@ const translations = {
                 "email_error": "Correo inválido",
                 "message": "Mensaje",
                 "message_ph": "¿Cómo podemos ayudarte?",
-                "btn": "Enviar Mensaje"
+                "btn": "Enviar Mensaje",
+                "sending": "Enviando mensaje..."
             },
             "faq": {
                 "title": "Preguntas Frecuentes",
@@ -321,7 +334,7 @@ const translations = {
                 "title": "Información Directa",
                 "addr": "U.H. Valle de Ecatepec, <br> C.P. 55119, Ecatepec, Estado de México",
                 "email": "<strong>legado.ambiental.mx@gmail.com</strong>",
-                "phone1": "+52 72 8282 1439",
+                "phone1": "+52 55 7312 6918",
                 "phone2": "+52 72 2672 7212"
             }
         },
@@ -329,18 +342,239 @@ const translations = {
             "title": "Legado Ambiental",
             "title_full": "Legado Ambiental | Inicio",
             "welcome": "Bienvenido al proyecto de preservación ambiental."
+        },
+        "error_404": {
+            "title": "404 - Página no encontrada",
+            "desc": "Lo sentimos, la página que buscas no existe o ha sido movida. Estamos construyendo nuevos componentes para mejorar su experiencia.",
+            "btn": "Volver al Inicio"
+        },
+        "auto_generated": {
+            "auto_generated.text_001": "Legado\n                        Ambiental",
+            "auto_generated.text_002": "<span class=\"w-8 h-[2px] bg-primary/50\"></span>\n<span data-i18n=\"services.label\">Lo que hacemos</span>",
+            "auto_generated.text_003": "<a class=\"hover:text-primary transition-colors\" data-i18n=\"footer.services.1\" href=\"services_overview/services.html#tab-1\">Ingeniería Ambiental</a>",
+            "auto_generated.text_004": "<a class=\"hover:text-primary transition-colors\" data-i18n=\"footer.services.2\" href=\"services_overview/services.html#tab-2\">Construcción</a>",
+            "auto_generated.text_005": "<a class=\"hover:text-primary transition-colors\" data-i18n=\"footer.services.3\" href=\"services_overview/services.html#tab-3\">Topografía</a>",
+            "auto_generated.text_006": "<a class=\"hover:text-primary transition-colors\" data-i18n=\"footer.services.4\" href=\"services_overview/services.html#tab-4\">Seguridad e Higiene</a>",
+            "auto_generated.text_007": "<a class=\"hover:text-primary transition-colors\" data-i18n=\"footer.company.1\" href=\"about_us/about_us.html\">Quiénes somos</a>",
+            "auto_generated.text_008": "<a class=\"hover:text-primary transition-colors\" data-i18n=\"footer.company.2\" href=\"services_overview/services.html\">Servicios</a>",
+            "auto_generated.text_009": "<a class=\"hover:text-primary transition-colors\" data-i18n=\"footer.company.3\" href=\"experience_timeline/our_experience.html\">Experiencia</a>",
+            "auto_generated.text_010": "<a class=\"hover:text-primary transition-colors\" data-i18n=\"footer.company.4\" href=\"faq/contact_faq.html\">Contacto</a>",
+            "auto_generated.text_011": "<span class=\"material-symbols-outlined text-sm text-primary\">location_on</span>\n<span data-i18n=\"footer.contact.addr_1\">U.H. Valle de Ecatepec, C.P. 55119</span>\n<span data-i18n=\"footer.contact.addr_2\">Ecatepec, Estado de México</span>",
+            "auto_generated.text_012": "<span class=\"material-symbols-outlined text-sm text-primary\">call</span>\n<span data-i18n=\"footer.contact.phone_1\">55 7312 6918</span>",
+            "auto_generated.text_013": "<span class=\"material-symbols-outlined text-sm text-primary\">call</span>\n<span data-i18n=\"footer.contact.phone_2\">72 2672 7212</span>",
+            "auto_generated.text_014": "<span class=\"material-symbols-outlined text-sm text-primary\">mail</span>\n<span data-i18n=\"footer.contact.email\"><strong>legado.ambiental.mx@gmail.com</strong></span>",
+            "auto_generated.text_015": "<span class=\"material-symbols-outlined text-[1.2rem]\">dark_mode</span>",
+            "auto_generated.text_016": "<span class=\"material-symbols-outlined text-3xl\">menu</span>",
+            "auto_generated.text_017": "<span class=\"material-symbols-outlined text-lg\">dark_mode</span>\n<span class=\"text-base font-semibold\" data-i18n=\"nav.theme\">Cambiar Tema</span>",
+            "auto_generated.text_018": "<span data-i18n=\"hero.portfolio_btn\">Ver Portafolio</span>\n<span class=\"material-symbols-outlined\">trending_flat</span>",
+            "auto_generated.text_019": "<span data-i18n=\"value.mission_btn\">Conoce Más Sobre Nuestra Misión</span>\n<span class=\"material-symbols-outlined\">download</span>",
+            "auto_generated.text_020": "<span data-i18n=\"services.details\">Detalles</span>\n<span class=\"material-symbols-outlined ml-2 transform group-hover:translate-x-2 transition-transform\">\n                                arrow_forward\n                            </span>",
+            "auto_generated.text_021": "<span data-i18n=\"services.details\">Detalles</span>\n<span class=\"material-symbols-outlined ml-2 transform group-hover:translate-x-2 transition-transform\">\n                                arrow_forward\n                            </span>",
+            "auto_generated.text_022": "<span data-i18n=\"services.details\">Detalles</span>\n<span class=\"material-symbols-outlined ml-2 transform group-hover:translate-x-2 transition-transform\">\n                                arrow_forward\n                            </span>",
+            "auto_generated.text_023": "<span data-i18n=\"services.details\">Detalles</span>\n<span class=\"material-symbols-outlined ml-2 transform group-hover:translate-x-2 transition-transform\">\n                                arrow_forward\n                            </span>",
+            "auto_generated.text_024": "<span class=\"material-symbols-outlined transform group-hover:translate-x-1 transition-transform\">arrow_forward</span>",
+            "auto_generated.text_025": "<span class=\"material-symbols-outlined transform group-hover:translate-x-1 transition-transform\">arrow_forward</span>",
+            "auto_generated.text_026": "Amamos la vida y nuestro trabajo, por ello, la seguridad de las personas, así como la protección y la restauración del entorno son nuestra máxima prioridad. Cada proyecto de ingeniería que firmamos tiene el propósito consciente de elevar la calidad de vida y proteger todas las formas de existencia.",
+            "auto_generated.text_027": "Somos agentes de cambio. Fomentamos una cultura de desarrollo sostenible en nuestros colaboradores, proveedores y clientes. No solo entregamos soluciones técnicas; impulsamos una transformación profunda en los procesos industriales y urbanos para heredar un planeta sano.",
+            "auto_generated.text_028": "Luchamos incansablemente por la mejora continua. Nos preparamos técnica y humanamente cada día para que nuestra \"Alta Ingeniería\" no solo satisfaga, sino que supere las expectativas de nuestros clientes, persistiendo con disciplina hasta alcanzar la excelencia en cada obra.",
+            "auto_generated.text_029": "<span class=\"w-8 h-[2px] bg-emerald-500/50\"></span>\n              Nuestros Valores\n              <span class=\"w-8 h-[2px] bg-emerald-500/50\"></span>",
+            "auto_generated.text_030": "Los Pilares de Nuestra <br/>\n<span class=\"text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-cyan-500\">Transformación Ambiental</span>",
+            "auto_generated.text_031": "Filosofía Ecológica y<br/><span class=\"text-emerald-500 font-bold\">Respeto a la Vida</span>",
+            "auto_generated.text_032": "Conciencia Ambiental<br/><span class=\"text-cyan-500 font-bold\">Trascendente</span>",
+            "auto_generated.text_033": "Excelencia, Disciplina y<br/><span class=\"text-blue-500 font-bold\">Persistencia Evolutiva</span>",
+            "auto_generated.text_034": "Legado\n              Ambiental",
+            "auto_generated.text_035": "Transformación Ambiental",
+            "auto_generated.text_036": "Respeto a la Vida",
+            "auto_generated.text_037": "Trascendente",
+            "auto_generated.text_038": "Persistencia Evolutiva",
+            "auto_generated.text_039": "<a class=\"inline-flex items-center text-sm font-medium text-gray-300 hover:text-white transition-colors\" href=\"../home.html\">\n<span class=\"material-symbols-outlined text-lg mr-2\">home</span>\n<span data-i18n=\"nav.home\">Inicio</span>\n</a>",
+            "auto_generated.text_040": "<span class=\"material-symbols-outlined text-[1.2rem]\">dark_mode</span>",
+            "auto_generated.text_041": "<span class=\"material-symbols-outlined text-3xl\">menu</span>",
+            "auto_generated.text_042": "<span class=\"material-symbols-outlined text-lg\">dark_mode</span>\n<span class=\"text-base font-semibold\" data-i18n=\"nav.theme\">Cambiar Tema</span>",
+            "auto_generated.text_043": "<span class=\"material-symbols-outlined text-lg mr-2\">home</span>\n<span data-i18n=\"nav.home\">Inicio</span>",
+            "auto_generated.text_044": "<span class=\"material-symbols-outlined\">share</span>",
+            "auto_generated.text_045": "<span class=\"material-symbols-outlined\">mail</span>",
+            "auto_generated.text_046": "Esta categoría agrupa el análisis técnico y la planeación operativa para todo tipo de\n                                desechos.",
+            "auto_generated.text_047": "Enfocada en la infraestructura y el aprovechamiento eficiente del recurso hídrico.",
+            "auto_generated.text_048": "Servicios clave para asegurar que las empresas cumplan con la normativa ambiental\n                                vigente.",
+            "auto_generated.text_049": "Servicios educativos para empresas o entidades gubernamentales.",
+            "auto_generated.text_050": "Desarrollamos espacios habitables con altos estándares de diseño y funcionalidad.",
+            "auto_generated.text_051": "Especialistas en obras técnicas para el manejo y saneamiento del agua.",
+            "auto_generated.text_052": "La base técnica que asegura la viabilidad de cualquier construcción.",
+            "auto_generated.text_053": "Aseguramos que su inversión se ejecute conforme a lo planeado.",
+            "auto_generated.text_054": "Protegemos el activo más valioso de su organización: su capital humano, garantizando el\n                                cumplimiento total ante la STPS y autoridades locales.",
+            "auto_generated.text_055": "Supervisión en Proyectos de Alto Riesgo: Vigilancia presencial y control de protocolos\n                                de seguridad en obras civiles, proyectos ambientales e industriales.",
+            "auto_generated.text_056": "Capacitación Certificada (STPS): Cursos y talleres impartidos por un Agente Capacitador\n                                Externo (ACE) con registro oficial ante la Secretaría del Trabajo.",
+            "auto_generated.text_057": "Gestión Integral de Residuos (Sólidos y Peligrosos)",
+            "auto_generated.text_058": "Ingeniería Hídrica y Soluciones de Agua",
+            "auto_generated.text_059": "Consultoría, Dictámenes y Cumplimiento Legal",
+            "auto_generated.text_060": "Fortalecimiento de Capacidades",
+            "auto_generated.text_061": "Edificación Residencial y Vivienda",
+            "auto_generated.text_062": "Infraestructura Hidráulica y Ambiental",
+            "auto_generated.text_063": "Ingeniería de Proyecto y Planeación",
+            "auto_generated.text_064": "Supervisión y Control de Obra",
+            "auto_generated.text_065": "Levantamientos y Estudios Topográficos",
+            "auto_generated.text_066": "Georreferenciación y Precisión GPS",
+            "auto_generated.text_067": "Modelado Digital y Visualización",
+            "auto_generated.text_068": "Control y Supervisión de Obra",
+            "auto_generated.text_069": "Estructura y Gestión Operativa (Consultoría)",
+            "auto_generated.text_070": "Supervisión Técnica y Seguridad en Campo",
+            "auto_generated.text_071": "Formación Especializada y Capacitación (ACE)",
+            "auto_generated.text_072": "Legado\n                            Ambiental",
+            "auto_generated.text_073": "<strong>Diagnóstico y Caracterización: </strong> Estudios de caracterización\n                                        de residuos sólidos, diagnósticos y muestreo.",
+            "auto_generated.text_074": "<strong>Planes de Manejo:</strong> Elaboración de planes de manejo integral\n                                        para residuos sólidos\n                                        y peligrosos, incluyendo clasificación y seguimiento.",
+            "auto_generated.text_075": "<strong>Logística y Recolección:</strong>Estudio y\n                                        optimización de rutas y métodos de recolección.",
+            "auto_generated.text_076": "<strong>Infraestructura:</strong>Proyectos para rellenos sanitarios,\n                                        tratamiento de residuos orgánicos y obras para el manejo de residuos peligrosos.",
+            "auto_generated.text_077": "Realizar cotización",
+            "auto_generated.text_078": "<strong>Tratamiento de Aguas:</strong> Diseño, construcción y supervisión de\n                                        plantas de tratamiento de aguas residuales.",
+            "auto_generated.text_079": "<strong>Sustentabilidad Hídrica:</strong> Sistemas alternativos de reciclaje o\n                                        reutilización, programas de ahorro de agua y estudios técnicos de ahorro.",
+            "auto_generated.text_080": "<strong>Análisis Especializado:</strong> Estudios hidrometeorológicos para\n                                        planeación y prevención.",
+            "auto_generated.text_081": "Realizar cotización",
+            "auto_generated.text_082": "<strong>Evaluaciones de Impacto:</strong> Estudios de impacto ambiental\n                                        (EsIA), diagnósticos y evaluaciones ambientales preventivas.",
+            "auto_generated.text_083": "<strong>Documentación Oficial:</strong> Elaboración de informes técnicos y\n                                        dictámenes ambientales con validez legal.",
+            "auto_generated.text_084": "Realizar cotización",
+            "auto_generated.text_085": "<strong>Capacitación:</strong> Cursos, talleres y programas de formación en\n                                        temas ambientales.",
+            "auto_generated.text_086": "Realizar cotización",
+            "auto_generated.text_087": "<strong>Vivienda Unifamiliar:</strong> Construcción de casas personalizadas y\n                                        residencias de alto nivel.",
+            "auto_generated.text_088": "<strong>Vivienda Multifamiliar:</strong> Desarrollo de complejos de\n                                        departamentos, edificios residenciales y desarrollos habitacionales.",
+            "auto_generated.text_089": "<strong>Proyectos Llave en Mano: </strong> Gestión total desde la cimentación\n                                        hasta los acabados finales.",
+            "auto_generated.text_090": "Realizar cotización",
+            "auto_generated.text_091": "<strong>Plantas de Tratamiento de Aguas Residuales (PTAR):</strong> Diseño,\n                                        construcción y puesta en marcha de sistemas de tratamiento industrial y\n                                        municipal.",
+            "auto_generated.text_092": "<strong>Obras de Saneamiento:</strong> Infraestructura para la reutilización\n                                        de agua y sistemas de drenaje especializado.",
+            "auto_generated.text_093": "Realizar cotización",
+            "auto_generated.text_094": "<strong>Elaboración de Proyectos Ejecutivos:</strong> Diseño arquitectónico,\n                                        cálculos estructurales, instalaciones hidrosanitarias y eléctricas.",
+            "auto_generated.text_095": "<strong>Gestión de Trámites y Licencias:</strong> Apoyo técnico para la\n                                        obtención de permisos de construcción y autorizaciones ambientales.",
+            "auto_generated.text_096": "Realizar cotización",
+            "auto_generated.text_097": "<strong>Supervisión Técnica de Obra:</strong> Vigilancia presencial para\n                                        garantizar el cumplimiento de planos, especificaciones y calidad de\n                                        materiales.",
+            "auto_generated.text_098": "<strong>Control de Costos y Tiempos:</strong> AAdministración de cronogramas\n                                        de obra (Ruta Crítica) y presupuestos para evitar desviaciones.",
+            "auto_generated.text_099": "<strong>Auditoría de Obra:</strong> Verificación de procesos constructivos y\n                                        normativas de seguridad en sitio.",
+            "auto_generated.text_100": "Realizar cotización",
+            "auto_generated.text_101": "<strong>Definición</strong> exacta de contornos espaciales y dimensiones del\n                                        terreno para cimientos seguros.",
+            "auto_generated.text_102": "Realizar cotización",
+            "auto_generated.text_103": "<strong>Ubicación</strong> de coordenadas geoespaciales precisas usando\n                                        tecnología global de vanguardia.",
+            "auto_generated.text_104": "Realizar cotización",
+            "auto_generated.text_105": "<strong>Generación</strong> de entornos de terreno tridimensionales (3D) para\n                                        cálculos volumétricos exactos.",
+            "auto_generated.text_106": "Realizar cotización",
+            "auto_generated.text_107": "<strong>Verificación</strong> constante de trazos en terreno real para\n                                        garantizar el alineamiento con planimetría.",
+            "auto_generated.text_108": "Realizar cotización",
+            "auto_generated.text_109": "<strong>Instauración de Departamentos de SST:</strong> Diseño, implementación\n                                        y coordinación integral de departamentos de Seguridad e Higiene\n                                        Industrial.",
+            "auto_generated.text_110": "<strong>Auditorías de Cumplimiento Normativo:</strong> Diagnóstico y\n                                        aseguramiento de las Normas Oficiales Mexicanas (NOM) vigentes (Seguridad, Salud\n                                        y Organización).",
+            "auto_generated.text_111": "<strong>Gestión de Comisiones Mixtas:</strong> Constitución y capacitación de\n                                        la Comisión de Seguridad e Higiene (NOM-019-STPS).",
+            "auto_generated.text_112": "<strong>Elaboración de Programas Específicos:</strong> Manuales de seguridad,\n                                        programas de protección civil y planes de respuesta a emergencias.",
+            "auto_generated.text_113": "Realizar cotización",
+            "auto_generated.text_114": "<strong>Análisis de Riesgos por Puesto de Trabajo\n                                            (AST):</strong>Identificación de peligros y evaluación de riesgos para\n                                        prevenir accidentes y enfermedades laborales.",
+            "auto_generated.text_115": "<strong>Verificación de Equipos y Maquinaria:</strong> Inspección de\n                                        condiciones de seguridad en herramientas, andamios y maquinaria pesada.",
+            "auto_generated.text_116": "Realizar cotización",
+            "auto_generated.text_117": "<strong>Emisión de Constancias DC-3:</strong>Entrega de documentos de\n                                        habilidades laborales con validez ante inspecciones federales.",
+            "auto_generated.text_118": "<strong>Entrenamiento en Trabajos de Alto Riesgo:</strong> Capacitación\n                                        específica en alturas, espacios confinados, corte y soldadura, y manejo de\n                                        sustancias químicas.",
+            "auto_generated.text_119": "<strong>Formación de Brigadas de Emergencia:</strong> CPrimeros auxilios,\n                                        prevención y combate de incendios, y evacuación de inmuebles.",
+            "auto_generated.text_120": "Realizar cotización",
+            "auto_generated.text_121": "<a class=\"inline-flex items-center text-sm font-medium text-gray-300 hover:text-white transition-colors\" href=\"../home.html\">\n<span class=\"material-symbols-outlined text-lg mr-2\">home</span>\n<span data-i18n=\"nav.home\">Inicio</span>\n</a>",
+            "auto_generated.text_122": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Diagnóstico y Caracterización: </strong> Estudios de caracterización\n                                        de residuos sólidos, diagnósticos y muestreo.\n                                    </span>",
+            "auto_generated.text_123": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Planes de Manejo:</strong> Elaboración de planes de manejo integral\n                                        para residuos sólidos\n                                        y peligrosos, incluyendo clasificación y seguimiento.</span>",
+            "auto_generated.text_124": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Logística y Recolección:</strong>Estudio y\n                                        optimización de rutas y métodos de recolección.\n                                    </span>",
+            "auto_generated.text_125": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Infraestructura:</strong>Proyectos para rellenos sanitarios,\n                                        tratamiento de residuos orgánicos y obras para el manejo de residuos peligrosos.\n                                    </span>",
+            "auto_generated.text_126": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Tratamiento de Aguas:</strong> Diseño, construcción y supervisión de\n                                        plantas de tratamiento de aguas residuales.</span>",
+            "auto_generated.text_127": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Sustentabilidad Hídrica:</strong> Sistemas alternativos de reciclaje o\n                                        reutilización, programas de ahorro de agua y estudios técnicos de ahorro.</span>",
+            "auto_generated.text_128": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Análisis Especializado:</strong> Estudios hidrometeorológicos para\n                                        planeación y prevención.</span>",
+            "auto_generated.text_129": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Evaluaciones de Impacto:</strong> Estudios de impacto ambiental\n                                        (EsIA), diagnósticos y evaluaciones ambientales preventivas.</span>",
+            "auto_generated.text_130": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Documentación Oficial:</strong> Elaboración de informes técnicos y\n                                        dictámenes ambientales con validez legal.</span>",
+            "auto_generated.text_131": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Capacitación:</strong> Cursos, talleres y programas de formación en\n                                        temas ambientales.</span>",
+            "auto_generated.text_132": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Vivienda Unifamiliar:</strong> Construcción de casas personalizadas y\n                                        residencias de alto nivel.</span>",
+            "auto_generated.text_133": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Vivienda Multifamiliar:</strong> Desarrollo de complejos de\n                                        departamentos, edificios residenciales y desarrollos habitacionales.</span>",
+            "auto_generated.text_134": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Proyectos Llave en Mano: </strong> Gestión total desde la cimentación\n                                        hasta los acabados finales.</span>",
+            "auto_generated.text_135": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Plantas de Tratamiento de Aguas Residuales (PTAR):</strong> Diseño,\n                                        construcción y puesta en marcha de sistemas de tratamiento industrial y\n                                        municipal.</span>",
+            "auto_generated.text_136": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Obras de Saneamiento:</strong> Infraestructura para la reutilización\n                                        de agua y sistemas de drenaje especializado.</span>",
+            "auto_generated.text_137": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Elaboración de Proyectos Ejecutivos:</strong> Diseño arquitectónico,\n                                        cálculos estructurales, instalaciones hidrosanitarias y eléctricas.</span>",
+            "auto_generated.text_138": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Gestión de Trámites y Licencias:</strong> Apoyo técnico para la\n                                        obtención de permisos de construcción y autorizaciones ambientales.</span>",
+            "auto_generated.text_139": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Supervisión Técnica de Obra:</strong> Vigilancia presencial para\n                                        garantizar el cumplimiento de planos, especificaciones y calidad de\n                                        materiales.</span>",
+            "auto_generated.text_140": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Control de Costos y Tiempos:</strong> AAdministración de cronogramas\n                                        de obra (Ruta Crítica) y presupuestos para evitar desviaciones.</span>",
+            "auto_generated.text_141": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Auditoría de Obra:</strong> Verificación de procesos constructivos y\n                                        normativas de seguridad en sitio.</span>",
+            "auto_generated.text_142": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Definición</strong> exacta de contornos espaciales y dimensiones del\n                                        terreno para cimientos seguros.</span>",
+            "auto_generated.text_143": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Ubicación</strong> de coordenadas geoespaciales precisas usando\n                                        tecnología global de vanguardia.</span>",
+            "auto_generated.text_144": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Generación</strong> de entornos de terreno tridimensionales (3D) para\n                                        cálculos volumétricos exactos.</span>",
+            "auto_generated.text_145": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Verificación</strong> constante de trazos en terreno real para\n                                        garantizar el alineamiento con planimetría.</span>",
+            "auto_generated.text_146": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Instauración de Departamentos de SST:</strong> Diseño, implementación\n                                        y coordinación integral de departamentos de Seguridad e Higiene\n                                        Industrial.</span>",
+            "auto_generated.text_147": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Auditorías de Cumplimiento Normativo:</strong> Diagnóstico y\n                                        aseguramiento de las Normas Oficiales Mexicanas (NOM) vigentes (Seguridad, Salud\n                                        y Organización).</span>",
+            "auto_generated.text_148": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Gestión de Comisiones Mixtas:</strong> Constitución y capacitación de\n                                        la Comisión de Seguridad e Higiene (NOM-019-STPS).</span>",
+            "auto_generated.text_149": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Elaboración de Programas Específicos:</strong> Manuales de seguridad,\n                                        programas de protección civil y planes de respuesta a emergencias.</span>",
+            "auto_generated.text_150": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Análisis de Riesgos por Puesto de Trabajo\n                                            (AST):</strong>Identificación de peligros y evaluación de riesgos para\n                                        prevenir accidentes y enfermedades laborales.</span>",
+            "auto_generated.text_151": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Verificación de Equipos y Maquinaria:</strong> Inspección de\n                                        condiciones de seguridad en herramientas, andamios y maquinaria pesada.</span>",
+            "auto_generated.text_152": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Emisión de Constancias DC-3:</strong>Entrega de documentos de\n                                        habilidades laborales con validez ante inspecciones federales.</span>",
+            "auto_generated.text_153": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Entrenamiento en Trabajos de Alto Riesgo:</strong> Capacitación\n                                        específica en alturas, espacios confinados, corte y soldadura, y manejo de\n                                        sustancias químicas.</span>",
+            "auto_generated.text_154": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Formación de Brigadas de Emergencia:</strong> CPrimeros auxilios,\n                                        prevención y combate de incendios, y evacuación de inmuebles.</span>",
+            "auto_generated.text_155": "<span class=\"material-symbols-outlined text-[1.2rem]\">dark_mode</span>",
+            "auto_generated.text_156": "<span class=\"material-symbols-outlined text-3xl\">menu</span>",
+            "auto_generated.text_157": "<span class=\"material-symbols-outlined text-lg\">dark_mode</span>\n<span class=\"text-base font-semibold\" data-i18n=\"nav.theme\">Cambiar Tema</span>",
+            "auto_generated.text_158": "<span>Realizar cotización</span> <span class=\"material-symbols-outlined text-[18px]\">arrow_forward</span>",
+            "auto_generated.text_159": "<span>Realizar cotización</span> <span class=\"material-symbols-outlined text-[18px]\">arrow_forward</span>",
+            "auto_generated.text_160": "<span>Realizar cotización</span> <span class=\"material-symbols-outlined text-[18px]\">arrow_forward</span>",
+            "auto_generated.text_161": "<span>Realizar cotización</span> <span class=\"material-symbols-outlined text-[18px]\">arrow_forward</span>",
+            "auto_generated.text_162": "<span>Realizar cotización</span> <span class=\"material-symbols-outlined text-[18px]\">arrow_forward</span>",
+            "auto_generated.text_163": "<span>Realizar cotización</span> <span class=\"material-symbols-outlined text-[18px]\">arrow_forward</span>",
+            "auto_generated.text_164": "<span>Realizar cotización</span> <span class=\"material-symbols-outlined text-[18px]\">arrow_forward</span>",
+            "auto_generated.text_165": "<span>Realizar cotización</span> <span class=\"material-symbols-outlined text-[18px]\">arrow_forward</span>",
+            "auto_generated.text_166": "<span>Realizar cotización</span> <span class=\"material-symbols-outlined text-[18px]\">arrow_forward</span>",
+            "auto_generated.text_167": "<span>Realizar cotización</span> <span class=\"material-symbols-outlined text-[18px]\">arrow_forward</span>",
+            "auto_generated.text_168": "<span>Realizar cotización</span> <span class=\"material-symbols-outlined text-[18px]\">arrow_forward</span>",
+            "auto_generated.text_169": "<span>Realizar cotización</span> <span class=\"material-symbols-outlined text-[18px]\">arrow_forward</span>",
+            "auto_generated.text_170": "<span>Realizar cotización</span> <span class=\"material-symbols-outlined text-[18px]\">arrow_forward</span>",
+            "auto_generated.text_171": "<span>Realizar cotización</span> <span class=\"material-symbols-outlined text-[18px]\">arrow_forward</span>",
+            "auto_generated.text_172": "<span>Realizar cotización</span> <span class=\"material-symbols-outlined text-[18px]\">arrow_forward</span>",
+            "auto_generated.text_173": "<span class=\"material-symbols-outlined text-lg mr-2\">home</span>\n<span data-i18n=\"nav.home\">Inicio</span>",
+            "auto_generated.text_174": "<span class=\"material-symbols-outlined\">share</span>",
+            "auto_generated.text_175": "<span class=\"material-symbols-outlined\">mail</span>",
+            "auto_generated.text_176": "Legado\n                            Ambiental",
+            "auto_generated.text_177": "<a class=\"inline-flex items-center text-sm font-medium text-gray-700 hover:text-primary dark:text-gray-400 dark:hover:text-white\" href=\"../home.html\">\n<span class=\"material-symbols-outlined text-lg mr-2\">home</span>\n<span data-i18n=\"nav.home\">Inicio</span>\n</a>",
+            "auto_generated.text_178": "<span class=\"material-symbols-outlined text-[1.2rem]\">dark_mode</span>",
+            "auto_generated.text_179": "<span class=\"material-symbols-outlined text-3xl\">menu</span>",
+            "auto_generated.text_180": "<span class=\"material-symbols-outlined text-lg\">dark_mode</span>\n<span class=\"text-base font-semibold\" data-i18n=\"nav.theme\">Cambiar Tema</span>",
+            "auto_generated.text_181": "<span data-i18n=\"portfolio_page.load_more\">Cargar Más Proyectos</span> <span class=\"material-symbols-outlined text-[18px]\">expand_more</span>",
+            "auto_generated.text_182": "<span class=\"material-symbols-outlined text-lg mr-2\">home</span>\n<span data-i18n=\"nav.home\">Inicio</span>",
+            "auto_generated.text_183": "<span class=\"material-symbols-outlined\">share</span>",
+            "auto_generated.text_184": "<span class=\"material-symbols-outlined\">mail</span>",
+            "auto_generated.text_185": "<span data-i18n=\"experience_page.timeline.item1.title\">Evaluación Ambiental - <strong>Grupo Serla</strong></span>",
+            "auto_generated.text_186": "<span data-i18n=\"experience_page.timeline.item2.title\">Saneamiento - Río Tiloxtoc</span>",
+            "auto_generated.text_187": "<span data-i18n=\"experience_page.timeline.item3.title\">Tecnología Sustentable - <strong>ITESM</strong></span>",
+            "auto_generated.text_188": "<span data-i18n=\"experience_page.timeline.item4.title\">Tratamiento Alta Eficiencia - <strong>IMMSA</strong></span>",
+            "auto_generated.text_189": "<span data-i18n=\"experience_page.timeline.item5.title\">Unidades Clínicas y Hospitales</span>",
+            "auto_generated.text_190": "<span data-i18n=\"experience_page.timeline.item6.title\">Fundación y Obras Civiles</span>",
+            "auto_generated.text_191": "Legado\n              Ambiental",
+            "auto_generated.text_192": "<a class=\"inline-flex items-center text-sm font-medium text-gray-300 hover:text-white transition-colors\" href=\"../home.html\">\n<span class=\"material-symbols-outlined text-lg mr-2\">home</span>\n<span data-i18n=\"nav.home\">Inicio</span>\n</a>",
+            "auto_generated.text_193": "<span class=\"material-symbols-outlined text-[1.2rem]\">dark_mode</span>",
+            "auto_generated.text_194": "<span class=\"material-symbols-outlined text-3xl\">menu</span>",
+            "auto_generated.text_195": "<span class=\"material-symbols-outlined text-lg\">dark_mode</span>\n<span class=\"text-base font-semibold\" data-i18n=\"nav.theme\">Cambiar Tema</span>",
+            "auto_generated.text_196": "<span class=\"material-symbols-outlined text-lg mr-2\">home</span>\n<span data-i18n=\"nav.home\">Inicio</span>",
+            "auto_generated.text_197": "<span class=\"material-symbols-outlined\">share</span>",
+            "auto_generated.text_198": "<span class=\"material-symbols-outlined\">mail</span>",
+            "auto_generated.text_199": "Legado\n                            Ambiental",
+            "auto_generated.text_200": "<a class=\"inline-flex items-center text-sm font-medium text-gray-300 hover:text-white transition-colors\" href=\"../home.html\">\n<span class=\"material-symbols-outlined text-lg mr-2\">home</span>\n<span data-i18n=\"nav.home\">Inicio</span>\n</a>",
+            "auto_generated.text_201": "<span class=\"material-symbols-outlined text-primary w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center w-full sm:w-auto justify-center\">call</span>\n<span data-i18n=\"contact_page.info.phone1\">+52 55 7312 6918</span>",
+            "auto_generated.text_202": "<span class=\"material-symbols-outlined text-primary w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center w-full sm:w-auto justify-center\">call</span>\n<span data-i18n=\"contact_page.info.phone2\">+52 72 2672 7212</span>",
+            "auto_generated.text_203": "<span class=\"material-symbols-outlined text-primary w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center w-full sm:w-auto justify-center\">mail</span>\n<span data-i18n=\"contact_page.info.email\"><strong>legado.ambiental.mx@gmail.com</strong></span>",
+            "auto_generated.text_204": "<span class=\"material-symbols-outlined text-primary w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center w-full sm:w-auto justify-center\">location_on</span>\n<span data-i18n=\"contact_page.info.addr\">U.H. Valle de Ecatepec, <br/> C.P. 55119, Ecatepec, Estado de México</span>",
+            "auto_generated.text_205": "<span class=\"material-symbols-outlined text-[1.2rem]\">dark_mode</span>",
+            "auto_generated.text_206": "<span class=\"material-symbols-outlined text-3xl\">menu</span>",
+            "auto_generated.text_207": "<span class=\"material-symbols-outlined text-lg\">dark_mode</span>\n<span class=\"text-base font-semibold\" data-i18n=\"nav.theme\">Cambiar Tema</span>",
+            "auto_generated.text_208": "<span class=\"material-symbols-outlined text-lg mr-2\">home</span>\n<span data-i18n=\"nav.home\">Inicio</span>",
+            "auto_generated.text_209": "<span class=\"material-symbols-outlined\">share</span>",
+            "auto_generated.text_210": "<span class=\"material-symbols-outlined\">mail</span>",
+            "auto_generated.text_211": "© 2024 Legado Ambiental. <span data-i18n=\"footer.rights\"><strong>© 2026 Legado Ambiental S.A. de C.V. <br/>Todos los derechos reservados.</strong></span>",
+            "auto_generated.text_212": "<span class=\"material-symbols-outlined text-xl\">dark_mode</span>",
+            "auto_generated.text_213": "<span class=\"material-symbols-outlined\">home</span>\n<span data-i18n=\"error_404.btn\">Volver al Inicio</span>"
         }
     },
-    'en-US': {
+    "en-US": {
         "nav": {
             "about": "About Us",
-            "services": "Services",
+            "services": "Services & Quote",
             "portfolio": "Portfolio",
             "experience": "Experience",
             "contact": "Contact",
             "faq": "FAQ",
             "quote": "Get a Quote",
-            "home": "Home"
+            "home": "Home",
+            "theme": "Toggle Theme"
         },
         "hero": {
             "title": "Building Infrastructure, Sustaining the Future.",
@@ -403,28 +637,32 @@ const translations = {
         "footer": {
             "desc": "Defining excellence in the built environment while preserving our planet's natural legacy.",
             "services": {
-                "title": "Services",
                 "1": "Civil Engineering",
                 "2": "Environmental Impact",
                 "3": "Infrastructure Design",
-                "4": "Urban Development"
+                "4": "Urban Development",
+                "title": "Services"
             },
             "company": {
-                "title": "Company",
                 "1": "About Our Firm",
                 "2": "Project Portfolio",
                 "3": "Certifications",
-                "4": "Career Opportunities"
+                "4": "Career Opportunities",
+                "title": "Company"
             },
             "contact": {
                 "title": "Contact",
                 "addr_1": "Engineering Plaza, Suite 400",
-                "addr_2": "International Business District"
+                "addr_2": "International Business District",
+                "phone_1": "55 7312 6918",
+                "phone_2": "72 2672 7212",
+                "email": "<strong>legado.ambiental.mx@gmail.com</strong>"
             },
             "rights": "© 2024 Legado Ambiental. All rights reserved.",
             "privacy": "Privacy Policy",
             "terms": "Terms of Service",
-            "sitemap": "Sitemap"
+            "sitemap": "Sitemap",
+            "title": "Legado Ambiental <br>S.A. de C.V."
         },
         "about": {
             "title": "About Us",
@@ -460,6 +698,10 @@ const translations = {
                 "desc": "Contact our team of experts to discuss how Legado Ambiental can make your next vision a reality with precision and care.",
                 "btn_consult": "Start Consultation",
                 "btn_portfolio": "View Portfolio"
+            },
+            "objective": {
+                "title": "Our Objective",
+                "desc": "\"To be the leading firm in Mexico revolutionizing civil and environmental engineering, creating strategic projects that protect life, the environment, and the future of our cities.\""
             }
         },
         "services_page": {
@@ -468,7 +710,11 @@ const translations = {
             "tabs": {
                 "all": "All Services",
                 "private": "Private Sector",
-                "public": "Public Works"
+                "public": "Public Works",
+                "engeneering": "Environmental Engineering",
+                "building": "Construction",
+                "topography": "Topography",
+                "safety": "Health & Safety"
             },
             "private": {
                 "title": "Private Construction",
@@ -506,6 +752,10 @@ const translations = {
                 "desc": "Legado Ambiental brings decades of collective experience to every job. Let's talk about your requirements today.",
                 "btn_quote": "Get a Quote",
                 "btn_process": "Our Process"
+            },
+            "methodology": {
+                "subtitle": "Executive Process",
+                "title": "Our Strategic Methodology"
             }
         },
         "portfolio_page": {
@@ -623,7 +873,8 @@ const translations = {
                 "email_error": "Invalid email",
                 "message": "Message",
                 "message_ph": "How can we help you?",
-                "btn": "Send Message"
+                "btn": "Send Message",
+                "sending": "Sending message..."
             },
             "faq": {
                 "title": "Frequently Asked Questions",
@@ -636,13 +887,236 @@ const translations = {
             },
             "info": {
                 "title": "Direct Information",
-                "addr": "Engineering Plaza, Suite 400<br />International Business District"
+                "addr": "Engineering Plaza, Suite 400<br />International Business District",
+                "email": "<strong>legado.ambiental.mx@gmail.com</strong>",
+                "phone1": "+52 55 7312 6918",
+                "phone2": "+52 72 2672 7212"
             }
         },
         "index_landing": {
             "title": "Legado Ambiental",
             "title_full": "Legado Ambiental | Home",
             "welcome": "Welcome to the environmental preservation project."
+        },
+        "error_404": {
+            "title": "404 - Page Not Found",
+            "desc": "Sorry, the page you are looking for does not exist or has been moved. We are building new components to improve your experience.",
+            "btn": "Back to Home"
+        },
+        "auto_generated": {
+            "auto_generated.text_001": "Legado\n                        Ambiental",
+            "auto_generated.text_002": "<span class=\"w-8 h-[2px] bg-primary/50\"></span>\n<span data-i18n=\"services.label\">What We Do</span>",
+            "auto_generated.text_003": "<a class=\"hover:text-primary transition-colors\" data-i18n=\"footer.services.1\" href=\"services_overview/services.html#tab-1\">Environmental Engineering</a>",
+            "auto_generated.text_004": "<a class=\"hover:text-primary transition-colors\" data-i18n=\"footer.services.2\" href=\"services_overview/services.html#tab-2\">Construction</a>",
+            "auto_generated.text_005": "<a class=\"hover:text-primary transition-colors\" data-i18n=\"footer.services.3\" href=\"services_overview/services.html#tab-3\">Topography</a>",
+            "auto_generated.text_006": "<a class=\"hover:text-primary transition-colors\" data-i18n=\"footer.services.4\" href=\"services_overview/services.html#tab-4\">Health & Safety</a>",
+            "auto_generated.text_007": "<a class=\"hover:text-primary transition-colors\" data-i18n=\"footer.company.1\" href=\"about_us/about_us.html\">About Us</a>",
+            "auto_generated.text_008": "<a class=\"hover:text-primary transition-colors\" data-i18n=\"footer.company.2\" href=\"services_overview/services.html\">Services</a>",
+            "auto_generated.text_009": "<a class=\"hover:text-primary transition-colors\" data-i18n=\"footer.company.3\" href=\"experience_timeline/our_experience.html\">Experience</a>",
+            "auto_generated.text_010": "<a class=\"hover:text-primary transition-colors\" data-i18n=\"footer.company.4\" href=\"faq/contact_faq.html\">Contact</a>",
+            "auto_generated.text_011": "<span class=\"material-symbols-outlined text-sm text-primary\">location_on</span>\n<span data-i18n=\"footer.contact.addr_1\">U.H. Valle de Ecatepec, C.P. 55119</span>\n<span data-i18n=\"footer.contact.addr_2\">Ecatepec, State of Mexico</span>",
+            "auto_generated.text_012": "<span class=\"material-symbols-outlined text-sm text-primary\">call</span>\n<span data-i18n=\"footer.contact.phone_1\">55 7312 6918</span>",
+            "auto_generated.text_013": "<span class=\"material-symbols-outlined text-sm text-primary\">call</span>\n<span data-i18n=\"footer.contact.phone_2\">72 2672 7212</span>",
+            "auto_generated.text_014": "<span class=\"material-symbols-outlined text-sm text-primary\">mail</span>\n<span data-i18n=\"footer.contact.email\"><strong>legado.ambiental.mx@gmail.com</strong></span>",
+            "auto_generated.text_015": "<span class=\"material-symbols-outlined text-[1.2rem]\">dark_mode</span>",
+            "auto_generated.text_016": "<span class=\"material-symbols-outlined text-3xl\">menu</span>",
+            "auto_generated.text_017": "<span class=\"material-symbols-outlined text-lg\">dark_mode</span>\n<span class=\"text-base font-semibold\" data-i18n=\"nav.theme\">Toggle Theme</span>",
+            "auto_generated.text_018": "<span data-i18n=\"hero.portfolio_btn\">View Portfolio</span>\n<span class=\"material-symbols-outlined\">trending_flat</span>",
+            "auto_generated.text_019": "<span data-i18n=\"value.mission_btn\">Learn More About Our Mission</span>\n<span class=\"material-symbols-outlined\">download</span>",
+            "auto_generated.text_020": "<span data-i18n=\"services.details\">Details</span>\n<span class=\"material-symbols-outlined ml-2 transform group-hover:translate-x-2 transition-transform\">\n                                arrow_forward\n                            </span>",
+            "auto_generated.text_021": "<span data-i18n=\"services.details\">Details</span>\n<span class=\"material-symbols-outlined ml-2 transform group-hover:translate-x-2 transition-transform\">\n                                arrow_forward\n                            </span>",
+            "auto_generated.text_022": "<span data-i18n=\"services.details\">Details</span>\n<span class=\"material-symbols-outlined ml-2 transform group-hover:translate-x-2 transition-transform\">\n                                arrow_forward\n                            </span>",
+            "auto_generated.text_023": "<span data-i18n=\"services.details\">Details</span>\n<span class=\"material-symbols-outlined ml-2 transform group-hover:translate-x-2 transition-transform\">\n                                arrow_forward\n                            </span>",
+            "auto_generated.text_024": "<span class=\"material-symbols-outlined transform group-hover:translate-x-1 transition-transform\">arrow_forward</span>",
+            "auto_generated.text_025": "<span class=\"material-symbols-outlined transform group-hover:translate-x-1 transition-transform\">arrow_forward</span>",
+            "auto_generated.text_026": "We love life and our work, therefore, the safety of people, as well as the protection and restoration of the environment are our highest priority. Every engineering project we sign has the conscious purpose of elevating the quality of life and protecting all forms of existence.",
+            "auto_generated.text_027": "We are agents of change. We promote a culture of sustainable development in our collaborators, suppliers, and clients. We do not only deliver technical solutions; we drive a profound transformation in industrial and urban processes to inherit a healthy planet.",
+            "auto_generated.text_028": "We strive relentlessly for continuous improvement. We prepare technically and humanely every day so that our \"High Engineering\" not only satisfies but exceeds our clients' expectations, persisting with discipline until we achieve excellence in every work.",
+            "auto_generated.text_029": "<span class=\"w-8 h-[2px] bg-emerald-500/50\"></span>\n              Our Values\n              <span class=\"w-8 h-[2px] bg-emerald-500/50\"></span>",
+            "auto_generated.text_030": "The Pillars of Our <br/>\n<span class=\"text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-cyan-500\">Environmental Transformation</span>",
+            "auto_generated.text_031": "Ecological Philosophy and<br/><span class=\"text-emerald-500 font-bold\">Respect for Life</span>",
+            "auto_generated.text_032": "Environmental Awareness<br/><span class=\"text-cyan-500 font-bold\">Transcendent</span>",
+            "auto_generated.text_033": "Excellence, Discipline and<br/><span class=\"text-blue-500 font-bold\">Evolutionary Persistence</span>",
+            "auto_generated.text_034": "Legado\n              Ambiental",
+            "auto_generated.text_035": "Environmental Transformation",
+            "auto_generated.text_036": "Respect for Life",
+            "auto_generated.text_037": "Transcendent",
+            "auto_generated.text_038": "Evolutionary Persistence",
+            "auto_generated.text_039": "<a class=\"inline-flex items-center text-sm font-medium text-gray-300 hover:text-white transition-colors\" href=\"../home.html\">\n<span class=\"material-symbols-outlined text-lg mr-2\">home</span>\n<span data-i18n=\"nav.home\">Home</span>\n</a>",
+            "auto_generated.text_040": "<span class=\"material-symbols-outlined text-[1.2rem]\">dark_mode</span>",
+            "auto_generated.text_041": "<span class=\"material-symbols-outlined text-3xl\">menu</span>",
+            "auto_generated.text_042": "<span class=\"material-symbols-outlined text-lg\">dark_mode</span>\n<span class=\"text-base font-semibold\" data-i18n=\"nav.theme\">Toggle Theme</span>",
+            "auto_generated.text_043": "<span class=\"material-symbols-outlined text-lg mr-2\">home</span>\n<span data-i18n=\"nav.home\">Home</span>",
+            "auto_generated.text_044": "<span class=\"material-symbols-outlined\">share</span>",
+            "auto_generated.text_045": "<span class=\"material-symbols-outlined\">mail</span>",
+            "auto_generated.text_046": "This category groups the technical analysis and operational planning for all types of waste.",
+            "auto_generated.text_047": "Focused on infrastructure and the efficient use of water resources.",
+            "auto_generated.text_048": "Services clave para asegurar que las empresas cumplan con la normativa ambiental\n                                vigente.",
+            "auto_generated.text_049": "Services educativos para empresas o entidades gubernamentales.",
+            "auto_generated.text_050": "We develop living spaces with high standards of design and functionality.",
+            "auto_generated.text_051": "Specialists in technical works for water management and sanitation.",
+            "auto_generated.text_052": "The technical foundation that ensures the viability of any construction.",
+            "auto_generated.text_053": "We ensure your investment is executed as planned.",
+            "auto_generated.text_054": "We protect your organization's most valuable asset: its human capital, guaranteeing full compliance with STPS and local authorities.",
+            "auto_generated.text_055": "Supervision in High-Risk Projects: On-site monitoring and control of safety protocols in civil works, environmental and industrial projects.",
+            "auto_generated.text_056": "Certified Training (STPS): Courses and workshops given by an External Training Agent (ACE) officially registered with the Ministry of Labor.",
+            "auto_generated.text_057": "Comprehensive Waste Management (Solid and Hazardous)",
+            "auto_generated.text_058": "Water Engineering and Solutions",
+            "auto_generated.text_059": "Consulting, Opinions and Legal Compliance",
+            "auto_generated.text_060": "Capacity Building",
+            "auto_generated.text_061": "Residential Building and Housing",
+            "auto_generated.text_062": "Hydraulic and Environmental Infrastructure",
+            "auto_generated.text_063": "Project Engineering and Planning",
+            "auto_generated.text_064": "Supervision and Construction Control",
+            "auto_generated.text_065": "Topographic Surveys and Studies",
+            "auto_generated.text_066": "Georeferencing and GPS Precision",
+            "auto_generated.text_067": "Digital Modeling and Visualization",
+            "auto_generated.text_068": "Construction Control and Supervision",
+            "auto_generated.text_069": "Structure and Operational Management (Consulting)",
+            "auto_generated.text_070": "Technical Supervision and Field Safety",
+            "auto_generated.text_071": "Specialized Training and Education (ACE)",
+            "auto_generated.text_072": "Legado\n                            Ambiental",
+            "auto_generated.text_073": "<strong>Diagnosis and Characterization: </strong> Solid waste characterization studies, diagnosis and sampling.",
+            "auto_generated.text_074": "<strong>Management Plans:</strong> Development of comprehensive management plans for solid and hazardous waste, including classification and tracking.",
+            "auto_generated.text_075": "<strong>Logistics and Collection:</strong>Study and optimization of routes and collection methods.",
+            "auto_generated.text_076": "<strong>Infrastructure:</strong>Projects for sanitary landfills, organic waste treatment and hazardous waste management works.",
+            "auto_generated.text_077": "Get a Quote",
+            "auto_generated.text_078": "<strong>Water Treatment:</strong> Design, construction and supervision of wastewater treatment plants.",
+            "auto_generated.text_079": "<strong>Water Sustainability:</strong> Alternative recycling or reuse systems, water saving programs and technical saving studies.",
+            "auto_generated.text_080": "<strong>Specialized Analysis:</strong> Hydrometeorological studies for planning and prevention.",
+            "auto_generated.text_081": "Get a Quote",
+            "auto_generated.text_082": "<strong>Impact Assessments:</strong> Environmental impact studies (EsIA), diagnoses and preventive environmental assessments.",
+            "auto_generated.text_083": "<strong>Official Documentation:</strong> Preparation of technical reports and environmental opinions with legal validity.",
+            "auto_generated.text_084": "Get a Quote",
+            "auto_generated.text_085": "<strong>Training:</strong> Courses, workshops and training programs on environmental topics.",
+            "auto_generated.text_086": "Get a Quote",
+            "auto_generated.text_087": "<strong>Single-Family Housing:</strong> Construction de casas personalizadas y\n                                        residencias de alto nivel.",
+            "auto_generated.text_088": "<strong>Multi-Family Housing:</strong> Development of apartment complexes, residential buildings and housing developments.",
+            "auto_generated.text_089": "<strong>Turnkey Projects: </strong> Total management from foundation to final finishes.",
+            "auto_generated.text_090": "Get a Quote",
+            "auto_generated.text_091": "<strong>Wastewater Treatment Plants (WWTP):</strong> Design, construction and commissioning of industrial and municipal treatment systems.",
+            "auto_generated.text_092": "<strong>Sanitation Works:</strong> Infrastructure for water reuse and specialized drainage systems.",
+            "auto_generated.text_093": "Get a Quote",
+            "auto_generated.text_094": "<strong>Development of Executive Projects:</strong> Architectural design, structural calculations, plumbing and electrical installations.",
+            "auto_generated.text_095": "<strong>Management of Procedures and Licenses:</strong> Technical support for obtaining construction permits and environmental authorizations.",
+            "auto_generated.text_096": "Get a Quote",
+            "auto_generated.text_097": "<strong>Technical Supervision of Works:</strong> On-site monitoring to ensure compliance with plans, specifications and material quality.",
+            "auto_generated.text_098": "<strong>Cost and Time Control:</strong> Administration of construction schedules (Critical Path) and budgets to prevent deviations.",
+            "auto_generated.text_099": "<strong>Construction Audit:</strong> Verification of construction processes and site safety regulations.",
+            "auto_generated.text_100": "Get a Quote",
+            "auto_generated.text_101": "<strong>Definition</strong> Exact definition of spatial contours and land dimensions for secure foundations.",
+            "auto_generated.text_102": "Get a Quote",
+            "auto_generated.text_103": "<strong>Location</strong> Precise geospatial coordinate location using cutting-edge global technology.",
+            "auto_generated.text_104": "Get a Quote",
+            "auto_generated.text_105": "<strong>Generation</strong> Generation of three-dimensional (3D) terrain environments for exact volumetric calculations.",
+            "auto_generated.text_106": "Get a Quote",
+            "auto_generated.text_107": "<strong>Verification</strong> Constant verification of layouts on real terrain to ensure alignment with planimetry.",
+            "auto_generated.text_108": "Get a Quote",
+            "auto_generated.text_109": "<strong>Establishment of OHS Departments:</strong> Diseño, implementación\n                                        y coordinación integral de departamentos de Health & Safety\n                                        Industrial.",
+            "auto_generated.text_110": "<strong>Regulatory Compliance Audits:</strong> Diagnosis and assurance of current Official Mexican Standards (NOM) (Safety, Health and Organization).",
+            "auto_generated.text_111": "<strong>Management of Joint Commissions:</strong> Constitución y capacitación de\n                                        la Comisión de Health & Safety (NOM-019-STPS).",
+            "auto_generated.text_112": "<strong>Development of Specific Programs:</strong> Safety manuals, civil protection programs and emergency response plans.",
+            "auto_generated.text_113": "Get a Quote",
+            "auto_generated.text_114": "<strong>Job Hazard Analysis (JHA):</strong>Identification of hazards and risk assessment to prevent occupational accidents and illnesses.",
+            "auto_generated.text_115": "<strong>Verification de Equipos y Maquinaria:</strong> Inspection of safety conditions in tools, scaffolding and heavy machinery.",
+            "auto_generated.text_116": "Get a Quote",
+            "auto_generated.text_117": "<strong>Issuance of DC-3 Certificates:</strong>Delivery of labor skills documents valid for federal inspections.",
+            "auto_generated.text_118": "<strong>Training in High-Risk Jobs:</strong> Specific training in heights, confined spaces, cutting and welding, and handling of chemical substances.",
+            "auto_generated.text_119": "<strong>Formation of Emergency Brigades:</strong> First aid, fire prevention and fighting, and building evacuation.",
+            "auto_generated.text_120": "Get a Quote",
+            "auto_generated.text_121": "<a class=\"inline-flex items-center text-sm font-medium text-gray-300 hover:text-white transition-colors\" href=\"../home.html\">\n<span class=\"material-symbols-outlined text-lg mr-2\">home</span>\n<span data-i18n=\"nav.home\">Home</span>\n</a>",
+            "auto_generated.text_122": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Diagnosis and Characterization: </strong> Solid waste characterization studies, diagnosis and sampling.\n                                    </span>",
+            "auto_generated.text_123": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Management Plans:</strong> Development of comprehensive management plans for solid and hazardous waste, including classification and tracking.</span>",
+            "auto_generated.text_124": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Logistics and Collection:</strong>Study and optimization of routes and collection methods.\n                                    </span>",
+            "auto_generated.text_125": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Infrastructure:</strong>Projects for sanitary landfills, organic waste treatment and hazardous waste management works.\n                                    </span>",
+            "auto_generated.text_126": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Water Treatment:</strong> Design, construction and supervision of wastewater treatment plants.</span>",
+            "auto_generated.text_127": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Water Sustainability:</strong> Alternative recycling or reuse systems, water saving programs and technical saving studies.</span>",
+            "auto_generated.text_128": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Specialized Analysis:</strong> Hydrometeorological studies for planning and prevention.</span>",
+            "auto_generated.text_129": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Impact Assessments:</strong> Environmental impact studies (EsIA), diagnoses and preventive environmental assessments.</span>",
+            "auto_generated.text_130": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Official Documentation:</strong> Preparation of technical reports and environmental opinions with legal validity.</span>",
+            "auto_generated.text_131": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Training:</strong> Courses, workshops and training programs on environmental topics.</span>",
+            "auto_generated.text_132": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Single-Family Housing:</strong> Construction de casas personalizadas y\n                                        residencias de alto nivel.</span>",
+            "auto_generated.text_133": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Multi-Family Housing:</strong> Development of apartment complexes, residential buildings and housing developments.</span>",
+            "auto_generated.text_134": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Turnkey Projects: </strong> Total management from foundation to final finishes.</span>",
+            "auto_generated.text_135": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Wastewater Treatment Plants (WWTP):</strong> Design, construction and commissioning of industrial and municipal treatment systems.</span>",
+            "auto_generated.text_136": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Sanitation Works:</strong> Infrastructure for water reuse and specialized drainage systems.</span>",
+            "auto_generated.text_137": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Development of Executive Projects:</strong> Architectural design, structural calculations, plumbing and electrical installations.</span>",
+            "auto_generated.text_138": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Management of Procedures and Licenses:</strong> Technical support for obtaining construction permits and environmental authorizations.</span>",
+            "auto_generated.text_139": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Technical Supervision of Works:</strong> On-site monitoring to ensure compliance with plans, specifications and material quality.</span>",
+            "auto_generated.text_140": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Cost and Time Control:</strong> Administration of construction schedules (Critical Path) and budgets to prevent deviations.</span>",
+            "auto_generated.text_141": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Construction Audit:</strong> Verification of construction processes and site safety regulations.</span>",
+            "auto_generated.text_142": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Definition</strong> Exact definition of spatial contours and land dimensions for secure foundations.</span>",
+            "auto_generated.text_143": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Location</strong> Precise geospatial coordinate location using cutting-edge global technology.</span>",
+            "auto_generated.text_144": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Generation</strong> Generation of three-dimensional (3D) terrain environments for exact volumetric calculations.</span>",
+            "auto_generated.text_145": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Verification</strong> Constant verification of layouts on real terrain to ensure alignment with planimetry.</span>",
+            "auto_generated.text_146": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Establishment of OHS Departments:</strong> Diseño, implementación\n                                        y coordinación integral de departamentos de Health & Safety\n                                        Industrial.</span>",
+            "auto_generated.text_147": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Regulatory Compliance Audits:</strong> Diagnosis and assurance of current Official Mexican Standards (NOM) (Safety, Health and Organization).</span>",
+            "auto_generated.text_148": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Management of Joint Commissions:</strong> Constitución y capacitación de\n                                        la Comisión de Health & Safety (NOM-019-STPS).</span>",
+            "auto_generated.text_149": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Development of Specific Programs:</strong> Safety manuals, civil protection programs and emergency response plans.</span>",
+            "auto_generated.text_150": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Job Hazard Analysis (JHA):</strong>Identification of hazards and risk assessment to prevent occupational accidents and illnesses.</span>",
+            "auto_generated.text_151": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Verification de Equipos y Maquinaria:</strong> Inspection of safety conditions in tools, scaffolding and heavy machinery.</span>",
+            "auto_generated.text_152": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Issuance of DC-3 Certificates:</strong>Delivery of labor skills documents valid for federal inspections.</span>",
+            "auto_generated.text_153": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Training in High-Risk Jobs:</strong> Specific training in heights, confined spaces, cutting and welding, and handling of chemical substances.</span>",
+            "auto_generated.text_154": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Formation of Emergency Brigades:</strong> First aid, fire prevention and fighting, and building evacuation.</span>",
+            "auto_generated.text_155": "<span class=\"material-symbols-outlined text-[1.2rem]\">dark_mode</span>",
+            "auto_generated.text_156": "<span class=\"material-symbols-outlined text-3xl\">menu</span>",
+            "auto_generated.text_157": "<span class=\"material-symbols-outlined text-lg\">dark_mode</span>\n<span class=\"text-base font-semibold\" data-i18n=\"nav.theme\">Toggle Theme</span>",
+            "auto_generated.text_158": "<span>Get a Quote</span> <span class=\"material-symbols-outlined text-[18px]\">arrow_forward</span>",
+            "auto_generated.text_159": "<span>Get a Quote</span> <span class=\"material-symbols-outlined text-[18px]\">arrow_forward</span>",
+            "auto_generated.text_160": "<span>Get a Quote</span> <span class=\"material-symbols-outlined text-[18px]\">arrow_forward</span>",
+            "auto_generated.text_161": "<span>Get a Quote</span> <span class=\"material-symbols-outlined text-[18px]\">arrow_forward</span>",
+            "auto_generated.text_162": "<span>Get a Quote</span> <span class=\"material-symbols-outlined text-[18px]\">arrow_forward</span>",
+            "auto_generated.text_163": "<span>Get a Quote</span> <span class=\"material-symbols-outlined text-[18px]\">arrow_forward</span>",
+            "auto_generated.text_164": "<span>Get a Quote</span> <span class=\"material-symbols-outlined text-[18px]\">arrow_forward</span>",
+            "auto_generated.text_165": "<span>Get a Quote</span> <span class=\"material-symbols-outlined text-[18px]\">arrow_forward</span>",
+            "auto_generated.text_166": "<span>Get a Quote</span> <span class=\"material-symbols-outlined text-[18px]\">arrow_forward</span>",
+            "auto_generated.text_167": "<span>Get a Quote</span> <span class=\"material-symbols-outlined text-[18px]\">arrow_forward</span>",
+            "auto_generated.text_168": "<span>Get a Quote</span> <span class=\"material-symbols-outlined text-[18px]\">arrow_forward</span>",
+            "auto_generated.text_169": "<span>Get a Quote</span> <span class=\"material-symbols-outlined text-[18px]\">arrow_forward</span>",
+            "auto_generated.text_170": "<span>Get a Quote</span> <span class=\"material-symbols-outlined text-[18px]\">arrow_forward</span>",
+            "auto_generated.text_171": "<span>Get a Quote</span> <span class=\"material-symbols-outlined text-[18px]\">arrow_forward</span>",
+            "auto_generated.text_172": "<span>Get a Quote</span> <span class=\"material-symbols-outlined text-[18px]\">arrow_forward</span>",
+            "auto_generated.text_173": "<span class=\"material-symbols-outlined text-lg mr-2\">home</span>\n<span data-i18n=\"nav.home\">Home</span>",
+            "auto_generated.text_174": "<span class=\"material-symbols-outlined\">share</span>",
+            "auto_generated.text_175": "<span class=\"material-symbols-outlined\">mail</span>",
+            "auto_generated.text_176": "Legado\n                            Ambiental",
+            "auto_generated.text_177": "<a class=\"inline-flex items-center text-sm font-medium text-gray-700 hover:text-primary dark:text-gray-400 dark:hover:text-white\" href=\"../home.html\">\n<span class=\"material-symbols-outlined text-lg mr-2\">home</span>\n<span data-i18n=\"nav.home\">Home</span>\n</a>",
+            "auto_generated.text_178": "<span class=\"material-symbols-outlined text-[1.2rem]\">dark_mode</span>",
+            "auto_generated.text_179": "<span class=\"material-symbols-outlined text-3xl\">menu</span>",
+            "auto_generated.text_180": "<span class=\"material-symbols-outlined text-lg\">dark_mode</span>\n<span class=\"text-base font-semibold\" data-i18n=\"nav.theme\">Toggle Theme</span>",
+            "auto_generated.text_181": "<span data-i18n=\"portfolio_page.load_more\">Load More Projects</span> <span class=\"material-symbols-outlined text-[18px]\">expand_more</span>",
+            "auto_generated.text_182": "<span class=\"material-symbols-outlined text-lg mr-2\">home</span>\n<span data-i18n=\"nav.home\">Home</span>",
+            "auto_generated.text_183": "<span class=\"material-symbols-outlined\">share</span>",
+            "auto_generated.text_184": "<span class=\"material-symbols-outlined\">mail</span>",
+            "auto_generated.text_185": "<span data-i18n=\"experience_page.timeline.item1.title\">Environmental Assessment - <strong>Grupo Serla</strong></span>",
+            "auto_generated.text_186": "<span data-i18n=\"experience_page.timeline.item2.title\">Sanitation - Tiloxtoc River</span>",
+            "auto_generated.text_187": "<span data-i18n=\"experience_page.timeline.item3.title\">Sustainable Tech - <strong>ITESM</strong></span>",
+            "auto_generated.text_188": "<span data-i18n=\"experience_page.timeline.item4.title\">High Efficiency WWTP - <strong>IMMSA</strong></span>",
+            "auto_generated.text_189": "<span data-i18n=\"experience_page.timeline.item5.title\">Clinical & Hospital Units</span>",
+            "auto_generated.text_190": "<span data-i18n=\"experience_page.timeline.item6.title\">Foundation & Civil Works</span>",
+            "auto_generated.text_191": "Legado\n              Ambiental",
+            "auto_generated.text_192": "<a class=\"inline-flex items-center text-sm font-medium text-gray-300 hover:text-white transition-colors\" href=\"../home.html\">\n<span class=\"material-symbols-outlined text-lg mr-2\">home</span>\n<span data-i18n=\"nav.home\">Home</span>\n</a>",
+            "auto_generated.text_193": "<span class=\"material-symbols-outlined text-[1.2rem]\">dark_mode</span>",
+            "auto_generated.text_194": "<span class=\"material-symbols-outlined text-3xl\">menu</span>",
+            "auto_generated.text_195": "<span class=\"material-symbols-outlined text-lg\">dark_mode</span>\n<span class=\"text-base font-semibold\" data-i18n=\"nav.theme\">Toggle Theme</span>",
+            "auto_generated.text_196": "<span class=\"material-symbols-outlined text-lg mr-2\">home</span>\n<span data-i18n=\"nav.home\">Home</span>",
+            "auto_generated.text_197": "<span class=\"material-symbols-outlined\">share</span>",
+            "auto_generated.text_198": "<span class=\"material-symbols-outlined\">mail</span>",
+            "auto_generated.text_199": "Legado\n                            Ambiental",
+            "auto_generated.text_200": "<a class=\"inline-flex items-center text-sm font-medium text-gray-300 hover:text-white transition-colors\" href=\"../home.html\">\n<span class=\"material-symbols-outlined text-lg mr-2\">home</span>\n<span data-i18n=\"nav.home\">Home</span>\n</a>",
+            "auto_generated.text_201": "<span class=\"material-symbols-outlined text-primary w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center w-full sm:w-auto justify-center\">call</span>\n<span data-i18n=\"contact_page.info.phone1\">+52 55 7312 6918</span>",
+            "auto_generated.text_202": "<span class=\"material-symbols-outlined text-primary w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center w-full sm:w-auto justify-center\">call</span>\n<span data-i18n=\"contact_page.info.phone2\">+52 72 2672 7212</span>",
+            "auto_generated.text_203": "<span class=\"material-symbols-outlined text-primary w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center w-full sm:w-auto justify-center\">mail</span>\n<span data-i18n=\"contact_page.info.email\"><strong>legado.ambiental.mx@gmail.com</strong></span>",
+            "auto_generated.text_204": "<span class=\"material-symbols-outlined text-primary w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center w-full sm:w-auto justify-center\">location_on</span>\n<span data-i18n=\"contact_page.info.addr\">U.H. Valle de Ecatepec, <br/> C.P. 55119, Ecatepec, State of Mexico</span>",
+            "auto_generated.text_205": "<span class=\"material-symbols-outlined text-[1.2rem]\">dark_mode</span>",
+            "auto_generated.text_206": "<span class=\"material-symbols-outlined text-3xl\">menu</span>",
+            "auto_generated.text_207": "<span class=\"material-symbols-outlined text-lg\">dark_mode</span>\n<span class=\"text-base font-semibold\" data-i18n=\"nav.theme\">Toggle Theme</span>",
+            "auto_generated.text_208": "<span class=\"material-symbols-outlined text-lg mr-2\">home</span>\n<span data-i18n=\"nav.home\">Home</span>",
+            "auto_generated.text_209": "<span class=\"material-symbols-outlined\">share</span>",
+            "auto_generated.text_210": "<span class=\"material-symbols-outlined\">mail</span>",
+            "auto_generated.text_211": "© 2024 Legado Ambiental. <span data-i18n=\"footer.rights\"><strong>© 2026 Legado Ambiental S.A. de C.V. <br/>All rights reserved.</strong></span>",
+            "auto_generated.text_212": "<span class=\"material-symbols-outlined text-xl\">dark_mode</span>",
+            "auto_generated.text_213": "<span class=\"material-symbols-outlined\">home</span>\n<span data-i18n=\"error_404.btn\">Back to Home</span>"
         }
     }
 };
@@ -691,7 +1165,21 @@ async function loadTranslations(lang) {
  * @param {string} path 
  */
 function getValueByPath(obj, path) {
-    return path.split('.').reduce((acc, part) => acc && acc[part], obj);
+    // 1. Check for exact match first
+    if (obj && obj[path]) return obj[path];
+    
+    // 2. Try normal dot notation traversal
+    const parts = path.split('.');
+    let val = parts.reduce((acc, part) => acc && acc[part], obj);
+    if (val) return val;
+    
+    // 3. Fallback: Check if the category exists and contains the full path as a key
+    // This supports auto-generated keys like data-i18n="auto_generated.text_057"
+    if (parts.length > 0 && obj && obj[parts[0]] && obj[parts[0]][path]) {
+        return obj[parts[0]][path];
+    }
+    
+    return undefined;
 }
 
 /**
@@ -784,6 +1272,43 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const lang = switcher.getAttribute('data-switch-lang');
             setLanguage(lang);
+        }
+
+        // Global Unobtrusive Event Handlers
+        const actionBtn = e.target.closest('[data-action]');
+        if (actionBtn) {
+            const action = actionBtn.getAttribute('data-action');
+            if (action === 'toggle-theme') {
+                if (typeof window.toggleDarkMode === 'function') {
+                    window.toggleDarkMode();
+                } else if (typeof globalThis.toggleDarkMode === 'function') {
+                    globalThis.toggleDarkMode();
+                }
+            } else if (action === 'copy-url') {
+                navigator.clipboard.writeText(window.location.href); 
+                alert('URL copiada');
+            } else if (action === 'smooth-scroll-contact') {
+                const tabBtn = document.getElementById('tab-btn-1');
+                const tabSec = document.getElementById('tab-section-1');
+                if(tabBtn && tabSec) {
+                    tabBtn.click();
+                    tabSec.scrollIntoView({behavior: 'smooth'});
+                }
+            } else if (action === 'navigate') {
+                window.location.href = actionBtn.getAttribute('data-href');
+            }
+        }
+    });
+
+
+    // Global Loader logic
+    window.addEventListener('load', () => {
+        const loader = document.getElementById('global-loader');
+        if (loader) {
+            loader.classList.add('opacity-0');
+            setTimeout(() => {
+                loader.style.display = 'none';
+            }, 700);
         }
     });
 });

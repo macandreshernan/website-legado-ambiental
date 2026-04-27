@@ -80,9 +80,22 @@
             font-family: "Public Sans", sans-serif;
         }
     </style>
+    <link rel="icon" type="image/webp" href="../assets/images/logo/logo_final_v2.webp">
 </head>
 
 <body class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-white transition-colors duration-200">
+    <noscript>
+        <div style="background-color: #f8d7da; color: #721c24; padding: 10px; text-align: center; z-index: 9999; position: relative;">
+            Para disfrutar de la experiencia completa y todas las funcionalidades de Legado Ambiental, por favor habilite JavaScript en su navegador.
+        </div>
+    </noscript>
+    <!-- Global Loader -->
+    <div id="global-loader" class="fixed inset-0 z-[99999] flex items-center justify-center bg-white dark:bg-[#121c27] transition-opacity duration-700">
+        <div class="relative flex flex-col items-center">
+            <img src="../assets/images/logo/logo_final_v2.webp" alt="Cargando Legado Ambiental" class="h-20 w-auto mb-4 animate-pulse opacity-80">
+            <div class="w-12 h-12 border-4 border-primary/30 border-t-primary rounded-full animate-spin"></div>
+        </div>
+    </div>
     <div class="relative flex min-h-screen w-full flex-col">
         <!-- Top Navigation Bar (Sticky Optimized) -->
         <header class="sticky top-4 z-50 w-[calc(100%-2rem)] max-w-[1200px] mx-auto bg-white/85 dark:bg-[#121c27]/80 backdrop-blur-xl border border-gray-100 dark:border-white/10 rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-all duration-300">
@@ -91,7 +104,7 @@
                     <div class="flex items-center gap-3">
                         <img src="../assets/images/logo/logo_final_v2.webp" alt="Legado Ambiental"
                             class="h-16 w-auto object-contain">
-                        <span class="text-navy dark:text-white text-xl font-black tracking-tight uppercase">Legado
+                        <span class="text-navy dark:text-white text-xl font-black tracking-tight uppercase" data-i18n="auto_generated.text_176">Legado
                             Ambiental</span>
                     </div>
                     <nav class="hidden md:flex items-center gap-8" aria-label="Main navigation">
@@ -100,9 +113,7 @@
                         <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors"
                             href="../about_us/about_us.html" data-i18n="nav.about">Quiénes Somos</a>
                         <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors"
-                            href="../services_overview/services.html" data-i18n="nav.services">Servicios</a>
-                        <!-- <a class="bg-primary/10 text-primary text-sm font-bold rounded-xl px-4 py-2 transition-all"
-                            href="#" data-i18n="nav.portfolio">Portafolio</a> -->
+                            href="../services_overview/services.html" data-i18n="nav.services">Servicios y Cotización</a>
                         <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors"
                             href="../experience_timeline/our_experience.html" data-i18n="nav.experience">Experiencia</a>
                         <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors"
@@ -110,8 +121,8 @@
                     </nav>
                     <div class="hidden md:flex items-center gap-4">
                         <!-- Theme Toggle -->
-                        <button onclick="window.toggleDarkMode()" aria-label="Toggle Dark Mode"
-                            class="theme-toggle-btn text-navy dark:text-gray-300 hover:text-primary transition-colors flex items-center justify-center p-1 rounded-full bg-gray-100 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary">
+                        <button data-action="toggle-theme" aria-label="Toggle Dark Mode"
+                            class="theme-toggle-btn text-navy dark:text-gray-300 hover:text-primary transition-colors flex items-center justify-center p-1 rounded-full bg-gray-100 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary" data-i18n="auto_generated.text_178">
                             <span class="material-symbols-outlined text-[1.2rem]">dark_mode</span>
                         </button>
                         <div class="flex items-center gap-2 mr-4">
@@ -121,48 +132,36 @@
                             <button class="text-sm font-semibold hover:text-primary transition-colors cursor-pointer"
                                 data-switch-lang="en-US">EN</button>
                         </div>
-                        <button
-                            class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-lg text-sm font-bold tracking-wide transition-all shadow-md focus:ring-2 focus:ring-primary focus:ring-offset-2"
-                            data-i18n="nav.quote">
-                            Cotizar
-                        </button>
                     </div>
 
                     <!-- Mobile Menu Button -->
-                    <button id="mobile-menu-btn"
-                        class="md:hidden text-navy dark:text-white p-2 hover:text-primary transition-colors">
+                    <button id="mobile-menu-btn" aria-label="Abrir menú móvil"
+                        class="md:hidden text-navy dark:text-white p-2 hover:text-primary transition-colors" data-i18n="auto_generated.text_179">
                         <span class="material-symbols-outlined text-3xl">menu</span>
                     </button>
                 </div>
 
                 <!-- Mobile Navigation Menu -->
                 <div id="mobile-menu"
-                    class="md:hidden absolute top-24 left-0 w-full bg-white/95 dark:bg-[#121c27]/95 backdrop-blur-xl rounded-2xl border border-gray-100 dark:border-white/10 shadow-2xl py-4 px-4 flex-col gap-2 transform transition-all duration-300 origin-top opacity-0 scale-y-0 pointer-events-none flex">
+                    class="max-h-[calc(100vh-6rem)] overflow-y-auto md:hidden absolute top-24 left-0 w-full bg-white/95 dark:bg-[#121c27]/95 backdrop-blur-xl rounded-2xl border border-gray-100 dark:border-white/10 shadow-2xl py-4 px-4 flex-col gap-2 transform transition-all duration-300 origin-top opacity-0 scale-y-0 pointer-events-none flex">
                     <a class="text-navy dark:text-gray-300 text-base font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-3 transition-colors"
                         href="../home.html" data-i18n="nav.home">Inicio</a>
                     <a class="text-navy dark:text-gray-300 text-base font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-3 transition-colors"
                         href="../about_us/about_us.html" data-i18n="nav.about">Quiénes Somos</a>
                     <a class="text-navy dark:text-gray-300 text-base font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-3 transition-colors"
-                        href="../services_overview/services.html" data-i18n="nav.services">Servicios</a>
-                    <!-- <a class="text-primary text-base font-bold bg-primary/10 rounded-xl px-4 py-3"
-                        href="#" data-i18n="nav.portfolio">Portafolio</a> -->
+                        href="../services_overview/services.html" data-i18n="nav.services">Servicios y Cotización</a>
                     <a class="text-navy dark:text-gray-300 text-base font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-3 transition-colors"
                         href="../experience_timeline/our_experience.html" data-i18n="nav.experience">Experiencia</a>
                     <a class="text-navy dark:text-gray-300 text-base font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-3 transition-colors"
                         href="../faq/contact_faq.html" data-i18n="nav.contact">Contacto</a>
 
                     <!-- Mobile Theme Toggle -->
-                    <button onclick="window.toggleDarkMode()"
+                    <button data-action="toggle-theme" aria-label="Toggle Dark Mode"
                         class="theme-toggle-btn flex items-center gap-2 text-left text-navy dark:text-gray-300 py-3 px-4 border-b border-gray-100 dark:border-gray-800 rounded-xl hover:bg-primary/5">
                         <span class="material-symbols-outlined text-lg">dark_mode</span>
                         <span data-i18n="nav.theme" class="text-base font-semibold">Cambiar Tema</span>
                     </button>
 
-                    <button
-                        class="w-full bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg text-base font-bold tracking-wide transition-all mt-2"
-                        data-i18n="nav.quote">
-                        Cotizar
-                    </button>
                 </div>
             </div>
         </header>
@@ -187,13 +186,9 @@
                         </li>
                     </ol>
                 </nav>
-                <h1 class="text-[#111418] dark:text-white text-4xl font-black leading-tight tracking-tight mb-4"
-                    data-i18n="portfolio_page.hero.title">Nuestro
-                    Legado en Infraestructura</h1>
-                <p class="text-[#617589] dark:text-gray-400 text-lg max-w-2xl" data-i18n="portfolio_page.hero.desc">
-                    Explora una selección de nuestros proyectos más impactantes que definen paisajes urbanos y conectan
-                    comunidades.
-                </p>
+                <h1 class="text-[#111418] dark:text-white text-3xl sm:text-4xl font-black leading-tight tracking-tight mb-4"
+                    data-i18n="portfolio_page.hero.title">Nuestro Legado en Infraestructura</h1>
+                <p class="text-[#617589] dark:text-gray-400 text-lg max-w-2xl" data-i18n="portfolio_page.hero.desc">Explora una selección de nuestros proyectos más impactantes que definen paisajes urbanos y conectan comunidades.</p>
             </div>
             <!-- Filter Tabs (Pill Segmented Control) -->
             <div class="w-full max-w-[1200px] px-4 md:px-10 mb-10 flex justify-center lg:justify-start">
@@ -235,14 +230,9 @@
                         </div>
                         <div class="absolute bottom-6 left-6 right-6">
                             <p class="text-primary text-xs font-bold tracking-wider uppercase mb-2"
-                                data-i18n="portfolio_page.items.p1.cat">Ecológico / Oficina
-                            </p>
-                            <h3 class="text-white text-3xl font-bold mb-2" data-i18n="portfolio_page.items.p1.title">
-                                Torre Vértice Verde</h3>
-                            <p class="text-gray-300 text-sm line-clamp-2" data-i18n="portfolio_page.items.p1.desc">Un
-                                edificio de uso mixto de 45 pisos con
-                                certificación LEED Platino, integrando jardines verticales y sistemas de recolección de
-                                agua pluvial.</p>
+                                data-i18n="portfolio_page.items.p1.cat">Ecológico / Oficina</p>
+                            <h3 class="text-white text-3xl font-bold mb-2" data-i18n="portfolio_page.items.p1.title">Torre Vértice Verde</h3>
+                            <p class="text-gray-300 text-sm line-clamp-2" data-i18n="portfolio_page.items.p1.desc">Un edificio de uso mixto de 45 pisos con certificación LEED Platino, integrando jardines verticales y sistemas de recolección de agua pluvial.</p>
                         </div>
                     </div>
                     <!-- Item 2 -->
@@ -256,8 +246,7 @@
                         <div class="absolute bottom-4 left-4 right-4">
                             <p class="text-primary text-xs font-bold tracking-wider uppercase mb-1"
                                 data-i18n="portfolio_page.items.p2.cat">Infraestructura</p>
-                            <h3 class="text-white text-xl font-bold" data-i18n="portfolio_page.items.p2.title">Puente
-                                del Río Azul</h3>
+                            <h3 class="text-white text-xl font-bold" data-i18n="portfolio_page.items.p2.title">Puente del Río Azul</h3>
                         </div>
                     </div>
                     <!-- Item 3 -->
@@ -270,10 +259,8 @@
                         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                         <div class="absolute bottom-4 left-4 right-4">
                             <p class="text-primary text-xs font-bold tracking-wider uppercase mb-1"
-                                data-i18n="portfolio_page.items.p3.cat">Público / Transporte
-                            </p>
-                            <h3 class="text-white text-xl font-bold" data-i18n="portfolio_page.items.p3.title">Expansión
-                                Terminal 3</h3>
+                                data-i18n="portfolio_page.items.p3.cat">Público / Transporte</p>
+                            <h3 class="text-white text-xl font-bold" data-i18n="portfolio_page.items.p3.title">Expansión Terminal 3</h3>
                         </div>
                     </div>
                     <!-- Item 4 (Wide) -->
@@ -287,11 +274,9 @@
                         </div>
                         <div class="absolute bottom-6 left-6 right-6">
                             <p class="text-primary text-xs font-bold tracking-wider uppercase mb-2"
-                                data-i18n="portfolio_page.items.p4.cat">Cultural / Comercial</p>
-                            <h3 class="text-white text-2xl font-bold mb-1" data-i18n="portfolio_page.items.p4.title">
-                                Museo de Arte Moderno del Norte</h3>
-                            <p class="text-gray-300 text-sm" data-i18n="portfolio_page.items.p4.desc">Un hito cultural
-                                con una fachada geométrica única.</p>
+                                data-i18n="portfolio_page.items.p4.cat">Cultural</p>
+                            <h3 class="text-white text-2xl font-bold mb-1" data-i18n="portfolio_page.items.p4.title">Museo de Arte Moderno del Norte</h3>
+                            <p class="text-gray-300 text-sm" data-i18n="portfolio_page.items.p4.desc">Un hito cultural con una fachada geométrica única.</p>
                         </div>
                     </div>
                     <!-- Item 5 -->
@@ -304,9 +289,8 @@
                         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                         <div class="absolute bottom-4 left-4 right-4">
                             <p class="text-primary text-xs font-bold tracking-wider uppercase mb-1"
-                                data-i18n="portfolio_page.items.p5.cat">Energía / Ecológico</p>
-                            <h3 class="text-white text-xl font-bold" data-i18n="portfolio_page.items.p5.title">Parque
-                                Solar Helios</h3>
+                                data-i18n="portfolio_page.items.p5.cat">Energía</p>
+                            <h3 class="text-white text-xl font-bold" data-i18n="portfolio_page.items.p5.title">Parque Solar Helios</h3>
                         </div>
                     </div>
                 </div>
@@ -328,16 +312,12 @@
                         class="h-16 w-auto object-contain">
                     <span class="font-bold dark:text-white">Legado Ambiental</span>
                 </div>
-                <div class="text-sm text-[#617589] dark:text-gray-400" data-i18n="footer.rights">
-                    © 2024 Legado Ambiental. Todos los derechos reservados.
-                </div>
+                <div class="text-sm text-[#617589] dark:text-gray-400" data-i18n="footer.rights"><strong>© 2026 Legado Ambiental S.A. de C.V. <br>Todos los derechos reservados.</strong></strong></div>
                 <div class="flex gap-6">
-                    <a class="text-[#617589] hover:text-primary transition-colors" href="#"><span
+                    <a class="text-[#617589] hover:text-primary transition-colors" href="javascript:void(0)" data-action="copy-url"><span
                             class="material-symbols-outlined">share</span></a>
-                    <a class="text-[#617589] hover:text-primary transition-colors" href="#"><span
+                    <a class="text-[#617589] hover:text-primary transition-colors" href="../faq/contact_faq.html#tab-1"><span
                             class="material-symbols-outlined">mail</span></a>
-                    <a class="text-[#617589] hover:text-primary transition-colors" href="#"><span
-                            class="material-symbols-outlined">location_on</span></a>
                 </div>
             </div>
         </footer>

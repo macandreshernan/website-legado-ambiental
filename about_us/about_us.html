@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title data-i18n="about.title">Quiénes Somos | Legado Ambiental</title>
+  <title data-i18n="about.title">Quiénes Somos</title>
 
   <!-- Security Headers -->
   <meta http-equiv="Content-Security-Policy"
@@ -77,9 +77,22 @@
             .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
         }
     </style>
+    <link rel="icon" type="image/webp" href="../assets/images/logo/logo_final_v2.webp">
 </head>
 
 <body class="font-sans bg-white dark:bg-background-dark text-[#111318] dark:text-white transition-colors duration-300">
+    <noscript>
+        <div style="background-color: #f8d7da; color: #721c24; padding: 10px; text-align: center; z-index: 9999; position: relative;">
+            Para disfrutar de la experiencia completa y todas las funcionalidades de Legado Ambiental, por favor habilite JavaScript en su navegador.
+        </div>
+    </noscript>
+    <!-- Global Loader -->
+    <div id="global-loader" class="fixed inset-0 z-[99999] flex items-center justify-center bg-white dark:bg-[#121c27] transition-opacity duration-700">
+        <div class="relative flex flex-col items-center">
+            <img src="../assets/images/logo/logo_final_v2.webp" alt="Cargando Legado Ambiental" class="h-20 w-auto mb-4 animate-pulse opacity-80">
+            <div class="w-12 h-12 border-4 border-primary/30 border-t-primary rounded-full animate-spin"></div>
+        </div>
+    </div>
   <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root">
     <!-- Top Navigation Bar (Sticky Optimized) -->
     <header class="sticky top-4 z-50 w-[calc(100%-2rem)] max-w-[1200px] mx-auto bg-white/85 dark:bg-[#121c27]/80 backdrop-blur-xl border border-gray-100 dark:border-white/10 rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-all duration-300">
@@ -88,7 +101,7 @@
           <div class="flex items-center gap-3">
             <img src="../assets/images/logo/logo_final_v2.webp" alt="Legado Ambiental"
               class="h-16 w-auto object-contain">
-            <span class="text-navy dark:text-white text-xl font-black tracking-tight uppercase">Legado
+            <span class="text-navy dark:text-white text-xl font-black tracking-tight uppercase" data-i18n="auto_generated.text_034">Legado
               Ambiental</span>
           </div>
           <nav class="hidden md:flex items-center gap-8" aria-label="Main navigation">
@@ -97,9 +110,7 @@
             <a class="bg-primary/10 text-primary text-sm font-bold rounded-xl px-4 py-2 transition-all" href="#"
               data-i18n="nav.about">Quiénes Somos</a>
             <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors"
-              href="../services_overview/services.html" data-i18n="nav.services">Servicios</a>
-            <!--<a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors"
-              href="../project_portfolio_gallery/portfolio.html" data-i18n="nav.portfolio">Portafolio</a>-->
+              href="../services_overview/services.html" data-i18n="nav.services">Servicios y Cotización</a>
             <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors"
               href="../experience_timeline/our_experience.html" data-i18n="nav.experience">Experiencia</a>
             <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors"
@@ -107,8 +118,8 @@
           </nav>
           <div class="hidden md:flex items-center gap-4">
             <!-- Theme Toggle -->
-            <button onclick="window.toggleDarkMode()" aria-label="Toggle Dark Mode"
-              class="theme-toggle-btn text-navy dark:text-gray-300 hover:text-primary transition-colors flex items-center justify-center p-1 rounded-full bg-gray-100 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary">
+            <button data-action="toggle-theme" aria-label="Toggle Dark Mode"
+              class="theme-toggle-btn text-navy dark:text-gray-300 hover:text-primary transition-colors flex items-center justify-center p-1 rounded-full bg-gray-100 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary" data-i18n="auto_generated.text_040">
               <span class="material-symbols-outlined text-[1.2rem]">dark_mode</span>
             </button>
             <div class="flex items-center gap-2 mr-4">
@@ -118,48 +129,36 @@
               <button class="text-sm font-semibold hover:text-primary transition-colors"
                 data-switch-lang="en-US">EN</button>
             </div>
-            <button
-              class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-lg text-sm font-bold tracking-wide transition-all shadow-md focus:ring-2 focus:ring-primary focus:ring-offset-2"
-              data-i18n="nav.quote">
-              Cotizar
-            </button>
           </div>
 
           <!-- Mobile Menu Button -->
-          <button id="mobile-menu-btn"
-            class="md:hidden text-navy dark:text-white p-2 hover:text-primary transition-colors">
+          <button id="mobile-menu-btn" aria-label="Abrir menú móvil"
+            class="md:hidden text-navy dark:text-white p-2 hover:text-primary transition-colors" data-i18n="auto_generated.text_041">
             <span class="material-symbols-outlined text-3xl">menu</span>
           </button>
         </div>
 
         <!-- Mobile Navigation Menu -->
         <div id="mobile-menu"
-          class="md:hidden absolute top-24 left-0 w-full bg-white/95 dark:bg-[#121c27]/95 backdrop-blur-xl rounded-2xl border border-gray-100 dark:border-white/10 shadow-2xl py-4 px-4 flex-col gap-2 transform transition-all duration-300 origin-top opacity-0 scale-y-0 pointer-events-none flex">
+          class="max-h-[calc(100vh-6rem)] overflow-y-auto md:hidden absolute top-24 left-0 w-full bg-white/95 dark:bg-[#121c27]/95 backdrop-blur-xl rounded-2xl border border-gray-100 dark:border-white/10 shadow-2xl py-4 px-4 flex-col gap-2 transform transition-all duration-300 origin-top opacity-0 scale-y-0 pointer-events-none flex">
           <a class="text-navy dark:text-gray-300 text-base font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-3 transition-colors"
             href="../home.html" data-i18n="nav.home">Inicio</a>
           <a class="text-primary text-base font-bold bg-primary/10 rounded-xl px-4 py-3"
             href="../about_us/about_us.html" data-i18n="nav.about">Quiénes Somos</a>
           <a class="text-navy dark:text-gray-300 text-base font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-3 transition-colors"
-            href="../services_overview/services.html" data-i18n="nav.services">Servicios</a>
-          <!-- <a class="text-navy dark:text-gray-300 text-base font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-3 transition-colors"
-            href="../project_portfolio_gallery/portfolio.html" data-i18n="nav.portfolio">Portafolio</a> -->
+            href="../services_overview/services.html" data-i18n="nav.services">Servicios y Cotización</a>
           <a class="text-navy dark:text-gray-300 text-base font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-3 transition-colors"
             href="../experience_timeline/our_experience.html" data-i18n="nav.experience">Experiencia</a>
           <a class="text-navy dark:text-gray-300 text-base font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-3 transition-colors"
             href="../faq/contact_faq.html" data-i18n="nav.contact">Contacto</a>
 
           <!-- Mobile Theme Toggle -->
-          <button onclick="window.toggleDarkMode()"
+          <button data-action="toggle-theme" aria-label="Toggle Dark Mode"
             class="theme-toggle-btn flex items-center gap-2 text-left text-navy dark:text-gray-300 py-2 border-b border-gray-100 dark:border-gray-800">
             <span class="material-symbols-outlined text-lg">dark_mode</span>
             <span data-i18n="nav.theme" class="text-base font-semibold">Cambiar Tema</span>
           </button>
 
-          <button
-            class="w-full bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg text-sm font-bold tracking-wide transition-all"
-            data-i18n="nav.quote">
-            Cotizar
-          </button>
         </div>
       </div>
     </header>
@@ -203,16 +202,12 @@
                             </nav>
 
                             <h1 class="text-white tracking-tight text-4xl md:text-5xl font-extrabold leading-tight mb-4 drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]"
-                                data-i18n="about.hero.title">
-                                Quiénes Somos
-                            </h1>
+                                data-i18n="about.hero.title">Quiénes Somos</h1>
                             <div
                                 class="w-16 h-1 bg-primary mb-4 transition-all duration-700 group-hover:w-32 group-hover:bg-blue-400 rounded-full">
                             </div>
                             <p class="text-blue-50 text-lg md:text-xl font-medium leading-relaxed drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]"
-                                data-i18n="about.hero.subtitle">
-                                Somos una firma de ingeniería especializada en medio ambiente, integrada por un equipo interdisciplinario.
-                            </p>
+                                data-i18n="about.hero.subtitle">Somos una firma de ingeniería especializada en medio ambiente, integrada por un equipo interdisciplinario</p>
                         </div>
                     </div>
                 </div>
@@ -220,16 +215,10 @@
       <section
         class="max-w-[1200px] mx-auto px-4 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center border-b border-slate-100 dark:border-slate-800">
         <div>
-          <h2 class="text-3xl font-bold text-navy-dark dark:text-white mb-6" data-i18n="about.sustainable.title">
-            Construyendo un Legado Sostenible</h2>
+          <h2 class="text-3xl font-bold text-navy-dark dark:text-white mb-6" data-i18n="about.sustainable.title">Construyendo un Legado Sostenible</h2>
           <div class="space-y-4 text-gray-600 dark:text-slate-400 text-lg leading-relaxed">
-            <p data-i18n="about.sustainable.p1">Fundada en 2010, Legado Ambiental se ha establecido como una piedra
-              angular de la excelencia en
-              ingeniería tanto en el sector público como en el privado. Nos especializamos en proyectos de
-              infraestructura complejos que exigen alta competencia técnica y sensibilidad ambiental.</p>
-            <p data-i18n="about.sustainable.p2">Nuestro enfoque combina la maestría en ingeniería tradicional con
-              tecnologías sostenibles modernas,
-              asegurando que cada proyecto que emprendemos sirva a la comunidad para las generaciones venideras.</p>
+            <p data-i18n="about.sustainable.p1">Legado Ambiental, S.A. de C.V. es una empresa mexicana fundada en 1999 con sede en la Ciudad de México, especializada en prestación de servicios profesionales en los ámbitos de la ingeniería ambiental, construcción, topografía y seguridad e higiene en obra, como una respuesta a la creciente necesidad de lograr una alta compatibilidad entre las actividades productivas, la prevención, control de la contaminación ambiental y la preservación de los recursos naturales, orientado al desarrollo sostenible.</p>
+            <p data-i18n="about.sustainable.p2">Somos una firma de ingeniería especializada en medio ambiente, integrada por un equipo interdisciplinario de profesionales con amplia experiencia en estudios, proyectos, construcción y consultoría ambiental. Por más de dos décadas hemos colaborado con los sectores industrial, gubernamental y de servicios en el diseño y aplicación de soluciones de ingeniería ambiental técnica, económica y ambientalmente factibles.</p>
           </div>
         </div>
         <div class="relative w-full h-[360px] md:h-[400px] mt-8 md:mt-0 flex items-center justify-center group">
@@ -275,14 +264,9 @@
             </div>
             <h2
               class="text-white text-3xl md:text-4xl lg:text-5xl font-extrabold mb-8 leading-tight tracking-tight tracking-[-0.02em]"
-              data-i18n="about.objective.title">
-              Nuestro Objetivo
-            </h2>
+              data-i18n="about.objective.title">Nuestro Objetivo</h2>
             <p class="text-slate-200 text-xl md:text-2xl font-light leading-relaxed italic"
-              data-i18n="about.objective.desc">
-              "Ser la firma líder en México que revoluciona la ingeniería civil y ambiental, creando proyectos
-              estratégicos que protegen la vida, el entorno y el futuro de las ciudades."
-            </p>
+              data-i18n="about.objective.desc">"Ser la firma líder en México que revoluciona la ingeniería civil y ambiental, creando proyectos estratégicos que protegen la vida, el entorno y el futuro de las ciudades."</p>
           </div>
         </div>
 
@@ -313,13 +297,7 @@
             <!-- Contenido de Texto -->
             <div class="p-8 md:p-12">
               <p class="text-slate-600 dark:text-slate-300 text-lg md:text-xl leading-relaxed font-medium"
-                data-i18n="about.mission.desc">
-                Nuestra misión es impulsar el desarrollo sostenible y la productividad de los sectores público y privado
-                mediante la creación y comercialización de proyectos integrales de Alta Ingeniería y Obra Civil. Nos
-                comprometemos a ofrecer soluciones inteligentes que sean técnica, económica y ambientalmente factibles,
-                transformando el rumbo de la industria para preservar el equilibrio ecológico y mejorar la calidad de
-                vida en México.
-              </p>
+                data-i18n="about.mission.desc">Proveer soluciones de ingeniería civil de vanguardia que integren la sostenibilidad ambiental con la eficiencia técnica, superando las expectativas de nuestros clientes en el sector público y privado mediante un compromiso inquebrantable con la calidad y la seguridad.</p>
             </div>
           </div>
 
@@ -347,14 +325,7 @@
             <!-- Contenido de Texto -->
             <div class="p-8 md:p-12">
               <p class="text-slate-600 dark:text-slate-300 text-lg md:text-xl leading-relaxed font-medium"
-                data-i18n="about.vision.desc">
-                Consolidarnos como la firma de ingeniería y consultoría referente a nivel nacional, reconocida por
-                revolucionar el desarrollo sostenible urbano e industrial mediante la integración de alta tecnología y
-                métodos innovadores en ingeniería ambiental y seguridad integral. Liderando el sector a través de
-                proyectos estratégicos de ciclo de vida completo —desde el diagnóstico inicial hasta el seguimiento
-                posentrega —, garantizando soluciones que protejan la salud pública, restauren y mantengan el equilibrio
-                ambiental asegurando un legado de prosperidad para México.
-              </p>
+                data-i18n="about.vision.desc">Consolidarnos como la firma líder en infraestructura civil y ambiental en la región, siendo reconocidos por nuestra capacidad de innovación, resiliencia técnica y por dejar un legado positivo en cada comunidad donde desarrollamos nuestros proyectos.</p>
             </div>
           </div>
 
@@ -369,14 +340,14 @@
 
         <div class="max-w-[1200px] mx-auto relative z-10">
           <div class="text-center mb-20 max-w-3xl mx-auto">
-            <h2 class="text-emerald-600 dark:text-emerald-400 text-sm font-bold uppercase tracking-[0.2em] mb-4 flex items-center justify-center gap-2">
+            <h2 class="text-emerald-600 dark:text-emerald-400 text-sm font-bold uppercase tracking-[0.2em] mb-4 flex items-center justify-center gap-2" data-i18n="auto_generated.text_029">
               <span class="w-8 h-[2px] bg-emerald-500/50"></span>
               Nuestros Valores
               <span class="w-8 h-[2px] bg-emerald-500/50"></span>
             </h2>
             <h3 class="text-4xl md:text-5xl font-extrabold text-[#111318] dark:text-white leading-tight">
               Los Pilares de Nuestra <br/>
-              <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-cyan-500">Transformación Ambiental</span>
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-cyan-500" data-i18n="auto_generated.text_035">Transformación Ambiental</span>
             </h3>
           </div>
           
@@ -390,10 +361,10 @@
                 <span class="material-symbols-outlined text-emerald-500 text-4xl">energy_savings_leaf</span>
               </div>
               
-              <h4 class="text-2xl font-extrabold text-[#111318] dark:text-white mb-6 leading-tight relative z-10">
-                Filosofía Ecológica y<br/><span class="text-emerald-500 font-bold">Respeto a la Vida</span>
+              <h4 class="text-2xl font-extrabold text-[#111318] dark:text-white mb-6 leading-tight relative z-10" data-i18n="auto_generated.text_031">
+                Filosofía Ecológica y<br/><span class="text-emerald-500 font-bold" data-i18n="auto_generated.text_036">Respeto a la Vida</span>
               </h4>
-              <p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed relative z-10 font-medium">
+              <p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed relative z-10 font-medium" data-i18n="auto_generated.text_026">
                 Amamos la vida y nuestro trabajo, por ello, la seguridad de las personas, así como la protección y la restauración del entorno son nuestra máxima prioridad. Cada proyecto de ingeniería que firmamos tiene el propósito consciente de elevar la calidad de vida y proteger todas las formas de existencia.
               </p>
             </div>
@@ -406,10 +377,10 @@
                 <span class="material-symbols-outlined text-cyan-500 text-4xl">public</span>
               </div>
               
-              <h4 class="text-2xl font-extrabold text-[#111318] dark:text-white mb-6 leading-tight relative z-10">
-                Conciencia Ambiental<br/><span class="text-cyan-500 font-bold">Trascendente</span>
+              <h4 class="text-2xl font-extrabold text-[#111318] dark:text-white mb-6 leading-tight relative z-10" data-i18n="auto_generated.text_032">
+                Conciencia Ambiental<br/><span class="text-cyan-500 font-bold" data-i18n="auto_generated.text_037">Trascendente</span>
               </h4>
-              <p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed relative z-10 font-medium">
+              <p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed relative z-10 font-medium" data-i18n="auto_generated.text_027">
                 Somos agentes de cambio. Fomentamos una cultura de desarrollo sostenible en nuestros colaboradores, proveedores y clientes. No solo entregamos soluciones técnicas; impulsamos una transformación profunda en los procesos industriales y urbanos para heredar un planeta sano.
               </p>
             </div>
@@ -422,10 +393,10 @@
                 <span class="material-symbols-outlined text-blue-500 text-4xl">workspace_premium</span>
               </div>
               
-              <h4 class="text-2xl font-extrabold text-[#111318] dark:text-white mb-6 leading-tight relative z-10">
-                Excelencia, Disciplina y<br/><span class="text-blue-500 font-bold">Persistencia Evolutiva</span>
+              <h4 class="text-2xl font-extrabold text-[#111318] dark:text-white mb-6 leading-tight relative z-10" data-i18n="auto_generated.text_033">
+                Excelencia, Disciplina y<br/><span class="text-blue-500 font-bold" data-i18n="auto_generated.text_038">Persistencia Evolutiva</span>
               </h4>
-              <p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed relative z-10 font-medium">
+              <p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed relative z-10 font-medium" data-i18n="auto_generated.text_028">
                 Luchamos incansablemente por la mejora continua. Nos preparamos técnica y humanamente cada día para que nuestra "Alta Ingeniería" no solo satisfaga, sino que supere las expectativas de nuestros clientes, persistiendo con disciplina hasta alcanzar la excelencia en cada obra.
               </p>
             </div>
@@ -436,18 +407,15 @@
       <section class="bg-primary-dark py-20 px-4">
         <div class="max-w-[800px] mx-auto text-center">
           <h2 class="text-white text-3xl font-bold mb-6" data-i18n="about.cta.title">Construyamos el futuro juntos</h2>
-          <p class="text-gray-100 text-lg mb-10" data-i18n="about.cta.desc">Contacte a nuestro equipo de
-            expertos para discutir cómo
-            Legado Ambiental puede hacer realidad su próxima visión con precisión y cuidado.</p>
+          <p class="text-gray-100 text-lg mb-10" data-i18n="about.cta.desc">Contacte a nuestro equipo de expertos para discutir cómo Legado Ambiental puede hacer realidad su próxima visión con precisión y cuidado.</p>
           <div class="flex flex-wrap justify-center gap-4">
             <button
+              data-action="navigate" data-href="../services_overview/services.html"
               class="px-10 py-4 bg-white text-primary font-bold rounded-lg hover:bg-blue-50 transition-colors shadow-xl focus:ring-2 focus:ring-white"
-              data-i18n="about.cta.btn_consult">Iniciar
-              Consulta</button>
+              data-i18n="about.cta.btn_consult">Iniciar Consulta</button>
             <button
               class="px-10 py-4 border border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors focus:ring-2 focus:ring-white"
-              data-i18n="about.cta.btn_portfolio">Ver
-              Portafolio</button>
+              data-i18n="about.cta.btn_portfolio">Ver Portafolio</button>
           </div>
         </div>
       </section>
@@ -459,16 +427,12 @@
             class="h-16 w-auto object-contain">
           <span class="font-bold dark:text-white">Legado Ambiental</span>
         </div>
-        <div class="text-sm text-[#617589] dark:text-gray-400" data-i18n="footer.rights">
-          © 2026 Legado Ambiental S.A. de C.V. Todos los derechos reservados.
-        </div>
+        <div class="text-sm text-[#617589] dark:text-gray-400" data-i18n="footer.rights"><strong>© 2026 Legado Ambiental S.A. de C.V. <br>Todos los derechos reservados.</strong></strong></div>
         <div class="flex gap-6">
-          <a class="text-[#617589] hover:text-primary transition-colors" href="#"><span
+          <a class="text-[#617589] hover:text-primary transition-colors" href="javascript:void(0)" data-action="copy-url"><span
               class="material-symbols-outlined">share</span></a>
           <a class="text-[#617589] hover:text-primary transition-colors" href="../faq/contact_faq.html#tab-1"><span
               class="material-symbols-outlined">mail</span></a>
-          <a class="text-[#617589] hover:text-primary transition-colors" href="#"><span
-              class="material-symbols-outlined">location_on</span></a>
         </div>
       </div>
     </footer>

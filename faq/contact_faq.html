@@ -27,7 +27,7 @@
 
     <!-- Security Headers -->
     <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://fonts.googleapis.com; img-src 'self' data: https://lh3.googleusercontent.com; connect-src 'self';">
+        content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://fonts.googleapis.com; img-src 'self' data: https://lh3.googleusercontent.com; connect-src 'self' https://formsubmit.co;">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
 
     <!-- SEO Canonical & Hreflang -->
@@ -83,9 +83,32 @@
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
     </style>
+    <link rel="icon" type="image/webp" href="../assets/images/logo/logo_final_v2.webp">
 </head>
 
 <body class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-white transition-colors duration-200">
+    <noscript>
+        <div style="background-color: #f8d7da; color: #721c24; padding: 10px; text-align: center; z-index: 9999; position: relative;">
+            Para disfrutar de la experiencia completa y todas las funcionalidades de Legado Ambiental, por favor habilite JavaScript en su navegador.
+        </div>
+    </noscript>
+    <!-- Global Loader -->
+    <div id="global-loader" class="fixed inset-0 z-[99999] flex items-center justify-center bg-white dark:bg-[#121c27] transition-opacity duration-700">
+        <div class="relative flex flex-col items-center">
+            <img src="../assets/images/logo/logo_final_v2.webp" alt="Cargando Legado Ambiental" class="h-20 w-auto mb-4 animate-pulse opacity-80">
+            <div class="w-12 h-12 border-4 border-primary/30 border-t-primary rounded-full animate-spin"></div>
+        </div>
+    </div>
+    <!-- Submit Overlay -->
+    <div id="submit-overlay" class="fixed inset-0 z-[99999] hidden flex-col items-center justify-center bg-white/70 dark:bg-black/70 backdrop-blur-sm transition-opacity opacity-0 duration-300">
+        <div class="relative flex flex-col items-center">
+            <img src="../assets/images/logo/logo_final_v2.webp" alt="Enviando Mensaje" class="h-20 w-auto mb-4 animate-pulse opacity-80">
+            <div class="flex items-center gap-4 mt-2">
+                <div class="w-8 h-8 border-4 border-primary/30 border-t-primary rounded-full animate-spin"></div>
+                <p class="text-[#111418] dark:text-white font-bold tracking-wide text-lg" data-i18n="contact_page.form.sending">Enviando mensaje...</p>
+            </div>
+        </div>
+    </div>
     <div class="relative flex min-h-screen w-full flex-col">
         <!-- Top Navigation Bar (Sticky Optimized) -->
         <header
@@ -95,7 +118,7 @@
                     <div class="flex items-center gap-3">
                         <img src="../assets/images/logo/logo_final_v2.webp" alt="Legado Ambiental"
                             class="h-16 w-auto object-contain">
-                        <span class="text-navy dark:text-white text-xl font-black tracking-tight uppercase">Legado
+                        <span class="text-navy dark:text-white text-xl font-black tracking-tight uppercase" data-i18n="auto_generated.text_199">Legado
                             Ambiental</span>
                     </div>
                     <nav class="hidden md:flex items-center gap-8" aria-label="Main navigation">
@@ -104,9 +127,7 @@
                         <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors"
                             href="../about_us/about_us.html" data-i18n="nav.about">Quiénes Somos</a>
                         <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors"
-                            href="../services_overview/services.html" data-i18n="nav.services">Servicios</a>
-                        <!--<a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors"
-                            href="../project_portfolio_gallery/portfolio.html" data-i18n="nav.portfolio">Portafolio</a>-->
+                            href="../services_overview/services.html" data-i18n="nav.services">Servicios y Cotización</a>
                         <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors"
                             href="../experience_timeline/our_experience.html" data-i18n="nav.experience">Experiencia</a>
                         <a class="bg-primary/10 text-primary text-sm font-bold rounded-xl px-4 py-2 transition-all"
@@ -114,8 +135,8 @@
                     </nav>
                     <div class="hidden md:flex items-center gap-4">
                         <!-- Theme Toggle -->
-                        <button onclick="window.toggleDarkMode()" aria-label="Toggle Dark Mode"
-                            class="theme-toggle-btn text-navy dark:text-gray-300 hover:text-primary transition-colors flex items-center justify-center p-1 rounded-full bg-gray-100 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary">
+                        <button data-action="toggle-theme" aria-label="Toggle Dark Mode"
+                            class="theme-toggle-btn text-navy dark:text-gray-300 hover:text-primary transition-colors flex items-center justify-center p-1 rounded-full bg-gray-100 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary" data-i18n="auto_generated.text_205">
                             <span class="material-symbols-outlined text-[1.2rem]">dark_mode</span>
                         </button>
                         <div class="flex items-center gap-2 mr-4">
@@ -125,48 +146,36 @@
                             <button class="text-sm font-semibold hover:text-primary transition-colors"
                                 data-switch-lang="en-US">EN</button>
                         </div>
-                        <button
-                            class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-lg text-sm font-bold tracking-wide transition-all shadow-md focus:ring-2 focus:ring-primary focus:ring-offset-2"
-                            data-i18n="nav.quote">
-                            Cotizar
-                        </button>
                     </div>
 
                     <!-- Mobile Menu Button -->
-                    <button id="mobile-menu-btn"
-                        class="md:hidden text-navy dark:text-white p-2 hover:text-primary transition-colors">
+                    <button id="mobile-menu-btn" aria-label="Abrir menú móvil"
+                        class="md:hidden text-navy dark:text-white p-2 hover:text-primary transition-colors" data-i18n="auto_generated.text_206">
                         <span class="material-symbols-outlined text-3xl">menu</span>
                     </button>
                 </div>
 
                 <!-- Mobile Navigation Menu -->
                 <div id="mobile-menu"
-                    class="md:hidden absolute top-24 left-0 w-full bg-white/95 dark:bg-[#121c27]/95 backdrop-blur-xl rounded-2xl border border-gray-100 dark:border-white/10 shadow-2xl py-4 px-4 flex-col gap-2 transform transition-all duration-300 origin-top opacity-0 scale-y-0 pointer-events-none flex">
+                    class="max-h-[calc(100vh-6rem)] overflow-y-auto md:hidden absolute top-24 left-0 w-full bg-white/95 dark:bg-[#121c27]/95 backdrop-blur-xl rounded-2xl border border-gray-100 dark:border-white/10 shadow-2xl py-4 px-4 flex-col gap-2 transform transition-all duration-300 origin-top opacity-0 scale-y-0 pointer-events-none flex">
                     <a class="text-navy dark:text-gray-300 text-base font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-3 transition-colors"
                         href="../home.html" data-i18n="nav.home">Inicio</a>
                     <a class="text-navy dark:text-gray-300 text-base font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-3 transition-colors"
                         href="../about_us/about_us.html" data-i18n="nav.about">Quiénes Somos</a>
                     <a class="text-navy dark:text-gray-300 text-base font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-3 transition-colors"
-                        href="../services_overview/services.html" data-i18n="nav.services">Servicios</a>
-                    <!-- <a class="text-navy dark:text-gray-300 text-base font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-3 transition-colors"
-                        href="../project_portfolio_gallery/portfolio.html" data-i18n="nav.portfolio">Portafolio</a> -->
+                        href="../services_overview/services.html" data-i18n="nav.services">Servicios y Cotización</a>
                     <a class="text-navy dark:text-gray-300 text-base font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-3 transition-colors"
                         href="../experience_timeline/our_experience.html" data-i18n="nav.experience">Experiencia</a>
                     <a class="text-primary text-base font-bold bg-primary/10 rounded-xl px-4 py-3"
                         href="../faq/contact_faq.html" data-i18n="nav.contact">Contacto</a>
 
                     <!-- Mobile Theme Toggle -->
-                    <button onclick="window.toggleDarkMode()"
+                    <button data-action="toggle-theme" aria-label="Toggle Dark Mode"
                         class="theme-toggle-btn flex items-center gap-2 text-left text-navy dark:text-gray-300 py-2 border-b border-gray-100 dark:border-gray-800">
                         <span class="material-symbols-outlined text-lg">dark_mode</span>
                         <span data-i18n="nav.theme" class="text-base font-semibold">Cambiar Tema</span>
                     </button>
 
-                    <button
-                        class="w-full bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg text-sm font-bold tracking-wide transition-all"
-                        data-i18n="nav.quote">
-                        Cotizar
-                    </button>
                 </div>
             </div>
         </header>
@@ -203,25 +212,20 @@
                                         <div class="flex items-center">
                                             <span
                                                 class="material-symbols-outlined text-gray-400 mx-1">chevron_right</span>
-                                            <span class="ml-1 text-sm font-medium text-primary" data-i18n="nav.contact">Contacto</span>
+                                            <span class="ml-1 text-sm font-medium text-primary"
+                                                data-i18n="nav.contact">Contacto</span>
                                         </div>
                                     </li>
                                 </ol>
                             </nav>
 
-                            <h1 class="text-white text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight mb-4 drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]"
-                                data-i18n="contact_page.hero.title">
-                                Ponte en Contacto
-                            </h1>
+                            <h1 class="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight mb-4 drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]"
+                                data-i18n="contact_page.hero.title">Ponte en Contacto</h1>
                             <div
                                 class="w-16 h-1 bg-primary mb-4 transition-all duration-700 group-hover:w-32 group-hover:bg-blue-400 rounded-full">
                             </div>
                             <p class="text-blue-50 text-lg max-w-2xl font-medium drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]"
-                                data-i18n="contact_page.hero.desc">
-                                Estamos aquí para ayudar con cualquier pregunta sobre nuestros servicios o proyectos.
-                                Completa el
-                                formulario a continuación o explora nuestras preguntas frecuentes.
-                            </p>
+                                data-i18n="contact_page.hero.desc">Estamos aquí para ayudar con cualquier pregunta sobre nuestros servicios o proyectos. Completa el formulario a continuación o explora nuestras preguntas frecuentes.</p>
                         </div>
                     </div>
                 </div>
@@ -236,16 +240,14 @@
                         class="tab-btn flex flex-col items-center justify-center rounded-xl px-6 py-3 bg-primary text-white shadow-[0_4px_16px_rgba(16,185,129,0.30)] transition-all duration-300 whitespace-nowrap focus:outline-none">
                         <div class="flex items-center gap-2">
                             <span class="material-symbols-outlined text-xl">mail</span>
-                            <p class="text-sm font-bold tracking-wide" data-i18n="contact_page.form.title">Envíanos un
-                                Mensaje</p>
+                            <p class="text-sm font-bold tracking-wide" data-i18n="contact_page.form.title">Envíanos un Mensaje</p>
                         </div>
                     </button>
                     <button id="tab-btn-2" data-tab="2"
                         class="tab-btn flex flex-col items-center justify-center rounded-xl px-6 py-3 text-[#617589] dark:text-gray-400 hover:text-[#111418] dark:hover:text-white hover:bg-gray-200 dark:hover:bg-[#253240] transition-all duration-300 whitespace-nowrap focus:outline-none">
                         <div class="flex items-center gap-2">
                             <span class="material-symbols-outlined text-xl">help</span>
-                            <p class="text-sm font-bold tracking-wide" data-i18n="contact_page.faq.title">Preguntas
-                                Frecuentes</p>
+                            <p class="text-sm font-bold tracking-wide" data-i18n="contact_page.faq.title">Preguntas Frecuentes</p>
                         </div>
                     </button>
                 </div>
@@ -267,7 +269,7 @@
 
                         <h2 class="relative z-10 text-3xl font-bold text-[#111418] dark:text-white mb-8 tracking-tight"
                             data-i18n="contact_page.form.title">Envíanos un Mensaje</h2>
-                        <form class="space-y-6">
+                        <form class="space-y-6" id="contact-form">
                             <!-- Name and Lastname Grid -->
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div class="space-y-2">
@@ -308,9 +310,9 @@
                                     class="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
                                     id="phone" placeholder="(55) 1234 5678" type="tel"
                                     data-i18n-placeholder="contact_page.form.phone_ph" required maxlength="15"
-                                    pattern="[0-9+ ]*" />
+                                    pattern="[0-9+\-() ]*" />
                                 <span id="phone-error" class="hidden text-xs text-red-500 font-medium"
-                                    data-i18n="contact_page.form.phone_error">Formato inválido.</span>
+                                    data-i18n="contact_page.form.phone_error">Formato inválido. (55) 1234 5678</span>
                             </div>
 
                             <!-- Preferred Contact Method -->
@@ -339,10 +341,8 @@
                                     class="w-full rounded-lg border-gray-300 dark:border-gray-700 dark:bg-gray-900 px-4 py-2 text-sm focus:border-primary focus:ring-primary"
                                     id="subject">
                                     <option data-i18n="contact_page.form.options.general">Consulta General</option>
-                                    <option data-i18n="contact_page.form.options.quote">Solicitud de Presupuesto
-                                    </option>
-                                    <option data-i18n="contact_page.form.options.proposal">Propuesta de Proyecto
-                                    </option>
+                                    <option data-i18n="contact_page.form.options.quote">Solicitud de Presupuesto</option>
+                                    <option data-i18n="contact_page.form.options.proposal">Propuesta de Proyecto</option>
                                     <option data-i18n="contact_page.form.options.jobs">Oportunidades de Empleo</option>
                                 </select>
                             </div>
@@ -363,9 +363,10 @@
                                     autocomplete="off" />
                             </div>
                             <button
-                                class="w-full bg-primary text-white font-bold py-3 rounded-lg hover:bg-primary/90 transition-all shadow-md focus:ring-2 focus:ring-primary focus:ring-offset-2"
-                                data-i18n="contact_page.form.btn">
-                                Enviar Mensaje
+                                id="submit-btn" type="submit"
+                                class="w-full bg-primary text-white font-bold py-3 rounded-lg hover:bg-primary/90 transition-all shadow-md focus:ring-2 focus:ring-primary focus:ring-offset-2 flex justify-center items-center">
+                                <div id="submit-spinner" class="hidden w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin mr-2"></div>
+                                <span id="submit-text" data-i18n="contact_page.form.btn">Enviar Mensaje</span>
                             </button>
                         </form>
                     </div>
@@ -386,21 +387,16 @@
                                         class="flex cursor-pointer items-center justify-between gap-1.5 p-6 text-[#111418] dark:text-white font-bold">
                                         <div class="flex items-center gap-3">
                                             <div
-                                                class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                                                class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0 w-full sm:w-auto justify-center">
                                                 <span class="material-symbols-outlined">help</span>
                                             </div>
-                                            <span data-i18n="contact_page.faq.q1" class="text-[0.95rem]">¿Qué tipos de
-                                                certificación ambiental manejan?</span>
+                                            <span data-i18n="contact_page.faq.q1" class="text-[0.95rem]">¿Qué tipos de certificación ambiental manejan?</span>
                                         </div>
                                         <span
                                             class="material-symbols-outlined shrink-0 text-primary transition duration-300 group-open:-rotate-180">expand_more</span>
                                     </summary>
                                     <p class="px-6 pb-6 pt-0 text-sm text-[#617589] dark:text-gray-400 leading-relaxed font-medium pl-[4.25rem]"
-                                        data-i18n="contact_page.faq.a1">
-                                        Trabajamos con estándares LEED, BREEAM y normativas locales de impacto
-                                        ambiental.
-                                        Nuestro equipo puede guiar todo el proceso de certificación para su proyecto.
-                                    </p>
+                                        data-i18n="contact_page.faq.a1">Trabajamos con estándares LEED, BREEAM y normativas locales de impacto ambiental. Nuestro equipo puede guiar todo el proceso de certificación para su proyecto.</p>
                                 </details>
                                 <!-- Question 2 -->
                                 <details
@@ -409,20 +405,16 @@
                                         class="flex cursor-pointer items-center justify-between gap-1.5 p-6 text-[#111418] dark:text-white font-bold">
                                         <div class="flex items-center gap-3">
                                             <div
-                                                class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                                                class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0 w-full sm:w-auto justify-center">
                                                 <span class="material-symbols-outlined">public</span>
                                             </div>
-                                            <span data-i18n="contact_page.faq.q2" class="text-[0.95rem]">¿Realizan
-                                                proyectos fuera de la región?</span>
+                                            <span data-i18n="contact_page.faq.q2" class="text-[0.95rem]">¿Realizan proyectos fuera de la región?</span>
                                         </div>
                                         <span
                                             class="material-symbols-outlined shrink-0 text-primary transition duration-300 group-open:-rotate-180">expand_more</span>
                                     </summary>
                                     <p class="px-6 pb-6 pt-0 text-sm text-[#617589] dark:text-gray-400 leading-relaxed font-medium pl-[4.25rem]"
-                                        data-i18n="contact_page.faq.a2">
-                                        Sí, nuestra división de Expansión Global gestiona proyectos internacionales.
-                                        Contáctenos para discutir la logística y viabilidad de su ubicación.
-                                    </p>
+                                        data-i18n="contact_page.faq.a2">Sí, nuestra división de Expansión Global gestiona proyectos internacionales. Contáctenos para discutir la logística y viabilidad de su ubicación.</p>
                                 </details>
                                 <!-- Question 3 -->
                                 <details
@@ -431,21 +423,16 @@
                                         class="flex cursor-pointer items-center justify-between gap-1.5 p-6 text-[#111418] dark:text-white font-bold">
                                         <div class="flex items-center gap-3">
                                             <div
-                                                class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                                                class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0 w-full sm:w-auto justify-center">
                                                 <span class="material-symbols-outlined">engineering</span>
                                             </div>
-                                            <span data-i18n="contact_page.faq.q3" class="text-[0.95rem]">¿Ofrecen
-                                                servicios de solo diseño?</span>
+                                            <span data-i18n="contact_page.faq.q3" class="text-[0.95rem]">¿Ofrecen servicios de solo diseño?</span>
                                         </div>
                                         <span
                                             class="material-symbols-outlined shrink-0 text-primary transition duration-300 group-open:-rotate-180">expand_more</span>
                                     </summary>
                                     <p class="px-6 pb-6 pt-0 text-sm text-[#617589] dark:text-gray-400 leading-relaxed font-medium pl-[4.25rem]"
-                                        data-i18n="contact_page.faq.a3">
-                                        Absolutamente. Ofrecemos servicios modulares que van desde el diseño conceptual
-                                        y
-                                        planos estructurales hasta la gestión completa de la construcción llave en mano.
-                                    </p>
+                                        data-i18n="contact_page.faq.a3">Absolutamente. Ofrecemos servicios modulares que van desde el diseño conceptual y planos estructurales hasta la gestión completa de la construcción llave en mano.</p>
                                 </details>
                             </div>
                         </div>
@@ -457,34 +444,31 @@
                             </div>
 
                             <h3 class="relative z-10 text-xl font-bold text-[#111418] dark:text-white mb-6 tracking-tight"
-                                data-i18n="contact_page.info.title">
-                                Información Directa</h3>
+                                data-i18n="contact_page.info.title">Información Directa</h3>
                             <ul class="relative z-10 space-y-6">
                                 <li
                                     class="flex items-center gap-4 text-sm text-[#617589] dark:text-gray-400 font-medium">
                                     <span
-                                        class="material-symbols-outlined text-primary w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center">call</span>
-                                    <span data-i18n="contact_page.info.phone1">+1 (555) 123-4567</span>
+                                        class="material-symbols-outlined text-primary w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center w-full sm:w-auto justify-center">call</span>
+                                    <span data-i18n="contact_page.info.phone1">+52 55 7312 6918</span>
                                 </li>
                                 <li
                                     class="flex items-center gap-4 text-sm text-[#617589] dark:text-gray-400 font-medium">
                                     <span
-                                        class="material-symbols-outlined text-primary w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center">call</span>
-                                    <span data-i18n="contact_page.info.phone2">+1 (555) 123-4567</span>
+                                        class="material-symbols-outlined text-primary w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center w-full sm:w-auto justify-center">call</span>
+                                    <span data-i18n="contact_page.info.phone2">+52 72 2672 7212</span>
                                 </li>
                                 <li
                                     class="flex items-center gap-4 text-sm text-[#617589] dark:text-gray-400 font-medium">
                                     <span
-                                        class="material-symbols-outlined text-primary w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center">mail</span>
-                                    <span data-i18n="contact_page.info.email">contacto@legadoambiental.com</span>
+                                        class="material-symbols-outlined text-primary w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center w-full sm:w-auto justify-center">mail</span>
+                                    <span data-i18n="contact_page.info.email"><strong>legado.ambiental.mx@gmail.com</strong></strong></span>
                                 </li>
                                 <li
                                     class="flex items-center gap-4 text-sm text-[#617589] dark:text-gray-400 font-medium leading-relaxed">
                                     <span
-                                        class="material-symbols-outlined text-primary w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center">location_on</span>
-                                    <span data-i18n="contact_page.info.addr">Plaza de Ingeniería, Suite
-                                        400<br />Distrito de
-                                        Negocios Internacional</span>
+                                        class="material-symbols-outlined text-primary w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center w-full sm:w-auto justify-center">location_on</span>
+                                    <span data-i18n="contact_page.info.addr">U.H. Valle de Ecatepec, <br> C.P. 55119, Ecatepec, Estado de México</span>
                                 </li>
                             </ul>
                         </div>
@@ -500,16 +484,13 @@
                         class="h-16 w-auto object-contain">
                     <span class="font-bold dark:text-white">Legado Ambiental</span>
                 </div>
-                <div class="text-sm text-[#617589] dark:text-gray-400" data-i18n="footer.rights">
-                    © 2024 Legado Ambiental. Todos los derechos reservados.
-                </div>
+                <div class="text-sm text-[#617589] dark:text-gray-400" data-i18n="footer.rights"><strong>© 2026 Legado Ambiental S.A. de C.V. <br>Todos los derechos reservados.</strong></strong></div>
                 <div class="flex gap-6">
-                    <a class="text-[#617589] hover:text-primary transition-colors" href="#"><span
+                    <a class="text-[#617589] hover:text-primary transition-colors" href="javascript:void(0)" data-action="copy-url"><span
                             class="material-symbols-outlined">share</span></a>
-                    <a class="text-[#617589] hover:text-primary transition-colors" href="#tab-1" onclick="document.getElementById('tab-btn-1').click(); document.getElementById('tab-section-1').scrollIntoView({behavior: 'smooth'});"><span
+                    <a class="text-[#617589] hover:text-primary transition-colors" href="#tab-1"
+                        data-action="smooth-scroll-contact"><span
                             class="material-symbols-outlined">mail</span></a>
-                    <a class="text-[#617589] hover:text-primary transition-colors" href="#"><span
-                            class="material-symbols-outlined">location_on</span></a>
                 </div>
             </div>
         </footer>
@@ -600,6 +581,109 @@
                 });
             });
         });
+
+        // Form Validation and AJAX Submit with Spinner
+        const contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                
+                const emailInput = document.getElementById('email');
+                const emailError = document.getElementById('email-error');
+                const submitBtn = document.getElementById('submit-btn');
+                
+                // Advanced Email Regex Validation
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(emailInput.value)) {
+                    emailError.classList.remove('hidden');
+                    emailInput.focus();
+                    return;
+                }
+                emailError.classList.add('hidden');
+
+                // Advanced Message Length Validation (already partially covered by maxlength, but good to check min length)
+                const message = document.getElementById('message').value;
+                if (message.trim().length < 10) {
+                    alert("Por favor ingrese un mensaje más detallado (mínimo 10 caracteres).");
+                    return;
+                }
+
+                // Honeypot check
+                if (document.getElementById('website_url').value !== "") {
+                    return; // Spam detected silently
+                }
+
+                // Show full screen overlay
+                const overlay = document.getElementById('submit-overlay');
+                overlay.classList.remove('hidden');
+                overlay.classList.add('flex');
+                setTimeout(() => overlay.classList.remove('opacity-0'), 10);
+
+                // Disable button
+                const submitText = document.getElementById('submit-text');
+                const submitSpinner = document.getElementById('submit-spinner');
+                const originalBtnText = submitText.textContent;
+                submitBtn.disabled = true;
+                submitText.textContent = 'Enviando...';
+                submitSpinner.classList.remove('hidden');
+
+                // AJAX Fetch to FormSubmit
+                fetch("https://formsubmit.co/ajax/legado.ambiental.mx@gmail.com", {
+                    method: "POST",
+                    headers: { 
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        name: document.getElementById('name').value,
+                        lastname: document.getElementById('lastname').value,
+                        email: emailInput.value,
+                        phone: document.getElementById('phone').value,
+                        contact_method: document.querySelector('input[name="contact_method"]:checked').value,
+                        subject: document.getElementById('subject').value,
+                        message: message,
+                        _subject: "Nuevo mensaje de contacto web"
+                    })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    // Hide overlay
+                    overlay.classList.add('opacity-0');
+                    setTimeout(() => { overlay.classList.remove('flex'); overlay.classList.add('hidden'); }, 300);
+
+                    // Success state
+                    submitBtn.classList.replace('bg-primary', 'bg-green-600');
+                    submitBtn.classList.replace('hover:bg-primary/90', 'hover:bg-green-700');
+                    submitText.textContent = '¡Mensaje Enviado!';
+                    submitSpinner.classList.add('hidden');
+                    
+                    // Reset form and restore button after 3 seconds
+                    setTimeout(() => {
+                        contactForm.reset();
+                        submitBtn.classList.replace('bg-green-600', 'bg-primary');
+                        submitBtn.classList.replace('hover:bg-green-700', 'hover:bg-primary/90');
+                        submitText.textContent = originalBtnText;
+                        submitBtn.disabled = false;
+                    }, 3000);
+                })
+                .catch(error => {
+                    // Handle error visually without exposing logs
+                    // Hide overlay
+                    overlay.classList.add('opacity-0');
+                    setTimeout(() => { overlay.classList.remove('flex'); overlay.classList.add('hidden'); }, 300);
+
+                    submitBtn.classList.replace('bg-primary', 'bg-red-600');
+                    submitText.textContent = 'Error al enviar';
+                    submitSpinner.classList.add('hidden');
+                    
+                    setTimeout(() => {
+                        submitBtn.classList.replace('bg-red-600', 'bg-primary');
+                        submitText.textContent = originalBtnText;
+                        submitBtn.disabled = false;
+                    }, 3000);
+                });
+            });
+        }
     </script>
 </body>
 
