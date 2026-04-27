@@ -507,3 +507,19 @@ Se solucionaron errores estructurales de sincronización para perfeccionar el ca
 ### Archivos Modificados
 - `assets/js/i18n.js`
 - `services_overview/services.html`
+
+## Fase 21: Actualización de Contenido y Estandarización de Formato
+
+Se implementaron mejoras en el formato del código fuente y se actualizaron contenidos institucionales y gráficos.
+
+### 1. Limpieza y Estandarización de Código HTML
+- **Remoción de Saltos de Línea**: Se eliminaron los saltos de línea innecesarios dentro de los nodos de texto en todos los archivos HTML (`home.html`, `portfolio.html`, `our_experience.html`, `services.html`, etc.). Esto previene renderizados extraños en navegadores y mantiene un DOM más limpio y legible para los desarrolladores.
+- **Traducciones UI Móvil**: Se agregaron los atributos faltantes `data-i18n` a los botones del menú móvil (menú hamburguesa) para garantizar su integración completa con el ecosistema de traducción.
+
+### 2. Actualización Institucional y Assets
+- **Copyright 2026**: Se actualizó la leyenda legal en el pie de página (footer) de todas las páginas web, transicionando a **"© 2026 Legado Ambiental S.A. de C.V."**.
+- **Nuevos Activos Gráficos**: Se cargaron e integraron al repositorio las nuevas creatividades visuales para servicios (`servicios-legado-ambiental-2026` en formato WebP, PNG y fuente XCF).
+
+### Archivos Modificados
+- Todas las páginas maestras `.html`.
+- Directorio de imágenes de servicios (`assets/images/services/`).
