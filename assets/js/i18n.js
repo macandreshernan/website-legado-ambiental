@@ -323,12 +323,18 @@ const translations = {
             },
             "faq": {
                 "title": "Preguntas Frecuentes",
-                "q1": "¿Qué tipos de certificación ambiental manejan?",
-                "a1": "Trabajamos con estándares LEED, BREEAM y normativas locales de impacto ambiental. Nuestro equipo puede guiar todo el proceso de certificación para su proyecto.",
-                "q2": "¿Realizan proyectos fuera de la región?",
-                "a2": "Sí, nuestra división de Expansión Global gestiona proyectos internacionales. Contáctenos para discutir la logística y viabilidad de su ubicación.",
-                "q3": "¿Ofrecen servicios de solo diseño?",
-                "a3": "Absolutamente. Ofrecemos servicios modulares que van desde el diseño conceptual y planos estructurales hasta la gestión completa de la construcción llave en mano."
+                "q1": "¿Qué beneficios obtengo al contratar su servicio de supervisión en obra pública o privada?",
+                "a1": "Garantizamos la optimización de costos operativos, la reducción de riesgos legales y el cumplimiento estricto de los estándares técnicos y regulatorios vigentes.",
+                "q2": "¿Realizan proyectos de vivienda?",
+                "a2": "Sí, aplicamos servicios de topografía y control de obra específicamente para el diseño y construcción de vivienda y desarrollos urbanos.",
+                "q3": "¿Sus soluciones ambientales son técnica y económicamente viables?",
+                "a3": "Sí, nuestro enfoque de más de dos décadas se centra en diseñar soluciones que sean factibles tanto técnica como económica y ambientalmente, orientadas siempre al desarrollo sostenible.",
+                "q4": "¿Sus cursos de capacitación tienen validez oficial?",
+                "a4": "Sí, todos nuestros cursos son impartidos por un Agente Capacitador Externo (ACE) debidamente registrado ante la STPS.",
+                "q5": "¿Qué documentos entregan al finalizar una capacitación en SST?",
+                "a5": "Entregamos las constancias de habilidades laborales (DC-3) y el soporte documental necesario para acreditar el cumplimiento normativo ante las autoridades.",
+                "q6": "¿Pueden ayudarnos a crear un departamento de Seguridad y Salud en el Trabajo desde cero?",
+                "a6": "Sí, somos especialistas en la instauración de departamentos de Seguridad y Salud en el Trabajo (SST), encargándonos del diseño y la coordinación integral."
             },
             "info": {
                 "title": "Información Directa",
@@ -404,7 +410,7 @@ const translations = {
             "auto_generated.text_053": "Aseguramos que su inversión se ejecute conforme a lo planeado.",
             "auto_generated.text_054": "Protegemos el activo más valioso de su organización: su capital humano, garantizando el\n                                cumplimiento total ante la STPS y autoridades locales.",
             "auto_generated.text_055": "Supervisión en Proyectos de Alto Riesgo: Vigilancia presencial y control de protocolos\n                                de seguridad en obras civiles, proyectos ambientales e industriales.",
-            "auto_generated.text_056": "Capacitación Certificada (STPS): Cursos y talleres impartidos por un Agente Capacitador\n                                Externo (ACE) con registro oficial ante la Secretaría del Trabajo.",
+            "auto_generated.text_056": "Capacitación Certificada (STPS): Cursos y talleres impartidos por un Agente Capacitador\n                                Externo (ACE) con registro oficial ante la Secretaría del Trabajo. Busca nuestro catalogo de capacitación en: <strong><a href='https://agentes.stps.gob.mx/Buscador/BuscadorAgente.aspx'>https://agentes.stps.gob.mx/Buscador/BuscadorAgente.aspx</a></strong><br/> Usando nuestro registro como <strong>HELI8812234B1</strong> (RFC).",
             "auto_generated.text_057": "Gestión Integral de Residuos (Sólidos y Peligrosos)",
             "auto_generated.text_058": "Ingeniería Hídrica y Soluciones de Agua",
             "auto_generated.text_059": "Consultoría, Dictámenes y Cumplimiento Legal",
@@ -446,7 +452,7 @@ const translations = {
             "auto_generated.text_095": "<strong>Gestión de Trámites y Licencias:</strong> Apoyo técnico para la\n                                        obtención de permisos de construcción y autorizaciones ambientales.",
             "auto_generated.text_096": "Realizar cotización",
             "auto_generated.text_097": "<strong>Supervisión Técnica de Obra:</strong> Vigilancia presencial para\n                                        garantizar el cumplimiento de planos, especificaciones y calidad de\n                                        materiales.",
-            "auto_generated.text_098": "<strong>Control de Costos y Tiempos:</strong> AAdministración de cronogramas\n                                        de obra (Ruta Crítica) y presupuestos para evitar desviaciones.",
+            "auto_generated.text_098": "<strong>Control de Costos y Tiempos:</strong> Administración de cronogramas\n                                        de obra (Ruta Crítica) y presupuestos para evitar desviaciones.",
             "auto_generated.text_099": "<strong>Auditoría de Obra:</strong> Verificación de procesos constructivos y\n                                        normativas de seguridad en sitio.",
             "auto_generated.text_100": "Realizar cotización",
             "auto_generated.text_101": "<strong>Definición</strong> exacta de contornos espaciales y dimensiones del\n                                        terreno para cimientos seguros.",
@@ -618,14 +624,14 @@ const translations = {
             "label": "Our Work",
             "title": "Recent Projects",
             "p1": {
-                "cat": "Government / Infrastructure",
-                "title": "Metropolitan Viaduct System",
-                "desc": "1.5km urban connection project."
+                "cat": "Grupo Serla",
+                "title": "Environmental Impact Study",
+                "desc": "Comprehensive corporate study under NOM-052-SEMARNAT (Hazardous Waste), NOM-085 (Emissions), and RCDF provisions, ensuring operations without negative externalities."
             },
             "p2": {
-                "cat": "Private / Commercial",
-                "title": "Solaris Business Center",
-                "desc": "Commercial headquarters with ecological certification."
+                "cat": "Tiloxtoc River",
+                "title": "Sanitation",
+                "desc": "Planning, sampling, and joint mitigation with CIITEC-IPN, aligned with the National Water Law and SEMARNAT regulations for ecosystem rescue."
             }
         },
         "cta": {
@@ -635,45 +641,45 @@ const translations = {
             "download_btn": "Download Portfolio"
         },
         "footer": {
-            "desc": "Defining excellence in the built environment while preserving our planet's natural legacy.",
+            "title": "Legado Ambiental <br>S.A. de C.V.",
+            "desc": "Holistic solutions for infrastructure development and regulatory compliance.",
             "services": {
-                "1": "Civil Engineering",
-                "2": "Environmental Impact",
-                "3": "Infrastructure Design",
-                "4": "Urban Development",
+                "1": "Environmental Engineering",
+                "2": "Construction",
+                "3": "Topography",
+                "4": "Health & Safety",
                 "title": "Services"
             },
             "company": {
-                "1": "About Our Firm",
-                "2": "Project Portfolio",
-                "3": "Certifications",
-                "4": "Career Opportunities",
+                "1": "About Us",
+                "2": "Services",
+                "3": "Experience",
+                "4": "Contact",
                 "title": "Company"
             },
             "contact": {
                 "title": "Contact",
-                "addr_1": "Engineering Plaza, Suite 400",
-                "addr_2": "International Business District",
+                "addr_1": "U.H. Valle de Ecatepec, C.P. 55119",
+                "addr_2": "Ecatepec, State of Mexico",
                 "phone_1": "55 7312 6918",
                 "phone_2": "72 2672 7212",
                 "email": "<strong>legado.ambiental.mx@gmail.com</strong>"
             },
-            "rights": "© 2024 Legado Ambiental. All rights reserved.",
+            "rights": "<strong>© 2026 Legado Ambiental S.A. de C.V. <br>All rights reserved.</strong>",
             "privacy": "Privacy Policy",
             "terms": "Terms of Service",
-            "sitemap": "Sitemap",
-            "title": "Legado Ambiental <br>S.A. de C.V."
+            "sitemap": "Sitemap"
         },
         "about": {
             "title": "About Us",
             "hero": {
                 "title": "About Us",
-                "subtitle": "Defining the landscape of civil engineering through integrity, precision, and a commitment to sustainable infrastructure."
+                "subtitle": "We are an environmental engineering firm, integrated by an interdisciplinary team"
             },
             "sustainable": {
                 "title": "Building a Sustainable Legacy",
-                "p1": "Founded in 2010, Legado Ambiental has established itself as a cornerstone of engineering excellence in both the public and private sectors. We specialize in complex infrastructure projects that demand high technical competence and environmental sensitivity.",
-                "p2": "Our approach combines traditional engineering mastery with modern sustainable technologies, ensuring that every project we undertake serves the community for generations to come."
+                "p1": "Legado Ambiental, S.A. de C.V. is a Mexican company founded in 1999 based in Mexico City, specialized in providing professional services in the fields of environmental engineering, construction, topography, and health & safety in construction, as a response to the growing need to achieve high compatibility between productive activities, prevention, environmental pollution control, and natural resource preservation, oriented towards sustainable development.",
+                "p2": "We are an engineering firm specialized in the environment, integrated by an interdisciplinary team of professionals with extensive experience in environmental studies, projects, construction, and consulting. For over two decades we have collaborated with the industrial, government, and service sectors in the design and application of technically, economically, and environmentally feasible environmental engineering solutions."
             },
             "mission": {
                 "title": "Mission",
@@ -878,16 +884,22 @@ const translations = {
             },
             "faq": {
                 "title": "Frequently Asked Questions",
-                "q1": "What types of environmental certification do you handle?",
-                "a1": "We work with LEED, BREEAM, and local environmental impact regulations. Our team can guide the entire certification process for your project.",
-                "q2": "Do you do projects outside the region?",
-                "a2": "Yes, our Global Expansion division manages international projects. Contact us to discuss the logistics and viability of your location.",
-                "q3": "Do you offer design-only services?",
-                "a3": "Absolutely. We offer modular services ranging from conceptual design and structural blueprints to complete turnkey construction management."
+                "q1": "What benefits do I get by hiring your supervision service for public or private construction?",
+                "a1": "We guarantee the optimization of operational costs, the reduction of legal risks, and strict compliance with current technical and regulatory standards.",
+                "q2": "Do you carry out housing projects?",
+                "a2": "Yes, we apply topography and construction control services specifically for the design and construction of housing and urban developments.",
+                "q3": "Are your environmental solutions technically and economically viable?",
+                "a3": "Yes, our approach over more than two decades focuses on designing solutions that are technically, economically, and environmentally feasible, always oriented towards sustainable development.",
+                "q4": "Are your training courses officially valid?",
+                "a4": "Yes, all our courses are taught by an External Training Agent (ACE) duly registered with the STPS.",
+                "q5": "What documents do you provide upon completing OHS training?",
+                "a5": "We provide occupational skills certificates (DC-3) and the necessary documentary support to prove regulatory compliance before authorities.",
+                "q6": "Can you help us build an Occupational Health and Safety department from scratch?",
+                "a6": "Yes, we specialize in the establishment of Occupational Health and Safety (OHS) departments, handling the design and comprehensive coordination."
             },
             "info": {
                 "title": "Direct Information",
-                "addr": "Engineering Plaza, Suite 400<br />International Business District",
+                "addr": "U.H. Valle de Ecatepec, <br> C.P. 55119, Ecatepec, State of Mexico",
                 "email": "<strong>legado.ambiental.mx@gmail.com</strong>",
                 "phone1": "+52 55 7312 6918",
                 "phone2": "+52 72 2672 7212"
@@ -951,8 +963,8 @@ const translations = {
             "auto_generated.text_045": "<span class=\"material-symbols-outlined\">mail</span>",
             "auto_generated.text_046": "This category groups the technical analysis and operational planning for all types of waste.",
             "auto_generated.text_047": "Focused on infrastructure and the efficient use of water resources.",
-            "auto_generated.text_048": "Services clave para asegurar que las empresas cumplan con la normativa ambiental\n                                vigente.",
-            "auto_generated.text_049": "Services educativos para empresas o entidades gubernamentales.",
+            "auto_generated.text_048": "Key services to ensure that companies comply with current environmental regulations.",
+            "auto_generated.text_049": "Educational services for companies or government entities.",
             "auto_generated.text_050": "We develop living spaces with high standards of design and functionality.",
             "auto_generated.text_051": "Specialists in technical works for water management and sanitation.",
             "auto_generated.text_052": "The technical foundation that ensures the viability of any construction.",
@@ -990,7 +1002,7 @@ const translations = {
             "auto_generated.text_084": "Get a Quote",
             "auto_generated.text_085": "<strong>Training:</strong> Courses, workshops and training programs on environmental topics.",
             "auto_generated.text_086": "Get a Quote",
-            "auto_generated.text_087": "<strong>Single-Family Housing:</strong> Construction de casas personalizadas y\n                                        residencias de alto nivel.",
+            "auto_generated.text_087": "<strong>Single-Family Housing:</strong> Construction of custom homes and high-end residences.",
             "auto_generated.text_088": "<strong>Multi-Family Housing:</strong> Development of apartment complexes, residential buildings and housing developments.",
             "auto_generated.text_089": "<strong>Turnkey Projects: </strong> Total management from foundation to final finishes.",
             "auto_generated.text_090": "Get a Quote",
@@ -1004,21 +1016,21 @@ const translations = {
             "auto_generated.text_098": "<strong>Cost and Time Control:</strong> Administration of construction schedules (Critical Path) and budgets to prevent deviations.",
             "auto_generated.text_099": "<strong>Construction Audit:</strong> Verification of construction processes and site safety regulations.",
             "auto_generated.text_100": "Get a Quote",
-            "auto_generated.text_101": "<strong>Definition</strong> Exact definition of spatial contours and land dimensions for secure foundations.",
+            "auto_generated.text_101": "<strong>Definition</strong> of exact spatial contours and land dimensions for secure foundations.",
             "auto_generated.text_102": "Get a Quote",
-            "auto_generated.text_103": "<strong>Location</strong> Precise geospatial coordinate location using cutting-edge global technology.",
+            "auto_generated.text_103": "<strong>Location</strong> of precise geospatial coordinates using cutting-edge global technology.",
             "auto_generated.text_104": "Get a Quote",
-            "auto_generated.text_105": "<strong>Generation</strong> Generation of three-dimensional (3D) terrain environments for exact volumetric calculations.",
+            "auto_generated.text_105": "<strong>Generation</strong> of three-dimensional (3D) terrain environments for exact volumetric calculations.",
             "auto_generated.text_106": "Get a Quote",
-            "auto_generated.text_107": "<strong>Verification</strong> Constant verification of layouts on real terrain to ensure alignment with planimetry.",
+            "auto_generated.text_107": "<strong>Verification</strong> of layouts continuously on real terrain to ensure alignment with planimetry.",
             "auto_generated.text_108": "Get a Quote",
-            "auto_generated.text_109": "<strong>Establishment of OHS Departments:</strong> Diseño, implementación\n                                        y coordinación integral de departamentos de Health & Safety\n                                        Industrial.",
+            "auto_generated.text_109": "<strong>Establishment of OHS Departments:</strong> Design, implementation, and comprehensive coordination of Occupational Health and Safety departments.",
             "auto_generated.text_110": "<strong>Regulatory Compliance Audits:</strong> Diagnosis and assurance of current Official Mexican Standards (NOM) (Safety, Health and Organization).",
-            "auto_generated.text_111": "<strong>Management of Joint Commissions:</strong> Constitución y capacitación de\n                                        la Comisión de Health & Safety (NOM-019-STPS).",
+            "auto_generated.text_111": "<strong>Management of Joint Commissions:</strong> Constitution and training of the Health and Safety Commission (NOM-019-STPS).",
             "auto_generated.text_112": "<strong>Development of Specific Programs:</strong> Safety manuals, civil protection programs and emergency response plans.",
             "auto_generated.text_113": "Get a Quote",
             "auto_generated.text_114": "<strong>Job Hazard Analysis (JHA):</strong>Identification of hazards and risk assessment to prevent occupational accidents and illnesses.",
-            "auto_generated.text_115": "<strong>Verification de Equipos y Maquinaria:</strong> Inspection of safety conditions in tools, scaffolding and heavy machinery.",
+            "auto_generated.text_115": "<strong>Verification of Equipment and Machinery:</strong> Inspection of safety conditions in tools, scaffolding and heavy machinery.",
             "auto_generated.text_116": "Get a Quote",
             "auto_generated.text_117": "<strong>Issuance of DC-3 Certificates:</strong>Delivery of labor skills documents valid for federal inspections.",
             "auto_generated.text_118": "<strong>Training in High-Risk Jobs:</strong> Specific training in heights, confined spaces, cutting and welding, and handling of chemical substances.",
@@ -1035,7 +1047,7 @@ const translations = {
             "auto_generated.text_129": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Impact Assessments:</strong> Environmental impact studies (EsIA), diagnoses and preventive environmental assessments.</span>",
             "auto_generated.text_130": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Official Documentation:</strong> Preparation of technical reports and environmental opinions with legal validity.</span>",
             "auto_generated.text_131": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Training:</strong> Courses, workshops and training programs on environmental topics.</span>",
-            "auto_generated.text_132": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Single-Family Housing:</strong> Construction de casas personalizadas y\n                                        residencias de alto nivel.</span>",
+            "auto_generated.text_132": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Single-Family Housing:</strong> Construction of custom homes and high-end residences.</span>",
             "auto_generated.text_133": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Multi-Family Housing:</strong> Development of apartment complexes, residential buildings and housing developments.</span>",
             "auto_generated.text_134": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Turnkey Projects: </strong> Total management from foundation to final finishes.</span>",
             "auto_generated.text_135": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Wastewater Treatment Plants (WWTP):</strong> Design, construction and commissioning of industrial and municipal treatment systems.</span>",
@@ -1045,16 +1057,16 @@ const translations = {
             "auto_generated.text_139": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Technical Supervision of Works:</strong> On-site monitoring to ensure compliance with plans, specifications and material quality.</span>",
             "auto_generated.text_140": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Cost and Time Control:</strong> Administration of construction schedules (Critical Path) and budgets to prevent deviations.</span>",
             "auto_generated.text_141": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Construction Audit:</strong> Verification of construction processes and site safety regulations.</span>",
-            "auto_generated.text_142": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Definition</strong> Exact definition of spatial contours and land dimensions for secure foundations.</span>",
-            "auto_generated.text_143": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Location</strong> Precise geospatial coordinate location using cutting-edge global technology.</span>",
-            "auto_generated.text_144": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Generation</strong> Generation of three-dimensional (3D) terrain environments for exact volumetric calculations.</span>",
-            "auto_generated.text_145": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Verification</strong> Constant verification of layouts on real terrain to ensure alignment with planimetry.</span>",
-            "auto_generated.text_146": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Establishment of OHS Departments:</strong> Diseño, implementación\n                                        y coordinación integral de departamentos de Health & Safety\n                                        Industrial.</span>",
+            "auto_generated.text_142": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Definition</strong> of exact spatial contours and land dimensions for secure foundations.</span>",
+            "auto_generated.text_143": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Location</strong> of precise geospatial coordinates using cutting-edge global technology.</span>",
+            "auto_generated.text_144": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Generation</strong> of three-dimensional (3D) terrain environments for exact volumetric calculations.</span>",
+            "auto_generated.text_145": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Verification</strong> of layouts continuously on real terrain to ensure alignment with planimetry.</span>",
+            "auto_generated.text_146": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Establishment of OHS Departments:</strong> Design, implementation, and comprehensive coordination of Occupational Health and Safety departments.</span>",
             "auto_generated.text_147": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Regulatory Compliance Audits:</strong> Diagnosis and assurance of current Official Mexican Standards (NOM) (Safety, Health and Organization).</span>",
-            "auto_generated.text_148": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Management of Joint Commissions:</strong> Constitución y capacitación de\n                                        la Comisión de Health & Safety (NOM-019-STPS).</span>",
+            "auto_generated.text_148": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Management of Joint Commissions:</strong> Constitution and training of the Health and Safety Commission (NOM-019-STPS).</span>",
             "auto_generated.text_149": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Development of Specific Programs:</strong> Safety manuals, civil protection programs and emergency response plans.</span>",
             "auto_generated.text_150": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Job Hazard Analysis (JHA):</strong>Identification of hazards and risk assessment to prevent occupational accidents and illnesses.</span>",
-            "auto_generated.text_151": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Verification de Equipos y Maquinaria:</strong> Inspection of safety conditions in tools, scaffolding and heavy machinery.</span>",
+            "auto_generated.text_151": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Verification of Equipment and Machinery:</strong> Inspection of safety conditions in tools, scaffolding and heavy machinery.</span>",
             "auto_generated.text_152": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Issuance of DC-3 Certificates:</strong>Delivery of labor skills documents valid for federal inspections.</span>",
             "auto_generated.text_153": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Training in High-Risk Jobs:</strong> Specific training in heights, confined spaces, cutting and welding, and handling of chemical substances.</span>",
             "auto_generated.text_154": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Formation of Emergency Brigades:</strong> First aid, fire prevention and fighting, and building evacuation.</span>",
@@ -1167,18 +1179,18 @@ async function loadTranslations(lang) {
 function getValueByPath(obj, path) {
     // 1. Check for exact match first
     if (obj && obj[path]) return obj[path];
-    
+
     // 2. Try normal dot notation traversal
     const parts = path.split('.');
     let val = parts.reduce((acc, part) => acc && acc[part], obj);
     if (val) return val;
-    
+
     // 3. Fallback: Check if the category exists and contains the full path as a key
     // This supports auto-generated keys like data-i18n="auto_generated.text_057"
     if (parts.length > 0 && obj && obj[parts[0]] && obj[parts[0]][path]) {
         return obj[parts[0]][path];
     }
-    
+
     return undefined;
 }
 
@@ -1285,14 +1297,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     globalThis.toggleDarkMode();
                 }
             } else if (action === 'copy-url') {
-                navigator.clipboard.writeText(window.location.href); 
+                navigator.clipboard.writeText(window.location.href);
                 alert('URL copiada');
             } else if (action === 'smooth-scroll-contact') {
                 const tabBtn = document.getElementById('tab-btn-1');
                 const tabSec = document.getElementById('tab-section-1');
-                if(tabBtn && tabSec) {
+                if (tabBtn && tabSec) {
                     tabBtn.click();
-                    tabSec.scrollIntoView({behavior: 'smooth'});
+                    tabSec.scrollIntoView({ behavior: 'smooth' });
                 }
             } else if (action === 'navigate') {
                 window.location.href = actionBtn.getAttribute('data-href');

@@ -523,3 +523,25 @@ Se implementaron mejoras en el formato del código fuente y se actualizaron cont
 ### Archivos Modificados
 - Todas las páginas maestras `.html`.
 - Directorio de imágenes de servicios (`assets/images/services/`).
+
+## Fase 22: Actualización de Preguntas Frecuentes, Formularios de Cotización y Revisión de UI Bilingüe
+
+Se realizó una actualización profunda de contenidos dinámicos para incrementar la conversión de clientes y estandarizar la experiencia en ambos idiomas.
+
+### 1. Reingeniería de la Sección FAQ (Preguntas Frecuentes)
+- **Contenido de Alto Valor**: Se sustituyeron 3 preguntas de relleno por 6 consultas técnicas reales basadas en las necesidades del cliente final (ej. Validez DC-3, Retorno de inversión en supervisión ambiental, Creación de departamentos SST).
+- **Mejora UI/UX en Acordeón**: Se asignaron nuevos iconos de la suite `material-symbols-outlined` (`analytics`, `architecture`, `eco`, `workspace_premium`, `description`, `health_and_safety`) acordes al tema de cada pregunta para facilitar el escaneo visual rápido.
+- **Sincronización Bilingüe Estricta**: Las 6 nuevas preguntas fueron dadas de alta en el diccionario `i18n.js` bajo el objeto `contact_page.faq` asegurando la traducción especializada de términos como "OHS" (Seguridad y Salud en el Trabajo) y "DC-3" para la versión `en-US`.
+
+### 2. Optimización de Flujo de Conversión (Leads)
+- **Integración de Google Forms**: Los 15 botones de "Realizar cotización" distribuidos en las tarjetas interactivas de `services.html` ahora dirigen a los formularios dinámicos específicos mediante URLs cortas (`https://forms.gle/...`).
+- **Comportamiento Seguro**: Se añadió el atributo `target="_blank"` a estos botones para abrir los formularios en pestañas separadas y evitar que el usuario pierda la navegación principal.
+
+### 3. Reparación de Vínculos de Idioma (UI Translations)
+- Se corrigió un error crítico de UI en `about_us.html` en la sección "Los Pilares de Nuestra Transformación Ambiental". La etiqueta principal `<h3>` carecía de su atributo traductor, lo que causaba que el texto estuviera quemado en español. Al integrarlo, el texto y su gradiente (gradient text clip) ahora se visualizan perfectamente en inglés ("The Pillars of Our Environmental Transformation").
+
+### Archivos Modificados
+- `faq/contact_faq.html`
+- `assets/js/i18n.js`
+- `services_overview/services.html`
+- `about_us/about_us.html`
