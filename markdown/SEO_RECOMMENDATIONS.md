@@ -9,7 +9,7 @@ Crear un archivo `sitemap.xml` en la raíz del sitio que liste todas las página
 ```xml
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
    <url>
-      <loc>https://www.legadoambiental.com/home.html</loc>
+      <loc>https://www.legadoambiental.com.mx/home.html</loc>
       <lastmod>2026-01-25</lastmod>
       <changefreq>monthly</changefreq>
       <priority>1.0</priority>
@@ -23,23 +23,23 @@ Configurar `robots.txt` para guiar a los bots.
 ```txt
 User-agent: *
 Allow: /
-Sitemap: https://www.legadoambiental.com/sitemap.xml
+Sitemap: https://www.legadoambiental.com.mx/sitemap.xml
 ```
 
 ### 1.3. Etiquetas `hreflang` para Internacionalización
 Dado que el sitio soporta Español e Inglés, es crucial indicar esto a Google para servir la versión correcta según la ubicación del usuario.
 Añadir en el `<head>` de cada página:
 ```html
-<link rel="alternate" hreflang="es" href="https://www.legadoambiental.com/home.html" />
-<link rel="alternate" hreflang="en" href="https://www.legadoambiental.com/en/home.html" />
-<link rel="alternate" hreflang="x-default" href="https://www.legadoambiental.com/home.html" />
+<link rel="alternate" hreflang="es" href="https://www.legadoambiental.com.mx/home.html" />
+<link rel="alternate" hreflang="en" href="https://www.legadoambiental.com.mx/en/home.html" />
+<link rel="alternate" hreflang="x-default" href="https://www.legadoambiental.com.mx/home.html" />
 ```
 *Nota: Esto requiere que las URLs cambien dinámicamente o usar parámetros de consulta si no se separan por carpetas.*
 
 ### 1.4. URLs Canónicas
 Para evitar problemas de contenido duplicado (especialmente si se accede con/sin `www` o `index.html`), añadir:
 ```html
-<link rel="canonical" href="https://www.legadoambiental.com/home.html" />
+<link rel="canonical" href="https://www.legadoambiental.com.mx/home.html" />
 ```
 
 ## 2. SEO On-Page (Contenido)
@@ -57,8 +57,8 @@ Implementar JSON-LD para ayudar a Google a entender que esto es una "Organizaci�
   "@context": "https://schema.org",
   "@type": "ConstructionBusiness",
   "name": "Legado Ambiental",
-  "url": "https://www.legadoambiental.com",
-  "logo": "https://www.legadoambiental.com/assets/logo.png",
+  "url": "https://www.legadoambiental.com.mx",
+  "logo": "https://www.legadoambiental.com.mx/assets/logo.png",
   "description": "Excelencia en construcción civil y desarrollo sostenible.",
   "address": {
     "@type": "PostalAddress",

@@ -545,3 +545,27 @@ Se realizó una actualización profunda de contenidos dinámicos para incrementa
 - `assets/js/i18n.js`
 - `services_overview/services.html`
 - `about_us/about_us.html`
+
+## Fase 23: Corrección de Dominio SEO y Archivos de Configuración de Servidor
+
+Se solucionaron errores de indexación para motores de búsqueda y se ajustó la configuración del servidor web Hostinger.
+
+### 1. Actualización de Metaetiquetas y Sitemaps
+- **Corrección de Dominio Base**: Se reemplazó el dominio erróneo `legadoambiental.com` por el dominio correcto `legadoambiental.com.mx` en todas las referencias de metadatos SEO (OpenGraph, Twitter Cards, JSON-LD), URLs canónicas, enlaces `hreflang`, `robots.txt` y `sitemap.xml`.
+- **Prevención de Errores de Rastreo**: Esta actualización crítica evita que Google Search Console se confunda de dominio y rechace la indexación del sitio.
+
+### 2. Configuración de Servidor (Apache/LiteSpeed)
+- **Directiva de Directorio**: Se generó el archivo `.htaccess` en la raíz del proyecto instruyendo al servidor (`DirectoryIndex home.html index.html index.php`) que priorice cargar `home.html` por defecto al visitar la raíz del dominio.
+
+### Archivos Modificados e Impactados
+- `.htaccess` (Nuevo)
+- `robots.txt`
+- `sitemap.xml`
+- `home.html`
+- `about_us/about_us.html`
+- `services_overview/services.html`
+- `project_portfolio_gallery/portfolio.html`
+- `experience_timeline/our_experience.html`
+- `faq/contact_faq.html`
+- `index.html`
+- `markdown/SEO_RECOMMENDATIONS.md`
