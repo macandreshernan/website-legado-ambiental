@@ -580,3 +580,6 @@ Se solucionó un problema de duplicación de enlaces en los botones de "Realizar
 
 ### Archivos Modificados
 - `services_overview/services.html`
+
+## Fase 25: Prueba de Webhook CI/CD
+- Test commit to trigger Hostinger auto-deployment via GitHub Webhooks.
