@@ -354,7 +354,8 @@ Se enfocó en unificar comportamientos interactivos, mejorar la experiencia de u
   - Adición minuciosa de los atributos `data-i18n` faltantes dentro de los enlaces de menú móviles para todas las secciones.
   - El script administrador de internacionalización (`assets/js/i18n.js`) fue actualizado para resaltar nítidamente la selección de idioma (ES/EN) activo usando `font-bold` y color primario (Verde), mejorando la retroalimentación de estado.
 
-### Archivos Modificados
+### Archivos Afectados
+
 - `assets/js/i18n.js`
 - `home.html`
 - `about_us/about_us.html`
@@ -385,6 +386,7 @@ Se implementó una serie de características avanzadas enfocadas en posicionar e
 - **Página 404 Responsiva**: Diseño completo de `404.html` para un manejo de errores robusto y coherente con el mapa de i18n y la capa de estilos principal.
 
 ### Archivos Nuevos y Modificados
+
 - `assets/js/theme-toggle.js`
 - `assets/js/scroll-animate.js`
 - `assets/js/toast-service.js`
@@ -394,3 +396,187 @@ Se implementó una serie de características avanzadas enfocadas en posicionar e
 - `404.html`
 - `assets/i18n/es-MX.json` y `en-US.json`
 - Todas las páginas maestras HTML.
+
+## Fase 15: Integración de Deep Linking para Navegación de Pestañas
+
+Se implementó un sistema de ruteo nativo con anclaje (Hash) para conectar las tarjetas visuales de la "Página de Inicio" con el módulo de "Servicios y Pestañas", reduciendo la fricción de búsqueda (Clicks-To-Value).
+
+### 1. Intercepción de Hash en DOMContentLoaded
+- **Lectura Automática**: El script principal de `services.html` ahora intercepta la carga de la página, leyendo la métrica `window.location.hash`. Extrae dinámicamente el índice numérico destino usando Regex (`/#tab-(\d+)/`).
+- **Scroll Inteligente**: Adicionalmente a desplegar visualmente la pestaña correcta según el ancla, un micro-retraso (`setTimeout`) autodesplaza al usuario suavemente (Smooth Scroll) hacia las tarjetas informativas esquivando el Header fijo.
+
+### Listado de Archivos Modificados
+
+- `home.html`
+- `services_overview/services.html`
+
+## Fase 16: Arquitectura y Estandarización de Footers
+
+Se aplicó una reingeniería de interfaz orientada a resolver las inconsistencias visuales del final de página (Footer) implementando una arquitectura dual: Mega Footer para la vista del Home, y Mini Footer para vistas secundarias.
+
+### 1. Estandarización de Diseño Dual
+- **Eliminación de Redundancias**: Se retiró el "Mega Footer" (cúmulo de mapas de sitio y texto descriptivo) de `about_us.html` reemplazándolo por el "Mini Footer" moderno (con logo minimalista y 3 enlaces) estandarizándolo en alineación con `services.html`, `our_experience.html` y `contact_faq.html`.
+- Se preservaron las texturas de origen para que conservara el tema visual acorde al sistema UI de Tailwind.
+
+### 2. Navegación e Intercepción (Deep Linking y Mapeo JavaScript)
+- **Mega Footer de Home**: Los enlaces mudos que apuntaban a `<a href="javascript:void(0)">` en las secciones "Servicios" y "Compañía" se convirtieron en anclas reales. 
+  - Ingeniería Ambiental redirige a: `services_overview/services.html#tab-1`
+  - Quiénes Somos redirige a: `about_us/about_us.html`
+- **Mini Footer (Icono Correo)**: Reconfiguración del ícono "mail" para evitar un cliente de navegador. Pulsarlo re-dirige limpiamente al formulario central: `../faq/contact_faq.html#tab-1`, abriéndolo.
+- **Scroll Inteligente (Contact_FAQ)**: Si el usuario ya está posicionado en la página de Contacto/FAQ e intenta dar click al icono de mail al fondo, se inyectó una función en el DOM `onclick="..."` que neutraliza la recarga, hace "click" virtual al tab n.º 1, y ejecuta un "Smooth scroll" nativo devolviendo al usuario al área de escritura sin demora asíncrona.
+
+### Listado de Archivos Modificados
+
+- `home.html`
+- `about_us/about_us.html`
+- `services_overview/services.html`
+- `faq/contact_faq.html`
+- `experience_timeline/our_experience.html`
+- `traceability_ui_system.md` (Nuevo registro de arquitectura de Footers)
+
+## Fase 17: Rediseño Premium de la Sección "Proyectos Recientes"
+
+Se refactorizó el bloque de portafolio destacado en la página principal para estar en plena sintonía con la nueva identidad de estética de primer nivel, integrando elementos de diseño avanzado.
+
+### 1. Evolución Estética (Glassmorphism)
+- **Paneles Translúcidos**: Se reemplazó el tradicional degradado oscuro de fondo por paneles de cristal con la técnica *Glassmorphism* (`backdrop-blur-md`, `bg-white/10`, `border-white/20`).
+- **Elevación Compartida**: Se estandarizó el radio de los bordes (`rounded-3xl` / `2rem`) y las sombras de levitación para ser idénticos a las secciones de *Estadísticas* y *Servicios*, dando gran consistencia general.
+- **Tipografía Avanzada**: Inclusión inteligente de efectos `drop-shadow-sm` para asegurar absoluta legibilidad del texto en modo claro y oscuro.
+
+### 2. Micro-Interacciones (UX)
+- **Call-to-Action Dinámico**: Para estimular el CTR (Click-Through Rate), se agregó una flecha animada y encapsulada que reacciona con un desplazamiento (`translate-x`) y un brillo en tono verde primaria (`shadow-[0_0_15px_rgba...]`) resaltando la zona de manera elegante e indicando explícitamente al usuario que el elemento es clickeable.
+- **Transiciones y Overlay**: Implementación de una sutil máscara de opacidad inicial que se desvanece suavemente al posicionarse encima y resalta fuertemente la nitidez del proyecto bajo el cristal interactivo.
+
+### Archivos Modificados e Impactados
+- `home.html`
+- `markdown/proyectos_recientes_home.md` (Análisis UX previo)
+
+## Fase 18: Refinamiento Global de Menús y Navegación UX
+
+Se ejecutó una revisión integral de los menús (escritorio y móvil), botones de llamado a la acción (CTAs) y utilidades en el footer para mejorar la conversión y evitar redundancias visuales en todo el sitio.
+
+### 1. Refinamiento de Menú (Global)
+- **Consistencia de Etiquetado**: Se actualizó el texto "Servicios" a **"Servicios y Cotización"** en todas las páginas (menú principal y menú móvil/flotante) para dejar clara la oferta desde la navegación superior.
+- **Limpieza Visual**: Se ocultaron (mediante comentarios) los botones independientes de "Cotizar" tanto en la cabecera como en el menú móvil, previniendo redundancias con la opción anterior.
+
+### 2. Footer y Redirecciones CTA (Global)
+- **Copiado al Portapapeles**: Se implementó una funcionalidad dinámica de JavaScript en todos los iconos de "Compartir" (`share`) del mini-footer que, al hacer clic, copia la URL de la página actual al portapapeles y notifica al usuario.
+- **Limpieza de Footer**: Se removió el icono de ubicación sobrante en los mini-footers de páginas internas para un acabado más limpio.
+- **Optimización de Conversión**: Se recableó el botón central de "Iniciar Consulta" en `about_us.html` hacia `services_overview/services.html` y el CTA de `our_experience.html` directo a `contact_faq.html`, simplificando los flujos del usuario final.
+
+### Archivos Modificados
+- `home.html`
+- `about_us/about_us.html`
+- `services_overview/services.html`
+- `experience_timeline/our_experience.html`
+- `project_portfolio_gallery/portfolio.html`
+- `faq/contact_faq.html`
+
+## Fase 19: Accesibilidad, Rendimiento, Formulario y SEO Avanzado
+
+Se implementó una serie de optimizaciones técnicas vitales para asegurar el cumplimiento con estándares de producción, mejorando tanto el desempeño para los usuarios finales como para los motores de búsqueda.
+
+### 1. Formulario de Contacto Funcional (FormSubmit)
+- Se actualizó el formulario de `contact_faq.html` para conectarse con `formsubmit.co` hacia la bandeja oficial `legado.ambiental.mx@gmail.com`.
+- Se integró **Validación Avanzada** por JavaScript (Regex para correos y control de longitud mínima).
+- Se implementó un **Loader Interactivo y Bloqueo** sobre el botón al momento del envío para prevenir correos duplicados y mejorar la UX de confirmación.
+
+### 2. Accesibilidad (A11y) y Rendimiento
+- **Aria-Labels**: Se añadieron etiquetas `aria-label` a los elementos interactivos que contenían solo iconos (botón de menú móvil, toggle de modo oscuro) a través de todas las páginas para una accesibilidad óptima con lectores de pantalla.
+- **Micro-Interacción de Carga Global**: Se inyectó un spinner global `<div id="global-loader">` que aparece en lo que procesa el contenido, asegurando que la página se vea pulida sin "parpadeos" del JavaScript.
+
+### 3. SEO Completo (Meta Tags)
+- Se inyectaron metaetiquetas estructuradas de **OpenGraph** y **Twitter Cards** para la página raíz (`index.html`) y página de error (`404.html`), asegurando consistencia en la generación de previsualizaciones.
+
+### Archivos Modificados e Impactados
+- `assets/js/i18n.js` (Lógica Global de Loader)
+- Todos los archivos `.html` (`home.html`, `about_us.html`, `contact_faq.html`, `index.html`, etc.)
+
+## Fase 20: Corrección y Perfeccionamiento de Internacionalización (i18n)
+
+Se solucionaron errores estructurales de sincronización para perfeccionar el cambio instantáneo de idiomas en todo el ecosistema web.
+
+### 1. Refactorización del Generador de Rutas JSON
+- **Resolución de Anidamiento**: El script maestro `i18n.js` (`getValueByPath`) fue reprogramado para resolver un bug estructural originado por llaves anidadas. Ahora es capaz de procesar valores anidados duplicados (ej. buscar `auto_generated.text_057` directamente en la raíz de su categoría).
+- **Traducción Completada en Inglés**: Todos los fragmentos autogenerados en el archivo maestro de configuración fueron auditados y traducidos correctamente de `es-MX` a `en-US`, reteniendo intactos sus contenedores HTML para un rendering seguro.
+
+### 2. Sanitización HTML (Service Grid)
+- Se detectó y eliminó una duplicación de etiquetas `data-i18n` (múltiples llamadas en un solo nodo) en los botones de "Realizar cotización" dentro de `services.html`.
+- Se mapeó el atributo de internacionalización (`data-i18n="auto_generated.text_077"`) de manera uniforme a los 15 botones distribuidos en las diferentes pestañas interactivas, asegurando un switch de idiomas impecable.
+
+### Archivos Modificados
+- `assets/js/i18n.js`
+- `services_overview/services.html`
+
+## Fase 21: Actualización de Contenido y Estandarización de Formato
+
+Se implementaron mejoras en el formato del código fuente y se actualizaron contenidos institucionales y gráficos.
+
+### 1. Limpieza y Estandarización de Código HTML
+- **Remoción de Saltos de Línea**: Se eliminaron los saltos de línea innecesarios dentro de los nodos de texto en todos los archivos HTML (`home.html`, `portfolio.html`, `our_experience.html`, `services.html`, etc.). Esto previene renderizados extraños en navegadores y mantiene un DOM más limpio y legible para los desarrolladores.
+- **Traducciones UI Móvil**: Se agregaron los atributos faltantes `data-i18n` a los botones del menú móvil (menú hamburguesa) para garantizar su integración completa con el ecosistema de traducción.
+
+### 2. Actualización Institucional y Assets
+- **Copyright 2026**: Se actualizó la leyenda legal en el pie de página (footer) de todas las páginas web, transicionando a **"© 2026 Legado Ambiental S.A. de C.V."**.
+- **Nuevos Activos Gráficos**: Se cargaron e integraron al repositorio las nuevas creatividades visuales para servicios (`servicios-legado-ambiental-2026` en formato WebP, PNG y fuente XCF).
+
+### Archivos Modificados
+- Todas las páginas maestras `.html`.
+- Directorio de imágenes de servicios (`assets/images/services/`).
+
+## Fase 22: Actualización de Preguntas Frecuentes, Formularios de Cotización y Revisión de UI Bilingüe
+
+Se realizó una actualización profunda de contenidos dinámicos para incrementar la conversión de clientes y estandarizar la experiencia en ambos idiomas.
+
+### 1. Reingeniería de la Sección FAQ (Preguntas Frecuentes)
+- **Contenido de Alto Valor**: Se sustituyeron 3 preguntas de relleno por 6 consultas técnicas reales basadas en las necesidades del cliente final (ej. Validez DC-3, Retorno de inversión en supervisión ambiental, Creación de departamentos SST).
+- **Mejora UI/UX en Acordeón**: Se asignaron nuevos iconos de la suite `material-symbols-outlined` (`analytics`, `architecture`, `eco`, `workspace_premium`, `description`, `health_and_safety`) acordes al tema de cada pregunta para facilitar el escaneo visual rápido.
+- **Sincronización Bilingüe Estricta**: Las 6 nuevas preguntas fueron dadas de alta en el diccionario `i18n.js` bajo el objeto `contact_page.faq` asegurando la traducción especializada de términos como "OHS" (Seguridad y Salud en el Trabajo) y "DC-3" para la versión `en-US`.
+
+### 2. Optimización de Flujo de Conversión (Leads)
+- **Integración de Google Forms**: Los 15 botones de "Realizar cotización" distribuidos en las tarjetas interactivas de `services.html` ahora dirigen a los formularios dinámicos específicos mediante URLs cortas (`https://forms.gle/...`).
+- **Comportamiento Seguro**: Se añadió el atributo `target="_blank"` a estos botones para abrir los formularios en pestañas separadas y evitar que el usuario pierda la navegación principal.
+
+### 3. Reparación de Vínculos de Idioma (UI Translations)
+- Se corrigió un error crítico de UI en `about_us.html` en la sección "Los Pilares de Nuestra Transformación Ambiental". La etiqueta principal `<h3>` carecía de su atributo traductor, lo que causaba que el texto estuviera quemado en español. Al integrarlo, el texto y su gradiente (gradient text clip) ahora se visualizan perfectamente en inglés ("The Pillars of Our Environmental Transformation").
+
+### Archivos Modificados
+- `faq/contact_faq.html`
+- `assets/js/i18n.js`
+- `services_overview/services.html`
+- `about_us/about_us.html`
+
+## Fase 23: Corrección de Dominio SEO y Archivos de Configuración de Servidor
+
+Se solucionaron errores de indexación para motores de búsqueda y se ajustó la configuración del servidor web Hostinger.
+
+### 1. Actualización de Metaetiquetas y Sitemaps
+- **Corrección de Dominio Base**: Se reemplazó el dominio erróneo `legadoambiental.com` por el dominio correcto `legadoambiental.com.mx` en todas las referencias de metadatos SEO (OpenGraph, Twitter Cards, JSON-LD), URLs canónicas, enlaces `hreflang`, `robots.txt` y `sitemap.xml`.
+- **Prevención de Errores de Rastreo**: Esta actualización crítica evita que Google Search Console se confunda de dominio y rechace la indexación del sitio.
+
+### 2. Configuración de Servidor (Apache/LiteSpeed)
+- **Directiva de Directorio**: Se generó el archivo `.htaccess` en la raíz del proyecto instruyendo al servidor (`DirectoryIndex home.html index.html index.php`) que priorice cargar `home.html` por defecto al visitar la raíz del dominio.
+
+### Archivos Modificados e Impactados
+- `.htaccess` (Nuevo)
+- `robots.txt`
+- `sitemap.xml`
+- `home.html`
+- `about_us/about_us.html`
+- `services_overview/services.html`
+- `project_portfolio_gallery/portfolio.html`
+- `experience_timeline/our_experience.html`
+- `faq/contact_faq.html`
+- `index.html`
+- `markdown/SEO_RECOMMENDATIONS.md`
+
+## Fase 24: Actualización de Enlaces de Formularios de Cotización
+
+Se solucionó un problema de duplicación de enlaces en los botones de "Realizar cotización" dentro de la sección "Ingeniería Ambiental". Anteriormente todos los servicios apuntaban al mismo formulario.
+
+### 1. Corrección de Direccionamiento (Google Forms)
+- Se actualizaron las tarjetas (Cards 1 al 4) para redirigir a los clientes potenciales a su respectivo cuestionario técnico de Google Forms.
+- Se aseguró que los parámetros query solicitados (ej. `?usp=dialog`, `?usp=header`) estuvieran presentes para una experiencia de usuario óptima y limpia.
+
+### Archivos Modificados
+- `services_overview/services.html`

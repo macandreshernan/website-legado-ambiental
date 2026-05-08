@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title data-i18n="services_page.title">Servicios | Legado Ambiental</title>
+    <title data-i18n="services_page.title">Nuestros Servicios Especializados de Ingeniería y Construcción</title>
 
     <!-- Security Headers -->
     <meta http-equiv="Content-Security-Policy"
@@ -31,12 +31,12 @@
     <meta http-equiv="Cache-Control" content="max-age=31536000">
 
     <!-- SEO Canonical & Hreflang -->
-    <link rel="canonical" href="https://www.legadoambiental.com/services_overview/services.html" />
+    <link rel="canonical" href="https://www.legadoambiental.com.mx/services_overview/services.html" />
     <link rel="alternate" hreflang="es-MX"
-        href="https://www.legadoambiental.com/services_overview/services.html?lang=es-MX" />
+        href="https://www.legadoambiental.com.mx/services_overview/services.html?lang=es-MX" />
     <link rel="alternate" hreflang="en-US"
-        href="https://www.legadoambiental.com/services_overview/services.html?lang=en-US" />
-    <link rel="alternate" hreflang="x-default" href="https://www.legadoambiental.com/services_overview/services.html" />
+        href="https://www.legadoambiental.com.mx/services_overview/services.html?lang=en-US" />
+    <link rel="alternate" hreflang="x-default" href="https://www.legadoambiental.com.mx/services_overview/services.html" />
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -44,8 +44,8 @@
       "@context": "https://schema.org",
       "@type": "ConstructionBusiness",
       "name": "Legado Ambiental",
-      "url": "https://www.legadoambiental.com",
-      "image": "https://www.legadoambiental.com/assets/logo.png",
+      "url": "https://www.legadoambiental.com.mx",
+      "image": "https://www.legadoambiental.com.mx/assets/logo.png",
       "description": "Excelencia en construcción civil y desarrollo sostenible.",
       "address": {
         "@type": "PostalAddress",
@@ -69,7 +69,9 @@
         rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <!-- Theme Persistance (Load early to prevent FOUC) -->
@@ -81,40 +83,57 @@
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
     </style>
+    <link rel="icon" type="image/webp" href="../assets/images/logo/logo_final_v2.webp">
 </head>
 
 <body
     class="font-sans bg-background-light dark:bg-background-dark text-[#111418] dark:text-white transition-colors duration-200">
+    <noscript>
+        <div
+            style="background-color: #f8d7da; color: #721c24; padding: 10px; text-align: center; z-index: 9999; position: relative;">
+            Para disfrutar de la experiencia completa y todas las funcionalidades de Legado Ambiental, por favor
+            habilite JavaScript en su navegador.
+        </div>
+    </noscript>
+    <!-- Global Loader -->
+    <div id="global-loader"
+        class="fixed inset-0 z-[99999] flex items-center justify-center bg-white dark:bg-[#121c27] transition-opacity duration-700">
+        <div class="relative flex flex-col items-center">
+            <img src="../assets/images/logo/logo_final_v2.webp" alt="Cargando Legado Ambiental"
+                class="h-20 w-auto mb-4 animate-pulse opacity-80">
+            <div class="w-12 h-12 border-4 border-primary/30 border-t-primary rounded-full animate-spin"></div>
+        </div>
+    </div>
     <div class="relative flex min-h-screen w-full flex-col">
         <!-- Top Navigation Bar (Sticky Optimized) -->
         <header
-            class="sticky top-0 z-50 w-full bg-white/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800 shadow-sm transition-all duration-300">
+            class="sticky top-4 z-50 w-[calc(100%-2rem)] max-w-[1200px] mx-auto bg-white/85 dark:bg-[#121c27]/80 backdrop-blur-xl border border-gray-100 dark:border-white/10 rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-all duration-300">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex justify-between items-center h-20">
                     <div class="flex items-center gap-3">
-                        <img src="../assets/images/logo_gral4_v1.1.png" alt="Legado Ambiental"
+                        <img src="../assets/images/logo/logo_final_v2.webp" alt="Legado Ambiental"
                             class="h-16 w-auto object-contain">
-                        <span class="text-navy dark:text-white text-xl font-black tracking-tight uppercase">Legado
+                        <span class="text-navy dark:text-white text-xl font-black tracking-tight uppercase"
+                            data-i18n="auto_generated.text_072">Legado
                             Ambiental</span>
                     </div>
                     <nav class="hidden md:flex items-center gap-8" aria-label="Main navigation">
-                        <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:text-primary transition-colors"
+                        <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors"
                             href="../home.html" data-i18n="nav.home">Inicio</a>
-                        <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:text-primary transition-colors"
+                        <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors"
                             href="../about_us/about_us.html" data-i18n="nav.about">Quiénes Somos</a>
-                        <a class="text-primary text-sm font-bold border-b-2 border-primary pb-1" href="#"
-                            data-i18n="nav.services">Servicios</a>
-                        <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:text-primary transition-colors"
-                            href="../project_portfolio_gallery/portfolio.html" data-i18n="nav.portfolio">Portafolio</a>
-                        <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:text-primary transition-colors"
+                        <a class="bg-primary/10 text-primary text-sm font-bold rounded-xl px-4 py-2 transition-all"
+                            href="#" data-i18n="nav.services">Servicios y Cotización</a>
+                        <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors"
                             href="../experience_timeline/our_experience.html" data-i18n="nav.experience">Experiencia</a>
-                        <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:text-primary transition-colors"
+                        <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors"
                             href="../faq/contact_faq.html" data-i18n="nav.contact">Contacto</a>
                     </nav>
                     <div class="hidden md:flex items-center gap-4">
                         <!-- Theme Toggle -->
-                        <button onclick="window.toggleDarkMode()" aria-label="Toggle Dark Mode"
-                            class="theme-toggle-btn text-navy dark:text-gray-300 hover:text-primary transition-colors flex items-center justify-center p-1 rounded-full bg-gray-100 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary">
+                        <button data-action="toggle-theme" aria-label="Toggle Dark Mode"
+                            class="theme-toggle-btn text-navy dark:text-gray-300 hover:text-primary transition-colors flex items-center justify-center p-1 rounded-full bg-gray-100 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary"
+                            data-i18n="auto_generated.text_155">
                             <span class="material-symbols-outlined text-[1.2rem]">dark_mode</span>
                         </button>
                         <div class="flex items-center gap-2 mr-4">
@@ -124,112 +143,148 @@
                             <button class="text-sm font-semibold hover:text-primary transition-colors"
                                 data-switch-lang="en-US">EN</button>
                         </div>
-                        <button
-                            class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-lg text-sm font-bold tracking-wide transition-all shadow-md focus:ring-2 focus:ring-primary focus:ring-offset-2"
-                            data-i18n="nav.quote">
-                            Cotizar
-                        </button>
                     </div>
 
                     <!-- Mobile Menu Button -->
-                    <button id="mobile-menu-btn"
-                        class="md:hidden text-navy dark:text-white p-2 hover:text-primary transition-colors">
+                    <button id="mobile-menu-btn" aria-label="Abrir menú móvil"
+                        class="md:hidden text-navy dark:text-white p-2 hover:text-primary transition-colors"
+                        data-i18n="auto_generated.text_156">
                         <span class="material-symbols-outlined text-3xl">menu</span>
                     </button>
                 </div>
 
                 <!-- Mobile Navigation Menu -->
                 <div id="mobile-menu"
-                    class="md:hidden absolute top-20 left-0 w-full bg-white dark:bg-background-dark border-b border-gray-200 dark:border-gray-800 shadow-xl py-4 px-4 flex-col gap-4 transform transition-all duration-300 origin-top opacity-0 scale-y-0 pointer-events-none flex">
-                    <a class="text-navy dark:text-gray-300 text-base font-semibold hover:text-primary transition-colors py-2 border-b border-gray-100 dark:border-gray-800"
+                    class="max-h-[calc(100vh-6rem)] overflow-y-auto md:hidden absolute top-24 left-0 w-full bg-white/95 dark:bg-[#121c27]/95 backdrop-blur-xl rounded-2xl border border-gray-100 dark:border-white/10 shadow-2xl py-4 px-4 flex-col gap-2 transform transition-all duration-300 origin-top opacity-0 scale-y-0 pointer-events-none flex">
+                    <a class="text-navy dark:text-gray-300 text-base font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-3 transition-colors"
                         href="../home.html" data-i18n="nav.home">Inicio</a>
-                    <a class="text-navy dark:text-gray-300 text-base font-semibold hover:text-primary transition-colors py-2 border-b border-gray-100 dark:border-gray-800"
+                    <a class="text-navy dark:text-gray-300 text-base font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-3 transition-colors"
                         href="../about_us/about_us.html" data-i18n="nav.about">Quiénes Somos</a>
-                    <a class="text-primary text-base font-bold bg-primary/10 rounded-md px-2 py-2 border-b border-gray-100 dark:border-gray-800"
-                        href="../services_overview/services.html" data-i18n="nav.services">Servicios</a>
-                    <a class="text-navy dark:text-gray-300 text-base font-semibold hover:text-primary transition-colors py-2 border-b border-gray-100 dark:border-gray-800"
-                        href="../project_portfolio_gallery/portfolio.html" data-i18n="nav.portfolio">Portafolio</a>
-                    <a class="text-navy dark:text-gray-300 text-base font-semibold hover:text-primary transition-colors py-2 border-b border-gray-100 dark:border-gray-800"
+                    <a class="text-primary text-base font-bold bg-primary/10 rounded-xl px-4 py-3"
+                        href="../services_overview/services.html" data-i18n="nav.services">Servicios y Cotización</a>
+                    <a class="text-navy dark:text-gray-300 text-base font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-3 transition-colors"
                         href="../experience_timeline/our_experience.html" data-i18n="nav.experience">Experiencia</a>
-                    <a class="text-navy dark:text-gray-300 text-base font-semibold hover:text-primary transition-colors py-2 mb-2"
+                    <a class="text-navy dark:text-gray-300 text-base font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-3 transition-colors"
                         href="../faq/contact_faq.html" data-i18n="nav.contact">Contacto</a>
 
                     <!-- Mobile Theme Toggle -->
-                    <button onclick="window.toggleDarkMode()"
+                    <button data-action="toggle-theme" aria-label="Toggle Dark Mode"
                         class="theme-toggle-btn flex items-center gap-2 text-left text-navy dark:text-gray-300 py-2 border-b border-gray-100 dark:border-gray-800">
                         <span class="material-symbols-outlined text-lg">dark_mode</span>
                         <span data-i18n="nav.theme" class="text-base font-semibold">Cambiar Tema</span>
                     </button>
 
-                    <button
-                        class="w-full bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg text-sm font-bold tracking-wide transition-all" data-i18n="nav.quote">
-                        Cotizar
-                    </button>
                 </div>
             </div>
         </header>
         <main class="flex-1 flex flex-col items-center">
-            <div class="w-full max-w-[1200px] px-4 md:px-10 pt-6">
-                <nav class="flex" aria-label="Breadcrumb">
-                    <ol class="inline-flex items-center space-x-1 md:space-x-3">
-                        <li class="inline-flex items-center">
-                            <a href="../home.html"
-                                class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-primary dark:text-gray-400 dark:hover:text-white">
-                                <span class="material-symbols-outlined text-lg mr-2">home</span>
-                                Inicio
-                            </a>
-                        </li>
-                        <li aria-current="page">
-                            <div class="flex items-center">
-                                <span class="material-symbols-outlined text-gray-400 mx-1">chevron_right</span>
-                                <span
-                                    class="ml-1 text-sm font-medium text-gray-500 md:ml-2 dark:text-gray-400">Servicios</span>
-                            </div>
-                        </li>
-                    </ol>
-                </nav>
-            </div>
-            <!-- Hero Header Section -->
-            <div class="w-full max-w-[1200px] px-4 md:px-10 py-12 md:py-20">
+            <!-- Hero Section con Efecto Hover Dinámico y Glassmorphism -->
+            <section class="w-full max-w-[1200px] mx-auto pt-6 px-4">
                 <div class="@container">
-                    <div class="flex flex-col gap-6 text-center max-w-3xl mx-auto">
-                        <h1 class="text-[#111418] dark:text-white text-4xl font-black leading-tight tracking-tight md:text-5xl"
-                            data-i18n="services_page.title">
-                            Nuestros Servicios Especializados de Ingeniería y Construcción
-                        </h1>
-                        <p class="text-gray-600 dark:text-gray-400 text-base md:text-lg leading-relaxed"
-                            data-i18n="services_page.hero_desc">
-                            Ofrecemos soluciones de infraestructura y construcción sostenible adaptadas tanto para la
-                            iniciativa privada como para iniciativas gubernamentales en la región.
-                        </p>
+                    <div class="group relative flex flex-col justify-end overflow-hidden rounded-xl min-h-[450px] shadow-2xl transition-all duration-700 cursor-default"
+                        style="background-color: #101922;">
+                        <!-- Background Image -->
+                        <div class="absolute inset-0 z-0 bg-cover bg-right-top origin-top-right transition-all duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] transform scale-105 opacity-85 group-hover:opacity-100 group-hover:scale-100"
+                            style="background-image: url('../assets/images/services/servicios-legado-ambiental-2026.webp');">
+                        </div>
+
+                        <!-- Gradiente de fondo suavizado -->
+                        <div
+                            class="absolute inset-0 z-0 bg-gradient-to-t from-[#101922]/50 via-[#101922]/10 to-transparent transition-opacity duration-1000 opacity-100 pointer-events-none">
+                        </div>
+
+                        <!-- Glassmorphism Text Container -->
+                        <div
+                            class="relative z-10 p-8 md:p-12 md:pb-16 max-w-4xl self-start md:ml-8 mb-4 bg-[#101922]/40 backdrop-blur-md border border-white/10 rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.5)] transition-all duration-700 ease-in-out group-hover:bg-[#101922]/70 group-hover:border-primary/40 group-hover:backdrop-blur-xl transform translate-y-2 group-hover:translate-y-0">
+
+                            <nav class="flex mb-6" aria-label="Breadcrumb">
+                                <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                                    <li class="inline-flex items-center">
+                                        <a href="../home.html"
+                                            class="inline-flex items-center text-sm font-medium text-gray-300 hover:text-white transition-colors">
+                                            <span class="material-symbols-outlined text-lg mr-2">home</span>
+                                            <span data-i18n="nav.home">Inicio</span>
+                                        </a>
+                                    </li>
+                                    <li aria-current="page">
+                                        <div class="flex items-center">
+                                            <span
+                                                class="material-symbols-outlined text-gray-400 mx-1">chevron_right</span>
+                                            <span class="ml-1 text-sm font-medium text-primary"
+                                                data-i18n="nav.services">Servicios y Cotización</span>
+                                        </div>
+                                    </li>
+                                </ol>
+                            </nav>
+
+                            <h1 class="text-white text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-black leading-tight tracking-tight mb-4 drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]"
+                                data-i18n="services_page.title">Nuestros Servicios Especializados de Ingeniería y
+                                Construcción</h1>
+                            <div
+                                class="w-16 h-1 bg-primary mb-4 transition-all duration-700 group-hover:w-32 group-hover:bg-blue-400 rounded-full">
+                            </div>
+                            <p class="text-blue-50 text-lg max-w-2xl font-medium drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]"
+                                data-i18n="services_page.hero_desc">Ofrecemos soluciones de infraestructura y
+                                construcción sostenible adaptadas tanto para la iniciativa privada como para iniciativas
+                                gubernamentales en la región.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Methodology Showcase Section -->
+            <div class="w-full max-w-[1200px] mx-auto px-4 md:px-10 mt-12 md:mt-16 relative z-20">
+                <div
+                    class="bg-white dark:bg-[#121c27] rounded-3xl p-6 md:p-10 shadow-[0_10px_40px_rgba(0,0,0,0.06)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.3)] border border-slate-100 dark:border-white/5 overflow-hidden relative group">
+                    <div
+                        class="absolute -top-20 -right-20 w-64 h-64 bg-primary/10 dark:bg-primary/20 rounded-full blur-[60px] pointer-events-none z-0 transition-transform duration-700 group-hover:scale-125">
+                    </div>
+                    <div
+                        class="absolute -bottom-20 -left-20 w-64 h-64 bg-emerald-500/5 dark:bg-emerald-500/10 rounded-full blur-[60px] pointer-events-none z-0 transition-transform duration-700 group-hover:scale-125">
+                    </div>
+
+                    <div class="relative z-10 flex flex-col items-center mb-8">
+                        <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2"
+                            data-i18n="services_page.methodology.subtitle">Proceso Ejecutivo</span>
+                        <h2 class="text-3xl md:text-4xl font-black text-[#111418] dark:text-white text-center"
+                            data-i18n="services_page.methodology.title">Nuestra Metodología Estratégica</h2>
+                        <div
+                            class="w-20 h-1 bg-primary mt-4 rounded-full transition-all duration-500 group-hover:w-32 group-hover:bg-blue-400">
+                        </div>
+                    </div>
+
+                    <div
+                        class="relative z-10 w-full flex justify-center bg-slate-50 dark:bg-[#1a2530] rounded-2xl p-4 md:p-10 border border-slate-200 dark:border-gray-800 shadow-inner">
+                        <img src="../assets/images/services/metodologia-estructurada-legado-2026.webp"
+                            alt="Metodología Estratégica de Legado Ambiental"
+                            class="w-full max-w-5xl h-auto object-contain drop-shadow-xl rounded-xl transition-transform duration-700 hover:scale-[1.02]">
                     </div>
                 </div>
             </div>
+
             <!-- Tabs Section -->
-            <div class="w-full max-w-[1200px] px-4 md:px-10">
-                <div class="flex border-b border-[#dbe0e6] dark:border-gray-800 gap-8 overflow-x-auto no-scrollbar">
-                    <button id="tab-btn-1" onclick="switchTab(1)"
-                        class="tab-btn flex flex-col items-center justify-center border-b-[3px] border-primary text-primary pb-3 pt-4 transition-colors whitespace-nowrap focus:outline-none">
+            <div class="w-full max-w-[1200px] mx-auto px-4 md:px-10 mt-12 md:mt-16 mb-8 relative z-20">
+                <div
+                    class="bg-gray-50/80 dark:bg-[#1a2530]/80 backdrop-blur-md rounded-2xl p-2 border border-gray-100 dark:border-gray-800 shadow-sm flex gap-2 overflow-x-auto no-scrollbar">
+                    <button id="tab-btn-1" data-tab="1"
+                        class="tab-btn flex flex-col items-center justify-center rounded-xl px-6 py-3 bg-primary text-white shadow-[0_4px_16px_rgba(16,185,129,0.30)] transition-all duration-300 whitespace-nowrap focus:outline-none">
                         <p class="text-sm font-bold tracking-wide" data-i18n="services_page.tabs.engeneering">Ingeniería
                             Ambiental</p>
                     </button>
-                    <button id="tab-btn-2" onclick="switchTab(2)"
-                        class="tab-btn flex flex-col items-center justify-center border-b-[3px] border-transparent text-[#617589] dark:text-gray-400 hover:text-primary pb-3 pt-4 transition-colors whitespace-nowrap focus:outline-none">
-                        <p class="text-sm font-bold tracking-wide" data-i18n="services_page.tabs.private.building">
-                            Construcción
+                    <button id="tab-btn-2" data-tab="2"
+                        class="tab-btn flex flex-col items-center justify-center rounded-xl px-6 py-3 text-[#617589] dark:text-gray-400 hover:text-[#111418] dark:hover:text-white hover:bg-gray-200 dark:hover:bg-[#253240] transition-all duration-300 whitespace-nowrap focus:outline-none">
+                        <p class="text-sm font-bold tracking-wide" data-i18n="services_page.tabs.building">Construcción
                         </p>
                     </button>
-                    <button id="tab-btn-3" onclick="switchTab(3)"
-                        class="tab-btn flex flex-col items-center justify-center border-b-[3px] border-transparent text-[#617589] dark:text-gray-400 hover:text-primary pb-3 pt-4 transition-colors whitespace-nowrap focus:outline-none">
-                        <p class="text-sm font-bold tracking-wide" data-i18n="services_page.tabs.public.topography">
-                            Topografía
+                    <button id="tab-btn-3" data-tab="3"
+                        class="tab-btn flex flex-col items-center justify-center rounded-xl px-6 py-3 text-[#617589] dark:text-gray-400 hover:text-[#111418] dark:hover:text-white hover:bg-gray-200 dark:hover:bg-[#253240] transition-all duration-300 whitespace-nowrap focus:outline-none">
+                        <p class="text-sm font-bold tracking-wide" data-i18n="services_page.tabs.topography">Topografía
                         </p>
                     </button>
-                    <button id="tab-btn-4" onclick="switchTab(4)"
-                        class="tab-btn flex flex-col items-center justify-center border-b-[3px] border-transparent text-[#617589] dark:text-gray-400 hover:text-primary pb-3 pt-4 transition-colors whitespace-nowrap focus:outline-none">
+                    <button id="tab-btn-4" data-tab="4"
+                        class="tab-btn flex flex-col items-center justify-center rounded-xl px-6 py-3 text-[#617589] dark:text-gray-400 hover:text-[#111418] dark:hover:text-white hover:bg-gray-200 dark:hover:bg-[#253240] transition-all duration-300 whitespace-nowrap focus:outline-none">
                         <p class="text-sm font-bold tracking-wide" data-i18n="services_page.tabs.safety">Seguridad e
-                            Higiene
-                        </p>
+                            Higiene</p>
                     </button>
                 </div>
             </div>
@@ -241,26 +296,63 @@
                     class="tab-section grid grid-cols-1 md:grid-cols-2 gap-8 transition-opacity duration-300 opacity-100">
                     <!-- Service 1: Gestión Integral de Residuos (Sólidos y Peligrosos) -->
                     <div
-                        class="group relative bg-white dark:bg-[#1a2530] rounded-xl overflow-hidden shadow-sm border border-[#e5e7eb] dark:border-gray-800 hover:shadow-xl transition-all duration-300">
+                        class="group relative bg-white dark:bg-[#121c27] rounded-3xl overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.06)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.3)] border border-slate-100 dark:border-white/5 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] transition-all duration-500">
                         <div
-                            class="absolute top-0 right-0 w-32 h-32 bg-gray-50 dark:bg-gray-800 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150 group-hover:bg-primary/10">
+                            class="absolute -top-20 -right-20 w-48 h-48 bg-primary/10 dark:bg-primary/20 rounded-full blur-[50px] group-hover:scale-150 transition-transform duration-700 pointer-events-none">
                         </div>
                         <div class="p-8 flex flex-col h-full relative z-10">
                             <div
-                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white group-hover:rotate-6 group-hover:scale-110 shadow-sm border border-primary/10 transition-all duration-500">
                                 <span class="material-symbols-outlined text-3xl">delete_sweep</span>
                             </div>
-                            <h3
-                                class="text-xl font-bold text-[#111418] dark:text-white mb-3 font-serif group-hover:text-primary transition-colors">
+                            <h3 class="text-xl font-bold text-[#111418] dark:text-white mb-3 font-serif group-hover:text-primary transition-colors"
+                                data-i18n="auto_generated.text_057">
                                 Gestión Integral de Residuos (Sólidos y Peligrosos)
                             </h3>
-                            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6 flex-1 font-sans">
-                                Soluciones integrales para la recolección, transporte y disposición final de residuos
-                                industriales y urbanos.
+                            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-3 font-sans"
+                                data-i18n="auto_generated.text_046">
+                                Esta categoría agrupa el análisis técnico y la planeación operativa para todo tipo de
+                                desechos.
                             </p>
+                            <ul
+                                class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6 flex-1 font-sans space-y-2 list-none">
+                                <li class="flex items-start gap-2">
+                                    <span
+                                        class="material-symbols-outlined text-primary text-[1rem] mt-0.5">check_circle</span>
+                                    <span data-i18n="auto_generated.text_073"><strong>Diagnóstico y Caracterización:
+                                        </strong> Estudios de caracterización
+                                        de residuos sólidos, diagnósticos y muestreo.
+                                    </span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span
+                                        class="material-symbols-outlined text-primary text-[1rem] mt-0.5">check_circle</span>
+                                    <span data-i18n="auto_generated.text_074"><strong>Planes de Manejo:</strong>
+                                        Elaboración de planes de manejo integral
+                                        para residuos sólidos
+                                        y peligrosos, incluyendo clasificación y seguimiento.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span
+                                        class="material-symbols-outlined text-primary text-[1rem] mt-0.5">check_circle</span>
+                                    <span data-i18n="auto_generated.text_075"><strong>Logística y
+                                            Recolección:</strong>Estudio y
+                                        optimización de rutas y métodos de recolección.
+                                    </span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span
+                                        class="material-symbols-outlined text-primary text-[1rem] mt-0.5">check_circle</span>
+                                    <span data-i18n="auto_generated.text_076"><strong>Infraestructura:</strong>Proyectos
+                                        para rellenos sanitarios,
+                                        tratamiento de residuos orgánicos y obras para el manejo de residuos peligrosos.
+                                    </span>
+                                </li>
+                            </ul>
                             <button
+                                onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSeyHxbooOkctNB5qK64tCguD4sAL2UOsUxGTRLN1ObFT38DAw/viewform?usp=dialog', '_blank')"
                                 class="flex items-center justify-center gap-2 w-full py-3 bg-primary/10 dark:bg-primary/20 text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-all focus:ring-2 focus:ring-primary focus:ring-offset-2">
-                                <span>Realizar cotización</span> <span
+                                <span data-i18n="auto_generated.text_077">Realizar cotización</span> <span
                                     class="material-symbols-outlined text-[18px]">arrow_forward</span>
                             </button>
                         </div>
@@ -268,26 +360,51 @@
 
                     <!-- Service 2: Ingeniería Hídrica y Soluciones de Agua -->
                     <div
-                        class="group relative bg-white dark:bg-[#1a2530] rounded-xl overflow-hidden shadow-sm border border-[#e5e7eb] dark:border-gray-800 hover:shadow-xl transition-all duration-300">
+                        class="group relative bg-white dark:bg-[#121c27] rounded-3xl overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.06)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.3)] border border-slate-100 dark:border-white/5 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] transition-all duration-500">
                         <div
-                            class="absolute top-0 right-0 w-32 h-32 bg-gray-50 dark:bg-gray-800 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150 group-hover:bg-primary/10">
+                            class="absolute -top-20 -right-20 w-48 h-48 bg-primary/10 dark:bg-primary/20 rounded-full blur-[50px] group-hover:scale-150 transition-transform duration-700 pointer-events-none">
                         </div>
                         <div class="p-8 flex flex-col h-full relative z-10">
                             <div
-                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white group-hover:rotate-6 group-hover:scale-110 shadow-sm border border-primary/10 transition-all duration-500">
                                 <span class="material-symbols-outlined text-3xl">water_drop</span>
                             </div>
-                            <h3
-                                class="text-xl font-bold text-[#111418] dark:text-white mb-3 font-serif group-hover:text-primary transition-colors">
+                            <h3 class="text-xl font-bold text-[#111418] dark:text-white mb-3 font-serif group-hover:text-primary transition-colors"
+                                data-i18n="auto_generated.text_058">
                                 Ingeniería Hídrica y Soluciones de Agua
                             </h3>
-                            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6 flex-1 font-sans">
-                                Diseño e implementación de plantas de tratamiento y sistemas de purificación para
-                                recuperación de recursos hídricos.
+                            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-3 font-sans"
+                                data-i18n="auto_generated.text_047">
+                                Enfocada en la infraestructura y el aprovechamiento eficiente del recurso hídrico.
                             </p>
+                            <ul
+                                class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6 flex-1 font-sans space-y-2 list-none">
+                                <li class="flex items-start gap-2">
+                                    <span
+                                        class="material-symbols-outlined text-primary text-[1rem] mt-0.5">check_circle</span>
+                                    <span data-i18n="auto_generated.text_078"><strong>Tratamiento de Aguas:</strong>
+                                        Diseño, construcción y supervisión de
+                                        plantas de tratamiento de aguas residuales.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span
+                                        class="material-symbols-outlined text-primary text-[1rem] mt-0.5">check_circle</span>
+                                    <span data-i18n="auto_generated.text_079"><strong>Sustentabilidad Hídrica:</strong>
+                                        Sistemas alternativos de reciclaje o
+                                        reutilización, programas de ahorro de agua y estudios técnicos de ahorro.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span
+                                        class="material-symbols-outlined text-primary text-[1rem] mt-0.5">check_circle</span>
+                                    <span data-i18n="auto_generated.text_080"><strong>Análisis Especializado:</strong>
+                                        Estudios hidrometeorológicos para
+                                        planeación y prevención.</span>
+                                </li>
+                            </ul>
                             <button
+                                onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSeb9ZmXqIgq_1zyhvGL3UToXcMSs2VYLiMXbOEzEMtAqL1u2Q/viewform?usp=dialog', '_blank')"
                                 class="flex items-center justify-center gap-2 w-full py-3 bg-primary/10 dark:bg-primary/20 text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-all focus:ring-2 focus:ring-primary focus:ring-offset-2">
-                                <span>Conocer Más</span> <span
+                                <span data-i18n="auto_generated.text_077">Realizar cotización</span> <span
                                     class="material-symbols-outlined text-[18px]">arrow_forward</span>
                             </button>
                         </div>
@@ -295,26 +412,45 @@
 
                     <!-- Service 3: Consultoría, Dictámenes y Cumplimiento Legal -->
                     <div
-                        class="group relative bg-white dark:bg-[#1a2530] rounded-xl overflow-hidden shadow-sm border border-[#e5e7eb] dark:border-gray-800 hover:shadow-xl transition-all duration-300">
+                        class="group relative bg-white dark:bg-[#121c27] rounded-3xl overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.06)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.3)] border border-slate-100 dark:border-white/5 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] transition-all duration-500">
                         <div
-                            class="absolute top-0 right-0 w-32 h-32 bg-gray-50 dark:bg-gray-800 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150 group-hover:bg-primary/10">
+                            class="absolute -top-20 -right-20 w-48 h-48 bg-primary/10 dark:bg-primary/20 rounded-full blur-[50px] group-hover:scale-150 transition-transform duration-700 pointer-events-none">
                         </div>
                         <div class="p-8 flex flex-col h-full relative z-10">
                             <div
-                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white group-hover:rotate-6 group-hover:scale-110 shadow-sm border border-primary/10 transition-all duration-500">
                                 <span class="material-symbols-outlined text-3xl">balance</span>
                             </div>
-                            <h3
-                                class="text-xl font-bold text-[#111418] dark:text-white mb-3 font-serif group-hover:text-primary transition-colors">
+                            <h3 class="text-xl font-bold text-[#111418] dark:text-white mb-3 font-serif group-hover:text-primary transition-colors"
+                                data-i18n="auto_generated.text_059">
                                 Consultoría, Dictámenes y Cumplimiento Legal
                             </h3>
-                            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6 flex-1 font-sans">
-                                Asesoría especializada en normativa ambiental, estudios de impacto y optimización de
-                                procesos sostenibles.
+                            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6 flex-1 font-sans"
+                                data-i18n="auto_generated.text_048">
+                                Servicios clave para asegurar que las empresas cumplan con la normativa ambiental
+                                vigente.
                             </p>
+                            <ul
+                                class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6 flex-1 font-sans space-y-2 list-none">
+                                <li class="flex items-start gap-2">
+                                    <span
+                                        class="material-symbols-outlined text-primary text-[1rem] mt-0.5">check_circle</span>
+                                    <span data-i18n="auto_generated.text_082"><strong>Evaluaciones de Impacto:</strong>
+                                        Estudios de impacto ambiental
+                                        (EsIA), diagnósticos y evaluaciones ambientales preventivas.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span
+                                        class="material-symbols-outlined text-primary text-[1rem] mt-0.5">check_circle</span>
+                                    <span data-i18n="auto_generated.text_083"><strong>Documentación Oficial:</strong>
+                                        Elaboración de informes técnicos y
+                                        dictámenes ambientales con validez legal.</span>
+                                </li>
+                            </ul>
                             <button
+                                onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSegJjfgTGuOipBaSfXaWE7-IXFyugz6eYJkYsT8yf7fE14XoQ/viewform?usp=header', '_blank')"
                                 class="flex items-center justify-center gap-2 w-full py-3 bg-primary/10 dark:bg-primary/20 text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-all focus:ring-2 focus:ring-primary focus:ring-offset-2">
-                                <span>Conocer Más</span> <span
+                                <span data-i18n="auto_generated.text_077">Realizar cotización</span> <span
                                     class="material-symbols-outlined text-[18px]">arrow_forward</span>
                             </button>
                         </div>
@@ -322,26 +458,37 @@
 
                     <!-- Service 4: Fortalecimiento de Capacidades -->
                     <div
-                        class="group relative bg-white dark:bg-[#1a2530] rounded-xl overflow-hidden shadow-sm border border-[#e5e7eb] dark:border-gray-800 hover:shadow-xl transition-all duration-300">
+                        class="group relative bg-white dark:bg-[#121c27] rounded-3xl overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.06)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.3)] border border-slate-100 dark:border-white/5 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] transition-all duration-500">
                         <div
-                            class="absolute top-0 right-0 w-32 h-32 bg-gray-50 dark:bg-gray-800 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150 group-hover:bg-primary/10">
+                            class="absolute -top-20 -right-20 w-48 h-48 bg-primary/10 dark:bg-primary/20 rounded-full blur-[50px] group-hover:scale-150 transition-transform duration-700 pointer-events-none">
                         </div>
                         <div class="p-8 flex flex-col h-full relative z-10">
                             <div
-                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white group-hover:rotate-6 group-hover:scale-110 shadow-sm border border-primary/10 transition-all duration-500">
                                 <span class="material-symbols-outlined text-3xl">school</span>
                             </div>
-                            <h3
-                                class="text-xl font-bold text-[#111418] dark:text-white mb-3 font-serif group-hover:text-primary transition-colors">
+                            <h3 class="text-xl font-bold text-[#111418] dark:text-white mb-3 font-serif group-hover:text-primary transition-colors"
+                                data-i18n="auto_generated.text_060">
                                 Fortalecimiento de Capacidades
                             </h3>
-                            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6 flex-1 font-sans">
-                                Programas de educación y talleres diseñados para desarrollar competencias técnicas y de
-                                gestión en materia de sostenibilidad.
+                            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-3 font-sans"
+                                data-i18n="auto_generated.text_049">
+                                Servicios educativos para empresas o entidades gubernamentales.
                             </p>
+                            <ul
+                                class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6 flex-1 font-sans space-y-2 list-none">
+                                <li class="flex items-start gap-2">
+                                    <span
+                                        class="material-symbols-outlined text-primary text-[1rem] mt-0.5">check_circle</span>
+                                    <span data-i18n="auto_generated.text_085"><strong>Capacitación:</strong> Cursos,
+                                        talleres y programas de formación en
+                                        temas ambientales.</span>
+                                </li>
+                            </ul>
                             <button
+                                onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSeSA7CxG2Jp6BY-1lpQnscp3n2AnRnNnSBv9tJ4tBmliuzLmQ/viewform?usp=dialog', '_blank')"
                                 class="flex items-center justify-center gap-2 w-full py-3 bg-primary/10 dark:bg-primary/20 text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-all focus:ring-2 focus:ring-primary focus:ring-offset-2">
-                                <span>Conocer Más</span> <span
+                                <span data-i18n="auto_generated.text_077">Realizar cotización</span> <span
                                     class="material-symbols-outlined text-[18px]">arrow_forward</span>
                             </button>
                         </div>
@@ -352,100 +499,185 @@
                 <div id="tab-section-2"
                     class="tab-section hidden grid-cols-1 md:grid-cols-2 gap-8 transition-opacity duration-300 opacity-0">
                     <div
-                        class="group relative bg-white dark:bg-[#1a2530] rounded-xl overflow-hidden shadow-sm border border-[#e5e7eb] dark:border-gray-800 hover:shadow-xl transition-all duration-300">
+                        class="group relative bg-white dark:bg-[#121c27] rounded-3xl overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.06)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.3)] border border-slate-100 dark:border-white/5 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] transition-all duration-500">
                         <div
-                            class="absolute top-0 right-0 w-32 h-32 bg-gray-50 dark:bg-gray-800 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150 group-hover:bg-primary/10">
+                            class="absolute -top-20 -right-20 w-48 h-48 bg-primary/10 dark:bg-primary/20 rounded-full blur-[50px] group-hover:scale-150 transition-transform duration-700 pointer-events-none">
                         </div>
                         <div class="p-8 flex flex-col h-full relative z-10">
                             <div
-                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white group-hover:rotate-6 group-hover:scale-110 shadow-sm border border-primary/10 transition-all duration-500">
                                 <span class="material-symbols-outlined text-3xl">house</span>
                             </div>
-                            <h3
-                                class="text-xl font-bold text-[#111418] dark:text-white mb-3 font-serif group-hover:text-primary transition-colors">
+                            <h3 class="text-xl font-bold text-[#111418] dark:text-white mb-3 font-serif group-hover:text-primary transition-colors"
+                                data-i18n="auto_generated.text_061">
                                 Edificación Residencial y Vivienda
                             </h3>
-                            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6 flex-1 font-sans">
-                                Diseño e implementación de proyectos residenciales centrados en funcionalidad y economía
-                                habitacional.
+                            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6 flex-1 font-sans"
+                                data-i18n="auto_generated.text_050">
+                                Desarrollamos espacios habitables con altos estándares de diseño y funcionalidad.
                             </p>
-                            <button
+                            <ul
+                                class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6 flex-1 font-sans space-y-2 list-none">
+                                <li class="flex items-start gap-2">
+                                    <span
+                                        class="material-symbols-outlined text-primary text-[1rem] mt-0.5">check_circle</span>
+                                    <span data-i18n="auto_generated.text_087"><strong>Vivienda Unifamiliar:</strong>
+                                        Construcción de casas personalizadas y
+                                        residencias de alto nivel.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span
+                                        class="material-symbols-outlined text-primary text-[1rem] mt-0.5">check_circle</span>
+                                    <span data-i18n="auto_generated.text_088"><strong>Vivienda Multifamiliar:</strong>
+                                        Desarrollo de complejos de
+                                        departamentos, edificios residenciales y desarrollos habitacionales.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span
+                                        class="material-symbols-outlined text-primary text-[1rem] mt-0.5">check_circle</span>
+                                    <span data-i18n="auto_generated.text_089"><strong>Proyectos Llave en Mano: </strong>
+                                        Gestión total desde la cimentación
+                                        hasta los acabados finales.</span>
+                                </li>
+                            </ul>
+                            <button onclick="window.open('https://forms.gle/DLcXPgHsbHxToExQ7', '_blank')"
                                 class="flex items-center justify-center gap-2 w-full py-3 bg-primary/10 dark:bg-primary/20 text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-all focus:ring-2 focus:ring-primary focus:ring-offset-2">
-                                <span>Conocer Más</span> <span
+                                <span data-i18n="auto_generated.text_077">Realizar cotización</span> <span
                                     class="material-symbols-outlined text-[18px]">arrow_forward</span>
                             </button>
                         </div>
                     </div>
                     <div
-                        class="group relative bg-white dark:bg-[#1a2530] rounded-xl overflow-hidden shadow-sm border border-[#e5e7eb] dark:border-gray-800 hover:shadow-xl transition-all duration-300">
+                        class="group relative bg-white dark:bg-[#121c27] rounded-3xl overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.06)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.3)] border border-slate-100 dark:border-white/5 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] transition-all duration-500">
                         <div
-                            class="absolute top-0 right-0 w-32 h-32 bg-gray-50 dark:bg-gray-800 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150 group-hover:bg-primary/10">
+                            class="absolute -top-20 -right-20 w-48 h-48 bg-primary/10 dark:bg-primary/20 rounded-full blur-[50px] group-hover:scale-150 transition-transform duration-700 pointer-events-none">
                         </div>
                         <div class="p-8 flex flex-col h-full relative z-10">
                             <div
-                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white group-hover:rotate-6 group-hover:scale-110 shadow-sm border border-primary/10 transition-all duration-500">
                                 <span class="material-symbols-outlined text-3xl">flood</span>
                             </div>
-                            <h3
-                                class="text-xl font-bold text-[#111418] dark:text-white mb-3 font-serif group-hover:text-primary transition-colors">
+                            <h3 class="text-xl font-bold text-[#111418] dark:text-white mb-3 font-serif group-hover:text-primary transition-colors"
+                                data-i18n="auto_generated.text_062">
                                 Infraestructura Hidráulica y Ambiental
                             </h3>
-                            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6 flex-1 font-sans">
-                                Desarrollo de canalizaciones y redes orientadas al manejo responsable del entorno
-                                ecológico.
+                            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-3 font-sans"
+                                data-i18n="auto_generated.text_051">
+                                Especialistas en obras técnicas para el manejo y saneamiento del agua.
                             </p>
-                            <button
+                            <ul
+                                class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6 flex-1 font-sans space-y-2 list-none">
+                                <li class="flex items-start gap-2">
+                                    <span
+                                        class="material-symbols-outlined text-primary text-[1rem] mt-0.5">check_circle</span>
+                                    <span data-i18n="auto_generated.text_091"><strong>Plantas de Tratamiento de Aguas
+                                            Residuales (PTAR):</strong> Diseño,
+                                        construcción y puesta en marcha de sistemas de tratamiento industrial y
+                                        municipal.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span
+                                        class="material-symbols-outlined text-primary text-[1rem] mt-0.5">check_circle</span>
+                                    <span data-i18n="auto_generated.text_092"><strong>Obras de Saneamiento:</strong>
+                                        Infraestructura para la reutilización
+                                        de agua y sistemas de drenaje especializado.</span>
+                                </li>
+                            </ul>
+                            <button onclick="window.open('https://forms.gle/DLcXPgHsbHxToExQ7', '_blank')"
                                 class="flex items-center justify-center gap-2 w-full py-3 bg-primary/10 dark:bg-primary/20 text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-all focus:ring-2 focus:ring-primary focus:ring-offset-2">
-                                <span>Conocer Más</span> <span
+                                <span data-i18n="auto_generated.text_077">Realizar cotización</span> <span
                                     class="material-symbols-outlined text-[18px]">arrow_forward</span>
                             </button>
                         </div>
                     </div>
                     <div
-                        class="group relative bg-white dark:bg-[#1a2530] rounded-xl overflow-hidden shadow-sm border border-[#e5e7eb] dark:border-gray-800 hover:shadow-xl transition-all duration-300">
+                        class="group relative bg-white dark:bg-[#121c27] rounded-3xl overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.06)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.3)] border border-slate-100 dark:border-white/5 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] transition-all duration-500">
                         <div
-                            class="absolute top-0 right-0 w-32 h-32 bg-gray-50 dark:bg-gray-800 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150 group-hover:bg-primary/10">
+                            class="absolute -top-20 -right-20 w-48 h-48 bg-primary/10 dark:bg-primary/20 rounded-full blur-[50px] group-hover:scale-150 transition-transform duration-700 pointer-events-none">
                         </div>
                         <div class="p-8 flex flex-col h-full relative z-10">
                             <div
-                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white group-hover:rotate-6 group-hover:scale-110 shadow-sm border border-primary/10 transition-all duration-500">
                                 <span class="material-symbols-outlined text-3xl">architecture</span>
                             </div>
-                            <h3
-                                class="text-xl font-bold text-[#111418] dark:text-white mb-3 font-serif group-hover:text-primary transition-colors">
+                            <h3 class="text-xl font-bold text-[#111418] dark:text-white mb-3 font-serif group-hover:text-primary transition-colors"
+                                data-i18n="auto_generated.text_063">
                                 Ingeniería de Proyecto y Planeación
                             </h3>
-                            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6 flex-1 font-sans">
-                                Estructuración, viabilidad y diseño técnico para asegurar el éxito en cada etapa de su
-                                obra.
+                            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-3 font-sans"
+                                data-i18n="auto_generated.text_052">
+                                La base técnica que asegura la viabilidad de cualquier construcción.
                             </p>
-                            <button
+                            <ul
+                                class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6 flex-1 font-sans space-y-2 list-none">
+                                <li class="flex items-start gap-2">
+                                    <span
+                                        class="material-symbols-outlined text-primary text-[1rem] mt-0.5">check_circle</span>
+                                    <span data-i18n="auto_generated.text_094"><strong>Elaboración de Proyectos
+                                            Ejecutivos:</strong> Diseño arquitectónico,
+                                        cálculos estructurales, instalaciones hidrosanitarias y eléctricas.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span
+                                        class="material-symbols-outlined text-primary text-[1rem] mt-0.5">check_circle</span>
+                                    <span data-i18n="auto_generated.text_095"><strong>Gestión de Trámites y
+                                            Licencias:</strong> Apoyo técnico para la
+                                        obtención de permisos de construcción y autorizaciones ambientales.</span>
+                                </li>
+                            </ul>
+                            <button onclick="window.open('https://forms.gle/DLcXPgHsbHxToExQ7', '_blank')"
                                 class="flex items-center justify-center gap-2 w-full py-3 bg-primary/10 dark:bg-primary/20 text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-all focus:ring-2 focus:ring-primary focus:ring-offset-2">
-                                <span>Conocer Más</span> <span
+                                <span data-i18n="auto_generated.text_077">Realizar cotización</span> <span
                                     class="material-symbols-outlined text-[18px]">arrow_forward</span>
                             </button>
                         </div>
                     </div>
                     <div
-                        class="group relative bg-white dark:bg-[#1a2530] rounded-xl overflow-hidden shadow-sm border border-[#e5e7eb] dark:border-gray-800 hover:shadow-xl transition-all duration-300">
+                        class="group relative bg-white dark:bg-[#121c27] rounded-3xl overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.06)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.3)] border border-slate-100 dark:border-white/5 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] transition-all duration-500">
                         <div
-                            class="absolute top-0 right-0 w-32 h-32 bg-gray-50 dark:bg-gray-800 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150 group-hover:bg-primary/10">
+                            class="absolute -top-20 -right-20 w-48 h-48 bg-primary/10 dark:bg-primary/20 rounded-full blur-[50px] group-hover:scale-150 transition-transform duration-700 pointer-events-none">
                         </div>
                         <div class="p-8 flex flex-col h-full relative z-10">
                             <div
-                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white group-hover:rotate-6 group-hover:scale-110 shadow-sm border border-primary/10 transition-all duration-500">
                                 <span class="material-symbols-outlined text-3xl">engineering</span>
                             </div>
-                            <h3
-                                class="text-xl font-bold text-[#111418] dark:text-white mb-3 font-serif group-hover:text-primary transition-colors">
+                            <h3 class="text-xl font-bold text-[#111418] dark:text-white mb-3 font-serif group-hover:text-primary transition-colors"
+                                data-i18n="auto_generated.text_064">
                                 Supervisión y Control de Obra
                             </h3>
-                            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6 flex-1 font-sans">
-                                Monitoreo integral de avances mecánicos y financieros, garantizando calidad técnica.
+                            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6 flex-1 font-sans"
+                                data-i18n="auto_generated.text_053">
+                                Aseguramos que su inversión se ejecute conforme a lo planeado.
                             </p>
-                            <button
+                            <ul
+                                class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6 flex-1 font-sans space-y-2 list-none">
+                                <li class="flex items-start gap-2">
+                                    <span
+                                        class="material-symbols-outlined text-primary text-[1rem] mt-0.5">check_circle</span>
+                                    <span data-i18n="auto_generated.text_097"><strong>Supervisión Técnica de
+                                            Obra:</strong> Vigilancia presencial para
+                                        garantizar el cumplimiento de planos, especificaciones y calidad de
+                                        materiales.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span
+                                        class="material-symbols-outlined text-primary text-[1rem] mt-0.5">check_circle</span>
+                                    <span data-i18n="auto_generated.text_098"><strong>Control de Costos y
+                                            Tiempos:</strong> AAdministración de cronogramas
+                                        de obra (Ruta Crítica) y presupuestos para evitar desviaciones.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span
+                                        class="material-symbols-outlined text-primary text-[1rem] mt-0.5">check_circle</span>
+                                    <span data-i18n="auto_generated.text_099"><strong>Auditoría de Obra:</strong>
+                                        Verificación de procesos constructivos y
+                                        normativas de seguridad en sitio.</span>
+                                </li>
+                            </ul>
+                            <button onclick="window.open('https://forms.gle/DLcXPgHsbHxToExQ7', '_blank')"
                                 class="flex items-center justify-center gap-2 w-full py-3 bg-primary/10 dark:bg-primary/20 text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-all focus:ring-2 focus:ring-primary focus:ring-offset-2">
-                                <span>Conocer Más</span> <span
+                                <span data-i18n="auto_generated.text_077">Realizar cotización</span> <span
                                     class="material-symbols-outlined text-[18px]">arrow_forward</span>
                             </button>
                         </div>
@@ -456,100 +688,125 @@
                 <div id="tab-section-3"
                     class="tab-section hidden grid-cols-1 md:grid-cols-2 gap-8 transition-opacity duration-300 opacity-0">
                     <div
-                        class="group relative bg-white dark:bg-[#1a2530] rounded-xl overflow-hidden shadow-sm border border-[#e5e7eb] dark:border-gray-800 hover:shadow-xl transition-all duration-300">
+                        class="group relative bg-white dark:bg-[#121c27] rounded-3xl overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.06)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.3)] border border-slate-100 dark:border-white/5 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] transition-all duration-500">
                         <div
-                            class="absolute top-0 right-0 w-32 h-32 bg-gray-50 dark:bg-gray-800 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150 group-hover:bg-primary/10">
+                            class="absolute -top-20 -right-20 w-48 h-48 bg-primary/10 dark:bg-primary/20 rounded-full blur-[50px] group-hover:scale-150 transition-transform duration-700 pointer-events-none">
                         </div>
                         <div class="p-8 flex flex-col h-full relative z-10">
                             <div
-                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white group-hover:rotate-6 group-hover:scale-110 shadow-sm border border-primary/10 transition-all duration-500">
                                 <span class="material-symbols-outlined text-3xl">map</span>
                             </div>
-                            <h3
-                                class="text-xl font-bold text-[#111418] dark:text-white mb-3 font-serif group-hover:text-primary transition-colors">
+                            <h3 class="text-xl font-bold text-[#111418] dark:text-white mb-3 font-serif group-hover:text-primary transition-colors"
+                                data-i18n="auto_generated.text_065">
                                 Levantamientos y Estudios Topográficos
                             </h3>
-                            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6 flex-1 font-sans">
-                                Definición exacta de contornos espaciales y dimensiones del terreno para cimientos
-                                seguros.
-                            </p>
-                            <button
+                            <ul
+                                class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6 flex-1 font-sans space-y-2 list-none">
+                                <li class="flex items-start gap-2">
+                                    <span
+                                        class="material-symbols-outlined text-primary text-[1rem] mt-0.5">check_circle</span>
+                                    <span data-i18n="auto_generated.text_101"><strong>Definición</strong> exacta de
+                                        contornos espaciales y dimensiones del
+                                        terreno para cimientos seguros.</span>
+                                </li>
+                            </ul>
+                            <button onclick="window.open('https://forms.gle/7Ud2XZL7oQouRWnQA', '_blank')"
                                 class="flex items-center justify-center gap-2 w-full py-3 bg-primary/10 dark:bg-primary/20 text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-all focus:ring-2 focus:ring-primary focus:ring-offset-2">
-                                <span>Conocer Más</span> <span
+                                <span data-i18n="auto_generated.text_077">Realizar cotización</span> <span
                                     class="material-symbols-outlined text-[18px]">arrow_forward</span>
                             </button>
                         </div>
                     </div>
                     <div
-                        class="group relative bg-white dark:bg-[#1a2530] rounded-xl overflow-hidden shadow-sm border border-[#e5e7eb] dark:border-gray-800 hover:shadow-xl transition-all duration-300">
+                        class="group relative bg-white dark:bg-[#121c27] rounded-3xl overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.06)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.3)] border border-slate-100 dark:border-white/5 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] transition-all duration-500">
                         <div
-                            class="absolute top-0 right-0 w-32 h-32 bg-gray-50 dark:bg-gray-800 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150 group-hover:bg-primary/10">
+                            class="absolute -top-20 -right-20 w-48 h-48 bg-primary/10 dark:bg-primary/20 rounded-full blur-[50px] group-hover:scale-150 transition-transform duration-700 pointer-events-none">
                         </div>
                         <div class="p-8 flex flex-col h-full relative z-10">
                             <div
-                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white group-hover:rotate-6 group-hover:scale-110 shadow-sm border border-primary/10 transition-all duration-500">
                                 <span class="material-symbols-outlined text-3xl">satellite_alt</span>
                             </div>
-                            <h3
-                                class="text-xl font-bold text-[#111418] dark:text-white mb-3 font-serif group-hover:text-primary transition-colors">
+                            <h3 class="text-xl font-bold text-[#111418] dark:text-white mb-3 font-serif group-hover:text-primary transition-colors"
+                                data-i18n="auto_generated.text_066">
                                 Georreferenciación y Precisión GPS
                             </h3>
-                            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6 flex-1 font-sans">
-                                Ubicación de coordenadas geoespaciales precisas usando tecnología global de vanguardia.
-                            </p>
-                            <button
+                            <ul
+                                class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6 flex-1 font-sans space-y-2 list-none">
+                                <li class="flex items-start gap-2">
+                                    <span
+                                        class="material-symbols-outlined text-primary text-[1rem] mt-0.5">check_circle</span>
+                                    <span data-i18n="auto_generated.text_103"><strong>Ubicación</strong> de coordenadas
+                                        geoespaciales precisas usando
+                                        tecnología global de vanguardia.</span>
+                                </li>
+                            </ul>
+                            <button onclick="window.open('https://forms.gle/Tr3rEtVY2hXaKkcC7', '_blank')"
                                 class="flex items-center justify-center gap-2 w-full py-3 bg-primary/10 dark:bg-primary/20 text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-all focus:ring-2 focus:ring-primary focus:ring-offset-2">
-                                <span>Conocer Más</span> <span
+                                <span data-i18n="auto_generated.text_077">Realizar cotización</span> <span
                                     class="material-symbols-outlined text-[18px]">arrow_forward</span>
                             </button>
                         </div>
                     </div>
                     <div
-                        class="group relative bg-white dark:bg-[#1a2530] rounded-xl overflow-hidden shadow-sm border border-[#e5e7eb] dark:border-gray-800 hover:shadow-xl transition-all duration-300">
+                        class="group relative bg-white dark:bg-[#121c27] rounded-3xl overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.06)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.3)] border border-slate-100 dark:border-white/5 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] transition-all duration-500">
                         <div
-                            class="absolute top-0 right-0 w-32 h-32 bg-gray-50 dark:bg-gray-800 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150 group-hover:bg-primary/10">
+                            class="absolute -top-20 -right-20 w-48 h-48 bg-primary/10 dark:bg-primary/20 rounded-full blur-[50px] group-hover:scale-150 transition-transform duration-700 pointer-events-none">
                         </div>
                         <div class="p-8 flex flex-col h-full relative z-10">
                             <div
-                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white group-hover:rotate-6 group-hover:scale-110 shadow-sm border border-primary/10 transition-all duration-500">
                                 <span class="material-symbols-outlined text-3xl">3d_rotation</span>
                             </div>
-                            <h3
-                                class="text-xl font-bold text-[#111418] dark:text-white mb-3 font-serif group-hover:text-primary transition-colors">
+                            <h3 class="text-xl font-bold text-[#111418] dark:text-white mb-3 font-serif group-hover:text-primary transition-colors"
+                                data-i18n="auto_generated.text_067">
                                 Modelado Digital y Visualización
                             </h3>
-                            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6 flex-1 font-sans">
-                                Generación de entornos de terreno tridimensionales (3D) para cálculos volumétricos
-                                exactos.
-                            </p>
-                            <button
+                            <ul
+                                class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6 flex-1 font-sans space-y-2 list-none">
+                                <li class="flex items-start gap-2">
+                                    <span
+                                        class="material-symbols-outlined text-primary text-[1rem] mt-0.5">check_circle</span>
+                                    <span data-i18n="auto_generated.text_105"><strong>Generación</strong> de entornos de
+                                        terreno tridimensionales (3D) para
+                                        cálculos volumétricos exactos.</span>
+                                </li>
+                            </ul>
+                            <button onclick="window.open('https://forms.gle/B7aiS9fSTc88VTHDA', '_blank')"
                                 class="flex items-center justify-center gap-2 w-full py-3 bg-primary/10 dark:bg-primary/20 text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-all focus:ring-2 focus:ring-primary focus:ring-offset-2">
-                                <span>Conocer Más</span> <span
+                                <span data-i18n="auto_generated.text_077">Realizar cotización</span> <span
                                     class="material-symbols-outlined text-[18px]">arrow_forward</span>
                             </button>
                         </div>
                     </div>
                     <div
-                        class="group relative bg-white dark:bg-[#1a2530] rounded-xl overflow-hidden shadow-sm border border-[#e5e7eb] dark:border-gray-800 hover:shadow-xl transition-all duration-300">
+                        class="group relative bg-white dark:bg-[#121c27] rounded-3xl overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.06)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.3)] border border-slate-100 dark:border-white/5 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] transition-all duration-500">
                         <div
-                            class="absolute top-0 right-0 w-32 h-32 bg-gray-50 dark:bg-gray-800 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150 group-hover:bg-primary/10">
+                            class="absolute -top-20 -right-20 w-48 h-48 bg-primary/10 dark:bg-primary/20 rounded-full blur-[50px] group-hover:scale-150 transition-transform duration-700 pointer-events-none">
                         </div>
                         <div class="p-8 flex flex-col h-full relative z-10">
                             <div
-                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white group-hover:rotate-6 group-hover:scale-110 shadow-sm border border-primary/10 transition-all duration-500">
                                 <span class="material-symbols-outlined text-3xl">fact_check</span>
                             </div>
-                            <h3
-                                class="text-xl font-bold text-[#111418] dark:text-white mb-3 font-serif group-hover:text-primary transition-colors">
+                            <h3 class="text-xl font-bold text-[#111418] dark:text-white mb-3 font-serif group-hover:text-primary transition-colors"
+                                data-i18n="auto_generated.text_068">
                                 Control y Supervisión de Obra
                             </h3>
-                            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6 flex-1 font-sans">
-                                Verificación constante de trazos en terreno real para garantizar el alineamiento con
-                                planimetría.
-                            </p>
-                            <button
+                            <ul
+                                class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6 flex-1 font-sans space-y-2 list-none">
+                                <li class="flex items-start gap-2">
+                                    <span
+                                        class="material-symbols-outlined text-primary text-[1rem] mt-0.5">check_circle</span>
+                                    <span data-i18n="auto_generated.text_107"><strong>Verificación</strong> constante de
+                                        trazos en terreno real para
+                                        garantizar el alineamiento con planimetría.</span>
+                                </li>
+                            </ul>
+                            <button onclick="window.open('https://forms.gle/KYovRPRtWm9M4rH96', '_blank')"
                                 class="flex items-center justify-center gap-2 w-full py-3 bg-primary/10 dark:bg-primary/20 text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-all focus:ring-2 focus:ring-primary focus:ring-offset-2">
-                                <span>Conocer Más</span> <span
+                                <span data-i18n="auto_generated.text_077">Realizar cotización</span> <span
                                     class="material-symbols-outlined text-[18px]">arrow_forward</span>
                             </button>
                         </div>
@@ -560,101 +817,155 @@
                 <div id="tab-section-4"
                     class="tab-section hidden grid-cols-1 md:grid-cols-2 gap-8 transition-opacity duration-300 opacity-0">
                     <div
-                        class="group relative bg-white dark:bg-[#1a2530] rounded-xl overflow-hidden shadow-sm border border-[#e5e7eb] dark:border-gray-800 hover:shadow-xl transition-all duration-300">
+                        class="group relative bg-white dark:bg-[#121c27] rounded-3xl overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.06)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.3)] border border-slate-100 dark:border-white/5 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] transition-all duration-500">
                         <div
-                            class="absolute top-0 right-0 w-32 h-32 bg-gray-50 dark:bg-gray-800 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150 group-hover:bg-primary/10">
+                            class="absolute -top-20 -right-20 w-48 h-48 bg-primary/10 dark:bg-primary/20 rounded-full blur-[50px] group-hover:scale-150 transition-transform duration-700 pointer-events-none">
                         </div>
                         <div class="p-8 flex flex-col h-full relative z-10">
                             <div
-                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white group-hover:rotate-6 group-hover:scale-110 shadow-sm border border-primary/10 transition-all duration-500">
                                 <span class="material-symbols-outlined text-3xl">admin_panel_settings</span>
                             </div>
-                            <h3
-                                class="text-xl font-bold text-[#111418] dark:text-white mb-3 font-serif group-hover:text-primary transition-colors">
+                            <h3 class="text-xl font-bold text-[#111418] dark:text-white mb-3 font-serif group-hover:text-primary transition-colors"
+                                data-i18n="auto_generated.text_069">
                                 Estructura y Gestión Operativa (Consultoría)
                             </h3>
-                            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6 flex-1 font-sans">
-                                Auditoría rigurosa de protocolos laborales normativos para mitigar cualquier riesgo
-                                ocupacional.
+                            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6 flex-1 font-sans"
+                                data-i18n="auto_generated.text_054">
+                                Protegemos el activo más valioso de su organización: su capital humano, garantizando el
+                                cumplimiento total ante la STPS y autoridades locales.
                             </p>
-                            <button
+                            <ul
+                                class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6 flex-1 font-sans space-y-2 list-none">
+                                <li class="flex items-start gap-2">
+                                    <span
+                                        class="material-symbols-outlined text-primary text-[1rem] mt-0.5">check_circle</span>
+                                    <span data-i18n="auto_generated.text_109"><strong>Instauración de Departamentos de
+                                            SST:</strong> Diseño, implementación
+                                        y coordinación integral de departamentos de Seguridad e Higiene
+                                        Industrial.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span
+                                        class="material-symbols-outlined text-primary text-[1rem] mt-0.5">check_circle</span>
+                                    <span data-i18n="auto_generated.text_110"><strong>Auditorías de Cumplimiento
+                                            Normativo:</strong> Diagnóstico y
+                                        aseguramiento de las Normas Oficiales Mexicanas (NOM) vigentes (Seguridad, Salud
+                                        y Organización).</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span
+                                        class="material-symbols-outlined text-primary text-[1rem] mt-0.5">check_circle</span>
+                                    <span data-i18n="auto_generated.text_111"><strong>Gestión de Comisiones
+                                            Mixtas:</strong> Constitución y capacitación de
+                                        la Comisión de Seguridad e Higiene (NOM-019-STPS).</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span
+                                        class="material-symbols-outlined text-primary text-[1rem] mt-0.5">check_circle</span>
+                                    <span data-i18n="auto_generated.text_112"><strong>Elaboración de Programas
+                                            Específicos:</strong> Manuales de seguridad,
+                                        programas de protección civil y planes de respuesta a emergencias.</span>
+                                </li>
+                            </ul>
+                            <button onclick="window.open('https://forms.gle/5eWnWXbo17ktoFqq5', '_blank')"
                                 class="flex items-center justify-center gap-2 w-full py-3 bg-primary/10 dark:bg-primary/20 text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-all focus:ring-2 focus:ring-primary focus:ring-offset-2">
-                                <span>Conocer Más</span> <span
+                                <span data-i18n="auto_generated.text_077">Realizar cotización</span> <span
                                     class="material-symbols-outlined text-[18px]">arrow_forward</span>
                             </button>
                         </div>
                     </div>
                     <div
-                        class="group relative bg-white dark:bg-[#1a2530] rounded-xl overflow-hidden shadow-sm border border-[#e5e7eb] dark:border-gray-800 hover:shadow-xl transition-all duration-300">
+                        class="group relative bg-white dark:bg-[#121c27] rounded-3xl overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.06)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.3)] border border-slate-100 dark:border-white/5 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] transition-all duration-500">
                         <div
-                            class="absolute top-0 right-0 w-32 h-32 bg-gray-50 dark:bg-gray-800 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150 group-hover:bg-primary/10">
+                            class="absolute -top-20 -right-20 w-48 h-48 bg-primary/10 dark:bg-primary/20 rounded-full blur-[50px] group-hover:scale-150 transition-transform duration-700 pointer-events-none">
                         </div>
                         <div class="p-8 flex flex-col h-full relative z-10">
                             <div
-                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white group-hover:rotate-6 group-hover:scale-110 shadow-sm border border-primary/10 transition-all duration-500">
                                 <span class="material-symbols-outlined text-3xl">health_and_safety</span>
                             </div>
-                            <h3
-                                class="text-xl font-bold text-[#111418] dark:text-white mb-3 font-serif group-hover:text-primary transition-colors">
+                            <h3 class="text-xl font-bold text-[#111418] dark:text-white mb-3 font-serif group-hover:text-primary transition-colors"
+                                data-i18n="auto_generated.text_070">
                                 Supervisión Técnica y Seguridad en Campo
                             </h3>
-                            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6 flex-1 font-sans">
-                                Vigilancia de medidas preventivas in situ e implementación de acciones resolutivas
-                                inmediatas.
+                            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-3 font-sans"
+                                data-i18n="auto_generated.text_055">
+                                Supervisión en Proyectos de Alto Riesgo: Vigilancia presencial y control de protocolos
+                                de seguridad en obras civiles, proyectos ambientales e industriales.
                             </p>
-                            <button
+                            <ul
+                                class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6 flex-1 font-sans space-y-2 list-none">
+                                <li class="flex items-start gap-2">
+                                    <span
+                                        class="material-symbols-outlined text-primary text-[1rem] mt-0.5">check_circle</span>
+                                    <span data-i18n="auto_generated.text_114"><strong>Análisis de Riesgos por Puesto de
+                                            Trabajo
+                                            (AST):</strong>Identificación de peligros y evaluación de riesgos para
+                                        prevenir accidentes y enfermedades laborales.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span
+                                        class="material-symbols-outlined text-primary text-[1rem] mt-0.5">check_circle</span>
+                                    <span data-i18n="auto_generated.text_115"><strong>Verificación de Equipos y
+                                            Maquinaria:</strong> Inspección de
+                                        condiciones de seguridad en herramientas, andamios y maquinaria pesada.</span>
+                                </li>
+                            </ul>
+                            <button onclick="window.open('https://forms.gle/5eWnWXbo17ktoFqq5', '_blank')"
                                 class="flex items-center justify-center gap-2 w-full py-3 bg-primary/10 dark:bg-primary/20 text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-all focus:ring-2 focus:ring-primary focus:ring-offset-2">
-                                <span>Conocer Más</span> <span
+                                <span data-i18n="auto_generated.text_077">Realizar cotización</span> <span
                                     class="material-symbols-outlined text-[18px]">arrow_forward</span>
                             </button>
                         </div>
                     </div>
                     <div
-                        class="group relative bg-white dark:bg-[#1a2530] rounded-xl overflow-hidden shadow-sm border border-[#e5e7eb] dark:border-gray-800 hover:shadow-xl transition-all duration-300">
+                        class="group relative bg-white dark:bg-[#121c27] rounded-3xl overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.06)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.3)] border border-slate-100 dark:border-white/5 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] transition-all duration-500">
                         <div
-                            class="absolute top-0 right-0 w-32 h-32 bg-gray-50 dark:bg-gray-800 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150 group-hover:bg-primary/10">
+                            class="absolute -top-20 -right-20 w-48 h-48 bg-primary/10 dark:bg-primary/20 rounded-full blur-[50px] group-hover:scale-150 transition-transform duration-700 pointer-events-none">
                         </div>
                         <div class="p-8 flex flex-col h-full relative z-10">
                             <div
-                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white group-hover:rotate-6 group-hover:scale-110 shadow-sm border border-primary/10 transition-all duration-500">
                                 <span class="material-symbols-outlined text-3xl">model_training</span>
                             </div>
-                            <h3
-                                class="text-xl font-bold text-[#111418] dark:text-white mb-3 font-serif group-hover:text-primary transition-colors">
+                            <h3 class="text-xl font-bold text-[#111418] dark:text-white mb-3 font-serif group-hover:text-primary transition-colors"
+                                data-i18n="auto_generated.text_071">
                                 Formación Especializada y Capacitación (ACE)
                             </h3>
-                            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6 flex-1 font-sans">
-                                Entrenamientos avalados y formación integral del talento humano en seguridad
-                                organizativa.
+                            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6 flex-1 font-sans"
+                                data-i18n="auto_generated.text_056">
+                                Capacitación Certificada (STPS): Cursos y talleres impartidos por un Agente Capacitador
+                                Externo (ACE) con registro oficial ante la Secretaría del Trabajo.
                             </p>
-                            <button
+                            <ul
+                                class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6 flex-1 font-sans space-y-2 list-none">
+                                <li class="flex items-start gap-2">
+                                    <span
+                                        class="material-symbols-outlined text-primary text-[1rem] mt-0.5">check_circle</span>
+                                    <span data-i18n="auto_generated.text_117"><strong>Emisión de Constancias
+                                            DC-3:</strong>Entrega de documentos de
+                                        habilidades laborales con validez ante inspecciones federales.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span
+                                        class="material-symbols-outlined text-primary text-[1rem] mt-0.5">check_circle</span>
+                                    <span data-i18n="auto_generated.text_118"><strong>Entrenamiento en Trabajos de Alto
+                                            Riesgo:</strong> Capacitación
+                                        específica en alturas, espacios confinados, corte y soldadura, y manejo de
+                                        sustancias químicas.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span
+                                        class="material-symbols-outlined text-primary text-[1rem] mt-0.5">check_circle</span>
+                                    <span data-i18n="auto_generated.text_119"><strong>Formación de Brigadas de
+                                            Emergencia:</strong> CPrimeros auxilios,
+                                        prevención y combate de incendios, y evacuación de inmuebles.</span>
+                                </li>
+                            </ul>
+                            <button onclick="window.open('https://forms.gle/5eWnWXbo17ktoFqq5', '_blank')"
                                 class="flex items-center justify-center gap-2 w-full py-3 bg-primary/10 dark:bg-primary/20 text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-all focus:ring-2 focus:ring-primary focus:ring-offset-2">
-                                <span>Conocer Más</span> <span
-                                    class="material-symbols-outlined text-[18px]">arrow_forward</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div
-                        class="group relative bg-white dark:bg-[#1a2530] rounded-xl overflow-hidden shadow-sm border border-[#e5e7eb] dark:border-gray-800 hover:shadow-xl transition-all duration-300">
-                        <div
-                            class="absolute top-0 right-0 w-32 h-32 bg-gray-50 dark:bg-gray-800 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-150 group-hover:bg-primary/10">
-                        </div>
-                        <div class="p-8 flex flex-col h-full relative z-10">
-                            <div
-                                class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-                                <span class="material-symbols-outlined text-3xl">warning</span>
-                            </div>
-                            <h3
-                                class="text-xl font-bold text-[#111418] dark:text-white mb-3 font-serif group-hover:text-primary transition-colors">
-                                Entrenamiento en Trabajos de Alto Riesgo
-                            </h3>
-                            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6 flex-1 font-sans">
-                                Preparación intensiva para operaciones estructurales extremas certificada por las normas
-                                STPS.
-                            </p>
-                            <button
-                                class="flex items-center justify-center gap-2 w-full py-3 bg-primary/10 dark:bg-primary/20 text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-all focus:ring-2 focus:ring-primary focus:ring-offset-2">
-                                <span>Conocer Más</span> <span
+                                <span data-i18n="auto_generated.text_077">Realizar cotización</span> <span
                                     class="material-symbols-outlined text-[18px]">arrow_forward</span>
                             </button>
                         </div>
@@ -670,22 +981,17 @@
             <div class="w-full bg-primary-dark py-16 px-4">
                 <div class="max-w-[800px] mx-auto text-center">
                     <h2 class="text-white text-3xl font-bold mb-6" data-i18n="services_page.cta.title">¿Listo para
-                        comenzar
-                        tu próximo proyecto?</h2>
-                    <p class="text-gray-100 text-lg mb-10" data-i18n="services_page.cta.desc">Legado
-                        Ambiental aporta décadas de
-                        experiencia colectiva a cada obra.
-                        Hablemos de tus requerimientos hoy mismo.</p>
-                    <div class="flex flex-wrap justify-center gap-4">
+                        comenzar tu próximo proyecto?</h2>
+                    <p class="text-gray-100 text-lg mb-10" data-i18n="services_page.cta.desc">Legado Ambiental aporta
+                        décadas de experiencia colectiva a cada obra. Hablemos de tus requerimientos hoy mismo.</p>
+                    <!-- <div class="flex flex-wrap justify-center gap-4">
                         <button
                             class="px-10 py-4 bg-white text-primary font-bold rounded-lg hover:bg-blue-50 transition-colors shadow-xl focus:ring-2 focus:ring-white"
-                            data-i18n="services_page.cta.btn_quote">Obtener
-                            Cotización</button>
+                            data-i18n="services_page.cta.btn_quote">Obtener Cotización</button>
                         <button
                             class="px-10 py-4 border border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors focus:ring-2 focus:ring-white"
-                            data-i18n="services_page.cta.btn_process">Nuestro
-                            Proceso</button>
-                    </div>
+                            data-i18n="services_page.cta.btn_process">Nuestro Proceso</button>
+                    </div> -->
                 </div>
             </div>
         </main>
@@ -693,20 +999,17 @@
         <footer class="w-full bg-white dark:bg-background-dark border-t border-[#f0f2f4] dark:border-gray-800 py-10">
             <div class="max-w-[1200px] mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
                 <div class="flex items-center gap-3">
-                    <img src="../assets/images/logo_gral4_v1.1.png" alt="Legado Ambiental"
+                    <img src="../assets/images/logo/logo_final_v2.webp" alt="Legado Ambiental"
                         class="h-16 w-auto object-contain">
                     <span class="font-bold dark:text-white">Legado Ambiental</span>
                 </div>
-                <div class="text-sm text-[#617589] dark:text-gray-400" data-i18n="footer.rights">
-                    © 2024 Legado Ambiental. Todos los derechos reservados.
-                </div>
+                <div class="text-sm text-[#617589] dark:text-gray-400" data-i18n="footer.rights"><strong>© 2026 Legado
+                        Ambiental S.A. de C.V. <br>Todos los derechos reservados.</strong></strong></div>
                 <div class="flex gap-6">
-                    <a class="text-[#617589] hover:text-primary transition-colors" href="#"><span
-                            class="material-symbols-outlined">share</span></a>
-                    <a class="text-[#617589] hover:text-primary transition-colors" href="#"><span
-                            class="material-symbols-outlined">mail</span></a>
-                    <a class="text-[#617589] hover:text-primary transition-colors" href="#"><span
-                            class="material-symbols-outlined">location_on</span></a>
+                    <a class="text-[#617589] hover:text-primary transition-colors" href="javascript:void(0)"
+                        data-action="copy-url"><span class="material-symbols-outlined">share</span></a>
+                    <a class="text-[#617589] hover:text-primary transition-colors" href="../faq/contact_faq.html#tab-1"
+                        data-i18n="auto_generated.text_175"><span class="material-symbols-outlined">mail</span></a>
                 </div>
             </div>
         </footer>
@@ -746,14 +1049,14 @@
             // Update Tab Buttons Styles
             const allTabs = document.querySelectorAll('.tab-btn');
             allTabs.forEach(tab => {
-                tab.classList.remove('border-primary', 'text-primary');
-                tab.classList.add('border-transparent', 'text-[#617589]', 'dark:text-gray-400', 'hover:text-primary');
+                tab.classList.remove('bg-primary', 'text-white', 'shadow-[0_4px_16px_rgba(16,185,129,0.30)]');
+                tab.classList.add('text-[#617589]', 'dark:text-gray-400', 'hover:text-[#111418]', 'dark:hover:text-white', 'hover:bg-gray-200', 'dark:hover:bg-[#253240]');
             });
 
             const activeTab = document.getElementById(`tab-btn-${tabIndex}`);
             if (activeTab) {
-                activeTab.classList.remove('border-transparent', 'text-[#617589]', 'dark:text-gray-400', 'hover:text-primary');
-                activeTab.classList.add('border-primary', 'text-primary');
+                activeTab.classList.remove('text-[#617589]', 'dark:text-gray-400', 'hover:text-[#111418]', 'dark:hover:text-white', 'hover:bg-gray-200', 'dark:hover:bg-[#253240]');
+                activeTab.classList.add('bg-primary', 'text-white', 'shadow-[0_4px_16px_rgba(16,185,129,0.30)]');
             }
 
             // Update Sections visibility with smooth transitions
@@ -775,9 +1078,45 @@
                 }, 10);
             }
         }
+
+        // Tab Buttons Event Listeners (Removed inline onclick)
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        tabButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const tabIndex = Number.parseInt(btn.dataset.tab, 10);
+                if (tabIndex) {
+                    switchTab(tabIndex);
+                }
+            });
+        });
+
+        // Deep Linking for tabs based on URL Hash
+        document.addEventListener('DOMContentLoaded', () => {
+            if (globalThis.location.hash) {
+                const hash = globalThis.location.hash;
+                const match = hash.match(/#tab-(\d+)/);
+                if (match && match[1]) {
+                    const tabIndex = Number.parseInt(match[1], 10);
+                    // Call the existing function to switch the visual state of tabs
+                    switchTab(tabIndex);
+
+                    // Smooth scroll to the tab buttons wrapper so user sees the content
+                    setTimeout(() => {
+                        const tabContainer = document.querySelector('.tab-section');
+                        if (tabContainer) {
+                            const offsetTop = tabContainer.getBoundingClientRect().top + globalThis.scrollY - 100;
+                            globalThis.scrollTo({
+                                top: offsetTop,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }, 300); // Allow time for DOM updates and tab animations
+                }
+            }
+        });
     </script>
     <script src="../assets/js/i18n.js" data-base-path="../"></script>
-    
+
     <!-- Animaciones AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="../assets/js/scroll-animate.js"></script>

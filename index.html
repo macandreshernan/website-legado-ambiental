@@ -5,6 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Legado Ambiental</title>
+    <!-- SEO & Social Media Meta Tags -->
+    <meta name="description" content="Bienvenidos a Legado Ambiental. Ingeniería civil y desarrollo sostenible.">
+    <meta property="og:title" content="Legado Ambiental | Bienvenido">
+    <meta property="og:description" content="Excelencia en construcción civil y desarrollo sostenible.">
+    <meta property="og:image" content="https://lh3.googleusercontent.com/aida-public/AB6AXuAqmscbVHlzhMSGufVJIPHAbeXNuKcXemhcqZAvGrMwdJbxYRqn8NujTgRc0TtDDWCuBk8klfSuiOBlRyB4I9I7qcGRXnv5N8WjDK5YrY93NXDou-byxlzvuw8aaJulXpLVyQAU_fBNxyohbjY_ieOzlFk87mlJlDEHw2W041oK-_KKMEns8lE5Kf1T9iHTdHkI4R8eYS49VBlR8-IoaMb1lMOX0srUz1qjb_b6UJLlF177tEDwunIL0Z1qBT1HP06f181aJYMrSlXd">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Legado Ambiental | Bienvenido">
+    <meta name="twitter:description" content="Excelencia en construcción civil y desarrollo sostenible.">
+    <meta name="twitter:image" content="https://lh3.googleusercontent.com/aida-public/AB6AXuAqmscbVHlzhMSGufVJIPHAbeXNuKcXemhcqZAvGrMwdJbxYRqn8NujTgRc0TtDDWCuBk8klfSuiOBlRyB4I9I7qcGRXnv5N8WjDK5YrY93NXDou-byxlzvuw8aaJulXpLVyQAU_fBNxyohbjY_ieOzlFk87mlJlDEHw2W041oK-_KKMEns8lE5Kf1T9iHTdHkI4R8eYS49VBlR8-IoaMb1lMOX0srUz1qjb_b6UJLlF177tEDwunIL0Z1qBT1HP06f181aJYMrSlXd">
     <!-- Security Headers -->
     <meta http-equiv="Content-Security-Policy"
         content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://fonts.googleapis.com; img-src 'self' data: https://lh3.googleusercontent.com; connect-src 'self';">
@@ -29,37 +39,49 @@
             /* Green-800 */
             font-size: 3rem;
             margin-bottom: 1rem;
+            text-align: center;
         }
 
         p {
             font-size: 1.25rem;
             color: #4b5563;
+            text-align: center;
+            padding: 0 1rem;
+        }
+        
+        @media (max-width: 600px) {
+            h1 { font-size: 2.25rem; }
+            p { font-size: 1rem; }
         }
     </style>
     <!-- SEO Canonical & Hreflang -->
-    <link rel="canonical" href="https://www.legadoambiental.com/index.html" />
-    <link rel="alternate" hreflang="es-MX" href="https://www.legadoambiental.com/index.html?lang=es-MX" />
-    <link rel="alternate" hreflang="en-US" href="https://www.legadoambiental.com/index.html?lang=en-US" />
-    <link rel="alternate" hreflang="x-default" href="https://www.legadoambiental.com/index.html" />
+    <link rel="canonical" href="https://www.legadoambiental.com.mx/index.html" />
+    <link rel="alternate" hreflang="es-MX" href="https://www.legadoambiental.com.mx/index.html?lang=es-MX" />
+    <link rel="alternate" hreflang="en-US" href="https://www.legadoambiental.com.mx/index.html?lang=en-US" />
+    <link rel="alternate" hreflang="x-default" href="https://www.legadoambiental.com.mx/index.html" />
+    <link rel="icon" type="image/webp" href="assets/images/logo/logo_final_v2.webp">
 </head>
 
 <body>
+    <noscript>
+        <div style="background-color: #f8d7da; color: #721c24; padding: 10px; text-align: center; z-index: 9999; position: relative;">
+            Para disfrutar de la experiencia completa y todas las funcionalidades de Legado Ambiental, por favor habilite JavaScript en su navegador.
+        </div>
+    </noscript>
+    <!-- Global Loader -->
+    <div id="global-loader" class="fixed inset-0 z-[99999] flex items-center justify-center bg-white dark:bg-[#121c27] transition-opacity duration-700">
+        <div class="relative flex flex-col items-center">
+            <img src="assets/images/logo/logo_final_v2.webp" alt="Cargando Legado Ambiental" class="h-20 w-auto mb-4 animate-pulse opacity-80">
+            <div class="w-12 h-12 border-4 border-primary/30 border-t-primary rounded-full animate-spin"></div>
+        </div>
+    </div>
     <div style="position: absolute; top: 1rem; right: 1rem;">
-        <button onclick="changeLanguage('es-MX')" style="cursor: pointer; padding: 5px;">ES</button>
-        <button onclick="changeLanguage('en-US')" style="cursor: pointer; padding: 5px;">EN</button>
+        <button data-switch-lang="es-MX" style="cursor: pointer; padding: 5px;">ES</button>
+        <button data-switch-lang="en-US" style="cursor: pointer; padding: 5px;">EN</button>
     </div>
     <h1 data-i18n="index_landing.title">Legado Ambiental</h1>
     <p data-i18n="index_landing.welcome">Bienvenido al proyecto de preservación ambiental.</p>
     <script src="assets/js/i18n.js"></script>
-    <script>
-        document.querySelectorAll('button[onclick]').forEach(btn => {
-            btn.onclick = (e) => {
-                const lang = e.target.textContent === 'ES' ? 'es-MX' : 'en-US';
-                localStorage.setItem('preferredLanguage', lang);
-                loadLanguage(lang);
-            };
-        });
-    </script>
 </body>
 
 </html>

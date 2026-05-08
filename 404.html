@@ -5,6 +5,16 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>404 | Legado Ambiental</title>
+    <!-- SEO & Social Media Meta Tags -->
+    <meta name="description" content="Página no encontrada en Legado Ambiental.">
+    <meta property="og:title" content="404 | Legado Ambiental">
+    <meta property="og:description" content="La página solicitada no pudo ser encontrada.">
+    <meta property="og:image" content="https://lh3.googleusercontent.com/aida-public/AB6AXuAqmscbVHlzhMSGufVJIPHAbeXNuKcXemhcqZAvGrMwdJbxYRqn8NujTgRc0TtDDWCuBk8klfSuiOBlRyB4I9I7qcGRXnv5N8WjDK5YrY93NXDou-byxlzvuw8aaJulXpLVyQAU_fBNxyohbjY_ieOzlFk87mlJlDEHw2W041oK-_KKMEns8lE5Kf1T9iHTdHkI4R8eYS49VBlR8-IoaMb1lMOX0srUz1qjb_b6UJLlF177tEDwunIL0Z1qBT1HP06f181aJYMrSlXd">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="404 | Legado Ambiental">
+    <meta name="twitter:description" content="La página solicitada no pudo ser encontrada.">
+    <meta name="twitter:image" content="https://lh3.googleusercontent.com/aida-public/AB6AXuAqmscbVHlzhMSGufVJIPHAbeXNuKcXemhcqZAvGrMwdJbxYRqn8NujTgRc0TtDDWCuBk8klfSuiOBlRyB4I9I7qcGRXnv5N8WjDK5YrY93NXDou-byxlzvuw8aaJulXpLVyQAU_fBNxyohbjY_ieOzlFk87mlJlDEHw2W041oK-_KKMEns8lE5Kf1T9iHTdHkI4R8eYS49VBlR8-IoaMb1lMOX0srUz1qjb_b6UJLlF177tEDwunIL0Z1qBT1HP06f181aJYMrSlXd">
 
     <meta http-equiv="Content-Security-Policy"
         content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com; font-src 'self' https://fonts.gstatic.com https://fonts.googleapis.com; img-src 'self' data: https://lh3.googleusercontent.com; connect-src 'self';">
@@ -22,21 +32,34 @@
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
     </style>
+    <link rel="icon" type="image/webp" href="assets/images/logo/logo_final_v2.webp">
 </head>
 
 <body class="font-sans bg-background-light dark:bg-background-dark text-charcoal dark:text-gray-200 antialiased transition-colors duration-300 min-h-screen flex flex-col">
+    <noscript>
+        <div style="background-color: #f8d7da; color: #721c24; padding: 10px; text-align: center; z-index: 9999; position: relative;">
+            Para disfrutar de la experiencia completa y todas las funcionalidades de Legado Ambiental, por favor habilite JavaScript en su navegador.
+        </div>
+    </noscript>
+    <!-- Global Loader -->
+    <div id="global-loader" class="fixed inset-0 z-[99999] flex items-center justify-center bg-white dark:bg-[#121c27] transition-opacity duration-700">
+        <div class="relative flex flex-col items-center">
+            <img src="assets/images/logo/logo_final_v2.webp" alt="Cargando Legado Ambiental" class="h-20 w-auto mb-4 animate-pulse opacity-80">
+            <div class="w-12 h-12 border-4 border-primary/30 border-t-primary rounded-full animate-spin"></div>
+        </div>
+    </div>
     <!-- Top Navigation Bar (Simplified) -->
     <header class="w-full bg-white/95 dark:bg-background-dark/95 border-b border-gray-200 dark:border-gray-800 shadow-sm relative z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <a href="home.html" class="flex items-center gap-3 hover:opacity-90 transition-opacity">
-                    <img src="assets/images/logo_gral4_v1.1.png" alt="Legado Ambiental" class="h-16 w-auto object-contain">
+                    <img src="assets/images/logo/logo_final_v2.webp" alt="Legado Ambiental" class="h-16 w-auto object-contain">
                     <span class="text-navy dark:text-white text-xl font-black tracking-tight uppercase">Legado Ambiental</span>
                 </a>
                 
                 <div class="flex items-center gap-4">
-                    <button onclick="globalThis.toggleDarkMode()" aria-label="Toggle Dark Mode"
-                        class="theme-toggle-btn text-navy dark:text-gray-300 hover:text-primary transition-colors flex items-center justify-center p-2 rounded-full bg-gray-100 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary">
+                    <button data-action="toggle-theme" aria-label="Toggle Dark Mode"
+                        class="theme-toggle-btn text-navy dark:text-gray-300 hover:text-primary transition-colors flex items-center justify-center p-2 rounded-full bg-gray-100 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary" data-i18n="auto_generated.text_212">
                         <span class="material-symbols-outlined text-xl">dark_mode</span>
                     </button>
                     <!-- Language Switcher -->
@@ -58,13 +81,9 @@
         <div class="relative z-10 text-center max-w-2xl mx-auto py-16" data-aos="zoom-in" data-aos-duration="1000">
             <span class="material-symbols-outlined text-primary mb-6 animate-bounce text-8xl" style="font-size: 100px;">engineering</span>
             
-            <h1 class="font-serif text-5xl md:text-7xl font-black text-navy dark:text-white mb-4 tracking-tight" data-i18n="error_404.title">
-                404 - Página no encontrada
-            </h1>
+            <h1 class="font-serif text-5xl md:text-7xl font-black text-navy dark:text-white mb-4 tracking-tight" data-i18n="error_404.title">404 - Página no encontrada</h1>
             
-            <p class="text-lg md:text-xl text-slate-600 dark:text-gray-400 mb-10 max-w-lg mx-auto leading-relaxed" data-i18n="error_404.desc">
-                Lo sentimos, la página que buscas no existe o ha sido movida. Estamos construyendo nuevos componentes para mejorar su experiencia.
-            </p>
+            <p class="text-lg md:text-xl text-slate-600 dark:text-gray-400 mb-10 max-w-lg mx-auto leading-relaxed" data-i18n="error_404.desc">Lo sentimos, la página que buscas no existe o ha sido movida. Estamos construyendo nuevos componentes para mejorar su experiencia.</p>
             
             <a href="home.html" class="inline-flex flex-col sm:flex-row items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-xl font-bold transition-all shadow-eco hover:shadow-none hover:translate-y-1">
                 <span class="material-symbols-outlined">home</span>
@@ -75,7 +94,7 @@
 
     <!-- Footer Simple -->
     <footer class="bg-[#0b1118] py-8 border-t border-gray-800 text-center mt-auto">
-        <p class="text-sm text-gray-500 font-medium">© 2024 Legado Ambiental. <span data-i18n="footer.rights">Todos los derechos reservados.</span></p>
+        <p class="text-sm text-gray-500 font-medium">© 2024 Legado Ambiental. <span data-i18n="footer.rights"><strong>© 2026 Legado Ambiental S.A. de C.V. <br>Todos los derechos reservados.</strong></strong></span></p>
     </footer>
 
     <!-- Scripts -->
