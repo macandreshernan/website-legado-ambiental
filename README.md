@@ -569,3 +569,14 @@ Se solucionaron errores de indexación para motores de búsqueda y se ajustó la
 - `faq/contact_faq.html`
 - `index.html`
 - `markdown/SEO_RECOMMENDATIONS.md`
+
+## Fase 24: Actualización de Enlaces de Formularios de Cotización
+
+Se solucionó un problema de duplicación de enlaces en los botones de "Realizar cotización" dentro de la sección "Ingeniería Ambiental". Anteriormente todos los servicios apuntaban al mismo formulario.
+
+### 1. Corrección de Direccionamiento (Google Forms)
+- Se actualizaron las tarjetas (Cards 1 al 4) para redirigir a los clientes potenciales a su respectivo cuestionario técnico de Google Forms.
+- Se aseguró que los parámetros query solicitados (ej. `?usp=dialog`, `?usp=header`) estuvieran presentes para una experiencia de usuario óptima y limpia.
+
+### Archivos Modificados
+- `services_overview/services.html`
