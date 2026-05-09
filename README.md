@@ -583,3 +583,25 @@ Se solucionó un problema de duplicación de enlaces en los botones de "Realizar
 
 ## Fase 25: Prueba de Webhook CI/CD
 - Test commit to trigger Hostinger auto-deployment via GitHub Webhooks.
+
+## Fase 26: Implementación Completa de Mejoras (Análisis Devin)
+
+**Objetivo:** Aplicar las recomendaciones técnicas, de SEO y accesibilidad detectadas en la auditoría "Análisis Devin", mejorando la performance y el mantenimiento del sitio sin afectar el pipeline CI/CD de Hostinger.
+
+**Acciones Realizadas:**
+
+- **Estructura y Gitflow:** Se trabajó sobre la rama `feature/analisis-devin-mejoras`. Se excluyó el archivo de auditoría del repositorio mediante `.gitignore`.
+- **Limpieza de Código:** 
+  - Se eliminó el archivo huérfano `ServiceCard_Component.jsx`.
+  - Se removió el uso forzado de la fuente `Public Sans` de los archivos HTML para cumplir con la estandarización a `Manrope`/`Merriweather`.
+  - Se unificó la importación de `Material Symbols`, removiendo los enlaces redundantes.
+- **Optimización de Assets & Performance:**
+  - Se alojó localmente la imagen `og_image.png` (descargada de Google) y se actualizaron las etiquetas `og:image` en todas las páginas.
+  - La librería AOS (`aos.css` y `aos.js`) ahora se carga localmente para evitar dependencias exclusivas de CDN externos.
+  - Las secciones Hero que utilizaban `background-image` en línea fueron refactorizadas a elementos `<img>` con `object-fit: cover`, mejorando el soporte LCP.
+- **SEO & Accesibilidad:**
+  - Se actualizaron los metadatos JSON-LD de `Schema.org` de todas las páginas para utilizar los datos reales (dirección y teléfono) en lugar de datos dummy.
+  - Se reemplazaron todas las directivas `href="javascript:void(0)"` por `href="#!"` y se movieron los manejadores `onclick` a eventos unificados en `assets/js/i18n.js` para cumplir con las Content-Security-Policies (CSP).
+  - Se inyectaron `aria-label` descriptivos a los iconos de redes sociales y botones auxiliares en el Footer.
+  - Se mejoró el contraste en Dark Mode (texto gris a `text-gray-300`).
+- **Mantenibilidad:** El año del Copyright se renderiza de forma dinámica evaluando `new Date().getFullYear()` dentro del motor `i18n.js`.
