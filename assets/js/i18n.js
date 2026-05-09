@@ -104,7 +104,7 @@ const translations = {
                 "phone_2": "72 2672 7212",
                 "email": "<strong>legado.ambiental.mx@gmail.com</strong>"
             },
-            "rights": "<strong>© 2026 Legado Ambiental S.A. de C.V. <br>Todos los derechos reservados.</strong>",
+            "rights": "<strong>© {{year}} Legado Ambiental S.A. de C.V. <br>Todos los derechos reservados.</strong>",
             "privacy": "Política de Privacidad",
             "terms": "Términos de Servicio",
             "sitemap": "Mapa del Sitio"
@@ -565,7 +565,7 @@ const translations = {
             "auto_generated.text_208": "<span class=\"material-symbols-outlined text-lg mr-2\">home</span>\n<span data-i18n=\"nav.home\">Inicio</span>",
             "auto_generated.text_209": "<span class=\"material-symbols-outlined\">share</span>",
             "auto_generated.text_210": "<span class=\"material-symbols-outlined\">mail</span>",
-            "auto_generated.text_211": "© 2024 Legado Ambiental. <span data-i18n=\"footer.rights\"><strong>© 2026 Legado Ambiental S.A. de C.V. <br/>Todos los derechos reservados.</strong></span>",
+            "auto_generated.text_211": "© 2024 Legado Ambiental. <span data-i18n=\"footer.rights\"><strong>© {{year}} Legado Ambiental S.A. de C.V. <br/>Todos los derechos reservados.</strong></span>",
             "auto_generated.text_212": "<span class=\"material-symbols-outlined text-xl\">dark_mode</span>",
             "auto_generated.text_213": "<span class=\"material-symbols-outlined\">home</span>\n<span data-i18n=\"error_404.btn\">Volver al Inicio</span>"
         }
@@ -665,7 +665,7 @@ const translations = {
                 "phone_2": "72 2672 7212",
                 "email": "<strong>legado.ambiental.mx@gmail.com</strong>"
             },
-            "rights": "<strong>© 2026 Legado Ambiental S.A. de C.V. <br>All rights reserved.</strong>",
+            "rights": "<strong>© {{year}} Legado Ambiental S.A. de C.V. <br>All rights reserved.</strong>",
             "privacy": "Privacy Policy",
             "terms": "Terms of Service",
             "sitemap": "Sitemap"
@@ -1126,7 +1126,7 @@ const translations = {
             "auto_generated.text_208": "<span class=\"material-symbols-outlined text-lg mr-2\">home</span>\n<span data-i18n=\"nav.home\">Home</span>",
             "auto_generated.text_209": "<span class=\"material-symbols-outlined\">share</span>",
             "auto_generated.text_210": "<span class=\"material-symbols-outlined\">mail</span>",
-            "auto_generated.text_211": "© 2024 Legado Ambiental. <span data-i18n=\"footer.rights\"><strong>© 2026 Legado Ambiental S.A. de C.V. <br/>All rights reserved.</strong></span>",
+            "auto_generated.text_211": "© 2024 Legado Ambiental. <span data-i18n=\"footer.rights\"><strong>© {{year}} Legado Ambiental S.A. de C.V. <br/>All rights reserved.</strong></span>",
             "auto_generated.text_212": "<span class=\"material-symbols-outlined text-xl\">dark_mode</span>",
             "auto_generated.text_213": "<span class=\"material-symbols-outlined\">home</span>\n<span data-i18n=\"error_404.btn\">Back to Home</span>"
         }
@@ -1207,7 +1207,8 @@ function applyTranslations(translationsData) {
         // Because keys in JSON are nested (e.g. "nav.about"), we need to resolve them
         // In the original JSON structure, they were nested.
         // Let's implement a resolver.
-        const text = getValueByPath(translationsData, key);
+        let text = getValueByPath(translationsData, key);
+        if (text && typeof text === "string") { text = text.replace("{{year}}", new Date().getFullYear()); }
 
         if (text) {
             // Handle different element types if necessary (e.g., inputs)
@@ -1223,7 +1224,8 @@ function applyTranslations(translationsData) {
     const placeholders = document.querySelectorAll('[data-i18n-placeholder]');
     placeholders.forEach(element => {
         const key = element.getAttribute('data-i18n-placeholder');
-        const text = getValueByPath(translationsData, key);
+        let text = getValueByPath(translationsData, key);
+        if (text && typeof text === "string") { text = text.replace("{{year}}", new Date().getFullYear()); }
         if (text) {
             element.setAttribute('placeholder', text);
         }
@@ -1308,6 +1310,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             } else if (action === 'navigate') {
                 window.location.href = actionBtn.getAttribute('data-href');
+            } else if (action === 'navigate-blank') {
+                window.open(actionBtn.getAttribute('data-href'), '_blank');
             }
         }
     });
