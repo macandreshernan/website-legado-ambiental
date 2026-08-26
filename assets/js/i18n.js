@@ -252,36 +252,43 @@ const translations = {
                 "title": "Un Legado de Excelencia en Ingeniería",
                 "desc": "Explora los hitos que han definido nuestro crecimiento e impacto en la industria de la construcción durante la última década."
             },
+            "cta": {
+                "title": "¿Listo para ser parte de nuestro próximo capítulo?",
+                "desc": "Nos asociamos con visionarios que buscan construir algo duradero. Comencemos a planificar tu proyecto.",
+                "btn_contact": "Contactar Ahora",
+                "btn_curriculum": "Descargar Currículum Empresarial",
+                "btn_portfolio": "Descargar Portafolio"
+            },
             "timeline": {
                 "item1": {
-                    "label": "Industria",
-                    "title": "Evaluación Ambiental - <strong>Grupo Serla</strong>",
-                    "desc": "Estudio integral corporativo bajo la <strong>NOM-052-SEMARNAT</strong> (RPs), <strong>NOM-085</strong> (Emisiones) y las disposiciones del <strong>RCDF</strong>, asegurando operatividad sin externalidades negativas."
+                    "label": "Hidro Meteorológico",
+                    "title": "Alcantarillado Pluvial - Hyundai Interlomas",
+                    "desc": "Estudio hidro-meteorológico y proyecto ejecutivo de la red de alcantarillado pluvial en Huixquilucan, Estado de México."
                 },
                 "item2": {
-                    "label": "Hídrico",
-                    "title": "Saneamiento - Río Tiloxtoc",
-                    "desc": "Planeación, muestreo y mitigación conjunta con el <strong>CIITEC-IPN</strong> acorde a los lineamientos de la <strong>Ley de Aguas Nacionales</strong> y <strong>SEMARNAT</strong> para el rescate ecológico."
+                    "label": "Escuelas",
+                    "title": "Rehabilitación de Laboratorios - Colegio de Bachilleres",
+                    "desc": "Proyecto Ejecutivo para la rehabilitación de 15 laboratorios del Colegio de Bachilleres, Plantel 02."
                 },
                 "item3": {
-                    "label": "Academia",
-                    "title": "Tecnología Sustentable - <strong>ITESM</strong>",
-                    "desc": "Implementación de redes hidrosanitarias cerradas y Plantas de Tratamiento Paquete cumpliendo con las <strong>Normas Técnicas</strong> del <strong>Reglamento de Construcciones</strong> y el <strong>Tecnológico de Monterrey</strong>."
+                    "label": "Saneamiento de Río",
+                    "title": "Planta de Tratamiento - IMMSA",
+                    "desc": "Proyecto de Planta de Tratamiento de Agua Residual proveniente de galvanoplastia, para remoción de cianuro y metales, mediante proceso físico-químico."
                 },
                 "item4": {
-                    "label": "Especialidad",
-                    "title": "Tratamiento Alta Eficiencia - <strong>IMMSA</strong>",
-                    "desc": "Diseño estructural avanzado bajo requerimientos sísmicos y la <strong>NOM-001-SEMARNAT-1996</strong> para la máxima remoción fisicoquímica de metales pesados en el sector metalúrgico."
+                    "label": "Salud",
+                    "title": "Auditoría Técnica - Senado de la República",
+                    "desc": "Auditoría Técnica del Manejo Integral de los Residuos Sólidos, de Manejo Especial y peligrosos, para la entrega recepción del nuevo edificio del Senado de la República."
                 },
                 "item5": {
-                    "label": "Salud",
-                    "title": "Unidades Clínicas y Hospitales",
-                    "desc": "Adecuación estructural catalogada como <strong>Grupo A</strong> (U=1.5) integrando alta bioseguridad bajo la <strong>NOM-087-ECOL-SSA1</strong> en materia de <strong>Residuos Peligrosos Biológico Infecciosos</strong>."
+                    "label": "Especialidad",
+                    "title": "Verificación Técnica - ESIA/IPN",
+                    "desc": "Verificación Técnica de la construcción y funcionamiento de La Planta de Tratamiento de Agua Residual proveniente de sanitarios y de la Planta de Tratamiento Físico-Químico del Agua Pluvial."
                 },
                 "item6": {
-                    "label": "<strong>1999</strong>",
-                    "title": "Fundación y Obras Civiles",
-                    "desc": "Consolidación operacional operando en conjunto con el <strong>Título Sexto del RCDF</strong>, logrando una firme planeación empresarial equilibrada entre construcción y medio ambiente."
+                    "label": "Industria",
+                    "title": "Nave Industrial - San Agustín Tlaxiaca",
+                    "desc": "Proyecto ejecutivo incluyendo diseño arquitectónico y de las instalaciones hidráulica, sanitaria, pluvial, eléctrica y de gas."
                 }
             }
         },
@@ -436,7 +443,7 @@ const translations = {
             "auto_generated.text_079": "<strong>Sustentabilidad Hídrica:</strong> Sistemas alternativos de reciclaje o\n                                        reutilización, programas de ahorro de agua y estudios técnicos de ahorro.",
             "auto_generated.text_080": "<strong>Análisis Especializado:</strong> Estudios hidrometeorológicos para\n                                        planeación y prevención.",
             "auto_generated.text_081": "Realizar cotización",
-            "auto_generated.text_082": "<strong>Evaluaciones de Impacto:</strong> Estudios de impacto ambiental\n                                        (EsIA), diagnósticos y evaluaciones ambientales preventivas.",
+            "auto_generated.text_082": "<strong>Evaluaciones de Impacto:</strong> Estudios de impacto ambiental\n                                        , diagnósticos y evaluaciones ambientales preventivas.",
             "auto_generated.text_083": "<strong>Documentación Oficial:</strong> Elaboración de informes técnicos y\n                                        dictámenes ambientales con validez legal.",
             "auto_generated.text_084": "Realizar cotización",
             "auto_generated.text_085": "<strong>Capacitación:</strong> Cursos, talleres y programas de formación en\n                                        temas ambientales.",
@@ -463,9 +470,9 @@ const translations = {
             "auto_generated.text_106": "Realizar cotización",
             "auto_generated.text_107": "<strong>Verificación</strong> constante de trazos en terreno real para\n                                        garantizar el alineamiento con planimetría.",
             "auto_generated.text_108": "Realizar cotización",
-            "auto_generated.text_109": "<strong>Instauración de Departamentos de SST:</strong> Diseño, implementación\n                                        y coordinación integral de departamentos de Seguridad e Higiene\n                                        Industrial.",
+            "auto_generated.text_109": "<strong>Instauración de Departamentos de SHI:</strong> Diseño, implementación\n                                        y coordinación integral de departamentos de Seguridad e Higiene\n                                        Industrial.",
             "auto_generated.text_110": "<strong>Auditorías de Cumplimiento Normativo:</strong> Diagnóstico y\n                                        aseguramiento de las Normas Oficiales Mexicanas (NOM) vigentes (Seguridad, Salud\n                                        y Organización).",
-            "auto_generated.text_111": "<strong>Gestión de Comisiones Mixtas:</strong> Constitución y capacitación de\n                                        la Comisión de Seguridad e Higiene (NOM-019-STPS).",
+            "auto_generated.text_111": "<strong>Gestión de Comisiones Mixtas:</strong> Constitución y capacitación de\n                                        la Comisión de Seguridad e Higiene (NOM-019-STPS-2011).",
             "auto_generated.text_112": "<strong>Elaboración de Programas Específicos:</strong> Manuales de seguridad,\n                                        programas de protección civil y planes de respuesta a emergencias.",
             "auto_generated.text_113": "Realizar cotización",
             "auto_generated.text_114": "<strong>Análisis de Riesgos por Puesto de Trabajo\n                                            (AST):</strong>Identificación de peligros y evaluación de riesgos para\n                                        prevenir accidentes y enfermedades laborales.",
@@ -473,7 +480,7 @@ const translations = {
             "auto_generated.text_116": "Realizar cotización",
             "auto_generated.text_117": "<strong>Emisión de Constancias DC-3:</strong>Entrega de documentos de\n                                        habilidades laborales con validez ante inspecciones federales.",
             "auto_generated.text_118": "<strong>Entrenamiento en Trabajos de Alto Riesgo:</strong> Capacitación\n                                        específica en alturas, espacios confinados, corte y soldadura, y manejo de\n                                        sustancias químicas.",
-            "auto_generated.text_119": "<strong>Formación de Brigadas de Emergencia:</strong> CPrimeros auxilios,\n                                        prevención y combate de incendios, y evacuación de inmuebles.",
+            "auto_generated.text_119": "<strong>Formación de Brigadas de Emergencia:</strong> Primeros auxilios,\n                                        prevención y combate de incendios, y evacuación de inmuebles.",
             "auto_generated.text_120": "Realizar cotización",
             "auto_generated.text_121": "<a class=\"inline-flex items-center text-sm font-medium text-gray-300 hover:text-white transition-colors\" href=\"../home.html\">\n<span class=\"material-symbols-outlined text-lg mr-2\">home</span>\n<span data-i18n=\"nav.home\">Inicio</span>\n</a>",
             "auto_generated.text_122": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Diagnóstico y Caracterización: </strong> Estudios de caracterización\n                                        de residuos sólidos, diagnósticos y muestreo.\n                                    </span>",
@@ -483,7 +490,7 @@ const translations = {
             "auto_generated.text_126": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Tratamiento de Aguas:</strong> Diseño, construcción y supervisión de\n                                        plantas de tratamiento de aguas residuales.</span>",
             "auto_generated.text_127": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Sustentabilidad Hídrica:</strong> Sistemas alternativos de reciclaje o\n                                        reutilización, programas de ahorro de agua y estudios técnicos de ahorro.</span>",
             "auto_generated.text_128": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Análisis Especializado:</strong> Estudios hidrometeorológicos para\n                                        planeación y prevención.</span>",
-            "auto_generated.text_129": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Evaluaciones de Impacto:</strong> Estudios de impacto ambiental\n                                        (EsIA), diagnósticos y evaluaciones ambientales preventivas.</span>",
+            "auto_generated.text_129": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Evaluaciones de Impacto:</strong> Estudios de impacto ambiental\n                                        , diagnósticos y evaluaciones ambientales preventivas.</span>",
             "auto_generated.text_130": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Documentación Oficial:</strong> Elaboración de informes técnicos y\n                                        dictámenes ambientales con validez legal.</span>",
             "auto_generated.text_131": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Capacitación:</strong> Cursos, talleres y programas de formación en\n                                        temas ambientales.</span>",
             "auto_generated.text_132": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Vivienda Unifamiliar:</strong> Construcción de casas personalizadas y\n                                        residencias de alto nivel.</span>",
@@ -500,9 +507,9 @@ const translations = {
             "auto_generated.text_143": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Ubicación</strong> de coordenadas geoespaciales precisas usando\n                                        tecnología global de vanguardia.</span>",
             "auto_generated.text_144": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Generación</strong> de entornos de terreno tridimensionales (3D) para\n                                        cálculos volumétricos exactos.</span>",
             "auto_generated.text_145": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Verificación</strong> constante de trazos en terreno real para\n                                        garantizar el alineamiento con planimetría.</span>",
-            "auto_generated.text_146": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Instauración de Departamentos de SST:</strong> Diseño, implementación\n                                        y coordinación integral de departamentos de Seguridad e Higiene\n                                        Industrial.</span>",
+            "auto_generated.text_146": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Instauración de Departamentos de SHI:</strong> Diseño, implementación\n                                        y coordinación integral de departamentos de Seguridad e Higiene\n                                        Industrial.</span>",
             "auto_generated.text_147": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Auditorías de Cumplimiento Normativo:</strong> Diagnóstico y\n                                        aseguramiento de las Normas Oficiales Mexicanas (NOM) vigentes (Seguridad, Salud\n                                        y Organización).</span>",
-            "auto_generated.text_148": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Gestión de Comisiones Mixtas:</strong> Constitución y capacitación de\n                                        la Comisión de Seguridad e Higiene (NOM-019-STPS).</span>",
+            "auto_generated.text_148": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Gestión de Comisiones Mixtas:</strong> Constitución y capacitación de\n                                        la Comisión de Seguridad e Higiene (NOM-019-STPS-2011).</span>",
             "auto_generated.text_149": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Elaboración de Programas Específicos:</strong> Manuales de seguridad,\n                                        programas de protección civil y planes de respuesta a emergencias.</span>",
             "auto_generated.text_150": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Análisis de Riesgos por Puesto de Trabajo\n                                            (AST):</strong>Identificación de peligros y evaluación de riesgos para\n                                        prevenir accidentes y enfermedades laborales.</span>",
             "auto_generated.text_151": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Verificación de Equipos y Maquinaria:</strong> Inspección de\n                                        condiciones de seguridad en herramientas, andamios y maquinaria pesada.</span>",
@@ -813,36 +820,43 @@ const translations = {
                 "title": "A Legacy of Engineering Excellence",
                 "desc": "Explore the milestones that have defined our growth and impact in the construction industry over the last decade."
             },
+            "cta": {
+                "title": "Ready to Be Part of Our Next Chapter?",
+                "desc": "We partner with visionaries seeking to build something lasting. Let's start planning your project.",
+                "btn_contact": "Contact Now",
+                "btn_curriculum": "Download Corporate Curriculum",
+                "btn_portfolio": "Download Portfolio"
+            },
             "timeline": {
                 "item1": {
-                    "label": "Industry",
-                    "title": "Environmental Assessment - <strong>Grupo Serla</strong>",
-                    "desc": "Comprehensive corporate study under <strong>NOM-052-SEMARNAT</strong> (Hazardous Waste), <strong>NOM-085</strong> (Emissions), and <strong>RCDF</strong> provisions, ensuring operations with no negative externalities."
+                    "label": "Hydro Meteorological",
+                    "title": "Storm Sewer - Hyundai Interlomas",
+                    "desc": "Hydro-meteorological study and executive project of the storm sewer network in Huixquilucan, State of Mexico."
                 },
                 "item2": {
-                    "label": "Water",
-                    "title": "Sanitation - Tiloxtoc River",
-                    "desc": "Planning, sampling, and joint mitigation with <strong>CIITEC-IPN</strong> according to <strong>National Water Law</strong> and <strong>SEMARNAT</strong> guidelines for ecosystem rescue."
+                    "label": "Schools",
+                    "title": "Laboratory Rehabilitation - Colegio de Bachilleres",
+                    "desc": "Executive Project for the rehabilitation of 15 laboratories of the Colegio de Bachilleres, Campus 02."
                 },
                 "item3": {
-                    "label": "Academia",
-                    "title": "Sustainable Tech - <strong>ITESM</strong>",
-                    "desc": "Implementation of closed plumbing networks and Package Treatment Plants complying with <strong>Technical Standards</strong> of <strong>Building Regulations</strong> and <strong>ITESM</strong> facilities."
+                    "label": "River Sanitation",
+                    "title": "Treatment Plant - IMMSA",
+                    "desc": "Wastewater Treatment Plant project from electroplating, for cyanide and metals removal, through physical-chemical process."
                 },
                 "item4": {
-                    "label": "Specialty",
-                    "title": "High Efficiency WWTP - <strong>IMMSA</strong>",
-                    "desc": "Advanced structural design under seismic requirements and <strong>NOM-001-SEMARNAT-1996</strong> for maximum physicochemical removal of heavy metals in mining."
+                    "label": "Health",
+                    "title": "Technical Audit - Senate of the Republic",
+                    "desc": "Technical Audit of the Comprehensive Management of Solid, Special Handling, and Hazardous Waste, for the delivery-reception of the New building of the Senate of the Republic."
                 },
                 "item5": {
-                    "label": "Health",
-                    "title": "Clinical & Hospital Units",
-                    "desc": "Structural adaptation categorized as <strong>Group A</strong> (U=1.5) integrating maximal biosecurity under <strong>NOM-087-ECOL-SSA1</strong> regarding <strong>Hazardous Biological Infectious Wastes</strong>."
+                    "label": "Specialty",
+                    "title": "Technical Verification - ESIA/IPN",
+                    "desc": "Technical Verification of the construction and operation of the Wastewater Treatment Plant from restrooms and the Physical-Chemical Stormwater Treatment Plant."
                 },
                 "item6": {
-                    "label": "<strong>1999</strong>",
-                    "title": "Foundation & Civil Works",
-                    "desc": "Infrastructure consolidation operating strictly aligned with <strong>Title Six of the RCDF</strong>, achieving a balanced corporate symbiosis between construction and environment."
+                    "label": "Industry",
+                    "title": "Industrial Building - San Agustín Tlaxiaca",
+                    "desc": "Executive project including architectural design and hydraulic, sanitary, storm, electrical, and gas installations."
                 }
             }
         },
@@ -1026,7 +1040,7 @@ const translations = {
             "auto_generated.text_108": "Get a Quote",
             "auto_generated.text_109": "<strong>Establishment of OHS Departments:</strong> Design, implementation, and comprehensive coordination of Occupational Health and Safety departments.",
             "auto_generated.text_110": "<strong>Regulatory Compliance Audits:</strong> Diagnosis and assurance of current Official Mexican Standards (NOM) (Safety, Health and Organization).",
-            "auto_generated.text_111": "<strong>Management of Joint Commissions:</strong> Constitution and training of the Health and Safety Commission (NOM-019-STPS).",
+            "auto_generated.text_111": "<strong>Management of Joint Commissions:</strong> Constitution and training of the Health and Safety Commission (NOM-019-STPS-2011).",
             "auto_generated.text_112": "<strong>Development of Specific Programs:</strong> Safety manuals, civil protection programs and emergency response plans.",
             "auto_generated.text_113": "Get a Quote",
             "auto_generated.text_114": "<strong>Job Hazard Analysis (JHA):</strong>Identification of hazards and risk assessment to prevent occupational accidents and illnesses.",
@@ -1063,7 +1077,7 @@ const translations = {
             "auto_generated.text_145": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Verification</strong> of layouts continuously on real terrain to ensure alignment with planimetry.</span>",
             "auto_generated.text_146": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Establishment of OHS Departments:</strong> Design, implementation, and comprehensive coordination of Occupational Health and Safety departments.</span>",
             "auto_generated.text_147": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Regulatory Compliance Audits:</strong> Diagnosis and assurance of current Official Mexican Standards (NOM) (Safety, Health and Organization).</span>",
-            "auto_generated.text_148": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Management of Joint Commissions:</strong> Constitution and training of the Health and Safety Commission (NOM-019-STPS).</span>",
+            "auto_generated.text_148": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Management of Joint Commissions:</strong> Constitution and training of the Health and Safety Commission (NOM-019-STPS-2011).</span>",
             "auto_generated.text_149": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Development of Specific Programs:</strong> Safety manuals, civil protection programs and emergency response plans.</span>",
             "auto_generated.text_150": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Job Hazard Analysis (JHA):</strong>Identification of hazards and risk assessment to prevent occupational accidents and illnesses.</span>",
             "auto_generated.text_151": "<span class=\"material-symbols-outlined text-primary text-[1rem] mt-0.5\">check_circle</span>\n<span><strong>Verification of Equipment and Machinery:</strong> Inspection of safety conditions in tools, scaffolding and heavy machinery.</span>",

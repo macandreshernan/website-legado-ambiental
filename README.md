@@ -583,3 +583,20 @@ Se solucionó un problema de duplicación de enlaces en los botones de "Realizar
 
 ## Fase 25: Prueba de Webhook CI/CD
 - Test commit to trigger Hostinger auto-deployment via GitHub Webhooks.
+
+## Fase 26: Rediseño UI/UX de CTA y Enlace a Documentos Oficiales
+
+Se optimizó la sección CTA (Call to Action) en la página de Experiencia (`our_experience.html`) aplicando principios de UX para evitar "Parálisis de Decisión" (Ley de Hick) y mejorar la conversión.
+
+### 1. Reestructuración Visual (Glassmorphism)
+- **Layout Asimétrico:** Se abandonó el diseño centrado con botones del mismo tamaño. Ahora, el CTA primario ("Contactar Ahora") domina el lado izquierdo con un diseño de alto impacto y mayor peso visual.
+- **Tarjeta de Descargas:** Las acciones secundarias (Descargar Currículum Empresarial y Portafolio) se agruparon en el lado derecho dentro de una tarjeta translúcida (Glassmorphism).
+- **Micro-Interacciones:** Se aplicaron animaciones AOS (Scroll Reveal) secuenciales y efectos sutiles de levitación al interactuar con la tarjeta de cristal.
+
+### 2. Sincronización i18n y Enlace a Recursos
+- Se actualizaron las traducciones correctas en `assets/js/i18n.js` bajo `experience_page.cta` (Español e Inglés) usando terminología corporativa.
+- Se vincularon los botones de descarga directamente a los documentos PDF oficiales alojados en `assets/docs/`.
+
+### Archivos Modificados
+- `experience_timeline/our_experience.html`
+- `assets/js/i18n.js`
