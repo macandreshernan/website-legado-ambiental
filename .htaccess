@@ -1,1 +1,6 @@
-DirectoryIndex home.html index.html index.php
+DirectoryIndex home.html index.php
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^index\.html$ /home.html [R=301,L]
+</IfModule>

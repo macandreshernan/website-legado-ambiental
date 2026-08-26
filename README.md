@@ -584,7 +584,19 @@ Se solucionó un problema de duplicación de enlaces en los botones de "Realizar
 ## Fase 25: Prueba de Webhook CI/CD
 - Test commit to trigger Hostinger auto-deployment via GitHub Webhooks.
 
-## Fase 26: Rediseño UI/UX de CTA y Enlace a Documentos Oficiales
+## Fase 26: Consolidación de Punto de Entrada (home.html) y Redirección SEO
+Se consolidó `home.html` como el único punto de entrada autorizado, previniendo el contenido duplicado con `index.html`.
+
+### 1. Configuración de Redirección y Fallbacks
+- **Redirección de Servidor**: Se añadió una regla `RewriteRule` (301 permanente) en `.htaccess` para redirigir cualquier acceso directo de `/index.html` hacia `/home.html`.
+- **Fallback HTML**: Se inyectó la etiqueta `<meta http-equiv="refresh" content="0; url=/home.html">` en `index.html` garantizando una redirección inmediata en cualquier entorno.
+
+### 2. Optimización y Consolidación de Autoridad (SEO)
+- **Canonicalización**: Se actualizaron las etiquetas `<link rel="canonical">` e `hreflang` dentro de `index.html` para que apunten a `https://www.legadoambiental.com.mx/home.html`.
+- **Actualización de Sitemap**: Se comprobó la remoción de `index.html` del mapa del sitio (`sitemap.xml`) forzando a los motores a indexar la página principal.
+- **Documentación**: Se versionó el reporte de auditoría técnica (`prompt-mejoras-recomendaciones.md`).
+
+## Fase 27: Rediseño UI/UX de CTA y Enlace a Documentos Oficiales
 
 Se optimizó la sección CTA (Call to Action) en la página de Experiencia (`our_experience.html`) aplicando principios de UX para evitar "Parálisis de Decisión" (Ley de Hick) y mejorar la conversión.
 
@@ -601,7 +613,7 @@ Se optimizó la sección CTA (Call to Action) en la página de Experiencia (`our
 - `experience_timeline/our_experience.html`
 - `assets/js/i18n.js`
 
-## Fase 27: Actualización de Currículum Empresarial (HTML y PDF)
+## Fase 28: Actualización de Currículum Empresarial (HTML y PDF)
 
 Se realizaron ajustes de precisión técnica y gramatical sobre el documento oficial de currículum de la empresa, garantizando que el PDF generado a partir del HTML refleje información histórica fidedigna y redacción estandarizada.
 
