@@ -600,3 +600,18 @@ Se optimizó la sección CTA (Call to Action) en la página de Experiencia (`our
 ### Archivos Modificados
 - `experience_timeline/our_experience.html`
 - `assets/js/i18n.js`
+
+## Fase 27: Actualización de Currículum Empresarial (HTML y PDF)
+
+Se realizaron ajustes de precisión técnica y gramatical sobre el documento oficial de currículum de la empresa, garantizando que el PDF generado a partir del HTML refleje información histórica fidedigna y redacción estandarizada.
+
+### 1. Correcciones de Contenido (Curricula_Legado_Ambiental_2026.html)
+- **Fechas Precisas:** Se reemplazó el marcador temporal indefinido "S/F" (Sin Fecha) por las fechas exactas de ejecución de los proyectos históricos (ej. "Ago 2006", "1999, 2003, 2005, 2006") en los registros de Industrias Sagma y Capacitaciones corporativas (SS, ILADE/PEMEX, ITESM).
+- **Estandarización Geográfica:** Se corrigió la abreviatura de "Estado de México" pasando de "Edo. Mex." a la convención formal "Edo. de Méx." en múltiples descripciones de proyectos (Conjunto Urbano Arcángel la Paz, Planta Huehuetoca).
+
+### 2. Generación de Artefacto (PDF)
+- Tras la modificación del código fuente HTML, se regeneró el artefacto final `Curricula_Empresarial_Legado_Ambiental_2026.pdf` para heredar las correcciones y mantener sincronizado el recurso descargable del sitio web.
+
+### Archivos Modificados
+- `assets/docs/Curricula_Legado_Ambiental_2026.html`
+- `assets/docs/Curricula_Empresarial_Legado_Ambiental_2026.pdf`
