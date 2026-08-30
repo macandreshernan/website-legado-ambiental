@@ -627,3 +627,24 @@ Se realizaron ajustes de precisión técnica y gramatical sobre el documento ofi
 ### Archivos Modificados
 - `assets/docs/Curricula_Legado_Ambiental_2026.html`
 - `assets/docs/Curricula_Empresarial_Legado_Ambiental_2026.pdf`
+
+## Fase 28: Revisión Ortográfica y Gramatical del Currículum (HTML)
+
+Se ejecutó una revisión integral del archivo `Curricula_Legado_Ambiental_2026_v2.html`, aplicando rigurosamente las normas ortográficas y gramaticales de la Real Academia Española (RAE) para purgar vicios corporativos (uso excesivo de mayúsculas).
+
+### 1. Correcciones de Mayúsculas (Capitalización)
+- **Sustantivos Comunes y Adjetivos**: Se pasaron a minúscula sustantivos comunes que estaban erróneamente en mayúscula (estilo título de inglés), como "Evaluación", "Corrección", "Planta", "Tratamiento", "Agencias automotrices", etc.
+- **Documentos y Listados**: Las descripciones de proyectos (ej. "Diagnóstico técnico", "Proyectos ejecutivos") ahora siguen las reglas del español, donde solo la primera letra lleva mayúscula.
+- **Topónimos y Nombres Propios**: Se validó y corrigió el uso de mayúsculas en artículos y preposiciones que forman parte de nombres propios (ej. "La Paz", "Los Reyes", Edificio Pablo "La Llave").
+
+### 2. Prefijos y Palabras Compuestas
+- Se unieron prefijos a sus respectivas bases sin utilizar guion, pasando de `hidro-meteorológico` a `hidrometeorológico`.
+- Las palabras compuestas (como `físico-químico`) se unificaron eliminando la tilde del primer elemento, quedando como `fisicoquímico` / `fisicoquímica`.
+
+### 3. Ajustes Varios
+- Se modificaron conjunciones (`Y` a `y`).
+- Se insertaron comas de rigor en denominaciones jurídicas (`Impramex, S.A. de C.V.`).
+- Se estandarizó la presentación visual respetando los espaciadores de diseño (`<span>`) y las palabras clave en negrita (`<strong>`).
+
+### Archivos Modificados
+- `assets/docs/Curricula_Legado_Ambiental_2026_v2.html`
