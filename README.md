@@ -636,3 +636,19 @@ Se ejecutó una revisión integral del archivo `Curricula_Legado_Ambiental_2026_
 
 ### Archivos Modificados
 - `assets/docs/Curricula_Legado_Ambiental_2026_v2.html`
+
+## Fase 29: Actualización del CTA de Descarga de Portafolio
+
+Se optimizó el botón de "Ver Portafolio" en la sección final de la página "Quiénes Somos" para transformarlo en un enlace de descarga directa del documento oficial, mejorando así la funcionalidad y la retroalimentación visual (UI/UX).
+
+### 1. Refactorización del Botón (Descarga de PDF)
+- **Transformación de Etiqueta**: Se reemplazó la etiqueta `<button>` estática por un enlace `<a>` funcional.
+- **Enrutamiento y Descarga**: Se vinculó directamente al archivo PDF oficial (`Portafolio_Proyectos_Legado_Ambiental_2026.pdf`). Se añadieron los atributos `target="_blank"` para visualización segura en una nueva pestaña y `download` para forzar la descarga en navegadores compatibles.
+
+### 2. Mejoras de UI e Interactividad
+- **Rediseño Visual**: Se actualizó el diseño abandonando el estilo contorno por un botón sólido en color primario (`bg-primary`). Esto mejora el contraste sobre el fondo oscuro y equilibra el peso visual respecto al botón de "Iniciar Consulta".
+- **Sombra y Enfoque**: Inclusión de sombras profundas (`shadow-[0_4px_16px_rgba(0,0,0,0.3)]`) y anillos de accesibilidad por teclado (`focus:ring-offset-[#101922]`).
+- **Micro-Interacción (Ícono)**: Se agregó el ícono de "download" de la suite Material Symbols con un efecto de desplazamiento vertical en "Hover" (`group-hover:translate-y-1`), brindando al usuario una señal intuitiva e interactiva sobre la acción.
+
+### Archivos Modificados
+- `about_us/about_us.html`
