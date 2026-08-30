@@ -595,3 +595,56 @@ Se consolidó `home.html` como el único punto de entrada autorizado, previniend
 - **Canonicalización**: Se actualizaron las etiquetas `<link rel="canonical">` e `hreflang` dentro de `index.html` para que apunten a `https://www.legadoambiental.com.mx/home.html`.
 - **Actualización de Sitemap**: Se comprobó la remoción de `index.html` del mapa del sitio (`sitemap.xml`) forzando a los motores a indexar la página principal.
 - **Documentación**: Se versionó el reporte de auditoría técnica (`prompt-mejoras-recomendaciones.md`).
+
+## Fase 27: Rediseño UI/UX de CTA y Enlace a Documentos Oficiales
+
+Se optimizó la sección CTA (Call to Action) en la página de Experiencia (`our_experience.html`) aplicando principios de UX para evitar "Parálisis de Decisión" (Ley de Hick) y mejorar la conversión.
+
+### 1. Reestructuración Visual (Glassmorphism)
+- **Layout Asimétrico:** Se abandonó el diseño centrado con botones del mismo tamaño. Ahora, el CTA primario ("Contactar Ahora") domina el lado izquierdo con un diseño de alto impacto y mayor peso visual.
+- **Tarjeta de Descargas:** Las acciones secundarias (Descargar Currículum Empresarial y Portafolio) se agruparon en el lado derecho dentro de una tarjeta translúcida (Glassmorphism).
+- **Micro-Interacciones:** Se aplicaron animaciones AOS (Scroll Reveal) secuenciales y efectos sutiles de levitación al interactuar con la tarjeta de cristal.
+
+### 2. Sincronización i18n y Enlace a Recursos
+- Se actualizaron las traducciones correctas en `assets/js/i18n.js` bajo `experience_page.cta` (Español e Inglés) usando terminología corporativa.
+- Se vincularon los botones de descarga directamente a los documentos PDF oficiales alojados en `assets/docs/`.
+
+### Archivos Modificados
+- `experience_timeline/our_experience.html`
+- `assets/js/i18n.js`
+
+## Fase 28: Actualización de Currículum Empresarial (HTML y PDF)
+
+Se realizaron ajustes de precisión técnica y gramatical sobre el documento oficial de currículum de la empresa, garantizando que el PDF generado a partir del HTML refleje información histórica fidedigna y redacción estandarizada.
+
+### 1. Correcciones de Contenido (Curricula_Legado_Ambiental_2026.html)
+- **Fechas Precisas:** Se reemplazó el marcador temporal indefinido "S/F" (Sin Fecha) por las fechas exactas de ejecución de los proyectos históricos (ej. "Ago 2006", "1999, 2003, 2005, 2006") en los registros de Industrias Sagma y Capacitaciones corporativas (SS, ILADE/PEMEX, ITESM).
+- **Estandarización Geográfica:** Se corrigió la abreviatura de "Estado de México" pasando de "Edo. Mex." a la convención formal "Edo. de Méx." en múltiples descripciones de proyectos (Conjunto Urbano Arcángel la Paz, Planta Huehuetoca).
+
+### 2. Generación de Artefacto (PDF)
+- Tras la modificación del código fuente HTML, se regeneró el artefacto final `Curricula_Empresarial_Legado_Ambiental_2026.pdf` para heredar las correcciones y mantener sincronizado el recurso descargable del sitio web.
+
+### Archivos Modificados
+- `assets/docs/Curricula_Legado_Ambiental_2026.html`
+- `assets/docs/Curricula_Empresarial_Legado_Ambiental_2026.pdf`
+
+## Fase 28: Revisión Ortográfica y Gramatical del Currículum (HTML)
+
+Se ejecutó una revisión integral del archivo `Curricula_Legado_Ambiental_2026_v2.html`, aplicando rigurosamente las normas ortográficas y gramaticales de la Real Academia Española (RAE) para purgar vicios corporativos (uso excesivo de mayúsculas).
+
+### 1. Correcciones de Mayúsculas (Capitalización)
+- **Sustantivos Comunes y Adjetivos**: Se pasaron a minúscula sustantivos comunes que estaban erróneamente en mayúscula (estilo título de inglés), como "Evaluación", "Corrección", "Planta", "Tratamiento", "Agencias automotrices", etc.
+- **Documentos y Listados**: Las descripciones de proyectos (ej. "Diagnóstico técnico", "Proyectos ejecutivos") ahora siguen las reglas del español, donde solo la primera letra lleva mayúscula.
+- **Topónimos y Nombres Propios**: Se validó y corrigió el uso de mayúsculas en artículos y preposiciones que forman parte de nombres propios (ej. "La Paz", "Los Reyes", Edificio Pablo "La Llave").
+
+### 2. Prefijos y Palabras Compuestas
+- Se unieron prefijos a sus respectivas bases sin utilizar guion, pasando de `hidro-meteorológico` a `hidrometeorológico`.
+- Las palabras compuestas (como `físico-químico`) se unificaron eliminando la tilde del primer elemento, quedando como `fisicoquímico` / `fisicoquímica`.
+
+### 3. Ajustes Varios
+- Se modificaron conjunciones (`Y` a `y`).
+- Se insertaron comas de rigor en denominaciones jurídicas (`Impramex, S.A. de C.V.`).
+- Se estandarizó la presentación visual respetando los espaciadores de diseño (`<span>`) y las palabras clave en negrita (`<strong>`).
+
+### Archivos Modificados
+- `assets/docs/Curricula_Legado_Ambiental_2026_v2.html`
