@@ -64,13 +64,13 @@ const translations = {
             "title": "Proyectos Recientes",
             "p1": {
                 "cat": "Grupo Serla",
-                "title": "Estudio de impacto ambiental",
+                "title": "Evaluación ambiental",
                 "desc": "Estudio integral corporativo bajo la NOM-052-SEMARNAT (Residuos Peligrosos), NOM-085 (Emisiones) y disposiciones del RCDF, asegurando operaciones sin externalidades negativas."
             },
             "p2": {
                 "cat": "Río Tiloxtoc",
                 "title": "Saneamiento",
-                "desc": "Planeación, muestreo y mitigación conjunta con CIITEC-IPN, alineados a la Ley Federal de Aguas y normativas SEMARNAT para el rescate de ecosistemas."
+                "desc": "Planeación, muestreo y caracterización conjunta con CIITEC-IPN, alineados a la Ley Federal de Aguas y normativas SEMARNAT para el saneamiento del río."
             }
         },
         "cta": {
@@ -442,6 +442,7 @@ const translations = {
             "auto_generated.text_078": "<strong>Tratamiento de Aguas:</strong> Diseño, construcción y supervisión de\n                                        plantas de tratamiento de aguas residuales.",
             "auto_generated.text_079": "<strong>Sustentabilidad Hídrica:</strong> Sistemas alternativos de reciclaje o\n                                        reutilización, programas de ahorro de agua y estudios técnicos de ahorro.",
             "auto_generated.text_080": "<strong>Análisis Especializado:</strong> Estudios hidrometeorológicos para\n                                        planeación y prevención.",
+            "auto_generated.text_080_1": "<strong>Captación Pluvial:</strong> Estudios y proyectos de captación y uso alternativo de agua pluvial.",
             "auto_generated.text_081": "Realizar cotización",
             "auto_generated.text_082": "<strong>Evaluaciones de Impacto:</strong> Estudios de impacto ambiental\n                                        , diagnósticos y evaluaciones ambientales preventivas.",
             "auto_generated.text_083": "<strong>Documentación Oficial:</strong> Elaboración de informes técnicos y\n                                        dictámenes ambientales con validez legal.",
@@ -454,6 +455,8 @@ const translations = {
             "auto_generated.text_090": "Realizar cotización",
             "auto_generated.text_091": "<strong>Plantas de Tratamiento de Aguas Residuales (PTAR):</strong> Diseño,\n                                        construcción y puesta en marcha de sistemas de tratamiento industrial y\n                                        municipal.",
             "auto_generated.text_092": "<strong>Obras de Saneamiento:</strong> Infraestructura para la reutilización\n                                        de agua y sistemas de drenaje especializado.",
+            "auto_generated.text_092_1": "<strong>Obras Pluviales:</strong> Estudios y proyectos para obras pluviales y prevención de inundaciones.",
+            "auto_generated.text_092_2": "<strong>Saneamiento de Cuerpos de Agua:</strong> Estudios y proyectos para saneamiento de cuerpos de agua.",
             "auto_generated.text_093": "Realizar cotización",
             "auto_generated.text_094": "<strong>Elaboración de Proyectos Ejecutivos:</strong> Diseño arquitectónico,\n                                        cálculos estructurales, instalaciones hidrosanitarias y eléctricas.",
             "auto_generated.text_095": "<strong>Gestión de Trámites y Licencias:</strong> Apoyo técnico para la\n                                        obtención de permisos de construcción y autorizaciones ambientales.",
@@ -632,13 +635,13 @@ const translations = {
             "title": "Recent Projects",
             "p1": {
                 "cat": "Grupo Serla",
-                "title": "Environmental Impact Study",
+                "title": "Environmental Assessment",
                 "desc": "Comprehensive corporate study under NOM-052-SEMARNAT (Hazardous Waste), NOM-085 (Emissions), and RCDF provisions, ensuring operations without negative externalities."
             },
             "p2": {
                 "cat": "Tiloxtoc River",
                 "title": "Sanitation",
-                "desc": "Planning, sampling, and joint mitigation with CIITEC-IPN, aligned with the National Water Law and SEMARNAT regulations for ecosystem rescue."
+                "desc": "Planning, sampling, and joint characterization with CIITEC-IPN, aligned with the National Water Law and SEMARNAT regulations for river sanitation."
             }
         },
         "cta": {
@@ -1010,6 +1013,7 @@ const translations = {
             "auto_generated.text_078": "<strong>Water Treatment:</strong> Design, construction and supervision of wastewater treatment plants.",
             "auto_generated.text_079": "<strong>Water Sustainability:</strong> Alternative recycling or reuse systems, water saving programs and technical saving studies.",
             "auto_generated.text_080": "<strong>Specialized Analysis:</strong> Hydrometeorological studies for planning and prevention.",
+            "auto_generated.text_080_1": "<strong>Rainwater Catchment:</strong> Studies and projects for rainwater catchment and alternative use.",
             "auto_generated.text_081": "Get a Quote",
             "auto_generated.text_082": "<strong>Impact Assessments:</strong> Environmental impact studies (EsIA), diagnoses and preventive environmental assessments.",
             "auto_generated.text_083": "<strong>Official Documentation:</strong> Preparation of technical reports and environmental opinions with legal validity.",
@@ -1022,6 +1026,8 @@ const translations = {
             "auto_generated.text_090": "Get a Quote",
             "auto_generated.text_091": "<strong>Wastewater Treatment Plants (WWTP):</strong> Design, construction and commissioning of industrial and municipal treatment systems.",
             "auto_generated.text_092": "<strong>Sanitation Works:</strong> Infrastructure for water reuse and specialized drainage systems.",
+            "auto_generated.text_092_1": "<strong>Pluvial Works:</strong> Studies and projects for pluvial works and flood prevention.",
+            "auto_generated.text_092_2": "<strong>Water Body Sanitation:</strong> Studies and projects for water body sanitation.",
             "auto_generated.text_093": "Get a Quote",
             "auto_generated.text_094": "<strong>Development of Executive Projects:</strong> Architectural design, structural calculations, plumbing and electrical installations.",
             "auto_generated.text_095": "<strong>Management of Procedures and Licenses:</strong> Technical support for obtaining construction permits and environmental authorizations.",
