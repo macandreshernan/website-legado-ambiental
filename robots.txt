@@ -1,3 +1,7 @@
 User-agent: *
 Allow: /
+
+User-agent: Bravebot
+Allow: /
+
 Sitemap: https://www.legadoambiental.com.mx/sitemap.xml
