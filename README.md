@@ -792,7 +792,43 @@ Se ejecutó la Fase 4 del plan técnico de optimización UI/UX y CRO (`plan-mejo
 - `experience_timeline/our_experience.html`
 - `assets/js/i18n.js`
 - `README.md`
+## Fase 34: Plan de Mejoras UI/UX 100 Leads - Fase 5 (Analítica GA4/GTM, SEO Local & Validación Final de Cero Regresión)
+
+Se ejecutó la Fase 5 del plan técnico de optimización UI/UX y CRO (`plan-mejoras-uiux-100.md`), concluyendo de forma integral el plan de captación de 100 leads con la instrumentación de eventos de analítica automatizada, optimización de metadatos de SEO Local y la auditoría final de cero regresión.
+
+### 1. Instrumentación de Analítica Automatizada (`assets/js/analytics.js`)
+- **Script Unificado de Eventos (`analytics.js`)**: Creado para capturar y enviar eventos clave a la capa de datos (`dataLayer` para GA4 y Google Tag Manager):
+  - `click_whatsapp`: Registra clics en cualquier botón o enlace de WhatsApp con atribución del origen (*header*, *hero*, *sticky_fab_mobile*, *footer*).
+  - `generate_lead`: Registra conversiones exitosas del formulario de contacto simplificado con la categoría de servicio seleccionada.
+  - `download_portfolio`: Registra la descarga o visualización del portafolio PDF y currículum empresarial.
+- **Inclusión en Todo el Sitio**: Inyectado en las 6 páginas principales HTML.
+
+### 2. SEO Local & Datos Estructurados (Schema.org)
+- **Schema.org Enriquecido**: Actualizado en los `<head>` de todas las páginas principales (`home.html`, `about_us.html`, `services.html`, `portfolio.html`, `our_experience.html`, `contact_faq.html`) con los tipos combinados `["ConstructionBusiness", "EnvironmentalConsultancy"]`, teléfono verificado `+52-55-7312-6918` y dirección de Ecatepec, Estado de México.
+- **Redirección `.htaccess`**: Confirmada la regla de redirección 301 limpia de `index.html` hacia `home.html`.
+
+### 3. Auditoría Final de Internacionalización & Cero Regresión
+- **Paridad i18n 1:1**: Verificada la paridad completa entre los diccionarios `es-MX` y `en-US` en `assets/js/i18n.js` mediante script automatizado de Node.js.
+- **Patrón Híbrido B2B CTA Móvil**: Confirmado el funcionamiento del botón 100% ancho "Cotizar Proyecto" en la barra fija base y el botón circular flotante (FAB) de WhatsApp.
+
+### Escenarios de Prueba Ejecutados (QA & No Afectación)
+1. **Verificación `dataLayer.push` en Consola**: Probada la emisión de eventos al hacer clic en WhatsApp, enviar formularios y descargar portafolio PDF.
+2. **Prueba Cross-Browser & Multidispositivo**: Comprobada la maquetación en resoluciones de 320px, 375px, 768px, 1024px y 1440px sin distorsión visual.
+3. **Auditoría Estructurada Schema.org**: Validada la estructura JSON-LD sin advertencias ni errores sintácticos.
+4. **Auditoría Final i18n**: Conmutación bilingüe sin textos quemados ni excepciones en consola.
+
+### Archivos Modificados
+- `assets/js/analytics.js` (Nuevo)
+- `assets/js/contact_form.js`
+- `home.html`
+- `about_us/about_us.html`
+- `services_overview/services.html`
+- `project_portfolio_gallery/portfolio.html`
+- `experience_timeline/our_experience.html`
+- `faq/contact_faq.html`
+- `README.md`
 - `plan-mejoras-uiux-100.md`
+
 
 
 

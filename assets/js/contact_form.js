@@ -123,6 +123,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const originalText = submitBtn.innerHTML;
         submitBtn.innerHTML = '<span class="material-symbols-outlined animate-spin text-lg">autorenew</span> Enviando...';
 
+        // Disparar evento de analítica GA4 / GTM
+        if (typeof trackEvent === 'function') {
+            const serviceSelect = document.getElementById('service');
+            trackEvent('generate_lead', {
+                service_category: serviceSelect ? serviceSelect.value : 'general'
+            });
+        }
+
         // Fake API Call Delay
         setTimeout(() => {
             if (globalThis.ToastService) {

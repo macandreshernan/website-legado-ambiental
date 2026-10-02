@@ -38,28 +38,28 @@
 
     <!-- Structured Data -->
     <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ConstructionBusiness",
-    "name": "Legado Ambiental",
-    "url": "https://www.legadoambiental.com.mx",
-    "image": "https://www.legadoambiental.com.mx/assets/logo.png",
-    "description": "Excelencia en construcción civil y desarrollo sostenible.",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Plaza de Ingeniería, Suite 400",
-      "addressLocality": "Ciudad de México",
-      "addressRegion": "CDMX",
-      "postalCode": "12345",
-      "addressCountry": "MX"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-555-123-4567",
-      "contactType": "customer service"
+    {
+      "@context": "https://schema.org",
+      "@type": ["ConstructionBusiness", "EnvironmentalConsultancy"],
+      "name": "Legado Ambiental",
+      "url": "https://www.legadoambiental.com.mx",
+      "image": "https://www.legadoambiental.com.mx/assets/images/logo/logo_final_v2.webp",
+      "description": "Soluciones integrales en ingeniería civil, estudios de impacto ambiental, topografía de precisión y seguridad e higiene industrial.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "U.H. Valle de Ecatepec",
+        "addressLocality": "Ecatepec",
+        "addressRegion": "Estado de México",
+        "postalCode": "55119",
+        "addressCountry": "MX"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+52-55-7312-6918",
+        "contactType": "customer service"
+      }
     }
-  }
-  </script>
+    </script>
 
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link
@@ -570,6 +570,7 @@
     </div>
     </div>
     <script src="../assets/js/i18n.js" data-base-path="../"></script>
+    <script src="../assets/js/analytics.js"></script>
     <script src="../assets/js/toast-service.js"></script>
     <script src="../assets/js/contact_form.js"></script>
     <script>
@@ -738,6 +739,12 @@
                 })
                 .then(response => response.json())
                 .then(data => {
+                    // GA4 / GTM Lead Event
+                    if (typeof trackEvent === 'function') {
+                        const serviceVal = document.getElementById('contact-service')?.value || 'general';
+                        trackEvent('generate_lead', { service_category: serviceVal });
+                    }
+
                     // Success state
                     submitBtn.classList.replace('bg-primary', 'bg-green-600');
                     if (submitSpinner) submitSpinner.classList.add('hidden');
