@@ -172,41 +172,91 @@
         </div>
     </header>
     <main>
-        <!-- Hero Section con Efecto Hover Dinámico y Glassmorphism -->
-        <section class="max-w-[1200px] mx-auto pt-6 pb-6 px-4">
+        <!-- Hero Section con Enfoque JTBD, Glassmorphism y Trust Banner -->
+        <section class="max-w-[1200px] mx-auto pt-4 pb-6 px-4">
             <div class="@container">
-                <div class="group relative flex items-center justify-start overflow-hidden rounded-xl min-h-[450px] md:min-h-[600px] shadow-2xl transition-all duration-700 cursor-default"
+                <div class="group relative flex flex-col justify-between overflow-hidden rounded-2xl min-h-auto py-8 md:py-14 shadow-2xl transition-all duration-700 cursor-default"
                     style="background-color: #101922;">
                     <!-- Background Image -->
-                    <div class="absolute inset-0 z-0 bg-cover bg-center origin-center transition-all duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] transform scale-105 opacity-80 group-hover:opacity-100 group-hover:scale-100"
+                    <div class="absolute inset-0 z-0 bg-cover bg-center origin-center transition-all duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] transform scale-105 opacity-70 group-hover:opacity-90 group-hover:scale-100"
                         style="background-image: url('assets/images/home/hero-main.webp');">
                     </div>
 
                     <!-- Gradiente de fondo suavizado -->
                     <div
-                        class="absolute inset-0 z-0 bg-gradient-to-r from-[#101922]/70 via-[#101922]/20 to-transparent transition-opacity duration-1000 opacity-100 group-hover:opacity-10 pointer-events-none">
+                        class="absolute inset-0 z-0 bg-gradient-to-r from-[#101922]/90 via-[#101922]/50 to-transparent transition-opacity duration-1000 opacity-100 pointer-events-none">
                     </div>
 
                     <!-- Glassmorphism Text Container -->
                     <div
-                        class="relative z-10 p-8 md:p-16 lg:ml-12 max-w-3xl bg-[#101922]/40 backdrop-blur-md border border-white/10 rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.5)] transition-all duration-700 ease-in-out group-hover:bg-[#101922]/80 group-hover:border-primary/40 group-hover:backdrop-blur-xl transform translate-x-0 group-hover:translate-x-2 flex flex-col justify-center">
+                        class="relative z-10 p-5 sm:p-8 md:p-12 lg:ml-10 max-w-3xl bg-[#101922]/60 backdrop-blur-md border border-white/10 rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.5)] transition-all duration-700 ease-in-out group-hover:bg-[#101922]/85 group-hover:border-primary/40 group-hover:backdrop-blur-xl transform translate-x-0 group-hover:translate-x-1 flex flex-col justify-center my-auto">
 
-                        <h1 class="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1] tracking-tight mb-6 drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]"
-                            data-i18n="hero.title">Protegiendo hoy, el legado del mañana.</h1>
-                        <div
-                            class="w-16 h-1 bg-primary mb-6 transition-all duration-700 group-hover:w-32 group-hover:bg-blue-400 rounded-full">
+                        <!-- Badge Superior -->
+                        <div class="inline-flex items-center gap-2 px-3 py-1 bg-primary/20 border border-primary/30 rounded-full w-fit mb-4">
+                            <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                            <span class="text-xs font-bold text-green-300 uppercase tracking-wider" data-i18n="hero.title">Protegiendo hoy, el legado del mañana.</span>
                         </div>
-                        <p class="text-blue-50 text-lg md:text-xl font-medium leading-relaxed drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)] mb-8 max-w-xl"
-                            data-i18n="hero.subtitle">Ingeniería para una productividad amigable con el medio ambiente.</p>
-                        <div class="flex flex-wrap gap-4 mt-auto">
-                            <a href="assets/docs/Portafolio_Proyectos_Legado_Ambiental_2026.pdf" target="_blank" download="Portafolio_Proyectos_Legado_Ambiental_2026.pdf"
-                                class="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-lg text-base font-bold transition-all flex items-center gap-2 shadow-[0_4px_16px_rgba(0,0,0,0.3)] focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-[#101922] w-full sm:w-auto justify-center group">
-                                <span data-i18n="hero.portfolio_btn">Ver Portafolio</span>
-                                <span class="material-symbols-outlined transform group-hover:translate-y-1 transition-transform">download</span>
+
+                        <!-- Titular Principal JTBD -->
+                        <h1 class="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black leading-[1.15] tracking-tight mb-4 drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]"
+                            data-i18n="hero.jtbd_title">¿Necesitas resolver un estudio de impacto ambiental, proyecto de obra o levantamiento topográfico?</h1>
+                        <div
+                            class="w-16 h-1 bg-primary mb-4 transition-all duration-700 group-hover:w-32 group-hover:bg-blue-400 rounded-full">
+                        </div>
+                        <!-- Subtítulo JTBD -->
+                        <p class="text-blue-50 text-base sm:text-lg font-medium leading-relaxed drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)] mb-8 max-w-2xl"
+                            data-i18n="hero.jtbd_subtitle">Legado Ambiental brinda soluciones integrales en ingeniería civil, cumplimiento normativo, topografía de precisión y seguridad e higiene para obras públicas y privadas.</p>
+
+                        <!-- 3 CTAs Principales -->
+                        <div class="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
+                            <!-- CTA 1: Cotizar Proyecto -->
+                            <button data-action="navigate" data-href="faq/contact_faq.html#tab-1"
+                                class="bg-primary hover:bg-primary/90 text-white px-6 py-3.5 rounded-xl text-base font-extrabold transition-all flex items-center justify-center gap-2 shadow-[0_4px_20px_rgba(34,197,94,0.4)] focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-[#101922] w-full sm:w-auto group">
+                                <span data-i18n="hero.quote_btn">Cotizar Proyecto</span>
+                                <span class="material-symbols-outlined text-xl transform group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                            </button>
+
+                            <!-- CTA 2: WhatsApp Directo -->
+                            <a href="https://wa.me/525573126918?text=Hola,%20quisiera%20cotizar%20un%20proyecto%20con%20Legado%20Ambiental" target="_blank" rel="noopener noreferrer"
+                                class="bg-[#25D366] hover:bg-[#20ba5a] text-white px-6 py-3.5 rounded-xl text-base font-extrabold transition-all flex items-center justify-center gap-2 shadow-[0_4px_20px_rgba(37,211,102,0.3)] focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2 focus:ring-offset-[#101922] w-full sm:w-auto">
+                                <span class="material-symbols-outlined text-xl">chat</span>
+                                <span data-i18n="hero.whatsapp_btn">Hablar por WhatsApp</span>
                             </a>
-                            <button data-action="navigate" data-href="faq/contact_faq.html"
-                                class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-lg text-base font-bold transition-all shadow-[0_4px_16px_rgba(0,0,0,0.2)] focus:ring-2 focus:ring-white hover:border-white/40 w-full sm:w-auto justify-center flex items-center"
-                                data-i18n="hero.contact_btn">Contáctanos</button>
+
+                            <!-- CTA 3: Portafolio PDF -->
+                            <a href="assets/docs/Portafolio_Proyectos_Legado_Ambiental_2026.pdf" target="_blank" download="Portafolio_Proyectos_Legado_Ambiental_2026.pdf"
+                                class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/20 px-6 py-3.5 rounded-xl text-base font-bold transition-all shadow-md focus:ring-2 focus:ring-white hover:border-white/40 w-full sm:w-auto justify-center flex items-center gap-2 group">
+                                <span data-i18n="hero.portfolio_btn">Ver Portafolio PDF</span>
+                                <span class="material-symbols-outlined text-xl transform group-hover:translate-y-0.5 transition-transform">download</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Hero Trust Banner (Franja Normativa) -->
+                    <div class="relative z-10 w-full mt-8 pt-4 pb-2 px-5 border-t border-white/10 bg-[#0a1118]/80 backdrop-blur-md">
+                        <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3 text-xs">
+                            <div class="flex items-center gap-2 text-primary font-black uppercase tracking-wider text-xs">
+                                <span class="material-symbols-outlined text-base">verified</span>
+                                <span data-i18n="hero.trust_label">Cumplimiento Normativo Garantizado:</span>
+                            </div>
+                            <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-gray-200 font-semibold">
+                                <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full flex items-center gap-1.5 hover:border-primary/40 transition-colors">
+                                    <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                                    <span data-i18n="hero.norm_1">NOM-052-SEMARNAT</span>
+                                </span>
+                                <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full flex items-center gap-1.5 hover:border-primary/40 transition-colors">
+                                    <span class="w-2 h-2 rounded-full bg-blue-400"></span>
+                                    <span data-i18n="hero.norm_2">NOM-001-SEMARNAT</span>
+                                </span>
+                                <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full flex items-center gap-1.5 hover:border-primary/40 transition-colors">
+                                    <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+                                    <span data-i18n="hero.norm_3">Normativas STPS</span>
+                                </span>
+                                <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full flex items-center gap-1.5 hover:border-primary/40 transition-colors">
+                                    <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+                                    <span data-i18n="hero.norm_4">RCDF y Licencias</span>
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>

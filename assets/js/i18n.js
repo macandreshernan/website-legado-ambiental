@@ -24,8 +24,17 @@ const translations = {
         "hero": {
             "title": "Protegiendo hoy, el legado del mañana.",
             "subtitle": "Ingeniería para una productividad amigable con el medio ambiente.",
-            "portfolio_btn": "Ver Portafolio",
-            "contact_btn": "Contáctanos"
+            "jtbd_title": "¿Necesitas resolver un estudio de impacto ambiental, proyecto de obra o levantamiento topográfico?",
+            "jtbd_subtitle": "Legado Ambiental brinda soluciones integrales en ingeniería civil, cumplimiento normativo, topografía de precisión y seguridad e higiene para obras públicas y privadas.",
+            "quote_btn": "Cotizar Proyecto",
+            "whatsapp_btn": "Hablar por WhatsApp",
+            "portfolio_btn": "Ver Portafolio PDF",
+            "contact_btn": "Contáctanos",
+            "trust_label": "Cumplimiento Normativo Garantizado:",
+            "norm_1": "NOM-052-SEMARNAT",
+            "norm_2": "NOM-001-SEMARNAT",
+            "norm_3": "Normativas STPS",
+            "norm_4": "RCDF y Licencias"
         },
         "stats": {
             "years": "Años de Experiencia",
@@ -595,8 +604,17 @@ const translations = {
         "hero": {
             "title": "Building Infrastructure, Sustaining the Future.",
             "subtitle": "Professional excellence in civil construction and environmental legacy for private and government projects worldwide.",
-            "portfolio_btn": "View Portfolio",
-            "contact_btn": "Contact Us"
+            "jtbd_title": "Need to resolve an environmental impact study, construction project, or topographic survey?",
+            "jtbd_subtitle": "Legado Ambiental delivers comprehensive solutions in civil engineering, regulatory compliance, precision topography, and occupational health & safety.",
+            "quote_btn": "Get a Project Quote",
+            "whatsapp_btn": "Chat on WhatsApp",
+            "portfolio_btn": "Download PDF Portfolio",
+            "contact_btn": "Contact Us",
+            "trust_label": "Guaranteed Regulatory Compliance:",
+            "norm_1": "NOM-052-SEMARNAT",
+            "norm_2": "NOM-001-SEMARNAT",
+            "norm_3": "STPS Regulations",
+            "norm_4": "RCDF & Permits"
         },
         "stats": {
             "years": "Years of Experience",

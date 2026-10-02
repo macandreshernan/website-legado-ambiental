@@ -701,4 +701,39 @@ Se ejecutó la Fase 1 del plan de optimización UI/UX y CRO (`plan-mejoras-uiux-
 - `faq/contact_faq.html`
 - `README.md`
 
+## Fase 31: Plan de Mejoras UI/UX 100 Leads - Fase 2 (Hero Section JTBD, Trust Banner & 3 CTAs)
+
+Se ejecutó la Fase 2 del plan técnico de optimización UI/UX y CRO (`plan-mejoras-uiux-100.md`), reestructurando la sección principal de la página de inicio (`home.html`) hacia una propuesta de valor basada en Jobs-To-Be-Done (JTBD), incorporando 3 llamados a la acción (CTAs) de alta conversión y un banner de confianza normativa (Trust Banner).
+
+### 1. Rediseño del Hero Section Orientado a JTBD (`home.html`)
+- **Titular y Copys Directos**: Se reemplazó el titular estático por preguntas directas de necesidad de negocio: *"¿Necesitas resolver un estudio de impacto ambiental, proyecto de obra o levantamiento topográfico?"*.
+- **Padding Adaptativo y Eliminación de Altura Fija**: Se eliminó la restricción `min-h-[450px]` en móvil y se implementó `min-h-auto py-8 md:py-14` con padding elástico `p-5 sm:p-8 md:p-12`.
+
+### 2. Integración de 3 llamados a la Acción (CTAs)
+- **Botón Primario ("Cotizar Proyecto")**: Redirección directa al formulario de contacto (`faq/contact_faq.html#tab-1`) con estilo verde `primary` de alto contraste.
+- **Botón Secundario ("Hablar por WhatsApp")**: Enlace directo a la API de WhatsApp Business (`https://wa.me/525573126918`) con mensaje inicial prellenado sobre cotizaciones.
+- **Botón Terciario ("Ver Portafolio PDF")**: Enlace de descarga directa del documento `Portafolio_Proyectos_Legado_Ambiental_2026.pdf` con atributos `target="_blank"` y `download`.
+
+### 3. Hero Trust Banner (Barra de Confianza Normativa)
+- **Franja Normativa Integrada**: Se incorporó un banner estilizado `backdrop-blur-md` en la base del Hero destacando normativas y licencias clave:
+  - `NOM-052-SEMARNAT` (Residuos Peligrosos)
+  - `NOM-001-SEMARNAT` (Aguas Residuales)
+  - `Normativas STPS` (Seguridad e Higiene)
+  - `RCDF y Licencias` (Construcción Urbana)
+
+### 4. Garantía de Internacionalización (`assets/js/i18n.js`)
+- Registradas las llaves `hero.jtbd_title`, `hero.jtbd_subtitle`, `hero.quote_btn`, `hero.whatsapp_btn`, `hero.portfolio_btn`, `hero.trust_label`, `hero.norm_1`, `hero.norm_2`, `hero.norm_3`, `hero.norm_4` en los diccionarios `es-MX` y `en-US`.
+
+### Escenarios de Prueba Ejecutados (QA & No Afectación)
+1. **Verificación Visual Fluid (320px a 1440px)**: Confirmada la fluidez del contenedor Glassmorphism y apilamiento limpio de los 3 CTAs en pantallas pequeñas.
+2. **Descarga de Portafolio PDF & Enlace WhatsApp**: Probada la apertura de WhatsApp con mensaje inicial y descarga directa del archivo PDF sin errores 404.
+3. **Verificación i18n Bilingüe**: Alternancia `ES` <-> `EN` en el Hero y Trust Banner comprobando paridad completa de traducción.
+
+### Archivos Modificados
+- `home.html`
+- `assets/js/i18n.js`
+- `README.md`
+- `plan-mejoras-uiux-100.md`
+
+
 

@@ -125,7 +125,7 @@ git push origin <rama_actual>
 ```
 
 ### 🛑 PUNTO DE CONTROL - FASE 2
-- [ ] **Punto de Control 2:** Fase 2 Concluida, Validada y Subida a GitHub.
+- [x] **Punto de Control 2:** Fase 2 Concluida, Validada y Subida a GitHub.
 > **INSTRUCCIÓN PARA ANTIGRAVITY IDE:** Al concluir el paso 2.5, marca la casilla anterior `[x]`, **DETÉN LA EJECUCIÓN** y consulta al usuario:
 > *"La Fase 2 se ha ejecutado, probado en i18n, documentado en README.md y subido al repositorio GitHub. ¿Deseas continuar inmediatamente con la Fase 3 o lo ejecutamos más tarde?"*
 
