@@ -664,3 +664,41 @@ Se optimizó el botón de "Ver Portafolio" en la sección final de la página "Q
 
 ### Archivos Modificados
 - `about_us/about_us.html`
+
+## Fase 30: Plan de Mejoras UI/UX 100 Leads - Fase 1 (Infraestructura Mobile-First, Design Tokens y Header Responsivo)
+
+Se ejecutó la Fase 1 del plan de optimización UI/UX y CRO (`plan-mejoras-uiux-100.md`), enfocada en resolver los problemas de responsividad en móviles (320px-375px), estandarizar los Design Tokens globales y garantizar la accesibilidad (WCAG 2.1 AAA) y la integridad de internacionalización (`i18n.js`).
+
+### 1. Refactorización de Cabecera (Header Mobile-First)
+- **Eliminación de Overflow Horizontal**: Se ajustó el ancho contenedor a `w-[calc(100%-1rem)] sm:w-[calc(100%-2rem)]` con padding adaptativo `px-3 sm:px-6`, evitando que la cabecera desborde o genere scroll lateral en dispositivos de 320px a 375px.
+- **Escalado de Logo y Título**: Se ajustó la altura del logo a `h-10 sm:h-16` en móviles y se aplicó truncado tipográfico (`truncate max-w-[150px] sm:max-w-none`) al texto del título para prevenir colisiones con el menú hamburguesa.
+- **Touch Targets de 48px (WCAG 2.1 AAA)**: Se actualizaron las áreas de interacción del botón de menú hamburguesa (`#mobile-menu-btn`), toggles de tema oscuro y selectores de idioma (`ES | EN`) a un tamaño mínimo de **48x48px**.
+
+### 2. Optimización del Menú Móvil Desplegable (#mobile-menu)
+- **Posicionamiento Fijo y Scroll Suave**: Se configuró `#mobile-menu` con `position: fixed`, `top-20`, `left-3`, `right-3`, `max-h-[85vh]` y `z-50`, permitiendo un desplazamiento interno independiente sin bloquear el viewport.
+- **Controles Integrados de Idioma y Tema**: Se añadieron selectores táctiles destacados de idioma (ES/EN) y tema dentro del propio menú móvil.
+
+### 3. Validación de Cero Regresión e Internacionalización (i18n)
+- **Pruebas de Conmutación bilingüe**: Se validó el funcionamiento del diccionario `assets/js/i18n.js` al cambiar entre `es-MX` y `en-US` en todas las páginas del sitio, verificando cero excepciones en consola y paridad de claves traducidas.
+
+### 4. Corrección de Maquetado Responsivo en Línea de Tiempo (`our_experience.html`)
+- **Resolución de Solapamiento Móvil**: Se solucionó el fallo visual donde la línea de tiempo vertical (`border-l-2`) quedaba oculta detrás de las tarjetas o desbordada por etiquetas de categoría absolutas (`-left-[9px] top-6`) en pantallas móviles (`< 768px`).
+- **Ocultamiento de Etiquetas Absolutas en Móvil**: La div de etiqueta lateral se reconfiguró como `hidden md:block` para escritorio (preservando la columna de 160px a la izquierda de la línea).
+- **Inclusión de Insignias de Categoría en Tarjeta Móvil**: En pantallas móviles (`< 768px`), las etiquetas de categoría ("Hidro Meteorológico", "Escuelas", "Saneamiento de Río", "Salud", "Especialidad", "Industria") se presentan mediante insignias/badges responsivas (`md:hidden badge`) integradas limpiamente en el encabezado de cada tarjeta.
+- **Puntos Unificados con `z-10` y Relleno Adaptativo**: Se consolidaron los puntos de hito en un único elemento responsivo (`z-10`, `w-4 h-4 md:w-5 md:h-5`) perfectamente centrado sobre la línea continua, y se optimizó el relleno interno de las tarjetas a `p-5 sm:p-8` para evitar apretamiento de contenido en dispositivos de 320px a 390px.
+
+### Escenarios de Prueba Ejecutados (QA & No Afectación)
+1. **Verificación Visual Mobile (320px, 360px, 390px, 414px)**: Inspección de visibilidad continua de la línea vertical y puntos de color en `our_experience.html`, confirmando cero desbordamiento horizontal y lectura nítida de títulos e insignias.
+2. **Prueba de Menú Hambuerguesa & Sticky Header**: Apertura/cierre en 6 páginas principales en vistas móviles, comprobando touch targets de 48px y z-index 50.
+3. **Verificación i18n Bilingüe**: Alternancia fluida `ES` <-> `EN` en la línea de tiempo y menú sin pérdida de claves ni desestructuración de tarjetas.
+
+### Archivos Modificados
+- `home.html`
+- `about_us/about_us.html`
+- `services_overview/services.html`
+- `project_portfolio_gallery/portfolio.html`
+- `experience_timeline/our_experience.html`
+- `faq/contact_faq.html`
+- `README.md`
+
+
