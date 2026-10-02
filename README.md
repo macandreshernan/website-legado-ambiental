@@ -735,5 +735,32 @@ Se ejecutó la Fase 2 del plan técnico de optimización UI/UX y CRO (`plan-mejo
 - `README.md`
 - `plan-mejoras-uiux-100.md`
 
+## Fase 32: Plan de Mejoras UI/UX 100 Leads - Fase 3 (Pestañas de Servicios Adaptativas y Aislamiento de Layout PDF)
+
+Se ejecutó la Fase 3 del plan técnico de optimización UI/UX y CRO (`plan-mejoras-uiux-100.md`), convirtiendo la barra de pestañas de servicios en una interfaz táctil adaptativa para móviles e aislando la arquitectura de impresión PDF Carta (`8.5in x 11in`).
+
+### 1. Navegación por Pestañas Adaptativa (`services.html`)
+- **Selector Móvil (< 640px)**: Se implementó un elemento Select UI de alta visibilidad (`#services-mobile-select`) con borde interactivo verde `primary` y chevron `unfold_more`. Esto elimina el desbordamiento ciego en pantallas pequeñas y permite a los usuarios de teléfonos inteligentes seleccionar cualquiera de las 4 divisiones (*Ingeniería Ambiental*, *Construcción*, *Topografía*, *Seguridad e Higiene*) con un solo toque.
+- **Pestañas Desktop (>= 640px)**: Se conservaron las pestañas horizontales con indicador de estado activo (`bg-primary`, sombra verde y texto blanco).
+- **Sincronización Bidireccional en JS**: Se sincronizó la función `switchTab(tabIndex)` para actualizar simultáneamente la pestaña activa en desktop, la opción seleccionada en el dropdown móvil y el panel de tarjetas de servicio activo.
+
+### 2. Aislamiento de la Arquitectura PDF vs Pantalla Web (`Curricula_Legado_Ambiental_2026_v2.html`)
+- **Visualización Web Responsiva (`@media screen`)**: Se actualizó la clase `.page-container` a `width: 100%; max-width: 8.5in; min-height: auto;`, garantizando que en dispositivos móviles y monitores de escritorio el documento sea 100% fluido y no genere desbordamientos laterales ni barras de desplazamiento forzadas.
+- **Formato Carta Estricto en Impresión (`@media print`)**: Se encapsularon las reglas fijas `width: 8.5in; height: 11in; page-break-after: always;` dentro del bloque `@media print`, asegurando que al exportar a PDF o imprimir (Ctrl+P / Cmd+P) se mantenga la maquetación en tamaño Carta exacto sin elementos interactivos (`.no-print { display: none !important; }`).
+
+### Escenarios de Prueba Ejecutados (QA & No Afectación)
+1. **Verificación de Pestañas Adaptativas (320px a 1200px)**: Comprobado el funcionamiento del selector táctil en pantallas de 320px, 375px y 414px, así como el cambio de pestañas en escritorio.
+2. **Prueba Deep Linking por Hash**: Verificado que al acceder a `services.html#tab-3` se active automáticamente la pestaña de *Topografía* y se sincronice con el selector móvil.
+3. **Prueba de Impresión PDF `@media print`**: Validada la vista previa de impresión en `Curricula_Legado_Ambiental_2026_v2.html`, confirmando páginas Carta exactas y ocultamiento de botones interactivos.
+4. **Verificación i18n Bilingüe**: Alternancia `ES` <-> `EN` en la página de servicios y etiquetas del selector móvil sin errores.
+
+### Archivos Modificados
+- `services_overview/services.html`
+- `assets/docs/Curricula_Legado_Ambiental_2026_v2.html`
+- `assets/js/i18n.js`
+- `README.md`
+- `plan-mejoras-uiux-100.md`
+
+
 
 

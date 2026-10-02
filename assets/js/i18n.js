@@ -162,6 +162,7 @@ const translations = {
             "title": "Nuestros Servicios Especializados de Ingeniería y Construcción",
             "hero_desc": "Ofrecemos soluciones de infraestructura y construcción sostenible adaptadas tanto para la iniciativa privada como para iniciativas gubernamentales en la región.",
             "tabs": {
+                "select_label": "Seleccionar División de Servicio",
                 "engeneering": "Ingeniería Ambiental",
                 "building": "Construcción",
                 "topography": "Topografía",
@@ -742,6 +743,7 @@ const translations = {
             "title": "Our Specialized Engineering and Construction Services",
             "hero_desc": "We offer infrastructure and sustainable construction solutions adapted for both private initiative and government initiatives in the region.",
             "tabs": {
+                "select_label": "Select Service Division",
                 "all": "All Services",
                 "private": "Private Sector",
                 "public": "Public Works",
