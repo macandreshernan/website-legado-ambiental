@@ -36,6 +36,10 @@ const translations = {
             "norm_3": "Normativas STPS",
             "norm_4": "RCDF y Licencias"
         },
+        "sticky_cta": {
+            "whatsapp": "WhatsApp",
+            "quote": "Cotizar"
+        },
         "stats": {
             "years": "Años de Experiencia",
             "projects": "Proyectos Completados",
@@ -614,6 +618,10 @@ const translations = {
             "norm_2": "NOM-001-SEMARNAT",
             "norm_3": "STPS Regulations",
             "norm_4": "RCDF & Permits"
+        },
+        "sticky_cta": {
+            "whatsapp": "WhatsApp",
+            "quote": "Get Quote"
         },
         "stats": {
             "years": "Years of Experience",
