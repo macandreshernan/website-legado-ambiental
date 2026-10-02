@@ -759,7 +759,41 @@ Se ejecutó la Fase 3 del plan técnico de optimización UI/UX y CRO (`plan-mejo
 - `assets/docs/Curricula_Legado_Ambiental_2026_v2.html`
 - `assets/js/i18n.js`
 - `README.md`
+## Fase 33: Plan de Mejoras UI/UX 100 Leads - Fase 4 (Formulario Simplificado de 6 Campos, Honeypot & Sticky Mobile CTA Bar)
+
+Se ejecutó la Fase 4 del plan técnico de optimización UI/UX y CRO (`plan-mejoras-uiux-100.md`), simplificando el formulario de contacto para eliminar la fricción de conversión e implementando la barra persistente de llamadas a la acción (Sticky Mobile CTA Bar) en todo el sitio web.
+
+### 1. Formulario de Contacto Ultra-Simplificado (6 Campos) (`faq/contact_faq.html`)
+- **Reducción a 6 Campos Clave**: Se rediseñó el formulario a 6 campos esenciales para la calificación de prospectos B2B: *Nombre*, *Empresa*, *Correo Electrónico*, *Teléfono*, *Servicio de Interés* y *Mensaje / Detalles del Proyecto*.
+- **Integración Anti-Spam Invisible (Honeypot)**: Implementación de un campo trampero no visible (`website_hp`) para atrapar bots automatizados sin afectar la usabilidad del usuario humano.
+- **Envío Asíncrono AJAX & Toast Notifications**: Envío de datos vía `fetch()` a FormSubmit integrado con `ToastService` (`assets/js/toast-service.js`) para desplegar notificaciones flotantes de éxito o error al instante.
+
+### 2. Sticky Mobile CTA Bar en Todo el Sitio (6 Páginas)
+- **Barra Fija en Pantallas Móviles (< 768px)**: Se añadió el componente flotante `fixed bottom-0 left-0 right-0 z-40 md:hidden bg-white/95 dark:bg-[#121c27]/95 backdrop-blur-lg` con dos botones de contacto de respuesta inmediata:
+  - **Botón WhatsApp Directo**: Enlace a la API de WhatsApp (`+52 55 7312 6918`).
+  - **Botón Cotizar**: Redirección rápida al formulario de cotización.
+- **Resguardo de Contenido (`pb-20 md:pb-0`)**: Aplicado a los tags `<body>` en las 6 páginas principales para evitar que la barra flotante cubra información relevante del pie de página.
+
+### 3. Garantía de Internacionalización (`assets/js/i18n.js`)
+- Actualizadas las claves de traducción `contact_page.form.*` en los diccionarios `es-MX` y `en-US` garantizando cero textos duros en la interfaz de contacto.
+
+### Escenarios de Prueba Ejecutados (QA & No Afectación)
+1. **Verificación de Envío de Formulario AJAX**: Probado el envío en `contact_faq.html` validando el despliegue del mensaje Toast de confirmación y limpieza del formulario.
+2. **Prueba de Sticky Mobile CTA Bar**: Comprobada la visibilidad e interactividad de los botones en pantallas móviles (320px, 375px, 414px) y su ocultamiento automático en pantallas de escritorio (`md:hidden`).
+3. **Validación Anti-Spam Honeypot**: Confirmado que envíos con el campo oculto completo son descartados silenciosamente sin distorsionar la experiencia.
+4. **Verificación i18n Bilingüe**: Alternancia `ES` <-> `EN` en los formularios y la barra CTA verificando 100% de cobertura de llaves.
+
+### Archivos Modificados
+- `faq/contact_faq.html`
+- `home.html`
+- `about_us/about_us.html`
+- `services_overview/services.html`
+- `project_portfolio_gallery/portfolio.html`
+- `experience_timeline/our_experience.html`
+- `assets/js/i18n.js`
+- `README.md`
 - `plan-mejoras-uiux-100.md`
+
 
 
 
