@@ -56,7 +56,7 @@
     },
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+52-55-7312-6918",
+      "telephone": "+52-55-8367-1036",
       "contactType": "customer service"
     }
   }
@@ -101,79 +101,72 @@
         </div>
     </div>
   <div class="relative flex min-h-screen w-full flex-col">
-    <!-- Top Navigation Bar (Sticky Optimized & Mobile-First) -->
+    <!-- Top Navigation Bar (Sticky Optimized) -->
     <header
-      class="sticky top-2 sm:top-4 z-50 w-[calc(100%-1rem)] sm:w-[calc(100%-2rem)] max-w-[1200px] mx-auto bg-white/90 dark:bg-[#121c27]/90 backdrop-blur-xl border border-gray-100 dark:border-white/10 rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-all duration-300">
-      <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-16 sm:h-20">
-          <div class="flex items-center gap-2 sm:gap-3 overflow-hidden">
+      class="sticky top-4 z-50 w-[calc(100%-2rem)] max-w-[1200px] mx-auto bg-white/85 dark:bg-[#121c27]/80 backdrop-blur-xl border border-gray-100 dark:border-white/10 rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-all duration-300">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+          <div class="flex items-center gap-3 shrink-0">
             <img src="../assets/images/logo/logo_final_v2.webp" alt="Legado Ambiental"
-              class="h-10 sm:h-16 w-auto object-contain flex-shrink-0">
-            <span class="text-navy dark:text-white text-base sm:text-xl font-black tracking-tight uppercase truncate max-w-[150px] sm:max-w-none" data-i18n="auto_generated.text_191">Legado
+              class="h-16 w-auto object-contain">
+            <span class="text-navy dark:text-white text-xl font-black tracking-tight uppercase whitespace-nowrap" data-i18n="auto_generated.text_191">Legado
               Ambiental</span>
           </div>
           <nav class="hidden md:flex items-center gap-8" aria-label="Main navigation">
-            <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors"
+            <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors whitespace-nowrap"
               href="../home.html" data-i18n="nav.home">Inicio</a>
-            <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors"
+            <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors whitespace-nowrap"
               href="../about_us/about_us.html" data-i18n="nav.about">Quiénes Somos</a>
-            <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors"
+            <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors whitespace-nowrap"
               href="../services_overview/services.html" data-i18n="nav.services">Servicios y Cotización</a>
-            <a class="bg-primary/10 text-primary text-sm font-bold rounded-xl px-4 py-2 transition-all" href="#"
+            <a class="bg-primary/10 text-primary text-sm font-bold rounded-xl px-4 py-2 transition-all whitespace-nowrap" href="#"
               data-i18n="nav.experience">Experiencia</a>
-            <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors"
+            <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors whitespace-nowrap"
               href="../faq/contact_faq.html" data-i18n="nav.contact">Contacto</a>
           </nav>
           <div class="hidden md:flex items-center gap-4">
             <!-- Theme Toggle -->
             <button data-action="toggle-theme" aria-label="Toggle Dark Mode"
-              class="theme-toggle-btn min-w-[44px] min-h-[44px] text-navy dark:text-gray-300 hover:text-primary transition-colors flex items-center justify-center p-2 rounded-full bg-gray-100 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary" data-i18n="auto_generated.text_193">
+              class="theme-toggle-btn text-navy dark:text-gray-300 hover:text-primary transition-colors flex items-center justify-center p-1 rounded-full bg-gray-100 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary" data-i18n="auto_generated.text_193">
               <span class="material-symbols-outlined text-[1.2rem]">dark_mode</span>
             </button>
             <div class="flex items-center gap-2 mr-4">
-              <button class="text-sm font-semibold min-w-[36px] min-h-[36px] flex items-center justify-center hover:text-primary transition-colors"
+              <button class="text-sm font-semibold hover:text-primary transition-colors"
                 data-switch-lang="es-MX">ES</button>
               <span class="text-gray-300">|</span>
-              <button class="text-sm font-semibold min-w-[36px] min-h-[36px] flex items-center justify-center hover:text-primary transition-colors"
+              <button class="text-sm font-semibold hover:text-primary transition-colors"
                 data-switch-lang="en-US">EN</button>
             </div>
           </div>
 
-          <!-- Mobile Menu Button (WCAG 48x48px Touch Target) -->
+          <!-- Mobile Menu Button -->
           <button id="mobile-menu-btn" aria-label="Abrir menú móvil"
-            class="md:hidden text-navy dark:text-white p-2 min-w-[48px] min-h-[48px] flex items-center justify-center hover:text-primary transition-colors focus:outline-none" data-i18n="auto_generated.text_194">
+            class="md:hidden text-navy dark:text-white p-2 hover:text-primary transition-colors" data-i18n="auto_generated.text_194">
             <span class="material-symbols-outlined text-3xl">menu</span>
           </button>
         </div>
 
         <!-- Mobile Navigation Menu -->
         <div id="mobile-menu"
-          class="max-h-[calc(100vh-5rem)] overflow-y-auto md:hidden fixed top-20 left-3 right-3 bg-white/95 dark:bg-[#121c27]/95 backdrop-blur-2xl rounded-2xl border border-gray-100 dark:border-white/10 shadow-2xl py-4 px-4 flex-col gap-2 transform transition-all duration-300 origin-top opacity-0 scale-y-0 pointer-events-none flex z-50">
-          <a class="text-navy dark:text-gray-300 text-base font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-3 min-h-[48px] flex items-center transition-colors"
+          class="max-h-[calc(100vh-6rem)] overflow-y-auto md:hidden absolute top-24 left-0 w-full bg-white/95 dark:bg-[#121c27]/95 backdrop-blur-xl rounded-2xl border border-gray-100 dark:border-white/10 shadow-2xl py-4 px-4 flex-col gap-2 transform transition-all duration-300 origin-top opacity-0 scale-y-0 pointer-events-none flex">
+          <a class="text-navy dark:text-gray-300 text-base font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-3 transition-colors"
             href="../home.html" data-i18n="nav.home">Inicio</a>
-          <a class="text-navy dark:text-gray-300 text-base font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-3 min-h-[48px] flex items-center transition-colors"
+          <a class="text-navy dark:text-gray-300 text-base font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-3 transition-colors"
             href="../about_us/about_us.html" data-i18n="nav.about">Quiénes Somos</a>
-          <a class="text-navy dark:text-gray-300 text-base font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-3 min-h-[48px] flex items-center transition-colors"
+          <a class="text-navy dark:text-gray-300 text-base font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-3 transition-colors"
             href="../services_overview/services.html" data-i18n="nav.services">Servicios y Cotización</a>
-          <a class="text-primary text-base font-bold bg-primary/10 rounded-xl px-4 py-3 min-h-[48px] flex items-center"
+          <a class="text-primary text-base font-bold bg-primary/10 rounded-xl px-4 py-3"
             href="../experience_timeline/our_experience.html" data-i18n="nav.experience">Experiencia</a>
-          <a class="text-navy dark:text-gray-300 text-base font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-3 min-h-[48px] flex items-center transition-colors"
+          <a class="text-navy dark:text-gray-300 text-base font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-3 transition-colors"
             href="../faq/contact_faq.html" data-i18n="nav.contact">Contacto</a>
 
-          <!-- Mobile Theme & Language Controls -->
-          <div class="pt-3 border-t border-gray-100 dark:border-gray-800 flex items-center justify-between mt-2 px-2">
-            <button data-action="toggle-theme" aria-label="Toggle Dark Mode"
-              class="theme-toggle-btn flex items-center gap-2 text-left text-navy dark:text-gray-300 py-2 min-h-[48px]">
-              <span class="material-symbols-outlined text-xl">dark_mode</span>
-              <span data-i18n="nav.theme" class="text-sm font-semibold">Cambiar Tema</span>
-            </button>
-            <div class="flex items-center gap-2">
-              <button class="text-sm font-bold min-w-[44px] min-h-[44px] flex items-center justify-center p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-navy dark:text-white"
-                data-switch-lang="es-MX">ES</button>
-              <button class="text-sm font-bold min-w-[44px] min-h-[44px] flex items-center justify-center p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-navy dark:text-white"
-                data-switch-lang="en-US">EN</button>
-            </div>
-          </div>
+          <!-- Mobile Theme Toggle -->
+          <button data-action="toggle-theme" aria-label="Toggle Dark Mode"
+            class="theme-toggle-btn flex items-center gap-2 text-left text-navy dark:text-gray-300 py-2 border-b border-gray-100 dark:border-gray-800">
+            <span class="material-symbols-outlined text-lg">dark_mode</span>
+            <span data-i18n="nav.theme" class="text-base font-semibold">Cambiar Tema</span>
+          </button>
+
         </div>
       </div>
     </header>
@@ -524,7 +517,7 @@
     </footer>
 
     <!-- Floating WhatsApp Button (FAB) -->
-    <a href="https://wa.me/525573126918?text=Hola,%20quisiera%20cotizar%20un%20proyecto%20con%20Legado%20Ambiental"
+    <a href="https://wa.me/527226727212?text=Hola,%20quisiera%20cotizar%20un%20proyecto%20con%20Legado%20Ambiental"
         target="_blank" rel="noopener noreferrer" aria-label="Hablar por WhatsApp"
         class="fixed bottom-20 right-4 md:bottom-6 md:right-6 z-50 bg-[#25D366] hover:bg-[#20ba5a] text-white w-14 h-14 rounded-full shadow-[0_4px_20px_rgba(37,211,102,0.5)] flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 group">
         <span class="material-symbols-outlined text-3xl">chat</span>

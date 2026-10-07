@@ -711,7 +711,7 @@ Se ejecutó la Fase 2 del plan técnico de optimización UI/UX y CRO (`plan-mejo
 
 ### 2. Integración de 3 llamados a la Acción (CTAs)
 - **Botón Primario ("Cotizar Proyecto")**: Redirección directa al formulario de contacto (`faq/contact_faq.html#tab-1`) con estilo verde `primary` de alto contraste.
-- **Botón Secundario ("Hablar por WhatsApp")**: Enlace directo a la API de WhatsApp Business (`https://wa.me/525573126918`) con mensaje inicial prellenado sobre cotizaciones.
+- **Botón Secundario ("Hablar por WhatsApp")**: Enlace directo a la API de WhatsApp Business (`https://wa.me/527226727212`) con mensaje inicial prellenado sobre cotizaciones.
 - **Botón Terciario ("Ver Portafolio PDF")**: Enlace de descarga directa del documento `Portafolio_Proyectos_Legado_Ambiental_2026.pdf` con atributos `target="_blank"` y `download`.
 
 ### 3. Hero Trust Banner (Barra de Confianza Normativa)
@@ -770,7 +770,7 @@ Se ejecutó la Fase 4 del plan técnico de optimización UI/UX y CRO (`plan-mejo
 
 ### 2. Sticky Mobile CTA Bar en Todo el Sitio (6 Páginas)
 - **Barra Fija en Pantallas Móviles (< 768px)**: Se añadió el componente flotante `fixed bottom-0 left-0 right-0 z-40 md:hidden bg-white/95 dark:bg-[#121c27]/95 backdrop-blur-lg` con dos botones de contacto de respuesta inmediata:
-  - **Botón WhatsApp Directo**: Enlace a la API de WhatsApp (`+52 55 7312 6918`).
+  - **Botón WhatsApp Directo**: Enlace a la API de WhatsApp (`+52 55 8367 1036`).
   - **Botón Cotizar**: Redirección rápida al formulario de cotización.
 - **Resguardo de Contenido (`pb-20 md:pb-0`)**: Aplicado a los tags `<body>` en las 6 páginas principales para evitar que la barra flotante cubra información relevante del pie de página.
 
@@ -804,7 +804,7 @@ Se ejecutó la Fase 5 del plan técnico de optimización UI/UX y CRO (`plan-mejo
 - **Inclusión en Todo el Sitio**: Inyectado en las 6 páginas principales HTML.
 
 ### 2. SEO Local & Datos Estructurados (Schema.org)
-- **Schema.org Enriquecido**: Actualizado en los `<head>` de todas las páginas principales (`home.html`, `about_us.html`, `services.html`, `portfolio.html`, `our_experience.html`, `contact_faq.html`) con los tipos combinados `["ConstructionBusiness", "EnvironmentalConsultancy"]`, teléfono verificado `+52-55-7312-6918` y dirección de Ecatepec, Estado de México.
+- **Schema.org Enriquecido**: Actualizado en los `<head>` de todas las páginas principales (`home.html`, `about_us.html`, `services.html`, `portfolio.html`, `our_experience.html`, `contact_faq.html`) con los tipos combinados `["ConstructionBusiness", "EnvironmentalConsultancy"]`, teléfono verificado `+52-55-8367-1036` y dirección de Ecatepec, Estado de México.
 - **Redirección `.htaccess`**: Confirmada la regla de redirección 301 limpia de `index.html` hacia `home.html`.
 
 ### 3. Auditoría Final de Internacionalización & Cero Regresión
@@ -828,6 +828,103 @@ Se ejecutó la Fase 5 del plan técnico de optimización UI/UX y CRO (`plan-mejo
 - `faq/contact_faq.html`
 - `README.md`
 - `plan-mejoras-uiux-100.md`
+
+## Fase 35: Optimización de Previsualización Social (Open Graph / LinkedIn) y Depuración Integral de Activos Multimedia
+
+Esta fase aborda la corrección de los metadatos de compartición en redes sociales (Open Graph / Twitter Cards) para la URL pública del dominio, la optimización de los activos visuales y la limpieza exhaustiva de archivos no utilizados en el proyecto.
+
+### 1. Diagnóstico y Corrección de Metadatos Open Graph (`home.html` e `index.html`)
+- **Problema Detectado**: Al ingresar la URL del sitio web (`https://legadoambiental.com.mx/`) en LinkedIn ("Añadir contenido multimedia") u otras plataformas sociales, se mostraba una vista previa con una fotografía de edificios en construcción ajena a la identidad institucional, proveniente de una URL provisional externa de Google Photos (`lh3.googleusercontent.com/aida-public/...`).
+- **Solución Implementada**:
+  - Se actualizaron las etiquetas `og:image` y `twitter:image` en `home.html` e `index.html` para apuntar a la imagen oficial corporativa de *Metodología Estructurada de Proyectos Integrales*.
+  - Se añadieron directivas completas de Open Graph para evitar retrasos en el cálculo asíncrono de dimensiones por parte de los crawlers sociales:
+    - `og:image:secure_url`: URL HTTPS absoluta.
+    - `og:image:type`: Declaración de tipo MIME (`image/png`).
+    - `og:image:width`: `1200` píxeles.
+    - `og:image:height`: `876` píxeles.
+    - `og:image:alt`: Texto descriptivo de accesibilidad.
+
+### 2. Generación y Optimización de Imagen Social (`servicios-legado-ambiental-2026-og.png`)
+- **Optimización de Peso y Dimensiones**:
+  - El activo original en alta resolución (`servicios-legado-ambiental-2026.png`) tenía una resolución de 2412x1760 px y un peso de **6.30 MB**, superando el límite máximo estricto de **5 MB** de LinkedIn.
+  - Se procesó una versión web-optimizada en `assets/images/services/servicios-legado-ambiental-2026-og.png`:
+    - **Resolución**: 1200 x 876 px (proporción óptima para que ninguna columna de la metodología ni los textos se recorten en feeds o tarjetas).
+    - **Peso final**: **1.33 MB** (~78% de reducción respecto al original y ampliamente por debajo del umbral de 5 MB de LinkedIn).
+    - **Calidad**: Formato PNG de 24 bits con compresión nivel 9, conservando el 100% de la fidelidad visual, colores y nitidez.
+
+### 3. Auditoría e Inventario de Activos Multimedia (`assets/images/`)
+Se auditó la totalidad de archivos en `assets/images/` y se contrastó contra todas las referencias en código HTML, JS, CSS y configuraciones:
+- **Total de archivos iniciales**: 49 archivos (150 MB).
+- **Archivos activos en producción**: 18 archivos esenciales (6.05 MB).
+- **Archivos huérfanos / no utilizados**: 31 archivos (146.20 MB).
+
+### 4. Respaldo de Archivos Editables de Diseño GIMP (`design_sources/`)
+Para garantizar la preservación de los recursos de edición sin sobrecargar la distribución web en producción:
+- Se creó el directorio de respaldo `design_sources/` en la raíz del repositorio.
+- Se trasladaron los 8 archivos de proyecto editables con capas (`.xcf`, **86.62 MB**):
+  - `design_sources/about/about-legado-comp-2026.xcf`
+  - `design_sources/about/about_us_resume.xcf`
+  - `design_sources/about/mision-legado-2026.xcf`
+  - `design_sources/about/vision-legado-2026.xcf`
+  - `design_sources/home/proyecto_1_legado_2026.xcf`
+  - `design_sources/home/proyecto_2_legado_2026.xcf`
+  - `design_sources/services/metodologia.xcf`
+  - `design_sources/services/servicios-legado-ambiental-2026.xcf`
+- Se agregó documentación interna en `design_sources/README.md`.
+
+### 5. Depuración y Reducción del Directorio Web (`assets/images/`)
+- Se eliminaron del directorio público `assets/images/` los 31 archivos huérfanos:
+  - 8 archivos `.xcf` respaldados en `design_sources/`.
+  - 12 archivos `.png` pesados o versiones preliminares reemplazadas por formatos modernos WebP.
+  - 11 archivos `.webp` de maquetación temprana no implementados en las plantillas HTML finales.
+- **Resultado**: La carpeta `assets/images/` pasó de **150 MB a solo 6.05 MB** (reducción del 96% de carga en el despliegue del hosting).
+
+### 6. Restauración y Distribución del Menú Superior Flotante (Paridad 1:1 con Hostinger)
+- **Problema Detectado en Entorno Local**: En la versión en desarrollo, el título de la marca se cortaba a *"LEGADO AMBIENT..."* y los enlaces de navegación ("Quiénes Somos", "Servicios y Cotización") se distorsionaban o rompían en múltiples líneas debido a clases restrictivas (`truncate`, `max-w-[150px]`, `overflow-hidden` y dimensiones excesivas en botones de tema/idioma) añadidas en commits anteriores.
+- **Ajuste Aplicado**:
+  - Se sincronizó el diseño y estructura exacta del componente `<header>` con la versión estable y funcional desplegada en producción en Hostinger (`menu-superior-pro.png`).
+  - Se eliminó el truncamiento y `overflow-hidden` del bloque de marca, permitiendo que "LEGADO AMBIENTAL" luzca completo en mayúsculas negritas con `text-xl` y `shrink-0`.
+  - Se añadió la regla `whitespace-nowrap` en todos los enlaces de escritorio y textos del menú para asegurar que ningún elemento se divida en dos líneas.
+  - Se restableció la altura (`h-20`) y espaciados originales (`px-4 sm:px-6 lg:px-8`, `gap-8`) que proporcionan una distribución equilibrada y estética en las 6 páginas web.
+  - Se mantuvo la funcionalidad responsiva para móviles (menú desplegable de pantalla completa y botón hamburguesa interactivo).
+
+### 7. Actualización del Número Oficial de WhatsApp Business
+- **Ajuste Realizado**: Se sustituyó el número de contacto en todos los botones y enlaces interactivos hacia la API de WhatsApp (`wa.me`) por el nuevo número: **`72 2672 7212`** (formato internacional México: `527226727212`).
+- **Puntos de Enlace Actualizados**:
+  - Botón secundario del Hero en [`home.html`](home.html).
+  - Botones flotantes circulares (Floating Action Button - FAB) presentes en las 6 páginas principales (`home.html`, `about_us.html`, `services.html`, `portfolio.html`, `our_experience.html` y `contact_faq.html`).
+- **Enlace Unificado**:
+  `https://wa.me/527226727212?text=Hola,%20quisiera%20cotizar%20un%20proyecto%20con%20Legado%20Ambiental`
+
+### 8. Actualización del Teléfono Fijo Principal
+- **Ajuste Realizado**: Se sustituyó el número telefónico anterior (`55 7312 6918`) por el nuevo número: **`55 8367 1036`** (formato internacional: `+52 55 8367 1036`, Schema.org: `+52-55-8367-1036`).
+- **Puntos de Actualización**:
+  - Datos estructurados Schema.org JSON-LD en todas las páginas HTML (`home.html`, `about_us.html`, `services.html`, `portfolio.html`, `our_experience.html`, `faq/contact_faq.html`).
+  - Pie de página (Footer) en `home.html` y diccionarios de internacionalización `assets/js/i18n.js` (`es-MX` y `en-US`).
+  - Tarjeta de contacto directo y placeholders del formulario en `faq/contact_faq.html`.
+
+### Escenarios de Prueba Ejecutados (QA & No Afectación)
+1. **Auditoría de Enlaces Rotos**: Validación automatizada de las 34 referencias a imágenes en todas las páginas del sitio (`home.html`, `index.html`, `about_us.html`, `services.html`, `portfolio.html`, `our_experience.html`, `contact_faq.html`, `404.html` y currícula), reportando **0 enlaces rotos** y 100% de recursos resueltos.
+2. **Validación de Metadatos Open Graph**: Comprobada la sintaxis y URLs absolutas en `index.html` y `home.html` con parámetros compatibles para LinkedIn Post Inspector y Facebook Sharing Debugger.
+3. **Verificación de Respaldo**: Confirmada la integridad de los 8 archivos `.xcf` en `design_sources/`.
+4. **Verificación de Menú Superior en las 6 Páginas**: Validación de paridad visual y estructural con la versión de Hostinger en `home.html`, `about_us.html`, `services.html`, `portfolio.html`, `our_experience.html` y `contact_faq.html`, confirmando cero truncamiento y diseño responsivo intacto.
+5. **Verificación de Enlaces WhatsApp**: Validación de los 7 botones de WhatsApp confirmando que todos apuntan correctamente a `https://wa.me/527226727212` con el mensaje inicial de cotización predefinido.
+6. **Verificación Telefónica Global**: Confirmadas las 21 coincidencias actualizadas al número `55 8367 1036` sin números obsoletos en código fuente.
+
+### Archivos Modificados / Creados
+- `home.html` (Modificado - metadatos `og:image`, menú superior Hostinger, botones WhatsApp y teléfono actualizado)
+- `index.html` (Modificado - metadatos `og:image` actualizados)
+- `about_us/about_us.html` (Modificado - menú superior Hostinger, botón WhatsApp y teléfono Schema.org actualizado)
+- `services_overview/services.html` (Modificado - menú superior Hostinger, botón WhatsApp y teléfono Schema.org actualizado)
+- `project_portfolio_gallery/portfolio.html` (Modificado - menú superior Hostinger, botón WhatsApp y teléfono Schema.org actualizado)
+- `experience_timeline/our_experience.html` (Modificado - menú superior Hostinger, botón WhatsApp y teléfono Schema.org actualizado)
+- `faq/contact_faq.html` (Modificado - menú superior Hostinger, botón WhatsApp y teléfonos actualizados)
+- `assets/js/i18n.js` (Modificado - diccionarios de teléfono actualizados para ES y EN)
+- `assets/images/services/servicios-legado-ambiental-2026-og.png` (Nuevo - versión optimizada de 1.33 MB)
+- `design_sources/` (Nuevo directorio de respaldo de archivos `.xcf`)
+- `design_sources/README.md` (Nuevo - documentación de fuentes de diseño)
+- `README.md` (Modificado - documentación de la Fase 35)
+
 
 
 
