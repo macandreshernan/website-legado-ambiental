@@ -1,8 +1,81 @@
-# Legado Ambiental - Refactorización del Sitio Web
+# Legado Ambiental - Plataforma Digital B2B & Embudo de Conversión
 
-Este documento detalla los ajustes y mejoras realizados al proyecto `website-legado` para asegurar su optimización, responsividad y localización para el mercado latinoamericano.
+Plataforma corporativa de **Legado Ambiental S.A. de C.V.** orientada a la captación y conversión de prospectos empresariales e institucionales en el sector de **Topografía de Alta Precisión**, **Infraestructura Hidráulica**, **Obra Civil**, **Consultoría Ambiental (SEMARNAT)** y **Seguridad e Higiene (STPS)**.
 
-## Resumen de Ajustes Realizados
+---
+
+## 🏛️ Ficha Técnica y Arquitectura del Sistema
+
+* **Dominio Oficial:** [https://legadoambiental.com.mx](https://legadoambiental.com.mx)
+* **Punto de Entrada Primario:** `home.html` (con redirección 301 desde raíz `/` e `index.html`)
+* **Framework y Estilos:** Tailwind CSS v3 (vía CDN con configuración extendida y container queries)
+* **Tipografías Corporativas:** `Manrope` (Cuerpo y UI técnica) y `Merriweather` (Títulos y acentos editoriales)
+* **Motor de Internacionalización (i18n):** Sistema nativo modular (`assets/js/i18n.js`) con paridad 1:1 entre Español (`es-MX`) e Inglés (`en-US`), persistencia en `localStorage` y cero textos estáticos quemados.
+* **Telemetría y Analítica Digital:** Google Tag Manager y Google Analytics 4 (`G-1MLGHB4E6G`) integrados en las 8 páginas con directivas CSP y 8 eventos B2B en `assets/js/analytics.js` (`form_start`, `select_service_interest`, `generate_lead`, `click_whatsapp`, `click_phone`, `scroll_depth`).
+* **Seguridad y Captura de Leads:** Formulario simplificado de 6 campos en `faq/contact_faq.html` con validación cliente, protección anti-spam **Honeypot**, notificaciones flotantes Toast UI y procesamiento vía FormSubmit API.
+* **Patrón de Contacto Móvil:** Patrón Híbrido B2B que combina una barra fija inferior (*Sticky Mobile CTA Bar*) para cotizaciones formales y un botón flotante circular (FAB) para WhatsApp directo.
+* **Generación de Reportes PDF:** Entorno de compilación determinista vía Google Chrome Headless (`google-chrome --headless --print-to-pdf`) con arquitectura modular `@media print` en tamaño Carta (8.5" x 11").
+
+---
+
+## 📂 Estructura General del Proyecto
+
+```text
+website-legado/
+├── home.html                       # Página principal / Hero JTBD y Trust Banner
+├── index.html                      # Enrutamiento canónico con redirección 301
+├── 404.html                        # Página de error personalizada y rescate de navegación
+├── about_us/about_us.html          # Nosotros: Visión, misión y trayectoria directiva
+├── services_overview/services.html # Catálogo de servicios con pestañas adaptativas y deep linking
+├── project_portfolio_gallery/      # Galería de proyectos y casos de éxito
+│   └── portfolio.html
+├── experience_timeline/            # Línea de tiempo y experiencia institucional
+│   └── our_experience.html
+├── faq/contact_faq.html            # Preguntas frecuentes, formulario de 6 campos y mapa
+├── assets/
+│   ├── css/                        # Estilos complementarios y overrides
+│   ├── js/
+│   │   ├── analytics.js            # Telemetría GTM/GA4 y captura de parámetros UTM / gclid
+│   │   ├── i18n.js                 # Diccionario maestro bilingüe (es-MX / en-US)
+│   │   └── theme-config.js         # Tokens de diseño y alternador de tema claro/oscuro
+│   ├── images/
+│   │   ├── logo/                   # Logotipo institucional en PNG, WebP y SVG
+│   │   ├── gbp-services/           # 11 imágenes de servicios HD (1200x896) y video 3D para GBP
+│   │   ├── qr/                     # Suite de códigos QR vectoriales y tarjeta de mostrador
+│   │   └── services/               # Fotografías históricas de proyectos
+│   └── docs/                       # Documentación ejecutiva, dictámenes y generadores PDF
+│       ├── Dictamen_Credito_Google_Ads_7000_MXN.pdf
+│       ├── Informe_Ejecutivo_Plan_Trabajo_y_Avances_2026.pdf
+│       ├── Guia_Estrategica_Google_Business_Profile_y_Ads_Local.pdf
+│       └── generate_informe_equipo_pdf.py
+├── INFORME_ESTADO_PLAN_TRABAJO_OCT_2026.md # Informe maestro de estado del proyecto
+├── plan-mejoras-uiux-100.md        # Plan técnico de CRO y puntos de control Git
+├── Plan de Trabajo y Arquitectura UI_UX - Legado Ambiental.md # Plan estratégico de 6 Pilares
+└── README.md                       # Bitácora técnica y registro de cambios
+```
+
+---
+
+## 📊 Estado Actual de los 6 Pilares Estratégicos
+
+1. **Pilar 1: Optimización Técnica y de Conversión Web (CRO):** `[100% CONCLUIDO]`  
+   Fases 1 a 5 concluidas, mobile-first, formulario de 6 campos, Sticky Bar + FAB WhatsApp, paridad bilingüe.
+2. **Pilar 2: Estrategia de Contenidos y Autoridad Técnica:** `[EN CURSO - SPRINT 2]`  
+   Trust banner normativo (`NOM-052`, `STPS`) activo en Hero; artículo técnico normativo extendido programado en PB6.
+3. **Pilar 3: Prospección B2B y Distribución:** `[PREPARADO / EN EJECUCIÓN]`  
+   Embudo digital listo para recibir tráfico directo de tomadores de decisión (directores de obra y contratistas).
+4. **Pilar 4: Herramientas de Ventas y Alianzas:** `[100% CONCLUIDO]`  
+   Portafolio PDF descargable, suite QR de alta definición y credencial para mostrador.
+5. **Pilar 5: Búsqueda Local y Visibilidad (Google Business Profile):** `[100% CONCLUIDO]`  
+   Ficha formalmente verificada por Google (199+ interacciones), 11 fotografías HD a 4:3, video 3D y suite QR.
+6. **Pilar 6: Adquisición de Pago (Google Ads Local):** `[POSPUESTO POR DICTAMEN]`  
+   Suspendido formalmente para optimizar capital de trabajo (ahorro de $8,120 MXN netos) y priorizar captación orgánica a costo $0.
+
+---
+
+## 📈 Historial y Registro Detallado de Fases Técnicas
+
+### Resumen de Ajustes Iniciales (Fase 1)
 
 ### 1. Localización y Traducción
 - **Idioma del Sitio**: Se actualizó el atributo `lang` en la etiqueta `<html>` de `en` a `es` en todas las páginas para mejorar el SEO y la accesibilidad en español.
