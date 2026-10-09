@@ -745,6 +745,61 @@
                     }
                 });
             });
+
+            // Auto-selección y scroll guiado por parámetro URL (?service=...)
+            const urlParams = new URLSearchParams(window.location.search);
+            const serviceParam = (urlParams.get('service') || '').trim().toLowerCase();
+
+            if (serviceParam) {
+                switchTab(1); // Garantiza que la pestaña de contacto esté activa
+                const serviceSelect = document.getElementById('service_type');
+                if (serviceSelect) {
+                    const SERVICE_MAPPING = {
+                        'residuos': 'Estudios de Impacto Ambiental',
+                        'agua': 'Tratamiento de Aguas Residuales',
+                        'impacto-ambiental': 'Estudios de Impacto Ambiental',
+                        'capacitacion-ambiental': 'Estudios de Impacto Ambiental',
+                        'ambiental': 'Estudios de Impacto Ambiental',
+                        'edificacion-residencial': 'Infraestructura y Construcción',
+                        'infraestructura-hidraulica': 'Infraestructura y Construcción',
+                        'ingenieria-planeacion': 'Infraestructura y Construcción',
+                        'supervision-obra': 'Infraestructura y Construcción',
+                        'construccion': 'Infraestructura y Construcción',
+                        'levantamiento-topografico': 'Topografía y Fotogrametría',
+                        'georreferenciacion-gps': 'Topografía y Fotogrametría',
+                        'modelado-digital-3d': 'Topografía y Fotogrametría',
+                        'control-topografico': 'Topografía y Fotogrametría',
+                        'topografia': 'Topografía y Fotogrametría',
+                        'gestion-operativa': 'Seguridad STPS / DC-3',
+                        'seguridad-campo': 'Seguridad STPS / DC-3',
+                        'capacitacion-stps': 'Seguridad STPS / DC-3',
+                        'seguridad-hidraulica': 'Seguridad STPS / DC-3',
+                        'seguridad': 'Seguridad STPS / DC-3',
+                        'ptar': 'Tratamiento de Aguas Residuales',
+                        'saneamiento': 'Tratamiento de Aguas Residuales'
+                    };
+
+                    const targetOptionVal = SERVICE_MAPPING[serviceParam];
+                    if (targetOptionVal) {
+                        serviceSelect.value = targetOptionVal;
+                    } else {
+                        for (let i = 0; i < serviceSelect.options.length; i++) {
+                            if (serviceSelect.options[i].value.toLowerCase().includes(serviceParam)) {
+                                serviceSelect.selectedIndex = i;
+                                break;
+                            }
+                        }
+                    }
+
+                    setTimeout(() => {
+                        const formSection = document.getElementById('contact-form') || document.getElementById('tab-section-1');
+                        if (formSection) {
+                            const offset = formSection.getBoundingClientRect().top + window.scrollY - 100;
+                            window.scrollTo({ top: Math.max(0, offset), behavior: 'smooth' });
+                        }
+                    }, 300);
+                }
+            }
         });
 
         // Form Validation and AJAX Submit with Spinner & Toast UI

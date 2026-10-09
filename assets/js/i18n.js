@@ -255,6 +255,14 @@ const translations = {
                     "badge3": "Programas de Protección Civil",
                     "cta": "Solicitar Asesoría Hidráulica o STPS"
                 }
+            },
+            "cards": {
+                "cta_quote": "Cotizar Proyecto",
+                "cta_whatsapp": "WhatsApp",
+                "deliverable_topo": "<strong>Entregables Oficiales:</strong> Planos ejecutivos en AutoCAD (DWG/PDF), curvas de nivel y memorias de cálculo geodésico en 24-48h.",
+                "deliverable_water": "<strong>Entregables Técnicos:</strong> Proyectos ejecutivos de PTAR con memoria de cálculo, planos hidrosanitarios y cumplimiento de NOM-001/002/003-SEMARNAT.",
+                "deliverable_const": "<strong>Respaldo y Bitácora:</strong> Firma de Director Responsable de Obra (DRO), bitácora oficial y reportes ejecutivos de avance.",
+                "deliverable_safety": "<strong>Dictámenes Oficiales:</strong> Diagnósticos integrales de seguridad e higiene, carpeta de comisiones mixtas (NOM-019) y programas de Protección Civil."
             }
         },
         "portfolio_page": {
@@ -885,6 +893,14 @@ const translations = {
                     "badge3": "Civil Protection Contingency Plans",
                     "cta": "Request Hydraulic or STPS Advisory"
                 }
+            },
+            "cards": {
+                "cta_quote": "Request Quote",
+                "cta_whatsapp": "WhatsApp",
+                "deliverable_topo": "<strong>Official Deliverables:</strong> Executive drawings in AutoCAD (DWG/PDF), contour lines, and geodetic calculation reports in 24-48h.",
+                "deliverable_water": "<strong>Technical Deliverables:</strong> WWTP executive projects with calculation reports, plumbing drawings, and NOM-001/002/003-SEMARNAT compliance.",
+                "deliverable_const": "<strong>Backing & Logbook:</strong> Official Director of Construction Works (DRO) endorsement, construction logbook, and executive progress reports.",
+                "deliverable_safety": "<strong>Official Opinions:</strong> Comprehensive occupational health & safety diagnostics, mixed commissions file (NOM-019), and Civil Protection programs."
             }
         },
         "portfolio_page": {

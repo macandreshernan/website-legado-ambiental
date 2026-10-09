@@ -1050,7 +1050,7 @@ Se alcanzó la culminación de los pilares técnicos y de presencia local establ
 
 ---
 
-## 🎯 Registro de Cambios: Fase 38 - PB5: Micro-Landings de Servicios Específicos & Deep-Linking Semántico (Módulos 1 y 2)
+## 🎯 Registro de Cambios: Fase 38 - PB5: Micro-Landings de Servicios Específicos & Conversión On-Site (Módulos 1, 2 y 3)
 
 ### 1. Módulo 1: Arquitectura de Navegación, Router JS y Deep-Linking Semántico
 - **Identificadores Amigables (Slugs Semánticos):**
@@ -1076,6 +1076,21 @@ Se alcanzó la culminación de los pilares técnicos y de presencia local establ
   - Botones de acción directa hacia cotización on-site (`contact_faq.html?service=[slug]`) y asesoría técnica directa por WhatsApp.
 - **Paridad Total de Internacionalización (28 Nuevas Claves i18n):**
   - Registro y validación estricta de 28 claves bajo `services_page.headers.*` en `assets/js/i18n.js` para los idiomas `es-MX` y `en-US`.
+
+### 3. Módulo 3: Enriquecimiento de Fichas de Servicio y Conversión On-Site (Eliminación de Fugas Externas)
+- **Eliminación Total de Enlaces Externos a Google Forms:**
+  - Sustitución del 100% de los botones con enlaces externos (`forms.gle` / `docs.google.com/forms`) en las 15 fichas de servicio por componentes nativos de conversión dual on-site, evitando la pérdida de tráfico cualificado y garantizando el seguimiento en GA4/GTM.
+- **Acciones Duales de Alta Conversión B2B por Ficha:**
+  - **Botón Primario On-Site:** Acceso a `../faq/contact_faq.html?service=[slug_especifico]` para captura formal de requerimientos en el sitio.
+  - **Botón Secundario Inmediato:** Acceso directo a WhatsApp (`wa.me/525583671036`) con texto precargado según la especialidad consultada.
+- **Enrutamiento y Auto-Selección Inteligente en `faq/contact_faq.html`:**
+  - Captura del parámetro de consulta `?service=` vía `URLSearchParams`.
+  - Mapeo semántico exhaustivo de los 15 servicios hacia el selector `<select id="service_type">` con fallback predictivo.
+  - Activación automática del formulario (`switchTab(1)`) y desplazamiento guiado y suave (*smooth scroll*) con compensación de cabecera hacia `#contact-form`.
+- **Enriquecimiento de Entregables Oficiales y Paridad Bilingüe:**
+  - Especificación de entregables técnicos tangibles en tarjetas representativas (planos ejecutivos AutoCAD DWG/PDF 24-48h, memorias de cálculo PTAR y NOM-001/002/003, respaldo de firma DRO con bitácora oficial, y diagnósticos STPS con carpetas NOM-019).
+  - Paridad estricta en `assets/js/i18n.js` (`es-MX` y `en-US`) bajo `services_page.cards.*` para todos los textos y entregables.
+
 
 
 
