@@ -217,6 +217,44 @@ const translations = {
             "methodology": {
                 "subtitle": "Proceso Ejecutivo",
                 "title": "Nuestra Metodología Estratégica"
+            },
+            "headers": {
+                "env": {
+                    "badge": "DIVISIÓN TÉCNICA AMBIENTAL",
+                    "title": "Ingeniería y Consultoría Ambiental Estratégica",
+                    "subtitle": "Blindaje normativo integral ante SEMARNAT, PROFEPA y dependencias estatales. Transformamos requerimientos regulatorios en certidumbre operativa y viabilidad para su proyecto.",
+                    "badge1": "Cumplimiento SEMARNAT / PROFEPA",
+                    "badge2": "Manejo Integral CRETI",
+                    "badge3": "Blindaje Legal y Cero Clausuras",
+                    "cta": "Solicitar Diagnóstico Ambiental"
+                },
+                "const": {
+                    "badge": "DIVISIÓN CONSTRUCCIÓN & OBRA CIVIL",
+                    "title": "Construcción, Supervisión y Respaldo DRO",
+                    "subtitle": "Ejecución técnica rigurosa de obra civil y edificación. Control documental, supervisión de calidad y cumplimiento normativo de licencias y reglamentos locales.",
+                    "badge1": "Director Responsable de Obra (DRO)",
+                    "badge2": "Control Presupuestal & Bitácora",
+                    "badge3": "Apego Normativo RCDF / Estados",
+                    "cta": "Cotizar Supervisión u Obra"
+                },
+                "topo": {
+                    "badge": "DIVISIÓN TOPOGRAFÍA & GEODESIA",
+                    "title": "Topografía de Alta Precisión y Fotogrametría Aérea",
+                    "subtitle": "Georreferenciación milimétrica y volumetrías exactas para proyectos de ingeniería. Reduzca costos por reprocesos mediante levantamientos con tecnología RTK y drones de última generación.",
+                    "badge1": "GPS Geodésico RTK Multibanda",
+                    "badge2": "Fotogrametría Aérea & LiDAR",
+                    "badge3": "Entregables CAD/GIS en 24-48h",
+                    "cta": "Cotizar Levantamiento Topográfico"
+                },
+                "safety": {
+                    "badge": "DIVISIÓN HIDRÁULICA & SEGURIDAD INDUSTRIAL",
+                    "title": "Infraestructura Hidráulica, Saneamiento y Normatividad STPS",
+                    "subtitle": "Diseño de plantas de tratamiento PTAR, redes de conducción y programas integrales de seguridad ocupacional. Salvaguarde a su personal y garantice el cumplimiento normativo laboral.",
+                    "badge1": "Plantas PTAR & Saneamiento",
+                    "badge2": "Cumplimiento Normativo STPS (NOMs)",
+                    "badge3": "Programas de Protección Civil",
+                    "cta": "Solicitar Asesoría Hidráulica o STPS"
+                }
             }
         },
         "portfolio_page": {
@@ -809,6 +847,44 @@ const translations = {
             "methodology": {
                 "subtitle": "Executive Process",
                 "title": "Our Strategic Methodology"
+            },
+            "headers": {
+                "env": {
+                    "badge": "ENVIRONMENTAL TECHNICAL DIVISION",
+                    "title": "Strategic Environmental Engineering & Consulting",
+                    "subtitle": "Comprehensive regulatory protection before SEMARNAT, PROFEPA, and state agencies. We transform compliance requirements into operational certainty and project viability.",
+                    "badge1": "SEMARNAT / PROFEPA Compliance",
+                    "badge2": "Hazardous Waste (CRETI) Management",
+                    "badge3": "Legal Protection & Zero Shutdowns",
+                    "cta": "Request Environmental Assessment"
+                },
+                "const": {
+                    "badge": "CONSTRUCTION & CIVIL WORKS DIVISION",
+                    "title": "Construction, Supervision & DRO Oversight",
+                    "subtitle": "Rigorous technical execution of civil works and building projects. Document control, quality supervision, and full compliance with local building codes and permits.",
+                    "badge1": "Registered Site Director (DRO)",
+                    "badge2": "Budget Control & Official Site Logbook",
+                    "badge3": "Regional Building Code Compliance",
+                    "cta": "Quote Supervision or Construction"
+                },
+                "topo": {
+                    "badge": "TOPOGRAPHY & GEODESY DIVISION",
+                    "title": "High-Precision Topography & Aerial Photogrammetry",
+                    "subtitle": "Millimeter-level georeferencing and exact volumetric calculations for engineering projects. Eliminate rework costs with state-of-the-art RTK and drone surveys.",
+                    "badge1": "Multi-Band RTK Geodetic GPS",
+                    "badge2": "Aerial Photogrammetry & LiDAR",
+                    "badge3": "CAD/GIS Deliverables in 24-48h",
+                    "cta": "Quote Topographic Survey"
+                },
+                "safety": {
+                    "badge": "HYDRAULIC & INDUSTRIAL SAFETY DIVISION",
+                    "title": "Hydraulic Infrastructure, Water Treatment & STPS Safety",
+                    "subtitle": "Wastewater treatment plant (PTAR) design, pipeline networks, and comprehensive occupational safety programs. Protect your workforce and ensure full labor compliance.",
+                    "badge1": "PTAR Water Treatment & Sanitation",
+                    "badge2": "STPS Labor Safety Compliance",
+                    "badge3": "Civil Protection Contingency Plans",
+                    "cta": "Request Hydraulic or STPS Advisory"
+                }
             }
         },
         "portfolio_page": {
