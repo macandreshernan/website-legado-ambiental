@@ -925,6 +925,58 @@ Para garantizar la preservación de los recursos de edición sin sobrecargar la 
 - `design_sources/README.md` (Nuevo - documentación de fuentes de diseño)
 - `README.md` (Modificado - documentación de la Fase 35)
 
+---
+
+## 📈 Registro de Cambios: Fase 36 - Infraestructura Web y Soporte Técnico para Google Business Profile (Pilar 5) y Google Ads Local (Pilar 6)
+
+### 1. Contexto y Objetivos
+Complementando el *Plan Estratégico de Trabajo y Arquitectura UI/UX* (Pilar 5: Búsqueda Local / SEO Local y Pilar 6: Adquisición de Pago / Google Ads Local), se implementó la infraestructura de código, analítica y metadatos necesaria para la captación activa de clientes en el Valle de México y la trazabilidad de campañas publicitarias.
+
+### 2. Manual y Guía Estratégica Completa
+Se creó la guía técnica y comercial integral en [`markdown/guia-google-business-profile-y-ads-local.md`](markdown/guia-google-business-profile-y-ads-local.md), que detalla:
+- **Google Business Profile:** Proceso de verificación en México, estandarización NAP 1:1, selección de categorías (`Consultor ambiental`, `Ingeniero consultor`, `Empresa constructora`, `Agrimensor`), delimitación de áreas de servicio (Estado de México, CDMX y nacional), catálogo de servicios B2B, estrategia de fotografías con EPP y protocolo para recolección y respuesta de reseñas en Google.
+- **Google Ads Local:** Vinculación de cuentas con GBP para recursos de ubicación, arquitectura de 4 grupos de anuncios por intención transaccional (Impacto Ambiental, Topografía, Saneamiento/PTAR, Seguridad STPS), matriz de palabras clave con concordancia de frase y exacta, lista exhaustiva de palabras clave negativas, modelos de anuncios responsivos (RSAs), extensiones obligatorias y estrategia de puja de aprendizaje a conversión.
+
+### 3. Adecuaciones Técnicas en el Sitio Web
+1. **Atribución de Marketing y Captura de Google Ads Click ID (`assets/js/analytics.js`):**
+   - Captura automática de `gclid`, `wbraid`, `gbraid`, `utm_source`, `utm_medium` y `utm_campaign` desde la URL al aterrizar en el sitio, persistidos en `sessionStorage`.
+   - Exposición de la función utilitaria global `window.getMarketingAttribution()`.
+   - Disparo de eventos enriquecidos con la procedencia de la campaña (`campaign_source`, `campaign_name`, `gclid`).
+   - Auto-instrumentación global para clics en enlaces de llamada telefónica (`click_phone`), reseñas de Google (`click_google_review`) y mapas (`click_google_maps`).
+   - Función puente `window.trackGoogleAdsConversion()` para enviar conversiones directas a la etiqueta de Google Ads (`gtag`).
+2. **Formulario de Cotización con Trazabilidad Publicitaria (`faq/contact_faq.html`):**
+   - El script de envío por AJAX ahora recupera los datos de campaña y adjunta `origen_campana` y `google_click_id` en el cuerpo del correo enviado a `formsubmit.co`, permitiendo al equipo de ventas identificar clientes de Google Ads.
+3. **Tarjeta Interactiva de Reseñas de Google Business Profile (`faq/contact_faq.html`):**
+   - Inserción de una tarjeta visual con insignia de verificación y 5 estrellas, invitando a directores de obra y empresas a dejar reseñas en Google.
+   - Botón directo *"Escribir Reseña en Google"* (`data-action="google-review"`) y *"Ver en Google Maps"* (`data-action="google-maps"`).
+4. **Teléfonos y Direcciones Clicables (`home.html` y `faq/contact_faq.html`):**
+   - Conversión de números telefónicos en enlaces táctiles interactivos `tel:+525583671036` y `tel:+527226727212`.
+   - Enlace directo a la ubicación en Google Maps en el footer y módulo de contacto.
+   - Enlaces rápidos a *Google Maps* y *Reseñas en Google* en la barra inferior del footer.
+5. **Enriquecimiento del Schema.org JSON-LD LocalBusiness (6 Páginas):**
+   - Actualización del marcado estructurado en `home.html`, `about_us.html`, `services.html`, `portfolio.html`, `our_experience.html` y `contact_faq.html` incorporando `@type: ["LocalBusiness", "ConstructionBusiness", "EnvironmentalConsultancy"]`, geolocalización GPS (`geo`: `19.6018, -99.0494`), horarios comerciales (`openingHoursSpecification`), cobertura geográfica (`areaServed`) y múltiples puntos de atención técnica y comercial.
+6. **Internacionalización y Cero Errores (Regla de Oro `assets/js/i18n.js`):**
+   - Registro de todas las nuevas llaves textuales en español (`es-MX`) e inglés (`en-US`).
+
+---
+
+## 🚀 Registro de Cambios: Fase 37 - Culminación de Google Business Profile, Integración GTM/GA4 y Dictamen Ejecutivo de Proyecto
+
+### 1. Contexto y Logros
+Se alcanzó la culminación de los pilares técnicos y de presencia local establecidos en el plan de trabajo para la captación de los **Primeros 100 Leads B2B**:
+- **Google Business Profile (Pilar 5: SEO Local Concluido):** Ficha formalmente verificada por Google con panel de control en vivo (199+ interacciones), 11 fotografías de servicios profesionales remasterizadas a alta definición (1200x896 px, proporción 4:3), material audiovisual de Modelado 3D y cálculo volumétrico de tierras (carátula HD y video demo de 20 segundos), y suite completa de códigos QR vectoriales/rasterizados con credencial de mostrador (`tarjeta-qr-legadoambiental.html`).
+- **Medición y Analítica Digital (GA4 y GTM):** Implementación de la etiqueta de Google Tag Manager y Google Analytics (`G-1MLGHB4E6G`) en las 8 páginas del ecosistema web, adecuación de directivas CSP en cabeceras HTML y rastreo de eventos del embudo de conversión en `assets/js/analytics.js` (`form_start`, `select_service_interest`, `generate_lead`, `click_whatsapp`, `click_phone`, `scroll_depth`).
+- **Dictamen Financiero sobre Google Ads (Pilar 6):** Elaboración del análisis técnico y financiero formal sobre el cupón de $7,000 MXN (`DOC-LA-MKT-2026-004`). Se determinó por resolución corporativa suspender temporalmente la pauta pagada para cuidar el flujo de efectivo (ahorro inmediato de $8,120 MXN netos con IVA) y canalizar los esfuerzos inmediatos a la captación orgánica y prospección directa B2B.
+
+### 2. Entregables Documentales y Reportes Ejecutivos
+- **Informe de Estado del Proyecto (Markdown & PDF):**  
+  - [`INFORME_ESTADO_PLAN_TRABAJO_OCT_2026.md`](INFORME_ESTADO_PLAN_TRABAJO_OCT_2026.md)  
+  - [`assets/docs/Informe_Ejecutivo_Plan_Trabajo_y_Avances_2026.pdf`](assets/docs/Informe_Ejecutivo_Plan_Trabajo_y_Avances_2026.pdf)
+- **Dictamen Técnico del Crédito Publicitario Google Ads:**  
+  - [`assets/docs/Dictamen_Credito_Google_Ads_7000_MXN.pdf`](assets/docs/Dictamen_Credito_Google_Ads_7000_MXN.pdf)
+
+
+
 
 
 

@@ -2,6 +2,16 @@
 <html class="light" lang="es">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1MLGHB4E6G"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-1MLGHB4E6G');
+    </script>
+
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title data-i18n="contact_page.title">Contacto y FAQ | Legado Ambiental</title>
@@ -27,7 +37,7 @@
 
     <!-- Security Headers -->
     <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://fonts.googleapis.com; img-src 'self' data: https://lh3.googleusercontent.com; connect-src 'self' https://formsubmit.co;">
+        content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://fonts.googleapis.com; img-src 'self' data: https://lh3.googleusercontent.com https://*.google-analytics.com https://*.googletagmanager.com; connect-src 'self' https://formsubmit.co https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com;">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
 
     <!-- SEO Canonical & Hreflang -->
@@ -36,15 +46,19 @@
     <link rel="alternate" hreflang="en-US" href="https://www.legadoambiental.com.mx/faq/contact_faq.html?lang=en-US" />
     <link rel="alternate" hreflang="x-default" href="https://www.legadoambiental.com.mx/faq/contact_faq.html" />
 
-    <!-- Structured Data -->
+    <!-- Structured Data (Local Business & Google Business Profile) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": ["ConstructionBusiness", "EnvironmentalConsultancy"],
+      "@type": ["LocalBusiness", "ConstructionBusiness", "EnvironmentalConsultancy"],
       "name": "Legado Ambiental",
+      "legalName": "Legado Ambiental S.A. de C.V.",
       "url": "https://www.legadoambiental.com.mx",
+      "logo": "https://www.legadoambiental.com.mx/assets/images/logo/logo_final_v2.webp",
       "image": "https://www.legadoambiental.com.mx/assets/images/logo/logo_final_v2.webp",
-      "description": "Soluciones integrales en ingeniería civil, estudios de impacto ambiental, topografía de precisión y seguridad e higiene industrial.",
+      "description": "Soluciones integrales en consultoría ambiental, estudios de impacto ambiental (MIA), topografía de precisión, obras de saneamiento y seguridad e higiene industrial.",
+      "telephone": "+52-55-8367-1036",
+      "priceRange": "$$$",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "U.H. Valle de Ecatepec",
@@ -53,11 +67,55 @@
         "postalCode": "55119",
         "addressCountry": "MX"
       },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+52-55-8367-1036",
-        "contactType": "customer service"
-      }
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 19.6018,
+        "longitude": -99.0494
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Saturday"],
+          "opens": "09:00",
+          "closes": "14:00"
+        }
+      ],
+      "areaServed": [
+        {
+          "@type": "AdministrativeArea",
+          "name": "Estado de México"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Ciudad de México"
+        },
+        {
+          "@type": "Country",
+          "name": "México"
+        }
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+52-55-8367-1036",
+          "contactType": "customer service",
+          "areaServed": "MX",
+          "availableLanguage": ["Spanish", "English"]
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+52-72-2672-7212",
+          "contactType": "technical support",
+          "areaServed": "MX",
+          "availableLanguage": ["Spanish", "English"]
+        }
+      ]
     }
     </script>
 
@@ -489,7 +547,7 @@
                         </div>
                         <!-- Quick Contact Info -->
                         <div
-                            class="relative bg-white dark:bg-[#121c27] rounded-3xl p-8 border border-slate-100 dark:border-white/5 shadow-[0_10px_40px_rgba(0,0,0,0.06)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.3)] overflow-hidden">
+                            class="relative bg-white dark:bg-[#121c27] rounded-3xl p-8 border border-slate-100 dark:border-white/5 shadow-[0_10px_40px_rgba(0,0,0,0.06)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.3)] overflow-hidden mb-6">
                             <div
                                 class="absolute -bottom-20 -right-20 w-48 h-48 bg-primary/10 dark:bg-primary/20 rounded-full blur-[50px] pointer-events-none z-0">
                             </div>
@@ -497,31 +555,71 @@
                             <h3 class="relative z-10 text-xl font-bold text-[#111418] dark:text-white mb-6 tracking-tight"
                                 data-i18n="contact_page.info.title">Información Directa</h3>
                             <ul class="relative z-10 space-y-6">
-                                <li
-                                    class="flex items-center gap-4 text-sm text-[#617589] dark:text-gray-400 font-medium">
-                                    <span
-                                        class="material-symbols-outlined text-primary w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center w-full sm:w-auto justify-center">call</span>
-                                    <span data-i18n="contact_page.info.phone1">+52 55 8367 1036</span>
+                                <li class="text-sm text-[#617589] dark:text-gray-400 font-medium">
+                                    <a href="tel:+525583671036" class="flex items-center gap-4 hover:text-primary transition-colors group">
+                                        <span
+                                            class="material-symbols-outlined text-primary w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shrink-0">call</span>
+                                        <span data-i18n="contact_page.info.phone1">+52 55 8367 1036</span>
+                                    </a>
                                 </li>
-                                <li
-                                    class="flex items-center gap-4 text-sm text-[#617589] dark:text-gray-400 font-medium">
-                                    <span
-                                        class="material-symbols-outlined text-primary w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center w-full sm:w-auto justify-center">call</span>
-                                    <span data-i18n="contact_page.info.phone2">+52 72 2672 7212</span>
+                                <li class="text-sm text-[#617589] dark:text-gray-400 font-medium">
+                                    <a href="tel:+527226727212" class="flex items-center gap-4 hover:text-primary transition-colors group">
+                                        <span
+                                            class="material-symbols-outlined text-primary w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shrink-0">call</span>
+                                        <span data-i18n="contact_page.info.phone2">+52 72 2672 7212</span>
+                                    </a>
                                 </li>
-                                <li
-                                    class="flex items-center gap-4 text-sm text-[#617589] dark:text-gray-400 font-medium">
-                                    <span
-                                        class="material-symbols-outlined text-primary w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center w-full sm:w-auto justify-center">mail</span>
-                                    <span data-i18n="contact_page.info.email"><strong>legado.ambiental.mx@gmail.com</strong></strong></span>
+                                <li class="text-sm text-[#617589] dark:text-gray-400 font-medium">
+                                    <a href="mailto:legado.ambiental.mx@gmail.com" class="flex items-center gap-4 hover:text-primary transition-colors group">
+                                        <span
+                                            class="material-symbols-outlined text-primary w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shrink-0">mail</span>
+                                        <span data-i18n="contact_page.info.email"><strong>legado.ambiental.mx@gmail.com</strong></span>
+                                    </a>
                                 </li>
-                                <li
-                                    class="flex items-center gap-4 text-sm text-[#617589] dark:text-gray-400 font-medium leading-relaxed">
-                                    <span
-                                        class="material-symbols-outlined text-primary w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center w-full sm:w-auto justify-center">location_on</span>
-                                    <span data-i18n="contact_page.info.addr">U.H. Valle de Ecatepec, <br> C.P. 55119, Ecatepec, Estado de México</span>
+                                <li class="text-sm text-[#617589] dark:text-gray-400 font-medium leading-relaxed">
+                                    <a href="https://maps.google.com/?q=Valle+de+Ecatepec+Estado+de+Mexico" target="_blank" rel="noopener noreferrer" data-action="google-maps" class="flex items-center gap-4 hover:text-primary transition-colors group">
+                                        <span
+                                            class="material-symbols-outlined text-primary w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shrink-0">location_on</span>
+                                        <span data-i18n="contact_page.info.addr">U.H. Valle de Ecatepec, <br> C.P. 55119, Ecatepec, Estado de México</span>
+                                    </a>
                                 </li>
                             </ul>
+                        </div>
+
+                        <!-- Google Business Profile & Reseñas de Clientes (Pilar 5: SEO Local) -->
+                        <div
+                            class="relative bg-gradient-to-br from-white to-slate-50 dark:from-[#121c27] dark:to-[#1a2634] rounded-3xl p-8 border border-slate-100 dark:border-white/10 shadow-[0_10px_40px_rgba(0,0,0,0.06)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.3)] overflow-hidden">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-primary/10 text-primary border border-primary/20">
+                                    <span class="material-symbols-outlined text-sm">verified</span>
+                                    <span data-i18n="contact_page.google_reviews.badge">Google Business Profile</span>
+                                </span>
+                                <div class="flex text-amber-400 text-sm" aria-label="5 estrellas de calificación">
+                                    <span class="material-symbols-outlined text-base">star</span>
+                                    <span class="material-symbols-outlined text-base">star</span>
+                                    <span class="material-symbols-outlined text-base">star</span>
+                                    <span class="material-symbols-outlined text-base">star</span>
+                                    <span class="material-symbols-outlined text-base">star</span>
+                                </div>
+                            </div>
+                            <h3 class="text-xl font-extrabold text-[#111418] dark:text-white mb-2 tracking-tight"
+                                data-i18n="contact_page.google_reviews.title">Calidad Verificada y Reseñas en Google</h3>
+                            <p class="text-sm text-[#617589] dark:text-gray-400 leading-relaxed font-medium mb-6"
+                                data-i18n="contact_page.google_reviews.desc">¿Has colaborado con Legado Ambiental en un proyecto u obra? Tu testimonio en Google nos ayuda a seguir construyendo valor técnico y confianza con nuevas empresas.</p>
+                            <div class="flex flex-col sm:flex-row gap-3">
+                                <a href="https://www.google.com/search?q=Legado+Ambiental+Ecatepec+opiniones"
+                                    target="_blank" rel="noopener noreferrer" data-action="google-review"
+                                    class="flex-1 bg-primary hover:bg-primary/90 text-white font-bold py-3 px-4 rounded-xl text-center text-sm flex items-center justify-center gap-2 shadow-md transition-all">
+                                    <span class="material-symbols-outlined text-base">rate_review</span>
+                                    <span data-i18n="contact_page.google_reviews.btn_review">Escribir Reseña en Google</span>
+                                </a>
+                                <a href="https://maps.google.com/?q=Valle+de+Ecatepec+Estado+de+Mexico"
+                                    target="_blank" rel="noopener noreferrer" data-action="google-maps"
+                                    class="bg-white dark:bg-[#1a2530] hover:bg-slate-100 dark:hover:bg-[#253240] text-navy dark:text-white border border-slate-200 dark:border-white/10 font-bold py-3 px-4 rounded-xl text-center text-sm flex items-center justify-center gap-2 transition-all">
+                                    <span class="material-symbols-outlined text-base text-primary">map</span>
+                                    <span data-i18n="contact_page.google_reviews.btn_maps">Ver en Google Maps</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -681,6 +779,9 @@
                 // Advanced Email Regex Validation
                 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                 if (!emailRegex.test(emailInput.value)) {
+                    if (typeof trackEvent === 'function') {
+                        trackEvent('form_validation_failed', { error_field: 'email' });
+                    }
                     if (emailError) emailError.classList.remove('hidden');
                     emailInput.focus();
                     if (globalThis.ToastService) {
@@ -694,6 +795,9 @@
                 // Phone Validation (Min 10 digits)
                 const rawPhone = phoneInput.value.replace(/\D/g, '');
                 if (rawPhone.length < 10) {
+                    if (typeof trackEvent === 'function') {
+                        trackEvent('form_validation_failed', { error_field: 'phone' });
+                    }
                     if (phoneError) phoneError.classList.remove('hidden');
                     phoneInput.focus();
                     if (globalThis.ToastService) {
@@ -712,6 +816,9 @@
                 submitText.textContent = (globalThis.i18n && globalThis.i18n.t) ? globalThis.i18n.t('contact_page.form.sending') : 'Enviando...';
                 if (submitSpinner) submitSpinner.classList.remove('hidden');
 
+                // Get Google Ads & Marketing Attribution
+                const attribution = (typeof window.getMarketingAttribution === 'function') ? window.getMarketingAttribution() : {};
+
                 // AJAX Fetch to FormSubmit
                 fetch("https://formsubmit.co/ajax/legado.ambiental.mx@gmail.com", {
                     method: "POST",
@@ -727,15 +834,19 @@
                         service_type: serviceInput.value,
                         location: locationInput.value || 'No especificada',
                         message: messageInput.value,
+                        origen_campana: attribution.utm_campaign || (attribution.gclid ? 'Google Ads Local' : 'Orgánico / Directo'),
+                        google_click_id: attribution.gclid || 'N/A',
                         _subject: "Nuevo Lead B2B - Solicitud de Cotización Legado Ambiental"
                     })
                 })
                 .then(response => response.json())
                 .then(data => {
-                    // GA4 / GTM Lead Event
+                    // GA4 / GTM & Google Ads Lead Event
                     if (typeof trackEvent === 'function') {
-                        const serviceVal = document.getElementById('contact-service')?.value || 'general';
-                        trackEvent('generate_lead', { service_category: serviceVal });
+                        trackEvent('generate_lead', { 
+                            service_category: serviceInput.value,
+                            lead_company: companyInput.value
+                        });
                     }
 
                     // Success state

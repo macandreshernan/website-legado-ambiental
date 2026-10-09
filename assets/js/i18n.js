@@ -120,7 +120,9 @@ const translations = {
             "rights": "<strong>© 2026 Legado Ambiental S.A. de C.V. <br>Todos los derechos reservados.</strong>",
             "privacy": "Política de Privacidad",
             "terms": "Términos de Servicio",
-            "sitemap": "Mapa del Sitio"
+            "sitemap": "Mapa del Sitio",
+            "maps_link": "Google Maps",
+            "reviews_link": "Reseñas en Google"
         },
         "about": {
             "title": "Quiénes Somos",
@@ -361,6 +363,13 @@ const translations = {
                 "email": "<strong>legado.ambiental.mx@gmail.com</strong>",
                 "phone1": "+52 55 8367 1036",
                 "phone2": "+52 72 2672 7212"
+            },
+            "google_reviews": {
+                "badge": "Google Business Profile",
+                "title": "Calidad Verificada y Reseñas en Google",
+                "desc": "¿Has colaborado con Legado Ambiental en un proyecto u obra? Tu testimonio en Google nos ayuda a seguir construyendo valor técnico y confianza con nuevas empresas.",
+                "btn_review": "Escribir Reseña en Google",
+                "btn_maps": "Ver en Google Maps"
             }
         },
         "index_landing": {
@@ -703,7 +712,9 @@ const translations = {
             "rights": "<strong>© 2026 Legado Ambiental S.A. de C.V. <br>All rights reserved.</strong>",
             "privacy": "Privacy Policy",
             "terms": "Terms of Service",
-            "sitemap": "Sitemap"
+            "sitemap": "Sitemap",
+            "maps_link": "Google Maps",
+            "reviews_link": "Google Reviews"
         },
         "about": {
             "title": "About Us",
@@ -944,6 +955,13 @@ const translations = {
                 "email": "<strong>legado.ambiental.mx@gmail.com</strong>",
                 "phone1": "+52 55 8367 1036",
                 "phone2": "+52 72 2672 7212"
+            },
+            "google_reviews": {
+                "badge": "Google Business Profile",
+                "title": "Verified Quality & Google Reviews",
+                "desc": "Have you partnered with Legado Ambiental on a project or site? Your Google review helps us continue building technical credibility and trust with new enterprises.",
+                "btn_review": "Leave a Google Review",
+                "btn_maps": "View on Google Maps"
             }
         },
         "index_landing": {

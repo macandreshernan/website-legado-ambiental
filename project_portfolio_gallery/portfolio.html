@@ -2,13 +2,23 @@
 <html class="light" lang="es">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1MLGHB4E6G"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-1MLGHB4E6G');
+    </script>
+
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title data-i18n="portfolio_page.title">Portafolio de Proyectos | Legado Ambiental</title>
 
     <!-- Security Headers -->
     <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://fonts.googleapis.com; img-src 'self' data: https://lh3.googleusercontent.com; connect-src 'self';">
+        content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://fonts.googleapis.com; img-src 'self' data: https://lh3.googleusercontent.com https://*.google-analytics.com https://*.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com;">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
 
     <!-- SEO & Social Media Meta Tags -->
@@ -37,15 +47,19 @@
     <link rel="alternate" hreflang="x-default"
         href="https://www.legadoambiental.com.mx/project_portfolio_gallery/portfolio.html" />
 
-    <!-- Structured Data -->
+    <!-- Structured Data (Local Business & Google Business Profile) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": ["ConstructionBusiness", "EnvironmentalConsultancy"],
+      "@type": ["LocalBusiness", "ConstructionBusiness", "EnvironmentalConsultancy"],
       "name": "Legado Ambiental",
+      "legalName": "Legado Ambiental S.A. de C.V.",
       "url": "https://www.legadoambiental.com.mx",
+      "logo": "https://www.legadoambiental.com.mx/assets/images/logo/logo_final_v2.webp",
       "image": "https://www.legadoambiental.com.mx/assets/images/logo/logo_final_v2.webp",
-      "description": "Soluciones integrales en ingeniería civil, estudios de impacto ambiental, topografía de precisión y seguridad e higiene industrial.",
+      "description": "Soluciones integrales en consultoría ambiental, estudios de impacto ambiental (MIA), topografía de precisión, obras de saneamiento y seguridad e higiene industrial.",
+      "telephone": "+52-55-8367-1036",
+      "priceRange": "$$$",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "U.H. Valle de Ecatepec",
@@ -54,11 +68,55 @@
         "postalCode": "55119",
         "addressCountry": "MX"
       },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+52-55-8367-1036",
-        "contactType": "customer service"
-      }
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 19.6018,
+        "longitude": -99.0494
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Saturday"],
+          "opens": "09:00",
+          "closes": "14:00"
+        }
+      ],
+      "areaServed": [
+        {
+          "@type": "AdministrativeArea",
+          "name": "Estado de México"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Ciudad de México"
+        },
+        {
+          "@type": "Country",
+          "name": "México"
+        }
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+52-55-8367-1036",
+          "contactType": "customer service",
+          "areaServed": "MX",
+          "availableLanguage": ["Spanish", "English"]
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+52-72-2672-7212",
+          "contactType": "technical support",
+          "areaServed": "MX",
+          "availableLanguage": ["Spanish", "English"]
+        }
+      ]
     }
     </script>
 
