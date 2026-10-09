@@ -321,17 +321,17 @@
             </div>
 
             <!-- Tabs Section (Adaptativa: Select UI en Móvil / Pestañas en Desktop) -->
-            <div class="w-full max-w-[1200px] mx-auto px-4 md:px-10 mt-12 md:mt-16 mb-8 relative z-20">
+            <div id="services-tabs-container" class="w-full max-w-[1200px] mx-auto px-4 md:px-10 mt-12 md:mt-16 mb-8 relative z-20">
                 <!-- Selector Móvil (< sm) -->
                 <div class="sm:hidden mb-4">
                     <label for="services-mobile-select" class="sr-only" data-i18n="services_page.tabs.select_label">Seleccionar División de Servicio</label>
                     <div class="relative">
                         <select id="services-mobile-select"
                             class="w-full p-4 pr-10 rounded-2xl bg-white dark:bg-[#1a2530] text-navy dark:text-white font-extrabold text-base border-2 border-primary shadow-lg focus:outline-none focus:ring-2 focus:ring-primary appearance-none">
-                            <option value="1" data-i18n="services_page.tabs.engeneering">Ingeniería Ambiental</option>
-                            <option value="2" data-i18n="services_page.tabs.building">Construcción</option>
-                            <option value="3" data-i18n="services_page.tabs.topography">Topografía</option>
-                            <option value="4" data-i18n="services_page.tabs.safety">Seguridad e Higiene</option>
+                            <option value="ambiental" data-tab="1" data-i18n="services_page.tabs.engeneering">Ingeniería Ambiental</option>
+                            <option value="construccion" data-tab="2" data-i18n="services_page.tabs.building">Construcción</option>
+                            <option value="topografia" data-tab="3" data-i18n="services_page.tabs.topography">Topografía</option>
+                            <option value="seguridad-hidraulica" data-tab="4" data-i18n="services_page.tabs.safety">Seguridad e Higiene</option>
                         </select>
                         <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-primary">
                             <span class="material-symbols-outlined text-2xl">unfold_more</span>
@@ -342,19 +342,19 @@
                 <!-- Pestañas Desktop (>= sm) -->
                 <div
                     class="hidden sm:flex bg-gray-50/80 dark:bg-[#1a2530]/80 backdrop-blur-md rounded-2xl p-2 border border-gray-100 dark:border-gray-800 shadow-sm gap-2">
-                    <button id="tab-btn-1" data-tab="1"
+                    <button id="tab-btn-1" data-tab="1" data-slug="ambiental"
                         class="tab-btn flex-1 flex flex-col items-center justify-center rounded-xl px-6 py-3.5 bg-primary text-white shadow-[0_4px_16px_rgba(16,185,129,0.30)] transition-all duration-300 whitespace-nowrap focus:outline-none">
                         <p class="text-sm font-bold tracking-wide" data-i18n="services_page.tabs.engeneering">Ingeniería Ambiental</p>
                     </button>
-                    <button id="tab-btn-2" data-tab="2"
+                    <button id="tab-btn-2" data-tab="2" data-slug="construccion"
                         class="tab-btn flex-1 flex flex-col items-center justify-center rounded-xl px-6 py-3.5 text-[#617589] dark:text-gray-400 hover:text-[#111418] dark:hover:text-white hover:bg-gray-200 dark:hover:bg-[#253240] transition-all duration-300 whitespace-nowrap focus:outline-none">
                         <p class="text-sm font-bold tracking-wide" data-i18n="services_page.tabs.building">Construcción</p>
                     </button>
-                    <button id="tab-btn-3" data-tab="3"
+                    <button id="tab-btn-3" data-tab="3" data-slug="topografia"
                         class="tab-btn flex-1 flex flex-col items-center justify-center rounded-xl px-6 py-3.5 text-[#617589] dark:text-gray-400 hover:text-[#111418] dark:hover:text-white hover:bg-gray-200 dark:hover:bg-[#253240] transition-all duration-300 whitespace-nowrap focus:outline-none">
                         <p class="text-sm font-bold tracking-wide" data-i18n="services_page.tabs.topography">Topografía</p>
                     </button>
-                    <button id="tab-btn-4" data-tab="4"
+                    <button id="tab-btn-4" data-tab="4" data-slug="seguridad-hidraulica"
                         class="tab-btn flex-1 flex flex-col items-center justify-center rounded-xl px-6 py-3.5 text-[#617589] dark:text-gray-400 hover:text-[#111418] dark:hover:text-white hover:bg-gray-200 dark:hover:bg-[#253240] transition-all duration-300 whitespace-nowrap focus:outline-none">
                         <p class="text-sm font-bold tracking-wide" data-i18n="services_page.tabs.safety">Seguridad e Higiene</p>
                     </button>
@@ -1148,8 +1148,52 @@
         menuBtn.addEventListener('click', toggleMenu);
         mobileLinks.forEach(link => link.addEventListener('click', closeMenu));
 
-        // Tabs Logic
-        function switchTab(tabIndex) {
+        // Tab Configuration & Semantic Routing Maps
+        const TAB_CONFIG = {
+            1: { slug: 'ambiental', name: 'Ingeniería Ambiental' },
+            2: { slug: 'construccion', name: 'Construcción' },
+            3: { slug: 'topografia', name: 'Topografía' },
+            4: { slug: 'seguridad-hidraulica', name: 'Seguridad e Higiene' }
+        };
+
+        const SLUG_TO_INDEX = {
+            'ambiental': 1,
+            'ingenieria-ambiental': 1,
+            'tab-1': 1,
+            '1': 1,
+
+            'construccion': 2,
+            'obra-civil': 2,
+            'tab-2': 2,
+            '2': 2,
+
+            'topografia': 3,
+            'fotogrametria': 3,
+            'drones': 3,
+            'tab-3': 3,
+            '3': 3,
+
+            'seguridad-hidraulica': 4,
+            'seguridad': 4,
+            'hidraulica': 4,
+            'saneamiento': 4,
+            'tab-4': 4,
+            '4': 4
+        };
+
+        // Tabs Logic & State Management
+        function switchTab(target, updateUrl = true, shouldScroll = false) {
+            let tabIndex = 1;
+            if (typeof target === 'number') {
+                tabIndex = target;
+            } else if (typeof target === 'string') {
+                const normalized = target.toLowerCase().replace(/^#/, '').trim();
+                tabIndex = SLUG_TO_INDEX[normalized] || Number.parseInt(normalized, 10) || 1;
+            }
+
+            if (!TAB_CONFIG[tabIndex]) tabIndex = 1;
+            const currentSlug = TAB_CONFIG[tabIndex].slug;
+
             // Update Tab Buttons Styles (Desktop)
             const allTabs = document.querySelectorAll('.tab-btn');
             allTabs.forEach(tab => {
@@ -1159,14 +1203,17 @@
 
             const activeTab = document.getElementById(`tab-btn-${tabIndex}`);
             if (activeTab) {
-                activeTab.classList.remove('text-[#617589]', 'dark:text-gray-400', 'hover:text-[#111418]', 'dark:hover:text-[#111418]', 'hover:bg-gray-200', 'dark:hover:bg-[#253240]');
+                activeTab.classList.remove('text-[#617589]', 'dark:text-gray-400', 'hover:text-[#111418]', 'dark:hover:text-white', 'hover:bg-gray-200', 'dark:hover:bg-[#253240]');
                 activeTab.classList.add('bg-primary', 'text-white', 'shadow-[0_4px_16px_rgba(16,185,129,0.30)]');
             }
 
             // Sync Mobile Select Dropdown
             const mobileSelect = document.getElementById('services-mobile-select');
-            if (mobileSelect && mobileSelect.value !== String(tabIndex)) {
-                mobileSelect.value = String(tabIndex);
+            if (mobileSelect) {
+                mobileSelect.value = currentSlug;
+                if (!mobileSelect.value) {
+                    mobileSelect.value = String(tabIndex);
+                }
             }
 
             // Update Sections visibility with smooth transitions
@@ -1181,11 +1228,39 @@
                 activeSection.classList.remove('hidden');
                 activeSection.classList.add('grid');
 
-                // Slight delay to allow display: grid to apply before triggering CSS opacity transition
                 setTimeout(() => {
                     activeSection.classList.remove('opacity-0');
                     activeSection.classList.add('opacity-100');
                 }, 10);
+            }
+
+            // Browser URL & History State Synchronization
+            if (updateUrl && window.history && window.history.replaceState) {
+                window.history.replaceState(null, null, '#' + currentSlug);
+            }
+
+            // Telemetría GA4 / GTM
+            if (window.dataLayer) {
+                window.dataLayer.push({
+                    event: 'select_service_tab',
+                    service_category: currentSlug,
+                    service_name: TAB_CONFIG[tabIndex].name,
+                    service_index: tabIndex
+                });
+            }
+
+            // Smooth Guided Scroll
+            if (shouldScroll) {
+                setTimeout(() => {
+                    const tabContainer = document.getElementById('services-tabs-container') || document.querySelector('.tab-section');
+                    if (tabContainer) {
+                        const offsetTop = tabContainer.getBoundingClientRect().top + window.scrollY - 100;
+                        window.scrollTo({
+                            top: Math.max(0, offsetTop),
+                            behavior: 'smooth'
+                        });
+                    }
+                }, 150);
             }
         }
 
@@ -1193,9 +1268,9 @@
         const tabButtons = document.querySelectorAll('.tab-btn');
         tabButtons.forEach(btn => {
             btn.addEventListener('click', () => {
-                const tabIndex = Number.parseInt(btn.dataset.tab, 10);
-                if (tabIndex) {
-                    switchTab(tabIndex);
+                const target = btn.dataset.slug || btn.dataset.tab;
+                if (target) {
+                    switchTab(target, true, false);
                 }
             });
         });
@@ -1204,36 +1279,29 @@
         const mobileSelect = document.getElementById('services-mobile-select');
         if (mobileSelect) {
             mobileSelect.addEventListener('change', (e) => {
-                const tabIndex = Number.parseInt(e.target.value, 10);
-                if (tabIndex) {
-                    switchTab(tabIndex);
+                const target = e.target.value;
+                if (target) {
+                    switchTab(target, true, true);
                 }
             });
         }
 
-        // Deep Linking for tabs based on URL Hash
-        document.addEventListener('DOMContentLoaded', () => {
-            if (globalThis.location.hash) {
-                const hash = globalThis.location.hash;
-                const match = hash.match(/#tab-(\d+)/);
-                if (match && match[1]) {
-                    const tabIndex = Number.parseInt(match[1], 10);
-                    // Call the existing function to switch the visual state of tabs
-                    switchTab(tabIndex);
-
-                    // Smooth scroll to the tab buttons wrapper so user sees the content
-                    setTimeout(() => {
-                        const tabContainer = document.querySelector('.tab-section');
-                        if (tabContainer) {
-                            const offsetTop = tabContainer.getBoundingClientRect().top + globalThis.scrollY - 100;
-                            globalThis.scrollTo({
-                                top: offsetTop,
-                                behavior: 'smooth'
-                            });
-                        }
-                    }, 300); // Allow time for DOM updates and tab animations
+        // Deep Linking on Load and Hash Change
+        function handleHashRouting(shouldScroll = false) {
+            if (window.location.hash) {
+                const rawHash = window.location.hash.replace(/^#/, '').trim().toLowerCase();
+                if (SLUG_TO_INDEX[rawHash]) {
+                    switchTab(SLUG_TO_INDEX[rawHash], false, shouldScroll);
                 }
             }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            handleHashRouting(true);
+        });
+
+        window.addEventListener('hashchange', () => {
+            handleHashRouting(true);
         });
     </script>
     <script src="../assets/js/i18n.js" data-base-path="../"></script>
