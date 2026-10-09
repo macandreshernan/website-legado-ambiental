@@ -2,13 +2,23 @@
 <html class="light" lang="es">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1MLGHB4E6G"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-1MLGHB4E6G');
+    </script>
+
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title data-i18n="index_landing.title_full">Legado Ambiental | Inicio</title>
 
     <!-- Security Headers -->
     <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://fonts.googleapis.com; img-src 'self' data: https://lh3.googleusercontent.com; connect-src 'self';">
+        content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://fonts.googleapis.com; img-src 'self' data: https://lh3.googleusercontent.com https://*.google-analytics.com https://*.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com;">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
 
     <!-- SEO & Social Media Meta Tags -->
@@ -17,13 +27,19 @@
     <meta property="og:title" content="Legado Ambiental | Inicio">
     <meta property="og:description" content="Excelencia en construcción civil y desarrollo sostenible.">
     <meta property="og:image"
-        content="https://lh3.googleusercontent.com/aida-public/AB6AXuAqmscbVHlzhMSGufVJIPHAbeXNuKcXemhcqZAvGrMwdJbxYRqn8NujTgRc0TtDDWCuBk8klfSuiOBlRyB4I9I7qcGRXnv5N8WjDK5YrY93NXDou-byxlzvuw8aaJulXpLVyQAU_fBNxyohbjY_ieOzlFk87mlJlDEHw2W041oK-_KKMEns8lE5Kf1T9iHTdHkI4R8eYS49VBlR8-IoaMb1lMOX0srUz1qjb_b6UJLlF177tEDwunIL0Z1qBT1HP06f181aJYMrSlXd">
+        content="https://www.legadoambiental.com.mx/assets/images/services/servicios-legado-ambiental-2026-og.png">
+    <meta property="og:image:secure_url"
+        content="https://www.legadoambiental.com.mx/assets/images/services/servicios-legado-ambiental-2026-og.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="876">
+    <meta property="og:image:alt" content="Metodología Estructurada de Proyectos Integrales - Legado Ambiental">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Legado Ambiental | Inicio">
     <meta name="twitter:description" content="Excelencia en construcción civil y desarrollo sostenible.">
     <meta name="twitter:image"
-        content="https://lh3.googleusercontent.com/aida-public/AB6AXuAqmscbVHlzhMSGufVJIPHAbeXNuKcXemhcqZAvGrMwdJbxYRqn8NujTgRc0TtDDWCuBk8klfSuiOBlRyB4I9I7qcGRXnv5N8WjDK5YrY93NXDou-byxlzvuw8aaJulXpLVyQAU_fBNxyohbjY_ieOzlFk87mlJlDEHw2W041oK-_KKMEns8lE5Kf1T9iHTdHkI4R8eYS49VBlR8-IoaMb1lMOX0srUz1qjb_b6UJLlF177tEDwunIL0Z1qBT1HP06f181aJYMrSlXd">
+        content="https://www.legadoambiental.com.mx/assets/images/services/servicios-legado-ambiental-2026-og.png">
 
     <!-- Browser Cache Hint (Simulation) -->
     <meta http-equiv="Cache-Control" content="max-age=31536000">
@@ -34,28 +50,79 @@
     <link rel="alternate" hreflang="en-US" href="https://www.legadoambiental.com.mx/home.html?lang=en-US" />
     <link rel="alternate" hreflang="x-default" href="https://www.legadoambiental.com.mx/home.html" />
 
-    <!-- Structured Data -->
+    <!-- Structured Data (Local Business & Google Business Profile) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "ConstructionBusiness",
+      "@type": ["LocalBusiness", "ConstructionBusiness", "EnvironmentalConsultancy"],
       "name": "Legado Ambiental",
+      "legalName": "Legado Ambiental S.A. de C.V.",
       "url": "https://www.legadoambiental.com.mx",
-      "image": "https://www.legadoambiental.com.mx/assets/logo.png",
-      "description": "Excelencia en construcción civil y desarrollo sostenible.",
+      "logo": "https://www.legadoambiental.com.mx/assets/images/logo/logo_final_v2.webp",
+      "image": "https://www.legadoambiental.com.mx/assets/images/logo/logo_final_v2.webp",
+      "description": "Soluciones integrales en consultoría ambiental, estudios de impacto ambiental (MIA), topografía de precisión, obras de saneamiento y seguridad e higiene industrial.",
+      "telephone": "+52-55-8367-1036",
+      "priceRange": "$$$",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Plaza de Ingeniería, Suite 400",
-        "addressLocality": "Ciudad de México",
-        "addressRegion": "CDMX",
-        "postalCode": "12345",
+        "streetAddress": "U.H. Valle de Ecatepec",
+        "addressLocality": "Ecatepec",
+        "addressRegion": "Estado de México",
+        "postalCode": "55119",
         "addressCountry": "MX"
       },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+1-555-123-4567",
-        "contactType": "customer service"
-      }
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 19.6018,
+        "longitude": -99.0494
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Saturday"],
+          "opens": "09:00",
+          "closes": "14:00"
+        }
+      ],
+      "areaServed": [
+        {
+          "@type": "AdministrativeArea",
+          "name": "Estado de México"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Ciudad de México"
+        },
+        {
+          "@type": "Country",
+          "name": "México"
+        }
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+52-55-8367-1036",
+          "contactType": "customer service",
+          "areaServed": "MX",
+          "availableLanguage": ["Spanish", "English"]
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+52-72-2672-7212",
+          "contactType": "technical support",
+          "areaServed": "MX",
+          "availableLanguage": ["Spanish", "English"]
+        }
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/legado-ambiental-mx"
+      ]
     }
     </script>
 
@@ -81,7 +148,7 @@
 </head>
 
 <body
-    class="font-sans bg-background-light dark:bg-background-dark text-charcoal dark:text-gray-200 antialiased transition-colors duration-300">
+    class="font-sans bg-background-light dark:bg-background-dark text-charcoal dark:text-gray-200 antialiased transition-colors duration-300 pb-20 md:pb-0">
     <noscript>
         <div style="background-color: #f8d7da; color: #721c24; padding: 10px; text-align: center; z-index: 9999; position: relative;">
             Para disfrutar de la experiencia completa y todas las funcionalidades de Legado Ambiental, por favor habilite JavaScript en su navegador.
@@ -99,22 +166,22 @@
         class="sticky top-4 z-50 w-[calc(100%-2rem)] max-w-[1200px] mx-auto bg-white/85 dark:bg-[#121c27]/80 backdrop-blur-xl border border-gray-100 dark:border-white/10 rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <div class="flex items-center gap-3">
+                <div class="flex items-center gap-3 shrink-0">
                     <img src="assets/images/logo/logo_final_v2.webp" alt="Legado Ambiental"
                         class="h-16 w-auto object-contain">
-                    <span class="text-navy dark:text-white text-xl font-black tracking-tight uppercase" data-i18n="auto_generated.text_001">Legado
+                    <span class="text-navy dark:text-white text-xl font-black tracking-tight uppercase whitespace-nowrap" data-i18n="auto_generated.text_001">Legado
                         Ambiental</span>
                 </div>
                 <nav class="hidden md:flex items-center gap-8">
-                    <a class="bg-primary/10 text-primary text-sm font-bold rounded-xl px-4 py-2 transition-all" href="#"
+                    <a class="bg-primary/10 text-primary text-sm font-bold rounded-xl px-4 py-2 transition-all whitespace-nowrap" href="#"
                         data-i18n="nav.home">Inicio</a>
-                    <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors"
+                    <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors whitespace-nowrap"
                         href="about_us/about_us.html" data-i18n="nav.about">Quiénes Somos</a>
-                    <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors"
+                    <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors whitespace-nowrap"
                         href="services_overview/services.html" data-i18n="nav.services">Servicios y Cotización</a>
-                    <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors"
+                    <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors whitespace-nowrap"
                         href="experience_timeline/our_experience.html" data-i18n="nav.experience">Experiencia</a>
-                    <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors"
+                    <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors whitespace-nowrap"
                         href="faq/contact_faq.html" data-i18n="nav.contact">Contacto</a>
                 </nav>
                 <div class="hidden md:flex items-center gap-4">
@@ -167,41 +234,91 @@
         </div>
     </header>
     <main>
-        <!-- Hero Section con Efecto Hover Dinámico y Glassmorphism -->
-        <section class="max-w-[1200px] mx-auto pt-6 pb-6 px-4">
+        <!-- Hero Section con Enfoque JTBD, Glassmorphism y Trust Banner -->
+        <section class="max-w-[1200px] mx-auto pt-4 pb-6 px-4">
             <div class="@container">
-                <div class="group relative flex items-center justify-start overflow-hidden rounded-xl min-h-[450px] md:min-h-[600px] shadow-2xl transition-all duration-700 cursor-default"
+                <div class="group relative flex flex-col justify-between overflow-hidden rounded-2xl min-h-auto py-8 md:py-14 shadow-2xl transition-all duration-700 cursor-default"
                     style="background-color: #101922;">
                     <!-- Background Image -->
-                    <div class="absolute inset-0 z-0 bg-cover bg-center origin-center transition-all duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] transform scale-105 opacity-80 group-hover:opacity-100 group-hover:scale-100"
+                    <div class="absolute inset-0 z-0 bg-cover bg-center origin-center transition-all duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] transform scale-105 opacity-70 group-hover:opacity-90 group-hover:scale-100"
                         style="background-image: url('assets/images/home/hero-main.webp');">
                     </div>
 
                     <!-- Gradiente de fondo suavizado -->
                     <div
-                        class="absolute inset-0 z-0 bg-gradient-to-r from-[#101922]/70 via-[#101922]/20 to-transparent transition-opacity duration-1000 opacity-100 group-hover:opacity-10 pointer-events-none">
+                        class="absolute inset-0 z-0 bg-gradient-to-r from-[#101922]/90 via-[#101922]/50 to-transparent transition-opacity duration-1000 opacity-100 pointer-events-none">
                     </div>
 
                     <!-- Glassmorphism Text Container -->
                     <div
-                        class="relative z-10 p-8 md:p-16 lg:ml-12 max-w-3xl bg-[#101922]/40 backdrop-blur-md border border-white/10 rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.5)] transition-all duration-700 ease-in-out group-hover:bg-[#101922]/80 group-hover:border-primary/40 group-hover:backdrop-blur-xl transform translate-x-0 group-hover:translate-x-2 flex flex-col justify-center">
+                        class="relative z-10 p-5 sm:p-8 md:p-12 lg:ml-10 max-w-3xl bg-[#101922]/60 backdrop-blur-md border border-white/10 rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.5)] transition-all duration-700 ease-in-out group-hover:bg-[#101922]/85 group-hover:border-primary/40 group-hover:backdrop-blur-xl transform translate-x-0 group-hover:translate-x-1 flex flex-col justify-center my-auto">
 
-                        <h1 class="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1] tracking-tight mb-6 drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]"
-                            data-i18n="hero.title">Protegiendo hoy, el legado del mañana.</h1>
-                        <div
-                            class="w-16 h-1 bg-primary mb-6 transition-all duration-700 group-hover:w-32 group-hover:bg-blue-400 rounded-full">
+                        <!-- Badge Superior -->
+                        <div class="inline-flex items-center gap-2 px-3 py-1 bg-primary/20 border border-primary/30 rounded-full w-fit mb-4">
+                            <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                            <span class="text-xs font-bold text-green-300 uppercase tracking-wider" data-i18n="hero.title">Protegiendo hoy, el legado del mañana.</span>
                         </div>
-                        <p class="text-blue-50 text-lg md:text-xl font-medium leading-relaxed drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)] mb-8 max-w-xl"
-                            data-i18n="hero.subtitle">Ingeniería para una productividad amigable con el medio ambiente.</p>
-                        <div class="flex flex-wrap gap-4 mt-auto">
-                            <a href="assets/docs/Portafolio_Proyectos_Legado_Ambiental_2026.pdf" target="_blank" download="Portafolio_Proyectos_Legado_Ambiental_2026.pdf"
-                                class="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-lg text-base font-bold transition-all flex items-center gap-2 shadow-[0_4px_16px_rgba(0,0,0,0.3)] focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-[#101922] w-full sm:w-auto justify-center group">
-                                <span data-i18n="hero.portfolio_btn">Ver Portafolio</span>
-                                <span class="material-symbols-outlined transform group-hover:translate-y-1 transition-transform">download</span>
+
+                        <!-- Titular Principal JTBD -->
+                        <h1 class="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black leading-[1.15] tracking-tight mb-4 drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]"
+                            data-i18n="hero.jtbd_title">¿Necesitas resolver un estudio de impacto ambiental, proyecto de obra o levantamiento topográfico?</h1>
+                        <div
+                            class="w-16 h-1 bg-primary mb-4 transition-all duration-700 group-hover:w-32 group-hover:bg-blue-400 rounded-full">
+                        </div>
+                        <!-- Subtítulo JTBD -->
+                        <p class="text-blue-50 text-base sm:text-lg font-medium leading-relaxed drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)] mb-8 max-w-2xl"
+                            data-i18n="hero.jtbd_subtitle">Legado Ambiental brinda soluciones integrales en ingeniería civil, cumplimiento normativo, topografía de precisión y seguridad e higiene para obras públicas y privadas.</p>
+
+                        <!-- 3 CTAs Principales -->
+                        <div class="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
+                            <!-- CTA 1: Cotizar Proyecto -->
+                            <button data-action="navigate" data-href="faq/contact_faq.html#tab-1"
+                                class="bg-primary hover:bg-primary/90 text-white px-6 py-3.5 rounded-xl text-base font-extrabold transition-all flex items-center justify-center gap-2 shadow-[0_4px_20px_rgba(34,197,94,0.4)] focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-[#101922] w-full sm:w-auto group">
+                                <span data-i18n="hero.quote_btn">Cotizar Proyecto</span>
+                                <span class="material-symbols-outlined text-xl transform group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                            </button>
+
+                            <!-- CTA 2: WhatsApp Directo -->
+                            <a href="https://wa.me/527226727212?text=Hola,%20quisiera%20cotizar%20un%20proyecto%20con%20Legado%20Ambiental" target="_blank" rel="noopener noreferrer"
+                                class="bg-[#25D366] hover:bg-[#20ba5a] text-white px-6 py-3.5 rounded-xl text-base font-extrabold transition-all flex items-center justify-center gap-2 shadow-[0_4px_20px_rgba(37,211,102,0.3)] focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2 focus:ring-offset-[#101922] w-full sm:w-auto">
+                                <span class="material-symbols-outlined text-xl">chat</span>
+                                <span data-i18n="hero.whatsapp_btn">Hablar por WhatsApp</span>
                             </a>
-                            <button data-action="navigate" data-href="faq/contact_faq.html"
-                                class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-lg text-base font-bold transition-all shadow-[0_4px_16px_rgba(0,0,0,0.2)] focus:ring-2 focus:ring-white hover:border-white/40 w-full sm:w-auto justify-center flex items-center"
-                                data-i18n="hero.contact_btn">Contáctanos</button>
+
+                            <!-- CTA 3: Portafolio PDF -->
+                            <a href="assets/docs/Portafolio_Proyectos_Legado_Ambiental_2026.pdf" target="_blank" rel="noopener noreferrer" download="Portafolio_Proyectos_Legado_Ambiental_2026.pdf"
+                                class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/20 px-6 py-3.5 rounded-xl text-base font-bold transition-all shadow-md focus:ring-2 focus:ring-white hover:border-white/40 w-full sm:w-auto justify-center flex items-center gap-2 group">
+                                <span data-i18n="hero.portfolio_btn">Ver Portafolio PDF</span>
+                                <span class="material-symbols-outlined text-xl transform group-hover:translate-y-0.5 transition-transform">download</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Hero Trust Banner (Franja Normativa) -->
+                    <div class="relative z-10 w-full mt-8 pt-4 pb-2 px-5 border-t border-white/10 bg-[#0a1118]/80 backdrop-blur-md">
+                        <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3 text-xs">
+                            <div class="flex items-center gap-2 text-primary font-black uppercase tracking-wider text-xs">
+                                <span class="material-symbols-outlined text-base">verified</span>
+                                <span data-i18n="hero.trust_label">Cumplimiento Normativo Garantizado:</span>
+                            </div>
+                            <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-gray-200 font-semibold">
+                                <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full flex items-center gap-1.5 hover:border-primary/40 transition-colors">
+                                    <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                                    <span data-i18n="hero.norm_1">NOM-052-SEMARNAT</span>
+                                </span>
+                                <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full flex items-center gap-1.5 hover:border-primary/40 transition-colors">
+                                    <span class="w-2 h-2 rounded-full bg-blue-400"></span>
+                                    <span data-i18n="hero.norm_2">NOM-001-SEMARNAT</span>
+                                </span>
+                                <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full flex items-center gap-1.5 hover:border-primary/40 transition-colors">
+                                    <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+                                    <span data-i18n="hero.norm_3">Normativas STPS</span>
+                                </span>
+                                <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full flex items-center gap-1.5 hover:border-primary/40 transition-colors">
+                                    <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+                                    <span data-i18n="hero.norm_4">RCDF y Licencias</span>
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -313,7 +430,7 @@
                         <p class="relative z-10 text-charcoal dark:text-gray-400 text-base leading-relaxed mb-8 font-medium"
                             data-i18n="services.s1.desc">Somos una firma de ingeniería especializada en medio ambiente, integrada por un equipo interdisciplinario de profesionales con amplia experiencia en estudios, proyectos, construcción y consultoría ambiental.</p>
 
-                        <a href="services_overview/services.html#tab-1"
+                        <a href="services_overview/services.html#ambiental"
                             class="relative z-10 inline-flex items-center text-base font-bold text-primary group-hover:text-primary-dark transition-colors">
                             <span data-i18n="services.details">Detalles</span>
                             <span
@@ -341,7 +458,7 @@
                         <p class="relative z-10 text-charcoal dark:text-gray-400 text-base leading-relaxed mb-8 font-medium"
                             data-i18n="services.s2.desc">Infraestructura, desarrollo urbano, vivienda, obra pública y privada, así como consultorías técnicas especializadas, participando en todas las etapas del proyecto: planeación, ejecución, supervisión y cierre técnico–administrativo.</p>
 
-                        <a href="services_overview/services.html#tab-2"
+                        <a href="services_overview/services.html#construccion"
                             class="relative z-10 inline-flex items-center text-base font-bold text-emerald-500 group-hover:text-emerald-600 transition-colors">
                             <span data-i18n="services.details">Detalles</span>
                             <span
@@ -369,7 +486,7 @@
                         <p class="relative z-10 text-charcoal dark:text-gray-400 text-base leading-relaxed mb-8 font-medium"
                             data-i18n="services.s3.desc">Brindamos servicios topográficos de alta precisión para proyectos de infraestructura, obra civil, urbanización, transporte y edificación, apoyados en tecnología moderna y metodologías estandarizadas.</p>
 
-                        <a href="services_overview/services.html#tab-3"
+                        <a href="services_overview/services.html#topografia"
                             class="relative z-10 inline-flex items-center text-base font-bold text-blue-500 group-hover:text-blue-600 transition-colors">
                             <span data-i18n="services.details">Detalles</span>
                             <span
@@ -397,7 +514,7 @@
                         <p class="relative z-10 text-charcoal dark:text-gray-400 text-base leading-relaxed mb-8 font-medium"
                             data-i18n="services.s4.desc">En Legado Ambiental, transformamos la operatividad de sus proyectos integrando seguridad, eficiencia administrativa y cumplimiento legal. Bajo la Dirección de Operaciones y Cumplimiento Integral, ofrecemos soluciones robustas para los sectores de la construcción y el medio ambiente.</p>
 
-                        <a href="services_overview/services.html#tab-4"
+                        <a href="services_overview/services.html#seguridad-hidraulica"
                             class="relative z-10 inline-flex items-center text-base font-bold text-indigo-500 group-hover:text-indigo-600 transition-colors">
                             <span data-i18n="services.details">Detalles</span>
                             <span
@@ -521,20 +638,25 @@
                             class="text-navy dark:text-white text-lg font-black uppercase tracking-tight transition-colors duration-300 group-hover:text-primary"
                             data-i18n="footer.title">Legado Ambiental <br>S.A. de C.V.</span>
                     </div>
-                    <p class="text-charcoal dark:text-gray-400 text-sm leading-relaxed mb-6" data-i18n="footer.desc">Soluciones holísticas para el desarrollo de infraestructura y cumplimiento normativo.</p>
-
+                    <p class="text-charcoal dark:text-gray-400 text-sm leading-relaxed mb-4" data-i18n="footer.desc">Soluciones holísticas para el desarrollo de infraestructura y cumplimiento normativo.</p>
+                    <div class="flex justify-center md:justify-start">
+                        <a href="https://www.linkedin.com/in/legado-ambiental-mx" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-[#0A66C2]/10 hover:bg-[#0A66C2] text-[#0A66C2] hover:text-white dark:text-[#58a6ff] dark:hover:text-white text-xs font-bold transition-all border border-[#0A66C2]/20 shadow-sm" aria-label="LinkedIn Legado Ambiental">
+                            <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                            <span data-i18n="footer.linkedin_badge">LinkedIn Corporativo</span>
+                        </a>
+                    </div>
                 </div>
                 <div>
                     <h5 class="text-navy dark:text-white font-bold mb-6" data-i18n="footer.services.title">Servicios</h5>
                     <!-- Services -->
                     <ul class="space-y-4 text-sm text-charcoal dark:text-gray-400">
-                        <li><a class="hover:text-primary transition-colors" href="services_overview/services.html#tab-1"
+                        <li><a class="hover:text-primary transition-colors" href="services_overview/services.html#ambiental"
                                 data-i18n="footer.services.1">Ingeniería Ambiental</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="services_overview/services.html#tab-2"
+                        <li><a class="hover:text-primary transition-colors" href="services_overview/services.html#construccion"
                                 data-i18n="footer.services.2">Construcción</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="services_overview/services.html#tab-3"
+                        <li><a class="hover:text-primary transition-colors" href="services_overview/services.html#topografia"
                                 data-i18n="footer.services.3">Topografía</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="services_overview/services.html#tab-4"
+                        <li><a class="hover:text-primary transition-colors" href="services_overview/services.html#seguridad-hidraulica"
                                 data-i18n="footer.services.4">Seguridad e Higiene</a></li>
                     </ul>
                 </div>
@@ -559,27 +681,50 @@
                     <ul class="space-y-4 text-sm text-charcoal dark:text-gray-400">
                         <li class="flex items-start gap-2">
                             <span class="material-symbols-outlined text-sm text-primary">location_on</span>
-                            <span data-i18n="footer.contact.addr_1">U.H. Valle de Ecatepec, C.P. 55119</span>
-                            <span data-i18n="footer.contact.addr_2">Ecatepec, Estado de México</span>
+                            <a href="https://maps.google.com/?q=Valle+de+Ecatepec+Estado+de+Mexico" target="_blank" rel="noopener noreferrer" data-action="google-maps" class="hover:text-primary transition-colors">
+                                <span data-i18n="footer.contact.addr_1">U.H. Valle de Ecatepec, C.P. 55119</span>
+                                <span data-i18n="footer.contact.addr_2">Ecatepec, Estado de México</span>
+                            </a>
                         </li>
                         <li class="flex items-center gap-2">
                             <span class="material-symbols-outlined text-sm text-primary">call</span>
-                            <span data-i18n="footer.contact.phone_1">55 7312 6918</span>
+                            <a href="tel:+525583671036" class="hover:text-primary transition-colors">
+                                <span data-i18n="footer.contact.phone_1">55 8367 1036</span>
+                            </a>
                         </li>
                         <li class="flex items-center gap-2">
                             <span class="material-symbols-outlined text-sm text-primary">call</span>
-                            <span data-i18n="footer.contact.phone_2">72 2672 7212</span>
+                            <a href="tel:+527226727212" class="hover:text-primary transition-colors">
+                                <span data-i18n="footer.contact.phone_2">72 2672 7212</span>
+                            </a>
                         </li>
                         <li class="flex items-center gap-2">
                             <span class="material-symbols-outlined text-sm text-primary">mail</span>
-                            <span data-i18n="footer.contact.email"><strong>legado.ambiental.mx@gmail.com</strong></strong></span>
+                            <a href="mailto:legado.ambiental.mx@gmail.com" class="hover:text-primary transition-colors">
+                                <span data-i18n="footer.contact.email"><strong>legado.ambiental.mx@gmail.com</strong></span>
+                            </a>
                         </li>
                     </ul>
                 </div>
             </div>
             <div
                 class="pt-8 border-t border-gray-100 dark:border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-charcoal dark:text-gray-500 font-medium">
-                <p data-i18n="footer.rights"><strong>© 2026 Legado Ambiental S.A. de C.V. <br>Todos los derechos reservados.</strong></strong></p>
+                <p data-i18n="footer.rights"><strong>© 2026 Legado Ambiental S.A. de C.V. <br>Todos los derechos reservados.</strong></p>
+                <div class="flex flex-wrap items-center gap-6">
+                    <a href="https://www.linkedin.com/in/legado-ambiental-mx" target="_blank" rel="noopener noreferrer" data-action="linkedin" class="hover:text-[#0A66C2] transition-colors flex items-center gap-1.5 font-semibold" aria-label="LinkedIn Legado Ambiental">
+                        <svg class="w-4 h-4 fill-current text-[#0A66C2]" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://maps.google.com/?q=Valle+de+Ecatepec+Estado+de+Mexico" target="_blank" rel="noopener noreferrer" data-action="google-maps" class="hover:text-primary transition-colors flex items-center gap-1">
+                        <span class="material-symbols-outlined text-sm text-primary">map</span>
+                        <span data-i18n="footer.maps_link">Google Maps</span>
+                    </a>
+                    <a href="https://www.google.com/search?q=Legado+Ambiental+Ecatepec+opiniones" target="_blank" rel="noopener noreferrer" data-action="google-review" class="hover:text-primary transition-colors flex items-center gap-1">
+                        <span class="material-symbols-outlined text-sm text-amber-500">star</span>
+                        <span data-i18n="footer.reviews_link">Reseñas en Google</span>
+                    </a>
+                </div>
+            </div>
                 <!-- <div class="flex gap-8">
                     <a class="hover:text-primary transition-colors" href="javascript:void(0)"
                         data-i18n="footer.privacy">Política de Privacidad</a>
@@ -589,6 +734,21 @@
             </div>
         </div>
     </footer>
+
+    <!-- Floating WhatsApp Button (FAB) -->
+    <a href="https://wa.me/527226727212?text=Hola,%20quisiera%20cotizar%20un%20proyecto%20con%20Legado%20Ambiental"
+        target="_blank" rel="noopener noreferrer" aria-label="Hablar por WhatsApp"
+        class="fixed bottom-20 right-4 md:bottom-6 md:right-6 z-50 bg-[#25D366] hover:bg-[#20ba5a] text-white w-14 h-14 rounded-full shadow-[0_4px_20px_rgba(37,211,102,0.5)] flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 group">
+        <span class="material-symbols-outlined text-3xl">chat</span>
+    </a>
+
+    <!-- Sticky Mobile CTA Bar -->
+    <div class="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-white/95 dark:bg-[#121c27]/95 backdrop-blur-lg border-t border-gray-200 dark:border-white/10 p-2.5 shadow-[0_-4px_20px_rgba(0,0,0,0.15)]">
+        <a href="faq/contact_faq.html#tab-1" class="w-full bg-primary hover:bg-primary/90 text-white py-3 px-4 rounded-xl font-extrabold text-sm flex items-center justify-center gap-2 shadow-md transition-all">
+            <span class="material-symbols-outlined text-xl">calculate</span>
+            <span data-i18n="hero.quote_btn">Cotizar Proyecto</span>
+        </a>
+    </div>
     <script>
         // --- Mobile Menu Logic with Animation ---
         const menuBtn = document.getElementById('mobile-menu-btn');
@@ -619,6 +779,7 @@
         mobileLinks.forEach(link => link.addEventListener('click', closeMenu));
     </script>
     <script src="assets/js/i18n.js"></script>
+    <script src="assets/js/analytics.js"></script>
 
     <!-- Animaciones AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

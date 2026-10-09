@@ -24,8 +24,21 @@ const translations = {
         "hero": {
             "title": "Protegiendo hoy, el legado del mañana.",
             "subtitle": "Ingeniería para una productividad amigable con el medio ambiente.",
-            "portfolio_btn": "Ver Portafolio",
-            "contact_btn": "Contáctanos"
+            "jtbd_title": "¿Necesitas resolver un estudio de impacto ambiental, proyecto de obra o levantamiento topográfico?",
+            "jtbd_subtitle": "Legado Ambiental brinda soluciones integrales en ingeniería civil, cumplimiento normativo, topografía de precisión y seguridad e higiene para obras públicas y privadas.",
+            "quote_btn": "Cotizar Proyecto",
+            "whatsapp_btn": "Hablar por WhatsApp",
+            "portfolio_btn": "Ver Portafolio PDF",
+            "contact_btn": "Contáctanos",
+            "trust_label": "Cumplimiento Normativo Garantizado:",
+            "norm_1": "NOM-052-SEMARNAT",
+            "norm_2": "NOM-001-SEMARNAT",
+            "norm_3": "Normativas STPS",
+            "norm_4": "RCDF y Licencias"
+        },
+        "sticky_cta": {
+            "whatsapp": "WhatsApp",
+            "quote": "Cotizar"
         },
         "stats": {
             "years": "Años de Experiencia",
@@ -100,14 +113,18 @@ const translations = {
                 "title": "Contacto",
                 "addr_1": "U.H. Valle de Ecatepec, C.P. 55119",
                 "addr_2": "Ecatepec, Estado de México",
-                "phone_1": "55 7312 6918",
+                "phone_1": "55 8367 1036",
                 "phone_2": "72 2672 7212",
                 "email": "<strong>legado.ambiental.mx@gmail.com</strong>"
             },
             "rights": "<strong>© 2026 Legado Ambiental S.A. de C.V. <br>Todos los derechos reservados.</strong>",
             "privacy": "Política de Privacidad",
             "terms": "Términos de Servicio",
-            "sitemap": "Mapa del Sitio"
+            "sitemap": "Mapa del Sitio",
+            "maps_link": "Google Maps",
+            "reviews_link": "Reseñas en Google",
+            "linkedin_badge": "LinkedIn Corporativo",
+            "linkedin_link": "LinkedIn Corporativo"
         },
         "about": {
             "title": "Quiénes Somos",
@@ -153,6 +170,7 @@ const translations = {
             "title": "Nuestros Servicios Especializados de Ingeniería y Construcción",
             "hero_desc": "Ofrecemos soluciones de infraestructura y construcción sostenible adaptadas tanto para la iniciativa privada como para iniciativas gubernamentales en la región.",
             "tabs": {
+                "select_label": "Seleccionar División de Servicio",
                 "engeneering": "Ingeniería Ambiental",
                 "building": "Construcción",
                 "topography": "Topografía",
@@ -201,6 +219,52 @@ const translations = {
             "methodology": {
                 "subtitle": "Proceso Ejecutivo",
                 "title": "Nuestra Metodología Estratégica"
+            },
+            "headers": {
+                "env": {
+                    "badge": "DIVISIÓN TÉCNICA AMBIENTAL",
+                    "title": "Ingeniería y Consultoría Ambiental Estratégica",
+                    "subtitle": "Blindaje normativo integral ante SEMARNAT, PROFEPA y dependencias estatales. Transformamos requerimientos regulatorios en certidumbre operativa y viabilidad para su proyecto.",
+                    "badge1": "Cumplimiento SEMARNAT / PROFEPA",
+                    "badge2": "Manejo Integral CRETI",
+                    "badge3": "Blindaje Legal y Cero Clausuras",
+                    "cta": "Solicitar Diagnóstico Ambiental"
+                },
+                "const": {
+                    "badge": "DIVISIÓN CONSTRUCCIÓN & OBRA CIVIL",
+                    "title": "Construcción, Supervisión y Respaldo DRO",
+                    "subtitle": "Ejecución técnica rigurosa de obra civil y edificación. Control documental, supervisión de calidad y cumplimiento normativo de licencias y reglamentos locales.",
+                    "badge1": "Director Responsable de Obra (DRO)",
+                    "badge2": "Control Presupuestal & Bitácora",
+                    "badge3": "Apego Normativo RCDF / Estados",
+                    "cta": "Cotizar Supervisión u Obra"
+                },
+                "topo": {
+                    "badge": "DIVISIÓN TOPOGRAFÍA & GEODESIA",
+                    "title": "Topografía de Alta Precisión y Fotogrametría Aérea",
+                    "subtitle": "Georreferenciación milimétrica y volumetrías exactas para proyectos de ingeniería. Reduzca costos por reprocesos mediante levantamientos con tecnología RTK y drones de última generación.",
+                    "badge1": "GPS Geodésico RTK Multibanda",
+                    "badge2": "Fotogrametría Aérea & LiDAR",
+                    "badge3": "Entregables CAD/GIS en 24-48h",
+                    "cta": "Cotizar Levantamiento Topográfico"
+                },
+                "safety": {
+                    "badge": "DIVISIÓN HIDRÁULICA & SEGURIDAD INDUSTRIAL",
+                    "title": "Infraestructura Hidráulica, Saneamiento y Normatividad STPS",
+                    "subtitle": "Diseño de plantas de tratamiento PTAR, redes de conducción y programas integrales de seguridad ocupacional. Salvaguarde a su personal y garantice el cumplimiento normativo laboral.",
+                    "badge1": "Plantas PTAR & Saneamiento",
+                    "badge2": "Cumplimiento Normativo STPS (NOMs)",
+                    "badge3": "Programas de Protección Civil",
+                    "cta": "Solicitar Asesoría Hidráulica o STPS"
+                }
+            },
+            "cards": {
+                "cta_quote": "Cotizar Proyecto",
+                "cta_whatsapp": "WhatsApp",
+                "deliverable_topo": "<strong>Entregables Oficiales:</strong> Planos ejecutivos en AutoCAD (DWG/PDF), curvas de nivel y memorias de cálculo geodésico en 24-48h.",
+                "deliverable_water": "<strong>Entregables Técnicos:</strong> Proyectos ejecutivos de PTAR con memoria de cálculo, planos hidrosanitarios y cumplimiento de NOM-001/002/003-SEMARNAT.",
+                "deliverable_const": "<strong>Respaldo y Bitácora:</strong> Firma de Director Responsable de Obra (DRO), bitácora oficial y reportes ejecutivos de avance.",
+                "deliverable_safety": "<strong>Dictámenes Oficiales:</strong> Diagnósticos integrales de seguridad e higiene, carpeta de comisiones mixtas (NOM-019) y programas de Protección Civil."
             }
         },
         "portfolio_page": {
@@ -300,33 +364,31 @@ const translations = {
             },
             "form": {
                 "title": "Envíanos un Mensaje",
-                "name": "Nombre",
-                "name_ph": "Tu Nombre Completo",
+                "name": "Nombre Completo",
+                "name_ph": "Ej. Ing. Carlos Mendoza",
+                "company": "Empresa / Dependencia",
+                "company_ph": "Ej. Constructora del Norte S.A.",
                 "email": "Correo Electrónico",
-                "email_ph": "nombre@ejemplo.com",
-                "subject": "Asunto",
-                "options": {
-                    "general": "Consulta General",
-                    "quote": "Solicitud de Presupuesto",
-                    "proposal": "Propuesta de Proyecto",
-                    "jobs": "Oportunidades de Empleo"
-                },
-                "lastname": "Apellidos",
-                "lastname_ph": "Tus Apellidos",
-                "phone": "Teléfono",
-                "phone_ph": "(55) 1234 5678",
-                "method_label": "Medio de Contacto Preferido",
-                "method_email": "Correo Electrónico",
-                "method_phone": "Llamada Telefónica",
-                "honeypot": "Si eres humano, deja este campo en blanco",
-                "captcha_label": "Resuelve:",
-                "captcha_error": "Resultado incorrecto",
-                "phone_error": "Formato inválido. (55) 1234 5678",
-                "email_error": "Correo inválido",
-                "message": "Mensaje",
-                "message_ph": "¿Cómo podemos ayudarte?",
-                "btn": "Enviar Mensaje",
-                "sending": "Enviando mensaje..."
+                "email_ph": "contacto@empresa.com",
+                "phone": "Teléfono / WhatsApp",
+                "phone_ph": "(55) 8367 1036",
+                "service_label": "Servicio Requerido",
+                "opt_environmental": "Estudios de Impacto Ambiental",
+                "opt_topography": "Topografía y Fotogrametría",
+                "opt_construction": "Infraestructura y Construcción",
+                "opt_safety": "Seguridad STPS / DC-3",
+                "opt_water": "Tratamiento de Aguas Residuales",
+                "opt_other": "Otro Proyecto o Consulta",
+                "location": "Ubicación del Proyecto",
+                "location_ph": "Ej. Ecatepec, Estado de México",
+                "message": "Breve Descripción del Proyecto",
+                "message_ph": "Describe brevemente tus necesidades o alcance del proyecto...",
+                "phone_error": "Por favor ingresa un teléfono válido (10 dígitos).",
+                "email_error": "Correo electrónico inválido.",
+                "btn": "Enviar Solicitud de Cotización",
+                "sending": "Enviando solicitud...",
+                "toast_success": "¡Su solicitud de cotización ha sido enviada con éxito! Nos pondremos en contacto pronto.",
+                "toast_error": "Por favor revisa los campos requeridos en el formulario."
             },
             "faq": {
                 "title": "Preguntas Frecuentes",
@@ -347,8 +409,16 @@ const translations = {
                 "title": "Información Directa",
                 "addr": "U.H. Valle de Ecatepec, <br> C.P. 55119, Ecatepec, Estado de México",
                 "email": "<strong>legado.ambiental.mx@gmail.com</strong>",
-                "phone1": "+52 55 7312 6918",
-                "phone2": "+52 72 2672 7212"
+                "phone1": "+52 55 8367 1036",
+                "phone2": "+52 72 2672 7212",
+                "linkedin": "LinkedIn: <strong>legado-ambiental-mx</strong>"
+            },
+            "google_reviews": {
+                "badge": "Google Business Profile",
+                "title": "Calidad Verificada y Reseñas en Google",
+                "desc": "¿Has colaborado con Legado Ambiental en un proyecto u obra? Tu testimonio en Google nos ayuda a seguir construyendo valor técnico y confianza con nuevas empresas.",
+                "btn_review": "Escribir Reseña en Google",
+                "btn_maps": "Ver en Google Maps"
             }
         },
         "index_landing": {
@@ -364,16 +434,16 @@ const translations = {
         "auto_generated": {
             "auto_generated.text_001": "Legado\n                        Ambiental",
             "auto_generated.text_002": "<span class=\"w-8 h-[2px] bg-primary/50\"></span>\n<span data-i18n=\"services.label\">Lo que hacemos</span>",
-            "auto_generated.text_003": "<a class=\"hover:text-primary transition-colors\" data-i18n=\"footer.services.1\" href=\"services_overview/services.html#tab-1\">Ingeniería Ambiental</a>",
-            "auto_generated.text_004": "<a class=\"hover:text-primary transition-colors\" data-i18n=\"footer.services.2\" href=\"services_overview/services.html#tab-2\">Construcción</a>",
-            "auto_generated.text_005": "<a class=\"hover:text-primary transition-colors\" data-i18n=\"footer.services.3\" href=\"services_overview/services.html#tab-3\">Topografía</a>",
-            "auto_generated.text_006": "<a class=\"hover:text-primary transition-colors\" data-i18n=\"footer.services.4\" href=\"services_overview/services.html#tab-4\">Seguridad e Higiene</a>",
+            "auto_generated.text_003": "<a class=\"hover:text-primary transition-colors\" data-i18n=\"footer.services.1\" href=\"services_overview/services.html#ambiental\">Ingeniería Ambiental</a>",
+            "auto_generated.text_004": "<a class=\"hover:text-primary transition-colors\" data-i18n=\"footer.services.2\" href=\"services_overview/services.html#construccion\">Construcción</a>",
+            "auto_generated.text_005": "<a class=\"hover:text-primary transition-colors\" data-i18n=\"footer.services.3\" href=\"services_overview/services.html#topografia\">Topografía</a>",
+            "auto_generated.text_006": "<a class=\"hover:text-primary transition-colors\" data-i18n=\"footer.services.4\" href=\"services_overview/services.html#seguridad-hidraulica\">Seguridad e Higiene</a>",
             "auto_generated.text_007": "<a class=\"hover:text-primary transition-colors\" data-i18n=\"footer.company.1\" href=\"about_us/about_us.html\">Quiénes somos</a>",
             "auto_generated.text_008": "<a class=\"hover:text-primary transition-colors\" data-i18n=\"footer.company.2\" href=\"services_overview/services.html\">Servicios</a>",
             "auto_generated.text_009": "<a class=\"hover:text-primary transition-colors\" data-i18n=\"footer.company.3\" href=\"experience_timeline/our_experience.html\">Experiencia</a>",
             "auto_generated.text_010": "<a class=\"hover:text-primary transition-colors\" data-i18n=\"footer.company.4\" href=\"faq/contact_faq.html\">Contacto</a>",
             "auto_generated.text_011": "<span class=\"material-symbols-outlined text-sm text-primary\">location_on</span>\n<span data-i18n=\"footer.contact.addr_1\">U.H. Valle de Ecatepec, C.P. 55119</span>\n<span data-i18n=\"footer.contact.addr_2\">Ecatepec, Estado de México</span>",
-            "auto_generated.text_012": "<span class=\"material-symbols-outlined text-sm text-primary\">call</span>\n<span data-i18n=\"footer.contact.phone_1\">55 7312 6918</span>",
+            "auto_generated.text_012": "<span class=\"material-symbols-outlined text-sm text-primary\">call</span>\n<span data-i18n=\"footer.contact.phone_1\">55 8367 1036</span>",
             "auto_generated.text_013": "<span class=\"material-symbols-outlined text-sm text-primary\">call</span>\n<span data-i18n=\"footer.contact.phone_2\">72 2672 7212</span>",
             "auto_generated.text_014": "<span class=\"material-symbols-outlined text-sm text-primary\">mail</span>\n<span data-i18n=\"footer.contact.email\"><strong>legado.ambiental.mx@gmail.com</strong></span>",
             "auto_generated.text_015": "<span class=\"material-symbols-outlined text-[1.2rem]\">dark_mode</span>",
@@ -565,7 +635,7 @@ const translations = {
             "auto_generated.text_198": "<span class=\"material-symbols-outlined\">mail</span>",
             "auto_generated.text_199": "Legado\n                            Ambiental",
             "auto_generated.text_200": "<a class=\"inline-flex items-center text-sm font-medium text-gray-300 hover:text-white transition-colors\" href=\"../home.html\">\n<span class=\"material-symbols-outlined text-lg mr-2\">home</span>\n<span data-i18n=\"nav.home\">Inicio</span>\n</a>",
-            "auto_generated.text_201": "<span class=\"material-symbols-outlined text-primary w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center w-full sm:w-auto justify-center\">call</span>\n<span data-i18n=\"contact_page.info.phone1\">+52 55 7312 6918</span>",
+            "auto_generated.text_201": "<span class=\"material-symbols-outlined text-primary w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center w-full sm:w-auto justify-center\">call</span>\n<span data-i18n=\"contact_page.info.phone1\">+52 55 8367 1036</span>",
             "auto_generated.text_202": "<span class=\"material-symbols-outlined text-primary w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center w-full sm:w-auto justify-center\">call</span>\n<span data-i18n=\"contact_page.info.phone2\">+52 72 2672 7212</span>",
             "auto_generated.text_203": "<span class=\"material-symbols-outlined text-primary w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center w-full sm:w-auto justify-center\">mail</span>\n<span data-i18n=\"contact_page.info.email\"><strong>legado.ambiental.mx@gmail.com</strong></span>",
             "auto_generated.text_204": "<span class=\"material-symbols-outlined text-primary w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center w-full sm:w-auto justify-center\">location_on</span>\n<span data-i18n=\"contact_page.info.addr\">U.H. Valle de Ecatepec, <br/> C.P. 55119, Ecatepec, Estado de México</span>",
@@ -595,8 +665,21 @@ const translations = {
         "hero": {
             "title": "Building Infrastructure, Sustaining the Future.",
             "subtitle": "Professional excellence in civil construction and environmental legacy for private and government projects worldwide.",
-            "portfolio_btn": "View Portfolio",
-            "contact_btn": "Contact Us"
+            "jtbd_title": "Need to resolve an environmental impact study, construction project, or topographic survey?",
+            "jtbd_subtitle": "Legado Ambiental delivers comprehensive solutions in civil engineering, regulatory compliance, precision topography, and occupational health & safety.",
+            "quote_btn": "Get a Project Quote",
+            "whatsapp_btn": "Chat on WhatsApp",
+            "portfolio_btn": "Download PDF Portfolio",
+            "contact_btn": "Contact Us",
+            "trust_label": "Guaranteed Regulatory Compliance:",
+            "norm_1": "NOM-052-SEMARNAT",
+            "norm_2": "NOM-001-SEMARNAT",
+            "norm_3": "STPS Regulations",
+            "norm_4": "RCDF & Permits"
+        },
+        "sticky_cta": {
+            "whatsapp": "WhatsApp",
+            "quote": "Get Quote"
         },
         "stats": {
             "years": "Years of Experience",
@@ -671,14 +754,18 @@ const translations = {
                 "title": "Contact",
                 "addr_1": "U.H. Valle de Ecatepec, C.P. 55119",
                 "addr_2": "Ecatepec, State of Mexico",
-                "phone_1": "55 7312 6918",
+                "phone_1": "55 8367 1036",
                 "phone_2": "72 2672 7212",
                 "email": "<strong>legado.ambiental.mx@gmail.com</strong>"
             },
             "rights": "<strong>© 2026 Legado Ambiental S.A. de C.V. <br>All rights reserved.</strong>",
             "privacy": "Privacy Policy",
             "terms": "Terms of Service",
-            "sitemap": "Sitemap"
+            "sitemap": "Sitemap",
+            "maps_link": "Google Maps",
+            "reviews_link": "Google Reviews",
+            "linkedin_badge": "Corporate LinkedIn",
+            "linkedin_link": "Corporate LinkedIn"
         },
         "about": {
             "title": "About Us",
@@ -724,6 +811,7 @@ const translations = {
             "title": "Our Specialized Engineering and Construction Services",
             "hero_desc": "We offer infrastructure and sustainable construction solutions adapted for both private initiative and government initiatives in the region.",
             "tabs": {
+                "select_label": "Select Service Division",
                 "all": "All Services",
                 "private": "Private Sector",
                 "public": "Public Works",
@@ -772,6 +860,52 @@ const translations = {
             "methodology": {
                 "subtitle": "Executive Process",
                 "title": "Our Strategic Methodology"
+            },
+            "headers": {
+                "env": {
+                    "badge": "ENVIRONMENTAL TECHNICAL DIVISION",
+                    "title": "Strategic Environmental Engineering & Consulting",
+                    "subtitle": "Comprehensive regulatory protection before SEMARNAT, PROFEPA, and state agencies. We transform compliance requirements into operational certainty and project viability.",
+                    "badge1": "SEMARNAT / PROFEPA Compliance",
+                    "badge2": "Hazardous Waste (CRETI) Management",
+                    "badge3": "Legal Protection & Zero Shutdowns",
+                    "cta": "Request Environmental Assessment"
+                },
+                "const": {
+                    "badge": "CONSTRUCTION & CIVIL WORKS DIVISION",
+                    "title": "Construction, Supervision & DRO Oversight",
+                    "subtitle": "Rigorous technical execution of civil works and building projects. Document control, quality supervision, and full compliance with local building codes and permits.",
+                    "badge1": "Registered Site Director (DRO)",
+                    "badge2": "Budget Control & Official Site Logbook",
+                    "badge3": "Regional Building Code Compliance",
+                    "cta": "Quote Supervision or Construction"
+                },
+                "topo": {
+                    "badge": "TOPOGRAPHY & GEODESY DIVISION",
+                    "title": "High-Precision Topography & Aerial Photogrammetry",
+                    "subtitle": "Millimeter-level georeferencing and exact volumetric calculations for engineering projects. Eliminate rework costs with state-of-the-art RTK and drone surveys.",
+                    "badge1": "Multi-Band RTK Geodetic GPS",
+                    "badge2": "Aerial Photogrammetry & LiDAR",
+                    "badge3": "CAD/GIS Deliverables in 24-48h",
+                    "cta": "Quote Topographic Survey"
+                },
+                "safety": {
+                    "badge": "HYDRAULIC & INDUSTRIAL SAFETY DIVISION",
+                    "title": "Hydraulic Infrastructure, Water Treatment & STPS Safety",
+                    "subtitle": "Wastewater treatment plant (PTAR) design, pipeline networks, and comprehensive occupational safety programs. Protect your workforce and ensure full labor compliance.",
+                    "badge1": "PTAR Water Treatment & Sanitation",
+                    "badge2": "STPS Labor Safety Compliance",
+                    "badge3": "Civil Protection Contingency Plans",
+                    "cta": "Request Hydraulic or STPS Advisory"
+                }
+            },
+            "cards": {
+                "cta_quote": "Request Quote",
+                "cta_whatsapp": "WhatsApp",
+                "deliverable_topo": "<strong>Official Deliverables:</strong> Executive drawings in AutoCAD (DWG/PDF), contour lines, and geodetic calculation reports in 24-48h.",
+                "deliverable_water": "<strong>Technical Deliverables:</strong> WWTP executive projects with calculation reports, plumbing drawings, and NOM-001/002/003-SEMARNAT compliance.",
+                "deliverable_const": "<strong>Backing & Logbook:</strong> Official Director of Construction Works (DRO) endorsement, construction logbook, and executive progress reports.",
+                "deliverable_safety": "<strong>Official Opinions:</strong> Comprehensive occupational health & safety diagnostics, mixed commissions file (NOM-019), and Civil Protection programs."
             }
         },
         "portfolio_page": {
@@ -871,33 +1005,31 @@ const translations = {
             },
             "form": {
                 "title": "Send Us a Message",
-                "name": "Name",
-                "name_ph": "Your Full Name",
-                "email": "Email",
-                "email_ph": "name@example.com",
-                "subject": "Subject",
-                "options": {
-                    "general": "General Inquiry",
-                    "quote": "Quote Request",
-                    "proposal": "Project Proposal",
-                    "jobs": "Job Opportunities"
-                },
-                "lastname": "Last Name",
-                "lastname_ph": "Your Last Name",
-                "phone": "Phone Number",
-                "phone_ph": "(555) 123-4567",
-                "method_label": "Preferred Contact Method",
-                "method_email": "Email",
-                "method_phone": "Phone Call",
-                "honeypot": "If you are human, leave this field blank",
-                "captcha_label": "Solve:",
-                "captcha_error": "Incorrect result",
-                "phone_error": "Invalid format. (555) 123-4567",
-                "email_error": "Invalid email",
-                "message": "Message",
-                "message_ph": "How can we help you?",
-                "btn": "Send Message",
-                "sending": "Sending message..."
+                "name": "Full Name",
+                "name_ph": "e.g. Eng. Carlos Mendoza",
+                "company": "Company / Agency",
+                "company_ph": "e.g. Northern Construction Inc.",
+                "email": "Email Address",
+                "email_ph": "contact@company.com",
+                "phone": "Phone / WhatsApp",
+                "phone_ph": "+52 (55) 8367 1036",
+                "service_label": "Requested Service",
+                "opt_environmental": "Environmental Impact Studies",
+                "opt_topography": "Topography & Photogrammetry",
+                "opt_construction": "Infrastructure & Construction",
+                "opt_safety": "STPS Safety / DC-3",
+                "opt_water": "Wastewater Treatment",
+                "opt_other": "Other Project or Inquiry",
+                "location": "Project Location",
+                "location_ph": "e.g. Ecatepec, State of Mexico",
+                "message": "Brief Project Description",
+                "message_ph": "Briefly describe your requirements or project scope...",
+                "phone_error": "Please enter a valid 10-digit phone number.",
+                "email_error": "Invalid email address.",
+                "btn": "Submit Quote Request",
+                "sending": "Sending request...",
+                "toast_success": "Your quote request has been sent successfully! We will get in touch shortly.",
+                "toast_error": "Please check the required fields in the form."
             },
             "faq": {
                 "title": "Frequently Asked Questions",
@@ -918,8 +1050,16 @@ const translations = {
                 "title": "Direct Information",
                 "addr": "U.H. Valle de Ecatepec, <br> C.P. 55119, Ecatepec, State of Mexico",
                 "email": "<strong>legado.ambiental.mx@gmail.com</strong>",
-                "phone1": "+52 55 7312 6918",
-                "phone2": "+52 72 2672 7212"
+                "phone1": "+52 55 8367 1036",
+                "phone2": "+52 72 2672 7212",
+                "linkedin": "LinkedIn: <strong>legado-ambiental-mx</strong>"
+            },
+            "google_reviews": {
+                "badge": "Google Business Profile",
+                "title": "Verified Quality & Google Reviews",
+                "desc": "Have you partnered with Legado Ambiental on a project or site? Your Google review helps us continue building technical credibility and trust with new enterprises.",
+                "btn_review": "Leave a Google Review",
+                "btn_maps": "View on Google Maps"
             }
         },
         "index_landing": {
@@ -935,16 +1075,16 @@ const translations = {
         "auto_generated": {
             "auto_generated.text_001": "Legado\n                        Ambiental",
             "auto_generated.text_002": "<span class=\"w-8 h-[2px] bg-primary/50\"></span>\n<span data-i18n=\"services.label\">What We Do</span>",
-            "auto_generated.text_003": "<a class=\"hover:text-primary transition-colors\" data-i18n=\"footer.services.1\" href=\"services_overview/services.html#tab-1\">Environmental Engineering</a>",
-            "auto_generated.text_004": "<a class=\"hover:text-primary transition-colors\" data-i18n=\"footer.services.2\" href=\"services_overview/services.html#tab-2\">Construction</a>",
-            "auto_generated.text_005": "<a class=\"hover:text-primary transition-colors\" data-i18n=\"footer.services.3\" href=\"services_overview/services.html#tab-3\">Topography</a>",
-            "auto_generated.text_006": "<a class=\"hover:text-primary transition-colors\" data-i18n=\"footer.services.4\" href=\"services_overview/services.html#tab-4\">Health & Safety</a>",
+            "auto_generated.text_003": "<a class=\"hover:text-primary transition-colors\" data-i18n=\"footer.services.1\" href=\"services_overview/services.html#ambiental\">Environmental Engineering</a>",
+            "auto_generated.text_004": "<a class=\"hover:text-primary transition-colors\" data-i18n=\"footer.services.2\" href=\"services_overview/services.html#construccion\">Construction</a>",
+            "auto_generated.text_005": "<a class=\"hover:text-primary transition-colors\" data-i18n=\"footer.services.3\" href=\"services_overview/services.html#topografia\">Topography</a>",
+            "auto_generated.text_006": "<a class=\"hover:text-primary transition-colors\" data-i18n=\"footer.services.4\" href=\"services_overview/services.html#seguridad-hidraulica\">Health & Safety</a>",
             "auto_generated.text_007": "<a class=\"hover:text-primary transition-colors\" data-i18n=\"footer.company.1\" href=\"about_us/about_us.html\">About Us</a>",
             "auto_generated.text_008": "<a class=\"hover:text-primary transition-colors\" data-i18n=\"footer.company.2\" href=\"services_overview/services.html\">Services</a>",
             "auto_generated.text_009": "<a class=\"hover:text-primary transition-colors\" data-i18n=\"footer.company.3\" href=\"experience_timeline/our_experience.html\">Experience</a>",
             "auto_generated.text_010": "<a class=\"hover:text-primary transition-colors\" data-i18n=\"footer.company.4\" href=\"faq/contact_faq.html\">Contact</a>",
             "auto_generated.text_011": "<span class=\"material-symbols-outlined text-sm text-primary\">location_on</span>\n<span data-i18n=\"footer.contact.addr_1\">U.H. Valle de Ecatepec, C.P. 55119</span>\n<span data-i18n=\"footer.contact.addr_2\">Ecatepec, State of Mexico</span>",
-            "auto_generated.text_012": "<span class=\"material-symbols-outlined text-sm text-primary\">call</span>\n<span data-i18n=\"footer.contact.phone_1\">55 7312 6918</span>",
+            "auto_generated.text_012": "<span class=\"material-symbols-outlined text-sm text-primary\">call</span>\n<span data-i18n=\"footer.contact.phone_1\">55 8367 1036</span>",
             "auto_generated.text_013": "<span class=\"material-symbols-outlined text-sm text-primary\">call</span>\n<span data-i18n=\"footer.contact.phone_2\">72 2672 7212</span>",
             "auto_generated.text_014": "<span class=\"material-symbols-outlined text-sm text-primary\">mail</span>\n<span data-i18n=\"footer.contact.email\"><strong>legado.ambiental.mx@gmail.com</strong></span>",
             "auto_generated.text_015": "<span class=\"material-symbols-outlined text-[1.2rem]\">dark_mode</span>",
@@ -1136,7 +1276,7 @@ const translations = {
             "auto_generated.text_198": "<span class=\"material-symbols-outlined\">mail</span>",
             "auto_generated.text_199": "Legado\n                            Ambiental",
             "auto_generated.text_200": "<a class=\"inline-flex items-center text-sm font-medium text-gray-300 hover:text-white transition-colors\" href=\"../home.html\">\n<span class=\"material-symbols-outlined text-lg mr-2\">home</span>\n<span data-i18n=\"nav.home\">Home</span>\n</a>",
-            "auto_generated.text_201": "<span class=\"material-symbols-outlined text-primary w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center w-full sm:w-auto justify-center\">call</span>\n<span data-i18n=\"contact_page.info.phone1\">+52 55 7312 6918</span>",
+            "auto_generated.text_201": "<span class=\"material-symbols-outlined text-primary w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center w-full sm:w-auto justify-center\">call</span>\n<span data-i18n=\"contact_page.info.phone1\">+52 55 8367 1036</span>",
             "auto_generated.text_202": "<span class=\"material-symbols-outlined text-primary w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center w-full sm:w-auto justify-center\">call</span>\n<span data-i18n=\"contact_page.info.phone2\">+52 72 2672 7212</span>",
             "auto_generated.text_203": "<span class=\"material-symbols-outlined text-primary w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center w-full sm:w-auto justify-center\">mail</span>\n<span data-i18n=\"contact_page.info.email\"><strong>legado.ambiental.mx@gmail.com</strong></span>",
             "auto_generated.text_204": "<span class=\"material-symbols-outlined text-primary w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center w-full sm:w-auto justify-center\">location_on</span>\n<span data-i18n=\"contact_page.info.addr\">U.H. Valle de Ecatepec, <br/> C.P. 55119, Ecatepec, State of Mexico</span>",

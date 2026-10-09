@@ -1,8 +1,81 @@
-# Legado Ambiental - Refactorización del Sitio Web
+# Legado Ambiental - Plataforma Digital B2B & Embudo de Conversión
 
-Este documento detalla los ajustes y mejoras realizados al proyecto `website-legado` para asegurar su optimización, responsividad y localización para el mercado latinoamericano.
+Plataforma corporativa de **Legado Ambiental S.A. de C.V.** orientada a la captación y conversión de prospectos empresariales e institucionales en el sector de **Topografía de Alta Precisión**, **Infraestructura Hidráulica**, **Obra Civil**, **Consultoría Ambiental (SEMARNAT)** y **Seguridad e Higiene (STPS)**.
 
-## Resumen de Ajustes Realizados
+---
+
+## 🏛️ Ficha Técnica y Arquitectura del Sistema
+
+* **Dominio Oficial:** [https://legadoambiental.com.mx](https://legadoambiental.com.mx)
+* **Punto de Entrada Primario:** `home.html` (con redirección 301 desde raíz `/` e `index.html`)
+* **Framework y Estilos:** Tailwind CSS v3 (vía CDN con configuración extendida y container queries)
+* **Tipografías Corporativas:** `Manrope` (Cuerpo y UI técnica) y `Merriweather` (Títulos y acentos editoriales)
+* **Motor de Internacionalización (i18n):** Sistema nativo modular (`assets/js/i18n.js`) con paridad 1:1 entre Español (`es-MX`) e Inglés (`en-US`), persistencia en `localStorage` y cero textos estáticos quemados.
+* **Telemetría y Analítica Digital:** Google Tag Manager y Google Analytics 4 (`G-1MLGHB4E6G`) integrados en las 8 páginas con directivas CSP y 8 eventos B2B en `assets/js/analytics.js` (`form_start`, `select_service_interest`, `generate_lead`, `click_whatsapp`, `click_phone`, `scroll_depth`).
+* **Seguridad y Captura de Leads:** Formulario simplificado de 6 campos en `faq/contact_faq.html` con validación cliente, protección anti-spam **Honeypot**, notificaciones flotantes Toast UI y procesamiento vía FormSubmit API.
+* **Patrón de Contacto Móvil:** Patrón Híbrido B2B que combina una barra fija inferior (*Sticky Mobile CTA Bar*) para cotizaciones formales y un botón flotante circular (FAB) para WhatsApp directo.
+* **Generación de Reportes PDF:** Entorno de compilación determinista vía Google Chrome Headless (`google-chrome --headless --print-to-pdf`) con arquitectura modular `@media print` en tamaño Carta (8.5" x 11").
+
+---
+
+## 📂 Estructura General del Proyecto
+
+```text
+website-legado/
+├── home.html                       # Página principal / Hero JTBD y Trust Banner
+├── index.html                      # Enrutamiento canónico con redirección 301
+├── 404.html                        # Página de error personalizada y rescate de navegación
+├── about_us/about_us.html          # Nosotros: Visión, misión y trayectoria directiva
+├── services_overview/services.html # Catálogo de servicios con pestañas adaptativas y deep linking
+├── project_portfolio_gallery/      # Galería de proyectos y casos de éxito
+│   └── portfolio.html
+├── experience_timeline/            # Línea de tiempo y experiencia institucional
+│   └── our_experience.html
+├── faq/contact_faq.html            # Preguntas frecuentes, formulario de 6 campos y mapa
+├── assets/
+│   ├── css/                        # Estilos complementarios y overrides
+│   ├── js/
+│   │   ├── analytics.js            # Telemetría GTM/GA4 y captura de parámetros UTM / gclid
+│   │   ├── i18n.js                 # Diccionario maestro bilingüe (es-MX / en-US)
+│   │   └── theme-config.js         # Tokens de diseño y alternador de tema claro/oscuro
+│   ├── images/
+│   │   ├── logo/                   # Logotipo institucional en PNG, WebP y SVG
+│   │   ├── gbp-services/           # 11 imágenes de servicios HD (1200x896) y video 3D para GBP
+│   │   ├── qr/                     # Suite de códigos QR vectoriales y tarjeta de mostrador
+│   │   └── services/               # Fotografías históricas de proyectos
+│   └── docs/                       # Documentación ejecutiva, dictámenes y generadores PDF
+│       ├── Dictamen_Credito_Google_Ads_7000_MXN.pdf
+│       ├── Informe_Ejecutivo_Plan_Trabajo_y_Avances_2026.pdf
+│       ├── Guia_Estrategica_Google_Business_Profile_y_Ads_Local.pdf
+│       └── generate_informe_equipo_pdf.py
+├── INFORME_ESTADO_PLAN_TRABAJO_OCT_2026.md # Informe maestro de estado del proyecto
+├── plan-mejoras-uiux-100.md        # Plan técnico de CRO y puntos de control Git
+├── Plan de Trabajo y Arquitectura UI_UX - Legado Ambiental.md # Plan estratégico de 6 Pilares
+└── README.md                       # Bitácora técnica y registro de cambios
+```
+
+---
+
+## 📊 Estado Actual de los 6 Pilares Estratégicos
+
+1. **Pilar 1: Optimización Técnica y de Conversión Web (CRO):** `[100% CONCLUIDO]`  
+   Fases 1 a 5 concluidas, mobile-first, formulario de 6 campos, Sticky Bar + FAB WhatsApp, paridad bilingüe.
+2. **Pilar 2: Estrategia de Contenidos y Autoridad Técnica:** `[EN CURSO - SPRINT 2]`  
+   Trust banner normativo (`NOM-052`, `STPS`) activo en Hero; artículo técnico normativo extendido programado en PB6.
+3. **Pilar 3: Prospección B2B y Distribución:** `[PREPARADO / EN EJECUCIÓN]`  
+   Embudo digital listo para recibir tráfico directo de tomadores de decisión (directores de obra y contratistas).
+4. **Pilar 4: Herramientas de Ventas y Alianzas:** `[100% CONCLUIDO]`  
+   Portafolio PDF descargable, suite QR de alta definición y credencial para mostrador.
+5. **Pilar 5: Búsqueda Local y Visibilidad (Google Business Profile):** `[100% CONCLUIDO]`  
+   Ficha formalmente verificada por Google (199+ interacciones), 11 fotografías HD a 4:3, video 3D y suite QR.
+6. **Pilar 6: Adquisición de Pago (Google Ads Local):** `[POSPUESTO POR DICTAMEN]`  
+   Suspendido formalmente para optimizar capital de trabajo (ahorro de $8,120 MXN netos) y priorizar captación orgánica a costo $0.
+
+---
+
+## 📈 Historial y Registro Detallado de Fases Técnicas
+
+### Resumen de Ajustes Iniciales (Fase 1)
 
 ### 1. Localización y Traducción
 - **Idioma del Sitio**: Se actualizó el atributo `lang` en la etiqueta `<html>` de `en` a `es` en todas las páginas para mejorar el SEO y la accesibilidad en español.
@@ -664,3 +737,399 @@ Se optimizó el botón de "Ver Portafolio" en la sección final de la página "Q
 
 ### Archivos Modificados
 - `about_us/about_us.html`
+
+## Fase 30: Plan de Mejoras UI/UX 100 Leads - Fase 1 (Infraestructura Mobile-First, Design Tokens y Header Responsivo)
+
+Se ejecutó la Fase 1 del plan de optimización UI/UX y CRO (`plan-mejoras-uiux-100.md`), enfocada en resolver los problemas de responsividad en móviles (320px-375px), estandarizar los Design Tokens globales y garantizar la accesibilidad (WCAG 2.1 AAA) y la integridad de internacionalización (`i18n.js`).
+
+### 1. Refactorización de Cabecera (Header Mobile-First)
+- **Eliminación de Overflow Horizontal**: Se ajustó el ancho contenedor a `w-[calc(100%-1rem)] sm:w-[calc(100%-2rem)]` con padding adaptativo `px-3 sm:px-6`, evitando que la cabecera desborde o genere scroll lateral en dispositivos de 320px a 375px.
+- **Escalado de Logo y Título**: Se ajustó la altura del logo a `h-10 sm:h-16` en móviles y se aplicó truncado tipográfico (`truncate max-w-[150px] sm:max-w-none`) al texto del título para prevenir colisiones con el menú hamburguesa.
+- **Touch Targets de 48px (WCAG 2.1 AAA)**: Se actualizaron las áreas de interacción del botón de menú hamburguesa (`#mobile-menu-btn`), toggles de tema oscuro y selectores de idioma (`ES | EN`) a un tamaño mínimo de **48x48px**.
+
+### 2. Optimización del Menú Móvil Desplegable (#mobile-menu)
+- **Posicionamiento Fijo y Scroll Suave**: Se configuró `#mobile-menu` con `position: fixed`, `top-20`, `left-3`, `right-3`, `max-h-[85vh]` y `z-50`, permitiendo un desplazamiento interno independiente sin bloquear el viewport.
+- **Controles Integrados de Idioma y Tema**: Se añadieron selectores táctiles destacados de idioma (ES/EN) y tema dentro del propio menú móvil.
+
+### 3. Validación de Cero Regresión e Internacionalización (i18n)
+- **Pruebas de Conmutación bilingüe**: Se validó el funcionamiento del diccionario `assets/js/i18n.js` al cambiar entre `es-MX` y `en-US` en todas las páginas del sitio, verificando cero excepciones en consola y paridad de claves traducidas.
+
+### 4. Corrección de Maquetado Responsivo en Línea de Tiempo (`our_experience.html`)
+- **Resolución de Solapamiento Móvil**: Se solucionó el fallo visual donde la línea de tiempo vertical (`border-l-2`) quedaba oculta detrás de las tarjetas o desbordada por etiquetas de categoría absolutas (`-left-[9px] top-6`) en pantallas móviles (`< 768px`).
+- **Ocultamiento de Etiquetas Absolutas en Móvil**: La div de etiqueta lateral se reconfiguró como `hidden md:block` para escritorio (preservando la columna de 160px a la izquierda de la línea).
+- **Inclusión de Insignias de Categoría en Tarjeta Móvil**: En pantallas móviles (`< 768px`), las etiquetas de categoría ("Hidro Meteorológico", "Escuelas", "Saneamiento de Río", "Salud", "Especialidad", "Industria") se presentan mediante insignias/badges responsivas (`md:hidden badge`) integradas limpiamente en el encabezado de cada tarjeta.
+- **Puntos Unificados con `z-10` y Relleno Adaptativo**: Se consolidaron los puntos de hito en un único elemento responsivo (`z-10`, `w-4 h-4 md:w-5 md:h-5`) perfectamente centrado sobre la línea continua, y se optimizó el relleno interno de las tarjetas a `p-5 sm:p-8` para evitar apretamiento de contenido en dispositivos de 320px a 390px.
+
+### Escenarios de Prueba Ejecutados (QA & No Afectación)
+1. **Verificación Visual Mobile (320px, 360px, 390px, 414px)**: Inspección de visibilidad continua de la línea vertical y puntos de color en `our_experience.html`, confirmando cero desbordamiento horizontal y lectura nítida de títulos e insignias.
+2. **Prueba de Menú Hambuerguesa & Sticky Header**: Apertura/cierre en 6 páginas principales en vistas móviles, comprobando touch targets de 48px y z-index 50.
+3. **Verificación i18n Bilingüe**: Alternancia fluida `ES` <-> `EN` en la línea de tiempo y menú sin pérdida de claves ni desestructuración de tarjetas.
+
+### Archivos Modificados
+- `home.html`
+- `about_us/about_us.html`
+- `services_overview/services.html`
+- `project_portfolio_gallery/portfolio.html`
+- `experience_timeline/our_experience.html`
+- `faq/contact_faq.html`
+- `README.md`
+
+## Fase 31: Plan de Mejoras UI/UX 100 Leads - Fase 2 (Hero Section JTBD, Trust Banner & 3 CTAs)
+
+Se ejecutó la Fase 2 del plan técnico de optimización UI/UX y CRO (`plan-mejoras-uiux-100.md`), reestructurando la sección principal de la página de inicio (`home.html`) hacia una propuesta de valor basada en Jobs-To-Be-Done (JTBD), incorporando 3 llamados a la acción (CTAs) de alta conversión y un banner de confianza normativa (Trust Banner).
+
+### 1. Rediseño del Hero Section Orientado a JTBD (`home.html`)
+- **Titular y Copys Directos**: Se reemplazó el titular estático por preguntas directas de necesidad de negocio: *"¿Necesitas resolver un estudio de impacto ambiental, proyecto de obra o levantamiento topográfico?"*.
+- **Padding Adaptativo y Eliminación de Altura Fija**: Se eliminó la restricción `min-h-[450px]` en móvil y se implementó `min-h-auto py-8 md:py-14` con padding elástico `p-5 sm:p-8 md:p-12`.
+
+### 2. Integración de 3 llamados a la Acción (CTAs)
+- **Botón Primario ("Cotizar Proyecto")**: Redirección directa al formulario de contacto (`faq/contact_faq.html#tab-1`) con estilo verde `primary` de alto contraste.
+- **Botón Secundario ("Hablar por WhatsApp")**: Enlace directo a la API de WhatsApp Business (`https://wa.me/527226727212`) con mensaje inicial prellenado sobre cotizaciones.
+- **Botón Terciario ("Ver Portafolio PDF")**: Enlace de descarga directa del documento `Portafolio_Proyectos_Legado_Ambiental_2026.pdf` con atributos `target="_blank"` y `download`.
+
+### 3. Hero Trust Banner (Barra de Confianza Normativa)
+- **Franja Normativa Integrada**: Se incorporó un banner estilizado `backdrop-blur-md` en la base del Hero destacando normativas y licencias clave:
+  - `NOM-052-SEMARNAT` (Residuos Peligrosos)
+  - `NOM-001-SEMARNAT` (Aguas Residuales)
+  - `Normativas STPS` (Seguridad e Higiene)
+  - `RCDF y Licencias` (Construcción Urbana)
+
+### 4. Garantía de Internacionalización (`assets/js/i18n.js`)
+- Registradas las llaves `hero.jtbd_title`, `hero.jtbd_subtitle`, `hero.quote_btn`, `hero.whatsapp_btn`, `hero.portfolio_btn`, `hero.trust_label`, `hero.norm_1`, `hero.norm_2`, `hero.norm_3`, `hero.norm_4` en los diccionarios `es-MX` y `en-US`.
+
+### Escenarios de Prueba Ejecutados (QA & No Afectación)
+1. **Verificación Visual Fluid (320px a 1440px)**: Confirmada la fluidez del contenedor Glassmorphism y apilamiento limpio de los 3 CTAs en pantallas pequeñas.
+2. **Descarga de Portafolio PDF & Enlace WhatsApp**: Probada la apertura de WhatsApp con mensaje inicial y descarga directa del archivo PDF sin errores 404.
+3. **Verificación i18n Bilingüe**: Alternancia `ES` <-> `EN` en el Hero y Trust Banner comprobando paridad completa de traducción.
+
+### Archivos Modificados
+- `home.html`
+- `assets/js/i18n.js`
+- `README.md`
+- `plan-mejoras-uiux-100.md`
+
+## Fase 32: Plan de Mejoras UI/UX 100 Leads - Fase 3 (Pestañas de Servicios Adaptativas y Aislamiento de Layout PDF)
+
+Se ejecutó la Fase 3 del plan técnico de optimización UI/UX y CRO (`plan-mejoras-uiux-100.md`), convirtiendo la barra de pestañas de servicios en una interfaz táctil adaptativa para móviles e aislando la arquitectura de impresión PDF Carta (`8.5in x 11in`).
+
+### 1. Navegación por Pestañas Adaptativa (`services.html`)
+- **Selector Móvil (< 640px)**: Se implementó un elemento Select UI de alta visibilidad (`#services-mobile-select`) con borde interactivo verde `primary` y chevron `unfold_more`. Esto elimina el desbordamiento ciego en pantallas pequeñas y permite a los usuarios de teléfonos inteligentes seleccionar cualquiera de las 4 divisiones (*Ingeniería Ambiental*, *Construcción*, *Topografía*, *Seguridad e Higiene*) con un solo toque.
+- **Pestañas Desktop (>= 640px)**: Se conservaron las pestañas horizontales con indicador de estado activo (`bg-primary`, sombra verde y texto blanco).
+- **Sincronización Bidireccional en JS**: Se sincronizó la función `switchTab(tabIndex)` para actualizar simultáneamente la pestaña activa en desktop, la opción seleccionada en el dropdown móvil y el panel de tarjetas de servicio activo.
+
+### 2. Aislamiento de la Arquitectura PDF vs Pantalla Web (`Curricula_Legado_Ambiental_2026_v2.html`)
+- **Visualización Web Responsiva (`@media screen`)**: Se actualizó la clase `.page-container` a `width: 100%; max-width: 8.5in; min-height: auto;`, garantizando que en dispositivos móviles y monitores de escritorio el documento sea 100% fluido y no genere desbordamientos laterales ni barras de desplazamiento forzadas.
+- **Formato Carta Estricto en Impresión (`@media print`)**: Se encapsularon las reglas fijas `width: 8.5in; height: 11in; page-break-after: always;` dentro del bloque `@media print`, asegurando que al exportar a PDF o imprimir (Ctrl+P / Cmd+P) se mantenga la maquetación en tamaño Carta exacto sin elementos interactivos (`.no-print { display: none !important; }`).
+
+### Escenarios de Prueba Ejecutados (QA & No Afectación)
+1. **Verificación de Pestañas Adaptativas (320px a 1200px)**: Comprobado el funcionamiento del selector táctil en pantallas de 320px, 375px y 414px, así como el cambio de pestañas en escritorio.
+2. **Prueba Deep Linking por Hash**: Verificado que al acceder a `services.html#tab-3` se active automáticamente la pestaña de *Topografía* y se sincronice con el selector móvil.
+3. **Prueba de Impresión PDF `@media print`**: Validada la vista previa de impresión en `Curricula_Legado_Ambiental_2026_v2.html`, confirmando páginas Carta exactas y ocultamiento de botones interactivos.
+4. **Verificación i18n Bilingüe**: Alternancia `ES` <-> `EN` en la página de servicios y etiquetas del selector móvil sin errores.
+
+### Archivos Modificados
+- `services_overview/services.html`
+- `assets/docs/Curricula_Legado_Ambiental_2026_v2.html`
+- `assets/js/i18n.js`
+- `README.md`
+## Fase 33: Plan de Mejoras UI/UX 100 Leads - Fase 4 (Formulario Simplificado de 6 Campos, Honeypot & Sticky Mobile CTA Bar)
+
+Se ejecutó la Fase 4 del plan técnico de optimización UI/UX y CRO (`plan-mejoras-uiux-100.md`), simplificando el formulario de contacto para eliminar la fricción de conversión e implementando la barra persistente de llamadas a la acción (Sticky Mobile CTA Bar) en todo el sitio web.
+
+### 1. Formulario de Contacto Ultra-Simplificado (6 Campos) (`faq/contact_faq.html`)
+- **Reducción a 6 Campos Clave**: Se rediseñó el formulario a 6 campos esenciales para la calificación de prospectos B2B: *Nombre*, *Empresa*, *Correo Electrónico*, *Teléfono*, *Servicio de Interés* y *Mensaje / Detalles del Proyecto*.
+- **Integración Anti-Spam Invisible (Honeypot)**: Implementación de un campo trampero no visible (`website_hp`) para atrapar bots automatizados sin afectar la usabilidad del usuario humano.
+- **Envío Asíncrono AJAX & Toast Notifications**: Envío de datos vía `fetch()` a FormSubmit integrado con `ToastService` (`assets/js/toast-service.js`) para desplegar notificaciones flotantes de éxito o error al instante.
+
+### 2. Sticky Mobile CTA Bar en Todo el Sitio (6 Páginas)
+- **Barra Fija en Pantallas Móviles (< 768px)**: Se añadió el componente flotante `fixed bottom-0 left-0 right-0 z-40 md:hidden bg-white/95 dark:bg-[#121c27]/95 backdrop-blur-lg` con dos botones de contacto de respuesta inmediata:
+  - **Botón WhatsApp Directo**: Enlace a la API de WhatsApp (`+52 55 8367 1036`).
+  - **Botón Cotizar**: Redirección rápida al formulario de cotización.
+- **Resguardo de Contenido (`pb-20 md:pb-0`)**: Aplicado a los tags `<body>` en las 6 páginas principales para evitar que la barra flotante cubra información relevante del pie de página.
+
+### 3. Garantía de Internacionalización (`assets/js/i18n.js`)
+- Actualizadas las claves de traducción `contact_page.form.*` en los diccionarios `es-MX` y `en-US` garantizando cero textos duros en la interfaz de contacto.
+
+### Escenarios de Prueba Ejecutados (QA & No Afectación)
+1. **Verificación de Envío de Formulario AJAX**: Probado el envío en `contact_faq.html` validando el despliegue del mensaje Toast de confirmación y limpieza del formulario.
+2. **Prueba de Sticky Mobile CTA Bar**: Comprobada la visibilidad e interactividad de los botones en pantallas móviles (320px, 375px, 414px) y su ocultamiento automático en pantallas de escritorio (`md:hidden`).
+3. **Validación Anti-Spam Honeypot**: Confirmado que envíos con el campo oculto completo son descartados silenciosamente sin distorsionar la experiencia.
+4. **Verificación i18n Bilingüe**: Alternancia `ES` <-> `EN` en los formularios y la barra CTA verificando 100% de cobertura de llaves.
+
+### Archivos Modificados
+- `faq/contact_faq.html`
+- `home.html`
+- `about_us/about_us.html`
+- `services_overview/services.html`
+- `project_portfolio_gallery/portfolio.html`
+- `experience_timeline/our_experience.html`
+- `assets/js/i18n.js`
+- `README.md`
+## Fase 34: Plan de Mejoras UI/UX 100 Leads - Fase 5 (Analítica GA4/GTM, SEO Local & Validación Final de Cero Regresión)
+
+Se ejecutó la Fase 5 del plan técnico de optimización UI/UX y CRO (`plan-mejoras-uiux-100.md`), concluyendo de forma integral el plan de captación de 100 leads con la instrumentación de eventos de analítica automatizada, optimización de metadatos de SEO Local y la auditoría final de cero regresión.
+
+### 1. Instrumentación de Analítica Automatizada (`assets/js/analytics.js`)
+- **Script Unificado de Eventos (`analytics.js`)**: Creado para capturar y enviar eventos clave a la capa de datos (`dataLayer` para GA4 y Google Tag Manager):
+  - `click_whatsapp`: Registra clics en cualquier botón o enlace de WhatsApp con atribución del origen (*header*, *hero*, *sticky_fab_mobile*, *footer*).
+  - `generate_lead`: Registra conversiones exitosas del formulario de contacto simplificado con la categoría de servicio seleccionada.
+  - `download_portfolio`: Registra la descarga o visualización del portafolio PDF y currículum empresarial.
+- **Inclusión en Todo el Sitio**: Inyectado en las 6 páginas principales HTML.
+
+### 2. SEO Local & Datos Estructurados (Schema.org)
+- **Schema.org Enriquecido**: Actualizado en los `<head>` de todas las páginas principales (`home.html`, `about_us.html`, `services.html`, `portfolio.html`, `our_experience.html`, `contact_faq.html`) con los tipos combinados `["ConstructionBusiness", "EnvironmentalConsultancy"]`, teléfono verificado `+52-55-8367-1036` y dirección de Ecatepec, Estado de México.
+- **Redirección `.htaccess`**: Confirmada la regla de redirección 301 limpia de `index.html` hacia `home.html`.
+
+### 3. Auditoría Final de Internacionalización & Cero Regresión
+- **Paridad i18n 1:1**: Verificada la paridad completa entre los diccionarios `es-MX` y `en-US` en `assets/js/i18n.js` mediante script automatizado de Node.js.
+- **Patrón Híbrido B2B CTA Móvil**: Confirmado el funcionamiento del botón 100% ancho "Cotizar Proyecto" en la barra fija base y el botón circular flotante (FAB) de WhatsApp.
+
+### Escenarios de Prueba Ejecutados (QA & No Afectación)
+1. **Verificación `dataLayer.push` en Consola**: Probada la emisión de eventos al hacer clic en WhatsApp, enviar formularios y descargar portafolio PDF.
+2. **Prueba Cross-Browser & Multidispositivo**: Comprobada la maquetación en resoluciones de 320px, 375px, 768px, 1024px y 1440px sin distorsión visual.
+3. **Auditoría Estructurada Schema.org**: Validada la estructura JSON-LD sin advertencias ni errores sintácticos.
+4. **Auditoría Final i18n**: Conmutación bilingüe sin textos quemados ni excepciones en consola.
+
+### Archivos Modificados
+- `assets/js/analytics.js` (Nuevo)
+- `assets/js/contact_form.js`
+- `home.html`
+- `about_us/about_us.html`
+- `services_overview/services.html`
+- `project_portfolio_gallery/portfolio.html`
+- `experience_timeline/our_experience.html`
+- `faq/contact_faq.html`
+- `README.md`
+- `plan-mejoras-uiux-100.md`
+
+## Fase 35: Optimización de Previsualización Social (Open Graph / LinkedIn) y Depuración Integral de Activos Multimedia
+
+Esta fase aborda la corrección de los metadatos de compartición en redes sociales (Open Graph / Twitter Cards) para la URL pública del dominio, la optimización de los activos visuales y la limpieza exhaustiva de archivos no utilizados en el proyecto.
+
+### 1. Diagnóstico y Corrección de Metadatos Open Graph (`home.html` e `index.html`)
+- **Problema Detectado**: Al ingresar la URL del sitio web (`https://legadoambiental.com.mx/`) en LinkedIn ("Añadir contenido multimedia") u otras plataformas sociales, se mostraba una vista previa con una fotografía de edificios en construcción ajena a la identidad institucional, proveniente de una URL provisional externa de Google Photos (`lh3.googleusercontent.com/aida-public/...`).
+- **Solución Implementada**:
+  - Se actualizaron las etiquetas `og:image` y `twitter:image` en `home.html` e `index.html` para apuntar a la imagen oficial corporativa de *Metodología Estructurada de Proyectos Integrales*.
+  - Se añadieron directivas completas de Open Graph para evitar retrasos en el cálculo asíncrono de dimensiones por parte de los crawlers sociales:
+    - `og:image:secure_url`: URL HTTPS absoluta.
+    - `og:image:type`: Declaración de tipo MIME (`image/png`).
+    - `og:image:width`: `1200` píxeles.
+    - `og:image:height`: `876` píxeles.
+    - `og:image:alt`: Texto descriptivo de accesibilidad.
+
+### 2. Generación y Optimización de Imagen Social (`servicios-legado-ambiental-2026-og.png`)
+- **Optimización de Peso y Dimensiones**:
+  - El activo original en alta resolución (`servicios-legado-ambiental-2026.png`) tenía una resolución de 2412x1760 px y un peso de **6.30 MB**, superando el límite máximo estricto de **5 MB** de LinkedIn.
+  - Se procesó una versión web-optimizada en `assets/images/services/servicios-legado-ambiental-2026-og.png`:
+    - **Resolución**: 1200 x 876 px (proporción óptima para que ninguna columna de la metodología ni los textos se recorten en feeds o tarjetas).
+    - **Peso final**: **1.33 MB** (~78% de reducción respecto al original y ampliamente por debajo del umbral de 5 MB de LinkedIn).
+    - **Calidad**: Formato PNG de 24 bits con compresión nivel 9, conservando el 100% de la fidelidad visual, colores y nitidez.
+
+### 3. Auditoría e Inventario de Activos Multimedia (`assets/images/`)
+Se auditó la totalidad de archivos en `assets/images/` y se contrastó contra todas las referencias en código HTML, JS, CSS y configuraciones:
+- **Total de archivos iniciales**: 49 archivos (150 MB).
+- **Archivos activos en producción**: 18 archivos esenciales (6.05 MB).
+- **Archivos huérfanos / no utilizados**: 31 archivos (146.20 MB).
+
+### 4. Respaldo de Archivos Editables de Diseño GIMP (`design_sources/`)
+Para garantizar la preservación de los recursos de edición sin sobrecargar la distribución web en producción:
+- Se creó el directorio de respaldo `design_sources/` en la raíz del repositorio.
+- Se trasladaron los 8 archivos de proyecto editables con capas (`.xcf`, **86.62 MB**):
+  - `design_sources/about/about-legado-comp-2026.xcf`
+  - `design_sources/about/about_us_resume.xcf`
+  - `design_sources/about/mision-legado-2026.xcf`
+  - `design_sources/about/vision-legado-2026.xcf`
+  - `design_sources/home/proyecto_1_legado_2026.xcf`
+  - `design_sources/home/proyecto_2_legado_2026.xcf`
+  - `design_sources/services/metodologia.xcf`
+  - `design_sources/services/servicios-legado-ambiental-2026.xcf`
+- Se agregó documentación interna en `design_sources/README.md`.
+
+### 5. Depuración y Reducción del Directorio Web (`assets/images/`)
+- Se eliminaron del directorio público `assets/images/` los 31 archivos huérfanos:
+  - 8 archivos `.xcf` respaldados en `design_sources/`.
+  - 12 archivos `.png` pesados o versiones preliminares reemplazadas por formatos modernos WebP.
+  - 11 archivos `.webp` de maquetación temprana no implementados en las plantillas HTML finales.
+- **Resultado**: La carpeta `assets/images/` pasó de **150 MB a solo 6.05 MB** (reducción del 96% de carga en el despliegue del hosting).
+
+### 6. Restauración y Distribución del Menú Superior Flotante (Paridad 1:1 con Hostinger)
+- **Problema Detectado en Entorno Local**: En la versión en desarrollo, el título de la marca se cortaba a *"LEGADO AMBIENT..."* y los enlaces de navegación ("Quiénes Somos", "Servicios y Cotización") se distorsionaban o rompían en múltiples líneas debido a clases restrictivas (`truncate`, `max-w-[150px]`, `overflow-hidden` y dimensiones excesivas en botones de tema/idioma) añadidas en commits anteriores.
+- **Ajuste Aplicado**:
+  - Se sincronizó el diseño y estructura exacta del componente `<header>` con la versión estable y funcional desplegada en producción en Hostinger (`menu-superior-pro.png`).
+  - Se eliminó el truncamiento y `overflow-hidden` del bloque de marca, permitiendo que "LEGADO AMBIENTAL" luzca completo en mayúsculas negritas con `text-xl` y `shrink-0`.
+  - Se añadió la regla `whitespace-nowrap` en todos los enlaces de escritorio y textos del menú para asegurar que ningún elemento se divida en dos líneas.
+  - Se restableció la altura (`h-20`) y espaciados originales (`px-4 sm:px-6 lg:px-8`, `gap-8`) que proporcionan una distribución equilibrada y estética en las 6 páginas web.
+  - Se mantuvo la funcionalidad responsiva para móviles (menú desplegable de pantalla completa y botón hamburguesa interactivo).
+
+### 7. Actualización del Número Oficial de WhatsApp Business
+- **Ajuste Realizado**: Se sustituyó el número de contacto en todos los botones y enlaces interactivos hacia la API de WhatsApp (`wa.me`) por el nuevo número: **`72 2672 7212`** (formato internacional México: `527226727212`).
+- **Puntos de Enlace Actualizados**:
+  - Botón secundario del Hero en [`home.html`](home.html).
+  - Botones flotantes circulares (Floating Action Button - FAB) presentes en las 6 páginas principales (`home.html`, `about_us.html`, `services.html`, `portfolio.html`, `our_experience.html` y `contact_faq.html`).
+- **Enlace Unificado**:
+  `https://wa.me/527226727212?text=Hola,%20quisiera%20cotizar%20un%20proyecto%20con%20Legado%20Ambiental`
+
+### 8. Actualización del Teléfono Fijo Principal
+- **Ajuste Realizado**: Se sustituyó el número telefónico anterior (`55 7312 6918`) por el nuevo número: **`55 8367 1036`** (formato internacional: `+52 55 8367 1036`, Schema.org: `+52-55-8367-1036`).
+- **Puntos de Actualización**:
+  - Datos estructurados Schema.org JSON-LD en todas las páginas HTML (`home.html`, `about_us.html`, `services.html`, `portfolio.html`, `our_experience.html`, `faq/contact_faq.html`).
+  - Pie de página (Footer) en `home.html` y diccionarios de internacionalización `assets/js/i18n.js` (`es-MX` y `en-US`).
+  - Tarjeta de contacto directo y placeholders del formulario en `faq/contact_faq.html`.
+
+### Escenarios de Prueba Ejecutados (QA & No Afectación)
+1. **Auditoría de Enlaces Rotos**: Validación automatizada de las 34 referencias a imágenes en todas las páginas del sitio (`home.html`, `index.html`, `about_us.html`, `services.html`, `portfolio.html`, `our_experience.html`, `contact_faq.html`, `404.html` y currícula), reportando **0 enlaces rotos** y 100% de recursos resueltos.
+2. **Validación de Metadatos Open Graph**: Comprobada la sintaxis y URLs absolutas en `index.html` y `home.html` con parámetros compatibles para LinkedIn Post Inspector y Facebook Sharing Debugger.
+3. **Verificación de Respaldo**: Confirmada la integridad de los 8 archivos `.xcf` en `design_sources/`.
+4. **Verificación de Menú Superior en las 6 Páginas**: Validación de paridad visual y estructural con la versión de Hostinger en `home.html`, `about_us.html`, `services.html`, `portfolio.html`, `our_experience.html` y `contact_faq.html`, confirmando cero truncamiento y diseño responsivo intacto.
+5. **Verificación de Enlaces WhatsApp**: Validación de los 7 botones de WhatsApp confirmando que todos apuntan correctamente a `https://wa.me/527226727212` con el mensaje inicial de cotización predefinido.
+6. **Verificación Telefónica Global**: Confirmadas las 21 coincidencias actualizadas al número `55 8367 1036` sin números obsoletos en código fuente.
+
+### Archivos Modificados / Creados
+- `home.html` (Modificado - metadatos `og:image`, menú superior Hostinger, botones WhatsApp y teléfono actualizado)
+- `index.html` (Modificado - metadatos `og:image` actualizados)
+- `about_us/about_us.html` (Modificado - menú superior Hostinger, botón WhatsApp y teléfono Schema.org actualizado)
+- `services_overview/services.html` (Modificado - menú superior Hostinger, botón WhatsApp y teléfono Schema.org actualizado)
+- `project_portfolio_gallery/portfolio.html` (Modificado - menú superior Hostinger, botón WhatsApp y teléfono Schema.org actualizado)
+- `experience_timeline/our_experience.html` (Modificado - menú superior Hostinger, botón WhatsApp y teléfono Schema.org actualizado)
+- `faq/contact_faq.html` (Modificado - menú superior Hostinger, botón WhatsApp y teléfonos actualizados)
+- `assets/js/i18n.js` (Modificado - diccionarios de teléfono actualizados para ES y EN)
+- `assets/images/services/servicios-legado-ambiental-2026-og.png` (Nuevo - versión optimizada de 1.33 MB)
+- `design_sources/` (Nuevo directorio de respaldo de archivos `.xcf`)
+- `design_sources/README.md` (Nuevo - documentación de fuentes de diseño)
+- `README.md` (Modificado - documentación de la Fase 35)
+
+---
+
+## 📈 Registro de Cambios: Fase 36 - Infraestructura Web y Soporte Técnico para Google Business Profile (Pilar 5) y Google Ads Local (Pilar 6)
+
+### 1. Contexto y Objetivos
+Complementando el *Plan Estratégico de Trabajo y Arquitectura UI/UX* (Pilar 5: Búsqueda Local / SEO Local y Pilar 6: Adquisición de Pago / Google Ads Local), se implementó la infraestructura de código, analítica y metadatos necesaria para la captación activa de clientes en el Valle de México y la trazabilidad de campañas publicitarias.
+
+### 2. Manual y Guía Estratégica Completa
+Se creó la guía técnica y comercial integral en [`markdown/guia-google-business-profile-y-ads-local.md`](markdown/guia-google-business-profile-y-ads-local.md), que detalla:
+- **Google Business Profile:** Proceso de verificación en México, estandarización NAP 1:1, selección de categorías (`Consultor ambiental`, `Ingeniero consultor`, `Empresa constructora`, `Agrimensor`), delimitación de áreas de servicio (Estado de México, CDMX y nacional), catálogo de servicios B2B, estrategia de fotografías con EPP y protocolo para recolección y respuesta de reseñas en Google.
+- **Google Ads Local:** Vinculación de cuentas con GBP para recursos de ubicación, arquitectura de 4 grupos de anuncios por intención transaccional (Impacto Ambiental, Topografía, Saneamiento/PTAR, Seguridad STPS), matriz de palabras clave con concordancia de frase y exacta, lista exhaustiva de palabras clave negativas, modelos de anuncios responsivos (RSAs), extensiones obligatorias y estrategia de puja de aprendizaje a conversión.
+
+### 3. Adecuaciones Técnicas en el Sitio Web
+1. **Atribución de Marketing y Captura de Google Ads Click ID (`assets/js/analytics.js`):**
+   - Captura automática de `gclid`, `wbraid`, `gbraid`, `utm_source`, `utm_medium` y `utm_campaign` desde la URL al aterrizar en el sitio, persistidos en `sessionStorage`.
+   - Exposición de la función utilitaria global `window.getMarketingAttribution()`.
+   - Disparo de eventos enriquecidos con la procedencia de la campaña (`campaign_source`, `campaign_name`, `gclid`).
+   - Auto-instrumentación global para clics en enlaces de llamada telefónica (`click_phone`), reseñas de Google (`click_google_review`) y mapas (`click_google_maps`).
+   - Función puente `window.trackGoogleAdsConversion()` para enviar conversiones directas a la etiqueta de Google Ads (`gtag`).
+2. **Formulario de Cotización con Trazabilidad Publicitaria (`faq/contact_faq.html`):**
+   - El script de envío por AJAX ahora recupera los datos de campaña y adjunta `origen_campana` y `google_click_id` en el cuerpo del correo enviado a `formsubmit.co`, permitiendo al equipo de ventas identificar clientes de Google Ads.
+3. **Tarjeta Interactiva de Reseñas de Google Business Profile (`faq/contact_faq.html`):**
+   - Inserción de una tarjeta visual con insignia de verificación y 5 estrellas, invitando a directores de obra y empresas a dejar reseñas en Google.
+   - Botón directo *"Escribir Reseña en Google"* (`data-action="google-review"`) y *"Ver en Google Maps"* (`data-action="google-maps"`).
+4. **Teléfonos y Direcciones Clicables (`home.html` y `faq/contact_faq.html`):**
+   - Conversión de números telefónicos en enlaces táctiles interactivos `tel:+525583671036` y `tel:+527226727212`.
+   - Enlace directo a la ubicación en Google Maps en el footer y módulo de contacto.
+   - Enlaces rápidos a *Google Maps* y *Reseñas en Google* en la barra inferior del footer.
+5. **Enriquecimiento del Schema.org JSON-LD LocalBusiness (6 Páginas):**
+   - Actualización del marcado estructurado en `home.html`, `about_us.html`, `services.html`, `portfolio.html`, `our_experience.html` y `contact_faq.html` incorporando `@type: ["LocalBusiness", "ConstructionBusiness", "EnvironmentalConsultancy"]`, geolocalización GPS (`geo`: `19.6018, -99.0494`), horarios comerciales (`openingHoursSpecification`), cobertura geográfica (`areaServed`) y múltiples puntos de atención técnica y comercial.
+6. **Internacionalización y Cero Errores (Regla de Oro `assets/js/i18n.js`):**
+   - Registro de todas las nuevas llaves textuales en español (`es-MX`) e inglés (`en-US`).
+
+---
+
+## 🚀 Registro de Cambios: Fase 37 - Culminación de Google Business Profile, Integración GTM/GA4 y Dictamen Ejecutivo de Proyecto
+
+### 1. Contexto y Logros
+Se alcanzó la culminación de los pilares técnicos y de presencia local establecidos en el plan de trabajo para la captación de los **Primeros 100 Leads B2B**:
+- **Google Business Profile (Pilar 5: SEO Local Concluido):** Ficha formalmente verificada por Google con panel de control en vivo (199+ interacciones), 11 fotografías de servicios profesionales remasterizadas a alta definición (1200x896 px, proporción 4:3), material audiovisual de Modelado 3D y cálculo volumétrico de tierras (carátula HD y video demo de 20 segundos), y suite completa de códigos QR vectoriales/rasterizados con credencial de mostrador (`tarjeta-qr-legadoambiental.html`).
+- **Medición y Analítica Digital (GA4 y GTM):** Implementación de la etiqueta de Google Tag Manager y Google Analytics (`G-1MLGHB4E6G`) en las 8 páginas del ecosistema web, adecuación de directivas CSP en cabeceras HTML y rastreo de eventos del embudo de conversión en `assets/js/analytics.js` (`form_start`, `select_service_interest`, `generate_lead`, `click_whatsapp`, `click_phone`, `scroll_depth`).
+- **Dictamen Financiero sobre Google Ads (Pilar 6):** Elaboración del análisis técnico y financiero formal sobre el cupón de $7,000 MXN (`DOC-LA-MKT-2026-004`). Se determinó por resolución corporativa suspender temporalmente la pauta pagada para cuidar el flujo de efectivo (ahorro inmediato de $8,120 MXN netos con IVA) y canalizar los esfuerzos inmediatos a la captación orgánica y prospección directa B2B.
+
+### 2. Entregables Documentales y Reportes Ejecutivos
+- **Informe de Estado del Proyecto (Markdown & PDF):**  
+  - [`INFORME_ESTADO_PLAN_TRABAJO_OCT_2026.md`](INFORME_ESTADO_PLAN_TRABAJO_OCT_2026.md)  
+  - [`assets/docs/Informe_Ejecutivo_Plan_Trabajo_y_Avances_2026.pdf`](assets/docs/Informe_Ejecutivo_Plan_Trabajo_y_Avances_2026.pdf)
+- **Dictamen Técnico del Crédito Publicitario Google Ads:**  
+  - [`assets/docs/Dictamen_Credito_Google_Ads_7000_MXN.pdf`](assets/docs/Dictamen_Credito_Google_Ads_7000_MXN.pdf)
+
+---
+
+## 🎯 Registro de Cambios: Fase 38 - PB5: Micro-Landings de Servicios Específicos & Ecosistema de Conversión (Módulos 1 al 5 - Culminación Exitosa)
+
+### 1. Módulo 1: Arquitectura de Navegación, Router JS y Deep-Linking Semántico
+- **Identificadores Amigables (Slugs Semánticos):**
+  - `#ambiental`: División 1 - Consultoría e Ingeniería Ambiental.
+  - `#construccion`: División 2 - Construcción y Supervisión de Obra.
+  - `#topografia`: División 3 - Topografía de Alta Precisión & Geodesia.
+  - `#seguridad-hidraulica`: División 4 - Infraestructura Hidráulica, Saneamiento & STPS.
+- **Sincronización Bidireccional y Limpieza de Historial:**
+  - Uso de `history.replaceState` para mantener URLs limpias y legibles en la barra de direcciones sin saltos ni recargas.
+  - Sincronización en vivo entre pestañas de escritorio (`.tab-btn`), menú desplegable móvil (`#services-mobile-select`) y el hash de la URL.
+- **Navegación Guiada y Telemetría:**
+  - Escucha de eventos `DOMContentLoaded` y `hashchange` con desplazamiento suave (*smooth scroll*) con compensación de cabecera fija.
+  - Telemetría de analítica web en cada cambio de división disparando `dataLayer.push({ event: 'select_service_tab', ... })`.
+- **Actualización de Enlaces Entrantes:**
+  - Reescritura de los enlaces de las 4 tarjetas y del pie de página en `home.html` y diccionarios de `assets/js/i18n.js` hacia los nuevos slugs semánticos, manteniendo retrocompatibilidad intacta para `#tab-1..4`.
+
+### 2. Módulo 2: Cabeceras UI/UX de Autoridad Técnica (Micro-Landing Headers)
+- **Cabeceras Especializadas por División en `services.html`:**
+  - Inserción de 4 tarjetas destacadas de ancho completo (`col-span-1 md:col-span-2`) al inicio de cada tab técnico con diseño en gradientes temáticos oscuros, bordes estilizados y efectos de iluminación (*glow*).
+  - Propuesta de valor B2B dirigida a resolver dolores específicos: blindaje ante multas/clausuras PROFEPA/SEMARNAT, control de calidad y bitácora con Director Responsable de Obra (DRO), levantamientos con GPS RTK y drones LiDAR en 24-48h, y plantas de tratamiento PTAR con dictámenes STPS.
+- **Badges de Autoridad Técnica & CTAs Duales:**
+  - Inclusión de 3 insignias con iconografía técnica por cabecera (`SEMARNAT/PROFEPA`, `CRETI`, `DRO`, `GPS RTK`, `PTAR`, `Protección Civil`).
+  - Botones de acción directa hacia cotización on-site (`contact_faq.html?service=[slug]`) y asesoría técnica directa por WhatsApp.
+- **Paridad Total de Internacionalización (28 Nuevas Claves i18n):**
+  - Registro y validación estricta de 28 claves bajo `services_page.headers.*` en `assets/js/i18n.js` para los idiomas `es-MX` y `en-US`.
+
+### 3. Módulo 3: Enriquecimiento de Fichas de Servicio y Conversión On-Site (Eliminación de Fugas Externas)
+- **Eliminación Total de Enlaces Externos a Google Forms:**
+  - Sustitución del 100% de los botones con enlaces externos (`forms.gle` / `docs.google.com/forms`) en las 15 fichas de servicio por componentes nativos de conversión dual on-site, evitando la pérdida de tráfico cualificado y garantizando el seguimiento en GA4/GTM.
+- **Acciones Duales de Alta Conversión B2B por Ficha:**
+  - **Botón Primario On-Site:** Acceso a `../faq/contact_faq.html?service=[slug_especifico]` para captura formal de requerimientos en el sitio.
+  - **Botón Secundario Inmediato:** Acceso directo a WhatsApp (`wa.me/525583671036`) con texto precargado según la especialidad consultada.
+- **Enrutamiento y Auto-Selección Inteligente en `faq/contact_faq.html`:**
+  - Captura del parámetro de consulta `?service=` vía `URLSearchParams`.
+  - Mapeo semántico exhaustivo de los 15 servicios hacia el selector `<select id="service_type">` con fallback predictivo.
+  - Activación automática del formulario (`switchTab(1)`) y desplazamiento guiado y suave (*smooth scroll*) con compensación de cabecera hacia `#contact-form`.
+- **Enriquecimiento de Entregables Oficiales y Paridad Bilingüe:**
+  - Especificación de entregables técnicos tangibles en tarjetas representativas (planos ejecutivos AutoCAD DWG/PDF 24-48h, memorias de cálculo PTAR y NOM-001/002/003, respaldo de firma DRO con bitácora oficial, y diagnósticos STPS con carpetas NOM-019).
+  - Paridad estricta en `assets/js/i18n.js` (`es-MX` y `en-US`) bajo `services_page.cards.*` para todos los textos y entregables.
+
+### 4. Módulo 4: Integración Institucional de LinkedIn (`www.linkedin.com/in/legado-ambiental-mx`)
+- **Punto de Contacto Profesional B2B en Ecosistema Web:**
+  - Actualización uniforme del enlace al perfil oficial de Legado Ambiental en LinkedIn (`https://www.linkedin.com/in/legado-ambiental-mx`) en todos los puntos de contacto digital.
+- **Implementación en Pie de Página (Footer de 6 Páginas):**
+  - **`home.html`:** Inserción de badge institucional de LinkedIn en la columna corporativa y enlace con logotipo SVG oficial en la barra inferior junto a Google Maps y Google Reviews.
+  - **`about_us.html`, `services.html`, `portfolio.html`, `our_experience.html` y `contact_faq.html`:** Incorporación del icono interactivo de LinkedIn con paleta corporativa (`#0A66C2`) en la barra de redes y utilidades del pie de página.
+  - **`404.html`:** Inclusión de botón de enlace institucional en el pie de página de contingencia.
+- **Tarjeta de Información Directa en `contact_faq.html`:**
+  - Adición de LinkedIn como canal oficial de contacto directo B2B junto con teléfono, correo corporativo y dirección física.
+- **Enriquecimiento del Marcado Estructurado Schema.org (SEO Local):**
+  - Incorporación de `"sameAs": ["https://www.linkedin.com/in/legado-ambiental-mx"]` en los bloques `application/ld+json` de las 6 páginas principales para potenciar el Knowledge Graph de Google y la indexación de la entidad corporativa.
+- **Internacionalización y Cero Errores (`i18n.js`):**
+  - Incorporación bilingüe de las claves `footer.linkedin_badge`, `footer.linkedin_link` y `contact_page.info.linkedin` tanto en español (`es-MX`) como en inglés (`en-US`).
+
+### 5. Módulo 5: Verificación Integral End-to-End, Testing UI/UX Responsivo, Accesibilidad y Cierre de PB5
+- **Auditoría Automatizada de Internacionalización (449 Atributos Validados):**
+  - Ejecución de pruebas estáticas sobre las 7 páginas del ecosistema web (`home.html`, `about_us.html`, `services.html`, `portfolio.html`, `our_experience.html`, `contact_faq.html`, `404.html`), verificando 449 atributos `data-i18n` frente al diccionario `assets/js/i18n.js`.
+  - **Resultado:** 0 claves faltantes en español (`es-MX`) y 0 claves faltantes en inglés (`en-US`) (100% de cobertura y paridad bilingüe comprobada).
+- **Validación Cruzada de Mapeo de Formularios y Enrutamiento Semántico:**
+  - Verificación de los 19 enlaces con parámetro `?service=` generados en las tarjetas y cabeceras de `services.html` contra el objeto `SERVICE_MAPPING` en `contact_faq.html`.
+  - **Resultado:** 100% de los parámetros están mapeados de forma exacta a opciones válidas del selector nativo de contacto y activan el desplazamiento suave guiado (`switchTab(1)` + smooth scroll).
+- **Verificación Estricta de Marcado Estructurado Schema.org JSON-LD:**
+  - Parseo computacional estricto con validador JSON en las 6 páginas clave.
+  - **Resultado:** 6/6 páginas cuentan con marcado estructurado válido, incluyendo `@type: ["LocalBusiness", "ConstructionBusiness", "EnvironmentalConsultancy"]`, geolocalización, horarios, datos de contacto y la propiedad oficial `"sameAs": ["https://www.linkedin.com/in/legado-ambiental-mx"]`.
+- **Auditoría de Seguridad y Accesibilidad en Enlaces Salientes:**
+  - Inspección exhaustiva de todos los enlaces con `target="_blank"`.
+  - **Resultado:** 100% de los enlaces externos y descargas de PDF cuentan con `rel="noopener noreferrer"`, mitigando vulnerabilidades de *tabnabbing* inverso y optimizando el aislamiento de procesos del navegador.
+- **Conclusión de PB5:**
+  - El hito PB5 queda 100% concluido, operativo, probado y sincronizado en la rama `feature/mejoras-ia-hostinger` listo para su integración en `development`.
+
+
+
+
+
+
+
+
+
+
+
+
+

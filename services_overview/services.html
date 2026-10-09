@@ -2,13 +2,23 @@
 <html class="light" lang="es">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1MLGHB4E6G"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-1MLGHB4E6G');
+    </script>
+
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title data-i18n="services_page.title">Nuestros Servicios Especializados de Ingeniería y Construcción</title>
 
     <!-- Security Headers -->
     <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://fonts.googleapis.com; img-src 'self' data: https://lh3.googleusercontent.com; connect-src 'self';">
+        content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://fonts.googleapis.com; img-src 'self' data: https://lh3.googleusercontent.com https://*.google-analytics.com https://*.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com;">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
 
     <!-- SEO & Social Media Meta Tags -->
@@ -38,28 +48,79 @@
         href="https://www.legadoambiental.com.mx/services_overview/services.html?lang=en-US" />
     <link rel="alternate" hreflang="x-default" href="https://www.legadoambiental.com.mx/services_overview/services.html" />
 
-    <!-- Structured Data -->
+    <!-- Structured Data (Local Business & Google Business Profile) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "ConstructionBusiness",
+      "@type": ["LocalBusiness", "ConstructionBusiness", "EnvironmentalConsultancy"],
       "name": "Legado Ambiental",
+      "legalName": "Legado Ambiental S.A. de C.V.",
       "url": "https://www.legadoambiental.com.mx",
-      "image": "https://www.legadoambiental.com.mx/assets/logo.png",
-      "description": "Excelencia en construcción civil y desarrollo sostenible.",
+      "logo": "https://www.legadoambiental.com.mx/assets/images/logo/logo_final_v2.webp",
+      "image": "https://www.legadoambiental.com.mx/assets/images/logo/logo_final_v2.webp",
+      "description": "Soluciones integrales en consultoría ambiental, estudios de impacto ambiental (MIA), topografía de precisión, obras de saneamiento y seguridad e higiene industrial.",
+      "telephone": "+52-55-8367-1036",
+      "priceRange": "$$$",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Plaza de Ingeniería, Suite 400",
-        "addressLocality": "Ciudad de México",
-        "addressRegion": "CDMX",
-        "postalCode": "12345",
+        "streetAddress": "U.H. Valle de Ecatepec",
+        "addressLocality": "Ecatepec",
+        "addressRegion": "Estado de México",
+        "postalCode": "55119",
         "addressCountry": "MX"
       },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+1-555-123-4567",
-        "contactType": "customer service"
-      }
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 19.6018,
+        "longitude": -99.0494
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Saturday"],
+          "opens": "09:00",
+          "closes": "14:00"
+        }
+      ],
+      "areaServed": [
+        {
+          "@type": "AdministrativeArea",
+          "name": "Estado de México"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Ciudad de México"
+        },
+        {
+          "@type": "Country",
+          "name": "México"
+        }
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+52-55-8367-1036",
+          "contactType": "customer service",
+          "areaServed": "MX",
+          "availableLanguage": ["Spanish", "English"]
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+52-72-2672-7212",
+          "contactType": "technical support",
+          "areaServed": "MX",
+          "availableLanguage": ["Spanish", "English"]
+        }
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/legado-ambiental-mx"
+      ]
     }
     </script>
 
@@ -87,7 +148,7 @@
 </head>
 
 <body
-    class="font-sans bg-background-light dark:bg-background-dark text-[#111418] dark:text-white transition-colors duration-200">
+    class="font-sans bg-background-light dark:bg-background-dark text-[#111418] dark:text-white transition-colors duration-200 pb-20 md:pb-0">
     <noscript>
         <div
             style="background-color: #f8d7da; color: #721c24; padding: 10px; text-align: center; z-index: 9999; position: relative;">
@@ -110,23 +171,23 @@
             class="sticky top-4 z-50 w-[calc(100%-2rem)] max-w-[1200px] mx-auto bg-white/85 dark:bg-[#121c27]/80 backdrop-blur-xl border border-gray-100 dark:border-white/10 rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-all duration-300">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex justify-between items-center h-20">
-                    <div class="flex items-center gap-3">
+                    <div class="flex items-center gap-3 shrink-0">
                         <img src="../assets/images/logo/logo_final_v2.webp" alt="Legado Ambiental"
                             class="h-16 w-auto object-contain">
-                        <span class="text-navy dark:text-white text-xl font-black tracking-tight uppercase"
+                        <span class="text-navy dark:text-white text-xl font-black tracking-tight uppercase whitespace-nowrap"
                             data-i18n="auto_generated.text_072">Legado
                             Ambiental</span>
                     </div>
                     <nav class="hidden md:flex items-center gap-8" aria-label="Main navigation">
-                        <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors"
+                        <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors whitespace-nowrap"
                             href="../home.html" data-i18n="nav.home">Inicio</a>
-                        <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors"
+                        <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors whitespace-nowrap"
                             href="../about_us/about_us.html" data-i18n="nav.about">Quiénes Somos</a>
-                        <a class="bg-primary/10 text-primary text-sm font-bold rounded-xl px-4 py-2 transition-all"
+                        <a class="bg-primary/10 text-primary text-sm font-bold rounded-xl px-4 py-2 transition-all whitespace-nowrap"
                             href="#" data-i18n="nav.services">Servicios y Cotización</a>
-                        <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors"
+                        <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors whitespace-nowrap"
                             href="../experience_timeline/our_experience.html" data-i18n="nav.experience">Experiencia</a>
-                        <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors"
+                        <a class="text-navy dark:text-gray-300 text-sm font-semibold hover:bg-primary/5 hover:text-primary rounded-xl px-4 py-2 transition-colors whitespace-nowrap"
                             href="../faq/contact_faq.html" data-i18n="nav.contact">Contacto</a>
                     </nav>
                     <div class="hidden md:flex items-center gap-4">
@@ -262,29 +323,43 @@
                 </div>
             </div>
 
-            <!-- Tabs Section -->
-            <div class="w-full max-w-[1200px] mx-auto px-4 md:px-10 mt-12 md:mt-16 mb-8 relative z-20">
+            <!-- Tabs Section (Adaptativa: Select UI en Móvil / Pestañas en Desktop) -->
+            <div id="services-tabs-container" class="w-full max-w-[1200px] mx-auto px-4 md:px-10 mt-12 md:mt-16 mb-8 relative z-20">
+                <!-- Selector Móvil (< sm) -->
+                <div class="sm:hidden mb-4">
+                    <label for="services-mobile-select" class="sr-only" data-i18n="services_page.tabs.select_label">Seleccionar División de Servicio</label>
+                    <div class="relative">
+                        <select id="services-mobile-select"
+                            class="w-full p-4 pr-10 rounded-2xl bg-white dark:bg-[#1a2530] text-navy dark:text-white font-extrabold text-base border-2 border-primary shadow-lg focus:outline-none focus:ring-2 focus:ring-primary appearance-none">
+                            <option value="ambiental" data-tab="1" data-i18n="services_page.tabs.engeneering">Ingeniería Ambiental</option>
+                            <option value="construccion" data-tab="2" data-i18n="services_page.tabs.building">Construcción</option>
+                            <option value="topografia" data-tab="3" data-i18n="services_page.tabs.topography">Topografía</option>
+                            <option value="seguridad-hidraulica" data-tab="4" data-i18n="services_page.tabs.safety">Seguridad e Higiene</option>
+                        </select>
+                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-primary">
+                            <span class="material-symbols-outlined text-2xl">unfold_more</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pestañas Desktop (>= sm) -->
                 <div
-                    class="bg-gray-50/80 dark:bg-[#1a2530]/80 backdrop-blur-md rounded-2xl p-2 border border-gray-100 dark:border-gray-800 shadow-sm flex gap-2 overflow-x-auto no-scrollbar">
-                    <button id="tab-btn-1" data-tab="1"
-                        class="tab-btn flex flex-col items-center justify-center rounded-xl px-6 py-3 bg-primary text-white shadow-[0_4px_16px_rgba(16,185,129,0.30)] transition-all duration-300 whitespace-nowrap focus:outline-none">
-                        <p class="text-sm font-bold tracking-wide" data-i18n="services_page.tabs.engeneering">Ingeniería
-                            Ambiental</p>
+                    class="hidden sm:flex bg-gray-50/80 dark:bg-[#1a2530]/80 backdrop-blur-md rounded-2xl p-2 border border-gray-100 dark:border-gray-800 shadow-sm gap-2">
+                    <button id="tab-btn-1" data-tab="1" data-slug="ambiental"
+                        class="tab-btn flex-1 flex flex-col items-center justify-center rounded-xl px-6 py-3.5 bg-primary text-white shadow-[0_4px_16px_rgba(16,185,129,0.30)] transition-all duration-300 whitespace-nowrap focus:outline-none">
+                        <p class="text-sm font-bold tracking-wide" data-i18n="services_page.tabs.engeneering">Ingeniería Ambiental</p>
                     </button>
-                    <button id="tab-btn-2" data-tab="2"
-                        class="tab-btn flex flex-col items-center justify-center rounded-xl px-6 py-3 text-[#617589] dark:text-gray-400 hover:text-[#111418] dark:hover:text-white hover:bg-gray-200 dark:hover:bg-[#253240] transition-all duration-300 whitespace-nowrap focus:outline-none">
-                        <p class="text-sm font-bold tracking-wide" data-i18n="services_page.tabs.building">Construcción
-                        </p>
+                    <button id="tab-btn-2" data-tab="2" data-slug="construccion"
+                        class="tab-btn flex-1 flex flex-col items-center justify-center rounded-xl px-6 py-3.5 text-[#617589] dark:text-gray-400 hover:text-[#111418] dark:hover:text-white hover:bg-gray-200 dark:hover:bg-[#253240] transition-all duration-300 whitespace-nowrap focus:outline-none">
+                        <p class="text-sm font-bold tracking-wide" data-i18n="services_page.tabs.building">Construcción</p>
                     </button>
-                    <button id="tab-btn-3" data-tab="3"
-                        class="tab-btn flex flex-col items-center justify-center rounded-xl px-6 py-3 text-[#617589] dark:text-gray-400 hover:text-[#111418] dark:hover:text-white hover:bg-gray-200 dark:hover:bg-[#253240] transition-all duration-300 whitespace-nowrap focus:outline-none">
-                        <p class="text-sm font-bold tracking-wide" data-i18n="services_page.tabs.topography">Topografía
-                        </p>
+                    <button id="tab-btn-3" data-tab="3" data-slug="topografia"
+                        class="tab-btn flex-1 flex flex-col items-center justify-center rounded-xl px-6 py-3.5 text-[#617589] dark:text-gray-400 hover:text-[#111418] dark:hover:text-white hover:bg-gray-200 dark:hover:bg-[#253240] transition-all duration-300 whitespace-nowrap focus:outline-none">
+                        <p class="text-sm font-bold tracking-wide" data-i18n="services_page.tabs.topography">Topografía</p>
                     </button>
-                    <button id="tab-btn-4" data-tab="4"
-                        class="tab-btn flex flex-col items-center justify-center rounded-xl px-6 py-3 text-[#617589] dark:text-gray-400 hover:text-[#111418] dark:hover:text-white hover:bg-gray-200 dark:hover:bg-[#253240] transition-all duration-300 whitespace-nowrap focus:outline-none">
-                        <p class="text-sm font-bold tracking-wide" data-i18n="services_page.tabs.safety">Seguridad e
-                            Higiene</p>
+                    <button id="tab-btn-4" data-tab="4" data-slug="seguridad-hidraulica"
+                        class="tab-btn flex-1 flex flex-col items-center justify-center rounded-xl px-6 py-3.5 text-[#617589] dark:text-gray-400 hover:text-[#111418] dark:hover:text-white hover:bg-gray-200 dark:hover:bg-[#253240] transition-all duration-300 whitespace-nowrap focus:outline-none">
+                        <p class="text-sm font-bold tracking-wide" data-i18n="services_page.tabs.safety">Seguridad e Higiene</p>
                     </button>
                 </div>
             </div>
@@ -294,6 +369,52 @@
                 <!-- Tab Section 1: Ingeniería Ambiental -->
                 <div id="tab-section-1"
                     class="tab-section grid grid-cols-1 md:grid-cols-2 gap-8 transition-opacity duration-300 opacity-100">
+                    <!-- Micro-Landing Header: División Ambiental -->
+                    <div class="col-span-1 md:col-span-2 rounded-3xl p-6 sm:p-8 md:p-10 bg-gradient-to-br from-[#0b1b1c] via-[#0f2425] to-[#121c27] text-white border border-emerald-500/20 shadow-2xl relative overflow-hidden mb-2">
+                        <!-- Decorative glow -->
+                        <div class="absolute -right-16 -top-16 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+                        <div class="relative z-10">
+                            <!-- Category Badge -->
+                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 text-xs font-black tracking-wider uppercase mb-4">
+                                <span class="material-symbols-outlined text-sm">verified_user</span>
+                                <span data-i18n="services_page.headers.env.badge">DIVISIÓN TÉCNICA AMBIENTAL</span>
+                            </div>
+                            <!-- Title & Subtitle -->
+                            <h2 class="text-2xl sm:text-3xl md:text-4xl font-black text-white tracking-tight mb-3 font-serif" data-i18n="services_page.headers.env.title">
+                                Ingeniería y Consultoría Ambiental Estratégica
+                            </h2>
+                            <p class="text-sm sm:text-base text-gray-300 max-w-3xl leading-relaxed mb-6 font-sans" data-i18n="services_page.headers.env.subtitle">
+                                Blindaje normativo integral ante SEMARNAT, PROFEPA y dependencias estatales. Transformamos requerimientos regulatorios en certidumbre operativa y viabilidad para su proyecto.
+                            </p>
+                            <!-- Technical Badges -->
+                            <div class="flex flex-wrap items-center gap-2.5 mb-6">
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/5 border border-white/10 text-xs sm:text-sm font-semibold text-gray-200 backdrop-blur-sm shadow-sm">
+                                    <span class="material-symbols-outlined text-emerald-400 text-base">fact_check</span>
+                                    <span data-i18n="services_page.headers.env.badge1">Cumplimiento SEMARNAT / PROFEPA</span>
+                                </span>
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/5 border border-white/10 text-xs sm:text-sm font-semibold text-gray-200 backdrop-blur-sm shadow-sm">
+                                    <span class="material-symbols-outlined text-emerald-400 text-base">eco</span>
+                                    <span data-i18n="services_page.headers.env.badge2">Manejo Integral CRETI</span>
+                                </span>
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/5 border border-white/10 text-xs sm:text-sm font-semibold text-gray-200 backdrop-blur-sm shadow-sm">
+                                    <span class="material-symbols-outlined text-emerald-400 text-base">gavel</span>
+                                    <span data-i18n="services_page.headers.env.badge3">Blindaje Legal y Cero Clausuras</span>
+                                </span>
+                            </div>
+                            <!-- Action Bar -->
+                            <div class="flex flex-wrap items-center gap-3 pt-4 border-t border-white/10">
+                                <a href="../faq/contact_faq.html?service=ambiental" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary text-white font-bold text-sm hover:bg-emerald-600 transition-all shadow-md hover:shadow-lg focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                                    <span data-i18n="services_page.headers.env.cta">Solicitar Diagnóstico Ambiental</span>
+                                    <span class="material-symbols-outlined text-base">arrow_forward</span>
+                                </a>
+                                <a href="https://wa.me/525583671036?text=Hola%2C%20solicito%20asesor%C3%ADa%20en%20Ingenier%C3%ADa%20Ambiental%20para%20mi%20proyecto" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-sm transition-all border border-white/10">
+                                    <span class="material-symbols-outlined text-emerald-400 text-base">chat</span>
+                                    <span>WhatsApp Directo</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Service 1: Gestión Integral de Residuos (Sólidos y Peligrosos) -->
                     <div
                         class="group relative bg-white dark:bg-[#121c27] rounded-3xl overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.06)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.3)] border border-slate-100 dark:border-white/5 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] transition-all duration-500">
@@ -349,12 +470,19 @@
                                     </span>
                                 </li>
                             </ul>
-                            <button
-                                onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSeyHxbooOkctNB5qK64tCguD4sAL2UOsUxGTRLN1ObFT38DAw/viewform?usp=dialog', '_blank')"
-                                class="flex items-center justify-center gap-2 w-full py-3 bg-primary/10 dark:bg-primary/20 text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-all focus:ring-2 focus:ring-primary focus:ring-offset-2">
-                                <span data-i18n="auto_generated.text_077">Realizar cotización</span> <span
-                                    class="material-symbols-outlined text-[18px]">arrow_forward</span>
-                            </button>
+                            <div class="flex flex-col sm:flex-row gap-2.5 mt-auto pt-4 border-t border-slate-100 dark:border-white/5">
+                                <a href="../faq/contact_faq.html?service=residuos"
+                                    class="flex-1 flex items-center justify-center gap-2 py-2.5 px-4 bg-primary text-white font-bold text-sm rounded-xl hover:bg-emerald-600 transition-all shadow-sm focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                                    <span data-i18n="services_page.cards.cta_quote">Cotizar Proyecto</span>
+                                    <span class="material-symbols-outlined text-base">arrow_forward</span>
+                                </a>
+                                <a href="https://wa.me/525583671036?text=Hola%2C%20solicito%20cotizaci%C3%B3n%20para%20Gesti%C3%B3n%20Integral%20de%20Residuos"
+                                    target="_blank" rel="noopener noreferrer"
+                                    class="flex items-center justify-center gap-1.5 py-2.5 px-3.5 bg-emerald-500/10 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 font-bold text-sm rounded-xl hover:bg-emerald-500 hover:text-white transition-all border border-emerald-500/20">
+                                    <span class="material-symbols-outlined text-lg">chat</span>
+                                    <span data-i18n="services_page.cards.cta_whatsapp">WhatsApp</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
 
@@ -406,14 +534,25 @@
                                     <span data-i18n="auto_generated.text_080_1"><strong>Captación Pluvial:</strong>
                                         Estudios y proyectos de captación y uso alternativo de agua pluvial.</span>
                                 </li>
-                                
+                                <li class="flex items-start gap-2">
+                                    <span
+                                        class="material-symbols-outlined text-primary text-[1rem] mt-0.5">verified</span>
+                                    <span data-i18n="services_page.cards.deliverable_water"><strong>Entregables Técnicos:</strong> Proyectos ejecutivos de PTAR con memoria de cálculo, planos hidrosanitarios y cumplimiento de NOM-001/002/003-SEMARNAT.</span>
+                                </li>
                             </ul>
-                            <button
-                                onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSeb9ZmXqIgq_1zyhvGL3UToXcMSs2VYLiMXbOEzEMtAqL1u2Q/viewform?usp=dialog', '_blank')"
-                                class="flex items-center justify-center gap-2 w-full py-3 bg-primary/10 dark:bg-primary/20 text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-all focus:ring-2 focus:ring-primary focus:ring-offset-2">
-                                <span data-i18n="auto_generated.text_077">Realizar cotización</span> <span
-                                    class="material-symbols-outlined text-[18px]">arrow_forward</span>
-                            </button>
+                            <div class="flex flex-col sm:flex-row gap-2.5 mt-auto pt-4 border-t border-slate-100 dark:border-white/5">
+                                <a href="../faq/contact_faq.html?service=agua"
+                                    class="flex-1 flex items-center justify-center gap-2 py-2.5 px-4 bg-primary text-white font-bold text-sm rounded-xl hover:bg-emerald-600 transition-all shadow-sm focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                                    <span data-i18n="services_page.cards.cta_quote">Cotizar Proyecto</span>
+                                    <span class="material-symbols-outlined text-base">arrow_forward</span>
+                                </a>
+                                <a href="https://wa.me/525583671036?text=Hola%2C%20solicito%20cotizaci%C3%B3n%20para%20Ingenier%C3%ADa%20H%C3%ADdrica%20y%20Tratamiento%20de%20Agua"
+                                    target="_blank" rel="noopener noreferrer"
+                                    class="flex items-center justify-center gap-1.5 py-2.5 px-3.5 bg-emerald-500/10 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 font-bold text-sm rounded-xl hover:bg-emerald-500 hover:text-white transition-all border border-emerald-500/20">
+                                    <span class="material-symbols-outlined text-lg">chat</span>
+                                    <span data-i18n="services_page.cards.cta_whatsapp">WhatsApp</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
 
@@ -454,12 +593,19 @@
                                         dictámenes ambientales con validez legal.</span>
                                 </li>
                             </ul>
-                            <button
-                                onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSegJjfgTGuOipBaSfXaWE7-IXFyugz6eYJkYsT8yf7fE14XoQ/viewform?usp=header', '_blank')"
-                                class="flex items-center justify-center gap-2 w-full py-3 bg-primary/10 dark:bg-primary/20 text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-all focus:ring-2 focus:ring-primary focus:ring-offset-2">
-                                <span data-i18n="auto_generated.text_077">Realizar cotización</span> <span
-                                    class="material-symbols-outlined text-[18px]">arrow_forward</span>
-                            </button>
+                            <div class="flex flex-col sm:flex-row gap-2.5 mt-auto pt-4 border-t border-slate-100 dark:border-white/5">
+                                <a href="../faq/contact_faq.html?service=impacto-ambiental"
+                                    class="flex-1 flex items-center justify-center gap-2 py-2.5 px-4 bg-primary text-white font-bold text-sm rounded-xl hover:bg-emerald-600 transition-all shadow-sm focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                                    <span data-i18n="services_page.cards.cta_quote">Cotizar Proyecto</span>
+                                    <span class="material-symbols-outlined text-base">arrow_forward</span>
+                                </a>
+                                <a href="https://wa.me/525583671036?text=Hola%2C%20solicito%20cotizaci%C3%B3n%20para%20Estudios%20de%20Impacto%20Ambiental%20(MIA)"
+                                    target="_blank" rel="noopener noreferrer"
+                                    class="flex items-center justify-center gap-1.5 py-2.5 px-3.5 bg-emerald-500/10 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 font-bold text-sm rounded-xl hover:bg-emerald-500 hover:text-white transition-all border border-emerald-500/20">
+                                    <span class="material-symbols-outlined text-lg">chat</span>
+                                    <span data-i18n="services_page.cards.cta_whatsapp">WhatsApp</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
 
@@ -492,12 +638,19 @@
                                         temas ambientales.</span>
                                 </li>
                             </ul>
-                            <button
-                                onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSeSA7CxG2Jp6BY-1lpQnscp3n2AnRnNnSBv9tJ4tBmliuzLmQ/viewform?usp=dialog', '_blank')"
-                                class="flex items-center justify-center gap-2 w-full py-3 bg-primary/10 dark:bg-primary/20 text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-all focus:ring-2 focus:ring-primary focus:ring-offset-2">
-                                <span data-i18n="auto_generated.text_077">Realizar cotización</span> <span
-                                    class="material-symbols-outlined text-[18px]">arrow_forward</span>
-                            </button>
+                            <div class="flex flex-col sm:flex-row gap-2.5 mt-auto pt-4 border-t border-slate-100 dark:border-white/5">
+                                <a href="../faq/contact_faq.html?service=capacitacion-ambiental"
+                                    class="flex-1 flex items-center justify-center gap-2 py-2.5 px-4 bg-primary text-white font-bold text-sm rounded-xl hover:bg-emerald-600 transition-all shadow-sm focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                                    <span data-i18n="services_page.cards.cta_quote">Cotizar Proyecto</span>
+                                    <span class="material-symbols-outlined text-base">arrow_forward</span>
+                                </a>
+                                <a href="https://wa.me/525583671036?text=Hola%2C%20solicito%20cotizaci%C3%B3n%20para%20Capacitaci%C3%B3n%20y%20Formaci%C3%B3n%20Ambiental"
+                                    target="_blank" rel="noopener noreferrer"
+                                    class="flex items-center justify-center gap-1.5 py-2.5 px-3.5 bg-emerald-500/10 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 font-bold text-sm rounded-xl hover:bg-emerald-500 hover:text-white transition-all border border-emerald-500/20">
+                                    <span class="material-symbols-outlined text-lg">chat</span>
+                                    <span data-i18n="services_page.cards.cta_whatsapp">WhatsApp</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -505,6 +658,52 @@
                 <!-- Tab Section 2: Construcción (Hidden default) -->
                 <div id="tab-section-2"
                     class="tab-section hidden grid-cols-1 md:grid-cols-2 gap-8 transition-opacity duration-300 opacity-0">
+                    <!-- Micro-Landing Header: División Construcción -->
+                    <div class="col-span-1 md:col-span-2 rounded-3xl p-6 sm:p-8 md:p-10 bg-gradient-to-br from-[#1c1c0f] via-[#242211] to-[#121c27] text-white border border-amber-500/20 shadow-2xl relative overflow-hidden mb-2">
+                        <!-- Decorative glow -->
+                        <div class="absolute -right-16 -top-16 w-64 h-64 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+                        <div class="relative z-10">
+                            <!-- Category Badge -->
+                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-400 text-xs font-black tracking-wider uppercase mb-4">
+                                <span class="material-symbols-outlined text-sm">construction</span>
+                                <span data-i18n="services_page.headers.const.badge">DIVISIÓN CONSTRUCCIÓN & OBRA CIVIL</span>
+                            </div>
+                            <!-- Title & Subtitle -->
+                            <h2 class="text-2xl sm:text-3xl md:text-4xl font-black text-white tracking-tight mb-3 font-serif" data-i18n="services_page.headers.const.title">
+                                Construcción, Supervisión y Respaldo DRO
+                            </h2>
+                            <p class="text-sm sm:text-base text-gray-300 max-w-3xl leading-relaxed mb-6 font-sans" data-i18n="services_page.headers.const.subtitle">
+                                Ejecución técnica rigurosa de obra civil y edificación. Control documental, supervisión de calidad y cumplimiento normativo de licencias y reglamentos locales.
+                            </p>
+                            <!-- Technical Badges -->
+                            <div class="flex flex-wrap items-center gap-2.5 mb-6">
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/5 border border-white/10 text-xs sm:text-sm font-semibold text-gray-200 backdrop-blur-sm shadow-sm">
+                                    <span class="material-symbols-outlined text-amber-400 text-base">engineering</span>
+                                    <span data-i18n="services_page.headers.const.badge1">Director Responsable de Obra (DRO)</span>
+                                </span>
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/5 border border-white/10 text-xs sm:text-sm font-semibold text-gray-200 backdrop-blur-sm shadow-sm">
+                                    <span class="material-symbols-outlined text-amber-400 text-base">account_balance_wallet</span>
+                                    <span data-i18n="services_page.headers.const.badge2">Control Presupuestal & Bitácora</span>
+                                </span>
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/5 border border-white/10 text-xs sm:text-sm font-semibold text-gray-200 backdrop-blur-sm shadow-sm">
+                                    <span class="material-symbols-outlined text-amber-400 text-base">foundation</span>
+                                    <span data-i18n="services_page.headers.const.badge3">Apego Normativo RCDF / Estados</span>
+                                </span>
+                            </div>
+                            <!-- Action Bar -->
+                            <div class="flex flex-wrap items-center gap-3 pt-4 border-t border-white/10">
+                                <a href="../faq/contact_faq.html?service=construccion" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary text-white font-bold text-sm hover:bg-emerald-600 transition-all shadow-md hover:shadow-lg focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                                    <span data-i18n="services_page.headers.const.cta">Cotizar Supervisión u Obra</span>
+                                    <span class="material-symbols-outlined text-base">arrow_forward</span>
+                                </a>
+                                <a href="https://wa.me/525583671036?text=Hola%2C%20solicito%20cotizaci%C3%B3n%20de%20Construcci%C3%B3n%20y%20Supervisi%C3%B3n%20de%20Obra" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-sm transition-all border border-white/10">
+                                    <span class="material-symbols-outlined text-amber-400 text-base">chat</span>
+                                    <span>WhatsApp Directo</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
                     <div
                         class="group relative bg-white dark:bg-[#121c27] rounded-3xl overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.06)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.3)] border border-slate-100 dark:border-white/5 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] transition-all duration-500">
                         <div
@@ -547,11 +746,19 @@
                                         hasta los acabados finales.</span>
                                 </li>
                             </ul>
-                            <button onclick="window.open('https://forms.gle/DLcXPgHsbHxToExQ7', '_blank')"
-                                class="flex items-center justify-center gap-2 w-full py-3 bg-primary/10 dark:bg-primary/20 text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-all focus:ring-2 focus:ring-primary focus:ring-offset-2">
-                                <span data-i18n="auto_generated.text_077">Realizar cotización</span> <span
-                                    class="material-symbols-outlined text-[18px]">arrow_forward</span>
-                            </button>
+                            <div class="flex flex-col sm:flex-row gap-2.5 mt-auto pt-4 border-t border-slate-100 dark:border-white/5">
+                                <a href="../faq/contact_faq.html?service=edificacion-residencial"
+                                    class="flex-1 flex items-center justify-center gap-2 py-2.5 px-4 bg-primary text-white font-bold text-sm rounded-xl hover:bg-emerald-600 transition-all shadow-sm focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                                    <span data-i18n="services_page.cards.cta_quote">Cotizar Proyecto</span>
+                                    <span class="material-symbols-outlined text-base">arrow_forward</span>
+                                </a>
+                                <a href="https://wa.me/525583671036?text=Hola%2C%20solicito%20cotizaci%C3%B3n%20para%20Edificaci%C3%B3n%20Residencial%20y%20Vivienda"
+                                    target="_blank" rel="noopener noreferrer"
+                                    class="flex items-center justify-center gap-1.5 py-2.5 px-3.5 bg-emerald-500/10 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 font-bold text-sm rounded-xl hover:bg-emerald-500 hover:text-white transition-all border border-emerald-500/20">
+                                    <span class="material-symbols-outlined text-lg">chat</span>
+                                    <span data-i18n="services_page.cards.cta_whatsapp">WhatsApp</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div
@@ -600,11 +807,19 @@
                                     <span data-i18n="auto_generated.text_092_2"><strong>Saneamiento de Cuerpos de Agua:</strong> Estudios y proyectos para saneamiento de cuerpos de agua.</span>
                                 </li>
                             </ul>
-                            <button onclick="window.open('https://forms.gle/DLcXPgHsbHxToExQ7', '_blank')"
-                                class="flex items-center justify-center gap-2 w-full py-3 bg-primary/10 dark:bg-primary/20 text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-all focus:ring-2 focus:ring-primary focus:ring-offset-2">
-                                <span data-i18n="auto_generated.text_077">Realizar cotización</span> <span
-                                    class="material-symbols-outlined text-[18px]">arrow_forward</span>
-                            </button>
+                            <div class="flex flex-col sm:flex-row gap-2.5 mt-auto pt-4 border-t border-slate-100 dark:border-white/5">
+                                <a href="../faq/contact_faq.html?service=infraestructura-hidraulica"
+                                    class="flex-1 flex items-center justify-center gap-2 py-2.5 px-4 bg-primary text-white font-bold text-sm rounded-xl hover:bg-emerald-600 transition-all shadow-sm focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                                    <span data-i18n="services_page.cards.cta_quote">Cotizar Proyecto</span>
+                                    <span class="material-symbols-outlined text-base">arrow_forward</span>
+                                </a>
+                                <a href="https://wa.me/525583671036?text=Hola%2C%20solicito%20cotizaci%C3%B3n%20para%20Infraestructura%20Hidr%C3%A1ulica%20y%20PTAR"
+                                    target="_blank" rel="noopener noreferrer"
+                                    class="flex items-center justify-center gap-1.5 py-2.5 px-3.5 bg-emerald-500/10 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 font-bold text-sm rounded-xl hover:bg-emerald-500 hover:text-white transition-all border border-emerald-500/20">
+                                    <span class="material-symbols-outlined text-lg">chat</span>
+                                    <span data-i18n="services_page.cards.cta_whatsapp">WhatsApp</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div
@@ -642,11 +857,19 @@
                                         obtención de permisos de construcción y autorizaciones ambientales.</span>
                                 </li>
                             </ul>
-                            <button onclick="window.open('https://forms.gle/DLcXPgHsbHxToExQ7', '_blank')"
-                                class="flex items-center justify-center gap-2 w-full py-3 bg-primary/10 dark:bg-primary/20 text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-all focus:ring-2 focus:ring-primary focus:ring-offset-2">
-                                <span data-i18n="auto_generated.text_077">Realizar cotización</span> <span
-                                    class="material-symbols-outlined text-[18px]">arrow_forward</span>
-                            </button>
+                            <div class="flex flex-col sm:flex-row gap-2.5 mt-auto pt-4 border-t border-slate-100 dark:border-white/5">
+                                <a href="../faq/contact_faq.html?service=ingenieria-planeacion"
+                                    class="flex-1 flex items-center justify-center gap-2 py-2.5 px-4 bg-primary text-white font-bold text-sm rounded-xl hover:bg-emerald-600 transition-all shadow-sm focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                                    <span data-i18n="services_page.cards.cta_quote">Cotizar Proyecto</span>
+                                    <span class="material-symbols-outlined text-base">arrow_forward</span>
+                                </a>
+                                <a href="https://wa.me/525583671036?text=Hola%2C%20solicito%20cotizaci%C3%B3n%20para%20Ingenier%C3%ADa%20de%20Proyecto%20y%20Planeaci%C3%B3n"
+                                    target="_blank" rel="noopener noreferrer"
+                                    class="flex items-center justify-center gap-1.5 py-2.5 px-3.5 bg-emerald-500/10 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 font-bold text-sm rounded-xl hover:bg-emerald-500 hover:text-white transition-all border border-emerald-500/20">
+                                    <span class="material-symbols-outlined text-lg">chat</span>
+                                    <span data-i18n="services_page.cards.cta_whatsapp">WhatsApp</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div
@@ -691,12 +914,25 @@
                                         Verificación de procesos constructivos y
                                         normativas de seguridad en sitio.</span>
                                 </li>
+                                <li class="flex items-start gap-2">
+                                    <span
+                                        class="material-symbols-outlined text-primary text-[1rem] mt-0.5">verified</span>
+                                    <span data-i18n="services_page.cards.deliverable_const"><strong>Respaldo y Bitácora:</strong> Firma de Director Responsable de Obra (DRO), bitácora oficial y reportes ejecutivos de avance.</span>
+                                </li>
                             </ul>
-                            <button onclick="window.open('https://forms.gle/DLcXPgHsbHxToExQ7', '_blank')"
-                                class="flex items-center justify-center gap-2 w-full py-3 bg-primary/10 dark:bg-primary/20 text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-all focus:ring-2 focus:ring-primary focus:ring-offset-2">
-                                <span data-i18n="auto_generated.text_077">Realizar cotización</span> <span
-                                    class="material-symbols-outlined text-[18px]">arrow_forward</span>
-                            </button>
+                            <div class="flex flex-col sm:flex-row gap-2.5 mt-auto pt-4 border-t border-slate-100 dark:border-white/5">
+                                <a href="../faq/contact_faq.html?service=supervision-obra"
+                                    class="flex-1 flex items-center justify-center gap-2 py-2.5 px-4 bg-primary text-white font-bold text-sm rounded-xl hover:bg-emerald-600 transition-all shadow-sm focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                                    <span data-i18n="services_page.cards.cta_quote">Cotizar Proyecto</span>
+                                    <span class="material-symbols-outlined text-base">arrow_forward</span>
+                                </a>
+                                <a href="https://wa.me/525583671036?text=Hola%2C%20solicito%20cotizaci%C3%B3n%20para%20Supervisi%C3%B3n%20y%20Control%20de%20Obra%20(DRO)"
+                                    target="_blank" rel="noopener noreferrer"
+                                    class="flex items-center justify-center gap-1.5 py-2.5 px-3.5 bg-emerald-500/10 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 font-bold text-sm rounded-xl hover:bg-emerald-500 hover:text-white transition-all border border-emerald-500/20">
+                                    <span class="material-symbols-outlined text-lg">chat</span>
+                                    <span data-i18n="services_page.cards.cta_whatsapp">WhatsApp</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -704,6 +940,52 @@
                 <!-- Tab Section 3: Topografía (Hidden default) -->
                 <div id="tab-section-3"
                     class="tab-section hidden grid-cols-1 md:grid-cols-2 gap-8 transition-opacity duration-300 opacity-0">
+                    <!-- Micro-Landing Header: División Topografía -->
+                    <div class="col-span-1 md:col-span-2 rounded-3xl p-6 sm:p-8 md:p-10 bg-gradient-to-br from-[#0a1829] via-[#0f2137] to-[#121c27] text-white border border-blue-500/20 shadow-2xl relative overflow-hidden mb-2">
+                        <!-- Decorative glow -->
+                        <div class="absolute -right-16 -top-16 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
+                        <div class="relative z-10">
+                            <!-- Category Badge -->
+                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/15 border border-blue-500/30 text-blue-400 text-xs font-black tracking-wider uppercase mb-4">
+                                <span class="material-symbols-outlined text-sm">satellite_alt</span>
+                                <span data-i18n="services_page.headers.topo.badge">DIVISIÓN TOPOGRAFÍA & GEODESIA</span>
+                            </div>
+                            <!-- Title & Subtitle -->
+                            <h2 class="text-2xl sm:text-3xl md:text-4xl font-black text-white tracking-tight mb-3 font-serif" data-i18n="services_page.headers.topo.title">
+                                Topografía de Alta Precisión y Fotogrametría Aérea
+                            </h2>
+                            <p class="text-sm sm:text-base text-gray-300 max-w-3xl leading-relaxed mb-6 font-sans" data-i18n="services_page.headers.topo.subtitle">
+                                Georreferenciación milimétrica y volumetrías exactas para proyectos de ingeniería. Reduzca costos por reprocesos mediante levantamientos con tecnología RTK y drones de última generación.
+                            </p>
+                            <!-- Technical Badges -->
+                            <div class="flex flex-wrap items-center gap-2.5 mb-6">
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/5 border border-white/10 text-xs sm:text-sm font-semibold text-gray-200 backdrop-blur-sm shadow-sm">
+                                    <span class="material-symbols-outlined text-blue-400 text-base">satellite_alt</span>
+                                    <span data-i18n="services_page.headers.topo.badge1">GPS Geodésico RTK Multibanda</span>
+                                </span>
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/5 border border-white/10 text-xs sm:text-sm font-semibold text-gray-200 backdrop-blur-sm shadow-sm">
+                                    <span class="material-symbols-outlined text-blue-400 text-base">flight</span>
+                                    <span data-i18n="services_page.headers.topo.badge2">Fotogrametría Aérea & LiDAR</span>
+                                </span>
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/5 border border-white/10 text-xs sm:text-sm font-semibold text-gray-200 backdrop-blur-sm shadow-sm">
+                                    <span class="material-symbols-outlined text-blue-400 text-base">history_toggle_off</span>
+                                    <span data-i18n="services_page.headers.topo.badge3">Entregables CAD/GIS en 24-48h</span>
+                                </span>
+                            </div>
+                            <!-- Action Bar -->
+                            <div class="flex flex-wrap items-center gap-3 pt-4 border-t border-white/10">
+                                <a href="../faq/contact_faq.html?service=topografia" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary text-white font-bold text-sm hover:bg-emerald-600 transition-all shadow-md hover:shadow-lg focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                                    <span data-i18n="services_page.headers.topo.cta">Cotizar Levantamiento Topográfico</span>
+                                    <span class="material-symbols-outlined text-base">arrow_forward</span>
+                                </a>
+                                <a href="https://wa.me/525583671036?text=Hola%2C%20solicito%20cotizaci%C3%B3n%20para%20Levantamiento%20Topogr%C3%A1fico%20o%20Geodesia" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-sm transition-all border border-white/10">
+                                    <span class="material-symbols-outlined text-blue-400 text-base">chat</span>
+                                    <span>WhatsApp Directo</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
                     <div
                         class="group relative bg-white dark:bg-[#121c27] rounded-3xl overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.06)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.3)] border border-slate-100 dark:border-white/5 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] transition-all duration-500">
                         <div
@@ -727,12 +1009,25 @@
                                         contornos espaciales y dimensiones del
                                         terreno para cimientos seguros.</span>
                                 </li>
+                                <li class="flex items-start gap-2">
+                                    <span
+                                        class="material-symbols-outlined text-primary text-[1rem] mt-0.5">verified</span>
+                                    <span data-i18n="services_page.cards.deliverable_topo"><strong>Entregables Oficiales:</strong> Planos ejecutivos en AutoCAD (DWG/PDF), curvas de nivel y memorias de cálculo geodésico en 24-48h.</span>
+                                </li>
                             </ul>
-                            <button onclick="window.open('https://forms.gle/7Ud2XZL7oQouRWnQA', '_blank')"
-                                class="flex items-center justify-center gap-2 w-full py-3 bg-primary/10 dark:bg-primary/20 text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-all focus:ring-2 focus:ring-primary focus:ring-offset-2">
-                                <span data-i18n="auto_generated.text_077">Realizar cotización</span> <span
-                                    class="material-symbols-outlined text-[18px]">arrow_forward</span>
-                            </button>
+                            <div class="flex flex-col sm:flex-row gap-2.5 mt-auto pt-4 border-t border-slate-100 dark:border-white/5">
+                                <a href="../faq/contact_faq.html?service=levantamiento-topografico"
+                                    class="flex-1 flex items-center justify-center gap-2 py-2.5 px-4 bg-primary text-white font-bold text-sm rounded-xl hover:bg-emerald-600 transition-all shadow-sm focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                                    <span data-i18n="services_page.cards.cta_quote">Cotizar Proyecto</span>
+                                    <span class="material-symbols-outlined text-base">arrow_forward</span>
+                                </a>
+                                <a href="https://wa.me/525583671036?text=Hola%2C%20solicito%20cotizaci%C3%B3n%20para%20Levantamientos%20Topogr%C3%A1ficos"
+                                    target="_blank" rel="noopener noreferrer"
+                                    class="flex items-center justify-center gap-1.5 py-2.5 px-3.5 bg-emerald-500/10 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 font-bold text-sm rounded-xl hover:bg-emerald-500 hover:text-white transition-all border border-emerald-500/20">
+                                    <span class="material-symbols-outlined text-lg">chat</span>
+                                    <span data-i18n="services_page.cards.cta_whatsapp">WhatsApp</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div
@@ -759,11 +1054,19 @@
                                         tecnología global de vanguardia.</span>
                                 </li>
                             </ul>
-                            <button onclick="window.open('https://forms.gle/Tr3rEtVY2hXaKkcC7', '_blank')"
-                                class="flex items-center justify-center gap-2 w-full py-3 bg-primary/10 dark:bg-primary/20 text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-all focus:ring-2 focus:ring-primary focus:ring-offset-2">
-                                <span data-i18n="auto_generated.text_077">Realizar cotización</span> <span
-                                    class="material-symbols-outlined text-[18px]">arrow_forward</span>
-                            </button>
+                            <div class="flex flex-col sm:flex-row gap-2.5 mt-auto pt-4 border-t border-slate-100 dark:border-white/5">
+                                <a href="../faq/contact_faq.html?service=georreferenciacion-gps"
+                                    class="flex-1 flex items-center justify-center gap-2 py-2.5 px-4 bg-primary text-white font-bold text-sm rounded-xl hover:bg-emerald-600 transition-all shadow-sm focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                                    <span data-i18n="services_page.cards.cta_quote">Cotizar Proyecto</span>
+                                    <span class="material-symbols-outlined text-base">arrow_forward</span>
+                                </a>
+                                <a href="https://wa.me/525583671036?text=Hola%2C%20solicito%20cotizaci%C3%B3n%20para%20Georreferenciaci%C3%B3n%20GPS%20RTK"
+                                    target="_blank" rel="noopener noreferrer"
+                                    class="flex items-center justify-center gap-1.5 py-2.5 px-3.5 bg-emerald-500/10 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 font-bold text-sm rounded-xl hover:bg-emerald-500 hover:text-white transition-all border border-emerald-500/20">
+                                    <span class="material-symbols-outlined text-lg">chat</span>
+                                    <span data-i18n="services_page.cards.cta_whatsapp">WhatsApp</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div
@@ -790,11 +1093,19 @@
                                         cálculos volumétricos exactos.</span>
                                 </li>
                             </ul>
-                            <button onclick="window.open('https://forms.gle/B7aiS9fSTc88VTHDA', '_blank')"
-                                class="flex items-center justify-center gap-2 w-full py-3 bg-primary/10 dark:bg-primary/20 text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-all focus:ring-2 focus:ring-primary focus:ring-offset-2">
-                                <span data-i18n="auto_generated.text_077">Realizar cotización</span> <span
-                                    class="material-symbols-outlined text-[18px]">arrow_forward</span>
-                            </button>
+                            <div class="flex flex-col sm:flex-row gap-2.5 mt-auto pt-4 border-t border-slate-100 dark:border-white/5">
+                                <a href="../faq/contact_faq.html?service=modelado-digital-3d"
+                                    class="flex-1 flex items-center justify-center gap-2 py-2.5 px-4 bg-primary text-white font-bold text-sm rounded-xl hover:bg-emerald-600 transition-all shadow-sm focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                                    <span data-i18n="services_page.cards.cta_quote">Cotizar Proyecto</span>
+                                    <span class="material-symbols-outlined text-base">arrow_forward</span>
+                                </a>
+                                <a href="https://wa.me/525583671036?text=Hola%2C%20solicito%20cotizaci%C3%B3n%20para%20Modelado%20Digital%203D%20y%20Volumetr%C3%ADa"
+                                    target="_blank" rel="noopener noreferrer"
+                                    class="flex items-center justify-center gap-1.5 py-2.5 px-3.5 bg-emerald-500/10 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 font-bold text-sm rounded-xl hover:bg-emerald-500 hover:text-white transition-all border border-emerald-500/20">
+                                    <span class="material-symbols-outlined text-lg">chat</span>
+                                    <span data-i18n="services_page.cards.cta_whatsapp">WhatsApp</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div
@@ -821,11 +1132,19 @@
                                         garantizar el alineamiento con planimetría.</span>
                                 </li>
                             </ul>
-                            <button onclick="window.open('https://forms.gle/KYovRPRtWm9M4rH96', '_blank')"
-                                class="flex items-center justify-center gap-2 w-full py-3 bg-primary/10 dark:bg-primary/20 text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-all focus:ring-2 focus:ring-primary focus:ring-offset-2">
-                                <span data-i18n="auto_generated.text_077">Realizar cotización</span> <span
-                                    class="material-symbols-outlined text-[18px]">arrow_forward</span>
-                            </button>
+                            <div class="flex flex-col sm:flex-row gap-2.5 mt-auto pt-4 border-t border-slate-100 dark:border-white/5">
+                                <a href="../faq/contact_faq.html?service=control-topografico"
+                                    class="flex-1 flex items-center justify-center gap-2 py-2.5 px-4 bg-primary text-white font-bold text-sm rounded-xl hover:bg-emerald-600 transition-all shadow-sm focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                                    <span data-i18n="services_page.cards.cta_quote">Cotizar Proyecto</span>
+                                    <span class="material-symbols-outlined text-base">arrow_forward</span>
+                                </a>
+                                <a href="https://wa.me/525583671036?text=Hola%2C%20solicito%20cotizaci%C3%B3n%20para%20Control%20Topogr%C3%A1fico%20de%20Obra"
+                                    target="_blank" rel="noopener noreferrer"
+                                    class="flex items-center justify-center gap-1.5 py-2.5 px-3.5 bg-emerald-500/10 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 font-bold text-sm rounded-xl hover:bg-emerald-500 hover:text-white transition-all border border-emerald-500/20">
+                                    <span class="material-symbols-outlined text-lg">chat</span>
+                                    <span data-i18n="services_page.cards.cta_whatsapp">WhatsApp</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -833,6 +1152,52 @@
                 <!-- Tab Section 4: Seguridad e Higiene (Hidden default) -->
                 <div id="tab-section-4"
                     class="tab-section hidden grid-cols-1 md:grid-cols-2 gap-8 transition-opacity duration-300 opacity-0">
+                    <!-- Micro-Landing Header: División Seguridad e Hidráulica -->
+                    <div class="col-span-1 md:col-span-2 rounded-3xl p-6 sm:p-8 md:p-10 bg-gradient-to-br from-[#091b1f] via-[#0d252a] to-[#121c27] text-white border border-teal-500/20 shadow-2xl relative overflow-hidden mb-2">
+                        <!-- Decorative glow -->
+                        <div class="absolute -right-16 -top-16 w-64 h-64 bg-teal-500/10 rounded-full blur-3xl pointer-events-none"></div>
+                        <div class="relative z-10">
+                            <!-- Category Badge -->
+                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-500/15 border border-teal-500/30 text-teal-400 text-xs font-black tracking-wider uppercase mb-4">
+                                <span class="material-symbols-outlined text-sm">water_drop</span>
+                                <span data-i18n="services_page.headers.safety.badge">DIVISIÓN HIDRÁULICA & SEGURIDAD INDUSTRIAL</span>
+                            </div>
+                            <!-- Title & Subtitle -->
+                            <h2 class="text-2xl sm:text-3xl md:text-4xl font-black text-white tracking-tight mb-3 font-serif" data-i18n="services_page.headers.safety.title">
+                                Infraestructura Hidráulica, Saneamiento y Normatividad STPS
+                            </h2>
+                            <p class="text-sm sm:text-base text-gray-300 max-w-3xl leading-relaxed mb-6 font-sans" data-i18n="services_page.headers.safety.subtitle">
+                                Diseño de plantas de tratamiento PTAR, redes de conducción y programas integrales de seguridad ocupacional. Salvaguarde a su personal y garantice el cumplimiento normativo laboral.
+                            </p>
+                            <!-- Technical Badges -->
+                            <div class="flex flex-wrap items-center gap-2.5 mb-6">
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/5 border border-white/10 text-xs sm:text-sm font-semibold text-gray-200 backdrop-blur-sm shadow-sm">
+                                    <span class="material-symbols-outlined text-teal-400 text-base">water_drop</span>
+                                    <span data-i18n="services_page.headers.safety.badge1">Plantas PTAR & Saneamiento</span>
+                                </span>
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/5 border border-white/10 text-xs sm:text-sm font-semibold text-gray-200 backdrop-blur-sm shadow-sm">
+                                    <span class="material-symbols-outlined text-teal-400 text-base">health_and_safety</span>
+                                    <span data-i18n="services_page.headers.safety.badge2">Cumplimiento Normativo STPS (NOMs)</span>
+                                </span>
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/5 border border-white/10 text-xs sm:text-sm font-semibold text-gray-200 backdrop-blur-sm shadow-sm">
+                                    <span class="material-symbols-outlined text-teal-400 text-base">shield</span>
+                                    <span data-i18n="services_page.headers.safety.badge3">Programas de Protección Civil</span>
+                                </span>
+                            </div>
+                            <!-- Action Bar -->
+                            <div class="flex flex-wrap items-center gap-3 pt-4 border-t border-white/10">
+                                <a href="../faq/contact_faq.html?service=seguridad-hidraulica" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary text-white font-bold text-sm hover:bg-emerald-600 transition-all shadow-md hover:shadow-lg focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                                    <span data-i18n="services_page.headers.safety.cta">Solicitar Asesoría Hidráulica o STPS</span>
+                                    <span class="material-symbols-outlined text-base">arrow_forward</span>
+                                </a>
+                                <a href="https://wa.me/525583671036?text=Hola%2C%20solicito%20asesor%C3%ADa%20en%20Infraestructura%20Hidr%C3%A1ulica%20o%20Seguridad%20STPS" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-sm transition-all border border-white/10">
+                                    <span class="material-symbols-outlined text-teal-400 text-base">chat</span>
+                                    <span>WhatsApp Directo</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
                     <div
                         class="group relative bg-white dark:bg-[#121c27] rounded-3xl overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.06)] dark:shadow-[0_10px_40px_rgba(0,0,0,0.3)] border border-slate-100 dark:border-white/5 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] transition-all duration-500">
                         <div
@@ -884,12 +1249,25 @@
                                             Específicos:</strong> Manuales de seguridad,
                                         programas de protección civil y planes de respuesta a emergencias.</span>
                                 </li>
+                                <li class="flex items-start gap-2">
+                                    <span
+                                        class="material-symbols-outlined text-primary text-[1rem] mt-0.5">verified</span>
+                                    <span data-i18n="services_page.cards.deliverable_safety"><strong>Dictámenes Oficiales:</strong> Diagnósticos integrales de seguridad e higiene, carpeta de comisiones mixtas (NOM-019) y programas de Protección Civil.</span>
+                                </li>
                             </ul>
-                            <button onclick="window.open('https://forms.gle/5eWnWXbo17ktoFqq5', '_blank')"
-                                class="flex items-center justify-center gap-2 w-full py-3 bg-primary/10 dark:bg-primary/20 text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-all focus:ring-2 focus:ring-primary focus:ring-offset-2">
-                                <span data-i18n="auto_generated.text_077">Realizar cotización</span> <span
-                                    class="material-symbols-outlined text-[18px]">arrow_forward</span>
-                            </button>
+                            <div class="flex flex-col sm:flex-row gap-2.5 mt-auto pt-4 border-t border-slate-100 dark:border-white/5">
+                                <a href="../faq/contact_faq.html?service=gestion-operativa"
+                                    class="flex-1 flex items-center justify-center gap-2 py-2.5 px-4 bg-primary text-white font-bold text-sm rounded-xl hover:bg-emerald-600 transition-all shadow-sm focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                                    <span data-i18n="services_page.cards.cta_quote">Cotizar Proyecto</span>
+                                    <span class="material-symbols-outlined text-base">arrow_forward</span>
+                                </a>
+                                <a href="https://wa.me/525583671036?text=Hola%2C%20solicito%20cotizaci%C3%B3n%20para%20Estructura%20y%20Gesti%C3%B3n%20Operativa%20(SST)"
+                                    target="_blank" rel="noopener noreferrer"
+                                    class="flex items-center justify-center gap-1.5 py-2.5 px-3.5 bg-emerald-500/10 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 font-bold text-sm rounded-xl hover:bg-emerald-500 hover:text-white transition-all border border-emerald-500/20">
+                                    <span class="material-symbols-outlined text-lg">chat</span>
+                                    <span data-i18n="services_page.cards.cta_whatsapp">WhatsApp</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div
@@ -929,11 +1307,19 @@
                                         condiciones de seguridad en herramientas, andamios y maquinaria pesada.</span>
                                 </li>
                             </ul>
-                            <button onclick="window.open('https://forms.gle/5eWnWXbo17ktoFqq5', '_blank')"
-                                class="flex items-center justify-center gap-2 w-full py-3 bg-primary/10 dark:bg-primary/20 text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-all focus:ring-2 focus:ring-primary focus:ring-offset-2">
-                                <span data-i18n="auto_generated.text_077">Realizar cotización</span> <span
-                                    class="material-symbols-outlined text-[18px]">arrow_forward</span>
-                            </button>
+                            <div class="flex flex-col sm:flex-row gap-2.5 mt-auto pt-4 border-t border-slate-100 dark:border-white/5">
+                                <a href="../faq/contact_faq.html?service=seguridad-campo"
+                                    class="flex-1 flex items-center justify-center gap-2 py-2.5 px-4 bg-primary text-white font-bold text-sm rounded-xl hover:bg-emerald-600 transition-all shadow-sm focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                                    <span data-i18n="services_page.cards.cta_quote">Cotizar Proyecto</span>
+                                    <span class="material-symbols-outlined text-base">arrow_forward</span>
+                                </a>
+                                <a href="https://wa.me/525583671036?text=Hola%2C%20solicito%20cotizaci%C3%B3n%20para%20Supervisi%C3%B3n%20de%20Seguridad%20en%20Campo%20(STPS)"
+                                    target="_blank" rel="noopener noreferrer"
+                                    class="flex items-center justify-center gap-1.5 py-2.5 px-3.5 bg-emerald-500/10 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 font-bold text-sm rounded-xl hover:bg-emerald-500 hover:text-white transition-all border border-emerald-500/20">
+                                    <span class="material-symbols-outlined text-lg">chat</span>
+                                    <span data-i18n="services_page.cards.cta_whatsapp">WhatsApp</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div
@@ -980,11 +1366,19 @@
                                         prevención y combate de incendios, y evacuación de inmuebles.</span>
                                 </li>
                             </ul>
-                            <button onclick="window.open('https://forms.gle/5eWnWXbo17ktoFqq5', '_blank')"
-                                class="flex items-center justify-center gap-2 w-full py-3 bg-primary/10 dark:bg-primary/20 text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-all focus:ring-2 focus:ring-primary focus:ring-offset-2">
-                                <span data-i18n="auto_generated.text_077">Realizar cotización</span> <span
-                                    class="material-symbols-outlined text-[18px]">arrow_forward</span>
-                            </button>
+                            <div class="flex flex-col sm:flex-row gap-2.5 mt-auto pt-4 border-t border-slate-100 dark:border-white/5">
+                                <a href="../faq/contact_faq.html?service=capacitacion-stps"
+                                    class="flex-1 flex items-center justify-center gap-2 py-2.5 px-4 bg-primary text-white font-bold text-sm rounded-xl hover:bg-emerald-600 transition-all shadow-sm focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                                    <span data-i18n="services_page.cards.cta_quote">Cotizar Proyecto</span>
+                                    <span class="material-symbols-outlined text-base">arrow_forward</span>
+                                </a>
+                                <a href="https://wa.me/525583671036?text=Hola%2C%20solicito%20cotizaci%C3%B3n%20para%20Capacitaci%C3%B3n%20STPS%20(Constancias%20DC-3)"
+                                    target="_blank" rel="noopener noreferrer"
+                                    class="flex items-center justify-center gap-1.5 py-2.5 px-3.5 bg-emerald-500/10 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 font-bold text-sm rounded-xl hover:bg-emerald-500 hover:text-white transition-all border border-emerald-500/20">
+                                    <span class="material-symbols-outlined text-lg">chat</span>
+                                    <span data-i18n="services_page.cards.cta_whatsapp">WhatsApp</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1021,8 +1415,11 @@
                     <span class="font-bold dark:text-white">Legado Ambiental</span>
                 </div>
                 <div class="text-sm text-[#617589] dark:text-gray-400" data-i18n="footer.rights"><strong>© 2026 Legado
-                        Ambiental S.A. de C.V. <br>Todos los derechos reservados.</strong></strong></div>
-                <div class="flex gap-6">
+                        Ambiental S.A. de C.V. <br>Todos los derechos reservados.</strong></div>
+                <div class="flex gap-6 items-center">
+                    <a class="text-[#617589] hover:text-[#0A66C2] transition-colors" href="https://www.linkedin.com/in/legado-ambiental-mx" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Legado Ambiental" title="LinkedIn">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
                     <a class="text-[#617589] hover:text-primary transition-colors" href="javascript:void(0)"
                         data-action="copy-url"><span class="material-symbols-outlined">share</span></a>
                     <a class="text-[#617589] hover:text-primary transition-colors" href="../faq/contact_faq.html#tab-1"
@@ -1030,6 +1427,21 @@
                 </div>
             </div>
         </footer>
+
+        <!-- Floating WhatsApp Button (FAB) -->
+        <a href="https://wa.me/527226727212?text=Hola,%20quisiera%20cotizar%20un%20proyecto%20con%20Legado%20Ambiental"
+            target="_blank" rel="noopener noreferrer" aria-label="Hablar por WhatsApp"
+            class="fixed bottom-20 right-4 md:bottom-6 md:right-6 z-50 bg-[#25D366] hover:bg-[#20ba5a] text-white w-14 h-14 rounded-full shadow-[0_4px_20px_rgba(37,211,102,0.5)] flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 group">
+            <span class="material-symbols-outlined text-3xl">chat</span>
+        </a>
+
+        <!-- Sticky Mobile CTA Bar -->
+        <div class="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-white/95 dark:bg-[#121c27]/95 backdrop-blur-lg border-t border-gray-200 dark:border-white/10 p-2.5 shadow-[0_-4px_20px_rgba(0,0,0,0.15)]">
+            <a href="../faq/contact_faq.html#tab-1" class="w-full bg-primary hover:bg-primary/90 text-white py-3 px-4 rounded-xl font-extrabold text-sm flex items-center justify-center gap-2 shadow-md transition-all">
+                <span class="material-symbols-outlined text-xl">calculate</span>
+                <span data-i18n="hero.quote_btn">Cotizar Proyecto</span>
+            </a>
+        </div>
     </div>
     </div>
     <script>
@@ -1061,9 +1473,53 @@
         menuBtn.addEventListener('click', toggleMenu);
         mobileLinks.forEach(link => link.addEventListener('click', closeMenu));
 
-        // Tabs Logic
-        function switchTab(tabIndex) {
-            // Update Tab Buttons Styles
+        // Tab Configuration & Semantic Routing Maps
+        const TAB_CONFIG = {
+            1: { slug: 'ambiental', name: 'Ingeniería Ambiental' },
+            2: { slug: 'construccion', name: 'Construcción' },
+            3: { slug: 'topografia', name: 'Topografía' },
+            4: { slug: 'seguridad-hidraulica', name: 'Seguridad e Higiene' }
+        };
+
+        const SLUG_TO_INDEX = {
+            'ambiental': 1,
+            'ingenieria-ambiental': 1,
+            'tab-1': 1,
+            '1': 1,
+
+            'construccion': 2,
+            'obra-civil': 2,
+            'tab-2': 2,
+            '2': 2,
+
+            'topografia': 3,
+            'fotogrametria': 3,
+            'drones': 3,
+            'tab-3': 3,
+            '3': 3,
+
+            'seguridad-hidraulica': 4,
+            'seguridad': 4,
+            'hidraulica': 4,
+            'saneamiento': 4,
+            'tab-4': 4,
+            '4': 4
+        };
+
+        // Tabs Logic & State Management
+        function switchTab(target, updateUrl = true, shouldScroll = false) {
+            let tabIndex = 1;
+            if (typeof target === 'number') {
+                tabIndex = target;
+            } else if (typeof target === 'string') {
+                const normalized = target.toLowerCase().replace(/^#/, '').trim();
+                tabIndex = SLUG_TO_INDEX[normalized] || Number.parseInt(normalized, 10) || 1;
+            }
+
+            if (!TAB_CONFIG[tabIndex]) tabIndex = 1;
+            const currentSlug = TAB_CONFIG[tabIndex].slug;
+
+            // Update Tab Buttons Styles (Desktop)
             const allTabs = document.querySelectorAll('.tab-btn');
             allTabs.forEach(tab => {
                 tab.classList.remove('bg-primary', 'text-white', 'shadow-[0_4px_16px_rgba(16,185,129,0.30)]');
@@ -1074,6 +1530,15 @@
             if (activeTab) {
                 activeTab.classList.remove('text-[#617589]', 'dark:text-gray-400', 'hover:text-[#111418]', 'dark:hover:text-white', 'hover:bg-gray-200', 'dark:hover:bg-[#253240]');
                 activeTab.classList.add('bg-primary', 'text-white', 'shadow-[0_4px_16px_rgba(16,185,129,0.30)]');
+            }
+
+            // Sync Mobile Select Dropdown
+            const mobileSelect = document.getElementById('services-mobile-select');
+            if (mobileSelect) {
+                mobileSelect.value = currentSlug;
+                if (!mobileSelect.value) {
+                    mobileSelect.value = String(tabIndex);
+                }
             }
 
             // Update Sections visibility with smooth transitions
@@ -1088,51 +1553,84 @@
                 activeSection.classList.remove('hidden');
                 activeSection.classList.add('grid');
 
-                // Slight delay to allow display: grid to apply before triggering CSS opacity transition
                 setTimeout(() => {
                     activeSection.classList.remove('opacity-0');
                     activeSection.classList.add('opacity-100');
                 }, 10);
             }
+
+            // Browser URL & History State Synchronization
+            if (updateUrl && window.history && window.history.replaceState) {
+                window.history.replaceState(null, null, '#' + currentSlug);
+            }
+
+            // Telemetría GA4 / GTM
+            if (window.dataLayer) {
+                window.dataLayer.push({
+                    event: 'select_service_tab',
+                    service_category: currentSlug,
+                    service_name: TAB_CONFIG[tabIndex].name,
+                    service_index: tabIndex
+                });
+            }
+
+            // Smooth Guided Scroll
+            if (shouldScroll) {
+                setTimeout(() => {
+                    const tabContainer = document.getElementById('services-tabs-container') || document.querySelector('.tab-section');
+                    if (tabContainer) {
+                        const offsetTop = tabContainer.getBoundingClientRect().top + window.scrollY - 100;
+                        window.scrollTo({
+                            top: Math.max(0, offsetTop),
+                            behavior: 'smooth'
+                        });
+                    }
+                }, 150);
+            }
         }
 
-        // Tab Buttons Event Listeners (Removed inline onclick)
+        // Tab Buttons Event Listeners (Desktop)
         const tabButtons = document.querySelectorAll('.tab-btn');
         tabButtons.forEach(btn => {
             btn.addEventListener('click', () => {
-                const tabIndex = Number.parseInt(btn.dataset.tab, 10);
-                if (tabIndex) {
-                    switchTab(tabIndex);
+                const target = btn.dataset.slug || btn.dataset.tab;
+                if (target) {
+                    switchTab(target, true, false);
                 }
             });
         });
 
-        // Deep Linking for tabs based on URL Hash
-        document.addEventListener('DOMContentLoaded', () => {
-            if (globalThis.location.hash) {
-                const hash = globalThis.location.hash;
-                const match = hash.match(/#tab-(\d+)/);
-                if (match && match[1]) {
-                    const tabIndex = Number.parseInt(match[1], 10);
-                    // Call the existing function to switch the visual state of tabs
-                    switchTab(tabIndex);
+        // Mobile Dropdown Listener
+        const mobileSelect = document.getElementById('services-mobile-select');
+        if (mobileSelect) {
+            mobileSelect.addEventListener('change', (e) => {
+                const target = e.target.value;
+                if (target) {
+                    switchTab(target, true, true);
+                }
+            });
+        }
 
-                    // Smooth scroll to the tab buttons wrapper so user sees the content
-                    setTimeout(() => {
-                        const tabContainer = document.querySelector('.tab-section');
-                        if (tabContainer) {
-                            const offsetTop = tabContainer.getBoundingClientRect().top + globalThis.scrollY - 100;
-                            globalThis.scrollTo({
-                                top: offsetTop,
-                                behavior: 'smooth'
-                            });
-                        }
-                    }, 300); // Allow time for DOM updates and tab animations
+        // Deep Linking on Load and Hash Change
+        function handleHashRouting(shouldScroll = false) {
+            if (window.location.hash) {
+                const rawHash = window.location.hash.replace(/^#/, '').trim().toLowerCase();
+                if (SLUG_TO_INDEX[rawHash]) {
+                    switchTab(SLUG_TO_INDEX[rawHash], false, shouldScroll);
                 }
             }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            handleHashRouting(true);
+        });
+
+        window.addEventListener('hashchange', () => {
+            handleHashRouting(true);
         });
     </script>
     <script src="../assets/js/i18n.js" data-base-path="../"></script>
+    <script src="../assets/js/analytics.js"></script>
 
     <!-- Animaciones AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
