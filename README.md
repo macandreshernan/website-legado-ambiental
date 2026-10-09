@@ -48,9 +48,12 @@ website-legado/
 │       ├── Informe_Ejecutivo_Plan_Trabajo_y_Avances_2026.pdf
 │       ├── Guia_Estrategica_Google_Business_Profile_y_Ads_Local.pdf
 │       └── generate_informe_equipo_pdf.py
-├── INFORME_ESTADO_PLAN_TRABAJO_OCT_2026.md # Informe maestro de estado del proyecto
-├── plan-mejoras-uiux-100.md        # Plan técnico de CRO y puntos de control Git
-├── Plan de Trabajo y Arquitectura UI_UX - Legado Ambiental.md # Plan estratégico de 6 Pilares
+├── markdown/                       # Documentación estratégica, planes de trabajo y bitácoras
+│   ├── INFORME_ESTADO_PLAN_TRABAJO_OCT_2026.md
+│   ├── Plan de Trabajo y Arquitectura UI_UX - Legado Ambiental.md
+│   ├── plan-mejoras-uiux-100.md
+│   ├── estructura-plan-legadoambiental.md
+│   └── pr_body.md
 └── README.md                       # Bitácora técnica y registro de cambios
 ```
 
@@ -1043,7 +1046,7 @@ Se alcanzó la culminación de los pilares técnicos y de presencia local establ
 
 ### 2. Entregables Documentales y Reportes Ejecutivos
 - **Informe de Estado del Proyecto (Markdown & PDF):**  
-  - [`INFORME_ESTADO_PLAN_TRABAJO_OCT_2026.md`](INFORME_ESTADO_PLAN_TRABAJO_OCT_2026.md)  
+  - [`markdown/INFORME_ESTADO_PLAN_TRABAJO_OCT_2026.md`](markdown/INFORME_ESTADO_PLAN_TRABAJO_OCT_2026.md)  
   - [`assets/docs/Informe_Ejecutivo_Plan_Trabajo_y_Avances_2026.pdf`](assets/docs/Informe_Ejecutivo_Plan_Trabajo_y_Avances_2026.pdf)
 - **Dictamen Técnico del Crédito Publicitario Google Ads:**  
   - [`assets/docs/Dictamen_Credito_Google_Ads_7000_MXN.pdf`](assets/docs/Dictamen_Credito_Google_Ads_7000_MXN.pdf)
