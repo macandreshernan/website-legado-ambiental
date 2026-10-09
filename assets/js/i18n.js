@@ -122,7 +122,9 @@ const translations = {
             "terms": "Términos de Servicio",
             "sitemap": "Mapa del Sitio",
             "maps_link": "Google Maps",
-            "reviews_link": "Reseñas en Google"
+            "reviews_link": "Reseñas en Google",
+            "linkedin_badge": "LinkedIn Corporativo",
+            "linkedin_link": "LinkedIn Corporativo"
         },
         "about": {
             "title": "Quiénes Somos",
@@ -408,7 +410,8 @@ const translations = {
                 "addr": "U.H. Valle de Ecatepec, <br> C.P. 55119, Ecatepec, Estado de México",
                 "email": "<strong>legado.ambiental.mx@gmail.com</strong>",
                 "phone1": "+52 55 8367 1036",
-                "phone2": "+52 72 2672 7212"
+                "phone2": "+52 72 2672 7212",
+                "linkedin": "LinkedIn: <strong>legado-ambiental-mx</strong>"
             },
             "google_reviews": {
                 "badge": "Google Business Profile",
@@ -760,7 +763,9 @@ const translations = {
             "terms": "Terms of Service",
             "sitemap": "Sitemap",
             "maps_link": "Google Maps",
-            "reviews_link": "Google Reviews"
+            "reviews_link": "Google Reviews",
+            "linkedin_badge": "Corporate LinkedIn",
+            "linkedin_link": "Corporate LinkedIn"
         },
         "about": {
             "title": "About Us",
@@ -1046,7 +1051,8 @@ const translations = {
                 "addr": "U.H. Valle de Ecatepec, <br> C.P. 55119, Ecatepec, State of Mexico",
                 "email": "<strong>legado.ambiental.mx@gmail.com</strong>",
                 "phone1": "+52 55 8367 1036",
-                "phone2": "+52 72 2672 7212"
+                "phone2": "+52 72 2672 7212",
+                "linkedin": "LinkedIn: <strong>legado-ambiental-mx</strong>"
             },
             "google_reviews": {
                 "badge": "Google Business Profile",

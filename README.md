@@ -1050,7 +1050,7 @@ Se alcanzó la culminación de los pilares técnicos y de presencia local establ
 
 ---
 
-## 🎯 Registro de Cambios: Fase 38 - PB5: Micro-Landings de Servicios Específicos & Conversión On-Site (Módulos 1, 2 y 3)
+## 🎯 Registro de Cambios: Fase 38 - PB5: Micro-Landings de Servicios Específicos & Ecosistema de Conversión (Módulos 1 al 4)
 
 ### 1. Módulo 1: Arquitectura de Navegación, Router JS y Deep-Linking Semántico
 - **Identificadores Amigables (Slugs Semánticos):**
@@ -1090,6 +1090,21 @@ Se alcanzó la culminación de los pilares técnicos y de presencia local establ
 - **Enriquecimiento de Entregables Oficiales y Paridad Bilingüe:**
   - Especificación de entregables técnicos tangibles en tarjetas representativas (planos ejecutivos AutoCAD DWG/PDF 24-48h, memorias de cálculo PTAR y NOM-001/002/003, respaldo de firma DRO con bitácora oficial, y diagnósticos STPS con carpetas NOM-019).
   - Paridad estricta en `assets/js/i18n.js` (`es-MX` y `en-US`) bajo `services_page.cards.*` para todos los textos y entregables.
+
+### 4. Módulo 4: Integración Institucional de LinkedIn (`www.linkedin.com/in/legado-ambiental-mx`)
+- **Punto de Contacto Profesional B2B en Ecosistema Web:**
+  - Actualización uniforme del enlace al perfil oficial de Legado Ambiental en LinkedIn (`https://www.linkedin.com/in/legado-ambiental-mx`) en todos los puntos de contacto digital.
+- **Implementación en Pie de Página (Footer de 6 Páginas):**
+  - **`home.html`:** Inserción de badge institucional de LinkedIn en la columna corporativa y enlace con logotipo SVG oficial en la barra inferior junto a Google Maps y Google Reviews.
+  - **`about_us.html`, `services.html`, `portfolio.html`, `our_experience.html` y `contact_faq.html`:** Incorporación del icono interactivo de LinkedIn con paleta corporativa (`#0A66C2`) en la barra de redes y utilidades del pie de página.
+  - **`404.html`:** Inclusión de botón de enlace institucional en el pie de página de contingencia.
+- **Tarjeta de Información Directa en `contact_faq.html`:**
+  - Adición de LinkedIn como canal oficial de contacto directo B2B junto con teléfono, correo corporativo y dirección física.
+- **Enriquecimiento del Marcado Estructurado Schema.org (SEO Local):**
+  - Incorporación de `"sameAs": ["https://www.linkedin.com/in/legado-ambiental-mx"]` en los bloques `application/ld+json` de las 6 páginas principales para potenciar el Knowledge Graph de Google y la indexación de la entidad corporativa.
+- **Internacionalización y Cero Errores (`i18n.js`):**
+  - Incorporación bilingüe de las claves `footer.linkedin_badge`, `footer.linkedin_link` y `contact_page.info.linkedin` tanto en español (`es-MX`) como en inglés (`en-US`).
+
 
 
 
