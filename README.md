@@ -1048,6 +1048,36 @@ Se alcanzó la culminación de los pilares técnicos y de presencia local establ
 - **Dictamen Técnico del Crédito Publicitario Google Ads:**  
   - [`assets/docs/Dictamen_Credito_Google_Ads_7000_MXN.pdf`](assets/docs/Dictamen_Credito_Google_Ads_7000_MXN.pdf)
 
+---
+
+## 🎯 Registro de Cambios: Fase 38 - PB5: Micro-Landings de Servicios Específicos & Deep-Linking Semántico (Módulos 1 y 2)
+
+### 1. Módulo 1: Arquitectura de Navegación, Router JS y Deep-Linking Semántico
+- **Identificadores Amigables (Slugs Semánticos):**
+  - `#ambiental`: División 1 - Consultoría e Ingeniería Ambiental.
+  - `#construccion`: División 2 - Construcción y Supervisión de Obra.
+  - `#topografia`: División 3 - Topografía de Alta Precisión & Geodesia.
+  - `#seguridad-hidraulica`: División 4 - Infraestructura Hidráulica, Saneamiento & STPS.
+- **Sincronización Bidireccional y Limpieza de Historial:**
+  - Uso de `history.replaceState` para mantener URLs limpias y legibles en la barra de direcciones sin saltos ni recargas.
+  - Sincronización en vivo entre pestañas de escritorio (`.tab-btn`), menú desplegable móvil (`#services-mobile-select`) y el hash de la URL.
+- **Navegación Guiada y Telemetría:**
+  - Escucha de eventos `DOMContentLoaded` y `hashchange` con desplazamiento suave (*smooth scroll*) con compensación de cabecera fija.
+  - Telemetría de analítica web en cada cambio de división disparando `dataLayer.push({ event: 'select_service_tab', ... })`.
+- **Actualización de Enlaces Entrantes:**
+  - Reescritura de los enlaces de las 4 tarjetas y del pie de página en `home.html` y diccionarios de `assets/js/i18n.js` hacia los nuevos slugs semánticos, manteniendo retrocompatibilidad intacta para `#tab-1..4`.
+
+### 2. Módulo 2: Cabeceras UI/UX de Autoridad Técnica (Micro-Landing Headers)
+- **Cabeceras Especializadas por División en `services.html`:**
+  - Inserción de 4 tarjetas destacadas de ancho completo (`col-span-1 md:col-span-2`) al inicio de cada tab técnico con diseño en gradientes temáticos oscuros, bordes estilizados y efectos de iluminación (*glow*).
+  - Propuesta de valor B2B dirigida a resolver dolores específicos: blindaje ante multas/clausuras PROFEPA/SEMARNAT, control de calidad y bitácora con Director Responsable de Obra (DRO), levantamientos con GPS RTK y drones LiDAR en 24-48h, y plantas de tratamiento PTAR con dictámenes STPS.
+- **Badges de Autoridad Técnica & CTAs Duales:**
+  - Inclusión de 3 insignias con iconografía técnica por cabecera (`SEMARNAT/PROFEPA`, `CRETI`, `DRO`, `GPS RTK`, `PTAR`, `Protección Civil`).
+  - Botones de acción directa hacia cotización on-site (`contact_faq.html?service=[slug]`) y asesoría técnica directa por WhatsApp.
+- **Paridad Total de Internacionalización (28 Nuevas Claves i18n):**
+  - Registro y validación estricta de 28 claves bajo `services_page.headers.*` en `assets/js/i18n.js` para los idiomas `es-MX` y `en-US`.
+
+
 
 
 
