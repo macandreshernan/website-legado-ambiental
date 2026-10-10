@@ -1473,14 +1473,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    // Global Loader logic
-    window.addEventListener('load', () => {
+    // Global Loader logic (Resilient: dismisses immediately if already loaded, with 800ms safety fallback)
+    function dismissLoader() {
         const loader = document.getElementById('global-loader');
         if (loader) {
-            loader.classList.add('opacity-0');
+            loader.classList.add('opacity-0', 'pointer-events-none');
             setTimeout(() => {
                 loader.style.display = 'none';
-            }, 700);
+            }, 300);
         }
-    });
+    }
+
+    if (document.readyState === 'complete') {
+        dismissLoader();
+    } else {
+        window.addEventListener('load', dismissLoader);
+        setTimeout(dismissLoader, 800);
+    }
 });
