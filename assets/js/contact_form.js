@@ -178,6 +178,11 @@ document.addEventListener('DOMContentLoaded', () => {
         // Timeout de seguridad con AbortController (12 segundos)
         const controller = new AbortController();
         const timeoutId = setTimeout(() => controller.abort(), 12000);
+        const clientEmail = emailInput ? emailInput.value.trim() : '';
+        const clientName = nameInput ? nameInput.value.trim() : '';
+        const clientPhone = phoneInput ? phoneInput.value.trim() : '';
+        const clientMessage = messageInput ? messageInput.value.trim() : '';
+        const clientLocation = (locationInput && locationInput.value.trim()) ? locationInput.value.trim() : 'No especificada';
 
         fetch("https://formsubmit.co/ajax/legado.ambiental.mx@gmail.com", {
             method: "POST",
@@ -186,18 +191,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 'Accept': 'application/json'
             },
             body: JSON.stringify({
-                name: nameInput ? nameInput.value.trim() : '',
+                name: clientName,
                 company: clientCompany || 'No especificada',
-                phone: phoneInput ? phoneInput.value.trim() : '',
-                email: emailInput ? emailInput.value.trim() : '',
+                phone: clientPhone,
+                email: clientEmail,
+                _replyto: clientEmail,
                 service_type: selectedService,
-                location: (locationInput && locationInput.value.trim()) ? locationInput.value.trim() : 'No especificada',
-                message: messageInput ? messageInput.value.trim() : '',
+                location: clientLocation,
+                message: clientMessage,
                 origen_campana: attribution.utm_campaign || (attribution.gclid ? 'Google Ads Local' : 'Orgánico / Directo'),
                 google_click_id: attribution.gclid || 'N/A',
-                _subject: "Nuevo Lead B2B - Solicitud de Cotización Legado Ambiental",
-                _captcha: "false",
-                _template: "table"
+                _subject: "Nuevo Lead B2B - Solicitud de Cotización Legado Ambiental"
             }),
             signal: controller.signal
         })
