@@ -1,19 +1,31 @@
 /**
- * Contact Form Logic
- * Handles validation, input masking, and client-side captcha.
+ * Contact Form Logic - Legado Ambiental
+ * Handles validation, input masking, Honeypot anti-spam, and AJAX FormSubmit integration.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-    const form = document.querySelector('form');
+    const form = document.getElementById('contact-form') || document.querySelector('form');
+    if (!form) return;
+
+    const nameInput = document.getElementById('name');
+    const companyInput = document.getElementById('company');
     const phoneInput = document.getElementById('phone');
     const emailInput = document.getElementById('email');
-    const submitBtn = form.querySelector('button');
+    const serviceInput = document.getElementById('service_type');
+    const locationInput = document.getElementById('location');
+    const messageInput = document.getElementById('message');
+    const honeypotInput = document.getElementById('website_url');
+
+    const submitBtn = document.getElementById('submit-btn') || form.querySelector('button[type="submit"]');
+    const submitText = document.getElementById('submit-text');
+    const submitSpinner = document.getElementById('submit-spinner');
+    const phoneError = document.getElementById('phone-error');
+    const emailError = document.getElementById('email-error');
 
     // --- 1. Phone Masking & Validation ---
     if (phoneInput) {
-        // Enforce max length programmatically (also in HTML)
         phoneInput.addEventListener('input', (e) => {
-            let value = e.target.value.replaceAll(/\D/g, ''); // Remove non-digits
+            let value = e.target.value.replace(/\D/g, ''); // Remove non-digits
 
             // Prevent starting with 0 or 1 (LADA rule)
             if (value.length > 0 && (value[0] === '0' || value[0] === '1')) {
@@ -41,104 +53,228 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function validatePhone(input) {
-        const rawValue = input.value.replaceAll(/\D/g, '');
-        const errorSpan = document.getElementById('phone-error');
+        if (!input) return false;
+        const rawValue = input.value.replace(/\D/g, '');
 
-        // Simple check: must be exactly 10 digits
         if (rawValue.length > 0 && rawValue.length < 10) {
             input.classList.add('border-red-500', 'focus:border-red-500', 'focus:ring-red-500/20');
             input.classList.remove('border-slate-200', 'focus:border-primary');
-            if (errorSpan) errorSpan.classList.remove('hidden');
-        } else {
+            if (phoneError) phoneError.classList.remove('hidden');
+            return false;
+        } else if (rawValue.length === 10) {
             input.classList.remove('border-red-500', 'focus:border-red-500', 'focus:ring-red-500/20');
             input.classList.add('border-slate-200', 'focus:border-primary');
-            if (errorSpan) errorSpan.classList.add('hidden');
+            if (phoneError) phoneError.classList.add('hidden');
+            return true;
+        } else {
+            // Empty
+            if (phoneError) phoneError.classList.add('hidden');
+            return false;
         }
-        return rawValue.length === 10;
     }
 
     // --- 2. Email Validation ---
     if (emailInput) {
         emailInput.addEventListener('blur', () => validateEmail(emailInput));
         emailInput.addEventListener('input', () => {
-            // Remove error state while typing to be less annoying, 
-            // strictly validate on blur or submit
             if (emailInput.classList.contains('border-red-500')) {
-                // optional: re-validate on input only if already in error state
                 validateEmail(emailInput);
             }
         });
     }
 
     function validateEmail(input) {
-        // User @ Domain . Extension
-        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-        const isValid = emailRegex.test(input.value);
-        const errorSpan = document.getElementById('email-error');
+        if (!input) return false;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const isValid = emailRegex.test(input.value.trim());
 
         if (!isValid && input.value.trim() !== '') {
             input.classList.add('border-red-500', 'focus:border-red-500', 'focus:ring-red-500/20');
             input.classList.remove('border-slate-200', 'focus:border-primary');
-            if (errorSpan) errorSpan.classList.remove('hidden');
+            if (emailError) emailError.classList.remove('hidden');
         } else {
             input.classList.remove('border-red-500', 'focus:border-red-500', 'focus:ring-red-500/20');
             input.classList.add('border-slate-200', 'focus:border-primary');
-            if (errorSpan) errorSpan.classList.add('hidden');
+            if (emailError) emailError.classList.add('hidden');
         }
         return isValid;
     }
 
     // --- 3. Submit Handling ---
-    form.addEventListener('submit', (e) => {
-        e.preventDefault(); // Siempre prevenimos el reload para UX fluida
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        // Prevent double submit
+        if (submitBtn && submitBtn.disabled) return;
+
         let isValid = true;
 
-        // Validaciones básicas de regex
-        if (!validatePhone(phoneInput)) isValid = false;
-        if (!validateEmail(emailInput)) isValid = false;
+        // Validar Teléfono (requerido, 10 dígitos)
+        const isPhoneValid = validatePhone(phoneInput);
+        if (!isPhoneValid) {
+            isValid = false;
+            if (phoneError) phoneError.classList.remove('hidden');
+            if (phoneInput) {
+                phoneInput.classList.add('border-red-500');
+                phoneInput.focus();
+            }
+        }
 
-        // --- Honeypot Validation (Anti-spam) ---
-        const honeypotInput = document.getElementById('website_url');
+        // Validar Email (requerido, formato válido)
+        const isEmailValid = validateEmail(emailInput);
+        if (!isEmailValid) {
+            isValid = false;
+            if (emailError) emailError.classList.remove('hidden');
+            if (emailInput) {
+                emailInput.classList.add('border-red-500');
+                if (isPhoneValid) emailInput.focus();
+            }
+        }
+
+        // Honeypot Anti-Spam Check
         if (honeypotInput && honeypotInput.value.trim() !== '') {
-            // Es un bot, silently reject sin dar pistas
-            console.warn("Spam detectado (Honeypot).");
-            // Mostramos éxito falso para despistar al bot
+            console.warn("Spam detectado vía Honeypot.");
             if (globalThis.ToastService) {
-                globalThis.ToastService.show('Mensaje enviado correctamente.', 'success');
+                const msg = (globalThis.i18n && globalThis.i18n.t)
+                    ? globalThis.i18n.t('contact_page.form.toast_success')
+                    : '¡Solicitud enviada con éxito!';
+                globalThis.ToastService.show(msg, 'success');
             }
             form.reset();
             return;
         }
 
         if (!isValid) {
-            // Error de usuario real
             if (globalThis.ToastService) {
-                globalThis.ToastService.show('Por favor revisa los campos en rojo.', 'error');
+                const errMsg = (globalThis.i18n && globalThis.i18n.t)
+                    ? globalThis.i18n.t('contact_page.form.toast_error')
+                    : 'Por favor revisa los campos en rojo.';
+                globalThis.ToastService.show(errMsg, 'error');
             }
             return;
         }
 
-        // Si es válido y humano:
-        submitBtn.disabled = true;
-        const originalText = submitBtn.innerHTML;
-        submitBtn.innerHTML = '<span class="material-symbols-outlined animate-spin text-lg">autorenew</span> Enviando...';
+        // --- Estado de Carga UI ---
+        const originalBtnText = submitText
+            ? submitText.textContent
+            : ((globalThis.i18n && globalThis.i18n.t) ? globalThis.i18n.t('contact_page.form.btn') : 'Enviar Solicitud de Cotización');
 
-        // Disparar evento de analítica GA4 / GTM
-        if (typeof trackEvent === 'function') {
-            const serviceSelect = document.getElementById('service');
-            trackEvent('generate_lead', {
-                service_category: serviceSelect ? serviceSelect.value : 'general'
-            });
+        if (submitBtn) submitBtn.disabled = true;
+        if (submitSpinner) submitSpinner.classList.remove('hidden');
+        if (submitText) {
+            submitText.textContent = (globalThis.i18n && globalThis.i18n.t)
+                ? globalThis.i18n.t('contact_page.form.sending')
+                : 'Enviando...';
         }
 
-        // Fake API Call Delay
-        setTimeout(() => {
-            if (globalThis.ToastService) {
-                globalThis.ToastService.show('¡Su mensaje ha sido enviado con éxito! Nos pondremos en contacto pronto.', 'success', 5000);
+        // Captura de Atribución (Google Ads Local / Campañas)
+        const attribution = (typeof window.getMarketingAttribution === 'function')
+            ? window.getMarketingAttribution()
+            : {};
+
+        const selectedService = serviceInput ? serviceInput.value : 'General';
+        const clientCompany = companyInput ? companyInput.value.trim() : '';
+
+        // Timeout de seguridad con AbortController (12 segundos)
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 12000);
+
+        fetch("https://formsubmit.co/ajax/legado.ambiental.mx@gmail.com", {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+                name: nameInput ? nameInput.value.trim() : '',
+                company: clientCompany || 'No especificada',
+                phone: phoneInput ? phoneInput.value.trim() : '',
+                email: emailInput ? emailInput.value.trim() : '',
+                service_type: selectedService,
+                location: (locationInput && locationInput.value.trim()) ? locationInput.value.trim() : 'No especificada',
+                message: messageInput ? messageInput.value.trim() : '',
+                origen_campana: attribution.utm_campaign || (attribution.gclid ? 'Google Ads Local' : 'Orgánico / Directo'),
+                google_click_id: attribution.gclid || 'N/A',
+                _subject: "Nuevo Lead B2B - Solicitud de Cotización Legado Ambiental",
+                _captcha: "false",
+                _template: "table"
+            }),
+            signal: controller.signal
+        })
+        .then(async (response) => {
+            clearTimeout(timeoutId);
+            let data = {};
+            try {
+                data = await response.json();
+            } catch (jsonErr) {
+                // Posible respuesta de texto plano o HTML
             }
-            form.reset();
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = originalText;
-        }, 1200);
+
+            if (!response.ok || (data && (data.success === "false" || data.success === false))) {
+                throw new Error((data && data.message) ? data.message : 'Error al procesar la solicitud');
+            }
+
+            // Disparar telemetría GA4 / GTM Lead Event
+            if (typeof trackEvent === 'function') {
+                trackEvent('generate_lead', {
+                    service_category: selectedService,
+                    lead_company: clientCompany
+                });
+            }
+
+            // UI: Éxito
+            if (submitSpinner) submitSpinner.classList.add('hidden');
+            if (submitBtn) submitBtn.classList.replace('bg-primary', 'bg-green-600');
+            if (submitText) {
+                submitText.textContent = (globalThis.i18n && globalThis.i18n.t)
+                    ? globalThis.i18n.t('contact_page.form.toast_success')
+                    : '¡Solicitud Enviada!';
+            }
+
+            const successMsg = (globalThis.i18n && globalThis.i18n.t)
+                ? globalThis.i18n.t('contact_page.form.toast_success')
+                : '¡Su mensaje ha sido enviado con éxito! Nos pondremos en contacto pronto.';
+            if (globalThis.ToastService) {
+                globalThis.ToastService.show(successMsg, 'success', 5000);
+            }
+
+            // Restauración limpia del formulario y botón tras 3 segundos
+            setTimeout(() => {
+                form.reset();
+                if (submitBtn) {
+                    submitBtn.classList.replace('bg-green-600', 'bg-primary');
+                    submitBtn.disabled = false;
+                }
+                if (submitText) submitText.textContent = originalBtnText;
+                if (submitSpinner) submitSpinner.classList.add('hidden');
+            }, 3000);
+        })
+        .catch(error => {
+            clearTimeout(timeoutId);
+            console.error('[ContactForm Error]:', error);
+
+            if (submitSpinner) submitSpinner.classList.add('hidden');
+            if (submitBtn) submitBtn.classList.replace('bg-primary', 'bg-red-600');
+            if (submitText) submitText.textContent = 'Error al enviar';
+
+            const isTimeout = error.name === 'AbortError';
+            const errorMsg = isTimeout
+                ? 'El servidor tardó en responder. Por favor contáctanos directamente vía WhatsApp o teléfono.'
+                : ((globalThis.i18n && globalThis.i18n.t) ? globalThis.i18n.t('contact_page.form.toast_error') : 'Error al enviar la solicitud.');
+
+            if (globalThis.ToastService) {
+                globalThis.ToastService.show(errorMsg, 'error', 6000);
+            }
+
+            // Restaurar botón tras 3.5 segundos
+            setTimeout(() => {
+                if (submitBtn) {
+                    submitBtn.classList.replace('bg-red-600', 'bg-primary');
+                    submitBtn.disabled = false;
+                }
+                if (submitText) submitText.textContent = originalBtnText;
+                if (submitSpinner) submitSpinner.classList.add('hidden');
+            }, 3500);
+        });
     });
 });
