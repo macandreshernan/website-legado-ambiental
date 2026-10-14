@@ -1,151 +1,281 @@
-# Informe Ejecutivo de Estado de Proyecto: Plan de Trabajo, Avances y Hoja de Ruta B2B
+# Informe Ejecutivo y Sprint Review: Estado de Avances, PB5 Consolidado y Hoja de Ruta de Cierre B2B
 **Legado Ambiental S.A. de C.V.**  
-*Documento de Comunicación Interna para el Equipo de Proyecto y Junta Directiva*  
-**Código de Documento:** `INF-LA-DIR-2026-005`  
+*Documento de Comunicación Interna para el Equipo de Proyecto y Dirección General*  
+**Código de Documento:** `INF-LA-SR-2026-006`  
 **Fecha de Emisión:** Octubre 2026  
-**Versión:** 1.0 (Consolidada)  
-**Clasificación:** Informativo & Decisión Estratégica  
+**Versión:** 2.0 (Consolidada tras Culminación de PB5 y Hardening UI/UX)  
+**Clasificación:** Ceremonia de Sprint Review, Orientación Técnica & Plan de Acción Inmediato  
 
 ---
 
-## 1. Resumen Ejecutivo
+## 1. Resumen Ejecutivo y Dictamen del Sprint Review
 
-El presente informe tiene como objetivo proporcionar a todo el equipo de **Legado Ambiental** (Dirección General, Estratega Técnico - Persona A, y Desarrollador / Ejecutor - Persona B) una visión integral, transparente y cuantificada sobre el estado actual del proyecto de **Optimización UI/UX, Embudo B2B y Presencia Digital**, contrastando los planes de trabajo iniciales contra los avances técnicos tangibles alcanzados hasta la fecha.
+El presente informe formaliza la **Sprint Review** del proyecto de **Optimización UI/UX, Embudo B2B y Presencia Digital** de **Legado Ambiental**, contrastando las metas proyectadas en el [Plan de Trabajo y Arquitectura UI_UX - Legado Ambiental.md](file:///home/andrew/Development/workspace-legado-ambiental/website-legado/markdown/Plan%20de%20Trabajo%20y%20Arquitectura%20UI_UX%20-%20Legado%20Ambiental.md) contra los entregables tangibles en el repositorio al día de hoy.
 
-### Principales Conclusiones del Período:
-1. **Infraestructura Web y Embudo CRO (Fases 1 a 5) al 100%:** La reestructuración del sitio web bajo los principios de *Jobs-To-Be-Done (JTBD)*, arquitectura fluida en Tailwind CSS, formularios de ultra-baja fricción (6 campos con Honeypot), patrón híbrido de contacto móvil (Sticky Bar + FAB WhatsApp) y paridad total bilingüe (`i18n.js`) se encuentran concluidas y en producción.
-2. **Google Business Profile (Pilar 5: SEO Local) Oficialmente Concluido:** El perfil de la empresa ha sido formalmente **verificado**, cuenta con su panel de gestión en vivo (199+ interacciones registradas), catálogo completo de servicios multimedia renovado a alta definición (1200x896 px), material de modelado 3D / volumetría y una suite completa de códigos QR corporativos en vector y alta densidad.
-3. **Instrumentación de Medición GA4 y Google Tag Manager (GTM) Operativa:** El contenedor de Google Analytics y Tag Manager (`G-1MLGHB4E6G`) está inyectado en las 8 páginas del ecosistema web con compatibilidad CSP y rastreo de eventos de conversión B2B (`generate_lead`, `click_whatsapp`, `click_phone`, `scroll_depth`).
-4. **Decisión Estratégica Corporativa sobre Google Ads (Pilar 6):** Tras elaborar el *Dictamen Técnico y Financiero* sobre la oferta de $7,000 MXN en Google Ads, **se ha determinado formalmente POSPONER y NO abordar de momento la adopción de pauta pagada**. La decisión obedece a optimizar la liquidez empresarial (evitando el desembolso inicial de $7,000 MXN + IVA en una cuenta recién abierta) y priorizar la captación de prospectos mediante canales orgánicos de alta rentabilidad, prueba social en Google Maps y prospección directa B2B en LinkedIn.
-
----
-
-## 2. Análisis del Plan de Trabajo Original vs. Realidad Ejecutada
-
-El proyecto se estructuró a partir de dos documentos rectores:
-* **Doc A:** `Plan de Trabajo y Arquitectura UI_UX - Legado Ambiental.md` (Estrategia global de 6 Pilares, asignación de 40 horas en 2 Sprints semanales y matriz de roles Persona A / Persona B).
-* **Doc B:** `plan-mejoras-uiux-100.md` (Plan técnico de 5 Fases secuenciales de CRO, diseño responsivo, i18n y puntos de control Git).
-
-A continuación se presenta el contraste analítico entre lo planificado y el estado real al día de hoy:
-
-### Matriz de Comparativa y Cumplimiento del Backlog
-
-| ID Tarea | Descripción según Plan Original | Horas Est. | Alcance Planificado | Estado Actual | Evidencia y Entregables Técnicos |
-| :---: | :--- | :---: | :--- | :---: | :--- |
-| **PB1** | Rediseño de Hero Section JTBD | 3.0 h | Enfocar propuesta en problemas (impacto ambiental, obra civil, topografía). | **100% CONCLUIDO** | Implementado en `home.html` con copys JTBD, trust banner de normativas (NOM-052, STPS) y paridad i18n. |
-| **PB2** | Integración de CTAs Estratégicos | 3.0 h | Botones "Cotizar", "WhatsApp" y "Ver Portafolio". | **100% CONCLUIDO** | CTAs integrados en Hero, Header y evolución a Sticky Mobile Bar + FAB WhatsApp flotante. |
-| **PB3** | Simplificación de Formularios | 3.0 h | Formulario reducido a 6 campos con feedback visual. | **100% CONCLUIDO** | Formulario en `contact_faq.html` con selector de servicio, Honeypot anti-spam y notificaciones Toast en Tailwind. |
-| **PB4** | Google Business Profile (SEO Local) | 3.0 h | Perfil verificado, áreas de cobertura y fotos. | **100% CONCLUIDO** | Ficha verificada en vivo con badge oficial. 11 imágenes HD (1200x896), video demo 3D volumétrico y suite QR. |
-| **PB7** | Optimización de Portafolio PDF & QR | 3.0 h | Plantilla editorial de portafolio y código QR. | **100% CONCLUIDO** | Portafolio integrado, suite QR en vector SVG / PNG 300 DPI y credencial interactiva de mostrador. |
-| **PB12** | Configuración Analítica (GA4 / GTM) | 3.0 h | Medición de clics WhatsApp y envíos de formulario. | **100% CONCLUIDO** | Tag `G-1MLGHB4E6G` en 8 páginas, `analytics.js` con 8 eventos B2B, compatibilidad CSP y `dataLayer` activo. |
-| **PB13** | Campaña de Pago (Google Ads Local) | *Post-Proj* | Pauta de palabras clave locales de alta intención. | **CONGELADO / POSPUESTO** | Dictamen técnico emitido (`DOC-LA-MKT-2026-004`). Descartado en esta etapa por costo de entrada; ahorro de $8,120 MXN. |
-| **PB5** | Landing Pages de Servicios Específicos | 6.0 h | Páginas independientes de Topografía, Consultoría y PTAR. | **EN CURSO (Fase 2 de Servicios)** | Servicios concentrados y navegables en `services.html` mediante pestañas responsivas y deep-linking. |
-| **PB6** | Contenido Técnico Normativo | 4.0 h | Publicación de artículo técnico normativo (NOM/STPS). | **PENDIENTE (Sprint 2)** | Insumos normativos integrados en Hero; pendiente artículo editorial extendido de autoridad técnica. |
-| **PB8-10** | Prospección B2B y Alianzas Comerciales | 6.0 h | Plantillas de contacto, 15 empresas contactadas, 5 aliados. | **SIGUIENTE FASE OPERATIVA** | Embudo digital 100% listo para recibir el tráfico de prospección orgánica y LinkedIn. |
+### Balance de Desempeño General:
+1. **Progreso General del Proyecto:** **~78% completado** (31 de 40 horas efectivas ejecutadas y validadas con pruebas de cero regresión).
+2. **Sprint 1 (Fundamentos y Presencia Local - 20 hrs):** **100% CONCLUIDO Y OPERATIVO**.
+3. **PB5 (Micro-Landings de Servicios y Conversión On-Site - 6.0 hrs):** **100% CONCLUIDO** a través de 5 módulos desplegados en producción ([services.html](file:///home/andrew/Development/workspace-legado-ambiental/website-legado/services_overview/services.html) y [contact_faq.html](file:///home/andrew/Development/workspace-legado-ambiental/website-legado/faq/contact_faq.html)).
+4. **Infraestructura de Estabilidad y Calidad Web:** Se erradicaron bloqueos de scripts de animaciones (`AOS`), se blindó la carga de páginas eliminando pantallas blancas, y se optimizó el controlador AJAX de contacto para entrega garantizada por FormSubmit.
+5. **Estado de lo Faltante:** El embudo digital y las herramientas de conversión están 100% listos. Lo que resta para completar la ventana de trabajo se enfoca en **autoridad de contenido (PB6)**, **materiales de venta en frío (PB8)** y **activación comercial directa (PB9-10 + Campaña de Reseñas en Google Maps)**.
 
 ---
 
-## 3. Detalle Exhaustivo de los Hitos Logrados
+## 2. Matriz Comparativa del Backlog: Planificado vs. Ejecutado
 
-### Hito 1: Optimización de Plataforma Web, UI/UX e Internacionalización
-* **Mobile-First & Touch Targets:** El sitio erradicó el 100% de los desbordamientos horizontales en dispositivos pequeños (320px–375px). Los elementos táctiles cumplen con el estándar WCAG 2.1 AAA (48x48px mínimo).
-* **Patrón Híbrido B2B en Móvil:** Se implementó una solución innovadora consistente en:
-  1. *Sticky Mobile Bar:* Barra inferior fija que ocupa el 100% del ancho con el botón *"Cotizar Proyecto"* para capturar leads institucionales.
-  2. *FAB WhatsApp Flotante:* Botón circular flotante en la esquina inferior derecha para consultas inmediatas.
-* **Blindaje de Internacionalización (`assets/js/i18n.js`):** El sistema cuenta con paridad estricta 1:1 entre Español (`es-MX`) e Inglés (`en-US`), eliminando textos estáticos quemados en el código y permitiendo conmutación instantánea sin recarga.
-
-### Hito 2: Google Business Profile (Pilar 5: SEO Local Concluido)
-* **Verificación Confirmada:** El perfil de *Legado Ambiental* en San Juan del Río / Bajío se encuentra verificado por Google, visible para potenciales clientes y con herramientas administrativas operativas.
-* **Remasterización Multimedia de Servicios:**
-  * 11 imágenes de servicios profesionales actualizadas y remasterizadas a 1200x896 px (proporción óptima 4:3 para Google Maps), cubriendo Topografía, Georreferenciación GPS RTK, Supervisión de Obra Civil, Infraestructura Hidráulica y Plantas de Tratamiento de Aguas Residuales (PTAR).
-  * Pieza de contenido avanzado para el servicio de **Modelado Digital y Visualización 3D**: carátula en alta definición y clip de video demostrativo de 20 segundos (`generacion-entorno.tridimensional-services-gbp-2026-remastered-demo.mp4`) ilustrando curvas de nivel y cálculo volumétrico de tierras.
-* **Suite de Códigos QR Institucionales:**
-  * Generación de códigos QR vectoriales (SVG) y rasterizados en alta definición (PNG 300 DPI con corrección de error Nivel H) en versiones a color y blanco/negro.
-  * Diseño de la credencial / tarjeta de mostrador para recepción y oficina (`tarjeta-qr-legadoambiental.html`), permitiendo a clientes escanear y acceder de inmediato a la web o dejar reseñas.
-
-### Hito 3: Medición y Analítica Digital (GA4 y GTM Concluidos)
-* **Despliegue del Contenedor de Medición:** Se integró el código oficial de Google Tag Manager y Google Analytics 4 con el identificador `G-1MLGHB4E6G` en el encabezado `<head>` de todas las páginas del ecosistema web (`home.html`, `about_us.html`, `services.html`, `portfolio.html`, `our_experience.html`, `contact_faq.html`, `index.html` y `404.html`).
-* **Seguridad y CSP:** Se actualizaron las cabeceras `Content-Security-Policy` para permitir la ejecución de scripts y conexiones de telemetría de Google sin alertas de consola.
-* **Mapa de Eventos de Conversión en `assets/js/analytics.js`:**
-  * `form_start`: Registra el momento en que un usuario comienza a interactuar con el formulario.
-  * `select_service_interest`: Identifica la disciplina específica de interés corporativo seleccionada por el usuario.
-  * `generate_lead`: Conversión principal de formulario completado.
-  * `click_whatsapp` y `click_phone`: Inicios de contacto directo.
-  * `scroll_depth`: Lectura del 25%, 50%, 75% y 90% del contenido de las páginas.
+| ID Tarea | Descripción según Plan | Horas Est. | Asignación | Estado Actual | Entregables y Evidencia Técnica |
+| :---: | :--- | :---: | :---: | :---: | :--- |
+| **PB1** | Rediseño de Hero Section JTBD | 3.0 h | Persona A: 1.0h<br>Persona B: 2.0h | **100% CONCLUIDO** | [home.html](file:///home/andrew/Development/workspace-legado-ambiental/website-legado/home.html) con propuesta de valor orientada a dolores, Trust Banner normativo (`NOM-052`, `STPS`) e `i18n.js`. |
+| **PB2** | Integración de CTAs Estratégicos | 3.0 h | Persona B: 3.0h | **100% CONCLUIDO** | CTAs duales en cabeceras y patrón híbrido móvil: **Sticky Mobile CTA Bar** ("Cotizar Proyecto") + **FAB WhatsApp** flotante. |
+| **PB3** | Simplificación de Formularios | 3.0 h | Persona B: 3.0h | **100% CONCLUIDO** | Formulario de 6 campos en [contact_faq.html](file:///home/andrew/Development/workspace-legado-ambiental/website-legado/faq/contact_faq.html), campo trampa Honeypot, feedback Toast y controlador AJAX optimizado. |
+| **PB4** | Google Business Profile (SEO Local) | 3.0 h | Persona A: 1.0h<br>Persona B: 2.0h | **100% CONCLUIDO** | Ficha verificada por Google en vivo (199+ interacciones), 11 fotografías HD en 4:3 (1200x896 px), demo 3D volumétrico y suite de códigos QR. |
+| **PB7** | Optimización Portafolio PDF & QR | 3.0 h | Persona A: 1.0h<br>Persona B: 2.0h | **100% CONCLUIDO** | Portafolio editorial tamaño Carta (8.5x11 in) con `@media print`, tokens institucionales ([Curricula_Legado_Ambiental_2026_v2.html](file:///home/andrew/Development/workspace-legado-ambiental/website-legado/assets/docs/Curricula_Legado_Ambiental_2026_v2.html)) y credencial de mostrador. |
+| **PB12** | Configuración Analítica (GA4 / GTM) | 3.0 h | Persona B: 3.0h | **100% CONCLUIDO** | Tag `G-1MLGHB4E6G` en 8 páginas HTML, cabeceras CSP actualizadas, 8 eventos de conversión en `assets/js/analytics.js`. |
+| **PB5** | Landing Pages de Servicios Específicos | 6.0 h | Persona A: 1.0h<br>Persona B: 5.0h | **100% CONCLUIDO** | Micro-landings con router semántico (`#ambiental`, `#construccion`, `#topografia`, `#seguridad-hidraulica`), 4 cabeceras de autoridad técnica, erradicación de Google Forms y auto-selección en formulario. |
+| **PB6** | Contenido Técnico Normativo (STPS/NOM) | 4.0 h | Persona A: 2.0h<br>Persona B: 2.0h | **PENDIENTE (Sprint 2)** | Insumos normativos integrados en Hero y servicios; **pendiente redacción y publicación del artículo editorial extendido**. |
+| **PB8** | Plantillas y Preparación B2B | 3.0 h | Persona A: 1.0h<br>Persona B: 2.0h | **PARCIAL (Sprint 2)** | Perfil de LinkedIn integrado en todo el sitio web y Schema.org; **pendiente redacción formal de las 3 plantillas de contacto en frío**. |
+| **PB9-10**| Prospección Directa y Red de Alianzas | 3.0 h | Persona A: 0.5h<br>Persona B: 2.5h | **PENDIENTE (Operativo)** | Embudo listo; **pendiente envío de los primeros 15 contactos cualificados y vinculación con 5 aliados estratégicos**. |
+| **Prueb.**| Pruebas de Embudo y Cierre | 1.5 h | Persona B: 1.5h | **100% CONCLUIDO** | Auditoría i18n automatizada (449/449 claves validadas), verificación E2E de enlaces y formularios, estabilidad visual blindada. |
+| **Cer.** | Ceremonias Ágiles de Sprints 1 y 2 | 4.5 h | Persona A: 3.5h<br>Persona B: 1.0h | **EN CURSO** | Sprint 1 cerrado, Sprint Review intermedia formalizada en este informe; cierre final agendado para entrega operativa. |
+| **PB13** | Google Ads Local (Pilar 6 - Post-Proyecto)| — | Dirección | **POSPUESTO FORMAL** | Dictamen técnico y financiero emitido ([Dictamen_Credito_Google_Ads_7000_MXN.pdf](file:///home/andrew/Development/workspace-legado-ambiental/website-legado/assets/docs/Dictamen_Credito_Google_Ads_7000_MXN.pdf)). Ahorro de $8,120 MXN netos para cuidar liquidez y priorizar canales orgánicos. |
 
 ---
 
-## 4. Dictamen Financiero: Suspensión Estratégica de Google Ads (Pilar 6)
+## 3. Detalle de los Avances Técnicos y de Negocio Logrados
 
-### Contexto y Racionalidad de la Decisión
-Google ofreció a Legado Ambiental un cupón promocional de **MXN $7,000** condicionado al esquema *Spend-Match 1:1* (gastar $7,000 MXN propios en 60 días para desbloquear $7,000 MXN en crédito de clics).
+### 3.1 Culminación Integral de PB5: Micro-Landings y Embudo On-Site
+* **Router Semántico y Deep-Linking:** Implementación de navegación por pestañas con identificadores limpios (`#ambiental`, `#construccion`, `#topografia`, `#seguridad-hidraulica`) y sincronización bidireccional entre URL, selector táctil móvil y botones de escritorio en [services.html](file:///home/andrew/Development/workspace-legado-ambiental/website-legado/services_overview/services.html).
+* **Cabeceras de Autoridad Técnica por Especialidad:** 4 cabeceras destacadas con propuesta de valor B2B dirigida a resolver dolores normativos (multas PROFEPA/SEMARNAT, bitácora DRO, tiempos de entrega topográfica en 24-48h, cumplimiento PTAR).
+* **0% Fuga de Tráfico (Eliminación Total de Google Forms externos):** Sustitución de los formularios externos por conversión on-site. Las 15 tarjetas de servicio ahora dirigen al usuario a `contact_faq.html?service=[slug]`, donde el sistema activa automáticamente la pestaña de contacto, selecciona la disciplina y realiza un desplazamiento suave (*smooth scroll*) al formulario.
+* **Integración Institucional de LinkedIn:** Enlace oficial unificado ([linkedin.com/in/legado-ambiental-mx](https://www.linkedin.com/in/legado-ambiental-mx)) en pie de página de las 8 páginas, tarjeta de contacto y metadatos estructurados Schema.org (`sameAs`).
 
-Tras un análisis exhaustivo plasmado en el documento [Dictamen_Credito_Google_Ads_7000_MXN.pdf](file:///home/andrew/Development/workspace-legado-ambiental/website-legado/assets/docs/Dictamen_Credito_Google_Ads_7000_MXN.pdf), la Dirección y el equipo técnico acordaron **NO activar Google Ads en este momento** con base en los siguientes fundamentos:
+### 3.2 Consolidación del Pilar 5 (Google Business Profile)
+* Perfil verificado formalmente por Google en San Juan del Río / Querétaro / Bajío con panel administrativo y más de 199 interacciones registradas.
+* Catálogo de 11 fotografías HD en proporción 4:3 (1200x896 px) y video demostrativo de 20 segundos de volumetría y curvas de nivel 3D.
+* Suite de códigos QR de alta densidad y credencial interactiva para recepción de clientes ([tarjeta-qr-legadoambiental.html](file:///home/andrew/Development/workspace-legado-ambiental/website-legado/assets/images/qr/tarjeta-qr-legadoambiental.html)).
 
-1. **Compromiso de Liquidez Inmediata:** Exige una erogación garantizada de **$8,120 MXN** ($7,000 netos + $1,120 de IVA) en un plazo perentorio de 60 días naturales.
-2. **Momento Inoportuno de Conversión (Falta de Reseñas Iniciales):** La ficha de GBP recién verificada cuenta con pocas reseñas públicas. Enviar tráfico pagado en este punto provocaría un costo por adquisición más alto debido a la falta de prueba social acumulada.
-3. **Riesgo de Cobro Recurrente Ininterrumpido:** Google no detiene las campañas al agotarse el crédito; continúa facturando a la tarjeta de crédito de la empresa al ritmo del presupuesto diario configurado si no se cuenta con un monitoreo diario riguroso.
-4. **Enfoque de Máxima Eficiencia de Capital:** Legado Ambiental cuenta con un posicionamiento orgánico sólido en el Bajío y herramientas de contacto ya preparadas. El retorno sobre la inversión (ROI) será sustancialmente mayor si se invierten los esfuerzos inmediatos en **canales orgánicos a costo marginal cero**.
+### 3.3 Medición B2B y Blindaje de Rendimiento (GA4 + CRO)
+* Instrumentación en `assets/js/analytics.js` con telemetría de eventos clave: clics en WhatsApp, envíos exitosos de formulario, selección de servicios y profundidad de scroll.
+* Hardening de seguridad en enlaces externos con `rel="noopener noreferrer"`.
+* Eliminación definitiva de dependencias innecesarias de animación (`AOS`) y optimización de carga para evitar parpadeos y retrasos de renderizado.
 
 ---
 
-## 5. Hoja de Ruta Actualizada: Plan de Trabajo para los Primeros 100 Leads B2B
+## 4. Orientación, Ejemplos y Guías de Ejecución para los Puntos Restantes
 
-Con la plataforma web, el SEO Local y la analítica completados, el proyecto avanza hacia la fase de **Activación Comercial y Prospección Orgánica**:
+Para concluir con éxito las tareas pendientes del Sprint 2 y activar la captación de los primeros 100 prospectos, el equipo debe seguir las siguientes pautas técnicas y comerciales:
 
-```mermaid
-flowchart LR
-    subgraph FASE_CONCLUIDA["Fase Concluida (100%)"]
-        W["Web & CRO<br/>(Tailwind, i18n, Form 6)"]
-        G["Google Business<br/>(Verificado, Fotos HD, 3D, QR)"]
-        A["Analítica GA4 / GTM<br/>(Tracking Leads y Eventos)"]
-    end
+---
 
-    subgraph FASE_ACTUAL["Fase Inmediata (Sprints en Curso)"]
-        R["Recolección de Reseñas<br/>(5 a 10 reseñas 5★ en GBP)"]
-        L["Páginas de Servicio y Contenido<br/>(Normativas STPS / NOM)"]
-    end
+### 4.1 Tarea PB6: Artículo Técnico Normativo (STPS / SEMARNAT)
+* **Objetivo:** Generar autoridad técnica y atraer tráfico orgánico calificado (directores de obra y responsables ambientales) que buscan resolver una exigencia regulatoria inminente.
+* **Asignación:** Persona A (2.0h redacción del contenido técnico) + Persona B (2.0h maquetación web y enlaces de conversión).
+* **Ubicación recomendada:** Publicar como recurso técnico en el sitio web (ej. `resources/guia-normativa-obras-bajio.html` o integrado en una sección editorial destacada dentro de `services.html` / `faq/contact_faq.html`).
 
-    subgraph PROSPECCION["Fase de Cierre (100 Leads)"]
-        P["Prospección Directa B2B<br/>(LinkedIn + Constructoras Bajío)"]
-        M["Medición y Cierre de Contratos<br/>(Dashboard GA4 + WhatsApp)"]
-    end
+#### Propuesta Editorial Concreta para PB6:
+* **Título Propuesto:**  
+  *“Guía de Cumplimiento Ambiental y Laboral en Obras Civiles e Industriales en el Bajío: Evitando Clausuras de SEMARNAT y Sanciones de la STPS (Edición 2026)”*
+* **Estructura del Artículo (Esquema de Contenido):**
+  1. **Introducción:** Los 3 errores más comunes en trámites ambientales al arrancar una nave o desarrollo en Querétaro, Guanajuato y Estado de México.
+  2. **Bloque SEMARNAT / PROFEPA (Impacto Ambiental y Residuos):**
+     * ¿Cuándo es obligatoria una MIA (Manifestación de Impacto Ambiental) vs. un Informe Preventivo?
+     * Clasificación CRETI y manejo de residuos peligrosos (NOM-052-SEMARNAT).
+     * Checklist rápido para evitar suspensiones provisionales de obra.
+  3. **Bloque STPS / Seguridad en Obra:**
+     * Normativa NOM-031-STPS (Construcción) y NOM-019-STPS (Comisiones de Seguridad e Higiene).
+     * Requisito de constancias laborales DC-3 emitidas por Agentes Capacitadores Externos certificados.
+  4. **Bloque Topografía y DRO:**
+     * Importancia de la georreferenciación GPS RTK para evitar invasiones de linderos y problemas catastrales.
+     * Respaldo legal mediante firma y bitácora de Director Responsable de Obra (DRO).
+  5. **Llamado a la Acción (CTA de Cierre):**
+     * Banner destacado: *“¿Tiene una inspección en puerta o necesita tramitar su dictamen ambiental? Agende una revisión técnica preliminar sin costo con nuestros ingenieros.”*
+     * Botón 1: *“Solicitar Asesoría Normativa”* (enlace a `../faq/contact_faq.html?service=ambiental`).
+     * Botón 2: *“Consultar por WhatsApp”* con mensaje precargado de urgencia normativa.
 
-    FASE_CONCLUIDA --> FASE_ACTUAL
-    FASE_ACTUAL --> PROSPECCION
+---
+
+### 4.2 Tarea PB8: Las 3 Plantillas de Prospección B2B en Frío
+* **Objetivo:** Disponer de mensajes de aproximación consultiva de alta conversión para LinkedIn y correo corporativo, orientados a dolores específicos y sin sonar como publicidad invasiva.
+* **Asignación:** Persona A (1.0h refinamiento de tono y terminología) + Persona B (2.0h configuración de perfiles y personalización).
+
+#### Plantilla 1: Para Directores de Obra / Superintendentes de Construcción
+* **Enfoque de Dolor:** Retrasos en entrega de planos, falta de firma DRO y problemas con linderos en sitio.
+* **Mensaje:**
+```text
+Asunto: Control topográfico y bitácora DRO sin demoras para sus frentes de obra en [Ciudad/Zona]
+
+Estimado/a [Nombre del Director de Obra],
+
+Observo el avance constructivo que lideran en [Nombre de la Empresa Constructora]. En etapas críticas de cimentación y terracerías, uno de los mayores dolores de cabeza para la superintendencia suele ser el desfase en las entregas de brigadas topográficas o demoras en la firma de bitácoras por parte del DRO.
+
+En Legado Ambiental entregamos memorias topográficas con tecnología GPS RTK y drones LiDAR con planos ejecutivos en 24 a 48 horas, además de respaldo formal con Director Responsable de Obra colegiado en el Bajío y Estado de México.
+
+¿Tendría 5 minutos esta semana para una llamada rápida y evaluar si podemos respaldar sus frentes de trabajo actuales o su próximo proyecto?
+
+Le comparto nuestro portafolio técnico y credenciales aquí: [ENLACE A PORTAFOLIO PDF / WEB]
+
+Saludos cordiales,
+[Nombre del Remitente]
+Legado Ambiental S.A. de C.V.
+WhatsApp directo: +52 55 8367 1036
 ```
 
-### Próximas Acciones Prioritarias (Backlog Inmediato):
+#### Plantilla 2: Para Gerentes de Proyecto / Desarrolladores Inmobiliarios
+* **Enfoque de Dolor:** Riesgo de multas o clausuras por falta de permisos ambientales (MIA / PROFEPA) y saneamiento PTAR.
+* **Mensaje:**
+```text
+Asunto: Blindaje normativo ambiental y dictámenes para [Nombre del Proyecto o Desarrollo]
 
-1. **Campaña de Reseñas en Google Business Profile (Semana 1 - Acción Inmediata):**
-   * Compartir la tarjeta QR y enlace directo de reseña de GBP con los 10 principales clientes históricos y contratistas aliados de Legado Ambiental para acumular de 5 a 8 opiniones de 5 estrellas con texto explicativo.
-   * *Responsable:* Persona A (Estratega / Dirección Comercial).
-2. **Redacción del Contenido Técnico Normativo (Tarea PB6 - Semana 1):**
-   * Publicar la guía práctica sobre cumplimiento ambiental y trámites ante dependencias (NOM-052-SEMARNAT / normativas STPS para obras civiles), reforzando la autoridad del despacho frente a despachos competidores.
-   * *Responsables:* Persona A (Redacción técnica) y Persona B (Publicación web).
-3. **Despliegue del Protocolo de Prospección Directa B2B (Tareas PB8 a PB10 - Semana 2):**
-   * Configuración de plantillas de prospección consultiva para LinkedIn dirigidas a Directores de Obra, Gerentes de Proyecto y Responsables de Seguridad e Higiene en Querétaro, Guanajuato y Estado de México.
-   * Meta operativa: Generar los primeros 15 acercamientos directos y 5 vinculaciones con aliados estratégicos (laboratorios de mecánica de suelos y proyectistas).
-   * *Responsables:* Persona A y Persona B en esquema coordinado.
+Hola [Nombre del Gerente], un gusto saludarte.
+
+En el desarrollo de proyectos industriales y residenciales en el corredor del Bajío, los tiempos de resolución ante dependencias ambientales (SEMARNAT, PROFEPA y dependencias estatales) suelen ser un cuello de botella crítico para la viabilidad de la inversión.
+
+En Legado Ambiental contamos con más de 10 años de experiencia técnica elaborando Manifestaciones de Impacto Ambiental (MIA), estudios de daño y proyectos ejecutivos de tratamiento de aguas residuales (PTAR) bajo la NOM-001. Nuestro equipo diseña expedientes técnicos rigurosos que aceleran la dictaminación y evitan observaciones o clausuras costosas.
+
+Me gustaría consultarle: ¿cuentan actualmente con proyectos en fase de trámite normativo o diseño hidrosanitario donde podamos asistirlos con un diagnóstico preliminar?
+
+Quedo a sus órdenes y le comparto nuestros servicios especializados: https://www.legadoambiental.com.mx/services_overview/services.html#ambiental
+
+Atentamente,
+[Nombre del Remitente]
+Legado Ambiental S.A. de C.V.
+```
+
+#### Plantilla 3: Para Responsables de Seguridad, Higiene y Medio Ambiente (EHS / HSE)
+* **Enfoque de Dolor:** Auditorías de la STPS, carpetas normativas incompletas y falta de constancias DC-3 válidas.
+* **Mensaje:**
+```text
+Asunto: Cumplimiento STPS, carpetas NOM-019/031 y constancias DC-3 para [Nombre de la Empresa]
+
+Estimado/a [Nombre del Coordinador EHS],
+
+Con la reciente intensificación en las inspecciones laborales y de seguridad en centros de trabajo y frentes de obra, mantener los expedientes STPS al 100% de cumplimiento es indispensable para prevenir sanciones administrativas.
+
+En Legado Ambiental somos Agentes Capacitadores Externos certificados ante la Secretaría del Trabajo (STPS). Capacitamos a su personal técnico y operativo en sitio o de forma híbrida, emitiendo constancias de competencias laborales DC-3 con validez oficial, además de estructurar sus carpetas de comisiones de seguridad (NOM-019-STPS) y planes de emergencia.
+
+¿Tienen programadas capacitaciones o auditorías de seguridad para este trimestre donde podamos apoyarle con una cotización adaptada a su plantilla?
+
+Puede consultar el detalle de nuestros módulos de seguridad aquí: https://www.legadoambiental.com.mx/services_overview/services.html#seguridad-hidraulica
+
+Un cordial saludo,
+[Nombre del Remitente]
+Legado Ambiental S.A. de C.V.
+```
 
 ---
 
-## 6. Cuadro de Asignación y Responsabilidades
+### 4.3 Tarea PB9 y PB10: Prospección Activa y Red de Alianzas Comerciales
+* **Objetivo:** Salir al mercado con el embudo digital listo para generar las primeras 15 oportunidades comerciales directas y 5 alianzas estratégicas de referencia cruzada.
+* **Asignación:** Persona A (0.5h aprobación de lista) + Persona B (2.5h envíos, seguimiento y registro de contactos).
 
-| Rol | Integrante | Responsabilidad Central en la Nueva Etapa |
-| :--- | :--- | :--- |
-| **Dirección General** | Consejo Directivo | Supervisión de acuerdos comerciales, validación del congelamiento de Google Ads y atención de cotizaciones de alto valor. |
-| **Persona A (Estratega Técnico)** | Dirección de Estrategia | Solicitud de reseñas en GBP a clientes clave, redacción de contenidos normativos y supervisión de los copys de prospección B2B. |
-| **Persona B (Desarrollador / Operador)** | Ejecución Técnica y Digital | Monitoreo semanal del dashboard GA4/GTM, soporte técnico al sitio web, distribución de materiales QR y seguimiento de leads entrantes. |
+#### Protocolo de Prospección Directa (PB9 - Meta: 15 Empresas Calificadas):
+1. **Filtro de Selección de Prospectos (LinkedIn Sales Navigator / Búsqueda Orgánica):**
+   * **Ubicaciones:** Querétaro, San Juan del Río, Celaya, Toluca, Cuautitlán Izcalli, Tlalnepantla.
+   * **Cargos objetivo:** *Superintendente de Construcción*, *Director Responsable de Obra*, *Gerente de Proyectos*, *Director de Operaciones*, *Coordinador EHS*.
+   * **Industrias:** Construcción pesada, naves industriales, desarrollos de vivienda, infraestructura vial.
+2. **Cadencia de Contacto:**
+   * **Día 1:** Conexión personalizada en LinkedIn con nota breve de valor (sin venta dura).
+   * **Día 3 (al aceptar):** Envío de Plantilla 1, 2 o 3 según el perfil, adjuntando enlace a micro-landing de servicio específico o portafolio.
+   * **Día 7 (sin respuesta):** Mensaje de cortesía ofreciendo el artículo técnico normativo (PB6) o una revisión preliminar sin costo.
+3. **Registro en Hoja de Control de Oportunidades:** Registrar Empresa, Contacto, Cargo, Teléfono/LinkedIn, Servicio de Interés y Fecha de Siguiente Acción.
+
+#### Protocolo de Red de Alianzas Estratégicas (PB10 - Meta: 5 Aliados Clave):
+* **Tipología de Aliados a Contactar:**
+  1. *Laboratorios de Mecánica de Suelos:* Requieren con frecuencia topógrafos de confianza para levantar sondeos y niveles.
+  2. *Despachos de Cálculo Estructural:* Necesitan levantamientos geodésicos preliminares precisos para modelar proyectos.
+  3. *Contratistas de Pavimentación / Terracerías:* Requieren topografía de control geométrico y cálculo de volúmenes de corte/terraplén.
+  4. *Gestores de Licencias Municipales:* Necesitan memorias de impacto ambiental y dictámenes de agua para autorizar construcciones.
+* **Propuesta de Alianza (Comisión / Reciprocidad de Proyectos):**
+  * Presentar a Legado Ambiental como su brazo técnico especializado para las disciplinas que ellos no cubren.
+  * Esquema de comisión por referencia o intercambio formal de cartera de clientes.
 
 ---
 
-## 7. Dictamen Final para el Equipo
+### 4.4 Campaña Sistemática de Recolección de Reseñas en Google Maps
+* **Objetivo Inmediato:** Obtener de **5 a 8 reseñas verificadas de 5 estrellas** con texto explicativo en los próximos 7 días naturales para consolidar la prueba social del perfil de Google Business Profile.
+* **Responsable Principal:** Persona A (Estratega / Dirección Comercial) mediante contacto con clientes históricos y directores de confianza.
 
-> **Resolución para el Equipo de Proyecto:**  
-> Los cimientos digitales de **Legado Ambiental** se encuentran al 100% de su capacidad operativa técnica. El sitio web ya no es un folleto estático, sino una herramienta de captación y medición precisa. 
-> 
-> La cancelación temporal de Google Ads protege el flujo de efectivo de la empresa sin frenar el crecimiento, redirigiendo la energía del equipo hacia donde genera mayor rendimiento: la reputación local en Google Maps, el valor técnico de las propuestas y el contacto consultivo directo con las empresas que construyen el Bajío.
+#### Proceso Operativo Paso a Paso:
+1. **Identificar a los 10 Clientes Históricos Clave:**
+   * Seleccionar 10 contratistas, superintendentes o empresarios a quienes Legado Ambiental les haya entregado exitosamente proyectos en el último año.
+2. **Obtener el Enlace Oficial Directo de Reseña:**
+   * Extraer la URL corta desde el panel de Google Business: `https://g.page/r/[CODIGO_OFICIAL]/review` (o utilizando el código QR generado en [tarjeta-qr-legadoambiental.html](file:///home/andrew/Development/workspace-legado-ambiental/website-legado/assets/images/qr/tarjeta-qr-legadoambiental.html)).
+3. **Envío del Mensaje por WhatsApp Directo (Personalizado):**
+
+```text
+Estimado/a [Nombre del Cliente], le saluda con gusto [Nombre] de Legado Ambiental.
+
+Espero que se encuentre excelente. Recordamos con mucho gusto la colaboración con su equipo en [nombre del proyecto o servicio, ej. el levantamiento topográfico y control de obra en San Juan del Río].
+
+Actualmente estamos actualizando nuestro perfil oficial verificado en Google Maps. Para nuestro equipo de ingenieros sería un enorme apoyo si pudiera regalarnos un breve comentario de 1 minuto sobre su experiencia de trabajo con nosotros.
+
+Puede dejar su reseña directamente desde su celular dando clic aquí:
+👉 [ENLACE CORTO DE RESEÑAS DE GOOGLE MAPS]
+
+¡Agradecemos mucho su confianza y apoyo de siempre!
+```
+
+4. **Protocolo de Respuesta SEO a Reseñas Recibidas:**
+   * Responder a cada reseña en menos de 24 horas incorporando de forma natural el servicio y la ubicación (ej. *“Muchas gracias por la confianza, Ing. [Apellido]. En Legado Ambiental nos alegra haber respaldado su proyecto de obra civil en Querétaro con la mayor precisión topográfica. ¡Seguimos a sus órdenes!”*).
 
 ---
-*Documento aprobado y registrado en el repositorio institucional de Legado Ambiental S.A. de C.V.*
+
+## 5. Plan de Siguientes Pasos, Cronograma y Acciones Concretas
+
+Para dar cierre definitivo al plan de 40 horas y activar la generación de prospectos, se establece el siguiente cronograma de ejecución para las 9.0 horas restantes:
+
+```mermaid
+flowchart TD
+    subgraph DIA_1["Día 1: Autoridad y Preparación (4.0 hrs)"]
+        A1["Persona A: Redacción Guía Técnica Normativa (PB6 - 2.0h)"]
+        B1["Persona B: Maquetación web y CTAs de Guía Técnica (PB6 - 2.0h)"]
+    end
+
+    subgraph DIA_2["Día 2: Plantillas B2B y Reseñas GBP (3.0 hrs)"]
+        A2["Persona A: Refinamiento de 3 Plantillas B2B (PB8 - 1.0h)<br/>+ Contacto a 10 Clientes para Reseñas Google"]
+        B2["Persona B: Configuración de Secuencias y Listas B2B (PB8 - 2.0h)"]
+    end
+
+    subgraph DIA_3["Día 3: Activación Comercial y Alianzas (3.0 hrs)"]
+        B3["Persona B: Envío de 15 Prospectos B2B en LinkedIn (PB9 - 1.5h)<br/>+ Contacto a 5 Aliados Estratégicos (PB10 - 1.0h)"]
+        A3["Persona A: Supervisión y Cierre de Alianzas (PB10 - 0.5h)"]
+    end
+
+    subgraph DIA_4["Día 4: Métricas, Retrospectiva y Entrega (1.5 hrs)"]
+        AB4["Persona A & B: Monitoreo GA4/GTM, Review Final y Cierre del Proyecto"]
+    end
+
+    DIA_1 --> DIA_2
+    DIA_2 --> DIA_3
+    DIA_3 --> DIA_4
+```
+
+### Detalle de Asignaciones y Horas Restantes:
+
+| Día de Ejecución | Tarea | Actividad Concreta | Responsable | Horas |
+| :---: | :---: | :--- | :---: | :---: |
+| **Día 1** | **PB6** | Redactar el contenido editorial de la guía técnica sobre cumplimiento STPS/SEMARNAT. | Persona A | 2.0 h |
+| **Día 1** | **PB6** | Maquetar el artículo en la web con botones de cotización y WhatsApp precargado. | Persona B | 2.0 h |
+| **Día 2** | **PB8** | Adaptar y aprobar las 3 plantillas de prospección por perfil de tomador de decisión. | Persona A | 1.0 h |
+| **Día 2** | **PB8** | Identificar los primeros 15 prospectos calificados en Querétaro y el Bajío. | Persona B | 2.0 h |
+| **Día 2** | **Campaña GBP**| Enviar solicitudes de reseña vía WhatsApp a los 10 clientes clave históricos. | Persona A | — |
+| **Día 3** | **PB9** | Enviar los 15 mensajes de aproximación en frío por LinkedIn. | Persona B | 1.5 h |
+| **Día 3** | **PB10** | Contactar a los primeros 5 aliados estratégicos (laboratorios y calculistas). | Persona A / B | 1.5 h |
+| **Día 4** | **Cierre** | Verificar eventos de conversión en GA4, analizar respuestas y cerrar Sprint 2. | Persona A / B | 1.5 h |
+| **Total Horas Restantes** | | **Cierre de Ciclo del Proyecto** | | **11.5 h** |
+
+---
+
+## 6. Definición de Terminado (Definition of Done - DoD) para el Cierre Total
+
+El proyecto alcanzará su estado de entrega formal y exitosa cuando se cumplan los siguientes criterios objetivos:
+1. [x] **Plataforma Web:** Ecosistema responsive, bilingüe, sin fugas a formularios externos y con router semántico operativo (Completado en PB5).
+2. [x] **SEO Local:** Google Business Profile verificado y suite QR institucional funcional (Completado en PB4).
+3. [ ] **Autoridad Técnica (PB6):** Guía técnica de normativas publicada en la plataforma con enlaces directos al embudo de cotización.
+4. [ ] **Herramientas de Venta (PB8):** Las 3 plantillas de contacto B2B redactadas y listas para su uso por el equipo comercial.
+5. [ ] **Prospección Activa (PB9 y PB10):** 15 prospectos calificados contactados en el Bajío y 5 aliados estratégicos vinculados.
+6. [ ] **Reputación Local:** Mínimo 5 reseñas positivas con texto descriptivo registradas en el perfil de Google Maps.
+7. [ ] **Telemetría:** Panel de GA4 registrando las sesiones y conversiones generadas por la prospección activa.
+
+---
+*Informe generado y aprobado para distribución interna en Legado Ambiental S.A. de C.V.*
