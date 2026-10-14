@@ -966,11 +966,14 @@ Para garantizar la preservación de los recursos de edición sin sobrecargar la 
 
 ### 7. Actualización del Número Oficial de WhatsApp Business
 - **Ajuste Realizado**: Se sustituyó el número de contacto en todos los botones y enlaces interactivos hacia la API de WhatsApp (`wa.me`) por el nuevo número: **`72 2672 7212`** (formato internacional México: `527226727212`).
-- **Puntos de Enlace Actualizados**:
-  - Botón secundario del Hero en [`home.html`](home.html).
-  - Botones flotantes circulares (Floating Action Button - FAB) presentes en las 6 páginas principales (`home.html`, `about_us.html`, `services.html`, `portfolio.html`, `our_experience.html` y `contact_faq.html`).
-- **Enlace Unificado**:
-  `https://wa.me/527226727212?text=Hola,%20quisiera%20cotizar%20un%20proyecto%20con%20Legado%20Ambiental`
+- **Puntos de Enlace y Personalización Contextual**:
+  - Botón secundario del Hero en [`home.html`](home.html) (consulta general de cotización de ingeniería).
+  - 4 Cabeceras de especialidad técnica en [`services.html`](services_overview/services.html) (Ambiental, Construcción, Topografía, Seguridad e Hidráulica).
+  - 15 Fichas técnicas de servicio en [`services.html`](services_overview/services.html) (cada una con texto precargado natural enfocado a su entregable/normativa).
+  - Botones flotantes circulares (Floating Action Button - FAB) presentes en las 6 páginas principales (`home.html`, `about_us.html`, `services.html`, `portfolio.html`, `our_experience.html` y `contact_faq.html`), cada uno reconociendo la sección de origen.
+  - Tarjeta de contacto directo en [`contact_faq.html`](faq/contact_faq.html).
+- **Número Oficial Unificado**:
+  `https://wa.me/527226727212` (con mensajes URL-encoded adaptados contextualmente).
 
 ### 8. Actualización del Teléfono Fijo Principal
 - **Ajuste Realizado**: Se sustituyó el número telefónico anterior (`55 7312 6918`) por el nuevo número: **`55 8367 1036`** (formato internacional: `+52 55 8367 1036`, Schema.org: `+52-55-8367-1036`).
@@ -1085,7 +1088,7 @@ Se alcanzó la culminación de los pilares técnicos y de presencia local establ
   - Sustitución del 100% de los botones con enlaces externos (`forms.gle` / `docs.google.com/forms`) en las 15 fichas de servicio por componentes nativos de conversión dual on-site, evitando la pérdida de tráfico cualificado y garantizando el seguimiento en GA4/GTM.
 - **Acciones Duales de Alta Conversión B2B por Ficha:**
   - **Botón Primario On-Site:** Acceso a `../faq/contact_faq.html?service=[slug_especifico]` para captura formal de requerimientos en el sitio.
-  - **Botón Secundario Inmediato:** Acceso directo a WhatsApp (`wa.me/525583671036`) con texto precargado según la especialidad consultada.
+  - **Botón Secundario Inmediato:** Acceso directo a WhatsApp (`wa.me/527226727212`) con texto precargado según la especialidad consultada.
 - **Enrutamiento y Auto-Selección Inteligente en `faq/contact_faq.html`:**
   - Captura del parámetro de consulta `?service=` vía `URLSearchParams`.
   - Mapeo semántico exhaustivo de los 15 servicios hacia el selector `<select id="service_type">` con fallback predictivo.
@@ -1123,6 +1126,74 @@ Se alcanzó la culminación de los pilares técnicos y de presencia local establ
   - **Resultado:** 100% de los enlaces externos y descargas de PDF cuentan con `rel="noopener noreferrer"`, mitigando vulnerabilidades de *tabnabbing* inverso y optimizando el aislamiento de procesos del navegador.
 - **Conclusión de PB5:**
   - El hito PB5 queda 100% concluido, operativo, probado y sincronizado en la rama `feature/mejoras-ia-hostinger` listo para su integración en `development`.
+
+---
+
+## 💬 Registro de Cambios: Fase 39 - Unificación Integral de WhatsApp Business y Personalización Contextual de Mensajes (Conversión B2B)
+
+### 1. Objetivo y Justificación Técnica
+- **Erradicación de Discrepancias Telefónicas:**
+  - Sustitución del 100% de enlaces obsoletos o secundarios en la API de WhatsApp (`wa.me/525583671036`) por el número oficial único y verificado de WhatsApp Business: **`+52 72 2672 7212`** (`https://wa.me/527226727212`).
+  - Delimitación clara de canales: el número conmutador `+52 55 8367 1036` opera para telefonía fija y datos estructurados Schema.org, mientras que `+52 72 2672 7212` queda consolidado como el canal exclusivo de mensajería instantánea y atención técnica ágil.
+- **Humanización y Aumento de Conversión (Eliminación de Mensajes Genéricos):**
+  - Reemplazo de copys planos («Hola, quisiera cotizar un proyecto con Legado Ambiental») por mensajes precargados naturales, profesionales y contextualizados según la sección de procedencia o el entregable normativo consultado.
+  - Generación de contexto inmediato para el equipo técnico/comercial al recibir el mensaje (saber de antemano el área de interés, urgencia o servicio técnico solicitado).
+
+### 2. Puntos de Contacto Actualizados y Mensajes Contextuales (27 Puntos Totales)
+
+#### A. Página de Inicio y Navegación Principal (`home.html`)
+- **Hero CTA Secundario (L. 280):**
+  `https://wa.me/527226727212?text=Hola,%20me%20comunico%20desde%20su%20sitio%20web.%20Me%20interesa%20recibir%20informaci%C3%B3n%20y%20cotizar%20servicios%20de%20ingenier%C3%ADa%20con%20su%20equipo.`
+- **Botón Flotante Circular - FAB (L. 737):**
+  `https://wa.me/527226727212?text=Hola,%20equipo%20de%20Legado%20Ambiental.%20Estaba%20revisando%20su%20p%C3%A1gina%20de%20inicio%20y%20me%20gustar%C3%ADa%20platicar%20con%20un%20asesor%20sobre%20un%20proyecto.`
+
+#### B. Botones Flotantes (FAB) Contextuales por Página Web
+- **Nosotros (`about_us/about_us.html`, L. 503):**
+  `?text=Hola,%20estuve%20conociendo%20la%20trayectoria%20de%20Legado%20Ambiental%20en%20su%20sitio%20web%20y%20me%20gustar%C3%ADa%20ponerme%20en%20contacto%20con%20su%20%C3%A1rea%20t%C3%A9cnica%20para%20una%20cotizaci%C3%B3n.`
+- **Catálogo de Servicios (`services_overview/services.html`, L. 1428):**
+  `?text=Hola,%20estuve%20revisando%20su%20cat%C3%A1logo%20de%20servicios%20en%20el%20sitio%20web%20y%20quisiera%20solicitar%20asesor%C3%ADa%20t%C3%A9cnica%20para%20un%20proyecto.`
+- **Línea de Tiempo y Trayectoria (`experience_timeline/our_experience.html`, L. 583):**
+  `?text=Hola,%20estuve%20revisando%20los%20proyectos%20y%20experiencia%20de%20Legado%20Ambiental%20en%20su%20sitio%20web.%20Quisiera%20consultarles%20sobre%20el%20alcance%20de%20un%20nuevo%20proyecto.`
+- **Portafolio de Proyectos (`project_portfolio_gallery/portfolio.html`, L. 388):**
+  `?text=Hola,%20vi%20los%20proyectos%20realizados%20en%20su%20portafolio%20web%20y%20me%20gustar%C3%ADa%20cotizar%20una%20propuesta%20similar%20para%20nuestra%20empresa.`
+- **Sección de Contacto y Preguntas Frecuentes (`faq/contact_faq.html`, L. 664):**
+  `?text=Hola,%20me%20encuentro%20en%20su%20secci%C3%B3n%20de%20contacto%20y%20quisiera%20recibir%20atenci%C3%B3n%20directa%20por%20WhatsApp%20para%20resolver%20unas%20dudas%20sobre%20un%20proyecto.`
+
+#### C. Cabeceras de Autoridad Técnica por División (`services_overview/services.html`)
+- **División Ambiental (`#ambiental`, L. 406):**
+  `?text=Hola,%20me%20comunico%20desde%20su%20sitio%20web.%20Me%20interesa%20recibir%20asesor%C3%ADa%20t%C3%A9cnica%20con%20sus%20ingenieros%20respecto%20a%20normativas%20y%20estudios%20ambientales%20para%20un%20proyecto.`
+- **División Construcción (`#construccion`, L. 695):**
+  `?text=Hola,%20qu%C3%A9%20tal.%20Me%20gustar%C3%ADa%20solicitar%20una%20cotizaci%C3%B3n%20y%20conocer%20la%20disponibilidad%20de%20su%20equipo%20para%20supervisi%C3%B3n%20de%20obra%20civil%20o%20proyecto%20constructivo.`
+- **División Topografía (`#topografia`, L. 977):**
+  `?text=Hola,%20buenas%20tardes.%20Requiero%20cotizar%20un%20levantamiento%20topogr%C3%A1fico/geod%C3%A9sico%20para%20un%20proyecto.%20%C2%BFPodr%C3%ADan%20orientarme%20sobre%20tiempos%20de%20brigada%20y%20costos?`
+- **División Seguridad e Hidráulica (`#seguridad-hidraulica`, L. 1189):**
+  `?text=Hola,%20me%20pongo%20en%20contacto%20porque%20requiero%20asesor%C3%ADa%20t%C3%A9cnica%20para%20un%20proyecto%20de%20infraestructura%20hidr%C3%A1ulica%20/%20saneamiento%20o%20cumplimiento%20ante%20la%20STPS.`
+
+#### D. Fichas Técnicas de Servicio Individuales (`services_overview/services.html`)
+- **Residuos de Manejo Especial (L. 475):** `?text=Hola,%20me%20interesa%20cotizar%20un%20plan%20de%20manejo%20y%20gesti%C3%B3n%20integral%20de%20residuos%20(NOM-052)%20para%20nuestra%20empresa/obra.`
+- **Tratamiento de Agua y PTAR (L. 545):** `?text=Hola,%20me%20comunico%20para%20cotizar%20ingenier%C3%ADa%20h%C3%ADdrica%20o%20proyecto%20de%20tratamiento%20de%20agua/PTAR.%20%C2%BFPodr%C3%ADan%20brindarme%20informaci%C3%B3n%20t%C3%A9cnica?`
+- **Manifestación de Impacto Ambiental (L. 598):** `?text=Hola,%20requiero%20cotizar%20un%20estudio%20de%20impacto%20ambiental%20(MIA%20/%20informe%20preventivo)%20para%20un%20proyecto%20que%20tenemos%20en%20puerta.`
+- **Capacitación Ambiental (L. 643):** `?text=Hola,%20quisiera%20solicitar%20informes%20y%20propuesta%20para%20programas%20de%20capacitaci%C3%B3n%20en%20cumplimiento%20ambiental%20para%20nuestro%20personal.`
+- **Edificación y Obra Civil (L. 751):** `?text=Hola,%20qu%C3%A9%20tal.%20Me%20gustar%C3%ADa%20solicitar%20informes%20y%20cotizaci%C3%B3n%20para%20un%20proyecto%20de%20edificaci%C3%B3n%20y%20obra%20civil.`
+- **Infraestructura Hidráulica (L. 812):** `?text=Hola,%20tenemos%20un%20requerimiento%20de%20obra%20hidr%C3%A1ulica%20y%20dise%C3%B1o/construcci%C3%B3n%20de%20PTAR.%20%C2%BFPodr%C3%ADamos%20platicar%20con%20un%20ingeniero%20de%20su%20equipo?`
+- **Proyecto Ejecutivo (L. 862):** `?text=Hola,%20requiero%20cotizar%20servicios%20de%20desarrollo%20de%20proyecto%20ejecutivo%20y%20planeaci%C3%B3n%20de%20ingenier%C3%ADa.`
+- **Supervisión de Obra y DRO (L. 925):** `?text=Hola,%20necesito%20cotizar%20servicios%20de%20supervisi%C3%B3n%20en%20campo%20y%20respaldo%20de%20Director%20Responsable%20de%20Obra%20(DRO)%20para%20una%20obra.`
+- **Levantamientos Topográficos (L. 1020):** `?text=Hola,%20me%20gustar%C3%ADa%20cotizar%20una%20brigada%20de%20levantamiento%20topogr%C3%A1fico%20con%20entrega%20de%20planos%20ejecutivos%20para%20un%20terreno/obra.`
+- **GPS Geodésico y RTK (L. 1059):** `?text=Hola,%20requiero%20cotizar%20trabajos%20de%20georreferenciaci%C3%B3n%20y%20deslinde%20de%20alta%20precisi%C3%B3n%20con%20tecnolog%C3%ADa%20GPS%20geod%C3%A9sico%20RTK.`
+- **Modelado 3D y Dron (L. 1098):** `?text=Hola,%20me%20interesa%20cotizar%20un%20estudio%20con%20dron,%20curvas%20de%20nivel%20y%20c%C3%A1lculo%20volum%C3%A9trico%20de%20tierras%20para%20un%20proyecto.`
+- **Control Topográfico Continuo (L. 1137):** `?text=Hola,%20busco%20cotizar%20control%20geom%C3%A9trico%20y%20seguimiento%20topogr%C3%A1fico%20continuo%20para%20nuestros%20frentes%20de%20obra.`
+- **Gestión SST (L. 1260):** `?text=Hola,%20quisiera%20cotizar%20la%20estructuraci%C3%B3n%20y%20asesor%C3%ADa%20para%20nuestro%20departamento%20de%20Seguridad%20y%20Salud%20en%20el%20Trabajo%20(SST).`
+- **Seguridad en Campo STPS (L. 1312):** `?text=Hola,%20requiero%20cotizar%20supervisi%C3%B3n%20t%C3%A9cnica%20de%20seguridad%20e%20higiene%20industrial%20en%20obra%20bajo%20normativas%20STPS.`
+- **Capacitación STPS DC-3 (L. 1371):** `?text=Hola,%20me%20interesa%20cotizar%20cursos%20de%20capacitaci%C3%B3n%20laboral%20STPS%20con%20emisi%C3%B3n%20de%20constancias%20oficiales%20DC-3%20para%20nuestra%20cuadrilla/empresa.`
+
+#### E. Tarjeta de Contacto Directo (`faq/contact_faq.html`)
+- **Acceso Directo con Badge (L. 572):** Incorporación de botón interactivo estilizado con badge verde WhatsApp contiguo a la línea telefónica `+52 72 2672 7212`:
+  `?text=Hola,%20quisiera%20recibir%20atenci%C3%B3n%20personalizada%20con%20un%20asesor%20t%C3%A9cnico%20de%20Legado%20Ambiental.`
+
+### 3. Verificación de Integridad y Telemetría Analítica
+- **Auditoría Global de Enlaces:** Verificación mediante búsqueda estática (`git grep`) confirmando 0 enlaces residuales a números obsoletos y 100% de coherencia hacia `https://wa.me/527226727212`.
+- **Rastreo en Google Analytics 4:** El listener global en `assets/js/analytics.js` intercepta automáticamente todo clic en enlaces `wa.me`, asegurando la contabilización precisa del evento de conversión `click_whatsapp`.
+- **Compatibilidad Multiplataforma:** Codificación UTF-8 estricta para garantizar renderizado perfecto sin caracteres rotos en WhatsApp Web, Desktop, iOS y Android.
 
 
 
